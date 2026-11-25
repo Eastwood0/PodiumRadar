@@ -1,6 +1,6 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-25T20:25:07.343Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-25T20:42:34.169Z).
 
 **23 van 32 venues** hebben data, samen 1577 events (1057 muziek).
 
