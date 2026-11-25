@@ -11,6 +11,7 @@ Een privé-website voor Ralf en maximaal 10 vrienden met de concertagenda's (kom
 - Werkt met dit bestand om context tussen sessies te bewaren: houd de sectie "Huidige stand" hieronder bij.
 
 ## Werkwijze
+0. Er wordt in de cloud gebouwd, niet op Ralfs pc (B18). Repo: `Eastwood0/PodiumRadar`. De bouwomgeving mag externe sites (Ticketmaster, zalen) vaak niet bereiken: test ophalen dan via een GitHub Actions-workflow met `workflow_dispatch` en lees de uitvoer met `gh run view --log`.
 1. Werk strikt per fase uit `docs/BOUWPLAN.md` §11. Begin een nieuwe fase pas na expliciet akkoord van Ralf.
 2. Begin elke fase met een korte takenlijst; sluit af door elk acceptatiecriterium af te vinken met bewijs (testuitvoer, Lighthouse-score, screenshot-beschrijving, aantal API-calls).
 3. Externe feiten (API-limieten, endpoints, venue-namen, gratis tiers) altijd zelf verifiëren in de officiële documentatie; nooit uit het hoofd aannemen. Leg wat je vond vast in `docs/BRONNEN.md` met datum.
@@ -65,9 +66,9 @@ Komen in fase 1:
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **0 afgerond** (25 november 2026). Fase 1 start na akkoord van Ralf én zodra `TICKETMASTER_API_KEY` beschikbaar is.
+- Fase: **0 afgerond** (25 november 2026), CI groen op GitHub. Fase 1 start na akkoord van Ralf én zodra `TICKETMASTER_API_KEY` beschikbaar is.
 - Bouwplan: versie 0.3 (akkoord), nieuwe beslissingen B15–B17.
 - Gebouwd: Astro-skelet met tijdelijke pagina (32 venues uit `config/venues.yml`), Zod-schema's voor Venue en Event (`src/lib/schema.ts`), venue-config met validatie, geheimen-check, CI-workflow, 19 tests.
 - Venues staan op `verified: false`: namen/steden komen uit het bouwplan, coördinaten/websites/ID's nog leeg (fase 1).
-- Openstaand voor Ralf: `docs/ACCOUNTS.md` stap 1–3; bij stap 4 controleren of e-mailcode-login in het gratis plan zit.
+- Openstaand voor Ralf: `docs/ACCOUNTS.md` stap 2 (Ticketmaster-secret, mee bezig) en 3; bij stap 4 controleren of e-mailcode-login in het gratis plan zit.
 - Eerste taak fase 1: bron-inventarisatie per venue (`docs/bronnen-per-venue.md`), te beginnen met `docs/proefpagina-bevindingen.md` (proefpagina 25 november: 6 van 12 zalen leesbaar, waarvan 5 gedeeltelijk).

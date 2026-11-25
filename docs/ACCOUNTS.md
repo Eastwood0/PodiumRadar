@@ -9,8 +9,10 @@ Stappen 1–3 zijn nodig vóór fase 1. Stap 4 en 5 kunnen wachten tot fase 2 en
 2. Klik rechtsboven op **+** → **New repository**.
 3. Naam: `podiumradar`. Kies **Private**. Vink niets anders aan (geen README, geen .gitignore).
 4. Klik **Create repository**.
-5. Upload de projectbestanden, of laat Claude Code op je pc dat doen met de commando's die GitHub op het volgende scherm toont.
-6. Controleer na het uploaden het tabblad **Actions**: de workflow **CI** moet groen worden. Dat is het bewijs dat tests en build ook bij GitHub slagen.
+5. Geef Claude toegang tot de repo; Claude zet de code erin.
+6. Controleer het tabblad **Actions**: de workflow **CI** moet groen worden. Dat is het bewijs dat tests en build ook bij GitHub slagen.
+
+✅ Gedaan op 25 november 2026: repo `Eastwood0/PodiumRadar`, CI groen.
 
 ## 2. Ticketmaster: API-sleutel
 
@@ -18,7 +20,7 @@ Stappen 1–3 zijn nodig vóór fase 1. Stap 4 en 5 kunnen wachten tot fase 2 en
 2. Open na het inloggen **My Apps**. Er staat een standaard-app met een **Consumer Key**. Dat is de API-sleutel.
 3. Ga in GitHub naar je repository → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
 4. Name: `TICKETMASTER_API_KEY`, Secret: plak de Consumer Key. Klik **Add secret**.
-5. Wil je Claude Code de sleutel op je eigen pc laten gebruiken? Kopieer dan `.env.example` naar `.env` in de projectmap en plak de sleutel achter het `=`-teken. `.env` wordt nooit geüpload.
+5. Meer hoeft niet: het ophalen draait in GitHub Actions en leest de sleutel daar. (Alleen als je ooit lokaal wilt testen: kopieer `.env.example` naar `.env` en plak de sleutel achter het `=`-teken; `.env` wordt nooit geüpload.)
 
 ## 3. Cloudflare: account
 

@@ -304,6 +304,7 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B14 | Volgen ook mogelijk voor artiesten zonder geplande shows (zoeken via Ticketmaster) | Kern van het Backstreet Boys-probleem: volgen vóór de aankondiging |
 | B15 | Identiteit alleen uit gevalideerde Access-token; ook `*.pages.dev` achter Access | Cloudflare-docs adviseren tokenvalidatie; pages.dev-adressen zijn anders onbeschermd (BRONNEN.md, 25 nov 2026) |
 | B16 | Alle links in data alleen `http(s)` (schema-validatie) | Voorkomt `javascript:`-links uit brondata in de site; bleek nodig in test |
+| B18 | Bouwen in de cloud (Claude-sessie + GitHub), niet op Ralfs pc; ophalen van externe data testen via GitHub Actions | Geen installatie op werk-pc nodig; Actions is ook de omgeving waar de dagelijkse run draait (Ralf, 25 nov 2026) |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)
