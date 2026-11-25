@@ -29,7 +29,7 @@ Een privé-website voor Ralf en maximaal 10 vrienden met de concertagenda's (kom
 - Geen nieuwe externe diensten of betaalde onderdelen zonder akkoord.
 
 ## Techstack (details in bouwplan §6)
-TypeScript · Node.js LTS · Astro (statisch) + React-eilandjes · Tailwind · Fuse.js · Zod · Cheerio (Playwright alleen indien nodig) · Vitest · GitHub Actions · Cloudflare Pages + Pages Functions + D1 + Access
+TypeScript · Node.js LTS · Astro (statisch) + React-eilandjes · Tailwind · eigen zoekfunctie (B28) · Zod · Cheerio (Playwright alleen indien nodig) · Vitest · GitHub Actions · Cloudflare Pages + Pages Functions + D1 + Access
 
 ## Mappenstructuur (doel)
 ```
@@ -57,8 +57,10 @@ Bestaan al:
 - `npm run probe` — bron-inventarisatie van alle venue-sites → `reports/` (workflow "Probe venue sources" zet het op branch `probe-results`)
 - `npm run fetch` — alle adapters draaien → `data/events.json` + `data/status.json` (`FETCH_ONLY=afaslive.nl` voor één bron)
 - `npm run coverage` — `docs/dekking.md` uit de data
+- `npm run build` maakt eerst `public/data/agenda.json` (prebuild: `scripts/build-site-data.ts`), daarna de site in `dist/`. `npm run dev` doet hetzelfde vooraf.
+- Site-code: `src/app/` (React: `App.tsx`, `Overview.tsx`, `Pages.tsx`, `EventCard.tsx`, `search.ts`, `lib.ts`); stijl en kleuren in `src/styles/global.css` (licht/donker via tokens).
 
-Workflows: `ci.yml` (elke push), `fetch.yml` (dagelijks 04:17 UTC, bij adapterwijziging, handmatig; commit data naar main), `probe.yml`.
+Workflows: `ci.yml` (elke push; incl. Lighthouse mobiel ≥ 90 op 3 pagina's via `scripts/lighthouse-check.mjs`), `fetch.yml` (dagelijks 04:17 UTC, bij adapterwijziging, handmatig; commit data naar main), `probe.yml`.
 
 Nieuwe venue toevoegen: adapter in `scripts/adapters/` met `parseX(html)`-functie + ingekorte fixture in `tests/fixtures/` + test in `tests/adapters.test.ts`, daarna opnemen in `scripts/adapters/index.ts`.
 
@@ -71,14 +73,15 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **1 bezig** (gestart 25 november 2026, zonder Ticketmaster: B19, B25). Fase 0 afgerond, CI groen.
-- Bouwplan: versie 0.5, beslissingen t/m B25.
+- Fase: **2 bezig** (gestart 25 november 2026 op verzoek van Ralf). Fase 1 grotendeels af; open: Ticketmaster (B25), Palladium.
+- Bouwplan: versie 0.6, beslissingen t/m B29.
+- Website staat: Overzicht (zaal × maand, B27), Agenda met filters (onthouden in de browser), Artiest, Zaal, Bronnen, zoeken (B28), gele balk bij data > 36 uur. Lighthouse lokaal mobiel 94–99 performance, 100 accessibility; 360 px zonder horizontaal scrollen (Playwright-controle).
 - Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
-  - NL: Ziggo Dome (eigen JSON-API), Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy (via Uitagenda Rotterdam), GelreDome, 013 (Markdown), Effenaar, TivoliVredenburg (via UITagenda Utrecht).
+  - NL: Ziggo Dome (eigen JSON-API), Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy (via Uitagenda Rotterdam), GelreDome, 013 (Markdown), Effenaar, TivoliVredenburg (via UITagenda Utrecht, ~5–7 maanden vooruit).
   - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (één be•at-adapter), ING Arena.
   - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (één d.live-adapter), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark.
-- Geen bron (redenen in `scripts/coverage.ts`, NO_SOURCE): Brabanthallen (captcha), De Kuip, Goffertpark, Megaland, Vrijthof, Koning Boudewijnstadion (geen eigen agenda → Ticketmaster), MECC, Palladium, Signal Iduna Park.
-- Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Ahoy, Tivoli, Brabanthallen: `docs/verzoek-toegang.md`. Na toestemming: `tivolivredenburg.ts` weer opnemen in de adapterlijst.
-- Bekende zwakte: zalen zonder eigen categorie (Grugahalle, Rudolf Weber-Arena, 013, AFAS Live) vallen standaard onder "muziek"; comedy/shows daar worden soms als muziek getoond.
-- Fase 1 open: 50%-steekproef tegen officiële agenda voor 8 venues; Ticketmaster (radar + zalen zonder eigen agenda) zodra Ralf goedkeuring heeft; Palladium.
-- Openstaand voor Ralf: Ticketmaster-goedkeuring afwachten; verzoekbrieven versturen; `docs/ACCOUNTS.md` stap 3 (Cloudflare).
+- Geen bron (redenen in `src/lib/no-source.ts`, ook zichtbaar op de site): Brabanthallen (captcha), De Kuip, Goffertpark, Megaland, Vrijthof, Koning Boudewijnstadion (geen eigen agenda → Ticketmaster), MECC, Palladium, Signal Iduna Park.
+- Nooit bot-blokkades omzeilen (B23). Ahoy en Tivoli lopen vast via de stadsagenda's. Verzoekbrief alleen nog nodig voor Brabanthallen: `docs/verzoek-toegang.md`.
+- Categorieën (B26): correcties in `config/categorie-correcties.yml`; twijfelgevallen in `docs/categorie-twijfel.md`.
+- Fase 2 open: Cloudflare Pages + Access koppelen (Ralf, `docs/ACCOUNTS.md` stap 4) en daarna inlogscherm testen; 95%-steekproef tegen de officiële agenda's; "backstreet boy"-eis alleen op testdata aantoonbaar (BSB staan in geen agenda, BRONNEN.md).
+- Openstaand voor Ralf: ACCOUNTS stap 3–4 (Cloudflare); Ticketmaster-goedkeuring afwachten; brief Brabanthallen.

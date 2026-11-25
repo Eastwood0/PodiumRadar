@@ -6,25 +6,13 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import type { Event } from "../src/lib/schema";
 import { loadVenues } from "../src/lib/venues";
 import type { SourceStatus } from "./lib/pipeline";
+import { NO_SOURCE } from "../src/lib/no-source";
 
 const read = <T>(p: string, f: T): T => (existsSync(p) ? (JSON.parse(readFileSync(p, "utf8")) as T) : f);
 const { events, generatedAt } = read<{ events: Event[]; generatedAt?: string }>("data/events.json", { events: [] });
 const { sources } = read<{ sources: Record<string, SourceStatus> }>("data/status.json", { sources: {} });
 const probe = read<{ reports: { id: string; verdict: { level: string; how: string } }[] }>("docs/probe.json", { reports: [] });
 const verdict = new Map(probe.reports.map((r) => [r.id, r.verdict]));
-
-/** Why a venue has no source yet (kept in sync with the comment in scripts/adapters/index.ts). */
-const NO_SOURCE: Record<string, string> = {
-  brabanthallen: "site toont bots een captcha; toegang gevraagd (docs/verzoek-toegang.md)",
-  "de-kuip": "geen agenda op eigen site; via Ticketmaster zodra de sleutel werkt",
-  goffertpark: "geen eigen agenda (openluchtterrein); via Ticketmaster",
-  megaland: "geen eigen site meer (domein te koop); via Ticketmaster",
-  vrijthof: "plein zonder eigen agenda; via Ticketmaster",
-  "koning-boudewijnstadion": "geen eigen concertagenda; via Ticketmaster",
-  "mecc-maastricht": "datums staan niet in de API; vooral beurzen, lage prioriteit",
-  "palladium-koeln": "datum niet machineleesbaar op de eventpagina; volgt",
-  "signal-iduna-park": "site laadt alles via JavaScript, vooral voetbal; via Ticketmaster",
-};
 
 const rows = loadVenues().map((v) => {
   const own = events.filter((e) => e.venueId === v.id);

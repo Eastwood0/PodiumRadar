@@ -1,45 +1,45 @@
 # Venue-lijst (bouwplan §8). Aanpassen = alleen dit bestand wijzigen.
 # verified: false betekent: naam, locatie, website en bron-ID's worden in fase 1 gecontroleerd.
-# Coördinaten en Ticketmaster-ID's worden pas ingevuld na verificatie. Namen AFAS Dome, ING Arena, Trixxo Arena en
+# Websites zijn op 25 nov 2026 gecontroleerd (bereikbaar of doorverwijzing gevolgd). Coördinaten en Ticketmaster-ID's volgen. Namen AFAS Dome, ING Arena, Trixxo Arena en
 # Rudolf Weber-Arena zijn op 25 nov 2026 gecontroleerd (doorverwijzing van de oude site / officiële stadssite).
 
 venues:
   # --- Nederland, A (arena's en stadions) ---
-  - { id: ziggo-dome, name: Ziggo Dome, city: Amsterdam, country: NL, tier: A }
-  - { id: johan-cruijff-arena, name: Johan Cruijff ArenA, city: Amsterdam, country: NL, tier: A }
-  - { id: afas-live, name: AFAS Live, city: Amsterdam, country: NL, tier: A }
-  - { id: rotterdam-ahoy, name: Rotterdam Ahoy, city: Rotterdam, country: NL, tier: A }
-  - { id: de-kuip, name: De Kuip, city: Rotterdam, country: NL, tier: A, aliases: [Stadion Feijenoord] }
-  - { id: gelredome, name: GelreDome, city: Arnhem, country: NL, tier: A }
+  - { id: ziggo-dome, name: Ziggo Dome, city: Amsterdam, country: NL, tier: A, website: "https://www.ziggodome.nl/" }
+  - { id: johan-cruijff-arena, name: Johan Cruijff ArenA, city: Amsterdam, country: NL, tier: A, website: "https://www.johancruijffarena.nl/" }
+  - { id: afas-live, name: AFAS Live, city: Amsterdam, country: NL, tier: A, website: "https://www.afaslive.nl/" }
+  - { id: rotterdam-ahoy, name: Rotterdam Ahoy, city: Rotterdam, country: NL, tier: A, website: "https://www.ahoy.nl/" }
+  - { id: de-kuip, name: De Kuip, city: Rotterdam, country: NL, tier: A, aliases: [Stadion Feijenoord], website: "https://www.dekuip.com/nl" }
+  - { id: gelredome, name: GelreDome, city: Arnhem, country: NL, tier: A, website: "https://www.gelredome.nl/" }
   - { id: goffertpark, name: Goffertpark, city: Nijmegen, country: NL, tier: A }
-  - { id: mecc-maastricht, name: MECC, city: Maastricht, country: NL, tier: A }
+  - { id: mecc-maastricht, name: MECC, city: Maastricht, country: NL, tier: A, website: "https://www.mecc.nl/" }
   - { id: vrijthof, name: Vrijthof, city: Maastricht, country: NL, tier: A }
-  - { id: brabanthallen, name: Brabanthallen, city: "'s-Hertogenbosch", country: NL, tier: A }
+  - { id: brabanthallen, name: Brabanthallen, city: "'s-Hertogenbosch", country: NL, tier: A, website: "https://www.brabanthallen.nl/" }
   - { id: megaland, name: Megaland, city: Landgraaf, country: NL, tier: A }
 
   # --- Nederland, B (middelgroot) ---
-  - { id: tivolivredenburg, name: TivoliVredenburg, city: Utrecht, country: NL, tier: B }
-  - { id: "013", name: "013", city: Tilburg, country: NL, tier: B }
-  - { id: effenaar, name: Effenaar, city: Eindhoven, country: NL, tier: B }
+  - { id: tivolivredenburg, name: TivoliVredenburg, city: Utrecht, country: NL, tier: B, website: "https://www.tivolivredenburg.nl/" }
+  - { id: "013", name: "013", city: Tilburg, country: NL, tier: B, website: "https://www.013.nl/" }
+  - { id: effenaar, name: Effenaar, city: Eindhoven, country: NL, tier: B, website: "https://www.effenaar.nl/" }
 
   # --- België, A ---
   - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }
-  - { id: lotto-arena, name: Lotto Arena, city: Antwerpen, country: BE, tier: A }
-  - { id: vorst-nationaal, name: Vorst Nationaal, city: Brussel, country: BE, tier: A, aliases: [Forest National] }
+  - { id: lotto-arena, name: Lotto Arena, city: Antwerpen, country: BE, tier: A, website: "https://www.lotto-arena.be/" }
+  - { id: vorst-nationaal, name: Vorst Nationaal, city: Brussel, country: BE, tier: A, aliases: [Forest National], website: "https://www.vorst-nationaal.be/" }
   - { id: palais-12, name: ING Arena, city: Brussel, country: BE, tier: A, aliases: [Palais 12], website: "https://ing.arena.brussels/" }
   - { id: koning-boudewijnstadion, name: Koning Boudewijnstadion, city: Brussel, country: BE, tier: A, aliases: [Stade Roi Baudouin] }
   - { id: arena-hasselt, name: Trixxo Arena, city: Hasselt, country: BE, tier: A, aliases: [Ethias Arena], website: "https://www.trixxo-arena.be/" }
 
   # --- Duitsland, A ---
-  - { id: lanxess-arena, name: LANXESS arena, city: Keulen, country: DE, tier: A }
-  - { id: rheinenergiestadion, name: RheinEnergieStadion, city: Keulen, country: DE, tier: A }
-  - { id: palladium-koeln, name: Palladium, city: Keulen, country: DE, tier: A }
-  - { id: psd-bank-dome, name: PSD Bank Dome, city: Düsseldorf, country: DE, tier: A }
-  - { id: merkur-spiel-arena, name: Merkur Spiel-Arena, city: Düsseldorf, country: DE, tier: A }
-  - { id: mitsubishi-electric-halle, name: Mitsubishi Electric Halle, city: Düsseldorf, country: DE, tier: A }
-  - { id: westfalenhalle, name: Westfalenhalle, city: Dortmund, country: DE, tier: A }
-  - { id: signal-iduna-park, name: Signal Iduna Park, city: Dortmund, country: DE, tier: A }
-  - { id: veltins-arena, name: Veltins-Arena, city: Gelsenkirchen, country: DE, tier: A }
+  - { id: lanxess-arena, name: LANXESS arena, city: Keulen, country: DE, tier: A, website: "https://www.lanxess-arena.de/" }
+  - { id: rheinenergiestadion, name: RheinEnergieStadion, city: Keulen, country: DE, tier: A, website: "https://www.rheinenergiestadion.de/" }
+  - { id: palladium-koeln, name: Palladium, city: Keulen, country: DE, tier: A, website: "https://www.palladium-koeln.de/" }
+  - { id: psd-bank-dome, name: PSD Bank Dome, city: Düsseldorf, country: DE, tier: A, website: "https://www.psd-bank-dome.de/" }
+  - { id: merkur-spiel-arena, name: Merkur Spiel-Arena, city: Düsseldorf, country: DE, tier: A, website: "https://www.merkur-spiel-arena.de/" }
+  - { id: mitsubishi-electric-halle, name: Mitsubishi Electric Halle, city: Düsseldorf, country: DE, tier: A, website: "https://www.mitsubishi-electric-halle.de/" }
+  - { id: westfalenhalle, name: Westfalenhalle, city: Dortmund, country: DE, tier: A, website: "https://www.westfalenhalle.de/" }
+  - { id: signal-iduna-park, name: Signal Iduna Park, city: Dortmund, country: DE, tier: A, website: "https://www.signal-iduna-park.de/" }
+  - { id: veltins-arena, name: Veltins-Arena, city: Gelsenkirchen, country: DE, tier: A, website: "https://veltins-arena.de/" }
   - { id: arena-oberhausen, name: Rudolf Weber-Arena, city: Oberhausen, country: DE, tier: A, aliases: [Arena Oberhausen, König-Pilsener-Arena], website: "https://www.rudolf-weber-arena.de/" }
-  - { id: grugahalle, name: Grugahalle, city: Essen, country: DE, tier: A }
-  - { id: sparkassenpark, name: Sparkassenpark, city: Mönchengladbach, country: DE, tier: A }
+  - { id: grugahalle, name: Grugahalle, city: Essen, country: DE, tier: A, website: "https://www.grugahalle.de/" }
+  - { id: sparkassenpark, name: Sparkassenpark, city: Mönchengladbach, country: DE, tier: A, website: "https://sparkassenpark.de/" }

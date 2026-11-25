@@ -1,44 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
-import { loadVenues } from "../lib/venues";
-
-const venues = loadVenues();
-const countries = [
-  { code: "NL", label: "Nederland", flag: "🇳🇱" },
-  { code: "BE", label: "België", flag: "🇧🇪" },
-  { code: "DE", label: "Duitsland", flag: "🇩🇪" },
-] as const;
+import App from "../app/App";
 ---
 
 <Base title="Podiumradar">
-  <header class="mb-8">
-    <h1 class="text-3xl font-bold tracking-tight">Podiumradar</h1>
-    <p class="mt-2 text-stone-600">
-      In aanbouw. Hier komt de concertagenda van {venues.length} zalen en stadions in Nederland, België en Duitsland.
-    </p>
-  </header>
-
-  {
-    countries.map((c) => {
-      const list = venues.filter((v) => v.country === c.code);
-      return (
-        <section class="mb-6" aria-labelledby={`land-${c.code}`}>
-          <h2 id={`land-${c.code}`} class="mb-2 text-lg font-semibold">
-            <span aria-hidden="true">{c.flag}</span> {c.label} <span class="text-stone-500">({list.length})</span>
-          </h2>
-          <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {list.map((v) => (
-              <li class="rounded-lg border border-stone-200 bg-white px-3 py-2">
-                <span class="font-medium">{v.name}</span>
-                <span class="text-stone-500"> · {v.city}</span>
-                {v.tier === "B" && (
-                  <span class="ml-2 rounded bg-stone-100 px-1.5 py-0.5 text-xs text-stone-600">middelgroot</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      );
-    })
-  }
+  <App client:load />
 </Base>

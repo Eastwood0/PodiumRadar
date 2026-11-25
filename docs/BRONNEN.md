@@ -48,6 +48,14 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | Megaland | megaland.nl staat te koop | Geen eigen agenda | eigen test |
 | Ticketmaster | Ontwikkelaarsaccount van Ralf nog niet goedgekeurd | Wachten (B25) | Ralf |
 
+## Fase 2 — gecontroleerd 25 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Cloudflare Pages, builds | Gratis plan: 500 builds per maand, build stopt na 20 minuten; max 20.000 bestanden, max 25 MiB per bestand | Dagelijkse run + pushes ≈ 40–80 builds/maand; agenda.json is ~0,5 MB | [Pages limits](https://developers.cloudflare.com/pages/platform/limits/) |
+| Cloudflare Pages, Node-versie | Build image v3 gebruikt standaard Node 22.23.4; versie is in te stellen met `.nvmrc`, `.node-version` of `NODE_VERSION` | `.nvmrc` (22) in de repo volstaat, geen extra instelling | [Build image](https://developers.cloudflare.com/pages/configuration/build-image/) |
+| Backstreet Boys | Speelden in sep/okt 2026 een reeks in de Merkur Spiel-Arena (Düsseldorf); die is voorbij, er staan nu geen shows in de zalen van Podiumradar | Acceptatietest "backstreet boy" draait op testdata; live pas te zien zodra ze weer in een agenda staan of via Ticketmaster (fase 3) | [Visit Düsseldorf](https://www.visitduesseldorf.de/en/calendar-of-events/backstreet-boys-into-the-millennium-homecoming-live-in-germany-ccc735ad0c) |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

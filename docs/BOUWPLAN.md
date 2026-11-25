@@ -1,6 +1,6 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.5 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
+> Werktitel: **Podiumradar**. Versie 0.6 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
 > Wijzigingen 0.3 → 0.4: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
@@ -112,7 +112,7 @@ Ontwerpprincipes:
 | Runtime | Node.js (huidige LTS) | Standaard in GitHub Actions |
 | Site | Astro (statische output) + React-eilandjes voor filters/zoeken/volgen | Snel, weinig JavaScript |
 | Styling | Tailwind CSS | Snel consistent, mobiel-eerst |
-| Zoeken | Fuse.js (fuzzy, in de browser) | Typo's moeten werken; dataset is klein |
+| Zoeken | Eigen typfout-tolerante zoekfunctie in de browser (`src/app/search.ts`, B28) | Typo's moeten werken; dataset is klein |
 | Validatie | Zod | Brondata wijkt af; valideren voorkomt kapotte site |
 | HTML/JSON-LD uitlezen | Cheerio (HTML-parser); Playwright alleen als een site echt JavaScript nodig heeft | Lichtgewicht eerst |
 | Server-functies | Cloudflare Pages Functions | Zelfde platform als hosting |
@@ -315,6 +315,9 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B24 | Waar een site zijn agenda zelf als JSON laadt (Ziggo Dome, d.live, be•at, Uitagenda Rotterdam) lezen we die JSON in plaats van de HTML | Niveau 1/2 uit §4.2: stabieler dan HTML-scraping |
 | B25 | Ticketmaster-ontwikkelaarsaccount wacht op goedkeuring; tot dan geen radar buiten de venue-lijst | Ralf, 25 nov 2026 |
 | B26 | Categorie per event: muziek/overig plus een genre (Concert, Dance, Klassiek, Festival, Comedy, Sport, Show, Familie, Beurs, Lezing). Bron: correctiebestand > categorie van de zaal > woorden in de titel > gok (muziek). Twijfelgevallen in `docs/categorie-twijfel.md` | Ralf: categorie-indeling verbeteren (25 nov 2026) |
+| B27 | Overzicht: elk vakje (zaal × maand) toont het aantal events in vijf vaste kleurstappen (1, 2–3, 4–6, 7–10, 11+) in plaats van losse stippen; tikken opent een venster met de shows. Gevolgde artiesten krijgen in fase 3 een markering in het vakje | Drukke zalen hebben 15+ events per maand; losse stippen zijn op 360 px niet leesbaar of aan te tikken. Vaste stappen houden de cijfers leesbaar (contrast) |
+| B28 | Zoeken met een eigen zoekfunctie (elk getypt woord moet op een woord van de naam lijken, max. 1–2 typfouten, accenten genegeerd) in plaats van Fuse.js | Proef op de echte agenda: Fuse gaf onzinnige treffers ("ed sheran" → Michael Jackson-tribute, "afas" → Olaf Schubert); de eigen functie niet, en is getest |
+| B29 | De site laadt de agenda als apart bestand (`data/agenda.json`, ~85 kB gecomprimeerd) dat bij elke build uit `data/events.json` wordt gemaakt; pagina's zijn `#overzicht`, `#agenda`, `#artiest-<naam>`, `#zaal-<id>`, `#bronnen`. Cloudflare Pages bouwt bij elke push naar main, dus ook na de dagelijkse run | Eén pagina, snel (Lighthouse mobiel 94–99), links naar artiest of zaal zijn deelbaar |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

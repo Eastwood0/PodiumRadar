@@ -7,3 +7,5 @@ dist/
 !.env.example
 .DS_Store
 .scratch/
+public/data/
+.lighthouse/

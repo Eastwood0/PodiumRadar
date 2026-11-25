@@ -29,3 +29,13 @@ jobs:
         run: npm run check:secrets
       - name: Build
         run: npm run build
+      - name: Lighthouse (mobiel, fase 2-eis ≥ 90)
+        run: |
+          npx astro preview --port 4321 > /dev/null 2>&1 &
+          npx -y wait-on@9.0.3 -t 30000 http://localhost:4321/
+          mkdir -p .lighthouse
+          for page in overzicht agenda zaal-ziggo-dome; do
+            npx -y lighthouse@13.6.0 "http://localhost:4321/#$page" --quiet --chrome-flags="--headless=new" \
+              --only-categories=performance,accessibility --output=json --output-path=".lighthouse/$page.json"
+          done
+          node scripts/lighthouse-check.mjs

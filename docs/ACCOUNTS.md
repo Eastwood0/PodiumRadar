@@ -27,10 +27,10 @@ Stappen 1–3 zijn nodig vóór fase 1. Stap 4 en 5 kunnen wachten tot fase 2 en
 1. Maak een gratis account aan op dash.cloudflare.com.
 2. Meer hoeft nu niet. De rest volgt in stap 4 en 5.
 
-## 4. Cloudflare: website online en afgeschermd (vóór fase 2)
+## 4. Cloudflare: website online en afgeschermd (nu, voor fase 2)
 
 1. In het Cloudflare-dashboard: **Workers & Pages** → **Create** → **Pages** → **Connect to Git** → kies de repo `podiumradar`.
-2. Build-instellingen: framework **Astro**, build command `npm run build`, output directory `dist`. Klik **Save and Deploy**.
+2. Build-instellingen: framework **Astro**, production branch `main`, build command `npm run build`, output directory `dist`. Verder niets invullen (de Node-versie staat al in de repo). Klik **Save and Deploy**. Vanaf nu zet Cloudflare elke wijziging op main automatisch online, ook de nieuwe agenda van de dagelijkse run.
 3. Noteer het adres dat je krijgt (`<naam>.pages.dev`).
 4. Ga naar **Zero Trust** (links in het menu). Kies bij de vraag om een plan het **Free**-plan en een teamnaam. Noteer de teamnaam.
 5. **Integrations** → **Identity providers** → voeg **One-time PIN** toe. *Controleer hier of dit op het gratis plan beschikbaar is; zo niet, meld het aan Claude Code.*
