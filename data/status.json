@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T19:08:40.939Z",
+  "generatedAt": "2026-11-25T19:55:12.552Z",
   "sources": {
     "afaslive.nl": {
       "ok": true,
@@ -61,6 +61,105 @@
       "lastSuccess": "2026-11-25T19:08:40.939Z",
       "venues": [
         "rheinenergiestadion"
+      ],
+      "dropped": 0
+    },
+    "afas-dome.be": {
+      "ok": true,
+      "count": 47,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "sportpaleis"
+      ],
+      "dropped": 0
+    },
+    "lotto-arena.be": {
+      "ok": true,
+      "count": 39,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "lotto-arena"
+      ],
+      "dropped": 0
+    },
+    "vorst-nationaal.be": {
+      "ok": true,
+      "count": 59,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "vorst-nationaal"
+      ],
+      "dropped": 0
+    },
+    "trixxo-arena.be": {
+      "ok": true,
+      "count": 10,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "arena-hasselt"
+      ],
+      "dropped": 0
+    },
+    "ing.arena.brussels": {
+      "ok": true,
+      "count": 32,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "palais-12"
+      ],
+      "dropped": 0
+    },
+    "psd-bank-dome.de": {
+      "ok": true,
+      "count": 92,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "psd-bank-dome"
+      ],
+      "dropped": 0
+    },
+    "merkur-spiel-arena.de": {
+      "ok": true,
+      "count": 19,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "merkur-spiel-arena"
+      ],
+      "dropped": 0
+    },
+    "mitsubishi-electric-halle.de": {
+      "ok": true,
+      "count": 88,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "mitsubishi-electric-halle"
+      ],
+      "dropped": 0
+    },
+    "westfalenhalle.de": {
+      "ok": true,
+      "count": 94,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "westfalenhalle"
+      ],
+      "dropped": 0
+    },
+    "rudolf-weber-arena.de": {
+      "ok": true,
+      "count": 56,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "arena-oberhausen"
+      ],
+      "dropped": 0
+    },
+    "grugahalle.de": {
+      "ok": true,
+      "count": 23,
+      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "venues": [
+        "grugahalle"
       ],
       "dropped": 0
     }

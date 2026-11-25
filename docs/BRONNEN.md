@@ -32,6 +32,22 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | Trixxo Arena (Hasselt) | Voorheen Ethias Arena | Naam aangepast (B21) | [Wikipedia](https://en.wikipedia.org/wiki/Trixxo_Arena) |
 | Rudolf Weber-Arena (Oberhausen) | Huidige naam van de arena in Oberhausen | Naam aangepast (B21) | [Wikipedia](https://en.wikipedia.org/wiki/Rudolf_Weber-Arena) |
 
+## Fase 1, tweede ronde — gecontroleerd 25 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Rotterdam Ahoy | Elke pagina (ook robots.txt) geeft een Cloudflare-challenge (`cf-mitigated: challenge`) | Niet omzeilen; via Uitagenda Rotterdam (B23) | eigen test |
+| TivoliVredenburg | Sinds 25 nov 2026 Cloudflare-challenge op agenda, sitemap en WordPress-API; robots.txt staat alles toe | Idem, via UITagenda Utrecht | eigen test |
+| Brabanthallen | SiteGround-captcha (`/.well-known/sgcaptcha/`) op de agenda | Geen bron; toegang vragen | eigen test |
+| Uitagenda Rotterdam | JSON-endpoint `/umbraco/api/Entity/GetProductions` per locatie; robots.txt verbiedt alleen de ICS-export en `/locaties/type/` | Bron voor Ahoy + RTM Stage | robots.txt + eigen test |
+| UITagenda Utrecht | Agenda in datumvolgorde, 40 per pagina, ~52 pagina's (± 7 maanden vooruit) | Bron voor TivoliVredenburg; dekt minder dan de zaal zelf (196 vs 748 events) | eigen test |
+| Ziggo Dome | De site laadt zijn agenda uit `/api/agenda/aankomend/?limit=&offset=` (JSON, met status en voorverkoopdatum) | Niveau 1 | eigen test |
+| d.live (Düsseldorf) | `/events-tickets/eventkalender/dates?total=` geeft JSON; tijden staan als lokale tijd met een foutieve "Z" | Tijd gelezen als Düsseldorfse tijd (gecontroleerd tegen de eventpagina) | eigen test |
+| be•at (AFAS Dome e.a.) | Eventpagina's hebben de tickets (datum, tijd, link) in gecodeerde page data; sitemap noemt ~100 events per zaal | Eén adapter voor vier zalen | eigen test |
+| 013 | Publiceert het hele programma als Markdown (`/programma.md`) | Niveau 1 | eigen test |
+| Megaland | megaland.nl staat te koop | Geen eigen agenda | eigen test |
+| Ticketmaster | Ontwikkelaarsaccount van Ralf nog niet goedgekeurd | Wachten (B25) | Ralf |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

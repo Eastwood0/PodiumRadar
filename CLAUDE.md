@@ -71,11 +71,14 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **1 bezig** (gestart 25 november 2026 op verzoek van Ralf, zonder Ticketmaster: B19). Fase 0 afgerond, CI groen.
-- Bouwplan: versie 0.4, beslissingen t/m B22.
-- Fase 1 gedaan: bron-inventarisatie (`docs/bronnen-per-venue.md`, `docs/probe.json`), pipeline (normaliseren, ontdubbelen, storingsregel), 7 adapters (AFAS Live, Johan Cruijff ArenA, Effenaar, TivoliVredenburg, LANXESS arena, Veltins-Arena, RheinEnergieStadion), dagelijkse workflow, dekkingsrapport.
-- Fase 1 open: adapters voor de overige venues (volgorde in `docs/dekking.md`, kolom "Nog te doen"); 50%-steekproef tegen officiële agenda voor 8 venues; Ticketmaster zodra de sleutel werkt.
-- Volgende adapters, op volgorde van waarde: Sportpaleis-groep (AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena: één platform, Next.js met gecodeerde page data), Ziggo Dome (agenda via JavaScript: endpoint zoeken), 013 (sitemap + JSON-LD, te veel URL's: incrementeel cachen), WordPress-sites (MECC/EventON, ING Arena, Palladium, Rudolf Weber-Arena, Sparkassenpark: `wp-json`), d.live-groep Düsseldorf (PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle), Westfalenhalle, Grugahalle, De Kuip, GelreDome.
-- Fase 0 gebouwd: Astro-skelet met tijdelijke pagina, Zod-schema's (`src/lib/schema.ts`), venue-config met validatie, geheimen-check, CI. Totaal nu 57 tests.
-- Venues staan nog op `verified: false` (coördinaten en Ticketmaster-ID's ontbreken); vier namen zijn bijgewerkt (B21).
-- Openstaand voor Ralf: Ticketmaster-sleutel (lukte nog niet, 25 nov); `docs/ACCOUNTS.md` stap 3; bij stap 4 controleren of e-mailcode-login in het gratis plan zit; eventueel Skiddle-sleutel (radar VK).
+- Fase: **1 bezig** (gestart 25 november 2026, zonder Ticketmaster: B19, B25). Fase 0 afgerond, CI groen.
+- Bouwplan: versie 0.5, beslissingen t/m B25.
+- Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
+  - NL: Ziggo Dome (eigen JSON-API), Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy (via Uitagenda Rotterdam), GelreDome, 013 (Markdown), Effenaar, TivoliVredenburg (via UITagenda Utrecht).
+  - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (één be•at-adapter), ING Arena.
+  - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (één d.live-adapter), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark.
+- Geen bron (redenen in `scripts/coverage.ts`, NO_SOURCE): Brabanthallen (captcha), De Kuip, Goffertpark, Megaland, Vrijthof, Koning Boudewijnstadion (geen eigen agenda → Ticketmaster), MECC, Palladium, Signal Iduna Park.
+- Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Ahoy, Tivoli, Brabanthallen: `docs/verzoek-toegang.md`. Na toestemming: `tivolivredenburg.ts` weer opnemen in de adapterlijst.
+- Bekende zwakte: zalen zonder eigen categorie (Grugahalle, Rudolf Weber-Arena, 013, AFAS Live) vallen standaard onder "muziek"; comedy/shows daar worden soms als muziek getoond.
+- Fase 1 open: 50%-steekproef tegen officiële agenda voor 8 venues; Ticketmaster (radar + zalen zonder eigen agenda) zodra Ralf goedkeuring heeft; Palladium.
+- Openstaand voor Ralf: Ticketmaster-goedkeuring afwachten; verzoekbrieven versturen; `docs/ACCOUNTS.md` stap 3 (Cloudflare).

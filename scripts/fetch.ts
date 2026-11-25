@@ -31,7 +31,9 @@ async function main() {
 
   const results = await Promise.allSettled(adapters.map((a) => a.fetch()));
   const all: Event[] = [];
-  const status: Record<string, SourceStatus> = { ...prevStatus };
+  // Keep status only for sources that still exist; removed adapters disappear from the status page.
+  const known = new Set(ADAPTERS.map((a) => a.name));
+  const status: Record<string, SourceStatus> = Object.fromEntries(Object.entries(prevStatus).filter(([name]) => known.has(name)));
 
   adapters.forEach((a, i) => {
     const r = results[i];

@@ -6,6 +6,18 @@ import { parseJca } from "../scripts/adapters/johan-cruijff-arena";
 import { parseLanxess } from "../scripts/adapters/lanxess-arena";
 import { fromJsonLd } from "../scripts/adapters/sitemap-jsonld";
 import { parseTivoli } from "../scripts/adapters/tivolivredenburg";
+import { parseZiggoDome } from "../scripts/adapters/ziggo-dome";
+import { parse013 } from "../scripts/adapters/013";
+import { parseGelredome } from "../scripts/adapters/gelredome";
+import { parseUitagendaRotterdam } from "../scripts/adapters/uitagenda-rotterdam";
+import { inferYear, parseUitagendaUtrecht } from "../scripts/adapters/uitagenda-utrecht";
+import { BEAT_SITES, beatEventUrls, parseBeatEvent } from "../scripts/adapters/beat-venues";
+import { DLIVE_SITES, parseDlive } from "../scripts/adapters/d-live";
+import { parseWestfalenhalle, westfalenhalleCategory } from "../scripts/adapters/westfalenhalle";
+import { parseRudolfWeberArena } from "../scripts/adapters/rudolf-weber-arena";
+import { parseGrugahalle } from "../scripts/adapters/grugahalle";
+import { parseIngShowDate, parseIngShowList } from "../scripts/adapters/ing-arena";
+import { parseSparkassenpark, parseSparkassenparkTitle } from "../scripts/adapters/sparkassenpark";
 
 // Fixtures are trimmed copies of the real pages (25 Nov 2026). When a site changes its layout,
 // these tests keep passing but the live run reports the source as failed or as an outage.
@@ -74,11 +86,6 @@ describe("sitemap + JSON-LD", () => {
   });
 });
 
-import { parseZiggoDome } from "../scripts/adapters/ziggo-dome";
-import { parse013 } from "../scripts/adapters/013";
-import { parseGelredome } from "../scripts/adapters/gelredome";
-import { parseUitagendaRotterdam } from "../scripts/adapters/uitagenda-rotterdam";
-import { inferYear, parseUitagendaUtrecht } from "../scripts/adapters/uitagenda-utrecht";
 
 describe("Ziggo Dome (own agenda API)", () => {
   const { events, hasMore } = parseZiggoDome(fixture("ziggodome-agenda.json"));
@@ -142,5 +149,89 @@ describe("UITagenda Utrecht (TivoliVredenburg via city agenda)", () => {
   it("infers the year for dates without one", () => {
     const today = new Date("2026-11-25T12:00:00Z");
     expect([inferYear(25, 11, today), inferYear(3, 1, today), inferYear(24, 11, today), inferYear(20, 11, today)]).toEqual([2026, 2027, 2026, 2027]);
+  });
+});
+
+
+describe("be•at venues (AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena)", () => {
+  it("turns each show time into its own event, with local time and ticket link", () => {
+    const ev = parseBeatEvent(fixture("beat-afasdome-event.html"), "https://www.afas-dome.be/evenement/night-of-the-proms-2027-35c4d434", BEAT_SITES[0]);
+    expect(ev.map((e) => e.start)).toEqual(["2027-11-19T20:30:00+01:00", "2027-11-20T20:30:00+01:00", "2027-11-21T15:00:00+01:00"]);
+    expect(ev[0]).toMatchObject({ venueId: "sportpaleis", title: "Night of the Proms 2027", ticketUrl: "https://www.ticketmaster.be/event/72259572?language=nl-be&brand=afasdome" });
+  });
+  it("handles summer time and two shows on one day", () => {
+    const ev = parseBeatEvent(fixture("beat-lotto-event.html"), "https://www.lotto-arena.be/evenement/likeme-in-concert-2027-6018c9d2", BEAT_SITES[1]);
+    expect(ev.map((e) => e.start)).toEqual(["2027-04-10T14:30:00+02:00", "2027-04-10T18:00:00+02:00"]);
+  });
+  it("ignores shows at another venue of the group", () => {
+    expect(parseBeatEvent(fixture("beat-lotto-event.html"), "https://x", BEAT_SITES[0])).toEqual([]);
+  });
+  it("reads Dutch event pages from the sitemap, without language duplicates", () => {
+    const xml = "<urlset><url><loc>https://www.lotto-arena.be/evenement/a-1</loc></url><url><loc>https://www.lotto-arena.be/nl/evenement/a-1</loc></url><url><loc>https://www.lotto-arena.be/fr/evenement/a-1</loc></url><url><loc>https://www.lotto-arena.be/kalender</loc></url></urlset>";
+    expect(beatEventUrls(xml, "https://www.lotto-arena.be")).toEqual(["https://www.lotto-arena.be/evenement/a-1"]);
+  });
+});
+
+describe("d.live (PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle)", () => {
+  const ev = parseDlive(fixture("dlive-dates.json"), DLIVE_SITES[0]);
+  it("reads the feed's wall-clock time as Düsseldorf time (the trailing Z is wrong in the feed)", () => {
+    expect(ev[0]).toMatchObject({ venueId: "psd-bank-dome", title: "MUSE", start: "2026-11-25T19:30:00+01:00", sourceCategory: "Konzerte", ticketUrl: "https://www.livenation.de/muse-tickets-adp647" });
+    expect(ev[2].start).toBe("2027-04-08T20:00:00+02:00");
+  });
+  it("maps canceled and postponed", () => {
+    expect(ev.map((e) => e.status)).toEqual([undefined, "geannuleerd", "verplaatst"]);
+  });
+});
+
+describe("Westfalenhalle (HTML)", () => {
+  const ev = parseWestfalenhalle(fixture("westfalenhalle-eventfinder.html"));
+  it("reads date, link and the site's own categories", () => {
+    expect(ev.map((e) => [e.title, e.start.slice(0, 10), e.sourceCategory])).toEqual([
+      ["KAYA YANAR", "2026-11-27", "Comedy"],
+      ["NIGHT OF THE PROMS", "2026-11-28", "Musik"],
+      ["CARDS & GAMES Dortmund", "2026-11-29", undefined],
+    ]);
+  });
+  it("lets music win over other categories", () => {
+    expect([westfalenhalleCategory("19,2,41"), westfalenhalleCategory("1"), westfalenhalleCategory("")]).toEqual(["Musik", "Comedy", undefined]);
+  });
+});
+
+describe("Rudolf Weber-Arena (HTML)", () => {
+  const ev = parseRudolfWeberArena(fixture("rwa-events.html"));
+  it("reads date, time and cancellations", () => {
+    expect(ev[0]).toMatchObject({ venueId: "arena-oberhausen", title: "Night of the Proms", start: "2026-11-29T18:00:00+01:00", hasTime: true, sourceId: "722" });
+    expect(ev.at(-1)).toMatchObject({ title: "Killa Hakan", status: "geannuleerd" });
+  });
+});
+
+describe("Grugahalle (HTML)", () => {
+  it("reads title and date", () => {
+    const ev = parseGrugahalle(fixture("grugahalle-list.html"));
+    expect(ev[0]).toMatchObject({ venueId: "grugahalle", title: "Özcan Cosar – VIP", start: "2026-11-28T12:00:00+01:00", hasTime: false, sourceId: "25793" });
+  });
+});
+
+describe("ING Arena (WordPress + show page)", () => {
+  it("finds the French date on the show page", () => {
+    expect(parseIngShowDate(fixture("ing-show.html"))).toEqual({ y: 2027, mo: 10, d: 3 });
+    expect(parseIngShowDate("<div>geen datum</div>")).toBeUndefined();
+  });
+  it("decodes titles from the API list", () => {
+    expect(parseIngShowList('[{"id":1,"link":"https://ing.arena.brussels/show/a/","title":{"rendered":"Ren&eacute; &#038; Co"}}]')).toEqual([{ id: 1, url: "https://ing.arena.brussels/show/a/", title: "René & Co" }]);
+  });
+});
+
+
+describe("SparkassenPark (WordPress, date in title)", () => {
+  it("takes the date out of the title and strips the place name", () => {
+    expect(parseSparkassenparkTitle("PUR 04.06.2027 SparkassenPark Mönchengladbach")).toEqual({ title: "PUR", y: 2027, mo: 6, d: 4 });
+    expect(parseSparkassenparkTitle("Limp Bizkit 23.06.26 SKP Mönchengladbach")).toMatchObject({ title: "Limp Bizkit", y: 2026 });
+    expect(parseSparkassenparkTitle("BOBfest 2026 | 25.07.2026")).toMatchObject({ title: "BOBfest 2026", mo: 7, d: 25 });
+    expect(parseSparkassenparkTitle("Brings and Friends")).toBeUndefined();
+  });
+  it("decodes HTML entities and builds events", () => {
+    const ev = parseSparkassenpark('[{"id":5,"link":"https://sparkassenpark.de/veranstaltung/x/","title":{"rendered":"Simon &amp; Garfunkel 01.07.2027 SparkassenPark"}}]');
+    expect(ev[0]).toMatchObject({ venueId: "sparkassenpark", title: "Simon & Garfunkel", start: "2027-07-01T12:00:00+02:00", hasTime: false });
   });
 });

@@ -1,0 +1,174 @@
+{
+ "dates": [
+  {
+   "id": "date_2029",
+   "title": "MUSE",
+   "type": "Konzerte",
+   "subtype": "",
+   "status": "regular",
+   "status_label": "regular",
+   "status_class": " ",
+   "available": 1,
+   "venue": "venue_2",
+   "venue_image": "https://www.psd-bank-dome.de/fileadmin/user_upload/d-live_de/images/logos/logo-psdbank.svg",
+   "image": "https://www.psd-bank-dome.de/fileadmin/_processed_/3/4/csm_eventkalender-muse-1000x750_13b1d99f02.jpg",
+   "url_detail": "/event/muse-25-11-2026",
+   "topevent": false,
+   "vip_features": true,
+   "links": [
+    {
+     "title": "VIP Logen-Tickets",
+     "alt": "VIP Logen-Tickets",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=629",
+     "target": "_blank",
+     "color": "gold",
+     "icon": "loge",
+     "class": "vip-logen-tickets-conversion",
+     "vip_link": true
+    },
+    {
+     "title": "Club-Tickets",
+     "alt": "Club-Tickets",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=629",
+     "target": "_blank",
+     "color": "primary",
+     "icon": "toast",
+     "class": "",
+     "vip_link": true
+    },
+    {
+     "title": "Club-Tickets Aisle",
+     "alt": "Club-Tickets Aisle",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=629",
+     "target": "_blank",
+     "color": "primary",
+     "icon": "toast",
+     "class": "",
+     "vip_link": true
+    },
+    {
+     "title": "Tickets",
+     "alt": "Tickets",
+     "url": "https://www.livenation.de/muse-tickets-adp647",
+     "target": "_blank",
+     "color": "outline",
+     "icon": "ticket",
+     "class": "tickets-conversion",
+     "vip_link": false
+    },
+    {
+     "title": "Parking",
+     "alt": "Parking",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=627",
+     "target": "_blank",
+     "color": "outline",
+     "icon": "parking",
+     "class": "parking-conversion",
+     "vip_link": false
+    }
+   ],
+   "postponed_date": null,
+   "date": {
+    "formatted": "2026-11-25T19:30:00.000Z",
+    "opening_time": "2026-11-25T18:00:00.000Z",
+    "starting_time": "2026-11-25T19:30:00.000Z",
+    "closing_time": null
+   }
+  },
+  {
+   "id": "date_1949",
+   "title": "RIN",
+   "type": "Konzerte",
+   "subtype": "",
+   "status": "canceled",
+   "status_label": "Verlegt auf den 19.05.2027 ins Palladium Köln",
+   "status_class": " state-orange",
+   "available": 0,
+   "venue": "venue_2",
+   "venue_image": "https://www.psd-bank-dome.de/fileadmin/user_upload/d-live_de/images/logos/logo-psdbank.svg",
+   "image": "https://www.psd-bank-dome.de/fileadmin/_processed_/4/d/csm_kalender-rin-2026-1000x750_8f610dc354.jpg",
+   "url_detail": "/event/rin-06-12-2026",
+   "topevent": false,
+   "vip_features": false,
+   "links": [],
+   "postponed_date": null,
+   "date": {
+    "formatted": "2026-12-06T20:00:00.000Z",
+    "opening_time": "2026-12-06T18:00:00.000Z",
+    "starting_time": "2026-12-06T20:00:00.000Z",
+    "closing_time": null
+   }
+  },
+  {
+   "id": "date_1848",
+   "title": "Eros Ramazotti",
+   "type": "Konzerte",
+   "subtype": "",
+   "status": "postponed",
+   "status_label": "Verschoben vom 08.04.2027 auf 01.04.2028",
+   "status_class": " state-orange",
+   "available": 1,
+   "venue": "venue_2",
+   "venue_image": "https://www.psd-bank-dome.de/fileadmin/user_upload/d-live_de/images/logos/logo-psdbank.svg",
+   "image": "https://www.psd-bank-dome.de/fileadmin/_processed_/5/b/csm_eros-ramazzotti-1000x750-new_ce78dabd43.jpg",
+   "url_detail": "/event/eros-ramazotti-08-04-2027",
+   "topevent": false,
+   "vip_features": true,
+   "links": [
+    {
+     "title": "VIP Logen-Tickets",
+     "alt": "VIP Logen-Tickets",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=560",
+     "target": "_blank",
+     "color": "gold",
+     "icon": "loge",
+     "class": "vip-logen-tickets-conversion",
+     "vip_link": true
+    },
+    {
+     "title": "VIP Business-Seats",
+     "alt": "VIP Business-Seats",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=560",
+     "target": "_blank",
+     "color": "gold",
+     "icon": "loge",
+     "class": "vip-business-seats-conversion",
+     "vip_link": true
+    },
+    {
+     "title": "Tickets",
+     "alt": "Tickets",
+     "url": "https://www.eventim.de/event/eros-ramazzotti-una-storia-importante-world-tour-2627-psd-bank-dome-21068487/?affiliate=FKP",
+     "target": "_blank",
+     "color": "outline",
+     "icon": "ticket",
+     "class": "tickets-conversion",
+     "vip_link": false
+    },
+    {
+     "title": "Parking",
+     "alt": "Parking",
+     "url": "https://tickets.psd-bank-dome.de/webshop/webticket/shop?event=561",
+     "target": "_blank",
+     "color": "outline",
+     "icon": "parking",
+     "class": "parking-conversion",
+     "vip_link": false
+    }
+   ],
+   "postponed_date": {
+    "formatted": "2028-04-01T20:00:00.000Z",
+    "opening_time": "2028-04-01T18:00:00.000Z",
+    "starting_time": "2028-04-01T20:00:00.000Z",
+    "closing_time": null
+   },
+   "date": {
+    "formatted": "2027-04-08T20:00:00.000Z",
+    "opening_time": "2027-04-08T18:00:00.000Z",
+    "starting_time": "2027-04-08T20:00:00.000Z",
+    "closing_time": null
+   }
+  }
+ ],
+ "months": []
+}
