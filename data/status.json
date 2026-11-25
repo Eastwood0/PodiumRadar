@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-11-25T19:08:40.939Z",
+  "sources": {
+    "afaslive.nl": {
+      "ok": true,
+      "count": 104,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "afas-live"
+      ],
+      "dropped": 0
+    },
+    "johancruijffarena.nl": {
+      "ok": true,
+      "count": 18,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "johan-cruijff-arena"
+      ],
+      "dropped": 0
+    },
+    "effenaar.nl": {
+      "ok": true,
+      "count": 107,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "effenaar"
+      ],
+      "dropped": 0
+    },
+    "tivolivredenburg.nl": {
+      "count": 0,
+      "venues": [
+        "tivolivredenburg"
+      ],
+      "ok": false,
+      "outage": false,
+      "error": "https://www.tivolivredenburg.nl/agenda/: 403"
+    },
+    "lanxess-arena.de": {
+      "ok": true,
+      "count": 171,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "lanxess-arena"
+      ],
+      "dropped": 0
+    },
+    "veltins-arena.de": {
+      "ok": true,
+      "count": 1,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "veltins-arena"
+      ],
+      "dropped": 0
+    },
+    "rheinenergiestadion.de": {
+      "ok": true,
+      "count": 16,
+      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "venues": [
+        "rheinenergiestadion"
+      ],
+      "dropped": 0
+    }
+  }
+}
