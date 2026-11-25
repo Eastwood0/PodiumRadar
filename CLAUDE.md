@@ -22,7 +22,7 @@ Een privé-website voor Ralf en maximaal 10 vrienden met de concertagenda's (kom
 - **Nooit** API-sleutels of e-mailadressen in de repo, in `data/` of in frontend-code. Sleutels alleen via GitHub-/Cloudflare-secrets; e-mailadressen alleen in D1 en Cloudflare Access; `.env` staat in `.gitignore`.
 - Elke `/api/*`-functie haalt het e-mailadres **alleen** uit de gevalideerde Access-token (`Cf-Access-Jwt-Assertion`: handtekening, `iss`, `aud`, `exp`, `nbf`), nooit uit een losse header, en geeft alleen data van die gebruiker terug (bouwplan B15). De export voor de dagelijkse run bevat geen e-mailadressen.
 - Alle links uit brondata gaan door `HttpUrl` in `src/lib/schema.ts` (alleen http/https, B16).
-- Ticketmaster-API: max 4 calls per seconde, < 1.000 calls per dag; respecteer de `Rate-Limit`-headers.
+- Ticketmaster-API: max 2 calls per seconde (FAQ nov 2026), < 1.000 calls per dag; respecteer de `Rate-Limit`-headers.
 - Venue-sites: robots.txt en gebruiksvoorwaarden respecteren, max 1 verzoek per seconde per site, eigen User-Agent. Kies altijd het laagste niveau uit bouwplan §4.2 (gestructureerde data vóór HTML-scraping).
 - Een bron die < 50% van het vorige aantal events teruggeeft = storing: oude data behouden, melding sturen, niets verwijderen.
 - Gebruikerstekst in de site is Nederlands; code, bestandsnamen en commits in het Engels.
@@ -54,10 +54,15 @@ Bestaan al:
 - `npm test` — unit-tests (Vitest, map `tests/`)
 - `npm run lint` · `npm run check` (Astro/TypeScript) · `npm run check:secrets` · `npm run build`
 
-Komen in fase 1:
-- `npm run fetch` — data ophalen (vereist `TICKETMASTER_API_KEY`)
-- `npm run venues:resolve` — venue-ID's opzoeken
-- `npm run coverage` — dekkingsrapport
+- `npm run probe` — bron-inventarisatie van alle venue-sites → `reports/` (workflow "Probe venue sources" zet het op branch `probe-results`)
+- `npm run fetch` — alle adapters draaien → `data/events.json` + `data/status.json` (`FETCH_ONLY=afaslive.nl` voor één bron)
+- `npm run coverage` — `docs/dekking.md` uit de data
+
+Workflows: `ci.yml` (elke push), `fetch.yml` (dagelijks 04:17 UTC, bij adapterwijziging, handmatig; commit data naar main), `probe.yml`.
+
+Nieuwe venue toevoegen: adapter in `scripts/adapters/` met `parseX(html)`-functie + ingekorte fixture in `tests/fixtures/` + test in `tests/adapters.test.ts`, daarna opnemen in `scripts/adapters/index.ts`.
+
+Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt).
 
 ## Definitie van klaar (elke taak)
 - Tests groen, build groen, geen lint-fouten.
@@ -66,9 +71,11 @@ Komen in fase 1:
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **0 afgerond** (25 november 2026), CI groen op GitHub. Fase 1 start na akkoord van Ralf én zodra `TICKETMASTER_API_KEY` beschikbaar is.
-- Bouwplan: versie 0.3 (akkoord), nieuwe beslissingen B15–B17.
-- Gebouwd: Astro-skelet met tijdelijke pagina (32 venues uit `config/venues.yml`), Zod-schema's voor Venue en Event (`src/lib/schema.ts`), venue-config met validatie, geheimen-check, CI-workflow, 19 tests.
-- Venues staan op `verified: false`: namen/steden komen uit het bouwplan, coördinaten/websites/ID's nog leeg (fase 1).
-- Openstaand voor Ralf: `docs/ACCOUNTS.md` stap 2 (Ticketmaster-secret, mee bezig) en 3; bij stap 4 controleren of e-mailcode-login in het gratis plan zit.
-- Eerste taak fase 1: bron-inventarisatie per venue (`docs/bronnen-per-venue.md`), te beginnen met `docs/proefpagina-bevindingen.md` (proefpagina 25 november: 6 van 12 zalen leesbaar, waarvan 5 gedeeltelijk).
+- Fase: **1 bezig** (gestart 25 november 2026 op verzoek van Ralf, zonder Ticketmaster: B19). Fase 0 afgerond, CI groen.
+- Bouwplan: versie 0.4, beslissingen t/m B22.
+- Fase 1 gedaan: bron-inventarisatie (`docs/bronnen-per-venue.md`, `docs/probe.json`), pipeline (normaliseren, ontdubbelen, storingsregel), 7 adapters (AFAS Live, Johan Cruijff ArenA, Effenaar, TivoliVredenburg, LANXESS arena, Veltins-Arena, RheinEnergieStadion), dagelijkse workflow, dekkingsrapport.
+- Fase 1 open: adapters voor de overige venues (volgorde in `docs/dekking.md`, kolom "Nog te doen"); 50%-steekproef tegen officiële agenda voor 8 venues; Ticketmaster zodra de sleutel werkt.
+- Volgende adapters, op volgorde van waarde: Sportpaleis-groep (AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena: één platform, Next.js met gecodeerde page data), Ziggo Dome (agenda via JavaScript: endpoint zoeken), 013 (sitemap + JSON-LD, te veel URL's: incrementeel cachen), WordPress-sites (MECC/EventON, ING Arena, Palladium, Rudolf Weber-Arena, Sparkassenpark: `wp-json`), d.live-groep Düsseldorf (PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle), Westfalenhalle, Grugahalle, De Kuip, GelreDome.
+- Fase 0 gebouwd: Astro-skelet met tijdelijke pagina, Zod-schema's (`src/lib/schema.ts`), venue-config met validatie, geheimen-check, CI. Totaal nu 57 tests.
+- Venues staan nog op `verified: false` (coördinaten en Ticketmaster-ID's ontbreken); vier namen zijn bijgewerkt (B21).
+- Openstaand voor Ralf: Ticketmaster-sleutel (lukte nog niet, 25 nov); `docs/ACCOUNTS.md` stap 3; bij stap 4 controleren of e-mailcode-login in het gratis plan zit; eventueel Skiddle-sleutel (radar VK).

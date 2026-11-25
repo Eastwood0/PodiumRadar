@@ -10,12 +10,16 @@
     "lint": "eslint .",
     "test": "vitest run",
     "check:secrets": "node scripts/check-secrets.mjs",
-    "verify": "npm run lint && npm run check && npm test && npm run check:secrets && npm run build"
+    "verify": "npm run lint && npm run check && npm test && npm run check:secrets && npm run build",
+    "probe": "tsx scripts/probe/probe.ts",
+    "fetch": "tsx scripts/fetch.ts",
+    "coverage": "tsx scripts/coverage.ts"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.9",
     "@tailwindcss/vite": "^4.3.5",
     "astro": "^7.4.13",
+    "cheerio": "^1.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "tailwindcss": "^4.3.5",
@@ -31,6 +35,7 @@
     "eslint": "^10.15.0",
     "eslint-plugin-astro": "^3.2.1",
     "globals": "^17.14.0",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.74.0",
     "vitest": "^5.1.2"

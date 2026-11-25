@@ -17,6 +17,21 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | GitHub Actions-versies | Nieuwste hoofdversies: `actions/checkout@v7`, `actions/setup-node@v7` | In `.github/workflows/ci.yml` | `git ls-remote` op github.com/actions/* |
 | Node.js | Astro 7.4 vereist Node ≥ 22.23.4 | `.nvmrc` = 22, `engines` in package.json | `node_modules/astro/package.json` |
 
+## Fase 1 — gecontroleerd 25 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Ticketmaster-limiet | FAQ noemt nu standaard 2 verzoeken/seconde en 5.000/dag (eerder 5/s genoteerd) | Onze grens van 4/s gaat omlaag naar **max 2/s** zodra Ticketmaster erin komt | [Ticketmaster FAQ](https://developer.ticketmaster.com/support/faq/) |
+| Eventim | Geen officiële API. De zoek-API die websites en pyventim gebruiken (`public-api.eventim.com`) staat in robots.txt dicht voor bots | Niet gebruiken (B20) | [pyventim: no public API](https://openevent.codeberg.page/pyventim/latest/explanation/no-public-api/), eigen probe |
+| Skiddle (VK) | Gratis sleutel op aanvraag, alleen-lezen, alleen niet-commercieel; kan bij veel verkeer beperkt worden | Optie voor radar VK (Ralf moet aanvragen) | [Skiddle API](https://www.skiddle.com/api/) |
+| UiTdatabank (BE) | Doorzoekbare database met evenementen in Vlaanderen en Brussel; hoe je toegang krijgt staat niet op de gelezen pagina's | Optie voor BE, toegang uitzoeken | [publiq docs](https://docs.publiq.be/docs/uitdatabank/search-api/introduction) |
+| OpenAgenda (FR) | Open evenementendatabase met API | Optie voor radar FR, dekking grote concerten onbekend | [OpenAgenda developers](https://developers.openagenda.com/en/) |
+| Bandsintown | API-documentatie zegt niet wie een `app_id` krijgt | Aanvraag blijft optioneel | [Bandsintown API docs](https://help.artists.bandsintown.com/en/articles/9186477-api-documentation) |
+| Sportpaleis → AFAS Dome | sportpaleis.be verwijst door naar afas-dome.be | Naam aangepast (B21) | eigen probe |
+| Palais 12 → ING Arena | Officiële stadssite noemt ING Arena "het voormalige Palais 12"; site ing.arena.brussels | Naam aangepast (B21) | [brussels.be](https://www.brussels.be/ing-arena) |
+| Trixxo Arena (Hasselt) | Voorheen Ethias Arena | Naam aangepast (B21) | [Wikipedia](https://en.wikipedia.org/wiki/Trixxo_Arena) |
+| Rudolf Weber-Arena (Oberhausen) | Huidige naam van de arena in Oberhausen | Naam aangepast (B21) | [Wikipedia](https://en.wikipedia.org/wiki/Rudolf_Weber-Arena) |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

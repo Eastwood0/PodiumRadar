@@ -1,6 +1,7 @@
 # Venue-lijst (bouwplan §8). Aanpassen = alleen dit bestand wijzigen.
 # verified: false betekent: naam, locatie, website en bron-ID's worden in fase 1 gecontroleerd.
-# Coördinaten, websites en Ticketmaster-ID's worden pas ingevuld na verificatie.
+# Coördinaten en Ticketmaster-ID's worden pas ingevuld na verificatie. Namen AFAS Dome, ING Arena, Trixxo Arena en
+# Rudolf Weber-Arena zijn op 25 nov 2026 gecontroleerd (doorverwijzing van de oude site / officiële stadssite).
 
 venues:
   # --- Nederland, A (arena's en stadions) ---
@@ -22,12 +23,12 @@ venues:
   - { id: effenaar, name: Effenaar, city: Eindhoven, country: NL, tier: B }
 
   # --- België, A ---
-  - { id: sportpaleis, name: Sportpaleis, city: Antwerpen, country: BE, tier: A }
+  - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }
   - { id: lotto-arena, name: Lotto Arena, city: Antwerpen, country: BE, tier: A }
   - { id: vorst-nationaal, name: Vorst Nationaal, city: Brussel, country: BE, tier: A, aliases: [Forest National] }
-  - { id: palais-12, name: Palais 12, city: Brussel, country: BE, tier: A }
+  - { id: palais-12, name: ING Arena, city: Brussel, country: BE, tier: A, aliases: [Palais 12], website: "https://ing.arena.brussels/" }
   - { id: koning-boudewijnstadion, name: Koning Boudewijnstadion, city: Brussel, country: BE, tier: A, aliases: [Stade Roi Baudouin] }
-  - { id: arena-hasselt, name: Arena Hasselt, city: Hasselt, country: BE, tier: A, aliases: [Ethias Arena] }
+  - { id: arena-hasselt, name: Trixxo Arena, city: Hasselt, country: BE, tier: A, aliases: [Ethias Arena], website: "https://www.trixxo-arena.be/" }
 
   # --- Duitsland, A ---
   - { id: lanxess-arena, name: LANXESS arena, city: Keulen, country: DE, tier: A }
@@ -39,6 +40,6 @@ venues:
   - { id: westfalenhalle, name: Westfalenhalle, city: Dortmund, country: DE, tier: A }
   - { id: signal-iduna-park, name: Signal Iduna Park, city: Dortmund, country: DE, tier: A }
   - { id: veltins-arena, name: Veltins-Arena, city: Gelsenkirchen, country: DE, tier: A }
-  - { id: arena-oberhausen, name: Arena Oberhausen, city: Oberhausen, country: DE, tier: A }
+  - { id: arena-oberhausen, name: Rudolf Weber-Arena, city: Oberhausen, country: DE, tier: A, aliases: [Arena Oberhausen, König-Pilsener-Arena], website: "https://www.rudolf-weber-arena.de/" }
   - { id: grugahalle, name: Grugahalle, city: Essen, country: DE, tier: A }
   - { id: sparkassenpark, name: Sparkassenpark, city: Mönchengladbach, country: DE, tier: A }

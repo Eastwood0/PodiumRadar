@@ -1,8 +1,9 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.3 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026)
+> Werktitel: **Podiumradar**. Versie 0.4 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
-> Wijzigingen t.o.v. 0.2: verificaties fase 0 verwerkt (B15–B17, §17); `verified`-veld in Venue.
+> Wijzigingen t.o.v. 0.3: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
+> Wijzigingen 0.2 → 0.3: verificaties fase 0 verwerkt (B15–B17, §17); `verified`-veld in Venue.
 > Wijzigingen 0.1 → 0.2: antwoorden Ralf verwerkt (volgen via klikken, eigen favorieten per persoon, middelgrote zalen erbij, radar NL/BE/DE/VK/FR, meldingen naar later) en venue-sites als volwaardige bron (B3 herzien → B9).
 
 ---
@@ -305,6 +306,10 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B15 | Identiteit alleen uit gevalideerde Access-token; ook `*.pages.dev` achter Access | Cloudflare-docs adviseren tokenvalidatie; pages.dev-adressen zijn anders onbeschermd (BRONNEN.md, 25 nov 2026) |
 | B16 | Alle links in data alleen `http(s)` (schema-validatie) | Voorkomt `javascript:`-links uit brondata in de site; bleek nodig in test |
 | B18 | Bouwen in de cloud (Claude-sessie + GitHub), niet op Ralfs pc; ophalen van externe data testen via GitHub Actions | Geen installatie op werk-pc nodig; Actions is ook de omgeving waar de dagelijkse run draait (Ralf, 25 nov 2026) |
+| B19 | Fase 1 start met de venue-sites zelf; Ticketmaster wordt toegevoegd zodra de sleutel werkt (dan vooral voor de radar) | Ralf: Ticketmaster lukt nog niet, onderzoek andere manieren (25 nov 2026). Inventarisatie: 26 van 32 venue-sites bereikbaar |
+| B20 | Eventim-zoek-API niet gebruiken | robots.txt van public-api.eventim.com verbiedt het (probe 25 nov 2026); harde regel: robots.txt respecteren |
+| B21 | Venue-namen bijgewerkt: Sportpaleis → AFAS Dome, Palais 12 → ING Arena, Arena Hasselt → Trixxo Arena, Arena Oberhausen → Rudolf Weber-Arena; id's blijven gelijk | Oude sites verwijzen door / officiële stadssite (BRONNEN.md) |
+| B22 | Eén adapter per site of platform met eigen fixture-test; adapters zonder resultaat of met < 50% worden als storing gemeld en houden de vorige data | Uitwerking §4.2 en storingsregel fase 1 |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

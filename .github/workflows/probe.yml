@@ -1,0 +1,42 @@
+name: Probe venue sources
+
+# Bron-inventarisatie (fase 1). Draait bij wijziging van de probe of de venue-lijst, of handmatig.
+# Resultaat staat op branch "probe-results" in reports/.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/probe/**"
+      - "scripts/lib/**"
+      - "config/venues.yml"
+      - ".github/workflows/probe.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Probe
+        run: npm run probe
+      - name: Publish report to branch probe-results
+        run: |
+          git config user.name "podiumradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B probe-results
+          git add -f reports/
+          git commit -m "Probe report $(date -u +%Y-%m-%dT%H:%MZ)" || echo "no changes"
+          git push -f origin probe-results

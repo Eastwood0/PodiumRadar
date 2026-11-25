@@ -1,0 +1,48 @@
+name: Fetch events
+
+# Dagelijkse ophaalrun (bouwplan §5). Ook bij wijziging van een adapter, of handmatig.
+# Schrijft data/events.json, data/status.json en docs/dekking.md en commit ze naar main.
+on:
+  schedule:
+    - cron: "17 4 * * *" # dagelijks 04:17 UTC (05:17/06:17 in NL)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/adapters/**"
+      - "scripts/lib/**"
+      - "scripts/fetch.ts"
+      - "config/venues.yml"
+      - ".github/workflows/fetch.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Fetch
+        run: npm run fetch
+      - name: Coverage report
+        run: npm run coverage
+      - name: Commit data
+        run: |
+          git config user.name "podiumradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/dekking.md
+          if git diff --cached --quiet; then echo "Geen wijzigingen"; exit 0; fi
+          git commit -m "Data: $(date -u +%Y-%m-%d) ($(node -e 'console.log(require("./data/events.json").events.length)') events)"
+          git pull --rebase origin main
+          git push origin HEAD:main
