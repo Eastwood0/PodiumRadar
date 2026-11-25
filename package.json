@@ -1,0 +1,43 @@
+{
+  "name": "podiumradar",
+  "version": "0.0.1",
+  "description": "Concertagenda van grote zalen in NL/BE/DE met artiest-radar",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "verify": "npm run lint && npm run check && npm test && npm run check:secrets && npm run build"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.9",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.10",
+    "@types/react": "^19.3.2",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.14.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.2"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  }
+}
