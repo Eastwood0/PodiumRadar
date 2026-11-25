@@ -1,0 +1,67 @@
+{
+ "data": [
+  {
+   "id": "23e6b9b3-2f23-4da5-a9c8-b97a86215688",
+   "eventId": "f59ccae3-6ed0-421d-9417-ef115ed572af",
+   "showDate": "2026-11-26 19:00:00",
+   "showTimeUnknown": 0,
+   "showState": "OnSale",
+   "salesUrl": "https://www.ticketmaster.nl/event/1516159579",
+   "salesStartDate": "2026-05-29 07:30:00",
+   "performerName": "The Script",
+   "event": {
+    "title": "Man In The Arena Tour",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Zi9To04PO78&list=RDZi9To04PO78&start_radio=1",
+    "youtubeEndTime": 62,
+    "youtubeStartTime": 32
+   },
+   "genres": "[{\"name\": \"Pop\", \"name_en\": \"Pop\"}]",
+   "privateEvent": 0,
+   "visible": 1
+  },
+  {
+   "id": "b7dd6da8-8d41-454e-9e73-4683348b0492",
+   "eventId": "ed48cb16-0d6b-45db-916f-c14c8357395a",
+   "showDate": "2026-12-04 19:00:00",
+   "showTimeUnknown": 0,
+   "showState": "SoldOut",
+   "salesUrl": "https://www.eventim.nl/noapp/event/21007311?affiliate=2FF",
+   "salesStartDate": "2025-12-05 09:00:00",
+   "performerName": "Kensington",
+   "event": {
+    "title": "Live in de Ziggo Dome 2026",
+    "youtubeUrl": "https://www.youtube.com/watch?v=FE4VcAXxXfM",
+    "youtubeEndTime": 177,
+    "youtubeStartTime": 157
+   },
+   "genres": "[{\"name\": \"Rock\", \"name_en\": \"Rock\"}]",
+   "privateEvent": 0,
+   "visible": 1
+  },
+  {
+   "id": "a878deb2-e6a4-4fde-8cab-8ef75726d62a",
+   "eventId": "7f3d3b00-b7c5-4008-82c4-3229b915775a",
+   "showDate": "2026-11-28 18:45:00",
+   "showTimeUnknown": 0,
+   "showState": "Canceled",
+   "salesUrl": "https://www.ticketmaster.nl/event/the-prodigy-european-tour-tickets/2090976842",
+   "salesStartDate": "2026-04-10 08:00:00",
+   "performerName": "The Prodigy",
+   "event": {
+    "title": "European Tour",
+    "youtubeUrl": "https://www.youtube.com/watch?v=wmin5WkOuPw",
+    "youtubeEndTime": 34,
+    "youtubeStartTime": 4
+   },
+   "genres": "[{\"name\": \"Rock\", \"name_en\": \"Rock\"},{\"name\": \"Heavy\", \"name_en\": \"Heavy\"}]",
+   "privateEvent": 0,
+   "visible": 1
+  }
+ ],
+ "pagination": {
+  "total": "129",
+  "limit": 50,
+  "offset": 0,
+  "hasMore": true
+ }
+}

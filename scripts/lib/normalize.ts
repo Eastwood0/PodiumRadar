@@ -41,7 +41,7 @@ export type Category = "muziek" | "overig";
 export function categorize(title: string, sourceCategory?: string): Category {
   if (sourceCategory) {
     if (/konzert|concert|muziek|music|musik/i.test(sourceCategory)) return "muziek";
-    if (/sport|comedy|eishockey|entertainment|familie|kennis|debat|theater/i.test(sourceCategory)) return "overig";
+    if (/sport|comedy|eishockey|entertainment|familie|kennis|debat|theater|evenementen|lezing|beurs|messe|film|eten|expo|tentoonstelling|markt|cabaret|kinder|jeugd|rondleiding|workshop/i.test(sourceCategory)) return "overig";
   }
   if (SPORT.test(title) || OTHER.test(title)) return "overig";
   if (FIXTURE.test(title.trim()) && /\b(fc|sv|vs|jong|united|city)\b/i.test(title)) return "overig";

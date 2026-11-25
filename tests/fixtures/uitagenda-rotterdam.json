@@ -1,0 +1,90 @@
+{
+ "pagedList": {
+  "items": [
+   {
+    "id": 170043,
+    "parentId": 170042,
+    "title": "EXCELLENT woonbeurs",
+    "date": "2026-11-26T19:00:00",
+    "timeBeautified": "19:00 - 00:00",
+    "soldout": false,
+    "url": "/agenda/excellent-woonbeurs/",
+    "image": "/images/productions/170042/6__1___1_.jpg",
+    "genres": [
+     {
+      "title": "Evenementen",
+      "key": "evenementen",
+      "url": "",
+      "productionVisibility": "End time",
+      "productVisibilityPageExclusionsIds": [],
+      "showPatternDays": false,
+      "nightThemeGenre": false,
+      "id": 5148
+     }
+    ],
+    "location": {
+     "key": "rotterdam-ahoy",
+     "title": "Rotterdam Ahoy"
+    }
+   },
+   {
+    "id": 178137,
+    "parentId": 178136,
+    "title": "UB40 ft. Ali Campbell",
+    "date": "2026-12-15T20:00:00",
+    "timeBeautified": "20:00 - 23:00",
+    "soldout": false,
+    "url": "/agenda/ub40-ft-ali-campbell/",
+    "image": "/images/productions/178136/ub40-ft-ali-campbell-dec-2026-rotterdam-ahoy.jpg",
+    "genres": [
+     {
+      "title": "Muziek",
+      "key": "muziek",
+      "url": "/ontdek/muziek-in-rotterdam/",
+      "productionVisibility": "Start time",
+      "productVisibilityPageExclusionsIds": [],
+      "showPatternDays": false,
+      "nightThemeGenre": false,
+      "id": 1454
+     }
+    ],
+    "location": {
+     "key": "rotterdam-ahoy",
+     "title": "Rotterdam Ahoy"
+    }
+   },
+   {
+    "id": 218491,
+    "parentId": 218482,
+    "title": "De Vrienden van Amstel LIVE",
+    "date": "2027-01-22T20:00:00",
+    "timeBeautified": "20:00",
+    "soldout": true,
+    "url": "/agenda/de-vrienden-van-amstel-live/",
+    "image": "/images/productions/218482/vval_rotterdam-ahoy-2023.jpg",
+    "genres": [
+     {
+      "title": "Festival",
+      "key": "festival",
+      "url": "/ontdek/festivalagenda/",
+      "productionVisibility": "End time",
+      "productVisibilityPageExclusionsIds": [],
+      "showPatternDays": false,
+      "nightThemeGenre": false,
+      "id": 5150
+     }
+    ],
+    "location": {
+     "key": "rotterdam-ahoy",
+     "title": "Rotterdam Ahoy"
+    }
+   }
+  ],
+  "paginator": {
+   "totalItems": 142,
+   "currentPage": 1,
+   "pageSize": 100,
+   "totalPages": 2
+  }
+ }
+}
