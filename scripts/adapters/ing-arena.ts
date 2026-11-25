@@ -13,6 +13,7 @@ interface WpShow {
   id: number;
   link?: string;
   title?: { rendered?: string };
+  genre?: number[];
 }
 
 /** First French or Dutch date ("3 octobre 2027") in the show page's dynamic fields. */
@@ -27,25 +28,37 @@ export function parseIngShowDate(html: string): { y: number; mo: number; d: numb
   return undefined;
 }
 
-export function parseIngShowList(json: string): { id: number; url: string; title: string }[] {
+export function parseIngShowList(json: string, genreNames: Map<number, string> = new Map()): { id: number; url: string; title: string; genres?: string }[] {
   const list = JSON.parse(json) as WpShow[];
   if (!Array.isArray(list)) throw new Error("ING Arena: onverwacht antwoord van de WordPress-API");
   return list
     .filter((s) => s.link?.startsWith(BASE) && s.title?.rendered)
-    .map((s) => ({ id: s.id, url: s.link!, title: load(`<p>${s.title!.rendered}</p>`)("p").text().trim() }));
+    .map((s) => ({
+      id: s.id,
+      url: s.link!,
+      title: load(`<p>${s.title!.rendered}</p>`)("p").text().trim(),
+      genres: (s.genre ?? []).map((g) => genreNames.get(g)).filter(Boolean).join(", ") || undefined,
+    }));
+}
+
+/** Genre taxonomy of the site: id → name. */
+export function parseIngGenres(json: string): Map<number, string> {
+  const list = JSON.parse(json) as { id: number; name: string }[];
+  return new Map(Array.isArray(list) ? list.map((g) => [g.id, load(`<p>${g.name}</p>`)("p").text()]) : []);
 }
 
 export const ingArena: Adapter = {
   name: "ing.arena.brussels",
   venues: ["palais-12"],
   async fetch() {
-    const shows = parseIngShowList((await fetchText(`${BASE}/wp-json/wp/v2/show?per_page=100&_fields=id,link,title`, "application/json")).body);
+    const genres = parseIngGenres((await fetchText(`${BASE}/wp-json/wp/v2/genre?per_page=100&_fields=id,name`, "application/json")).body);
+    const shows = parseIngShowList((await fetchText(`${BASE}/wp-json/wp/v2/show?per_page=100&_fields=id,link,title,genre`, "application/json")).body, genres);
     const out: SourceEvent[] = [];
     for (const s of shows) {
       const date = parseIngShowDate((await fetchText(s.url)).body);
       if (!date) continue;
       const { start, hasTime } = localToIso(date.y, date.mo, date.d, undefined, TZ_BY_COUNTRY.BE);
-      out.push({ venueId: "palais-12", title: s.title, start, hasTime, url: s.url, sourceId: String(s.id) });
+      out.push({ venueId: "palais-12", title: s.title, start, hasTime, sourceCategory: s.genres, url: s.url, sourceId: String(s.id) });
     }
     return out;
   },

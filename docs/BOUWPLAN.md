@@ -311,9 +311,10 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B20 | Eventim-zoek-API niet gebruiken | robots.txt van public-api.eventim.com verbiedt het (probe 25 nov 2026); harde regel: robots.txt respecteren |
 | B21 | Venue-namen bijgewerkt: Sportpaleis → AFAS Dome, Palais 12 → ING Arena, Arena Hasselt → Trixxo Arena, Arena Oberhausen → Rudolf Weber-Arena; id's blijven gelijk | Oude sites verwijzen door / officiële stadssite (BRONNEN.md) |
 | B22 | Eén adapter per site of platform met eigen fixture-test; adapters zonder resultaat of met < 50% worden als storing gemeld en houden de vorige data | Uitwerking §4.2 en storingsregel fase 1 |
-| B23 | Zalen die elke bot blokkeren (Cloudflare-challenge / captcha) worden nooit omzeild. Ahoy komt binnen via Uitagenda Rotterdam, TivoliVredenburg via UITagenda Utrecht; tegelijk vraagt Ralf de zalen om toegang | Ralf: Ahoy en Tivoli moeten erbij (25 nov 2026); de stadsagenda's staan bots toe in robots.txt en krijgen hun data van de zalen zelf |
+| B23 | Zalen die elke bot blokkeren (Cloudflare-challenge / captcha) worden nooit omzeild. Ahoy komt binnen via Uitagenda Rotterdam, TivoliVredenburg via UITagenda Utrecht; dit is de vaste route (Ralf, 25 nov 2026) | Ralf: Ahoy en Tivoli moeten erbij (25 nov 2026); de stadsagenda's staan bots toe in robots.txt en krijgen hun data van de zalen zelf |
 | B24 | Waar een site zijn agenda zelf als JSON laadt (Ziggo Dome, d.live, be•at, Uitagenda Rotterdam) lezen we die JSON in plaats van de HTML | Niveau 1/2 uit §4.2: stabieler dan HTML-scraping |
 | B25 | Ticketmaster-ontwikkelaarsaccount wacht op goedkeuring; tot dan geen radar buiten de venue-lijst | Ralf, 25 nov 2026 |
+| B26 | Categorie per event: muziek/overig plus een genre (Concert, Dance, Klassiek, Festival, Comedy, Sport, Show, Familie, Beurs, Lezing). Bron: correctiebestand > categorie van de zaal > woorden in de titel > gok (muziek). Twijfelgevallen in `docs/categorie-twijfel.md` | Ralf: categorie-indeling verbeteren (25 nov 2026) |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

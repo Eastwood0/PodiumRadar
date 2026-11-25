@@ -20,10 +20,8 @@ import { ziggoDome } from "./ziggo-dome";
 /**
  * All active sources. Add a venue: write an adapter with a fixture test, then list it here.
  *
- * Not active:
- * - tivolivredenburg.ts (direct): tivolivredenburg.nl answers every automated request with a Cloudflare
- *   challenge (since 25 Nov 2026). TivoliVredenburg comes in via uitagendaUtrecht instead (B23).
- *   Re-enable when the venue allows our user agent.
+ * Rotterdam Ahoy and TivoliVredenburg are read through the city culture agendas (uitagendaRotterdam,
+ * uitagendaUtrecht); their own sites block all automated visitors (B23, Ralf's choice 25 Nov 2026).
  *
  * No source yet (see docs/dekking.md): Brabanthallen (bot challenge), De Kuip, Goffertpark, Megaland, Vrijthof and
  * Koning Boudewijnstadion (no agenda of their own), MECC (dates not in its API), Palladium, Signal Iduna Park.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { SourceEvent } from "../scripts/adapters/types";
-import { artistsFromTitle, categorize, normalizeName, statusFrom, tokenSetSimilarity } from "../scripts/lib/normalize";
+import { artistsFromTitle, normalizeName, statusFrom, tokenSetSimilarity } from "../scripts/lib/normalize";
 import { carryFirstSeen, dedupe, isOutage, toEvents } from "../scripts/lib/pipeline";
 import type { Venue } from "../src/lib/schema";
 
@@ -66,12 +66,6 @@ describe("normalize", () => {
     expect(normalizeName("The Backstreet Boys – Live 2027!")).toBe("backstreet boys");
     expect(tokenSetSimilarity("Backstreet Boys", "Backstreet Boys: DNA World Tour")).toBe(1);
     expect(tokenSetSimilarity("Backstreet Boys", "Boyzone")).toBe(0);
-  });
-  it("categorises sport and comedy as overig", () => {
-    expect(categorize("Ajax - FC Thun")).toBe("overig");
-    expect(categorize("Hazel Brugger", "Comedy")).toBe("overig");
-    expect(categorize("Westlife", "Konzert")).toBe("muziek");
-    expect(categorize("Kölner Haie - Straubing Tigers", "Eishockey")).toBe("overig");
   });
   it("reads status words in several languages", () => {
     expect([statusFrom("Ausverkauft"), statusFrom("Verschoben"), statusFrom("Afgelast"), statusFrom("EventScheduled")]).toEqual(["uitverkocht", "verplaatst", "geannuleerd", undefined]);

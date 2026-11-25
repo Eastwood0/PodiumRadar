@@ -70,6 +70,8 @@ export const EventSchema = z.object({
   status: z.enum(["gepland", "uitverkocht", "verplaatst", "geannuleerd"]),
   onSaleStart: z.iso.datetime({ offset: true }).optional(),
   category: z.enum(["muziek", "overig"]),
+  /** Display genre, e.g. "Concert", "Comedy", "Sport" (scripts/lib/categorize.ts). */
+  genre: z.string().min(1).optional(),
   ticketUrl: HttpUrl,
   imageUrl: HttpUrl.optional(),
   sources: z

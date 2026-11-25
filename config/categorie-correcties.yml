@@ -1,0 +1,40 @@
+# Correcties op de automatische categorie-indeling (scripts/lib/categorize.ts).
+# Een regel geldt voor elk event waarvan de titel deze tekst bevat (hoofdletters en accenten maken niet uit).
+# Gebruik dit alleen als de zaal zelf geen categorie meegeeft en de titel niets verraadt.
+# Overzicht van twijfelgevallen: npm run categories
+
+# Altijd "overig", met het genre dat op de site getoond wordt (Comedy, Sport, Show, Familie, Beurs, Lezing, Overig)
+overig:
+  Kaya Yanar: Comedy
+  Herr Schröder: Comedy
+  Özcan Cosar: Comedy
+  Guido Weijers: Comedy
+  Jimmy Carr: Comedy
+  Ricky Gervais: Comedy
+  Bill Bailey: Comedy
+  Jandino: Comedy
+  Ernst, Bobbie & de rest: Familie
+  Dan & Phil: Show
+  Jay Shetty: Lezing
+  Gabor Maté: Lezing
+  Morgan Jay: Comedy
+  Quido van de Graaf: Comedy
+  Olaf Schubert: Comedy
+  Paul Panzer: Comedy
+  Ralf Schmitz: Comedy
+  Sascha Grammel: Comedy
+  Torsten Sträter: Comedy
+  Tutty Tran: Comedy
+  Atze Schröder: Comedy
+  Hazel Brugger: Comedy
+  Till Reiners: Comedy
+  Nico Stank: Comedy
+  Martin Rütter: Show
+  Ehrlich Brothers: Show
+  Riverdance: Show
+  Dr. Leon Windscheid: Lezing
+  Dinotastic: Familie
+  Triple Woord Waarde: Show
+
+# Altijd "muziek" (als een muziekact per ongeluk als iets anders wordt herkend)
+muziek: []

@@ -5,7 +5,6 @@ import { parseEffenaar } from "../scripts/adapters/effenaar";
 import { parseJca } from "../scripts/adapters/johan-cruijff-arena";
 import { parseLanxess } from "../scripts/adapters/lanxess-arena";
 import { fromJsonLd } from "../scripts/adapters/sitemap-jsonld";
-import { parseTivoli } from "../scripts/adapters/tivolivredenburg";
 import { parseZiggoDome } from "../scripts/adapters/ziggo-dome";
 import { parse013 } from "../scripts/adapters/013";
 import { parseGelredome } from "../scripts/adapters/gelredome";
@@ -58,14 +57,6 @@ describe("Effenaar (page data)", () => {
   });
   it("fails loudly when the page structure changes", () => {
     expect(() => parseEffenaar("<html><body>nieuw ontwerp</body></html>")).toThrow(/page data/);
-  });
-});
-
-describe("TivoliVredenburg (HTML, paged)", () => {
-  const { events, hasNext } = parseTivoli(fixture("tivoli-agenda.html"));
-  it("reads items and sees the next page", () => {
-    expect(hasNext).toBe(true);
-    expect(events[0]).toMatchObject({ venueId: "tivolivredenburg", title: "De Grote Vriendelijke Pakjesavond", start: "2026-11-25T12:00:00+01:00", hasTime: false, status: "uitverkocht", sourceId: "44601811" });
   });
 });
 

@@ -1,7 +1,8 @@
 import { EventSchema, type Event, type Venue } from "../../src/lib/schema";
 import type { SourceEvent } from "../adapters/types";
 import { localDate, TZ_BY_COUNTRY } from "./dates";
-import { artistsFromTitle, categorize, eventId, tokenSetSimilarity } from "./normalize";
+import { classify } from "./categorize";
+import { artistsFromTitle, eventId, tokenSetSimilarity } from "./normalize";
 
 export const HORIZON_DAYS = 365;
 export const SAME_EVENT_SIMILARITY = 0.85; // bouwplan §7
@@ -20,8 +21,9 @@ export interface SourceStatus {
 }
 
 /** Converts one adapter's raw events to validated Events. Invalid rows are counted, not thrown. */
-export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<string, Venue>, today: string): { events: Event[]; dropped: number } {
+export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<string, Venue>, today: string): { events: Event[]; dropped: number; guesses: string[] } {
   const events: Event[] = [];
+  const guesses: string[] = [];
   let dropped = 0;
   const until = new Date(Date.parse(today) + HORIZON_DAYS * 86_400_000).toISOString().slice(0, 10);
   for (const s of raw) {
@@ -32,6 +34,7 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
     }
     const tz = TZ_BY_COUNTRY[venue.country];
     const day = localDate(s.start, tz);
+    const kind = classify(s.title, s.sourceCategory);
     if (day < today || day > until) continue; // outside scope, not an error
     const candidate = {
       id: eventId(venue.id, day, s.title),
@@ -45,7 +48,8 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
       hasTime: s.hasTime,
       status: s.status ?? "gepland",
       onSaleStart: s.onSaleStart,
-      category: categorize(s.title, s.sourceCategory),
+      category: kind.category,
+      genre: kind.genre,
       ticketUrl: s.ticketUrl ?? s.url,
       imageUrl: s.imageUrl?.startsWith("http") ? s.imageUrl : undefined,
       sources: [{ name: sourceName, sourceId: s.sourceId, url: s.url }],
@@ -53,10 +57,12 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
       lastSeen: today,
     };
     const parsed = EventSchema.safeParse(candidate);
-    if (parsed.success) events.push(parsed.data);
-    else dropped++;
+    if (parsed.success) {
+      events.push(parsed.data);
+      if (kind.reason === "gok") guesses.push(s.title);
+    } else dropped++;
   }
-  return { events, dropped };
+  return { events, dropped, guesses: [...new Set(guesses)] };
 }
 
 const dayOf = (e: Event) => localDate(e.start, TZ_BY_COUNTRY[e.country] ?? "Europe/Amsterdam");

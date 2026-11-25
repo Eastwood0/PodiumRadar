@@ -30,24 +30,6 @@ export function eventId(venueKey: string, localDay: string, title: string): stri
   return createHash("sha1").update(`${venueKey}|${localDay}|${normalizeName(title)}`).digest("hex").slice(0, 16);
 }
 
-const SPORT = /\b(vs\.?|fc|sv|vfl|tsv|bvb|ajax|feyenoord|vitesse|psv|haie|uefa|bundesliga|eredivisie|champions league|europa league|conference league|handball|basketball|volleyball|eishockey|darts|boxing|boksen|glory|wwe|ufc|monster jam|supercross|turnkunst|wedstrijd|interland|oranje leeuwinnen|nations league|world cup|wk |ek )\b/i;
-const OTHER = /\b(comedy|comedian|comedians|cabaret|kabarett|stand-?up|lezing|podcast|beurs|messe|snuffelmarkt|vlooienmarkt|congres|kongress|holiday on ice|disney on ice|circus|zirkus|cirque|sinterklaas|sint show|quiz|bingo|musical|ballet|theater|theatre|magie|magic|freek vonk|lachende)\b/i;
-/** Teams written as "X - Y" (sport fixtures). */
-const FIXTURE = /^[\p{L}0-9 .'’]+ [-–] [\p{L}0-9 .'’]+$/u;
-
-export type Category = "muziek" | "overig";
-
-/** Rough category from the title, optionally overridden by the source's own category. */
-export function categorize(title: string, sourceCategory?: string): Category {
-  if (sourceCategory) {
-    if (/konzert|concert|muziek|music|musik/i.test(sourceCategory)) return "muziek";
-    if (/sport|comedy|eishockey|entertainment|familie|kennis|debat|theater|evenementen|lezing|beurs|messe|film|eten|expo|tentoonstelling|markt|cabaret|kinder|jeugd|rondleiding|workshop/i.test(sourceCategory)) return "overig";
-  }
-  if (SPORT.test(title) || OTHER.test(title)) return "overig";
-  if (FIXTURE.test(title.trim()) && /\b(fc|sv|vs|jong|united|city)\b/i.test(title)) return "overig";
-  return "muziek";
-}
-
 /** Status words in NL/DE/EN/FR → our status. */
 export function statusFrom(text: string | undefined): "gepland" | "uitverkocht" | "verplaatst" | "geannuleerd" | undefined {
   if (!text) return undefined;

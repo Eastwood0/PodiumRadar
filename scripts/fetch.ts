@@ -31,6 +31,7 @@ async function main() {
 
   const results = await Promise.allSettled(adapters.map((a) => a.fetch()));
   const all: Event[] = [];
+  const guessed: Record<string, string[]> = {};
   // Keep status only for sources that still exist; removed adapters disappear from the status page.
   const known = new Set(ADAPTERS.map((a) => a.name));
   const status: Record<string, SourceStatus> = Object.fromEntries(Object.entries(prevStatus).filter(([name]) => known.has(name)));
@@ -45,7 +46,8 @@ async function main() {
       console.warn(`✗ ${a.name}: ${error} — vorige data (${prevOwn.length}) behouden`);
     };
     if (r.status === "rejected") return keepOld(String(r.reason?.message ?? r.reason).slice(0, 300));
-    const { events, dropped } = toEvents(r.value, a.name, venues, today);
+    const { events, dropped, guesses } = toEvents(r.value, a.name, venues, today);
+    if (guesses.length) guessed[a.name] = guesses;
     if (isOutage(events.length, prevCount)) return keepOld(`${events.length} events, vorige keer ${prevCount}: behandeld als storing`, true);
     if (!events.length && !prevCount) {
       status[a.name] = { ok: false, count: 0, error: "0 events gevonden", venues: a.venues, dropped };
@@ -65,6 +67,17 @@ async function main() {
   mkdirSync("data", { recursive: true });
   writeFileSync(EVENTS_FILE, JSON.stringify({ generatedAt: startedAt.toISOString(), events }, null, 1) + "\n");
   writeFileSync(STATUS_FILE, JSON.stringify({ generatedAt: startedAt.toISOString(), sources: status }, null, 2) + "\n");
+  if (!only) writeFileSync(
+    "docs/categorie-twijfel.md",
+    [
+      "# Categorie: twijfelgevallen",
+      "",
+      `Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (${startedAt.toISOString().slice(0, 10)}).`,
+      "Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-correcties.yml`.",
+      "",
+      ...Object.entries(guessed).flatMap(([src, titles]) => [`## ${src} (${titles.length})`, "", ...titles.sort().map((t) => `- ${t}`), ""]),
+    ].join("\n"),
+  );
   const failed = Object.values(status).filter((s) => !s.ok).length;
   console.log(`\n${events.length} events, ${Object.keys(status).length - failed} bronnen ok, ${failed} met storing. ${Math.round((Date.now() - startedAt.getTime()) / 1000)} s.`);
 }

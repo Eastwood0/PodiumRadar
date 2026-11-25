@@ -1,6 +1,6 @@
 # Verzoek om toegang voor Podiumradar
 
-Drie zalen tonen elke geautomatiseerde bezoeker een controlescherm (Cloudflare of captcha). Podiumradar omzeilt dat niet. Ahoy en TivoliVredenburg komen nu binnen via de culturele stadsagenda, maar die is minder volledig. Met toestemming van de zaal halen we de agenda weer bij de bron.
+Drie zalen tonen elke geautomatiseerde bezoeker een controlescherm (Cloudflare of captcha). Podiumradar omzeilt dat niet. Ahoy en TivoliVredenburg lezen we vast via de culturele stadsagenda's (B23); deze brief is vooral nog nodig voor Brabanthallen. Voor Tivoli kan hij de dekking vergroten (de stadsagenda loopt minder ver vooruit).
 
 Stuur onderstaande tekst naar het algemene contactadres van de zaal (te vinden op hun site). Vul je eigen naam in.
 

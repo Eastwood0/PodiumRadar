@@ -25,12 +25,19 @@ export function parseGelredome(html: string): { events: SourceEvent[]; next?: st
       .toArray()
       .some((l) => !$(l).hasClass("w-condition-invisible") && /^uitverkocht$/i.test($(l).text().trim()));
     const ticket = card.find('a.button[target="_blank"]').attr("href");
+    // Category tags of the card (the site's own filter tags), without the editorial tag "Populair".
+    const tags = wrapper
+      .find('[fs-cmsfilter-field="event-tag"]')
+      .map((_, t) => $(t).text().trim())
+      .get()
+      .filter((t) => t && !/^populair$/i.test(t));
     events.push({
       venueId: "gelredome",
       title,
       start,
       hasTime,
       status: soldOut ? "uitverkocht" : undefined,
+      sourceCategory: tags.join(", ") || undefined,
       url: BASE + href,
       ticketUrl: ticket?.startsWith("http") ? ticket : undefined,
       sourceId: href.replace("/evenement/", ""),
