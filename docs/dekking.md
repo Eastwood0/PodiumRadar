@@ -1,40 +1,40 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-25T19:08:40.939Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-25T20:01:05.330Z).
 
-**6 van 32 venues** hebben data, samen 408 events (281 muziek).
+**23 van 32 venues** hebben data, samen 1577 events (1172 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
-| Ziggo Dome | NL | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
+| Ziggo Dome | NL | 123 | 106 | 2027-11-24 | ziggodome.nl ✅ |  |
 | Johan Cruijff ArenA | NL | 18 | 10 | 2027-07-17 | johancruijffarena.nl ✅ |  |
-| AFAS Live | NL | 104 | 93 | 2027-11-25 | afaslive.nl ✅ |  |
-| Rotterdam Ahoy | NL | 0 | 0 | — | — | niveau geen: site niet bereikbaar of geweigerd |
-| De Kuip | NL | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| GelreDome | NL | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| Goffertpark | NL | 0 | 0 | — | — | niveau geen: site niet bereikbaar of geweigerd |
-| MECC | NL | 0 | 0 | — | — | niveau 1: WordPress-API (eventon/v1) |
-| Vrijthof | NL | 0 | 0 | — | — | niveau geen: geen eigen agenda-site bekend |
-| Brabanthallen | NL | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| Megaland | NL | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| TivoliVredenburg | NL | 0 | 0 | — | tivolivredenburg.nl ❌ |  |
-| 013 | NL | 0 | 0 | — | — | niveau 1: sitemap (1000 event-URL's) + JSON-LD op detailpagina |
+| AFAS Live | NL | 103 | 92 | 2027-11-25 | afaslive.nl ✅ |  |
+| Rotterdam Ahoy | NL | 140 | 67 | 2027-10-24 | uitagendarotterdam.nl ✅ |  |
+| De Kuip | NL | 0 | 0 | — | — | geen agenda op eigen site; via Ticketmaster zodra de sleutel werkt |
+| GelreDome | NL | 25 | 9 | 2027-07-28 | gelredome.nl ✅ |  |
+| Goffertpark | NL | 0 | 0 | — | — | geen eigen agenda (openluchtterrein); via Ticketmaster |
+| MECC | NL | 0 | 0 | — | — | datums staan niet in de API; vooral beurzen, lage prioriteit |
+| Vrijthof | NL | 0 | 0 | — | — | plein zonder eigen agenda; via Ticketmaster |
+| Brabanthallen | NL | 0 | 0 | — | — | site toont bots een captcha; toegang gevraagd (docs/verzoek-toegang.md) |
+| Megaland | NL | 0 | 0 | — | — | geen eigen site meer (domein te koop); via Ticketmaster |
+| TivoliVredenburg | NL | 196 | 178 | 2027-04-19 | uitagendautrecht.nl ✅ |  |
+| 013 | NL | 142 | 139 | 2027-11-22 | 013.nl ✅ |  |
 | Effenaar | NL | 106 | 105 | 2027-10-20 | effenaar.nl ✅ |  |
-| AFAS Dome | BE | 0 | 0 | — | — | niveau 1: JSON-LD op agendapagina (3 events) |
-| Lotto Arena | BE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| Vorst Nationaal | BE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| ING Arena | BE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| Koning Boudewijnstadion | BE | 0 | 0 | — | — | niveau geen: geen eigen agenda-site bekend |
-| Trixxo Arena | BE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
+| AFAS Dome | BE | 43 | 33 | 2027-11-21 | afas-dome.be ✅ |  |
+| Lotto Arena | BE | 33 | 20 | 2027-11-25 | lotto-arena.be ✅ |  |
+| Vorst Nationaal | BE | 58 | 53 | 2027-11-25 | vorst-nationaal.be ✅ |  |
+| ING Arena | BE | 31 | 29 | 2027-11-21 | ing.arena.brussels ✅ |  |
+| Koning Boudewijnstadion | BE | 0 | 0 | — | — | geen eigen concertagenda; via Ticketmaster |
+| Trixxo Arena | BE | 10 | 0 | 2027-02-14 | trixxo-arena.be ✅ |  |
 | LANXESS arena | DE | 163 | 68 | 2027-11-25 | lanxess-arena.de ✅ |  |
 | RheinEnergieStadion | DE | 16 | 4 | 2027-06-12 | rheinenergiestadion.de ✅ |  |
-| Palladium | DE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| PSD Bank Dome | DE | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| Merkur Spiel-Arena | DE | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| Mitsubishi Electric Halle | DE | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
-| Westfalenhalle | DE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| Signal Iduna Park | DE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
+| Palladium | DE | 0 | 0 | — | — | datum niet machineleesbaar op de eventpagina; volgt |
+| PSD Bank Dome | DE | 87 | 29 | 2027-10-26 | psd-bank-dome.de ✅ |  |
+| Merkur Spiel-Arena | DE | 19 | 5 | 2027-07-17 | merkur-spiel-arena.de ✅ |  |
+| Mitsubishi Electric Halle | DE | 84 | 75 | 2027-11-24 | mitsubishi-electric-halle.de ✅ |  |
+| Westfalenhalle | DE | 94 | 71 | 2027-11-19 | westfalenhalle.de ✅ |  |
+| Signal Iduna Park | DE | 0 | 0 | — | — | site laadt alles via JavaScript, vooral voetbal; via Ticketmaster |
 | Veltins-Arena | DE | 1 | 1 | 2027-10-02 | veltins-arena.de ✅ |  |
-| Rudolf Weber-Arena | DE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| Grugahalle | DE | 0 | 0 | — | — | niveau 3: HTML-agenda met zichtbare datums |
-| Sparkassenpark | DE | 0 | 0 | — | — | niveau ?: agenda gevonden maar geen data herkend (mogelijk JavaScript) |
+| Rudolf Weber-Arena | DE | 53 | 47 | 2027-11-19 | rudolf-weber-arena.de ✅ |  |
+| Grugahalle | DE | 23 | 22 | 2027-11-13 | grugahalle.de ✅ |  |
+| Sparkassenpark | DE | 9 | 9 | 2027-08-10 | sparkassenpark.de ✅ |  |

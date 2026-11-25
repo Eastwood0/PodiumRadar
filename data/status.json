@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-11-25T19:55:12.552Z",
+  "generatedAt": "2026-11-25T20:01:05.330Z",
   "sources": {
     "afaslive.nl": {
       "ok": true,
-      "count": 104,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "count": 103,
+      "previousCount": 104,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "afas-live"
       ],
@@ -13,7 +14,8 @@
     "johancruijffarena.nl": {
       "ok": true,
       "count": 18,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "previousCount": 18,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "johan-cruijff-arena"
       ],
@@ -22,25 +24,18 @@
     "effenaar.nl": {
       "ok": true,
       "count": 107,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "previousCount": 107,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "effenaar"
       ],
       "dropped": 0
     },
-    "tivolivredenburg.nl": {
-      "count": 0,
-      "venues": [
-        "tivolivredenburg"
-      ],
-      "ok": false,
-      "outage": false,
-      "error": "https://www.tivolivredenburg.nl/agenda/: 403"
-    },
     "lanxess-arena.de": {
       "ok": true,
       "count": 171,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "previousCount": 171,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "lanxess-arena"
       ],
@@ -49,7 +44,8 @@
     "veltins-arena.de": {
       "ok": true,
       "count": 1,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "previousCount": 1,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "veltins-arena"
       ],
@@ -58,7 +54,8 @@
     "rheinenergiestadion.de": {
       "ok": true,
       "count": 16,
-      "lastSuccess": "2026-11-25T19:08:40.939Z",
+      "previousCount": 16,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "rheinenergiestadion"
       ],
@@ -67,7 +64,8 @@
     "afas-dome.be": {
       "ok": true,
       "count": 47,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 47,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "sportpaleis"
       ],
@@ -76,7 +74,8 @@
     "lotto-arena.be": {
       "ok": true,
       "count": 39,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 39,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "lotto-arena"
       ],
@@ -85,7 +84,8 @@
     "vorst-nationaal.be": {
       "ok": true,
       "count": 59,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 59,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "vorst-nationaal"
       ],
@@ -94,7 +94,8 @@
     "trixxo-arena.be": {
       "ok": true,
       "count": 10,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 10,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "arena-hasselt"
       ],
@@ -103,7 +104,8 @@
     "ing.arena.brussels": {
       "ok": true,
       "count": 32,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 32,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "palais-12"
       ],
@@ -112,7 +114,8 @@
     "psd-bank-dome.de": {
       "ok": true,
       "count": 92,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 92,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "psd-bank-dome"
       ],
@@ -121,7 +124,8 @@
     "merkur-spiel-arena.de": {
       "ok": true,
       "count": 19,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 19,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "merkur-spiel-arena"
       ],
@@ -130,7 +134,8 @@
     "mitsubishi-electric-halle.de": {
       "ok": true,
       "count": 88,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 88,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "mitsubishi-electric-halle"
       ],
@@ -139,7 +144,8 @@
     "westfalenhalle.de": {
       "ok": true,
       "count": 94,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 94,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "westfalenhalle"
       ],
@@ -148,7 +154,8 @@
     "rudolf-weber-arena.de": {
       "ok": true,
       "count": 56,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 56,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "arena-oberhausen"
       ],
@@ -157,9 +164,64 @@
     "grugahalle.de": {
       "ok": true,
       "count": 23,
-      "lastSuccess": "2026-11-25T19:55:12.552Z",
+      "previousCount": 23,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
       "venues": [
         "grugahalle"
+      ],
+      "dropped": 0
+    },
+    "ziggodome.nl": {
+      "ok": true,
+      "count": 128,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "ziggo-dome"
+      ],
+      "dropped": 0
+    },
+    "uitagendarotterdam.nl": {
+      "ok": true,
+      "count": 140,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "rotterdam-ahoy"
+      ],
+      "dropped": 0
+    },
+    "gelredome.nl": {
+      "ok": true,
+      "count": 25,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "gelredome"
+      ],
+      "dropped": 0
+    },
+    "013.nl": {
+      "ok": true,
+      "count": 144,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "013"
+      ],
+      "dropped": 0
+    },
+    "uitagendautrecht.nl": {
+      "ok": true,
+      "count": 196,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "tivolivredenburg"
+      ],
+      "dropped": 0
+    },
+    "sparkassenpark.de": {
+      "ok": true,
+      "count": 9,
+      "lastSuccess": "2026-11-25T20:01:05.330Z",
+      "venues": [
+        "sparkassenpark"
       ],
       "dropped": 0
     }
