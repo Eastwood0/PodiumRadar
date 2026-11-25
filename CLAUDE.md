@@ -45,6 +45,7 @@ docs/ACCOUNTS.md           stappen voor Ralf
 docs/BRONNEN.md            geverifieerde externe feiten
 docs/bronnen-per-venue.md  inventarisatie: welk niveau per venue
 docs/dekking.md            dekkingsrapport per venue
+docs/steekproef.md         steekproef: onze data naast de officiële agenda
 ```
 
 ## Commando's (bijwerken zodra ze bestaan)
@@ -83,5 +84,5 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Geen bron (redenen in `src/lib/no-source.ts`, ook zichtbaar op de site): Brabanthallen (captcha), De Kuip, Goffertpark, Megaland, Vrijthof, Koning Boudewijnstadion (geen eigen agenda → Ticketmaster), MECC, Palladium, Signal Iduna Park.
 - Nooit bot-blokkades omzeilen (B23). Ahoy en Tivoli lopen vast via de stadsagenda's. Verzoekbrief alleen nog nodig voor Brabanthallen: `docs/verzoek-toegang.md`.
 - Categorieën (B26): correcties in `config/categorie-correcties.yml`; twijfelgevallen in `docs/categorie-twijfel.md`.
-- Fase 2 open: Cloudflare Pages + Access koppelen (Ralf, `docs/ACCOUNTS.md` stap 4) en daarna inlogscherm testen; 95%-steekproef tegen de officiële agenda's; "backstreet boy"-eis alleen op testdata aantoonbaar (BSB staan in geen agenda, BRONNEN.md).
+- Fase 2 open: Cloudflare Pages + Access koppelen (Ralf, `docs/ACCOUNTS.md` stap 4) en daarna inlogscherm testen; steekproef 10 zalen 120/123 = 97,6% (`docs/steekproef.md`), 11 zalen nog met de hand te controleren; "backstreet boy"-eis alleen op testdata aantoonbaar (BSB staan in geen agenda, BRONNEN.md).
 - Openstaand voor Ralf: ACCOUNTS stap 3–4 (Cloudflare); Ticketmaster-goedkeuring afwachten; brief Brabanthallen.
