@@ -77,6 +77,9 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | Pinkpop / Megaland | Pinkpop 2027: 18–20 juni 2027, Megaland Landgraaf; line-up met dag per act op de homepage; robots.txt staat het toe | Megaland via pinkpop.nl (B34) | [pinkpop.nl](https://www.pinkpop.nl/) |
 | MECC | robots.txt: crawl-delay 10; agenda laadt via JavaScript (admin-ajax) | Nog geen bron | [mecc.nl](https://www.mecc.nl/bezoeken/agenda/) |
 | I amsterdam | Locatiepagina's tonen geen eventlijst; agenda-filters met parameters verboden in robots.txt | Geen bron voor Melkweg/Warehouse | [iamsterdam.com](https://www.iamsterdam.com/robots.txt) |
+| André Rieu / Vrijthof | robots.txt staat alles toe; de homepage /nl/ toont alle tourdata als `li[data-date-ordering]` met stad en locatie; 12 Vrijthof-concerten in juli 2027 | Vrijthof via andrerieu.com (B34) | [andrerieu.com](https://www.andrerieu.com/nl/) |
+| Mezz | robots.txt staat alles toe; de programmapagina laadt `/wp-json/wp/v2/event` (100 per pagina) | Mezz via de eigen API (B24) | [mezz.nl](https://www.mezz.nl/programma/) |
+| Paradiso | Programma- en homepage bevatten maar ±27 uitgelichte events; de rest laadt via JavaScript van een niet-zichtbare API | Nog geen bron | snapshot 26 nov 2026 |
 | MartiniPlaza | Agenda toont ±20 events; `?page=2` geeft dezelfde lijst (verder laden via JavaScript) | Nog uitzoeken | snapshot 26 nov 2026 |
 
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)

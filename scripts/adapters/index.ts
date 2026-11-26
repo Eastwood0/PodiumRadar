@@ -2,6 +2,7 @@ import { zero13 } from "./013";
 import { afasLive } from "./afas-live";
 import { beatVenues } from "./beat-venues";
 import { dliveVenues } from "./d-live";
+import { andreRieu } from "./andre-rieu";
 import { bosuil } from "./bosuil";
 import { doornroosje } from "./doornroosje";
 import { effenaar } from "./effenaar";
@@ -60,6 +61,7 @@ export const ADAPTERS: Adapter[] = [
   doornroosje,
   bosuil,
   mezz,
+  andreRieu,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

@@ -2,7 +2,6 @@
 export const NO_SOURCE: Record<string, string> = {
   brabanthallen: "De site laat geen automatische bezoekers toe (captcha); toegang is gevraagd.",
   goffertpark: "Openluchtterrein zonder eigen agenda; komt via Ticketmaster.",
-  vrijthof: "Plein zonder eigen agenda; komt via Ticketmaster.",
   "koning-boudewijnstadion": "Geen eigen concertagenda; komt via Ticketmaster.",
   "mecc-maastricht": "De agenda laadt pas via JavaScript en bevat vooral beurzen en congressen; lage prioriteit.",
   "signal-iduna-park": "De site laadt alles via JavaScript en toont vooral voetbal; komt via Ticketmaster.",

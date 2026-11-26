@@ -381,3 +381,13 @@ describe("Mezz (own WordPress API)", async () => {
     expect(ev[1].status).toBe("uitverkocht");
   });
 });
+
+describe("André Rieu for the Vrijthof", async () => {
+  const { parseAndreRieu } = await import("../scripts/adapters/andre-rieu");
+  const ev = parseAndreRieu(fixture("andrerieu-home.html"));
+  it("keeps only the Vrijthof dates and reads the day in Dutch time", () => {
+    expect(ev.length).toBeGreaterThanOrEqual(1);
+    expect(ev.every((e) => e.venueId === "vrijthof")).toBe(true);
+    expect(ev[0]).toMatchObject({ title: "André Rieu", start: "2027-07-01T12:00:00+02:00", url: "https://www.andrerieu.com/nl/tour/maastricht-1-juli-2027-nederland" });
+  });
+});
