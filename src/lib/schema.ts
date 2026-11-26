@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MUSIC_GENRES } from "./genres";
+import { DANCE_STYLES, MUSIC_GENRES } from "./genres";
 
 /** Datamodel from docs/BOUWPLAN.md §7. */
 
@@ -75,6 +75,8 @@ export const EventSchema = z.object({
   genre: z.string().min(1).optional(),
   /** Music genres (max 2) from the source, the title or the artist's MusicBrainz tags (B31). */
   musicGenres: z.array(z.enum(MUSIC_GENRES)).max(2).optional(),
+  /** Styles within Dance & DJ (max 2): techno, house… */
+  danceStyles: z.array(z.enum(DANCE_STYLES)).max(2).optional(),
   ticketUrl: HttpUrl,
   imageUrl: HttpUrl.optional(),
   sources: z

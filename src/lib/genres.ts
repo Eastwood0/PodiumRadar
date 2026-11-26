@@ -13,3 +13,7 @@ export const MUSIC_GENRES = [
   "Wereld & latin",
 ] as const;
 export type MusicGenre = (typeof MUSIC_GENRES)[number];
+
+/** Styles within "Dance & DJ" (second row of filter buttons when Dance & DJ is on). */
+export const DANCE_STYLES = ["Techno", "House", "Trance", "Hardstyle & hardcore", "Drum & bass", "Disco", "EDM"] as const;
+export type DanceStyle = (typeof DANCE_STYLES)[number];

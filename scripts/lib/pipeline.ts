@@ -2,7 +2,7 @@ import { EventSchema, type Event, type Venue } from "../../src/lib/schema";
 import type { SourceEvent } from "../adapters/types";
 import { localDate, TZ_BY_COUNTRY } from "./dates";
 import { classify } from "./categorize";
-import { eventGenres } from "./music-genre";
+import { eventDanceStyles, eventGenres } from "./music-genre";
 import { artistsFromTitle, decodeEntities, eventId, tokenSetSimilarity } from "./normalize";
 
 export const HORIZON_DAYS = 365;
@@ -53,6 +53,7 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
       category: kind.category,
       genre: kind.genre,
       musicGenres: kind.category === "muziek" ? nonEmpty(eventGenres(s.title, s.sourceCategory, kind.genre)) : undefined,
+      danceStyles: kind.category === "muziek" ? nonEmpty(eventDanceStyles(s.title, s.sourceCategory)) : undefined,
       ticketUrl: s.ticketUrl ?? s.url,
       imageUrl: s.imageUrl?.startsWith("http") ? s.imageUrl : undefined,
       sources: [{ name: sourceName, sourceId: s.sourceId, url: s.url }],
@@ -96,6 +97,7 @@ export function dedupe(events: Event[]): Event[] {
     same.onSaleStart ??= e.onSaleStart;
     same.imageUrl ??= e.imageUrl;
     same.musicGenres ??= e.musicGenres;
+    same.danceStyles ??= e.danceStyles;
   }
   return out;
 }

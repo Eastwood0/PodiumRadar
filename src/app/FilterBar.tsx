@@ -1,5 +1,5 @@
 import type { SiteData } from "../lib/site-data";
-import { MUSIC_GENRES } from "../lib/genres";
+import { DANCE_STYLES, MUSIC_GENRES } from "../lib/genres";
 import { DEFAULT_FILTERS, type Filters, MONTHS_LONG } from "./lib";
 
 /** Filter controls shared by Overzicht and Agenda. Choices are remembered per browser by the parent. */
@@ -54,18 +54,33 @@ export function FilterBar({ data, filters, setFilters, show, count, months = [] 
         </label>
       )}
       <div className="chips" role="group" aria-label="Genre">
-        <button type="button" aria-pressed={!filters.genres.length} onClick={() => set({ genres: [] })}>
+        <button type="button" aria-pressed={!filters.genres.length} onClick={() => set({ genres: [], dance: [] })}>
           Alle genres
         </button>
         {MUSIC_GENRES.map((g) => {
           const on = filters.genres.includes(g);
           return (
-            <button key={g} type="button" aria-pressed={on} onClick={() => set({ genres: on ? filters.genres.filter((x) => x !== g) : [...filters.genres, g] })}>
+            <button key={g} type="button" aria-pressed={on} onClick={() => set({ genres: on ? filters.genres.filter((x) => x !== g) : [...filters.genres, g], ...(on && g === "Dance & DJ" ? { dance: [] } : {}) })}>
               {g}
             </button>
           );
         })}
       </div>
+      {filters.genres.includes("Dance & DJ") && (
+        <div className="chips chips--sub" role="group" aria-label="Soort dance">
+          <button type="button" aria-pressed={!filters.dance.length} onClick={() => set({ dance: [] })}>
+            Alle dance
+          </button>
+          {DANCE_STYLES.map((d) => {
+            const on = filters.dance.includes(d);
+            return (
+              <button key={d} type="button" aria-pressed={on} onClick={() => set({ dance: on ? filters.dance.filter((x) => x !== d) : [...filters.dance, d] })}>
+                {d}
+              </button>
+            );
+          })}
+        </div>
+      )}
       <label className="toggle">
         <input type="checkbox" checked={filters.all} onChange={(e) => set({ all: e.target.checked })} />
         <span>Ook shows, sport en beurzen</span>

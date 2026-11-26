@@ -11,7 +11,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import type { Event } from "../src/lib/schema";
 import { applyArtistGenres, loadArtistGenres, saveArtistGenres } from "./lib/artist-genres";
 import { apiGet } from "./lib/http";
-import { artistKey, type ArtistGenreEntry, genresFromTags, type Tag } from "./lib/music-genre";
+import { artistKey, type ArtistGenreEntry, danceStylesFromTags, genresFromTags, type Tag } from "./lib/music-genre";
 
 const EVENTS_FILE = "data/events.json";
 const BUDGET = Number(process.env.GENRE_BUDGET ?? 400);
@@ -56,7 +56,9 @@ async function lookup(name: string, today: string): Promise<ArtistGenreEntry | "
     return "error";
   }
   const hit = pickArtist(name, (JSON.parse(r.body) as { artists?: MbArtist[] }).artists ?? []);
-  return hit ? { mbid: hit.id, genres: genresFromTags(hit.tags ?? []), checked: today } : { genres: [], checked: today };
+  if (!hit) return { genres: [], checked: today };
+  const genres = genresFromTags(hit.tags ?? []);
+  return { mbid: hit.id, genres, dance: genres.includes("Dance & DJ") ? danceStylesFromTags(hit.tags ?? []) : [], checked: today };
 }
 
 async function main() {
@@ -66,12 +68,13 @@ async function main() {
 
   const wanted = new Map<string, string>(); // key → name as written
   for (const e of file.events) {
-    if (e.category !== "muziek" || e.musicGenres?.length) continue;
+    const needsDance = e.musicGenres?.includes("Dance & DJ") && !e.danceStyles?.length;
+    if (e.category !== "muziek" || (e.musicGenres?.length && !needsDance)) continue;
     for (const a of e.artists.slice(0, MAX_ACTS_PER_EVENT)) {
       const key = artistKey(a.name);
       if (key.length < 2 || wanted.has(key)) continue;
       const c = cache[key];
-      const stale = c && daysSince(c.checked, today) > (c.genres.length ? RECHECK_HIT_DAYS : RECHECK_MISS_DAYS);
+      const stale = c && (daysSince(c.checked, today) > (c.genres.length ? RECHECK_HIT_DAYS : RECHECK_MISS_DAYS) || (c.genres.includes("Dance & DJ") && !c.dance));
       if (!c || stale) wanted.set(key, a.name);
     }
   }

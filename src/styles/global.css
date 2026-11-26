@@ -101,6 +101,34 @@
   letter-spacing: 0.005em;
 }
 
+/*
+ * Names you can click (acts, venues) light up like a highlighter when pointed at or focused,
+ * so it is always clear what a click will open.
+ */
+.bill__act a:hover,
+.bill__act a:focus-visible,
+.row__act a:hover,
+.row__act a:focus-visible,
+.row__with a:hover,
+.row__where a:hover,
+.tour__venue a:hover,
+.tl tbody .tl__venue a:hover,
+.tl tbody .tl__venue a:focus-visible,
+.sheet__h h2 a:hover,
+.nosrc a:hover {
+  background: var(--pink);
+  color: var(--pink-ink);
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  outline: none;
+}
+.bill__act a,
+.row__act a,
+.tl tbody .tl__venue a {
+  transition: background-color 0.1s ease;
+}
+
 /* ---------- Base ---------- */
 html {
   -webkit-text-size-adjust: 100%;
@@ -456,9 +484,6 @@ a:hover {
   line-height: 0.86;
   overflow-wrap: anywhere;
 }
-.bill__act a:hover {
-  color: var(--blue);
-}
 .bill__meta {
   margin-top: 0.3rem;
   font-size: 0.8rem;
@@ -469,9 +494,6 @@ a:hover {
 }
 .bill__row--1 .bill__act:nth-child(odd) a {
   color: var(--blue);
-}
-.bill__row--1 .bill__act:nth-child(odd) a:hover {
-  color: var(--ink);
 }
 .bill__row--2 .bill__act a {
   font-size: clamp(1.6rem, 1rem + 2.8vw, 2.9rem);
@@ -549,6 +571,12 @@ a:hover {
   font-weight: 550;
   white-space: nowrap;
   cursor: pointer;
+}
+.chips--sub button {
+  border-style: dashed;
+}
+.chips button:hover {
+  background: var(--tint);
 }
 .chips button[aria-pressed="true"] {
   background: var(--blue);
@@ -637,9 +665,6 @@ a:hover {
   font-weight: 650;
   text-decoration: none;
   line-height: 1.2;
-}
-.tl tbody .tl__venue a:hover {
-  text-decoration: underline;
 }
 .tl tbody .tl__venue span {
   display: block;
@@ -862,9 +887,6 @@ a:hover {
 }
 .row__act a {
   text-decoration: none;
-}
-.row__act a:hover {
-  color: var(--blue);
 }
 .row__with {
   margin: 0.25rem 0 0;

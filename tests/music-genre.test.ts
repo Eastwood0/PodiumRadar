@@ -60,3 +60,22 @@ describe("pickArtist (MusicBrainz match)", async () => {
     expect(pickArtist("Doe Maar", [{ id: "d", name: "Doe Maar!", score: 92, aliases: [{ name: "Doe Maar" }] }])?.id).toBe("d");
   });
 });
+
+describe("dance styles", async () => {
+  const { danceStylesInText, danceStylesFromTags, eventDanceStyles, applyArtistGenres } = await import("../scripts/lib/music-genre");
+  it("reads styles from labels and titles", () => {
+    expect(danceStylesInText("Clubnacht, Nederhop, EDM, Deephouse")).toEqual(["House", "EDM"]);
+    expect(danceStylesInText("Hardcore")).toEqual(["Hardstyle & hardcore"]);
+    expect(danceStylesInText("hardcore punk")).toEqual([]);
+    expect(eventDanceStyles("Awakenings: Techno all night", "dance")).toEqual(["Techno"]);
+    expect(danceStylesInText("Drum & Bass")).toEqual(["Drum & bass"]);
+  });
+  it("votes with tag counts", () => {
+    expect(danceStylesFromTags([{ name: "techno", count: 9 }, { name: "minimal techno", count: 3 }, { name: "house", count: 1 }])).toEqual(["Techno"]);
+  });
+  it("fills dance styles from the artist cache for dance events", () => {
+    const events = [{ category: "muziek", artists: [{ name: "Charlotte de Witte" }], musicGenres: ["Dance & DJ" as const] }];
+    const out = applyArtistGenres(events, { "charlotte de witte": { genres: ["Dance & DJ"], dance: ["Techno"], checked: "2026-11-26" } });
+    expect(out[0].danceStyles).toEqual(["Techno"]);
+  });
+});

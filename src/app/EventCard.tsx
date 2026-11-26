@@ -48,11 +48,19 @@ export function EventCard({ e, venue, data, showVenue = true }: { e: SiteEvent; 
             {fresh && <li className="tag tag--new">Nieuw</li>}
             {e.st && <li className={`tag tag--${e.st}`}>{STATUS_LABEL[e.st]}</li>}
             {e.o && <li className="tag tag--sale">Voorverkoop vanaf {formatDate(e.o)}</li>}
-            {e.mg?.map((g) => (
-              <li key={g} className="tag tag--genre">
-                {g}
-              </li>
-            ))}
+            {e.mg?.map((g) =>
+              g === "Dance & DJ" && e.ds?.length ? (
+                e.ds.map((d) => (
+                  <li key={d} className="tag tag--genre">
+                    {d}
+                  </li>
+                ))
+              ) : (
+                <li key={g} className="tag tag--genre">
+                  {g}
+                </li>
+              ),
+            )}
             {e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek")) && <li className="tag">{e.g}</li>}
           </ul>
         )}

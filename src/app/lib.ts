@@ -118,8 +118,20 @@ export interface Filters {
   all: boolean;
   /** Music genres; empty = all. An event matches when it has one of them. */
   genres: string[];
+  /** Dance styles, only used while "Dance & DJ" is among the genres. */
+  dance: string[];
 }
-export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", all: false, genres: [] };
+export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", all: false, genres: [], dance: [] };
+
+/**
+ * An event matches when it has one of the chosen genres. Chosen dance styles narrow only "Dance & DJ":
+ * with Rock + Techno chosen, rock shows and techno nights both match.
+ */
+export function matchesGenres(e: SiteEvent, f: Filters): boolean {
+  if (!f.genres.length) return true;
+  const mg = e.mg ?? [];
+  return f.genres.some((g) => mg.includes(g) && (g !== "Dance & DJ" || !f.dance.length || !!e.ds?.some((d) => f.dance.includes(d))));
+}
 
 export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>, f: Filters): SiteEvent[] {
   return events.filter((e) => {
@@ -130,7 +142,7 @@ export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>
     if (f.tier && v.tier !== f.tier) return false;
     if (f.venue && e.v !== f.venue) return false;
     if (f.month && monthKey(e.s) !== f.month) return false;
-    if (f.genres.length && !e.mg?.some((g) => f.genres.includes(g))) return false;
+    if (!matchesGenres(e, f)) return false;
     return true;
   });
 }

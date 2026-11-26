@@ -72,6 +72,13 @@ describe("filters", () => {
     expect(pick(["Pop"])).toEqual(["d"]);
     expect(pick(["Rock", "Dance & DJ"])).toEqual(["r", "d"]);
   });
+  it("narrows Dance & DJ by style without dropping other chosen genres", () => {
+    const evs = [ev({ id: "t", mg: ["Dance & DJ"], ds: ["Techno"] }), ev({ id: "h", mg: ["Dance & DJ"], ds: ["Hardstyle & hardcore"] }), ev({ id: "n", mg: ["Dance & DJ"] }), ev({ id: "r", mg: ["Rock"] })];
+    const pick = (genres: string[], dance: string[]) => applyFilters(evs, venues, { ...DEFAULT_FILTERS, genres, dance }).map((e) => e.id);
+    expect(pick(["Dance & DJ"], [])).toEqual(["t", "h", "n"]);
+    expect(pick(["Dance & DJ"], ["Techno"])).toEqual(["t"]);
+    expect(pick(["Dance & DJ", "Rock"], ["Techno"])).toEqual(["t", "r"]);
+  });
 });
 
 describe("search", () => {

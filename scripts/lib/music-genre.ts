@@ -5,9 +5,9 @@
  * An event gets at most two genres. No evidence = no genre (the site shows it under every genre filter
  * as "onbekend" rather than guessing).
  */
-import { MUSIC_GENRES, type MusicGenre } from "../../src/lib/genres";
+import { DANCE_STYLES, type DanceStyle, MUSIC_GENRES, type MusicGenre } from "../../src/lib/genres";
 
-export { MUSIC_GENRES, type MusicGenre };
+export { DANCE_STYLES, type DanceStyle, MUSIC_GENRES, type MusicGenre };
 
 /**
  * Words → genre. Matched on whole words (case-insensitive) against a source label, a title or a MusicBrainz
@@ -28,6 +28,32 @@ const RULES: [RegExp, MusicGenre][] = [
 ];
 // K-pop is pop in most people's ears; the Wereld rule above catches the word first, so add Pop too.
 const ALSO: [RegExp, MusicGenre][] = [[/\b(k-?pop|j-?pop|europop|dance-?pop|electropop|synth-?pop)\b/i, "Pop"]];
+
+/** Words → dance style. "hardcore punk" is not hardcore (dance). */
+const DANCE_RULES: [RegExp, DanceStyle][] = [
+  [/\b(techno|hard techno|minimal|acid|industrial techno|melodic techno|hypnotic techno)\b/i, "Techno"],
+  [/\b(house|deep ?house|tech ?house|afro ?house|progressive house|funky house|uk garage|garage house|amapiano|lo-?fi house)\b/i, "House"],
+  [/\b(trance|psy-?trance|psychedelic trance|uplifting|goa)\b/i, "Trance"],
+  [/\b(hardstyle|rawstyle|hardcore(?!\s*punk)|gabber|frenchcore|uptempo|terror|hard dance|q-?dance|defqon)\b/i, "Hardstyle & hardcore"],
+  [/\b(drum ?(and|&|n'?) ?bass|dnb|d&b|jungle|liquid funk|neurofunk|dubstep|bass music|riddim)\b/i, "Drum & bass"],
+  [/\b(disco|nu-?disco|italo|italo disco|boogie)\b/i, "Disco"],
+  [/\b(edm|big room|electro house|future house|bigroom|eurodance|mainstage)\b/i, "EDM"],
+];
+
+/** Dance styles a piece of text points to, in rule order. */
+export function danceStylesInText(text: string | undefined): DanceStyle[] {
+  if (!text) return [];
+  return DANCE_RULES.filter(([re]) => re.test(text)).map(([, d]) => d);
+}
+
+/** Dance styles from MusicBrainz tags, with the same voting rule as genresFromTags. */
+export function danceStylesFromTags(tags: Tag[]): DanceStyle[] {
+  const score = new Map<DanceStyle, number>();
+  for (const t of tags) for (const d of danceStylesInText(t.name)) score.set(d, (score.get(d) ?? 0) + Math.max(t.count, 0));
+  const ranked = [...score.entries()].filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]);
+  const top = ranked[0]?.[1] ?? 0;
+  return ranked.filter(([, s]) => s * 3 >= top).slice(0, 2).map(([d]) => d);
+}
 
 /** All genres a piece of text points to, in rule order. */
 export function genresInText(text: string | undefined): MusicGenre[] {
@@ -77,23 +103,37 @@ export function eventGenres(title: string, sourceCategory: string | undefined, d
   return [...out].slice(0, 2);
 }
 
+/** Dance styles an event shows by itself (only meaningful when it is Dance & DJ). */
+export function eventDanceStyles(title: string, sourceCategory: string | undefined): DanceStyle[] {
+  return [...new Set([...danceStylesInText(sourceCategory), ...danceStylesInText(title)])].slice(0, 2);
+}
+
 export interface ArtistGenreEntry {
   /** MusicBrainz id of the matched artist; absent when no reliable match was found. */
   mbid?: string;
   genres: MusicGenre[];
+  /** Dance styles from the same tags; absent in entries made before dance styles existed. */
+  dance?: DanceStyle[];
   /** Day of the lookup (YYYY-MM-DD); misses are retried after a while. */
   checked: string;
 }
 export type ArtistGenreCache = Record<string, ArtistGenreEntry>;
 
-/** Fills musicGenres from the artist cache for music events that have none of their own. */
-export function applyArtistGenres<T extends { category: string; artists: { name: string }[]; musicGenres?: MusicGenre[] }>(events: T[], cache: ArtistGenreCache): T[] {
+type WithGenres = { category: string; artists: { name: string }[]; musicGenres?: MusicGenre[]; danceStyles?: DanceStyle[] };
+
+/** Fills musicGenres (and dance styles) from the artist cache for music events that have none of their own. */
+export function applyArtistGenres<T extends WithGenres>(events: T[], cache: ArtistGenreCache): T[] {
   return events.map((e) => {
-    if (e.category !== "muziek" || e.musicGenres?.length) return e;
-    for (const a of e.artists) {
-      const hit = cache[artistKey(a.name)];
-      if (hit?.genres.length) return { ...e, musicGenres: hit.genres };
+    if (e.category !== "muziek") return e;
+    let out = e;
+    if (!out.musicGenres?.length) {
+      const hit = e.artists.map((a) => cache[artistKey(a.name)]).find((c) => c?.genres.length);
+      if (hit) out = { ...out, musicGenres: hit.genres };
     }
-    return e;
+    if (out.musicGenres?.includes("Dance & DJ") && !out.danceStyles?.length) {
+      const hit = e.artists.map((a) => cache[artistKey(a.name)]).find((c) => c?.dance?.length);
+      if (hit) out = { ...out, danceStyles: hit.dance };
+    }
+    return out;
   });
 }

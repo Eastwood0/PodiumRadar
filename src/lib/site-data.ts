@@ -26,6 +26,8 @@ export interface SiteEvent {
   g?: string;
   /** Music genres (max 2), e.g. ["Rock"] (B31). */
   mg?: string[];
+  /** Dance styles (max 2), e.g. ["Techno"]. */
+  ds?: string[];
   /** Ticket link. */
   u: string;
   /** Page at the source. */
@@ -90,6 +92,7 @@ export function buildSiteData(
         c: e.category === "muziek" ? "m" : "o",
         ...(e.genre ? { g: e.genre } : {}),
         ...(e.musicGenres?.length ? { mg: e.musicGenres } : {}),
+        ...(e.danceStyles?.length && e.musicGenres?.includes("Dance & DJ") ? { ds: e.danceStyles } : {}),
         u: e.ticketUrl,
         p: e.sources[0].url,
         f: e.firstSeen,
