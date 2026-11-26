@@ -92,4 +92,4 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
 - Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
 - Fase 2 open: live site controleren zodra Ralf het adres stuurt (niet vindbaar: noindex + robots); steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Openstaand voor Ralf: verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen): akkoord Ralf 26 nov 2026, nog niet begonnen.
+- Ralf stuurt géén verzoekbrieven (26 nov 2026): voor Brabanthallen, Melkweg, Nieuwe Nor, Chassé en Theater Rotterdam een officiële alternatieve bron zoeken (zie OVERDRACHT.md). Fase 3 (koppelcode, volgen): akkoord Ralf 26 nov 2026, nog niet begonnen.
