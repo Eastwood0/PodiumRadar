@@ -40,6 +40,7 @@ jobs:
       - name: Music genres (MusicBrainz, max 1 request per second)
         run: npm run genres
         continue-on-error: true
+        timeout-minutes: 15
       - name: Coverage report
         run: npm run coverage
       - name: Commit data

@@ -17,6 +17,8 @@ const EVENTS_FILE = "data/events.json";
 const BUDGET = Number(process.env.GENRE_BUDGET ?? 400);
 /** Extra pause on top of the 1 request/s queue: CI machines share IP addresses, MusicBrainz counts per IP. */
 const EXTRA_PAUSE_MS = 1000;
+/** Hard stop so the daily run always finishes: MusicBrainz can slow us down a lot with 503s. */
+const MAX_MINUTES = Number(process.env.GENRE_MAX_MINUTES ?? 12);
 const RECHECK_MISS_DAYS = 60;
 const RECHECK_HIT_DAYS = 180;
 const MAX_ACTS_PER_EVENT = 3;
@@ -83,7 +85,12 @@ async function main() {
 
   let found = 0;
   let errors = 0;
+  const deadline = Date.now() + MAX_MINUTES * 60_000;
   for (const [key, name] of todo) {
+    if (Date.now() > deadline) {
+      console.log(`MusicBrainz: tijdslimiet van ${MAX_MINUTES} minuten bereikt; de rest volgt morgen`);
+      break;
+    }
     await sleep(EXTRA_PAUSE_MS);
     const res = await lookup(name, today);
     if (res === "error") {
