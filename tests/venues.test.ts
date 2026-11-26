@@ -4,8 +4,8 @@ import { loadVenues, parseVenueConfig } from "../src/lib/venues";
 describe("config/venues.yml", () => {
   const venues = loadVenues();
 
-  it("is valid and contains the 32 venues from the plan", () => {
-    expect(venues).toHaveLength(32);
+  it("is valid and contains the 32 venues from the plan plus 17 Dutch venues added in B32/B33", () => {
+    expect(venues).toHaveLength(49);
   });
 
   it("has unique ids", () => {
@@ -14,7 +14,10 @@ describe("config/venues.yml", () => {
 
   it("covers NL, BE and DE including tier B venues", () => {
     expect(new Set(venues.map((v) => v.country))).toEqual(new Set(["NL", "BE", "DE"]));
-    expect(venues.filter((v) => v.tier === "B").map((v) => v.id)).toEqual(["tivolivredenburg", "013", "effenaar"]);
+    const tierB = venues.filter((v) => v.tier === "B").map((v) => v.id);
+    expect(tierB.slice(0, 3)).toEqual(["tivolivredenburg", "013", "effenaar"]);
+    expect(tierB).toContain("de-bosuil");
+    expect(tierB).toContain("klokgebouw");
   });
 });
 

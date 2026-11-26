@@ -22,6 +22,27 @@ venues:
   - { id: "013", name: "013", city: Tilburg, country: NL, tier: B, website: "https://www.013.nl/" }
   - { id: effenaar, name: Effenaar, city: Eindhoven, country: NL, tier: B, website: "https://www.effenaar.nl/" }
 
+  # Toegevoegd 26 nov 2026 op verzoek van Ralf (B32). Limburg, rond Weert:
+  - { id: de-bosuil, name: De Bosuil, city: Weert, country: NL, tier: B }
+  - { id: grenswerk, name: Grenswerk, city: Venlo, country: NL, tier: B }
+  - { id: muziekgieterij, name: Muziekgieterij, city: Maastricht, country: NL, tier: B }
+  - { id: nieuwe-nor, name: Nieuwe Nor, city: Heerlen, country: NL, tier: B }
+  # Grote steden:
+  - { id: paradiso, name: Paradiso, city: Amsterdam, country: NL, tier: B }
+  - { id: melkweg, name: Melkweg, city: Amsterdam, country: NL, tier: B }
+  - { id: martiniplaza, name: MartiniPlaza, city: Groningen, country: NL, tier: B }
+  - { id: oosterpoort, name: De Oosterpoort, city: Groningen, country: NL, tier: B, aliases: [Spot Groningen] }
+  - { id: doornroosje, name: Doornroosje, city: Nijmegen, country: NL, tier: B }
+  - { id: paard, name: Paard, city: Den Haag, country: NL, tier: B }
+  - { id: hedon, name: Hedon, city: Zwolle, country: NL, tier: B }
+  - { id: mezz, name: Mezz, city: Breda, country: NL, tier: B }
+  - { id: patronaat, name: Patronaat, city: Haarlem, country: NL, tier: B }
+  # Dance-locaties (B33: DJ-feesten via de eigen agenda's van clubs, niet via DJguide):
+  - { id: gashouder, name: Gashouder, city: Amsterdam, country: NL, tier: B, aliases: [Westergas] }
+  - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }
+  - { id: maassilo, name: Maassilo, city: Rotterdam, country: NL, tier: B }
+  - { id: warehouse-elementenstraat, name: Warehouse Elementenstraat, city: Amsterdam, country: NL, tier: B }
+
   # --- België, A ---
   - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }
   - { id: lotto-arena, name: Lotto Arena, city: Antwerpen, country: BE, tier: A, website: "https://www.lotto-arena.be/" }
