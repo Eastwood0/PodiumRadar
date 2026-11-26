@@ -74,7 +74,7 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **2 bezig** (gestart 25 november 2026). Fase 1 grotendeels af; open: Ticketmaster (B25), Palladium.
+- Fase: **2 bezig** (gestart 25 november 2026). Fase 1 grotendeels af; open: Ticketmaster (B25).
 - Bouwplan: versie 0.8, beslissingen t/m B37.
 - Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Lighthouse lokaal mobiel 96–98 / 100; 360 px zonder horizontaal scrollen.
 - Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
@@ -87,6 +87,6 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Geen bron (`src/lib/no-source.ts`): Brabanthallen (captcha), Goffertpark, Vrijthof, Koning Boudewijnstadion, MECC, Signal Iduna Park, Nieuwe Nor (403), Warehouse Elementenstraat (geen eigen agenda).
 - Genres: dance-stijlen als tweede filterrij (B35); hover = roze markeerstift (B36).
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
-- Nooit bot-blokkades omzeilen (B23). Verzoekbrief alleen nog nodig voor Brabanthallen: `docs/verzoek-toegang.md`.
+- Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
 - Fase 2 open: Cloudflare Pages + Access (Ralf, `docs/ACCOUNTS.md` stap 4) en inlogscherm testen; steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Openstaand voor Ralf: ACCOUNTS stap 3–4; Ticketmaster-goedkeuring; brief Brabanthallen.
+- Openstaand voor Ralf: ACCOUNTS stap 3–4; Ticketmaster-goedkeuring; verzoekbrief (Brabanthallen, Melkweg, Nieuwe Nor).
