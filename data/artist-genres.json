@@ -7,10 +7,32 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "40up": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "40up big bang": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "4am": {
   "mbid": "d4eb934c-6051-464a-9af5-45d96fdd65c1",
   "genres": [],
   "dance": [],
+  "checked": "2026-11-26"
+ },
+ "80 s verantwoord kersteditie": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "a fever": {
+  "mbid": "cd793cff-1163-470a-82e8-7483ef2591ab",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "abba gold the christmas special show": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "accept": {
@@ -19,6 +41,19 @@
    "Metal & punk"
   ],
   "dance": [],
+  "checked": "2026-11-26"
+ },
+ "ahmet kaya": {
+  "mbid": "8fe27e3a-82b3-4002-a885-8c521a1bec14",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "ak chamel": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "alain clark": {
@@ -42,6 +77,28 @@
   "genres": [
    "Metal & punk"
   ],
+  "checked": "2026-11-26"
+ },
+ "amr diab": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "anthonie tonnon": {
+  "mbid": "af484bdd-71be-46c0-90a8-277c34317d53",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "antoon": {
+  "mbid": "639d5a39-2427-4fb7-a9d6-1c71ac215e18",
+  "genres": [
+   "Hiphop & R&B",
+   "Pop"
+  ],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "ao": {
@@ -93,6 +150,10 @@
    "Rock",
    "Folk & singer-songwriter"
   ],
+  "checked": "2026-11-26"
+ },
+ "bar hollandia mart hoogkamer django wagner and meer": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "beabadoobee": {
@@ -147,6 +208,12 @@
   ],
   "checked": "2026-11-26"
  },
+ "blok3": {
+  "mbid": "064814c9-1560-4d45-aaab-1b1f2c3b2b65",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "bltnm": {
   "genres": [],
   "checked": "2026-11-26"
@@ -161,6 +228,14 @@
  },
  "breaking bread diner": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "broilers": {
+  "mbid": "9276ffac-6d40-406c-a85d-bb3142b8b800",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "bryson tiller": {
@@ -183,7 +258,19 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "charly luske last christmas live in rotterdam ahoy": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "chris stassy presents uss": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "christmas sing a long": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "christmas sing a long 8": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -191,7 +278,33 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "city of the sun": {
+  "mbid": "055012f8-421f-448e-9741-23e8d82638f2",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "classic hits in concert": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "classified": {
+  "mbid": "3bd5fb5e-8dd3-4130-be7f-c408a0534f80",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "clean pete s kerstmatinee": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "clean pete s kerstshow": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "club motion 16": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -206,6 +319,12 @@
   ],
   "checked": "2026-11-26"
  },
+ "coldplace": {
+  "mbid": "dd38692b-26d9-420b-a2eb-b128122a4648",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "counterparts": {
   "mbid": "4b0dd5e7-c795-42bd-8311-bc9f71fabd0a",
   "genres": [
@@ -217,7 +336,19 @@
   ],
   "checked": "2026-11-26"
  },
+ "creedence clearwater revival": {
+  "mbid": "109958eb-a335-4c5e-907e-597ff4c6af46",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "crush xl": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "cul s cult": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -256,13 +387,55 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "de feestfabriek": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "de jukebox": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "de kakkerlakke": {
+  "mbid": "d8861628-2923-4bfd-b0dc-f38572971505",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "de niemanders": {
+  "mbid": "1c0619d6-8d1a-4dce-81aa-8c60b91fa6a5",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "de unie 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "def": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "demo club": {
   "mbid": "ade4ee29-96ed-4704-b13c-fe02bfc7c129",
   "genres": [],
   "dance": [],
   "checked": "2026-11-26"
  },
+ "demon joker junior": {
+  "mbid": "5e8286ae-3ec6-486e-bc00-051e84677b61",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "demon slayer 29 11": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "dennis van aarssen kerstshow": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "der herr der ringe": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -274,11 +447,32 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "dj st paul all nighter": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "djanbe": {
   "genres": [],
   "checked": "2026-11-26"
  },
+ "doe maar": {
+  "mbid": "7a60b3f1-01ee-4656-bf4e-9891479ee101",
+  "genres": [
+   "Pop",
+   "Nederlandstalig"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "drei haselnusse fur aschenbrodel": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "dune sessions": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "effenaar oud and nieuw 2026": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -286,6 +480,10 @@
   "mbid": "e048b303-093b-4dd0-9a9c-c10c8e553771",
   "genres": [],
   "dance": [],
+  "checked": "2026-11-26"
+ },
+ "elmer": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "erkan ogur and ismail hakk demircioglu": {
@@ -327,6 +525,15 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "extince": {
+  "mbid": "3098aef7-a0d6-46d1-84a3-8c0fd91e097c",
+  "genres": [
+   "Hiphop & R&B",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "fata morgana": {
   "mbid": "c095d366-b15d-42e7-b403-c14df728a6b8",
   "genres": [
@@ -334,7 +541,29 @@
   ],
   "checked": "2026-11-26"
  },
+ "fcknye festival": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "femme fugazi": {
+  "mbid": "5cfd9b90-2bd6-4beb-bfc8-0f19c820ec2e",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "feuerschwanz metfest": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "fiber": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "fiesta macumba": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "fiesta macumba xl": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -346,6 +575,15 @@
  },
  "foute feestje met qmusic the party fout": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "friction": {
+  "mbid": "48134b75-f310-47b5-9876-706495dfa748",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "froukje": {
@@ -372,6 +610,12 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "funky times": {
+  "mbid": "6b15d5c5-30cf-4453-8e8c-ea1196c1a282",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "gallowstreet": {
   "mbid": "8df29c7e-c4bb-4bb0-8f40-531235850553",
   "genres": [],
@@ -379,6 +623,12 @@
  },
  "gezellige clubtempo xxl 2026": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "glass museum": {
+  "mbid": "84fe88ef-3ac0-49a1-95c7-3aa9d4062149",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "goksel": {
@@ -403,6 +653,14 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "groeten uit zingelong": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "grote prijs breda finale 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "haags popgala": {
   "genres": [],
   "checked": "2026-11-26"
@@ -424,6 +682,10 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "hidden xmas deluxe": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "highguest": {
   "genres": [],
   "checked": "2026-11-26"
@@ -431,6 +693,27 @@
  "hiigo": {
   "mbid": "b92113eb-a8d4-4d82-9022-cdee8644daaf",
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "housequake": {
+  "mbid": "7aec45cf-b155-482c-87c0-e10128808f15",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "hush": {
+  "mbid": "5a43f7dc-8ed0-4bcf-89bd-17d3d98f90d7",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "iconic": {
+  "mbid": "f9a6cd75-660f-4b48-83a9-be776bc8b7f0",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "ignea": {
@@ -460,13 +743,35 @@
   ],
   "checked": "2026-11-26"
  },
+ "indorock and more 2026 met marlon pichel": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "inna echoes tour": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "isabel usher": {
+  "mbid": "36296839-818e-4ab0-a225-21d1712a7597",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "j bernardt": {
+  "mbid": "2157fc26-b27b-42b8-abb4-e3d345221c9c",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "jack and the weatherman": {
   "mbid": "1059d6e0-e4d3-41c7-859d-166aa330d02c",
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "jack shore": {
+  "mbid": "2d95a8dd-eca4-4dee-be6d-760fad636850",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "jagged edge live": {
@@ -492,6 +797,30 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "james brown experience": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "jasper h iby s 3elements": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "jett rebel": {
+  "mbid": "8205840f-c70a-4f94-99bd-bed1783db308",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "john corabi and friends": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "joost oomen": {
+  "mbid": "e20875a6-8cfc-4baf-9e4c-d13dea6c53c2",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "joris voorn nicky elisabeth": {
   "genres": [],
   "checked": "2026-11-26"
@@ -509,7 +838,17 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "kapelle petra": {
+  "mbid": "6dcb275a-0f1f-4f87-8abd-25be36a02604",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "karaoke night": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "kefsky dj set": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -537,6 +876,15 @@
   ],
   "checked": "2026-11-26"
  },
+ "kids with buns": {
+  "mbid": "8ea21d24-9b80-498a-a589-4f9adb6e0267",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "killa hakan": {
   "mbid": "814d8cd2-ec21-4e9a-9c8d-728f373a77b1",
   "genres": [],
@@ -562,6 +910,10 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "kraak and smaak live": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "kreukelzone de zingende dokters": {
   "genres": [],
   "checked": "2026-11-26"
@@ -570,12 +922,28 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "l a sagne": {
+  "mbid": "c1e25b84-b24b-4fb2-aafd-29fe606a097a",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "la pegatina": {
+  "mbid": "be21bd32-0edc-4075-8872-1ca274a14893",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "last christmas miracle": {
   "genres": [],
   "checked": "2026-11-26"
  },
  "lichterkinder": {
   "mbid": "507f8561-a191-413c-988c-efd17875a7aa",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "liquicity winterfestival": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -590,6 +958,14 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "loss mer weihnachtsleeder singe 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "loss mer weihnachtsleeder singe 2026 zusatzshow": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "luar na lubre": {
   "mbid": "7fcbcd27-33bc-4c40-bb45-5e3927004fac",
   "genres": [],
@@ -597,6 +973,10 @@
   "checked": "2026-11-26"
  },
  "maaike ouboter and band": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "maarten heijmans en xander vrienten wachtend op de dood": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -622,8 +1002,34 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "martim": {
+  "mbid": "44671c7a-5300-4a55-95a7-021230b3d3a5",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "matt nash": {
+  "mbid": "4dbc82e5-9733-4a8d-9893-dd8f71d462a4",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House"
+  ],
+  "checked": "2026-11-26"
+ },
  "meatallica and the art of pantera": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "mega piraten festijn": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "memorylane": {
+  "mbid": "f67bc913-9cfb-4e67-a82d-c2c75a547bd1",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "mensen zeggen dingen": {
@@ -644,6 +1050,12 @@
  },
  "michael mayer kompakt": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "michael prins": {
+  "mbid": "c336e11a-e442-4827-bd70-838bc13939e3",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "midnight melodies": {
@@ -670,6 +1082,15 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "morrissey": {
+  "mbid": "013fa897-86db-41d3-8e9f-386c8a34f4e6",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "motiv": {
   "mbid": "a4e17568-7a8c-4b26-bc9a-c0a132f2e9c2",
   "genres": [
@@ -693,6 +1114,19 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "my baby": {
+  "mbid": "d88c38de-ca0b-454a-a493-8c1494b67c27",
+  "genres": [
+   "Jazz, soul & blues",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "my first festival 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "nacht van de nederpop xxl": {
   "genres": [],
   "checked": "2026-11-26"
@@ -705,6 +1139,10 @@
  },
  "nems": {
   "mbid": "f76e0b8d-4fcf-49d6-8d23-1ae5ce047826",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "new year": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -761,6 +1199,12 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "noonzy": {
+  "mbid": "c6ea6eda-9bec-4006-9451-6892c2d3c6c0",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "nusantara beat": {
   "mbid": "f7fbd3f4-d47b-4d49-a09f-a9273b0a9c86",
   "genres": [
@@ -768,6 +1212,22 @@
    "Folk & singer-songwriter"
   ],
   "dance": [],
+  "checked": "2026-11-26"
+ },
+ "nye": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "nye festival 26": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "nye reflections 31 12": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "o du frohliche deutschland singt": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "one direction fanparty": {
@@ -785,6 +1245,10 @@
   "checked": "2026-11-26"
  },
  "oshi fest 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "oud and nieuw 2026": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -832,8 +1296,28 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "paardcafe mic drop kerst editie": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "paardcafe nobra": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "paardcafe peach club": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "pat b birthday bash xxl 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "patra": {
   "mbid": "a84c18f2-65a8-4961-afa4-5d834d64f5ec",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "patronaatje tot t gaatje": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -850,6 +1334,10 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "pet": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "phoebe bridgers": {
   "mbid": "96855c21-b832-4366-ba12-0d2330c36a86",
   "genres": [
@@ -863,7 +1351,15 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "playground sessies": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "politieke jongeren verzet protest": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "poptalk louis cole": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -896,12 +1392,20 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "puur twie nul": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "queensryche": {
   "mbid": "deeea939-7f89-4762-b09f-79269cd70d3b",
   "genres": [
    "Metal & punk"
   ],
   "dance": [],
+  "checked": "2026-11-26"
+ },
+ "quiz m top 2000": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "rabo open stage jen": {
@@ -918,6 +1422,15 @@
  },
  "ready2play": {
   "genres": [],
+  "checked": "2026-11-26"
+ },
+ "red hot chili peppers": {
+  "mbid": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+  "genres": [
+   "Rock",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "resident evil 30th anniversary concerts": {
@@ -963,6 +1476,10 @@
    "Metal & punk",
    "Rock"
   ],
+  "checked": "2026-11-26"
+ },
+ "shantel and bucovina club soundsystem": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "showcase obs berg and amp de den": {
@@ -1026,6 +1543,26 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "state power": {
+  "mbid": "17463aa3-e192-4f02-8cac-b5f3d4f238b1",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "steve n seagulls": {
+  "mbid": "c463f1c4-d19f-420f-ac88-a7b5afabeeb9",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "stippenlift": {
+  "mbid": "5b184d0b-24f2-42eb-9d6e-16c5e9c8f2ae",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "stuurbaard bakkebaard": {
   "mbid": "7d36c67a-b81f-4076-b92d-f716790a50d9",
   "genres": [],
@@ -1045,7 +1582,19 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "superstrings and friends": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "tatsachlich liebe": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "teletech new years": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "temple of wave": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -1057,8 +1606,35 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "the black velcro community": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "the blend": {
+  "mbid": "8308e1ed-3ac7-49a8-94c9-69fabc90fce2",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "the bug club": {
+  "mbid": "31f07dfd-df64-48dc-856e-9968059b8e35",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "the dirty daddies": {
   "mbid": "3ae14d74-9472-4843-a475-e0825504f4c1",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "the dutch queen": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "the electronic producers sessions": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -1082,6 +1658,35 @@
   "genres": [
    "Metal & punk"
   ],
+  "checked": "2026-11-26"
+ },
+ "the selecter": {
+  "mbid": "1329faaf-799f-44e2-91f9-87fe52f17afd",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "the veils": {
+  "mbid": "c3bf5aee-646e-4030-9ab4-d1fbd4947a97",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "thijs boontjes": {
+  "mbid": "57fcb610-4873-4e56-9010-7c18fa2e6e3b",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
+ "thomas oliemans": {
+  "mbid": "bd15d2b0-0249-4ad0-af5a-d456891e269a",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-26"
  },
  "thor kissing": {
@@ -1111,12 +1716,22 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "top 2000 live": {
+  "mbid": "772a9039-a048-477d-b326-af249554ab55",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-26"
+ },
  "tori kelly": {
   "mbid": "e4b87494-a5eb-439d-b3bf-5f1b46d4dc6b",
   "genres": [
    "Jazz, soul & blues",
    "Hiphop & R&B"
   ],
+  "checked": "2026-11-26"
+ },
+ "traditionelle dortmunder weihnachts schallplatten borse": {
+  "genres": [],
   "checked": "2026-11-26"
  },
  "transmission": {
@@ -1139,6 +1754,22 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "unheilig and special guests": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "up close with d block and s te fan": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "verknipt nye eindhoven": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "vette knepper": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "vieze asbak": {
   "mbid": "99a996a9-57d3-49bb-a763-816ea4002127",
   "genres": [],
@@ -1146,6 +1777,14 @@
   "checked": "2026-11-26"
  },
  "vinylfeestje": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "vroeg pieken": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "vroeg pieken dj s": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -1177,7 +1816,15 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "y2kerst": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "yuna xl": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "zeitgeist 2026": {
   "genres": [],
   "checked": "2026-11-26"
  },

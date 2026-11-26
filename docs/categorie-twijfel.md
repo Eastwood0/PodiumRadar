@@ -251,7 +251,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (122)
+## paard.nl (123)
 
 - 40UP
 - 80S VERANTWOORD
@@ -331,6 +331,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - PEARL & THE OYSTERS
 - PERSONAL TRAINER
 - PICASSO 5/12
+- PIETERNEL
 - POLITIEKE JONGEREN – VERZET! PROTEST!
 - Paardcafé: Bandsessies
 - Paardcafé: Boyos Soundsystem
@@ -437,6 +438,74 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Karaoke Night
 - WAT! for Dinner
 - Wim Naus en Lottie Boermans
+
+## doornroosje.nl (47)
+
+- 40UP
+- Ak’chamel
+- Bad Nerves
+- Belle & Sebastian
+- Bertolf
+- Bram and Bass
+- CAKE
+- Chef’Special
+- Clan of Xymox
+- Classified
+- Clean Pete’s Kerstmatinee
+- Clean Pete’s Kerstshow
+- Davina Michelle
+- De Jukebox
+- De Staat
+- Dotan
+- Dressed Like Boys
+- Fatoumata Diawara
+- Fiber
+- Fiesta Macumba
+- Frans Kalf
+- Friction
+- Gallowstreet
+- Groeten uit Zingelong
+- Heideroosjes
+- Het Nest 10 jaar
+- Isabèl Usher
+- J. Bernardt
+- Kiss Kiss
+- Kovacs
+- L.A. Sagne x FEMME FUGAZI
+- Matt Nash
+- Mental Cruelty
+- Neurosis
+- New Cool Collective
+- Parasol NYE
+- Primitive Ring
+- Pussy Riot: Riot Days
+- REZN
+- Stippenlift
+- Striptopia
+- The Blend
+- VroegZat
+- Wende
+- X-Factor Hardcore Classics
+- Zeitgeist 2026
+- ’t Hollandse Roosje
+
+## debosuil.nl (6)
+
+- Keycult
+- Let’s Mingle & Dance
+- Oud & Nieuw 2026
+- Pumpelroze 2027
+- Steve 'n' Seagulls
+- Temple Of Wave
+
+## mezz.nl (6)
+
+- Bonte familiedag
+- Grôtste Mââuwert
+- Stuiterbal
+- TRIBE x Pier15
+- The Dutch Queen
+- The Electronic Producers’ Sessions
 
 ## ing.arena.brussels (3)
 

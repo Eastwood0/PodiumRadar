@@ -1,8 +1,8 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T10:39:52.023Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T11:20:52.485Z).
 
-**33 van 49 venues** hebben data, samen 2307 events (1749 muziek).
+**37 van 49 venues** hebben data, samen 2693 events (2119 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
@@ -14,13 +14,13 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T10:39:52.
 | GelreDome | NL | 25 | 9 | 2027-07-28 | gelredome.nl ✅ |  |
 | Goffertpark | NL | 0 | 0 | — | — | Openluchtterrein zonder eigen agenda; komt via Ticketmaster. |
 | MECC | NL | 0 | 0 | — | — | De agenda laadt pas via JavaScript en bevat vooral beurzen en congressen; lage prioriteit. |
-| Vrijthof | NL | 0 | 0 | — | — | Plein zonder eigen agenda; komt via Ticketmaster. |
+| Vrijthof | NL | 12 | 12 | 2027-07-18 | andrerieu.com (Vrijthof) ✅ |  |
 | Brabanthallen | NL | 0 | 0 | — | — | De site laat geen automatische bezoekers toe (captcha); toegang is gevraagd. |
 | Megaland | NL | 3 | 3 | 2027-06-20 | pinkpop.nl (Megaland) ✅ |  |
 | TivoliVredenburg | NL | 193 | 168 | 2027-04-19 | uitagendautrecht.nl ✅ |  |
 | 013 | NL | 142 | 135 | 2027-11-26 | 013.nl ✅ |  |
 | Effenaar | NL | 107 | 106 | 2027-11-26 | effenaar.nl ✅ |  |
-| De Bosuil | NL | 0 | 0 | — | — | nog niet onderzocht |
+| De Bosuil | NL | 62 | 61 | 2027-10-09 | debosuil.nl ✅ |  |
 | Grenswerk | NL | 74 | 68 | 2027-09-25 | grenswerk.nl ✅ |  |
 | Muziekgieterij | NL | 109 | 109 | 2027-10-09 | muziekgieterij.nl ✅ |  |
 | Nieuwe Nor | NL | 0 | 0 | — | — | De site weigert automatische bezoekers (403); niet omzeilen (B23). |
@@ -28,10 +28,10 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T10:39:52.
 | Melkweg | NL | 0 | 0 | — | melkweg.nl ❌ |  |
 | MartiniPlaza | NL | 0 | 0 | — | — | nog niet onderzocht |
 | De Oosterpoort | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Doornroosje | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Paard | NL | 141 | 138 | 2027-11-25 | paard.nl ✅ |  |
-| Hedon | NL | 103 | 100 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
-| Mezz | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Doornroosje | NL | 175 | 163 | 2027-11-13 | doornroosje.nl ✅ |  |
+| Paard | NL | 142 | 139 | 2027-11-25 | paard.nl ✅ |  |
+| Hedon | NL | 104 | 101 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
+| Mezz | NL | 135 | 132 | 2027-11-17 | mezz.nl ✅ |  |
 | Patronaat | NL | 140 | 138 | 2027-11-07 | patronaat.nl ✅ |  |
 | Gashouder | NL | 32 | 32 | 2027-11-03 | gashouder.nl ✅ |  |
 | Klokgebouw | NL | 39 | 25 | 2027-08-26 | klokgebouw.nl ✅ |  |
