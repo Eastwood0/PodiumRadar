@@ -1,6 +1,6 @@
 import { startTransition, useCallback, useEffect, useMemo, useState } from "react";
 import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } from "../lib/site-data";
-import { artistIndex, type Bill, DEFAULT_FILTERS, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
+import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
@@ -20,7 +20,7 @@ export default function App({ bill }: { bill?: Bill }) {
   useEffect(() => {
     setRoute(currentRoute());
     // Stored filters from an older version may miss newer fields: fill them with the defaults.
-    setFiltersState({ ...DEFAULT_FILTERS, ...load<Partial<Filters>>(FILTER_KEY, {}) });
+    setFiltersState(migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})));
     const onHash = () => {
       setRoute(currentRoute());
       window.scrollTo(0, 0);

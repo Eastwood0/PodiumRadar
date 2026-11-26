@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applyFilters, artistIndex, bill, DEFAULT_FILTERS, formatDate, formatTime, isNew, level, monthKey, monthsFrom, parseRoute, slug } from "../src/app/lib";
+import { applyFilters, artistIndex, bill, DEFAULT_FILTERS, migrateFilters, formatDate, formatTime, isNew, level, monthKey, monthsFrom, parseRoute, slug } from "../src/app/lib";
 import { createSearch } from "../src/app/search";
 import type { Event, Venue } from "../src/lib/schema";
 import { buildSiteData, expandSiteData, type SiteEvent, type SiteVenue, toLocalIso } from "../src/lib/site-data";
@@ -55,12 +55,22 @@ describe("filters", () => {
   const venues = new Map([venue("ziggo-dome", "NL"), venue("lanxess-arena", "DE"), venue("effenaar", "NL", "B")].map((v) => [v.id, v]));
   const events = [ev({ id: "a" }), ev({ id: "b", v: "lanxess-arena", c: "o" }), ev({ id: "c", v: "effenaar", s: "2027-04-02T20:00:00+02:00" }), ev({ id: "d", v: "onbekend" })];
   const ids = (f = {}) => applyFilters(events, venues, { ...DEFAULT_FILTERS, ...f }).map((e) => e.id);
+  it("splits music, theatre & cabaret and the rest", () => {
+    const evs = [ev({ id: "m" }), ev({ id: "c", c: "o", g: "Comedy" }), ev({ id: "s", c: "o", g: "Sport" })];
+    const pick = (kind: "muziek" | "theater" | "alles") => applyFilters(evs, venues, { ...DEFAULT_FILTERS, kind }).map((e) => e.id);
+    expect([pick("muziek"), pick("theater"), pick("alles")]).toEqual([["m"], ["c"], ["m", "c", "s"]]);
+  });
+  it("turns the old 'show everything' checkbox into the kind switch", () => {
+    expect(migrateFilters({ all: true }).kind).toBe("alles");
+    expect(migrateFilters({}).kind).toBe("muziek");
+    expect(migrateFilters({ kind: "theater", all: true }).kind).toBe("theater");
+  });
   it("shows music by default and everything with the switch", () => {
     expect(ids()).toEqual(["a", "c"]);
-    expect(ids({ all: true })).toEqual(["a", "b", "c"]);
+    expect(ids({ kind: "alles" as const })).toEqual(["a", "b", "c"]);
   });
   it("filters by country, size, venue and month", () => {
-    expect(ids({ all: true, country: "DE" })).toEqual(["b"]);
+    expect(ids({ kind: "alles" as const, country: "DE" })).toEqual(["b"]);
     expect(ids({ tier: "B" })).toEqual(["c"]);
     expect(ids({ venue: "ziggo-dome" })).toEqual(["a"]);
     expect(ids({ month: "2027-04" })).toEqual(["c"]);

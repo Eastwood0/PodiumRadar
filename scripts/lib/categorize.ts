@@ -10,7 +10,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { parse } from "yaml";
 
 export type Category = "muziek" | "overig";
-export type Genre = "Concert" | "Dance" | "Klassiek" | "Festival" | "Comedy" | "Sport" | "Show" | "Familie" | "Beurs" | "Lezing" | "Overig";
+export type Genre = "Concert" | "Dance" | "Klassiek" | "Festival" | "Comedy" | "Toneel" | "Musical" | "Dans" | "Sport" | "Show" | "Familie" | "Beurs" | "Lezing" | "Overig";
 
 export interface Classification {
   category: Category;
@@ -25,6 +25,9 @@ export const GROUP_OF: Record<Genre, Category> = {
   Klassiek: "muziek",
   Festival: "muziek",
   Comedy: "overig",
+  Toneel: "overig",
+  Musical: "overig",
+  Dans: "overig",
   Sport: "overig",
   Show: "overig",
   Familie: "overig",
@@ -44,7 +47,10 @@ const SOURCE_RULES: [RegExp, Genre][] = [
   [/beurs|messe|markt|expo|tentoonstelling|evenementen|börse|business|zakelijk|congres/i, "Beurs"],
   [/lezing|lezingen|kennis|debat|speaker|talk|podcast|literatuur|lesung/i, "Lezing"],
   [/\b(workshop|livestream|hangout|handwerk|for dinner|filmavond|film|expositie)\b/i, "Overig"],
-  [/musical|com[ée]die musicale|theater|theatre|th[ée]âtre|show|ballet|ballett|dans\b|circus|cirque|entertainment|film/i, "Show"],
+  [/musical|com[ée]die musicale/i, "Musical"],
+  [/ballet|ballett|\bdans\b|\bdance theat|tanztheater/i, "Dans"],
+  [/show|circus|cirque|entertainment|magie|goochel/i, "Show"],
+  [/toneel|theater|theatre|th[ée]âtre|schauspiel|voorstelling/i, "Toneel"],
   [/concert|konzert|muziek|music|musik|pop|rock|metal|hip ?hop|rap|jazz|blues|soul|funk|indie|punk|schlager|nederlands|dutch|singer|k-pop|reggae|latin|wereld|world|folk|country|r&b|urban|alternati/i, "Concert"],
 ];
 

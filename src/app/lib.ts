@@ -110,18 +110,32 @@ export const LEVELS = [
 ];
 export const level = (n: number) => LEVELS.findLastIndex((l) => n >= l.min) + 1;
 
+export type Kind = "muziek" | "theater" | "alles";
+/** Kinds of events that count as "theatre & cabaret" (see scripts/lib/categorize.ts). */
+export const THEATER_GENRES = ["Comedy", "Toneel", "Musical", "Dans", "Show", "Familie"];
+export const kindOf = (e: SiteEvent): "muziek" | "theater" | "overig" => (e.c === "m" ? "muziek" : THEATER_GENRES.includes(e.g ?? "") ? "theater" : "overig");
+/** Display names for kinds of events. */
+export const GENRE_LABEL: Record<string, string> = { Comedy: "Cabaret & comedy" };
+
+/** Older saved filters had a checkbox "all"; turn them into the new kind switch. */
+export function migrateFilters(stored: Partial<Filters> & { all?: boolean }): Filters {
+  const { all, ...rest } = stored;
+  return { ...DEFAULT_FILTERS, ...rest, kind: rest.kind ?? (all ? "alles" : "muziek") };
+}
+
 export interface Filters {
   country: "" | "NL" | "BE" | "DE";
   tier: "" | "A" | "B";
   venue: string;
   month: string;
-  all: boolean;
+  /** Kind of event: music (default), theatre & cabaret, or everything (also sport and fairs). */
+  kind: Kind;
   /** Music genres; empty = all. An event matches when it has one of them. */
   genres: string[];
   /** Dance styles, only used while "Dance & DJ" is among the genres. */
   dance: string[];
 }
-export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", all: false, genres: [], dance: [] };
+export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", kind: "muziek", genres: [], dance: [] };
 
 /**
  * An event matches when it has one of the chosen genres. Chosen dance styles narrow only "Dance & DJ":
@@ -137,7 +151,7 @@ export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>
   return events.filter((e) => {
     const v = venues.get(e.v);
     if (!v) return false;
-    if (!f.all && e.c !== "m") return false;
+    if (f.kind !== "alles" && kindOf(e) !== f.kind) return false;
     if (f.country && v.cc !== f.country) return false;
     if (f.tier && v.tier !== f.tier) return false;
     if (f.venue && e.v !== f.venue) return false;

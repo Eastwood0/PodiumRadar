@@ -1,5 +1,5 @@
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
-import { artistHref, dayName, formatDate, formatTime, isNew, parts, venueHref } from "./lib";
+import { artistHref, dayName, GENRE_LABEL, formatDate, formatTime, isNew, parts, venueHref } from "./lib";
 
 const STATUS_LABEL = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 const COUNTRY = { NL: "Nederland", BE: "België", DE: "Duitsland", GB: "Verenigd Koninkrijk", FR: "Frankrijk" } as const;
@@ -61,7 +61,7 @@ export function EventCard({ e, venue, data, showVenue = true }: { e: SiteEvent; 
                 </li>
               ),
             )}
-            {e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek")) && <li className="tag">{e.g}</li>}
+            {e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek")) && <li className="tag">{GENRE_LABEL[e.g] ?? e.g}</li>}
           </ul>
         )}
       </div>

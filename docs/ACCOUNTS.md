@@ -47,6 +47,8 @@ Geen inlog (B40): de site is open voor wie het adres heeft, maar niet vindbaar i
 
 Vanaf nu zet Cloudflare elke wijziging op main automatisch online, ook de nieuwe agenda van de nachtelijke run.
 
+Let op: Cloudflare maakt hier tegenwoordig een "Worker" van met als deploy-opdracht `npx wrangler deploy`. Dat is goed: het bestand `wrangler.jsonc` in de repo zegt dat alleen de map `dist` online moet (statische site, geen code op de server). Laat de deploy-opdracht zoals hij is.
+
 ## 5. Cloudflare: database voor de koppelcodes (vóór fase 3, volgt nog)
 
 Claude Code geeft je in fase 3 de exacte stappen; globaal gaat het om:

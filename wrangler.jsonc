@@ -1,0 +1,11 @@
+// Cloudflare: the site is plain static files (Astro "static" output in dist/), served as Workers static assets.
+// With this file present, `npx wrangler deploy` uploads dist/ as-is and does not try to convert the project
+// (its automatic "astro add cloudflare" step broke the build on 26 Nov 2026). No Worker script, no secrets.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "podiumradar",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

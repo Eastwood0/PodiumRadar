@@ -1,36 +1,106 @@
 import type { SiteData } from "../lib/site-data";
 import { DANCE_STYLES, MUSIC_GENRES } from "../lib/genres";
-import { DEFAULT_FILTERS, type Filters, MONTHS_LONG } from "./lib";
+import { DEFAULT_FILTERS, type Filters, type Kind, MONTHS_LONG } from "./lib";
+
+const KINDS: { kind: Kind; label: string }[] = [
+  { kind: "muziek", label: "Muziek" },
+  { kind: "theater", label: "Theater & cabaret" },
+  { kind: "alles", label: "Alles" },
+];
+
+/** Music, theatre & cabaret, or everything (also sport and fairs). Shared with the venue page. */
+export function KindSwitch({
+  kind,
+  onChange,
+}: {
+  kind: Kind;
+  onChange: (k: Kind) => void;
+}) {
+  return (
+    <div className="seg seg--kind" role="group" aria-label="Soort">
+      {KINDS.map((k) => (
+        <button
+          key={k.kind}
+          type="button"
+          aria-pressed={kind === k.kind}
+          onClick={() => onChange(k.kind)}
+        >
+          {k.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 /** Filter controls shared by Overzicht and Agenda. Choices are remembered per browser by the parent. */
-export function FilterBar({ data, filters, setFilters, show, count, months = [] }: { data: SiteData; filters: Filters; setFilters: (f: Filters) => void; show: { venue: boolean; month: boolean }; count: number; months?: string[] }) {
+export function FilterBar({
+  data,
+  filters,
+  setFilters,
+  show,
+  count,
+  months = [],
+}: {
+  data: SiteData;
+  filters: Filters;
+  setFilters: (f: Filters) => void;
+  show: { venue: boolean; month: boolean };
+  count: number;
+  months?: string[];
+}) {
   const set = (patch: Partial<Filters>) => setFilters({ ...filters, ...patch });
-  const venues = data.venues.filter((v) => (!filters.country || v.cc === filters.country) && data.events.some((e) => e.v === v.id));
-  const changed = JSON.stringify({ ...filters }) !== JSON.stringify(DEFAULT_FILTERS);
+  const venues = data.venues.filter(
+    (v) =>
+      (!filters.country || v.cc === filters.country) &&
+      data.events.some((e) => e.v === v.id),
+  );
+  const changed =
+    JSON.stringify({ ...filters }) !== JSON.stringify(DEFAULT_FILTERS);
   return (
     <div className="filters" role="group" aria-label="Filters">
+      <KindSwitch kind={filters.kind} onChange={(kind) => set({ kind })} />
       <div className="seg" role="group" aria-label="Land">
         {(["", "NL", "BE", "DE"] as const).map((cc) => (
-          <button key={cc || "all"} type="button" aria-pressed={filters.country === cc} onClick={() => set({ country: cc, venue: "" })}>
+          <button
+            key={cc || "all"}
+            type="button"
+            aria-pressed={filters.country === cc}
+            onClick={() => set({ country: cc, venue: "" })}
+          >
             {cc || "Alle landen"}
           </button>
         ))}
       </div>
       <div className="seg" role="group" aria-label="Grootte">
-        <button type="button" aria-pressed={filters.tier === ""} onClick={() => set({ tier: "" })}>
+        <button
+          type="button"
+          aria-pressed={filters.tier === ""}
+          onClick={() => set({ tier: "" })}
+        >
           Alle zalen
         </button>
-        <button type="button" aria-pressed={filters.tier === "A"} onClick={() => set({ tier: "A" })}>
+        <button
+          type="button"
+          aria-pressed={filters.tier === "A"}
+          onClick={() => set({ tier: "A" })}
+        >
           Groot
         </button>
-        <button type="button" aria-pressed={filters.tier === "B"} onClick={() => set({ tier: "B" })}>
+        <button
+          type="button"
+          aria-pressed={filters.tier === "B"}
+          onClick={() => set({ tier: "B" })}
+        >
           Middelgroot
         </button>
       </div>
       {show.venue && (
         <label className="sel">
           <span className="sr-only">Zaal</span>
-          <select value={filters.venue} onChange={(e) => set({ venue: e.target.value })}>
+          <select
+            value={filters.venue}
+            onChange={(e) => set({ venue: e.target.value })}
+          >
             <option value="">Alle zalen</option>
             {venues.map((v) => (
               <option key={v.id} value={v.id}>
@@ -43,7 +113,10 @@ export function FilterBar({ data, filters, setFilters, show, count, months = [] 
       {show.month && (
         <label className="sel">
           <span className="sr-only">Maand</span>
-          <select value={filters.month} onChange={(e) => set({ month: e.target.value })}>
+          <select
+            value={filters.month}
+            onChange={(e) => set({ month: e.target.value })}
+          >
             <option value="">Alle maanden</option>
             {months.map((m) => (
               <option key={m} value={m}>
@@ -53,44 +126,83 @@ export function FilterBar({ data, filters, setFilters, show, count, months = [] 
           </select>
         </label>
       )}
-      <div className="chips" role="group" aria-label="Genre">
-        <button type="button" aria-pressed={!filters.genres.length} onClick={() => set({ genres: [], dance: [] })}>
-          Alle genres
-        </button>
-        {MUSIC_GENRES.map((g) => {
-          const on = filters.genres.includes(g);
-          return (
-            <button key={g} type="button" aria-pressed={on} onClick={() => set({ genres: on ? filters.genres.filter((x) => x !== g) : [...filters.genres, g], ...(on && g === "Dance & DJ" ? { dance: [] } : {}) })}>
-              {g}
+      {filters.kind !== "theater" && (
+        <>
+          <div className="chips" role="group" aria-label="Genre">
+            <button
+              type="button"
+              aria-pressed={!filters.genres.length}
+              onClick={() => set({ genres: [], dance: [] })}
+            >
+              Alle genres
             </button>
-          );
-        })}
-      </div>
-      {filters.genres.includes("Dance & DJ") && (
-        <div className="chips chips--sub" role="group" aria-label="Soort dance">
-          <button type="button" aria-pressed={!filters.dance.length} onClick={() => set({ dance: [] })}>
-            Alle dance
-          </button>
-          {DANCE_STYLES.map((d) => {
-            const on = filters.dance.includes(d);
-            return (
-              <button key={d} type="button" aria-pressed={on} onClick={() => set({ dance: on ? filters.dance.filter((x) => x !== d) : [...filters.dance, d] })}>
-                {d}
+            {MUSIC_GENRES.map((g) => {
+              const on = filters.genres.includes(g);
+              return (
+                <button
+                  key={g}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() =>
+                    set({
+                      genres: on
+                        ? filters.genres.filter((x) => x !== g)
+                        : [...filters.genres, g],
+                      ...(on && g === "Dance & DJ" ? { dance: [] } : {}),
+                    })
+                  }
+                >
+                  {g}
+                </button>
+              );
+            })}
+          </div>
+          {filters.genres.includes("Dance & DJ") && (
+            <div
+              className="chips chips--sub"
+              role="group"
+              aria-label="Soort dance"
+            >
+              <button
+                type="button"
+                aria-pressed={!filters.dance.length}
+                onClick={() => set({ dance: [] })}
+              >
+                Alle dance
               </button>
-            );
-          })}
-        </div>
+              {DANCE_STYLES.map((d) => {
+                const on = filters.dance.includes(d);
+                return (
+                  <button
+                    key={d}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() =>
+                      set({
+                        dance: on
+                          ? filters.dance.filter((x) => x !== d)
+                          : [...filters.dance, d],
+                      })
+                    }
+                  >
+                    {d}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
-      <label className="toggle">
-        <input type="checkbox" checked={filters.all} onChange={(e) => set({ all: e.target.checked })} />
-        <span>Ook shows, sport en beurzen</span>
-      </label>
       <p className="filters__count" aria-live="polite">
         {count} {count === 1 ? "event" : "events"}
         {changed && (
           <>
             {" · "}
-            <button type="button" className="link" onClick={() => setFilters(DEFAULT_FILTERS)}>
+            <button
+              type="button"
+              className="link"
+              onClick={() => setFilters(DEFAULT_FILTERS)}
+            >
               filters wissen
             </button>
           </>

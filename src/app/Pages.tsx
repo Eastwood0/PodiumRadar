@@ -3,7 +3,8 @@ import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FilterBar } from "./FilterBar";
 import { Flag } from "./EventCard";
-import { applyFilters, type Filters, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
+import { KindSwitch } from "./FilterBar";
+import { applyFilters, type Filters, kindOf, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
 
 const STATUS = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 
@@ -14,9 +15,9 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
   const events = useMemo(() => applyFilters(data.events, venues, filters), [data, venues, filters]);
   return (
     <>
-      <PageHead title="Agenda" sub="Alle concerten van de komende twaalf maanden. Zet de schakelaar aan om ook shows, sport en beurzen te zien." />
+      <PageHead title="Agenda" sub="Alle concerten, theater en cabaret van de komende twaalf maanden. Kies hieronder wat je wilt zien." />
       <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: true, month: true }} months={months} count={events.length} />
-      <EventList key={JSON.stringify(filters)} events={events} venues={venues} data={data} empty={<p>Geen events met deze filters. Zet “Ook shows, sport en beurzen” aan of wis de filters.</p>} />
+      <EventList key={JSON.stringify(filters)} events={events} venues={venues} data={data} empty={<p>Geen events met deze filters. Kies “Alles” of wis de filters.</p>} />
     </>
   );
 }
@@ -86,7 +87,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
   const v = venues.get(id);
   const all = useMemo(() => data.events.filter((e) => e.v === id), [data, id]);
   if (!v) return <NotFound />;
-  const events = filters.all ? all : all.filter((e) => e.c === "m");
+  const events = filters.kind === "alles" ? all : all.filter((e) => kindOf(e) === filters.kind);
   const source = data.sources.find((s) => s.venues.includes(id));
   return (
     <>
@@ -102,14 +103,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
             Naar de site van {v.n}
           </a>
         )}
-        {all.length > 0 && (
-          <label className="toggle">
-            <input type="checkbox" checked={filters.all} onChange={(e) => setFilters({ ...filters, all: e.target.checked })} />
-            <span>
-              Ook shows, sport en beurzen ({all.length - all.filter((e) => e.c === "m").length})
-            </span>
-          </label>
-        )}
+        {all.length > 0 && <KindSwitch kind={filters.kind} onChange={(kind) => setFilters({ ...filters, kind })} />}
       </div>
       {v.ns && (
         <div className="note">
@@ -124,7 +118,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
         </p>
       )}
       {!v.ns && (
-        <EventList key={`${id}${filters.all}`} events={events} venues={venues} data={data} showVenue={false} empty={<p>Geen concerten gevonden. Zet “Ook shows, sport en beurzen” aan voor de rest.</p>} />
+        <EventList key={`${id}${filters.kind}`} events={events} venues={venues} data={data} showVenue={false} empty={<p>Niets van deze soort in deze zaal. Kies hierboven een andere soort of “Alles”.</p>} />
       )}
     </>
   );
