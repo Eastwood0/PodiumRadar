@@ -402,3 +402,12 @@ describe("Spot Groningen (De Oosterpoort + Stadsschouwburg)", async () => {
     expect(breij).toMatchObject({ venueId: "stadsschouwburg-groningen", start: "2026-11-26T20:15:00+01:00", hasTime: true, status: "uitverkocht", sourceCategory: "cabaret" });
   });
 });
+
+describe("De Kattendans (Theater for WordPress)", async () => {
+  const { parseWpTheatre } = await import("../scripts/adapters/wp-theatre");
+  const ev = parseWpTheatre(fixture("kattendans-programma.html"), "kattendans");
+  it("reads date with two-digit year, start time, category and sold-out", () => {
+    expect(ev[1]).toMatchObject({ venueId: "kattendans", title: "Oscar Smit", start: "2026-11-26T20:30:00+01:00", hasTime: true, sourceCategory: "Cabaret", url: "https://kattendans.nl/voorstelling/oscar-smit/" });
+    expect(ev[2]).toMatchObject({ title: "Roué Verveer", start: "2027-02-23T20:15:00+01:00", status: "uitverkocht" });
+  });
+});

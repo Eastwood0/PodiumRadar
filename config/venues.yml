@@ -38,6 +38,8 @@ venues:
   - { id: hedon, name: Hedon, city: Zwolle, country: NL, tier: B }
   - { id: mezz, name: Mezz, city: Breda, country: NL, tier: B }
   - { id: patronaat, name: Patronaat, city: Haarlem, country: NL, tier: B }
+  # Theaters (B41):
+  - { id: kattendans, name: De Kattendans, city: Bergeijk, country: NL, tier: B, website: "https://kattendans.nl/" }
   # Dance-locaties (B33: DJ-feesten via de eigen agenda's van clubs, niet via DJguide):
   - { id: gashouder, name: Gashouder, city: Amsterdam, country: NL, tier: B, aliases: [Westergas] }
   - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }
