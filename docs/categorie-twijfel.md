@@ -1,6 +1,6 @@
 # Categorie: twijfelgevallen
 
-Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-25).
+Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-26).
 Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-correcties.yml`.
 
 ## ziggodome.nl (3)
@@ -9,7 +9,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Electric Callboy
 - Powerwolf
 
-## afaslive.nl (53)
+## afaslive.nl (54)
 
 - 20 JAAR 3JS
 - Angèle
@@ -62,6 +62,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Thirty Seconds to Mars
 - Thomas Bergersen
 - Till Lindemann
+- Total Touch
 - Trivium & In Flames
 - Weezer
 
@@ -69,7 +70,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 
 - Oranje Fonds 25 jaar
 
-## 013.nl (116)
+## 013.nl (117)
 
 - 16 Horsepower
 - 40UP - Big Bang
@@ -163,6 +164,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - The Australian Pink Floyd Show
 - The Black Dahlia Murder
 - The Bronx + Mariachi El Bronx
+- The Dead South
 - The Dirty Daddies
 - The Elvis Concert 2027
 - The Halo Effect
@@ -278,12 +280,13 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - The World of Hans Zimmer
 - Till Lindemann
 
-## grugahalle.de (9)
+## grugahalle.de (10)
 
 - Aryana Sayeed Ladies Only Concert
 - DDT
 - Das große Familien-Event – WEIHNACHTSSINGEN IN ESSEN
 - FEUERSCHWANZ - METFEST
+- Johann König - Heute ein König
 - Max Raabe & Palast Orchester
 - Musikparade 2027
 - Palmenrausch 2027
