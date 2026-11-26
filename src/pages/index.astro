@@ -1,8 +1,19 @@
 ---
+import { readFileSync } from "node:fs";
 import Base from "../layouts/Base.astro";
 import App from "../app/App";
+import { bill } from "../app/lib";
+import { type CompactSiteData, expandSiteData } from "../lib/site-data";
+
+// public/data/agenda.json is written by the prebuild step (scripts/build-site-data.ts).
+const data = expandSiteData(JSON.parse(readFileSync("public/data/agenda.json", "utf8")) as CompactSiteData);
+const opening = bill(data.events, new Map(data.venues.map((v) => [v.id, v])), data.generatedAt);
 ---
 
 <Base title="Podiumradar">
-  <App client:load />
+  <script is:inline>
+    // A link straight to another page (#agenda, #artiest-…): hide the pre-rendered line-up so nothing jumps.
+    if (location.hash && location.hash !== "#overzicht") document.documentElement.classList.add("deep-link");
+  </script>
+  <App client:load bill={opening} />
 </Base>

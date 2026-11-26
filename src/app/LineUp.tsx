@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
-import { artistHref, bill, type BillEntry, MONTHS_LONG, parts } from "./lib";
+import { artistHref, type Bill, bill, type BillEntry, MONTHS_LONG, parts } from "./lib";
 
 const longDate = (iso: string) => {
   const p = parts(iso);
@@ -25,6 +25,14 @@ function Act({ b }: { b: BillEntry }) {
 /** The opening of the overview, set like a festival bill: what is on in the coming 30 days. */
 export function LineUp({ data, venues }: { data: SiteData; venues: Map<string, SiteVenue> }) {
   const b = useMemo(() => bill(data.events, venues, data.generatedAt), [data, venues]);
+  return <BillView b={b} />;
+}
+
+/**
+ * The bill itself. The build also renders it straight into the page (index.astro), so the first screen
+ * shows the line-up before the full agenda has even been downloaded.
+ */
+export function BillView({ b }: { b: Bill }) {
   if (!b.headliners.length) return null;
   const shown = b.headliners.length + b.support.length + b.club.length;
   const until = new Date(Date.parse(b.to) - 86_400_000).toISOString();

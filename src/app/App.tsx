@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { startTransition, useCallback, useEffect, useMemo, useState } from "react";
 import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } from "../lib/site-data";
-import { artistIndex, DEFAULT_FILTERS, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
-import { LineUp } from "./LineUp";
+import { artistIndex, type Bill, DEFAULT_FILTERS, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
+import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
 import { createSearch } from "./search";
@@ -10,7 +10,8 @@ import { SearchBox } from "./SearchBox";
 const FILTER_KEY = "pr.filters";
 const currentRoute = () => (typeof location === "undefined" ? ({ view: "overzicht" } as Route) : parseRoute(location.hash));
 
-export default function App() {
+/** `bill`: the opening line-up, computed at build time so it is in the HTML before any data loads. */
+export default function App({ bill }: { bill?: Bill }) {
   const [data, setData] = useState<SiteData | null>(null);
   const [error, setError] = useState(false);
   const [route, setRoute] = useState<Route>({ view: "overzicht" });
@@ -31,7 +32,8 @@ export default function App() {
     if (head) ro?.observe(head);
     fetch("data/agenda.json")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((d: CompactSiteData) => setData(expandSiteData(d)))
+      // A transition lets React render the big first screen in small slices, so the phone stays responsive.
+      .then((d: CompactSiteData) => startTransition(() => setData(expandSiteData(d))))
       .catch(() => setError(true));
     return () => {
       window.removeEventListener("hashchange", onHash);
@@ -102,7 +104,14 @@ export default function App() {
               <Overview data={data} venues={venues} months={months} filters={filters} setFilters={setFilters} />
             </>
           ) : (
-            <Loading />
+            <>
+              {bill && (
+                <div className="bill-ssr">
+                  <BillView b={bill} />
+                </div>
+              )}
+              <Loading />
+            </>
           )
         ) : !data ? (
           <Loading />

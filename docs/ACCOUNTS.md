@@ -27,19 +27,27 @@ Stappen 1–3 zijn nodig vóór fase 1. Stap 4 en 5 kunnen wachten tot fase 2 en
 1. Maak een gratis account aan op dash.cloudflare.com.
 2. Meer hoeft nu niet. De rest volgt in stap 4 en 5.
 
-## 4. Cloudflare: website online en afgeschermd (nu, voor fase 2)
+## 4. Cloudflare: website online (nu)
 
-1. In het Cloudflare-dashboard: **Workers & Pages** → **Create** → **Pages** → **Connect to Git** → kies de repo `podiumradar`.
-2. Build-instellingen: framework **Astro**, production branch `main`, build command `npm run build`, output directory `dist`. Verder niets invullen (de Node-versie staat al in de repo). Klik **Save and Deploy**. Vanaf nu zet Cloudflare elke wijziging op main automatisch online, ook de nieuwe agenda van de dagelijkse run.
-3. Noteer het adres dat je krijgt (`<naam>.pages.dev`).
-4. Ga naar **Zero Trust** (links in het menu). Kies bij de vraag om een plan het **Free**-plan en een teamnaam. Noteer de teamnaam.
-5. **Integrations** → **Identity providers** → voeg **One-time PIN** toe. *Controleer hier of dit op het gratis plan beschikbaar is; zo niet, meld het aan Claude Code.*
-6. **Access** → **Applications** → **Add an application** → **Self-hosted**. Vul **twee** adressen in: `<naam>.pages.dev` én `*.<naam>.pages.dev`. Dat laatste schermt ook de testversies af.
-7. Voeg een regel (policy) toe: **Allow**, **Emails**, met jouw e-mailadres en dat van maximaal 10 vrienden.
-8. Open de applicatie opnieuw → **Additional settings** → kopieer de **Application Audience (AUD) Tag**. Claude Code vraagt hier in fase 3 om, samen met de teamnaam.
-9. Test: open het adres in een privévenster. Je moet een inlogscherm zien. Na het invullen van je e-mailadres krijg je een code.
+Geen inlog (B40): de site is open voor wie het adres heeft, maar niet vindbaar in zoekmachines.
 
-## 5. Cloudflare: database en sleutel voor de dagelijkse run (vóór fase 3)
+1. Log in op dash.cloudflare.com en klik links op **Workers & Pages**.
+2. Klik **Create application** → tabblad **Pages** → **Connect to Git**.
+3. Kies **GitHub**, log in als dat gevraagd wordt en kies bij de toegang voor de repository **PodiumRadar** (alleen deze is genoeg). Klik **Install & Authorize** en daarna **Begin setup**.
+4. Vul in bij **Set up builds and deployments**:
+   - **Project name**: bijvoorbeeld `podiumradar` (dit wordt het adres: `podiumradar.pages.dev`; is de naam bezet, kies iets anders)
+   - **Production branch**: `main`
+   - **Framework preset**: **Astro**
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - Verder niets invullen.
+5. Klik **Save and Deploy**. Wacht tot de bouw klaar is (een paar minuten) en klik **Continue to project**. Daar staat het adres van de site.
+6. Zet testversies uit (scheelt bouwbeurten): in het project → **Settings** → **Builds** (of **Builds & deployments**) → **Branch control** → zet **Preview branch** op **None**. Opslaan.
+7. Open het adres op je telefoon en computer en stuur het naar je vrienden. Stuur het ook naar Claude Code, dan controleer ik de live site.
+
+Vanaf nu zet Cloudflare elke wijziging op main automatisch online, ook de nieuwe agenda van de nachtelijke run.
+
+## 5. Cloudflare: database voor de koppelcodes (vóór fase 3, volgt nog)
 
 Claude Code geeft je in fase 3 de exacte stappen; globaal gaat het om:
 1. Een D1-database aanmaken en koppelen aan het Pages-project.

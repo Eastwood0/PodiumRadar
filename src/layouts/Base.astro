@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+// The poster type is the first thing on screen; loading it early avoids a jump when it arrives.
+import archivoLatin from "@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url";
 
 interface Props {
   title: string;
@@ -17,6 +19,7 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#eceee9" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0a1233" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={archivoLatin} as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="/data/agenda.json" as="fetch" crossorigin="anonymous" />
     <title>{title}</title>
   </head>

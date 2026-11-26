@@ -1,6 +1,6 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.8 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
+> Werktitel: **Podiumradar**. Versie 0.9 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
 > Wijzigingen 0.3 → 0.4: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
@@ -326,6 +326,10 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B35 | "Dance & DJ" krijgt een tweede filterrij met stijlen: Techno, House, Trance, Hardstyle & hardcore, Drum & bass, Disco, EDM (uit label/titel, anders MusicBrainz-tags; max 2) | Verzoek Ralf 26 nov 2026. Stijlen verfijnen alleen Dance; andere gekozen genres blijven gelden |
 | B36 | Namen waarop je kunt klikken (acts, zalen) krijgen bij aanwijzen een felroze markeerstift-achtergrond | Verzoek Ralf: duidelijker zien waar je op klikt |
 | B37 | Melkweg: bij een botcontrole (AWS-firewall, HTTP 202) vraagt de nachtelijke run het na 2 en na 9 minuten opnieuw; het controlescherm wordt nooit uitgevoerd of opgelost (B23). Lukt het niet, dan blijft de vorige stand staan. Melkweg staat in de verzoekbrief | Verzoek Ralf "lees Melkweg op een andere manier uit"; er is geen andere officiële bron (geen stadsagenda met Melkweg, geen feed) |
+| B38 | Geen Ticketmaster voorlopig; de radar beperkt zich tot NL, BE en DE (VK en FR vervallen voor nu). B25 vervalt | Ralf 26 nov 2026: Ticketmaster overbodig voor nu |
+| B39 | Geen inlog. Voorkeuren (gevolgde artiesten, filters) staan in de browser; wie ze op een ander apparaat wil, opent één keer zijn persoonlijke koppelcode/link. De server bewaart alleen code → artiesten, zonder e-mailadres. Vervangt de Access-inlog uit B15 | Ralf koos "Browser + koppelcode"; ook nodig voor latere meldingen |
+| B40 | Site open maar niet vindbaar: noindex-header, robots.txt "Disallow: /", adres alleen delen met vrienden. Geen Cloudflare Access. Fase 2-eis "niet-genodigden zien een inlogscherm" wordt "de site staat niet in zoekmachines" | Ralf koos "Niet vindbaar, wel open"; er staat alleen openbare agenda-informatie op |
+| B41 | Theaters erbij (cabaret, shows): zalen rond Weert/Limburg/Brabant (o.a. De Kattendans Bergeijk), de grote theaters van NL, en waar toegestaan één landelijke theater-/cabaretagenda als bron. Op de site een soortfilter "Theater & cabaret" naast muziek | Ralf 26 nov 2026 |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

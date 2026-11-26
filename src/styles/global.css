@@ -129,6 +129,10 @@
   transition: background-color 0.1s ease;
 }
 
+.deep-link .bill-ssr {
+  display: none;
+}
+
 /* ---------- Base ---------- */
 html {
   -webkit-text-size-adjust: 100%;
