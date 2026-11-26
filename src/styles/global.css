@@ -522,6 +522,39 @@ a:hover {
   background: var(--ink);
   color: var(--paper);
 }
+.chips {
+  display: flex;
+  gap: 0.35rem;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+@media (min-width: 64rem) {
+  .chips {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+.chips button {
+  flex: none;
+  min-height: 2.25rem;
+  padding: 0 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 550;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.chips button[aria-pressed="true"] {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--blue-ink);
+}
 .sel {
   flex: 1 1 9rem;
   max-width: 18rem;
@@ -883,6 +916,10 @@ a:hover {
   background: var(--warn-bg);
   border-color: var(--warn-bg);
   color: var(--warn-ink);
+}
+.tag--genre {
+  border-color: var(--ink-2);
+  color: var(--ink);
 }
 .tag--sale {
   border-color: var(--blue);

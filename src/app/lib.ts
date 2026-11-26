@@ -116,8 +116,10 @@ export interface Filters {
   venue: string;
   month: string;
   all: boolean;
+  /** Music genres; empty = all. An event matches when it has one of them. */
+  genres: string[];
 }
-export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", all: false };
+export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", all: false, genres: [] };
 
 export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>, f: Filters): SiteEvent[] {
   return events.filter((e) => {
@@ -128,6 +130,7 @@ export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>
     if (f.tier && v.tier !== f.tier) return false;
     if (f.venue && e.v !== f.venue) return false;
     if (f.month && monthKey(e.s) !== f.month) return false;
+    if (f.genres.length && !e.mg?.some((g) => f.genres.includes(g))) return false;
     return true;
   });
 }

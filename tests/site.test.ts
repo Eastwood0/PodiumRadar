@@ -65,6 +65,13 @@ describe("filters", () => {
     expect(ids({ venue: "ziggo-dome" })).toEqual(["a"]);
     expect(ids({ month: "2027-04" })).toEqual(["c"]);
   });
+  it("filters by music genre; events without a genre drop out", () => {
+    const withGenres = [ev({ id: "r", mg: ["Rock"] }), ev({ id: "d", mg: ["Dance & DJ", "Pop"] }), ev({ id: "x" })];
+    const pick = (genres: string[]) => applyFilters(withGenres, venues, { ...DEFAULT_FILTERS, genres }).map((e) => e.id);
+    expect(pick([])).toEqual(["r", "d", "x"]);
+    expect(pick(["Pop"])).toEqual(["d"]);
+    expect(pick(["Rock", "Dance & DJ"])).toEqual(["r", "d"]);
+  });
 });
 
 describe("search", () => {

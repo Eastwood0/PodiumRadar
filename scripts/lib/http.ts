@@ -94,3 +94,12 @@ export async function fetchText(url: string, accept?: string): Promise<{ body: s
   if (!r.ok) throw new Error(`${url}: ${r.status || r.error}`);
   return { body: r.body, finalUrl: r.finalUrl };
 }
+
+/**
+ * GET for documented public APIs with their own published rate limit (e.g. MusicBrainz: 1 request per
+ * second, User-Agent required). Same per-host queue and pause as politeGet; robots.txt is meant for
+ * crawlers of web pages and not consulted here. Only use for APIs listed in docs/BRONNEN.md.
+ */
+export function apiGet(url: string, accept = "application/json"): Promise<FetchResult> {
+  return onHost(new URL(url).host, () => rawFetch(url, accept));
+}

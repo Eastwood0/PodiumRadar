@@ -15,7 +15,9 @@
     "fetch": "tsx scripts/fetch.ts",
     "coverage": "tsx scripts/coverage.ts",
     "prebuild": "tsx scripts/build-site-data.ts",
-    "predev": "tsx scripts/build-site-data.ts"
+    "predev": "tsx scripts/build-site-data.ts",
+    "genres": "tsx scripts/genres.ts",
+    "snapshot": "tsx scripts/snapshot.ts"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.9",

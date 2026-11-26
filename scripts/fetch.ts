@@ -7,6 +7,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import type { Event } from "../src/lib/schema";
 import { loadVenues } from "../src/lib/venues";
 import { ADAPTERS } from "./adapters";
+import { applyArtistGenres, loadArtistGenres } from "./lib/artist-genres";
 import { carryFirstSeen, dedupe, isOutage, sortEvents, toEvents, type SourceStatus } from "./lib/pipeline";
 
 const EVENTS_FILE = "data/events.json";
@@ -63,7 +64,8 @@ async function main() {
   const ran = new Set(adapters.map((a) => a.name));
   all.push(...previous.filter((e) => e.sources.every((s) => !ran.has(s.name)) && e.start.slice(0, 10) >= today));
 
-  const events = sortEvents(carryFirstSeen(dedupe(all), previous));
+  // Artist genres found by earlier runs of scripts/genres.ts (MusicBrainz), so nothing flickers between runs.
+  const events = applyArtistGenres(sortEvents(carryFirstSeen(dedupe(all), previous)), loadArtistGenres());
   mkdirSync("data", { recursive: true });
   writeFileSync(EVENTS_FILE, JSON.stringify({ generatedAt: startedAt.toISOString(), events }, null, 1) + "\n");
   writeFileSync(STATUS_FILE, JSON.stringify({ generatedAt: startedAt.toISOString(), sources: status }, null, 2) + "\n");

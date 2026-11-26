@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { MUSIC_GENRES } from "./genres";
 
 /** Datamodel from docs/BOUWPLAN.md §7. */
 
@@ -72,6 +73,8 @@ export const EventSchema = z.object({
   category: z.enum(["muziek", "overig"]),
   /** Display genre, e.g. "Concert", "Comedy", "Sport" (scripts/lib/categorize.ts). */
   genre: z.string().min(1).optional(),
+  /** Music genres (max 2) from the source, the title or the artist's MusicBrainz tags (B31). */
+  musicGenres: z.array(z.enum(MUSIC_GENRES)).max(2).optional(),
   ticketUrl: HttpUrl,
   imageUrl: HttpUrl.optional(),
   sources: z

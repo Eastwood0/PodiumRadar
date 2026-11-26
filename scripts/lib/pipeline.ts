@@ -2,6 +2,7 @@ import { EventSchema, type Event, type Venue } from "../../src/lib/schema";
 import type { SourceEvent } from "../adapters/types";
 import { localDate, TZ_BY_COUNTRY } from "./dates";
 import { classify } from "./categorize";
+import { eventGenres } from "./music-genre";
 import { artistsFromTitle, eventId, tokenSetSimilarity } from "./normalize";
 
 export const HORIZON_DAYS = 365;
@@ -50,6 +51,7 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
       onSaleStart: s.onSaleStart,
       category: kind.category,
       genre: kind.genre,
+      musicGenres: kind.category === "muziek" ? nonEmpty(eventGenres(s.title, s.sourceCategory, kind.genre)) : undefined,
       ticketUrl: s.ticketUrl ?? s.url,
       imageUrl: s.imageUrl?.startsWith("http") ? s.imageUrl : undefined,
       sources: [{ name: sourceName, sourceId: s.sourceId, url: s.url }],
@@ -64,6 +66,8 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
   }
   return { events, dropped, guesses: [...new Set(guesses)] };
 }
+
+const nonEmpty = <T,>(xs: T[]) => (xs.length ? xs : undefined);
 
 const dayOf = (e: Event) => localDate(e.start, TZ_BY_COUNTRY[e.country] ?? "Europe/Amsterdam");
 
@@ -90,6 +94,7 @@ export function dedupe(events: Event[]): Event[] {
     if (same.status === "gepland" && e.status !== "gepland") same.status = e.status;
     same.onSaleStart ??= e.onSaleStart;
     same.imageUrl ??= e.imageUrl;
+    same.musicGenres ??= e.musicGenres;
   }
   return out;
 }

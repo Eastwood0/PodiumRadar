@@ -43,12 +43,17 @@ export function EventCard({ e, venue, data, showVenue = true }: { e: SiteEvent; 
             {e.h ? formatTime(e.s) : "tijd volgt"}
           </time>
         </p>
-        {(fresh || e.st || e.o || (e.g && e.g !== "Concert")) && (
+        {(fresh || e.st || e.o || e.mg || (e.g && e.g !== "Concert")) && (
           <ul className="tags" aria-label="Kenmerken">
             {fresh && <li className="tag tag--new">Nieuw</li>}
             {e.st && <li className={`tag tag--${e.st}`}>{STATUS_LABEL[e.st]}</li>}
             {e.o && <li className="tag tag--sale">Voorverkoop vanaf {formatDate(e.o)}</li>}
-            {e.g && e.g !== "Concert" && <li className="tag">{e.g}</li>}
+            {e.mg?.map((g) => (
+              <li key={g} className="tag tag--genre">
+                {g}
+              </li>
+            ))}
+            {e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek")) && <li className="tag">{e.g}</li>}
           </ul>
         )}
       </div>

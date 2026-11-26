@@ -1,0 +1,41 @@
+name: Snapshot pages
+
+# Handmatig: slaat ruwe pagina's op (robots.txt gerespecteerd, 1 verzoek/s per site) op branch "snapshots",
+# zodat adapters en test-fixtures geschreven kunnen worden. Komt nooit op main.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URL's, gescheiden door spaties"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Snapshot
+        env:
+          SNAPSHOT_URLS: ${{ inputs.urls }}
+        run: npm run snapshot
+      - name: Publish to branch snapshots
+        run: |
+          git config user.name "podiumradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B snapshots
+          git add -f snapshots/
+          git commit -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin snapshots

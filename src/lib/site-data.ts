@@ -22,8 +22,10 @@ export interface SiteEvent {
   st: StatusCode;
   /** m = muziek, o = overig. */
   c: "m" | "o";
-  /** Genre label. */
+  /** Kind of event: "Concert", "Comedy", "Sport"… */
   g?: string;
+  /** Music genres (max 2), e.g. ["Rock"] (B31). */
+  mg?: string[];
   /** Ticket link. */
   u: string;
   /** Page at the source. */
@@ -87,6 +89,7 @@ export function buildSiteData(
         st: STATUS[e.status],
         c: e.category === "muziek" ? "m" : "o",
         ...(e.genre ? { g: e.genre } : {}),
+        ...(e.musicGenres?.length ? { mg: e.musicGenres } : {}),
         u: e.ticketUrl,
         p: e.sources[0].url,
         f: e.firstSeen,

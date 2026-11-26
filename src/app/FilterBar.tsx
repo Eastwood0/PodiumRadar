@@ -1,4 +1,5 @@
 import type { SiteData } from "../lib/site-data";
+import { MUSIC_GENRES } from "../lib/genres";
 import { DEFAULT_FILTERS, type Filters, MONTHS_LONG } from "./lib";
 
 /** Filter controls shared by Overzicht and Agenda. Choices are remembered per browser by the parent. */
@@ -52,6 +53,19 @@ export function FilterBar({ data, filters, setFilters, show, count, months = [] 
           </select>
         </label>
       )}
+      <div className="chips" role="group" aria-label="Genre">
+        <button type="button" aria-pressed={!filters.genres.length} onClick={() => set({ genres: [] })}>
+          Alle genres
+        </button>
+        {MUSIC_GENRES.map((g) => {
+          const on = filters.genres.includes(g);
+          return (
+            <button key={g} type="button" aria-pressed={on} onClick={() => set({ genres: on ? filters.genres.filter((x) => x !== g) : [...filters.genres, g] })}>
+              {g}
+            </button>
+          );
+        })}
+      </div>
       <label className="toggle">
         <input type="checkbox" checked={filters.all} onChange={(e) => set({ all: e.target.checked })} />
         <span>Ook shows, sport en beurzen</span>

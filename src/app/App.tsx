@@ -18,7 +18,8 @@ export default function App() {
 
   useEffect(() => {
     setRoute(currentRoute());
-    setFiltersState(load(FILTER_KEY, DEFAULT_FILTERS));
+    // Stored filters from an older version may miss newer fields: fill them with the defaults.
+    setFiltersState({ ...DEFAULT_FILTERS, ...load<Partial<Filters>>(FILTER_KEY, {}) });
     const onHash = () => {
       setRoute(currentRoute());
       window.scrollTo(0, 0);
