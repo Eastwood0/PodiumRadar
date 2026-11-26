@@ -646,38 +646,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
 
-## patronaat.nl (29)
-
-- Any Given Day
-- Artin Muziek & friends
-- Back to the Disco
-- Born From Pain + Inherited
-- Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
-- Disco Del Mundo
-- Dream State
-- FUCK THE CISTEM
-- Geannuleerd: KMFDM
-- Hagane
-- Housequake
-- King Buffalo + Spirit Mother
-- Luicidal + Grindpad
-- Minor Operations Bookings presents: The Protos & Snackbar
-- Moonspell + Iotunn + TodoMal
-- Nieuwjaarsgala
-- Nordjevel + Svarttjern + Malphas + Unviar
-- Orden Ogan + Ensiferum + Angus McSix
-- Patronaatje tot t’ Gaatje
-- REZN + Coltaine
-- Show Me The Body
-- SiM + The Haunt
-- Sivert Høyem + support
-- State Power + Ker Ker
-- StonerGrungeFest met 22AD, Baardvader, Sustain
-- Sugar Spine + Braces
-- Terror + Bane + Start Today + Peace of Mind
-- Turmion Kätilöt + STAM1NA
-- YUNA XL
-
 ## klokgebouw.nl (6)
 
 - Artsy & Craftsy Market by Abunai
@@ -777,20 +745,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Meester Mark
 - Toneelvereniging ’t Abele Spel
 - WensMuziek
-
-## munttheater.nl (11)
-
-- Aldenborghlezing en boekpresentatie: 500 jaar Pieter Bruegel - Een verborgen geschiedenis
-- Dansschool Fresh: De Magische Kerstster
-- LVO weert: Muziekgala
-- Rogstaekers Boonte Aovendj
-- Rogstaekers Boonte Femiliê Middig
-- Stichting Cultuur OpMaat en Harmonie St.-Joseph: Muziek Verbindt!
-- Stichting Rogstad: Code Napoleon
-- Sylvesterconcert: S(w)ing When You're Winning!: Harmonie St.-Joseph 1880 Weert
-- WOKMUZIEKTHEATER: MARTHA
-- Zegevieren met Manieren: Jan Jaap van Weering
-- the Ray-Stabbing Singers: Draadloos
 
 ## maaspoort.nl (12)
 
@@ -1097,6 +1051,23 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Lente!: Pianoduo Scholtes & Janssens
 - Melancholia: Fee Suzanne de Ruiter
 - Mimetheatergroep Bambie: Bambie speelt Bambi
+
+## ekko.nl (3)
+
+- Altın Gün
+- Amber Arcades, I am Oak & The T.S. Eliot Appreciation Society
+- Class of 2027
+
+## dynamo-eindhoven.nl (8)
+
+- BIOTOOP
+- FREE YOUTH COLLECTIVE
+- HOME GROWN SESSIONS #32
+- Mwah gaming pubquiz
+- Own The Spot: Indoor Edition
+- Queerhoven Boardgame Night
+- ZINLOOS GELUID
+- the noise of holland
 
 ## ing.arena.brussels (3)
 
