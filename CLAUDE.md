@@ -74,15 +74,17 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- Fase: **2 bezig** (gestart 25 november 2026). Fase 1 grotendeels af; open: Ticketmaster (B25).
-- Bouwplan: versie 0.8, beslissingen t/m B37.
-- Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Lighthouse lokaal mobiel 96–98 / 100; 360 px zonder horizontaal scrollen.
+- Fase: **2 bezig** (gestart 25 november 2026). Ticketmaster vervalt voorlopig (B38); radar alleen NL/BE/DE.
+- Bouwplan: versie 0.9, beslissingen t/m B41. Geen inlog (B39: voorkeuren in browser + koppelcode, fase 3), site open maar niet vindbaar (B40).
+- Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`); Ralf heeft het project aangemaakt, adres nog doorgeven.
+- Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Line-up wordt bij de build in de HTML gezet (snelle eerste weergave), lettertype vooraf geladen; Lighthouse lokaal mobiel 99 (overzicht) / 96 (agenda), CLS 0; 360 px zonder horizontaal scrollen.
 - Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
 - Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
-  - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo + De Kuip (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data; AWS-botcontrole → herhaalpogingen, B37), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder, Patronaat, Klokgebouw, Grenswerk, Doornroosje, De Bosuil (HTML), Mezz (eigen WordPress-API), Hedon (Angular ng-state), Megaland (via pinkpop.nl), Vrijthof (via andrerieu.com) (B34).
+  - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo + De Kuip (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data; AWS-botcontrole → herhaalpogingen, B37), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder, Patronaat, Klokgebouw, Grenswerk, Doornroosje, De Bosuil (HTML), Mezz (eigen WordPress-API), De Oosterpoort + Stadsschouwburg Groningen (Spot, HTML-attributen), De Kattendans (`wp-theatre.ts`, Theater for WordPress), Hedon (Angular ng-state), Megaland (via pinkpop.nl), Vrijthof (via andrerieu.com) (B34).
   - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (be•at), ING Arena.
   - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (d.live), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark, Palladium (via koeln.de, B34).
-- Nieuwe NL-zalen nog te bouwen (B32; snapshots via workflow "Snapshot pages" → branch `snapshots`): De Oosterpoort/Spot (JSON-LD kapot, HTML nodig), MartiniPlaza (lijst laadt verder via JavaScript), Paradiso (agenda via JavaScript).
+- Nog te bouwen (snapshots via workflow "Snapshot pages" → branch `snapshots`): MartiniPlaza en Paradiso (agenda via JavaScript, bron zoeken).
+- Theaters (B41) nog te bouwen; programmapagina's staan op branch `snapshots`: Munttheater Weert, Maaspoort Venlo, PLT Heerlen, Musis Arnhem, Stadsschouwburg Utrecht, Theaters Tilburg (veel met Ticketmatic), DeLaMar, Carré (JavaScript), Oranjerie Roermond, Parktheater Eindhoven (verbinding mislukt). Theater aan het Vrijthof: zoeklijst bevat maar een deel van de data → eigen API zoeken. Geweigerd (403): Chassé, Theater Rotterdam, cabaretinfo.nl. Soortfilter Muziek / Theater & cabaret / Alles staat al; soorten Toneel, Musical, Dans, Cabaret & comedy.
 - Zalen zonder bron, nog te onderzoeken: Koning Boudewijnstadion, Signal Iduna Park, Goffertpark (geen geplande concerten gevonden).
 - Geen bron (`src/lib/no-source.ts`): Brabanthallen (captcha), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Nieuwe Nor (403), Warehouse Elementenstraat (geen eigen agenda).
 - Genres: dance-stijlen als tweede filterrij (B35); hover = roze markeerstift (B36).

@@ -83,6 +83,16 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | Paradiso | Programma- en homepage bevatten maar ±27 uitgelichte events; de rest laadt via JavaScript van een niet-zichtbare API | Nog geen bron | snapshot 26 nov 2026 |
 | MartiniPlaza | Agenda toont ±20 events; `?page=2` geeft dezelfde lijst (verder laden via JavaScript) | Nog uitzoeken | snapshot 26 nov 2026 |
 
+## Theaters — gecontroleerd 26 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| De Kattendans | WordPress met de plugin "Theater for WordPress"; programmapagina met alle voorstellingen (datum "do 26 nov ‘26", tijd, categorie, uitverkocht); robots.txt staat het toe | Generieke adapter `wp-theatre.ts` | [kattendans.nl](https://kattendans.nl/programma/) |
+| Spot Groningen | Programmapagina met per voorstelling `data-location`, `data-genres` en `<time datetime>`; JSON-LD bevat sjabloontekst | Oosterpoort + Stadsschouwburg via HTML | [spotgroningen.nl](https://www.spotgroningen.nl/programma) |
+| cabaretinfo.nl | HTTP 403 voor onze bot | Geen landelijke cabaretagenda als bron | snapshot 26 nov 2026 |
+| Chassé, Theater Rotterdam | HTTP 403 voor onze bot | Geen bron; eventueel in verzoekbrief | snapshot 26 nov 2026 |
+| Theater aan het Vrijthof | Programma is een JavaScript-app; de lijst voor zoekmachines heeft maar 109 toekomstige datums en mist voorstellingen met één datum | Nog geen bron | snapshot 26 nov 2026 |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |
