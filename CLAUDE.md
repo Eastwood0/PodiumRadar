@@ -90,5 +90,5 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Genres: dance-stijlen als tweede filterrij (B35); hover = roze markeerstift (B36).
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
 - Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
-- Fase 2 open: Cloudflare Pages + Access (Ralf, `docs/ACCOUNTS.md` stap 4) en inlogscherm testen; steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Openstaand voor Ralf: ACCOUNTS stap 3–4; Ticketmaster-goedkeuring; verzoekbrief (Brabanthallen, Melkweg, Nieuwe Nor).
+- Fase 2 open: live site controleren zodra Ralf het adres stuurt (niet vindbaar: noindex + robots); steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
+- Openstaand voor Ralf: adres van de live site doorgeven; verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen) pas na zijn akkoord.
