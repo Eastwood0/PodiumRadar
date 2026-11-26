@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T07:16:34.363Z",
+ "generatedAt": "2026-11-26T07:25:19.240Z",
  "events": [
   {
    "id": "25bc2e58f6d00e47",
@@ -282,6 +282,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Folk & singer-songwriter"
+   ],
    "ticketUrl": "https://www.lanxess-arena.de/eventdetail/1374",
    "sources": [
     {
@@ -291,11 +295,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Pop",
-    "Folk & singer-songwriter"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "3ec53c513a3522dc",
@@ -349,6 +349,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Metal & punk"
+   ],
    "ticketUrl": "https://muziekgieterij.stager.co/shop/concert/events/111648869?utm_campaign=261126-THE+RUINS+OF+BEVERAST-111648869&utm_source=Muziekgieterij+website&utm_medium=eventpublicity",
    "imageUrl": "https://muziekgieterij.nl/wp-content/uploads/2026/04/d5700519dd9aa178dfd622645b2999891cc1ed93c6eba8882531e88c5d22d94e.webp",
    "sources": [
@@ -359,10 +362,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "36f5cbe1e5f98cdf",
@@ -391,7 +391,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "8414ff0b7519a44f",
@@ -452,7 +455,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "b06e21a0c5999bf2",
@@ -988,7 +995,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "21d2ca6feb787637",
@@ -1073,7 +1083,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B",
+    "Pop"
+   ]
   },
   {
    "id": "6036262af2635e43",
@@ -1250,6 +1264,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Dance & DJ"
+   ],
    "ticketUrl": "https://volek.events/event/moein-live-in-dusseldorf/",
    "imageUrl": "https://www.psd-bank-dome.de/fileadmin/_processed_/5/a/csm_platzhalter-dome-kalender_76ff0b9b2a.jpg",
    "sources": [
@@ -1260,11 +1278,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Pop",
-    "Dance & DJ"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "5d9276aae7de2c5a",
@@ -1410,7 +1424,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "1717e783707f9cf1",
@@ -1584,6 +1602,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ],
    "ticketUrl": "https://www.effenaar.nl/agenda/kingfishr",
    "imageUrl": "https://d12y285rxlbnxt.cloudfront.net/2026-05/2026-11-28%20Kingfishr%20%E2%80%93%20Square%20afbeelding%20only.jpg",
    "sources": [
@@ -1594,10 +1615,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Folk & singer-songwriter"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "502eb934eeae15ea",
@@ -2142,7 +2160,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "5d9616efea0c5cb8",
@@ -2266,7 +2288,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "3acfcbba104b85c1",
@@ -2417,7 +2442,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "1518a2b1be540e42",
@@ -3170,7 +3199,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "52b930eaa3f9be68",
@@ -3258,7 +3290,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "e8ac6fb52921e9db",
@@ -3351,7 +3387,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ]
   },
   {
    "id": "f74d8e0a65723fa5",
@@ -3379,7 +3419,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Dance & DJ"
+   ]
   },
   {
    "id": "96db4620ce863bdd",
@@ -3437,7 +3481,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Wereld & latin",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "98519925b5f045d8",
@@ -3583,7 +3631,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "8c3e4183d120884a",
@@ -3641,7 +3693,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Rock"
+   ]
   },
   {
    "id": "1eb27a6145dcf91b",
@@ -3850,7 +3906,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "94f2a458968be790",
@@ -3996,7 +4055,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "29dc481fe8e175d7",
@@ -4025,7 +4087,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "5497a7cd0ca42616",
@@ -4461,7 +4527,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "5f702d49a4a46037",
@@ -4550,7 +4619,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "32ad6e4563eb0911",
@@ -4865,6 +4938,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ],
    "ticketUrl": "https://gashouder.nl/programma/kingfishr",
    "sources": [
     {
@@ -4874,10 +4950,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Folk & singer-songwriter"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "91ce07eae2791eb5",
@@ -4963,7 +5036,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Klassiek",
+    "Pop"
+   ]
   },
   {
    "id": "f97390f07b3c5c70",
@@ -5147,7 +5224,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Rock"
+   ]
   },
   {
    "id": "a1b3cdcb19d7f85e",
@@ -6514,7 +6595,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "bcf440b70e7e2959",
@@ -7617,7 +7702,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "6d1e04351dffcde5",
@@ -10779,7 +10868,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "b3be4360a0b47338",
@@ -12975,7 +13068,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "6c326f77f3d87879",
@@ -34808,7 +34905,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "2896058fcc61fb5c",

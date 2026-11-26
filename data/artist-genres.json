@@ -1,6 +1,89 @@
 {
+ "30 jahre peter wackel": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "alain clark": {
+  "mbid": "56b2a028-50b7-446b-abec-88b80a3528ce",
+  "genres": [
+   "Pop",
+   "Jazz, soul & blues"
+  ],
+  "checked": "2026-11-26"
+ },
+ "allt": {
+  "mbid": "bd25b4a6-09ee-4c88-96f3-04464e36c2e5",
+  "genres": [
+   "Metal & punk"
+  ],
+  "checked": "2026-11-26"
+ },
  "ao": {
   "mbid": "b672a1b2-2f34-4a60-acdb-630be0cef623",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "avatar": {
+  "mbid": "a8d77515-f7b7-4d71-9646-8446a3b2a341",
+  "genres": [
+   "Metal & punk"
+  ],
+  "checked": "2026-11-26"
+ },
+ "bap": {
+  "mbid": "70261540-4efc-4f62-8573-fdb68d6c2213",
+  "genres": [
+   "Rock",
+   "Folk & singer-songwriter"
+  ],
+  "checked": "2026-11-26"
+ },
+ "beabadoobee": {
+  "mbid": "88d17133-abbc-42db-9526-4e2c1db60336",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "checked": "2026-11-26"
+ },
+ "benr": {
+  "mbid": "c5617c30-0a9e-40bd-997e-ba51761bde1f",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "beth hart": {
+  "mbid": "3fe817fc-966e-4ece-b00a-76be43e7e73c",
+  "genres": [
+   "Jazz, soul & blues",
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
+ "bl f and vrienden 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "blackout": {
+  "mbid": "d187ba12-6c99-4e22-915a-8c5b88cbcdae",
+  "genres": [
+   "Rock",
+   "Jazz, soul & blues"
+  ],
+  "checked": "2026-11-26"
+ },
+ "breakin circus": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "bryson tiller": {
+  "mbid": "d8fd8d9b-473b-4f06-83c8-869b1bb9de89",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "checked": "2026-11-26"
+ },
+ "call it off": {
+  "mbid": "536329c9-5580-45c6-8b16-03f36976a559",
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -8,7 +91,40 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "chuck prophet and the amsterdam string ensemble": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "coilguns": {
+  "mbid": "fb8365df-88ac-4715-bf2f-8757a6c847b3",
+  "genres": [
+   "Metal & punk",
+   "Dance & DJ"
+  ],
+  "checked": "2026-11-26"
+ },
  "crush xl": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "dakhabrakha": {
+  "mbid": "208334a1-abf0-4791-9705-b45838244b29",
+  "genres": [
+   "Wereld & latin",
+   "Folk & singer-songwriter"
+  ],
+  "checked": "2026-11-26"
+ },
+ "davina michelle": {
+  "mbid": "aa0104a7-ce6f-403f-bd8a-19779a0a7f77",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "davina michelle extra show": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "demon slayer 29 11": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -19,7 +135,45 @@
   ],
   "checked": "2026-11-26"
  },
+ "fata morgana": {
+  "mbid": "c095d366-b15d-42e7-b403-c14df728a6b8",
+  "genres": [
+   "Metal & punk"
+  ],
+  "checked": "2026-11-26"
+ },
+ "froukje": {
+  "mbid": "64f014d1-9bfe-4093-ae58-1cd2ff5e355e",
+  "genres": [
+   "Pop",
+   "Folk & singer-songwriter"
+  ],
+  "checked": "2026-11-26"
+ },
+ "gallowstreet": {
+  "mbid": "8df29c7e-c4bb-4bb0-8f40-531235850553",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "gotu jim": {
+  "mbid": "2c3c4483-17ff-4074-98a9-af261cf9d94b",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "hania derej trio": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "havana": {
+  "mbid": "427f5389-29fb-4e7f-b180-7ddedce25f92",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "het grote ademnood discobal 2026": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "highguest": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -28,11 +182,33 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "igor": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "ikkimel": {
+  "mbid": "b0061f91-ca53-45b9-ad13-d217f4f6caa2",
+  "genres": [
+   "Hiphop & R&B",
+   "Pop"
+  ],
+  "checked": "2026-11-26"
+ },
  "imha tarikat": {
   "mbid": "08d4493a-4c58-4467-97cf-6e6b36223b6f",
   "genres": [
    "Metal & punk"
   ],
+  "checked": "2026-11-26"
+ },
+ "jack and the weatherman": {
+  "mbid": "1059d6e0-e4d3-41c7-859d-166aa330d02c",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "jair faria": {
+  "mbid": "5dd087c0-d8b3-4a4d-b623-bf7f2d9dd39f",
+  "genres": [],
   "checked": "2026-11-26"
  },
  "kaat van stralen": {
@@ -47,7 +223,21 @@
   ],
   "checked": "2026-11-26"
  },
+ "lichterkinder": {
+  "mbid": "507f8561-a191-413c-988c-efd17875a7aa",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "lois lane": {
+  "mbid": "a769afa0-a3ad-4107-ac26-f3d6ef61806b",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "maaike ouboter and band": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "mensen zeggen dingen": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -73,6 +263,17 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "nkk now zanggroepen": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "no man s land": {
+  "mbid": "ba4b9ce0-f6cb-4fd8-97a3-925f841d02ac",
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
  "noah kahan": {
   "mbid": "a2a3f910-b188-43e7-81d0-f1ac2a2f3e12",
   "genres": [
@@ -81,7 +282,66 @@
   ],
   "checked": "2026-11-26"
  },
+ "paardcafe bandsessies": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "paardcafe gettin and 8217 80s 90s wit it": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "paardcafe l hz": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "paardcafe lilith left the garden": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "patra": {
+  "mbid": "a84c18f2-65a8-4961-afa4-5d834d64f5ec",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "pearl and 038 the oysters": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "portugal the man": {
+  "mbid": "3599a39e-4e10-4cb5-90d4-c8a015ebc73b",
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
+ "resident evil 30th anniversary concerts": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "sarah brightman": {
+  "mbid": "896f0194-8ab2-4278-81e0-c56a0444b569",
+  "genres": [
+   "Klassiek",
+   "Pop"
+  ],
+  "checked": "2026-11-26"
+ },
+ "self deception": {
+  "mbid": "bfb7e36e-b8f6-4c5d-9c43-3fe9ddd7ee12",
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
+ "sevendust": {
+  "mbid": "52b9e109-44a0-45eb-a197-226c4abab232",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
+ "showcase obs berg and amp de den": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -90,7 +350,19 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "sondre lerche": {
+  "mbid": "a1c29c2f-778f-4b02-9ac7-80f0c37cdea9",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "checked": "2026-11-26"
+ },
  "sons": {
+  "genres": [],
+  "checked": "2026-11-26"
+ },
+ "subquake": {
   "genres": [],
   "checked": "2026-11-26"
  },
@@ -99,11 +371,28 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "the dirty daddies": {
+  "mbid": "3ae14d74-9472-4843-a475-e0825504f4c1",
+  "genres": [],
+  "checked": "2026-11-26"
+ },
  "the ruins of beverast": {
   "mbid": "e4ff2368-1744-4048-a338-5a5782499644",
   "genres": [
    "Metal & punk"
   ],
+  "checked": "2026-11-26"
+ },
+ "tori kelly": {
+  "mbid": "e4b87494-a5eb-439d-b3bf-5f1b46d4dc6b",
+  "genres": [
+   "Jazz, soul & blues",
+   "Hiphop & R&B"
+  ],
+  "checked": "2026-11-26"
+ },
+ "tripadubski": {
+  "genres": [],
   "checked": "2026-11-26"
  }
 }
