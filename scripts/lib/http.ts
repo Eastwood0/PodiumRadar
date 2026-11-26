@@ -38,11 +38,11 @@ function onHost<T>(host: string, task: () => Promise<T>): Promise<T> {
   return next;
 }
 
-async function rawFetch(url: string, accept: string): Promise<FetchResult> {
+async function rawFetch(url: string, accept: string, userAgent = USER_AGENT): Promise<FetchResult> {
   const started = Date.now();
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": USER_AGENT, Accept: accept, "Accept-Language": "nl,en;q=0.8,de;q=0.6" },
+      headers: { "User-Agent": userAgent, Accept: accept, "Accept-Language": "nl,en;q=0.8,de;q=0.6" },
       redirect: "follow",
       signal: AbortSignal.timeout(TIMEOUT_MS),
     });
@@ -100,6 +100,9 @@ export async function fetchText(url: string, accept?: string): Promise<{ body: s
  * second, User-Agent required). Same per-host queue and pause as politeGet; robots.txt is meant for
  * crawlers of web pages and not consulted here. Only use for APIs listed in docs/BRONNEN.md.
  */
-export function apiGet(url: string, accept = "application/json"): Promise<FetchResult> {
-  return onHost(new URL(url).host, () => rawFetch(url, accept));
+export function apiGet(url: string, accept = "application/json", userAgent = API_USER_AGENT): Promise<FetchResult> {
+  return onHost(new URL(url).host, () => rawFetch(url, accept, userAgent));
 }
+
+/** The "Application/version ( contact-url )" form that MusicBrainz asks for; browser-like strings get throttled. */
+export const API_USER_AGENT = "Podiumradar/0.1 ( https://github.com/Eastwood0/PodiumRadar )";

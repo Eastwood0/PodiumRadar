@@ -28,7 +28,8 @@ interface MelkwegEvent {
  */
 export function parseMelkweg(html: string): SourceEvent[] {
   const raw = load(html)("#__NEXT_DATA__").text();
-  if (!raw) throw new Error("Melkweg: page data ontbreekt");
+  // Melkweg sometimes answers with a bot check (HTTP 202, no page data). Not bypassed (B23): previous data stays.
+  if (!raw) throw new Error("Melkweg: page data ontbreekt (mogelijk botcontrole van de site)");
   const content: { attributes?: { initialEvents?: MelkwegEvent[] } }[] = JSON.parse(raw)?.props?.pageProps?.pageData?.attributes?.content ?? [];
   const list = content.find((c) => Array.isArray(c.attributes?.initialEvents))?.attributes?.initialEvents;
   if (!list) throw new Error("Melkweg: eventlijst niet gevonden in page data");

@@ -38,10 +38,20 @@ export function pickArtist(name: string, candidates: MbArtist[]): MbArtist | und
   return same.sort((a, b) => votes(b) - votes(a) || b.score - a.score)[0];
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function lookup(name: string, today: string): Promise<ArtistGenreEntry | "error"> {
   const url = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(`artist:"${luceneEscape(name)}"`)}&fmt=json&limit=5`;
-  const r = await apiGet(url);
-  if (!r.ok) return "error";
+  let r = await apiGet(url);
+  if (r.status === 503) {
+    // Over the limit (shared CI machines count too): back off once, then give up on this artist for today.
+    await sleep(5000);
+    r = await apiGet(url);
+  }
+  if (!r.ok) {
+    console.warn(`MusicBrainz ${r.status || r.error} voor "${name}"`);
+    return "error";
+  }
   const hit = pickArtist(name, (JSON.parse(r.body) as { artists?: MbArtist[] }).artists ?? []);
   return hit ? { mbid: hit.id, genres: genresFromTags(hit.tags ?? []), checked: today } : { genres: [], checked: today };
 }
