@@ -576,3 +576,42 @@ describe("Clubs (B49)", async () => {
     expect(links).toEqual(["https://complexmaastricht.nl/agenda/atmoz-5-12-26", "https://complexmaastricht.nl/agenda/bingoloco-04-12-26", "https://complexmaastricht.nl/agenda/bingoloco-04-12-26lateshow"]);
   });
 });
+
+describe("HTML clubs (B49)", async () => {
+  const m = await import("../scripts/adapters/clubs-html");
+  const today = new Date("2026-11-26T12:00:00Z");
+  it("RADION: day + month under month headings, club label", () => {
+    const ev = m.parseRadion(fixture("radion-program.html"), today);
+    expect(ev[0]).toMatchObject({ venueId: "radion", title: "Labyrinth Weekend", start: "2026-11-27T12:00:00+01:00", hasTime: false, sourceCategory: "clubnacht" });
+  });
+  it("Shelter: start time of the first room and the DJs; phone and desktop copies counted once", () => {
+    const ev = m.parseShelter(fixture("shelter-home.html"), today);
+    expect(ev[0]).toMatchObject({ venueId: "shelter", title: "10YEARS", start: "2026-11-27T22:00:00+01:00", hasTime: true });
+    expect(ev[0].artists?.slice(0, 2)).toEqual(["Benjamin Berg", "Dan Dusty"]);
+    expect(new Set(ev.map((e) => e.sourceId)).size).toBe(ev.length);
+  });
+  it("EKKO: only event pages (not the café meals), club or own category", () => {
+    const ev = m.parseEkko(fixture("ekko-agenda.html"), today);
+    expect(ev.every((e) => e.url.startsWith("https://ekko.nl/event/"))).toBe(true);
+    expect(ev.map((e) => e.sourceCategory)).toContain("Concert");
+    expect(ev[0]).toMatchObject({ title: "karaEKKO", start: "2026-11-26T12:00:00+01:00", sourceCategory: "clubnacht" });
+  });
+  it("Dynamo: date with year, support acts, cancelled label, 'heavy' line as metal", () => {
+    const ev = m.parseDynamo(fixture("dynamo-evenementen.html"));
+    expect(ev[0]).toMatchObject({ venueId: "dynamo-eindhoven", title: "Half Me", start: "2026-11-27T12:00:00+01:00", status: "geannuleerd", sourceCategory: "metal", artists: ["Half Me", "Lastelle", "Prompts", "Kora Winter"] });
+    expect(ev[1].sourceCategory).toBeUndefined();
+  });
+  it("Thuishaven: title without the date prefix, full date, start time and genre", () => {
+    const ev = m.parseThuishaven(fixture("thuishaven-home.html"));
+    expect(ev[0]).toMatchObject({ venueId: "thuishaven", title: "Speedy J / Sandrien / ROD & more", start: "2026-11-28T13:00:00+01:00", sourceCategory: "clubnacht, Techno" });
+  });
+  it("Annabel: Dutch weekday date and categories from the class list", () => {
+    const ev = m.parseAnnabel(fixture("annabel-agenda.html"), today);
+    expect(ev[1]).toMatchObject({ venueId: "annabel", title: "Nos Ku Nos", start: "2026-11-28T12:00:00+01:00", sourceCategory: "clubnacht, concert" });
+  });
+  it("Toffler: date, title, line-up and ticket link per night; TBA is no line-up", () => {
+    const ev = m.parseToffler(fixture("toffler-club.html"), today);
+    expect(ev[0]).toMatchObject({ venueId: "toffler", title: "Afrovision", artists: undefined, ticketUrl: "https://www.afrovision.nl/shop" });
+    expect(ev[1].artists).toEqual(["Ranger Trucco (3HR set)", "Capron", "Sydney Dé"]);
+  });
+});

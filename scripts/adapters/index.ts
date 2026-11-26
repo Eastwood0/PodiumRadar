@@ -28,6 +28,7 @@ import { spotGroningen } from "./spot-groningen";
 import { kattendans } from "./wp-theatre";
 import { carre } from "./carre";
 import { basis, complex, garageNoord, lofi } from "./clubs";
+import { annabel, dynamo, ekko, radion, shelter, thuishaven, toffler } from "./clubs-html";
 import { delamar } from "./delamar";
 import { maaspoort } from "./maaspoort";
 import { musis } from "./musis";
@@ -91,6 +92,13 @@ export const ADAPTERS: Adapter[] = [
   lofi,
   garageNoord,
   basis,
+  radion,
+  shelter,
+  thuishaven,
+  ekko,
+  dynamo,
+  annabel,
+  toffler,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

@@ -67,6 +67,13 @@ venues:
   - { id: lofi, name: Lofi, city: Amsterdam, country: NL, tier: B, website: "https://lofi.amsterdam/" }
   - { id: garage-noord, name: Garage Noord, city: Amsterdam, country: NL, tier: B, website: "https://garagenoord.com/" }
   - { id: basis-utrecht, name: BASIS, city: Utrecht, country: NL, tier: B, website: "https://clubbasis.nl/" }
+  - { id: radion, name: RADION, city: Amsterdam, country: NL, tier: B, website: "https://radion.amsterdam/" }
+  - { id: shelter, name: Shelter, city: Amsterdam, country: NL, tier: B, website: "https://shelteramsterdam.nl/" }
+  - { id: thuishaven, name: Thuishaven, city: Amsterdam, country: NL, tier: B, website: "https://thuishaven.nl/" }
+  - { id: ekko, name: EKKO, city: Utrecht, country: NL, tier: B, website: "https://ekko.nl/" }
+  - { id: dynamo-eindhoven, name: Dynamo, city: Eindhoven, country: NL, tier: B, website: "https://www.dynamo-eindhoven.nl/" }
+  - { id: annabel, name: Annabel, city: Rotterdam, country: NL, tier: B, website: "https://annabel.nu/" }
+  - { id: toffler, name: TOFFLER, city: Rotterdam, country: NL, tier: B, website: "https://www.toffler.nl/" }
 
   # --- België, A ---
   - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }

@@ -4,8 +4,8 @@ import { loadVenues, parseVenueConfig } from "../src/lib/venues";
 describe("config/venues.yml", () => {
   const venues = loadVenues();
 
-  it("is valid and contains the 32 venues from the plan plus 37 Dutch venues, theatres and clubs added in B32/B33/B41", () => {
-    expect(venues).toHaveLength(70);
+  it("is valid and contains the 32 venues from the plan plus 44 Dutch venues, theatres and clubs added in B32/B33/B41", () => {
+    expect(venues).toHaveLength(77);
   });
 
   it("has unique ids", () => {
