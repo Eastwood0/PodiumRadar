@@ -12,6 +12,15 @@ Een privé-website voor Ralf en maximaal 10 vrienden met de concertagenda's (kom
 
 ## Werkwijze
 0. Er wordt in de cloud gebouwd, niet op Ralfs pc (B18). Repo: `Eastwood0/PodiumRadar`. De bouwomgeving mag externe sites (Ticketmaster, zalen) vaak niet bereiken: test ophalen dan via een GitHub Actions-workflow met `workflow_dispatch` en lees de uitvoer met `gh run view --log`.
+0b. **Codex (tweede reviewer, op verzoek van Ralf)** werkt in de cloud zonder API-sleutel, via Ralfs ChatGPT-account:
+   1. `npm install -g @openai/codex`
+   2. Start `codex login --device-auth` los van je eigen opdracht: `setsid nohup … &`. Anders stopt het proces mee en vervalt de code.
+   3. Geef Ralf de link en de code. Inloggen met een apparaatcode staat al aan in zijn ChatGPT-beveiligingsinstellingen.
+   4. Opdracht geven: `codex exec -c model_reasoning_effort=high -s read-only -C <repo> -o <rapport.md> - < brief.md`.
+   5. Voor webonderzoek: `--skip-git-repo-check -s workspace-write -c sandbox_workspace_write.network_access=true` in een lege map.
+
+   Op Ralfs pc (project Maatje) loopt dit via Agent Bridge (kununu/agent-bridge). Die pc biedt zijn mappen nog niet aan cloudsessies aan. Controleer de bevindingen van Codex altijd zelf in de code.
+0c. **AIslop:** `npx -y aislop@0.23.0 scan --json` (toegestaan in `.claude/settings.json`).
 1. Werk strikt per fase uit `docs/BOUWPLAN.md` §11. Begin een nieuwe fase pas na expliciet akkoord van Ralf.
 2. Begin elke fase met een korte takenlijst; sluit af door elk acceptatiecriterium af te vinken met bewijs (testuitvoer, Lighthouse-score, screenshot-beschrijving, aantal API-calls).
 3. Externe feiten (API-limieten, endpoints, venue-namen, gratis tiers) altijd zelf verifiëren in de officiële documentatie; nooit uit het hoofd aannemen. Leg wat je vond vast in `docs/BRONNEN.md` met datum.
