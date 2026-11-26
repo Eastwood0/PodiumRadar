@@ -66,6 +66,10 @@ export interface SiteData {
   sources: SiteSource[];
 }
 
+/** As written to agenda.json: acts and source page may be left out (see expandSiteData). */
+export type CompactSiteEvent = Omit<SiteEvent, "a" | "p"> & { a?: string[]; p?: string };
+export type CompactSiteData = Omit<SiteData, "events"> & { events: CompactSiteEvent[] };
+
 const STATUS: Record<Event["status"], StatusCode> = { gepland: "", uitverkocht: "u", verplaatst: "v", geannuleerd: "g" };
 
 export function buildSiteData(
@@ -73,7 +77,7 @@ export function buildSiteData(
   venues: Venue[],
   sources: Record<string, { ok: boolean; count: number; lastSuccess?: string; venues: string[] }>,
   generatedAt: string,
-): SiteData {
+): CompactSiteData {
   const used = new Set(events.map((e) => e.venueId));
   return {
     generatedAt,
@@ -84,23 +88,35 @@ export function buildSiteData(
       .map((e) => ({
         id: e.id,
         t: e.title,
-        a: e.artists.map((x) => x.name),
+        // Left out when the only act is the title itself, and "Concert" is the default kind: see expandSiteData.
+        ...(e.artists.length === 1 && e.artists[0].name === e.title ? {} : { a: e.artists.map((x) => x.name) }),
         v: e.venueId!,
         s: toLocalIso(e.start),
         h: e.hasTime ? 1 : 0,
         st: STATUS[e.status],
         c: e.category === "muziek" ? "m" : "o",
-        ...(e.genre ? { g: e.genre } : {}),
+        ...(e.genre && e.genre !== "Concert" ? { g: e.genre } : {}),
         ...(e.musicGenres?.length ? { mg: e.musicGenres } : {}),
         ...(e.danceStyles?.length && e.musicGenres?.includes("Dance & DJ") ? { ds: e.danceStyles } : {}),
         u: e.ticketUrl,
-        p: e.sources[0].url,
+        ...(e.sources[0].url !== e.ticketUrl ? { p: e.sources[0].url } : {}),
         f: e.firstSeen,
         ...(e.onSaleStart && e.onSaleStart > generatedAt ? { o: toLocalIso(e.onSaleStart) } : {}),
       })),
     sources: Object.entries(sources)
       .map(([name, s]) => ({ name, ok: s.ok, count: s.count, lastSuccess: s.lastSuccess, venues: s.venues }))
       .sort((a, b) => a.name.localeCompare(b.name)),
+  };
+}
+
+/**
+ * The file leaves out what can be filled in again (acts equal to the title, kind "Concert", the source page
+ * when it is the ticket link): about a fifth smaller, so phones parse it faster. The browser calls this once.
+ */
+export function expandSiteData(raw: CompactSiteData): SiteData {
+  return {
+    ...raw,
+    events: raw.events.map((e) => ({ ...e, a: e.a ?? [e.t], g: e.g ?? (e.c === "m" ? "Concert" : undefined), p: e.p ?? e.u })),
   };
 }
 

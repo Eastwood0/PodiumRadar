@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { applyFilters, artistIndex, bill, DEFAULT_FILTERS, formatDate, formatTime, isNew, level, monthKey, monthsFrom, parseRoute, slug } from "../src/app/lib";
 import { createSearch } from "../src/app/search";
 import type { Event, Venue } from "../src/lib/schema";
-import { buildSiteData, type SiteEvent, type SiteVenue, toLocalIso } from "../src/lib/site-data";
+import { buildSiteData, expandSiteData, type SiteEvent, type SiteVenue, toLocalIso } from "../src/lib/site-data";
 
 const ev = (over: Partial<SiteEvent>): SiteEvent => ({ id: "1", t: "Band", a: ["Band"], v: "ziggo-dome", s: "2027-03-13T20:00:00+01:00", h: 1, st: "", c: "m", u: "https://x.example/t", p: "https://x.example/p", f: "2026-11-25", ...over });
 const venue = (id: string, cc: SiteVenue["cc"], tier: SiteVenue["tier"] = "A"): SiteVenue => ({ id, n: id, city: "Stad", cc, tier });
@@ -133,7 +133,8 @@ describe("buildSiteData", () => {
   };
   const site = buildSiteData([event, { ...event, id: "e2", venueId: null, firstSeen: "2026-11-20" }], venues, {}, "2026-11-26T04:17:00Z");
   it("keeps short keys, maps status and drops past presales and events without venue", () => {
-    expect(site.events).toEqual([{ id: "e1", t: "Band", a: ["Band"], v: "ziggo-dome", s: event.start, h: 1, st: "u", c: "m", g: "Concert", u: "https://t.example/1", p: "https://www.ziggodome.nl/x", f: "2026-11-25" }]);
+    expect(site.events).toEqual([{ id: "e1", t: "Band", v: "ziggo-dome", s: event.start, h: 1, st: "u", c: "m", u: "https://t.example/1", p: "https://www.ziggodome.nl/x", f: "2026-11-25" }]);
+    expect(expandSiteData(structuredClone(site)).events[0]).toMatchObject({ a: ["Band"], g: "Concert" });
   });
   it("adds the no-source reason only to venues without events", () => {
     expect(site.venues.find((v) => v.id === "goffertpark")?.ns).toMatch(/Ticketmaster/);

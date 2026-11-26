@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { SiteData, SiteVenue } from "../lib/site-data";
+import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } from "../lib/site-data";
 import { artistIndex, DEFAULT_FILTERS, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
 import { LineUp } from "./LineUp";
 import { Overview } from "./Overview";
@@ -31,7 +31,7 @@ export default function App() {
     if (head) ro?.observe(head);
     fetch("data/agenda.json")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((d: SiteData) => setData(d))
+      .then((d: CompactSiteData) => setData(expandSiteData(d)))
       .catch(() => setError(true));
     return () => {
       window.removeEventListener("hashchange", onHash);
