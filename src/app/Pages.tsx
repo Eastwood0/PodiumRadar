@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
+import { FollowButton } from "./FollowButton";
 import { FilterBar } from "./FilterBar";
 import { Flag } from "./EventCard";
 import { KindSwitch } from "./FilterBar";
@@ -33,9 +34,10 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
     return (
       <section className="tour">
         <h1 className="tour__name">{name}</h1>
+        <FollowButton name={name} big />
         <div className="empty">
           <p>{name} staat nu in geen enkele agenda van de zalen op Podiumradar.</p>
-          <p>Straks kun je artiesten volgen; dan zie je het zodra er een show bijkomt.</p>
+          <p>Volg deze artiest, dan zie je het in Mijn radar zodra er een show bijkomt (na de volgende nachtelijke update).</p>
         </div>
       </section>
     );
@@ -49,6 +51,7 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
       <p className="tour__sub">
         Live in {joinNl(countries)}, {years.length > 1 ? `${years[0]}–${years.at(-1)}` : years[0]}
       </p>
+      <FollowButton name={name} big />
       <ol className="tour__dates">
         {events.map((e) => {
           const v = venues.get(e.v)!;

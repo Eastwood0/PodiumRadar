@@ -1,5 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import type { SearchHit } from "./search";
+import { getFollowState, isFollowed, setFollowState, toggled } from "./follow";
+import { type SearchHit, withFollowOption } from "./search";
 
 /** Combobox: type, pick with arrows/enter or tap. Opens the artist or venue page. */
 export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | null }) {
@@ -8,7 +9,7 @@ export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | n
   const [active, setActive] = useState(0);
   const listId = useId();
   const wrap = useRef<HTMLDivElement>(null);
-  const hits = useMemo(() => (search ? search(q) : []), [search, q]);
+  const hits = useMemo(() => (search ? withFollowOption(q, search(q)) : []), [search, q]);
 
   useEffect(() => {
     const close = (ev: MouseEvent) => {
@@ -20,6 +21,10 @@ export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | n
 
   const go = (hit: SearchHit | undefined) => {
     if (!hit) return;
+    if (hit.kind === "volg" && hit.name) {
+      const s = getFollowState();
+      if (!isFollowed(s, hit.name)) setFollowState(toggled(s, hit.name));
+    }
     location.hash = hit.href;
     setOpen(false);
     setQ("");
@@ -69,11 +74,6 @@ export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | n
       />
       {showList && (
         <ul id={listId} role="listbox" className="search__list">
-          {hits.length === 0 && (
-            <li className="search__none" role="option" aria-selected="false" aria-disabled="true">
-              Niets gevonden voor “{q.trim()}”. Deze artiest staat nu in geen enkele agenda.
-            </li>
-          )}
           {hits.map((h, i) => (
             <li
               key={h.href}

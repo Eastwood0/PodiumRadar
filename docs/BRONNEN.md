@@ -77,7 +77,7 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | De Kuip | Locatie "Stadion Feyenoord De Kuip" in Uitagenda Rotterdam, locatie-id 209292 (uit de afbeeldingspaden van de locatiepagina) | Via de Uitagenda Rotterdam-adapter | [Uitagenda Rotterdam](https://www.uitagendarotterdam.nl/en/locations/location/stadion-feyenoord-de-kuip) |
 | Pinkpop / Megaland | Pinkpop 2027: 18–20 juni 2027, Megaland Landgraaf; line-up met dag per act op de homepage; robots.txt staat het toe | Megaland via pinkpop.nl (B34) | [pinkpop.nl](https://www.pinkpop.nl/) |
 | MECC | robots.txt: crawl-delay 10; agenda laadt via JavaScript (admin-ajax) | Nog geen bron | [mecc.nl](https://www.mecc.nl/bezoeken/agenda/) |
-| I amsterdam | Locatiepagina's tonen geen eventlijst; agenda-filters met parameters verboden in robots.txt | Geen bron voor Melkweg/Warehouse | [iamsterdam.com](https://www.iamsterdam.com/robots.txt) |
+| I amsterdam | Locatiepagina's tonen geen eventlijst; agenda-filters met parameters verboden in robots.txt. **Herzien 26 nov 2026 (middag):** de rubrieken `/uit/agenda/<rubriek>` zonder filter, met `?page=N`, zijn wél toegestaan | Zie de theatertabel hieronder: bron voor Melkweg en Paradiso | [iamsterdam.com](https://www.iamsterdam.com/robots.txt) |
 | André Rieu / Vrijthof | robots.txt staat alles toe; de homepage /nl/ toont alle tourdata als `li[data-date-ordering]` met stad en locatie; 12 Vrijthof-concerten in juli 2027 | Vrijthof via andrerieu.com (B34) | [andrerieu.com](https://www.andrerieu.com/nl/) |
 | Mezz | robots.txt staat alles toe; de programmapagina laadt `/wp-json/wp/v2/event` (100 per pagina) | Mezz via de eigen API (B24) | [mezz.nl](https://www.mezz.nl/programma/) |
 | Paradiso | Programma- en homepage bevatten maar ±27 uitgelichte events; de rest laadt via JavaScript van een niet-zichtbare API | Nog geen bron | snapshot 26 nov 2026 |
@@ -92,6 +92,37 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | cabaretinfo.nl | HTTP 403 voor onze bot | Geen landelijke cabaretagenda als bron | snapshot 26 nov 2026 |
 | Chassé, Theater Rotterdam | HTTP 403 voor onze bot | Geen bron; eventueel in verzoekbrief | snapshot 26 nov 2026 |
 | Theater aan het Vrijthof | Programma is een JavaScript-app; de lijst voor zoekmachines heeft maar 109 toekomstige datums en mist voorstellingen met één datum | Nog geen bron | snapshot 26 nov 2026 |
+
+## Theaters, MartiniPlaza/Paradiso, geblokkeerde zalen — gecontroleerd 26 november 2026 (middag)
+
+Alle robots.txt-bestanden hieronder zijn op deze datum gelezen; ze staan onze bot toe op de genoemde paden.
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Munttheater, Stadsschouwburg Utrecht, Schouwburg Concertzaal Tilburg, MartiniPlaza | Zelfde ASP.NET-platform met Ticketmatic. Agenda toont 10–32 voorstellingen; "meer laden" haalt `/mvc/event/partial` op en robots.txt verbiedt `/mvc/`. Voorstellingspagina's (`/agenda/...`) hebben TheaterEvent-JSON-LD met tijd; sitemap noemt ze | `ticketmatic-theatre.ts`: sitemap → voorstellingspagina's (Munttheater 131, Utrecht 428, Tilburg 371 voorstellingen; Utrecht ~9 min, Tilburg ~10 min per run). MartiniPlaza: sitemap verouderd (oude adressen), dus geen bron | [munttheater.nl/robots.txt](https://www.munttheater.nl/robots.txt) |
+| Maaspoort | Programmapagina's `/programma/?page=N` (24 per pagina, server-side); link bevat datum en tijd | `maaspoort.ts` (230) | [maaspoort.nl](https://www.maaspoort.nl/programma/) |
+| Parkstad Limburg Theaters | `/programma?page=N` (12 per pagina, 53 pagina's); logo per tegel = Theater Heerlen, Theater Kerkrade of Toon Hermans Theater Sittard | `plt.ts` (574) | [plt.nl](https://www.plt.nl/programma) |
+| Parktheater Eindhoven | Elke bot krijgt een 307 naar `/csq/` (BunnyCDN-controlescherm, `x-redirect-reason: no-token`) | Geen bron (B23) | 26 nov 2026 |
+| De Oranjerie Roermond | Nieuwe site theaterroermond.nl (oude site verwijst ernaar); agenda met alle 86 producties; productiepagina met alle speeldata zonder jaartal | `theater-roermond.ts` (103); jaar = eerstvolgende | [theaterroermond.nl](https://www.theaterroermond.nl/agenda) |
+| Carré | JavaScript-app die elke pagina als JSON laadt van `/api/render/<pad>`; robots.txt verbiedt alleen `/fonts/`; productie-JSON bevat alle voorstellingen met `sales_status` | `carre.ts` (221) | [carre.nl/robots.txt](https://carre.nl/robots.txt) |
+| DeLaMar | robots.txt `Allow: /`; JSON-LD bevat alleen eerste en laatste dag; productiepagina heeft per voorstelling `data-date` + tijd | `delamar.ts` (318) | [delamar.nl](https://delamar.nl/) |
+| Musis & Stadstheater Arnhem | Agenda laadt `/api/events?startsAt[after]=…&page=N` (API Platform, 10 per pagina, 274 totaal) | `musis.ts` (274) | [musisenstadstheater.nl](https://www.musisenstadstheater.nl/nl/agenda) |
+| Theater aan het Vrijthof | Programma = zoekapp (Vue + Firebase); de verkooplijst komt van apps.ticketmatic.com (ticketplatform, B34) | Nog geen bron; voorgelegd aan Ralf | 26 nov 2026 |
+| Theater Rotterdam | Eigen site 403; speelt in de Schouwburg = locatie `tr25-schouwburg` (id 49531) in Uitagenda Rotterdam, 155 voorstellingen | Via de Uitagenda Rotterdam-adapter | [Uitagenda Rotterdam](https://www.uitagendarotterdam.nl/en/locations/location/tr25-schouwburg/) |
+| Uit in Amsterdam (I amsterdam) | Rubrieken "concerten-en-muziek" (856) en "nachtleven" (131), 16 per pagina; kaart met titel, datum(s), locatie; tijden zijn Amsterdamse kloktijd ondanks "Z"; detailpagina heeft alle data (`eventDates`), `soldOut`, `cancelled`. Melkweg 216, Paradiso 51 | `iamsterdam.ts` voor Melkweg (tweede bron naast B37) en Paradiso | [iamsterdam.com](https://www.iamsterdam.com/uit/agenda/concerten-en-muziek) |
+| Paradiso (eigen site) | Homepage bevat 44 events; voorstellingspagina's hebben JSON-LD maar zijn ±960 kB per stuk; de site laadt de rest via een GraphQL-API met een sleutel in de frontendcode | Niet gebruikt: geen publieke API, en honderden pagina's van 1 MB per dag is geen netjes gebruik | 26 nov 2026 |
+| Visit Groningen | robots.txt crawl-delay 2; event-sitemap van 30 pagina's (alle Groningse events); geen locatiepagina met eventlijst gevonden | MartiniPlaza nog zonder bron | [visitgroningen.nl/robots.txt](https://www.visitgroningen.nl/robots.txt) |
+| Chassé, Nieuwe Nor, Brabanthallen | Geen officiële stads- of regio-agenda gevonden die ze toont (alleen aggregators: DagjeWeg, Songkick, Bandsintown, Eventworld; die vallen af volgens B34). Visit Brabant-locatiepagina Brabanthallen: 404 | Geen bron | zoekopdrachten 26 nov 2026 |
+| Crawl-delay | Sommige sites vragen een pauze (Visit Groningen 2 s, Parktheater 5 s) | `http.ts` volgt nu Crawl-delay (max 10 s) | robots.txt-bestanden |
+
+## Fase 3: Cloudflare Workers + D1 — gecontroleerd 26 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Automatisch aanmaken van D1 | Een D1-binding zonder `database_id` wordt bij `wrangler deploy` (≥ 4.45) aangemaakt met de Worker-naam als voorvoegsel; bij uitrol vanuit GitHub (dashboard) ook, maar het id staat dan alleen in het dashboard | `wrangler.jsonc` heeft de binding `DB` zonder id; Ralf hoeft niets aan te maken. De tabel maakt de Worker zelf (`CREATE TABLE IF NOT EXISTS`) | [Changelog 24 okt 2025](https://developers.cloudflare.com/changelog/post/2025-10-24-automatic-resource-provisioning/), [Wrangler-configuratie](https://developers.cloudflare.com/workers/wrangler/configuration/) |
+| Workers Free | 100.000 verzoeken per dag aan het Worker-script; verzoeken voor statische bestanden zijn gratis en onbeperkt | Met `run_worker_first: ["/api/*"]` telt alleen de koppelcode-API mee | [Workers limits](https://developers.cloudflare.com/workers/platform/limits/), [Static assets billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) |
+| D1 Free | 5 miljoen rijen lezen en 100.000 rijen schrijven per dag, 500 MB per database, 5 GB totaal; daarboven weigert D1 tot 00:00 UTC | Ruim genoeg: één rij per koppelcode | [D1 pricing](https://developers.cloudflare.com/d1/platform/pricing/), [D1 limits](https://developers.cloudflare.com/d1/platform/limits/) |
+| Worker-modules | Een Worker-module mag naast de handler geen andere exports hebben (`wrangler dev`: "Incorrect type for map entry") | Logica in `src/lib/sync-api.ts`, `src/worker.ts` exporteert alleen de handler | lokale test 26 nov 2026 |
 
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 

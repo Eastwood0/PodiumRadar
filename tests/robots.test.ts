@@ -34,4 +34,8 @@ describe("robots.txt", () => {
   it("allows everything for an empty file", () => {
     expect(isAllowed(parseRobots(""), "/anything")).toBe(true);
   });
+  it("reads Crawl-delay for our group", () => {
+    expect(parseRobots("User-agent: *\nCrawl-delay: 2\nDisallow: /x\n").crawlDelay).toBe(2);
+    expect(parseRobots("User-agent: SemrushBot\nCrawl-delay: 10\n\nUser-agent: *\nDisallow: /x\n").crawlDelay).toBeUndefined();
+  });
 });

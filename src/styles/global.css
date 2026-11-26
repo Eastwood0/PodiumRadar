@@ -259,6 +259,7 @@ a:hover {
   }
 }
 .tabs a {
+  white-space: nowrap;
   padding: 0.4rem clamp(0.5rem, 2vw, 0.8rem);
   font-weight: 600;
   text-decoration: none;
@@ -1174,5 +1175,163 @@ a:hover {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Follow (phase 3, B42) ---------- */
+.follow {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  margin: -0.6rem 0 -0.6rem -0.2rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font: 700 1.25rem/1 var(--font);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.follow:hover,
+.follow:focus-visible {
+  color: var(--ink);
+}
+.follow.is-on {
+  color: var(--pink);
+}
+.follow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.follow--big {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+  padding: 0 1.1rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+  color: var(--ink);
+  font: 700 1rem/1 var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.follow--big span:first-child {
+  font-size: 1.3rem;
+}
+.follow--big.is-on {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--pink-ink);
+}
+.cell.is-star {
+  position: relative;
+  box-shadow: inset 0 0 0 2.5px var(--pink);
+}
+.cell.is-star::after {
+  content: "★";
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  font-size: 0.6rem;
+  color: var(--pink);
+}
+.cell--l5.is-star::after {
+  color: var(--h-ink-top);
+}
+.follows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  font: 700 1.05rem/1.2 var(--font);
+  font-stretch: 85%;
+  text-transform: uppercase;
+}
+.follows a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.follows a:hover,
+.follows a:focus-visible {
+  background: var(--pink);
+  color: var(--pink-ink);
+}
+.pair {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--rule);
+  max-width: 40rem;
+}
+.pair__code code {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper-2);
+  border: 1.5px dashed var(--ink-2);
+  font: 700 1.1rem/1.4 ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: 0.05em;
+  word-spacing: 0.2em;
+}
+.pair__actions,
+.pair__join {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.pair__join label {
+  width: 100%;
+  font-weight: 600;
+}
+.pair__join input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  height: 2.75rem;
+  padding: 0 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+  background: var(--paper-2);
+  color: var(--ink);
+  font: 600 1rem ui-monospace, Menlo, monospace;
+  text-transform: uppercase;
+}
+.btn--quiet {
+  border-color: var(--rule);
+  color: var(--ink-2);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pair__msg {
+  color: var(--ink-2);
+}
+.search__kind--volg {
+  background: var(--pink);
+  color: var(--pink-ink);
+}
+/* Narrow phones: logo without the word, "Radar" instead of "Mijn radar", so the three tabs fit next to it. */
+.tab-long {
+  display: none;
+}
+@media (min-width: 30rem) {
+  .tab-long {
+    display: inline;
+  }
+  .tab-short {
+    display: none;
+  }
+}
+@media (max-width: 29.99rem) {
+  .brand__name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }

@@ -6,6 +6,8 @@ const MIN_INTERVAL_MS = 1100; // max 1 request per second per host (CLAUDE.md)
 const TIMEOUT_MS = 20_000;
 
 const lastRequestAt = new Map<string, number>();
+/** Longer pause per host when its robots.txt sets a Crawl-delay (capped at 10 s so a run stays within its time limit). */
+const hostInterval = new Map<string, number>();
 const hostQueues = new Map<string, Promise<unknown>>();
 const robotsCache = new Map<string, Promise<RobotsRules | null>>();
 
@@ -26,7 +28,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 function onHost<T>(host: string, task: () => Promise<T>): Promise<T> {
   const prev = hostQueues.get(host) ?? Promise.resolve();
   const next = prev.then(async () => {
-    const wait = (lastRequestAt.get(host) ?? 0) + MIN_INTERVAL_MS - Date.now();
+    const wait = (lastRequestAt.get(host) ?? 0) + (hostInterval.get(host) ?? MIN_INTERVAL_MS) - Date.now();
     if (wait > 0) await sleep(wait);
     try {
       return await task();
@@ -66,9 +68,11 @@ export function getRobots(origin: string): Promise<RobotsRules | null> {
     const host = new URL(origin).host;
     robotsCache.set(
       origin,
-      onHost(host, () => rawFetch(`${origin}/robots.txt`, "text/plain")).then((r) =>
-        r.ok && !/<html/i.test(r.body.slice(0, 500)) ? parseRobots(r.body) : null,
-      ),
+      onHost(host, () => rawFetch(`${origin}/robots.txt`, "text/plain")).then((r) => {
+        const rules = r.ok && !/<html/i.test(r.body.slice(0, 500)) ? parseRobots(r.body) : null;
+        if (rules?.crawlDelay) hostInterval.set(host, Math.max(MIN_INTERVAL_MS, Math.min(rules.crawlDelay, 10) * 1000));
+        return rules;
+      }),
     );
   }
   return robotsCache.get(origin)!;

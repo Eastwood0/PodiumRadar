@@ -4,6 +4,7 @@ import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, 
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
+import { Radar } from "./Radar";
 import { createSearch } from "./search";
 import { SearchBox } from "./SearchBox";
 
@@ -56,7 +57,7 @@ export default function App({ bill }: { bill?: Bill }) {
   }, [data]);
 
   const stale = data && hoursOld(data.generatedAt) > 36;
-  const tab = route.view === "agenda" ? "agenda" : route.view === "overzicht" ? "overzicht" : "";
+  const tab = route.view === "agenda" || route.view === "overzicht" || route.view === "radar" ? route.view : "";
 
   return (
     <>
@@ -74,7 +75,7 @@ export default function App({ bill }: { bill?: Bill }) {
               </g>
               <circle cx="22.5" cy="9.5" r="2.6" className="brand__blip" />
             </svg>
-            <span>Podiumradar</span>
+            <span className="brand__name">Podiumradar</span>
           </a>
           <nav aria-label="Hoofdmenu" className="tabs">
             <a href="#overzicht" aria-current={tab === "overzicht" ? "page" : undefined}>
@@ -82,6 +83,10 @@ export default function App({ bill }: { bill?: Bill }) {
             </a>
             <a href="#agenda" aria-current={tab === "agenda" ? "page" : undefined}>
               Agenda
+            </a>
+            <a href="#radar" aria-current={tab === "radar" ? "page" : undefined}>
+              <span className="tab-long">Mijn radar</span>
+              <span className="tab-short">Radar</span>
             </a>
           </nav>
           <SearchBox search={search} />
@@ -121,6 +126,8 @@ export default function App({ bill }: { bill?: Bill }) {
           <ArtistPage data={data} venues={venues} artistSlug={route.slug} />
         ) : route.view === "zaal" ? (
           <VenuePage data={data} venues={venues} id={route.id} filters={filters} setFilters={setFilters} />
+        ) : route.view === "radar" ? (
+          <Radar data={data} venues={venues} joinCode={route.join} />
         ) : route.view === "bronnen" ? (
           <Sources data={data} venues={venues} />
         ) : (

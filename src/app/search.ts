@@ -2,10 +2,12 @@ import type { SiteVenue } from "../lib/site-data";
 import { artistHref, type ArtistEntry, venueHref } from "./lib";
 
 export interface SearchHit {
-  kind: "artiest" | "zaal";
+  kind: "artiest" | "zaal" | "volg";
   label: string;
   detail: string;
   href: string;
+  /** For "volg": the name to follow. */
+  name?: string;
 }
 
 interface Item extends SearchHit {
@@ -98,6 +100,17 @@ function score(qTokens: string[], qCompact: string, item: Item): number {
  * missing accents ("beyonce", "koln") and words typed together. Every typed word must match a word of the
  * name; that keeps long show titles from matching on loose letters. Ties: more shows first.
  */
+/**
+ * "Volg “<name>”" as the last option, unless the typed name is already an artist in the agenda: you can follow an
+ * act that is not touring now (bouwplan §9, B14). Needs at least two letters.
+ */
+export function withFollowOption(query: string, hits: SearchHit[]): SearchHit[] {
+  const name = query.trim().replace(/\s+/g, " ");
+  if (norm(name).replace(/ /g, "").length < 2) return hits;
+  if (hits.some((h) => h.kind === "artiest" && norm(h.label) === norm(name))) return hits;
+  return [...hits, { kind: "volg", label: `Volg “${name}”`, detail: "ook zonder geplande shows", href: artistHref(name), name }];
+}
+
 export function createSearch(artists: ArtistEntry[], venues: SiteVenue[], describeArtist: (a: ArtistEntry) => string) {
   const make = (kind: Item["kind"], label: string, extra: string, href: string, detail: string, weight: number): Item => {
     const n = norm(label);

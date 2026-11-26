@@ -4,10 +4,12 @@ export interface RobotsRules {
   allow: string[];
   disallow: string[];
   sitemaps: string[];
+  /** Seconds to wait between requests (Crawl-delay), if the site asks for it. */
+  crawlDelay?: number;
 }
 
 export function parseRobots(text: string, agent = "podiumradarbot"): RobotsRules {
-  const groups: { agents: string[]; allow: string[]; disallow: string[] }[] = [];
+  const groups: { agents: string[]; allow: string[]; disallow: string[]; crawlDelay?: number }[] = [];
   const sitemaps: string[] = [];
   let current: (typeof groups)[number] | null = null;
   let lastWasAgent = false;
@@ -35,6 +37,7 @@ export function parseRobots(text: string, agent = "podiumradarbot"): RobotsRules
     if (!current) continue;
     if (key === "allow" && value) current.allow.push(value);
     if (key === "disallow" && value) current.disallow.push(value);
+    if (key === "crawl-delay" && Number(value) > 0) current.crawlDelay = Number(value);
   }
 
   const a = agent.toLowerCase();
@@ -44,6 +47,7 @@ export function parseRobots(text: string, agent = "podiumradarbot"): RobotsRules
     allow: chosen.flatMap((g) => g.allow),
     disallow: chosen.flatMap((g) => g.disallow),
     sitemaps,
+    crawlDelay: Math.max(0, ...chosen.map((g) => g.crawlDelay ?? 0)) || undefined,
   };
 }
 

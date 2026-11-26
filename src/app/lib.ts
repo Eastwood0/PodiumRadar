@@ -76,6 +76,7 @@ export type Route =
   | { view: "overzicht" }
   | { view: "agenda" }
   | { view: "bronnen" }
+  | { view: "radar"; join?: string }
   | { view: "artiest"; slug: string }
   | { view: "zaal"; id: string };
 
@@ -85,6 +86,8 @@ export function parseRoute(hash: string): Route {
   if (h.startsWith("artiest-") && h.length > 8) return { view: "artiest", slug: h.slice(8) };
   if (h.startsWith("zaal-") && h.length > 5) return { view: "zaal", id: h.slice(5) };
   if (h === "agenda" || h === "bronnen") return { view: h };
+  if (h === "radar") return { view: "radar" };
+  if (h.startsWith("koppel-") && h.length > 7) return { view: "radar", join: h.slice(7) };
   return { view: "overzicht" };
 }
 export const artistHref = (name: string) => `#artiest-${slug(name)}`;

@@ -1,4 +1,5 @@
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
+import { FollowButton } from "./FollowButton";
 import { artistHref, dayName, GENRE_LABEL, formatDate, formatTime, isNew, parts, venueHref } from "./lib";
 
 const STATUS_LABEL = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
@@ -8,11 +9,14 @@ export function Flag({ cc }: { cc: SiteVenue["cc"] }) {
   return <span className={`flag flag--${cc}`} role="img" aria-label={COUNTRY[cc]} title={COUNTRY[cc]} />;
 }
 
-/** One line of the agenda, set like the tour dates on the back of a shirt: day, act, where, tickets. */
-export function EventCard({ e, venue, data, showVenue = true }: { e: SiteEvent; venue: SiteVenue; data: SiteData; showVenue?: boolean }) {
+/**
+ * One line of the agenda, set like the tour dates on the back of a shirt: day, act (with ☆), where, tickets.
+ * `fresh`: the rule for the "Nieuw" label; default: first seen in the last 7 days. Mijn radar uses "since the previous visit".
+ */
+export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: { e: SiteEvent; venue: SiteVenue; data: SiteData; showVenue?: boolean; fresh?: (e: SiteEvent) => boolean }) {
   const p = parts(e.s);
   const cancelled = e.st === "g";
-  const fresh = isNew(e, data);
+  const fresh = isFresh ? isFresh(e) : isNew(e, data);
   const single = e.a.length === 1;
   return (
     <article className={`row${cancelled ? " row--cancelled" : ""}`} aria-label={`${e.t}, ${formatDate(e.s)}, ${venue.n}`}>
@@ -21,13 +25,21 @@ export function EventCard({ e, venue, data, showVenue = true }: { e: SiteEvent; 
         <span className="row__d">{p.d}</span>
       </p>
       <div className="row__main">
-        <h3 className="row__act">{single ? <a href={artistHref(e.a[0])}>{e.t}</a> : e.t}</h3>
+        <h3 className="row__act">
+          {single ? (
+            <>
+              <a href={artistHref(e.a[0])}>{e.t}</a> <FollowButton name={e.a[0]} />
+            </>
+          ) : (
+            e.t
+          )}
+        </h3>
         {!single && e.a.length > 0 && (
           <p className="row__with">
             {e.a.map((name, i) => (
               <span key={name}>
                 {i > 0 && (i === e.a.length - 1 ? " en " : ", ")}
-                <a href={artistHref(name)}>{name}</a>
+                <a href={artistHref(name)}>{name}</a> <FollowButton name={name} />
               </span>
             ))}
           </p>

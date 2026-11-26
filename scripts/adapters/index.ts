@@ -19,6 +19,7 @@ import { lanxessArena } from "./lanxess-arena";
 import { patronaat } from "./patronaat";
 import { pinkpop } from "./pinkpop";
 import { melkweg } from "./melkweg";
+import { iamsterdam } from "./iamsterdam";
 import { mezz } from "./mezz";
 import { rudolfWeberArena } from "./rudolf-weber-arena";
 import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
@@ -59,6 +60,7 @@ export const ADAPTERS: Adapter[] = [
   uitagendaUtrecht,
   // Nederland, toegevoegd 26 nov 2026 (B32/B33)
   melkweg,
+  iamsterdam, // Melkweg (second source, B37) and Paradiso via the city agenda
   muziekgieterij,
   gashouder,
   paard,

@@ -3,6 +3,7 @@ import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 import { Flag } from "./EventCard";
 import { EventList } from "./EventList";
 import { FilterBar } from "./FilterBar";
+import { followedCells, useFollows } from "./follow";
 import { applyFilters, type Filters, LEVELS, level, MONTHS_LONG, monthKey, monthShort, venueHref } from "./lib";
 
 const COUNTRIES = [
@@ -35,6 +36,9 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
     return map;
   }, [filtered]);
   const withSource = new Set(data.events.map((e) => e.v));
+  const follows = useFollows();
+  // Cells with a show of an artist you follow get a star (B27).
+  const starred = useMemo(() => followedCells(filtered, follows.artists, monthKey), [filtered, follows.artists]);
 
   const rows = data.venues.filter((v) => (!filters.country || v.cc === filters.country) && (!filters.tier || v.tier === filters.tier));
   const pickedEvents = picked ? counts.get(`${picked.v}|${picked.m}`) ?? [] : [];
@@ -90,14 +94,15 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
                         months.map((m) => {
                           const n = counts.get(`${v.id}|${m}`)?.length ?? 0;
                           const sel = picked?.v === v.id && picked.m === m;
+                          const star = starred.has(`${v.id}|${m}`);
                           return (
                             <td key={m}>
                               {n > 0 && (
                                 <button
                                   type="button"
-                                  className={`cell cell--l${level(n)}${sel ? " is-sel" : ""}`}
+                                  className={`cell cell--l${level(n)}${sel ? " is-sel" : ""}${star ? " is-star" : ""}`}
                                   aria-haspopup="dialog"
-                                  aria-label={`${v.n}, ${MONTHS_LONG[+m.slice(5) - 1]}: ${n} ${n === 1 ? "event" : "events"}`}
+                                  aria-label={`${v.n}, ${MONTHS_LONG[+m.slice(5) - 1]}: ${n} ${n === 1 ? "event" : "events"}${star ? ", met een artiest die je volgt" : ""}`}
                                   onClick={() => setPicked({ v: v.id, m })}
                                 >
                                   {n}
@@ -122,6 +127,12 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
             {l.label}
           </span>
         ))}
+        {starred.size > 0 && (
+          <span className="legend__item">
+            <i className="cell cell--l1 is-star" />
+            met een artiest die je volgt
+          </span>
+        )}
       </div>
       <dialog
         ref={dialog}

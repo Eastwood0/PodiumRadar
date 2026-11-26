@@ -55,6 +55,8 @@ venues:
   - { id: stadsschouwburg-utrecht, name: Stadsschouwburg Utrecht, city: Utrecht, country: NL, tier: B, website: "https://stadsschouwburg-utrecht.nl/" }
   - { id: theaters-tilburg, name: Schouwburg & Concertzaal Tilburg, city: Tilburg, country: NL, tier: B, aliases: [Theaters Tilburg], website: "https://www.schouwburgconcertzaaltilburg.nl/" }
   - { id: musis-arnhem, name: Musis & Stadstheater, city: Arnhem, country: NL, tier: B, aliases: [Musis Sacrum], website: "https://www.musisenstadstheater.nl/" }
+  - { id: theater-rotterdam, name: Theater Rotterdam, city: Rotterdam, country: NL, tier: B, aliases: [Rotterdamse Schouwburg, TR25 Schouwburg], website: "https://www.theaterrotterdam.nl/" }
+  - { id: chasse, name: Chassé Theater, city: Breda, country: NL, tier: B, website: "https://www.chasse.nl/" }
   # Dance-locaties (B33: DJ-feesten via de eigen agenda's van clubs, niet via DJguide):
   - { id: gashouder, name: Gashouder, city: Amsterdam, country: NL, tier: B, aliases: [Westergas] }
   - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }

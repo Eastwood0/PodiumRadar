@@ -8,5 +8,6 @@ export const NO_SOURCE: Record<string, string> = {
   "nieuwe-nor": "De site weigert automatische bezoekers (403); niet omzeilen (B23).",
   "parktheater-eindhoven": "De site stuurt automatische bezoekers naar een controlescherm (BunnyCDN); niet omzeilen (B23). Andere bron wordt gezocht.",
   "theater-aan-het-vrijthof": "De agenda laadt via een zoekapp (JavaScript, Firebase) zonder open lijst; bron wordt nog gezocht.",
+  chasse: "De site weigert automatische bezoekers (403); niet omzeilen (B23). Geen officiële stadsagenda van Breda gevonden.",
   "warehouse-elementenstraat": "Geen eigen agenda: de zaal wordt verhuurd aan organisatoren; komt via Ticketmaster.",
 };

@@ -505,3 +505,36 @@ describe("De Oranjerie Roermond (theaterroermond.nl)", async () => {
     expect(later[0].start).toBe("2027-11-27T20:00:00+01:00");
   });
 });
+
+describe("De Oranjerie Roermond, production with one date", async () => {
+  const { parseRoermondProduction } = await import("../scripts/adapters/theater-roermond");
+  it("reads the single-date layout (date in a div)", () => {
+    const ev = parseRoermondProduction(fixture("roermond-production-single.html"), "https://www.theaterroermond.nl/agenda/the-best-of-sven-matthijs", "Special", new Date("2026-11-26T12:00:00Z"));
+    expect(ev).toHaveLength(1);
+    expect(ev[0]).toMatchObject({ title: "The Best of Sven & Matthijs!", start: "2026-12-01T20:00:00+01:00" });
+  });
+});
+
+describe("Uit in Amsterdam (iamsterdam.com) for Melkweg and Paradiso", async () => {
+  const { parseIamsterdamPage, parseIamsterdamDetail, cardEvents } = await import("../scripts/adapters/iamsterdam");
+  const { cards, total } = parseIamsterdamPage(fixture("iamsterdam-agenda.html"));
+  it("reads the cards from the RSC payload with location and dates", () => {
+    expect(total).toBe(131);
+    expect(cards).toHaveLength(3);
+    expect(cards[0]).toMatchObject({ title: "Cheeky Monday", location: "Melkweg", dates: ["2026-10-26T23:00:00.000Z", "2026-11-30T23:00:00.000Z"] });
+  });
+  it("keeps only our venues and reads card times as Amsterdam wall-clock time", () => {
+    expect(cardEvents(cards[2], cards[2].dates)).toEqual([]);
+    const [ev] = cardEvents(cards[0], cards[0].dates.slice(0, 1));
+    expect(ev).toMatchObject({ venueId: "melkweg", start: "2026-10-26T23:00:00+01:00", hasTime: true, url: "https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/cheeky-monday" });
+  });
+  it("reads every date and the sold-out flag from a detail page", () => {
+    const detail = parseIamsterdamDetail(fixture("iamsterdam-event.html"));
+    expect(detail).toEqual({ dates: ["2026-11-04T19:00:00+00:00", "2027-03-17T19:00:00+00:00"], soldOut: true, cancelled: false });
+    const evs = cardEvents({ ...cards[0], location: "Paradiso" }, detail.dates, detail);
+    expect(evs.map((e) => [e.venueId, e.start, e.status])).toEqual([
+      ["paradiso", "2026-11-04T19:00:00+01:00", "uitverkocht"],
+      ["paradiso", "2027-03-17T19:00:00+01:00", "uitverkocht"],
+    ]);
+  });
+});

@@ -1,7 +1,8 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.9 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
+> Werktitel: **Podiumradar**. Versie 0.10 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
+> Wijzigingen 0.9 → 0.10 (26 nov 2026): fase 3 uitgewerkt zonder inlog en zonder Ticketmaster (B42–B44), theaters (B45), Melkweg/Paradiso via Uit in Amsterdam (B46), Crawl-delay (B47).
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
 > Wijzigingen 0.3 → 0.4: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
 > Wijzigingen 0.2 → 0.3: verificaties fase 0 verwerkt (B15–B17, §17); `verified`-veld in Venue.
@@ -237,8 +238,11 @@ Claude Code start pas aan de volgende fase na akkoord van Ralf. Elke fase eindig
 **Klaar als:** Lighthouse mobiel Performance ≥ 90 en Accessibility ≥ 90; "backstreet boy" (typfout) vindt "Backstreet Boys" binnen 2 tikken; 360 px zonder horizontaal scrollen van de pagina (tijdlijn mag scrollen); niet-genodigden zien een inlogscherm; ≥ 95% dekking op de steekproef voor alle venues met een bruikbare site.
 
 ### Fase 3 — Volgen en radar
-- D1-tabel, `/api/favorites`, `/api/artist-search`, `/api/favorites-export`; ☆-knoppen; zoeken naar artiesten buiten de agenda; scherm "Mijn radar"; "Elders"-deel op artiestpagina; radar-run in GitHub Actions; `favorites:remove-user`.
-**Klaar als:** twee testgebruikers zien elk alleen hun eigen favorieten; een artiest zonder geplande shows is te volgen; volgen/ontvolgen werkt in ≤ 1 seconde en blijft na herladen en op een ander apparaat behouden; een in testdata nieuw verschenen show van een gevolgde artiest staat na één run in "Mijn radar" met label **Nieuw**; export bevat geen e-mailadressen; API-functies weigeren verzoeken zonder geldige Access-identiteit, ook als alleen een nagemaakte e-mailheader of een token van een andere Access-applicatie (verkeerde `aud`) wordt meegestuurd (getest); preview-adressen (`*.pages.dev`) tonen het inlogscherm.
+> Herzien 26 nov 2026 volgens B39/B42–B44 (geen inlog, geen Ticketmaster). De oorspronkelijke tekst (D1 per e-mailadres, `/api/artist-search`, `/api/favorites-export`, radar-run, `favorites:remove-user`) vervalt.
+- ☆/★ per artiest op eventkaarten en de artiestpagina; zoekbalk biedt "Volg “naam”" voor artiesten die niet in de agenda staan.
+- Gevolgde artiesten in de browser; koppelcode zet ze over naar een ander apparaat (Worker `src/worker.ts` + D1, routes `/api/sync`).
+- Scherm "Mijn radar" (`#radar`) met label **Nieuw**; markering in het overzicht.
+**Klaar als:** twee koppelcodes zien elk alleen hun eigen lijst; een artiest zonder geplande shows is te volgen; volgen/ontvolgen ≤ 1 seconde en blijft na herladen en op een ander apparaat (via de code) behouden; een in testdata nieuw verschenen show staat in "Mijn radar" met **Nieuw**; de API weigert ongeldige codes en te grote lijsten (max 100 artiesten); er worden geen e-mailadressen of andere persoonsgegevens opgeslagen; Lighthouse mobiel ≥ 90 en 360 px zonder horizontaal scrollen blijven gehaald.
 
 ### Fase 4 — Afwerking
 - Afstand vanaf thuis, statuslabels, alle lege/foutstaten, bronvermelding.
@@ -330,6 +334,12 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B39 | Geen inlog. Voorkeuren (gevolgde artiesten, filters) staan in de browser; wie ze op een ander apparaat wil, opent één keer zijn persoonlijke koppelcode/link. De server bewaart alleen code → artiesten, zonder e-mailadres. Vervangt de Access-inlog uit B15 | Ralf koos "Browser + koppelcode"; ook nodig voor latere meldingen |
 | B40 | Site open maar niet vindbaar: noindex-header, robots.txt "Disallow: /", adres alleen delen met vrienden. Geen Cloudflare Access. Fase 2-eis "niet-genodigden zien een inlogscherm" wordt "de site staat niet in zoekmachines" | Ralf koos "Niet vindbaar, wel open"; er staat alleen openbare agenda-informatie op |
 | B41 | Theaters erbij (cabaret, shows): zalen rond Weert/Limburg/Brabant (o.a. De Kattendans Bergeijk), de grote theaters van NL, en waar toegestaan één landelijke theater-/cabaretagenda als bron. Op de site een soortfilter "Theater & cabaret" naast muziek | Ralf 26 nov 2026 |
+| B42 | Volgen zonder inlog: lijst in de browser; **koppelcode** van 26 tekens (128 bit willekeurig, zonder I/L/O/U) zet hem over. De server (Worker + D1, door Cloudflare zelf aangemaakt bij de eerste uitrol) bewaart alleen een hash van de code met de artiestnamen; wijzigen kan alleen voor een bestaande code; max 100 artiesten, 120 tekens per naam | Uitwerking B39; zonder hash is een gelekte database ook geen lijst met codes. Gratis: statische bestanden tellen niet mee, D1 100.000 schrijfacties/dag (BRONNEN.md) |
+| B43 | Radar = de eigen agenda gefilterd op gevolgde artiesten (NL/BE/DE). Koppeling op de hele naam, dus "Golden Earring Tribute" telt niet als "Golden Earring". `data/radar.json`, `/api/artist-search`, `/api/favorites-export` en `favorites:remove-user` vervallen | Gevolg van B38 (geen Ticketmaster) en B39 (geen e-mail) |
+| B44 | "Nieuw" in Mijn radar = eerst gezien ná het vorige bezoek aan Mijn radar (tijdstip lokaal bewaard); elders blijft "Nieuw" = laatste 7 dagen. Vakjes in het overzicht met een gevolgde artiest krijgen een roze rand en ster | Bouwplan §9/§10 en B27 |
+| B45 | Theaters (B41) gebouwd: Munttheater, Maaspoort, Theater Heerlen + Theater Kerkrade + Toon Hermans Theater (één site, PLT), De Oranjerie (nieuwe site theaterroermond.nl), Carré, DeLaMar, Stadsschouwburg Utrecht, Schouwburg & Concertzaal Tilburg, Musis & Stadstheater, Theater Rotterdam (via Uitagenda Rotterdam). Geen bron: Parktheater (botcontrole), Theater aan het Vrijthof (zoekapp), Chassé (403, geen stadsagenda) | Verzoek Ralf 26 nov 2026; Kerkrade en Sittard horen bij dezelfde PLT-site en liggen in Limburg (B41) |
+| B46 | Melkweg (tweede bron naast B37) en Paradiso via "Uit in Amsterdam" (iamsterdam.com, officiële stadsagenda): alleen de rubrieken concerten en nachtleven met `?page=`, zoals robots.txt toestaat. De GraphQL-sleutel in Paradiso's eigen site wordt niet gebruikt | B23/B34-route; Melkweg stond op 0 events door de botcontrole. Paradiso via deze bron is onvolledig (±57 shows) |
+| B47 | De ophaler volgt `Crawl-delay` uit robots.txt (max 10 s) | Netjes gebruik (§14); o.a. Visit Groningen vraagt 2 s |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

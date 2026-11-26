@@ -6,7 +6,7 @@ import { MONTHS_LONG, monthKey } from "./lib";
 const PAGE = 60;
 
 /** Chronological list with month headings; renders in pages so long lists stay fast on phones. */
-export function EventList({ events, venues, data, showVenue = true, empty }: { events: SiteEvent[]; venues: Map<string, SiteVenue>; data: SiteData; showVenue?: boolean; empty: React.ReactNode }) {
+export function EventList({ events, venues, data, showVenue = true, empty, fresh }: { events: SiteEvent[]; venues: Map<string, SiteVenue>; data: SiteData; showVenue?: boolean; empty: React.ReactNode; fresh?: (e: SiteEvent) => boolean }) {
   const [shown, setShown] = useState(PAGE);
   if (!events.length) return <div className="empty">{empty}</div>;
   const visible = events.slice(0, shown);
@@ -26,7 +26,7 @@ export function EventList({ events, venues, data, showVenue = true, empty }: { e
               {MONTHS_LONG[+m - 1]} <span>{y}</span>
             </h2>
             {g.items.map((e) => (
-              <EventCard key={e.id} e={e} venue={venues.get(e.v)!} data={data} showVenue={showVenue} />
+              <EventCard key={e.id} e={e} venue={venues.get(e.v)!} data={data} showVenue={showVenue} fresh={fresh} />
             ))}
           </section>
         );
