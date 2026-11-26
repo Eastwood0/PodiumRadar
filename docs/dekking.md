@@ -1,8 +1,8 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T07:00:04.998Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T07:16:34.363Z).
 
-**23 van 49 venues** hebben data, samen 1575 events (1055 muziek).
+**28 van 49 venues** hebben data, samen 1962 events (1434 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
@@ -22,21 +22,21 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T07:00:04.
 | Effenaar | NL | 107 | 106 | 2027-11-26 | effenaar.nl ✅ |  |
 | De Bosuil | NL | 0 | 0 | — | — | nog niet onderzocht |
 | Grenswerk | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Muziekgieterij | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Nieuwe Nor | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Muziekgieterij | NL | 108 | 108 | 2027-10-09 | muziekgieterij.nl ✅ |  |
+| Nieuwe Nor | NL | 0 | 0 | — | — | De site weigert automatische bezoekers (403); niet omzeilen (B23). |
 | Paradiso | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Melkweg | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Melkweg | NL | 0 | 0 | — | melkweg.nl ❌ |  |
 | MartiniPlaza | NL | 0 | 0 | — | — | nog niet onderzocht |
 | De Oosterpoort | NL | 0 | 0 | — | — | nog niet onderzocht |
 | Doornroosje | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Paard | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Hedon | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Paard | NL | 139 | 136 | 2027-11-25 | paard.nl ✅ |  |
+| Hedon | NL | 102 | 99 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
 | Mezz | NL | 0 | 0 | — | — | nog niet onderzocht |
 | Patronaat | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Gashouder | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Gashouder | NL | 32 | 32 | 2027-11-03 | gashouder.nl ✅ |  |
 | Klokgebouw | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Maassilo | NL | 0 | 0 | — | — | nog niet onderzocht |
-| Warehouse Elementenstraat | NL | 0 | 0 | — | — | nog niet onderzocht |
+| Maassilo | NL | 6 | 4 | 2027-03-13 | uitagendarotterdam.nl ✅ |  |
+| Warehouse Elementenstraat | NL | 0 | 0 | — | — | Geen eigen agenda: de zaal wordt verhuurd aan organisatoren; komt via Ticketmaster. |
 | AFAS Dome | BE | 42 | 29 | 2027-11-21 | afas-dome.be ✅ |  |
 | Lotto Arena | BE | 33 | 18 | 2027-11-25 | lotto-arena.be ✅ |  |
 | Vorst Nationaal | BE | 59 | 47 | 2027-11-26 | vorst-nationaal.be ✅ |  |
