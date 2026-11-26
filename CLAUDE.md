@@ -84,7 +84,7 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 
 ## Huidige stand
 - **Overdracht: lees eerst `docs/OVERDRACHT.md`** (bijgewerkt 26 nov 2026, avond).
-- Fase: **2 afgerond op de open punten na; fase 3 gebouwd** (26 nov 2026, wacht op uitrol naar main + controle door Ralf). Ticketmaster vervalt (B38); radar = eigen agenda NL/BE/DE (B43).
+- Fase: **2 afgerond op de open punten na; fase 3 gebouwd en live** (26 nov 2026, ~18:00; Codex-review verwerkt). Ticketmaster vervalt (B38); radar = eigen agenda NL/BE/DE (B43).
 - Bouwplan: versie 0.10, beslissingen t/m B51. Geen inlog (B39/B42), site open maar niet vindbaar (B40).
 - Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`) + Worker-script `src/worker.ts` alleen voor `/api/*` (`run_worker_first`), D1-binding `DB` zonder id (wordt bij uitrol automatisch aangemaakt, B42). Live op https://podiumradar.eastwood.workers.dev; elke push naar main rolt uit.
 - Fase 3 (B42–B44): `src/app/follow.ts` (lijst in localStorage, sleutel `pr.follow`), `FollowButton.tsx` (☆ op kaarten en artiestpagina), `Radar.tsx` (`#radar`, Nieuw sinds vorig bezoek, koppelcode-UI, `#koppel-<code>`), `sync.ts` (client), `src/lib/sync-api.ts` (API: POST/GET/PUT/DELETE `/api/sync`, bewaart sha-256 van de code). Zoeken biedt "Volg “naam”". Overzicht: vakje met ster bij gevolgde artiest. Lokaal testen: `npm run build` en dan `npx wrangler dev` (lokale D1); Worker-modules mogen alleen de handler exporteren.
@@ -97,4 +97,5 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Geen bron (`src/lib/no-source.ts`): Brabanthallen, Nieuwe Nor, Chassé, Parktheater (botcontroles/403, geen stadsagenda gevonden), Theater aan het Vrijthof (zoekapp), MartiniPlaza (sitemap verouderd, verder laden verboden in robots.txt), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Warehouse Elementenstraat.
 - Nooit bot-blokkades omzeilen (B23); geen sleutels uit andermans frontend gebruiken (Paradiso-GraphQL).
 - Skills in het project: `.claude/skills/be-ambitious` en `.claude/skills/aislop` (zie README daar; de aislop-CLI mocht in de cloudsessie niet draaien → handmatige controle).
-- Wacht op Ralf: keuze clubplan (`docs/clubplan.md`), samenvoegen naar main, live controle fase 3.
+- Clubs (B49/B51): `clubs.ts` (Complex, Lofi, BASIS, Garage Noord via WeTicket-feed). Resident Advisor alleen met schriftelijke toestemming; TicketSwap en Paylogic niet.
+- Wacht op Ralf: gedeeltelijke stadsagenda's voor zalen zonder bron?; RA-toestemming vragen?; HTML-clubs (Ekko, Dynamo, Shelter, Radion, Thuishaven, Annabel, Toffler) bouwen.

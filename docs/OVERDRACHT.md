@@ -3,8 +3,8 @@
 Lees eerst `CLAUDE.md` en `docs/BOUWPLAN.md` (v0.10, B1–B47). Dit bestand zegt wat er na Ralfs verzoeken van 26 nov (16:51) gedaan is en wat nog openstaat.
 
 ## Branch en uitrol
-- Al het werk staat op branch `claude/brave-albattani-488ljp`, **nog niet op main**. Pas na samenvoegen naar main rolt Cloudflare het uit en draait de nachtelijke run met de nieuwe bronnen.
-- Bij de eerste uitrol maakt Cloudflare de D1-database zelf aan (B42). Controle: `docs/ACCOUNTS.md` stap 5.
+- **Op main sinds 26 nov 2026 ~18:00** (akkoord Ralf). Live gecontroleerd: site, beide agendabestanden, Worker `/api/sync` met automatisch aangemaakte D1 (code maken → lezen → intrekken werkt).
+- Werkbranch `claude/brave-albattani-488ljp`; main krijgt daarnaast data-commits van de bot, dus eerst `origin/main` samenvoegen.
 
 ## Gedaan (26 nov 2026)
 1. **Theaters (B45):**
@@ -34,9 +34,31 @@ Lees eerst `CLAUDE.md` en `docs/BOUWPLAN.md` (v0.10, B1–B47). Dit bestand zegt
    - Utrecht vroeg 12 pagina's op die een 404 geven.
 7. **Skills:** `.claude/skills/be-ambitious` en `.claude/skills/aislop` (bron en licentie in de README daar).
 
+## Na de Codex-review (26 nov, avond)
+- **Codex in de cloud:** via Ralfs ChatGPT-account, met een apparaatcode. Zie CLAUDE.md, werkwijze 0b.
+- **Codex-review:** 15 bevindingen; alle hoge en middelhoge opgelost (commit 935b69b):
+  - koppelcode in een header;
+  - dagbudgetten;
+  - wijzigingen gaan niet meer verloren;
+  - koppellink vraagt eerst;
+  - ontkoppelen per apparaat;
+  - matinee en avondvoorstelling apart;
+  - storing per zaal;
+  - robots.txt bij 5xx en doorverwijzingen;
+  - Roermond kiest het jaar op de weekdag.
+- **Bekende rest van de review:**
+  - Twee apparaten die tegelijk wijzigen: de laatste wijziging wint.
+  - Bij I amsterdam komt "geannuleerd" voor eendaagse shows alleen mee als de kaart het vermeldt.
+- **Codex-bronnenonderzoek:** door Claude nagecontroleerd; zie BRONNEN.md. Clubs gebouwd: Complex, Lofi, BASIS en Garage Noord (B51).
+  - Resident Advisor vraagt schriftelijke toestemming.
+  - TicketSwap toont een botcontrole.
+  - Paylogic verbiedt bots.
+  - Brabanthallen geeft nog steeds een captcha.
+
 ## Open
-- Ralf: branch naar main laten samenvoegen (of toestemming geven om dat te doen), daarna live controleren (ACCOUNTS.md stap 5).
-- Ralf: keuze clubplan.
+- Clubs met alleen HTML (Ralf koos A/B/C): Ekko (59 items), Dynamo Eindhoven (40), Shelter, Radion, Thuishaven, Annabel, Toffler en De Club Eindhoven. Elke club krijgt een eigen adapter.
+- Keuze Ralf: gedeeltelijke stadsagenda's als aanvulling voor zalen zonder bron? Het gaat om Visit Zuid-Limburg (Nieuwe Nor), Explore Breda (Chassé), Visit Maastricht (Vrijthof) en Visit Groningen (MartiniPlaza).
+- Keuze Ralf: Resident Advisor schriftelijk om toestemming vragen (route C)?
 - Theaters Tilburg heeft geen genre op de voorstellingspagina; indeling gaat op titel (veel "gok muziek").
 - Theater aan het Vrijthof, Parktheater, MartiniPlaza, Chassé, Nieuwe Nor, Brabanthallen: zonder bron. Opties staan in de uitleg aan Ralf.
 - Optioneel: meer Amsterdamse zalen uit Uit in Amsterdam (Concertgebouw 330 events, Bimhuis, Muziekgebouw, Stadsschouwburg Amsterdam). Is een productkeuze voor Ralf.
