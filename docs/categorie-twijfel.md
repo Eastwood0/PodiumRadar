@@ -394,13 +394,14 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
 
-## patronaat.nl (28)
+## patronaat.nl (29)
 
 - Any Given Day
 - Artin Muziek & friends
 - Back to the Disco
 - Born From Pain + Inherited
 - Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
+- Disco Del Mundo
 - Dream State
 - FUCK THE CISTEM
 - Geannuleerd: KMFDM
@@ -408,7 +409,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Housequake
 - King Buffalo + Spirit Mother
 - Luicidal + Grindpad
-- Minor Operations Bookings presents: The Protos, Snackbar & Apeshit
+- Minor Operations Bookings presents: The Protos & Snackbar
 - Moonspell + Iotunn + TodoMal
 - Nieuwjaarsgala
 - Nordjevel + Svarttjern + Malphas + Unviar
@@ -425,13 +426,14 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Turmion Kätilöt + STAM1NA
 - YUNA XL
 
-## klokgebouw.nl (5)
+## klokgebouw.nl (6)
 
 - Artsy & Craftsy Market by Abunai
 - CardManiacs
 - FeelGood Market
 - Feelgood Market
 - Hit The City
+- Motel a Miio pop-up
 
 ## grenswerk.nl (4)
 
@@ -508,6 +510,23 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - TRIBE x Pier15
 - The Dutch Queen
 - The Electronic Producers’ Sessions
+
+## spotgroningen.nl (2)
+
+- Thomas van Luyn
+- Vrije Keuze Abonnement
+
+## kattendans.nl (9)
+
+- Accordeonvereniging De Lustige Klanken
+- Bands & Slagwerkgroep Echo der Kempen
+- De Grote Jaren 80 Show
+- De Theatertroep
+- Harmonie Echo der Kempen
+- Hartstocht
+- Meester Mark
+- Toneelvereniging ’t Abele Spel
+- WensMuziek
 
 ## ing.arena.brussels (3)
 

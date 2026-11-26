@@ -1,8 +1,8 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T13:11:57.991Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T13:57:57.525Z).
 
-**37 van 49 venues** hebben data, samen 2699 events (2131 muziek).
+**40 van 51 venues** hebben data, samen 3213 events (2402 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
@@ -27,14 +27,16 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-26T13:11:57.
 | Paradiso | NL | 0 | 0 | — | — | nog niet onderzocht |
 | Melkweg | NL | 0 | 0 | — | melkweg.nl ❌ |  |
 | MartiniPlaza | NL | 0 | 0 | — | — | nog niet onderzocht |
-| De Oosterpoort | NL | 0 | 0 | — | — | nog niet onderzocht |
+| De Oosterpoort | NL | 254 | 213 | 2027-11-26 | spotgroningen.nl ✅ |  |
+| Stadsschouwburg Groningen | NL | 151 | 16 | 2027-10-14 | spotgroningen.nl ✅ |  |
 | Doornroosje | NL | 176 | 165 | 2027-11-13 | doornroosje.nl ✅ |  |
 | Paard | NL | 142 | 139 | 2027-11-25 | paard.nl ✅ |  |
 | Hedon | NL | 104 | 101 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
 | Mezz | NL | 135 | 132 | 2027-11-17 | mezz.nl ✅ |  |
-| Patronaat | NL | 140 | 138 | 2027-11-07 | patronaat.nl ✅ |  |
+| Patronaat | NL | 141 | 139 | 2027-11-07 | patronaat.nl ✅ |  |
+| De Kattendans | NL | 106 | 38 | 2027-11-26 | kattendans.nl ✅ |  |
 | Gashouder | NL | 32 | 32 | 2027-11-03 | gashouder.nl ✅ |  |
-| Klokgebouw | NL | 41 | 26 | 2027-08-26 | klokgebouw.nl ✅ |  |
+| Klokgebouw | NL | 43 | 29 | 2027-08-26 | klokgebouw.nl ✅ |  |
 | Maassilo | NL | 6 | 4 | 2027-03-13 | uitagendarotterdam.nl ✅ |  |
 | Warehouse Elementenstraat | NL | 0 | 0 | — | — | Geen eigen agenda: de zaal wordt verhuurd aan organisatoren; komt via Ticketmaster. |
 | AFAS Dome | BE | 42 | 30 | 2027-11-21 | afas-dome.be ✅ |  |
