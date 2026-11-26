@@ -15,6 +15,7 @@ const currentRoute = () => (typeof location === "undefined" ? ({ view: "overzich
 export default function App({ bill }: { bill?: Bill }) {
   const [data, setData] = useState<SiteData | null>(null);
   const [error, setError] = useState(false);
+  const [partial, setPartial] = useState(false);
   const [route, setRoute] = useState<Route>({ view: "overzicht" });
   const [filters, setFiltersState] = useState<Filters>(DEFAULT_FILTERS);
 
@@ -34,7 +35,15 @@ export default function App({ bill }: { bill?: Bill }) {
     fetch("data/agenda.json")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       // A transition lets React render the big first screen in small slices, so the phone stays responsive.
-      .then((d: CompactSiteData) => startTransition(() => setData(expandSiteData(d))))
+      .then((d: CompactSiteData) => {
+        startTransition(() => setData(expandSiteData(d)));
+        // The rest of the year comes in a second file, after the first screen (B48). If it fails, the first part stays.
+        if (d.more)
+          fetch(d.more)
+            .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+            .then((rest: { events: CompactSiteData["events"] }) => startTransition(() => setData(expandSiteData(d, rest.events))))
+            .catch(() => setPartial(true));
+      })
       .catch(() => setError(true));
     return () => {
       window.removeEventListener("hashchange", onHash);
@@ -92,6 +101,11 @@ export default function App({ bill }: { bill?: Bill }) {
           <SearchBox search={search} />
         </div>
       </header>
+      {partial && (
+        <p className="stale" role="status">
+          Alleen de komende twee maanden zijn geladen. Herlaad de pagina voor de rest van het jaar.
+        </p>
+      )}
       {stale && (
         <p className="stale" role="status">
           Gegevens niet actueel, laatst bijgewerkt {formatDateTime(data.generatedAt)}.

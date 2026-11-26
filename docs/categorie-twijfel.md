@@ -222,6 +222,258 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Wasserette
 - Y2Kerst
 
+## iamsterdam.com (249)
+
+- 1984 Night at the Arcade
+- 80's Verantwoord
+- 90's NOW
+- ANNIE PRESENTS: Millenial Optimism
+- ANNIE PRESENTS: Millennial Optimism
+- Afterhours
+- Alex Sampson
+- Alexandra Kay
+- Alizade
+- Alkinoos Ioannidis
+- Allah-Las
+- Allie Sherlock
+- Amble
+- Amsterdam Calling 2027
+- Anna Tsuchiya
+- Ax and the Hatchetmen
+- Ayra Starr
+- Basement
+- Bee Gees by MainCourse
+- Bente
+- BexBlu & Paul Stephan
+- Biga*Ranx
+- Bilal
+- Blendsworld
+- Blind Channel
+- Blondshell
+- Boombox
+- Boy Harsher
+- Breathe.
+- Büyük Ev Ablukada
+- Charlotte Cardin
+- Chase Matthew
+- Cheeky Monday
+- Cheeky Monday: BADLOKK!
+- Cheeky Monday: CHEEKY x JUNGLISM!
+- Cheeky Monday: JESSEE!
+- Customs
+- DIKKE
+- DIP - Hermann
+- DIP: Dark Music for Happy People
+- DRAMA
+- Dagny
+- Dayseeker
+- De Grote Zeppos Kerstshow
+- Dea Matrona
+- Declan J Donovan
+- Def & brittneySGAT
+- Delta Goodrem
+- Deryck Whibley (Sum 41)
+- Die Spitz
+- Dirty Honey
+- Disco Snolly
+- Downtown Boys
+- Duman
+- Dusky
+- Dylan
+- Eihwar
+- Elba Ramalho
+- Elder
+- Elmiene
+- Elmiene+ Jahson Paynter
+- Emei
+- Emeli Sandé
+- Emo Night Mainland
+- Encore New Years Eve 2026
+- Ethan Regan
+- Eve
+- Exproz All Night Long
+- Extince
+- Fat Dog
+- Fiesta Macumba
+- Fimiguerrero
+- Frankie Stew & Harvey Gunn
+- Froukje
+- Funkshun Nightmarket
+- Gail Ann Dorsey
+- Galafeest Montessori Lyceum
+- Gerson Main
+- Gimme! Gimme! Gimme!
+- Gotts Street Park
+- Gurriers
+- HENGE
+- Haiden Henderson
+- Hang Massive
+- Hang Youth - Hardkoor Nachtmis
+- Hart Verloren
+- Haunt Me
+- Hermanos Gutiérrez
+- Het Amsterdams Ballongezelschap
+- Highguest
+- Ida
+- Infloyd
+- Isaiah Rashad
+- Isak Danielson
+- Italorator
+- J. Bernardt
+- Jain
+- Jake Bugg
+- Jakov Jozinović
+- James Marriott
+- Jeangu Macrooy
+- Jersey
+- Jett Rebel
+- Job Dutchtuber & Billy The Kit
+- John Illsley (of Dire Straits)
+- John Vincent III
+- Joker Out
+- Jonah Kagen
+- Joshua Burnside
+- Joël Domingos
+- KNOX
+- Kadavar
+- Kakkmaddafakka
+- Kaylee Rose
+- Keo
+- Kerstgala College Zuyd
+- Kiss All Hipsters
+- KrackFree Soundsystem - 10 year anniversary
+- Kyle Alessandro
+- KÖFN
+- La Roux
+- Lagos in NL
+- Lambrini Girls
+- Lauren Sanderson
+- Lebanon Hanover
+- Lelo
+- Letz Zep / Aerochicks
+- Library Card
+- London Calling
+- Loreen
+- Loïs Lane
+- Luca St
+- Lucky Done Gone - All Night
+- Luminosity 19 Year Anniversary
+- MC4D
+- MICO
+- Maite Hontelé & La Novia
+- Mama Africa
+- Mammoth
+- Mannarino
+- Maria Iskariot, Kaat van Stralen en anderen
+- Mich
+- Mick Flannery
+- Midnight Generation
+- Milolaathetlukken
+- Miss Bashful
+- Miss Bashful Official After
+- Modestep
+- Mortimer
+- Mothica
+- Mulaa Joans
+- Music Lab - Meervaart Studio x Melkweg
+- My Baby
+- NTO
+- Nachtburgemeester Verkiezing 2026
+- New Model Army
+- Newton Faulkner
+- Nia Archives
+- Nickless
+- Nieve Ella
+- Night Lovell
+- Ninajirachi
+- Nothhingspecial
+- Nusantara Beat
+- OP JE MANNIE
+- Odetari
+- Olá Brazil!
+- Only Fire
+- Opus Kink
+- Other Lives
+- PERCEVAL
+- Pennywise / Descendents / End It / DFL
+- Phantom Wizard
+- Politie Warnsveld
+- Pomme
+- Punch Brothers
+- Q Marsden
+- Quadeca
+- Quicksand
+- Radio Z
+- Raquel Rodriguez
+- Raving Charlie
+- Raymond van het Groenewoud
+- Revocation
+- Richard Thompson
+- Rinzen
+- Rita Antonopoulou & Revans
+- Robert Finley
+- Rolf Sanchez
+- STOMP Queer Line Dance
+- STOUT
+- Saam Sultan
+- Sam Quealy
+- SameZitting
+- Samya presents: Filmhits Sing-Along
+- Sanguijuelas del Guadiana
+- Sasha Keable
+- Satin Jackets
+- Sekou
+- Shing02
+- Siggy & D1ns
+- Skerryvore
+- Smells Like Nirvana
+- Snayx
+- Sofia Camara
+- Sofy
+- Sons of the Culture Clash
+- South Arcade
+- Spike Fuck
+- Spin Doctors
+- Stand Atlantic
+- Stella Lefty
+- Stephen Lynch
+- Stereo MC's
+- Storm Seeker
+- Studentenfeest Media College
+- T & Sugah
+- TEAM RUSH HOUR XL
+- TONY JUNIOR PRESENTS
+- TX2
+- Talco
+- Tank and the Bangas
+- TeddyBear
+- The Chameleons
+- The Klittens - Klitfest
+- The Last Internationale
+- The Reytons
+- The Skints
+- The Toy Dolls
+- The Veils
+- Theory of a Deadman
+- Tia Gordon
+- Tonic Walter
+- Tonique & Man
+- Tyler Braden
+- Valley
+- Vessbroz presents: NOWRUZ – A New Beginning
+- Vikkstar
+- Vive La Fête
+- VroegZat
+- Wage War
+- Wanda
+- XXJULÍA / Jackie & The Facts
+- Zuco 103
+- almost monday
+- brakence
+- cleopatrick
+- gladde paling presenteert: VISSA
+- schoolfeest ALASCA
+
 ## gashouder.nl (26)
 
 - 2hollis
@@ -442,11 +694,10 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - WAT! for Dinner
 - Wim Naus en Lottie Boermans
 
-## doornroosje.nl (48)
+## doornroosje.nl (47)
 
 - 40UP
 - Ak’chamel
-- Bad Nerves
 - BeestFeest
 - Belle & Sebastian
 - Bertolf
@@ -516,17 +767,336 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Thomas van Luyn
 - Vrije Keuze Abonnement
 
-## kattendans.nl (9)
+## kattendans.nl (8)
 
 - Accordeonvereniging De Lustige Klanken
 - Bands & Slagwerkgroep Echo der Kempen
 - De Grote Jaren 80 Show
-- De Theatertroep
 - Harmonie Echo der Kempen
 - Hartstocht
 - Meester Mark
 - Toneelvereniging ’t Abele Spel
 - WensMuziek
+
+## munttheater.nl (11)
+
+- Aldenborghlezing en boekpresentatie: 500 jaar Pieter Bruegel - Een verborgen geschiedenis
+- Dansschool Fresh: De Magische Kerstster
+- LVO weert: Muziekgala
+- Rogstaekers Boonte Aovendj
+- Rogstaekers Boonte Femiliê Middig
+- Stichting Cultuur OpMaat en Harmonie St.-Joseph: Muziek Verbindt!
+- Stichting Rogstad: Code Napoleon
+- Sylvesterconcert: S(w)ing When You're Winning!: Harmonie St.-Joseph 1880 Weert
+- WOKMUZIEKTHEATER: MARTHA
+- Zegevieren met Manieren: Jan Jaap van Weering
+- the Ray-Stabbing Singers: Draadloos
+
+## maaspoort.nl (12)
+
+- Christmas in perfect harmony: Kon. Harmonie St. Cecilia Tegelen en mannenkoor de Meulezengers
+- Kabaret Młodych Panów w Venlo: Polish Events
+- Kookworkshop – Kerst – Peel en Maas: Silverfood Universum
+- Kookworkshop – Kerst – Venlo: Silverfood Universum
+- Kunstbende Limburg Voorronde: Kunstbende Limburg
+- Michelle van Tongerloo: Armoedeproblematiek en de gevolgen hiervan
+- Multi-ontmoeting ‘Zorg voor Elkaar’: Stichting Noemidia en Stichting Wachm
+- Open Repetitie | Hin und Her: Eva Custers
+- Tekstverslaafd: Open podium | Spoken word
+- The Living Room Workshops: By House of Vineyard + House of Confetti
+- Travel Through Time: Moord in Maaspoort
+- Venlo.fit sportgala 2026: Gemeente Venlo
+
+## plt.nl (18)
+
+- Bachs Weihnachtsoratorium: Heerlense Oratoriumvereniging
+- Chèvremonts Mannenkoor 1912: Kerstconcert
+- De Sjatkis: Leedjes en leidjes oet os sjtad
+- Fanfare St. Caecilia Schimmert: Jury aan Huis
+- Franciscus - De Familiemusical
+- Het Kerkraads Volkstoneel: Wits te wat v’r dunt? V’r junt!
+- Het Parkstad Limburg Sterreheim Buuttegala
+- Het Sittards KampsVanBaar Buuttegala
+- Het StreekTheater: Pension Siestermans
+- Internationale Vrouwendag Limburg 2027
+- Knipa meets Ploum
+- Oranjeconcert 2027: Harmonie St. Jozef Kaalheide
+- Philharmonie Bocholtz en Opera Compact: De Kracht van het Verhaal
+- Proms I Kirchroa: Koninklijk Kerkraads Mannenkoor St. Lambertus, Mannenkoor David en Chèvremonts Mannenkoor 1912
+- Studio Suus: Up in the Air
+- Vasteloavendskonzeët: Kerkraads Symfonie i.s.m. PLT & Kirchöatsjer Vasteloavends Verain
+- WATREMONT: Harmonie L’Union Born & Friends
+- ‘n Uurtje Kerst met PMK2019
+
+## theaterroermond.nl (11)
+
+- Bruisende Blaasmuziek
+- Johnny de Mol
+- Kerst in "de Royal"
+- Kienjermusical 2027
+- Lachenderwies
+- Mariska Bauer
+- Nieuwe Helden
+- Nieuwjaarsconcert
+- Rob Kemps
+- Simsala Saartje & het cijferstrand
+- The Best of Sven & Matthijs!
+
+## delamar.nl (13)
+
+- An evening with April: Een spelshow met variété en prijzen
+- Café DeLaMar met Cornald Maas: Een nieuwe culturele talkshow
+- Dominique Schreinemachers: Return to Base
+- Evi Hanssen: Bloedheet & tranen
+- Fred van Leer: Ik weet het eigenlijk niet
+- Jimmy Nelson: Through the Human Lens
+- Joep van Deudekom en Rob Urgert: De Verbinders!
+- Lieven Scheire: Robots
+- Lisa Loeb: Cabaretcollege: Fopfeminisme
+- Minder telefoon, meer leven: Hoe je afkickt van je smartphone
+- Raymond Mens: De Tussenstand in Amerika
+- Rob Kemps: Laat me niet alleen
+- Ruben Terlou & Jelle Brandt Corstius: Op reis door een nieuwe wereld
+
+## stadsschouwburg-utrecht.nl (18)
+
+- Berit Companjen, Fimme Bakker, Bob Koomen e.a.: Lachen met Volle Mond #3
+- Editie Blauw: Wijn & Spijs – Geuren en kleuren
+- Editie Geel: Wijn & Spijs – Geuren en kleuren
+- Editie Groen: Wijn & Spijs – Geuren en kleuren
+- Editie Wit: Wijn & Spijs – Geuren en kleuren
+- Editie Zwart: Wijn & Spijs – Geuren en kleuren
+- Gershwin Bonevacia: BLAUWZWART
+- Klimaatlezing door Peter Kuipers Munneke
+- L3B.AGENCY: L3B.BOOST & BITES: LOCK IN SEASON
+- Lijf & Brein: De Leercurve
+- Maxime Vandommele & wisselende makers: De Werkplaats #3
+- Maxime Vandommele & wisselende makers: De Werkplaats #4
+- Talent van het moment: The Future is Now #27
+- Talent van het moment: The Future is Now #28
+- Terug naar de toekomst: Voorproevers #2
+- Utrecht4GlobalGoals en Stadsschouwburg Utrecht: U-café #3: Woning gezocht
+- Utrechts Sprookjestheater: De Gelaarsde Kat
+- Verkennen Mars: Voorproevers #3
+
+## schouwburgconcertzaaltilburg.nl (204)
+
+- 20 jaar 3JS
+- 40 jaar Rowwen Hèze: Rhobijn
+- 75-jarig jubileum van de Efteling: Darkride
+- Alaa Shehada: The Bridge
+- Alex Agnew: No More Heroes
+- Amsterdam Sinfonietta & VOCES8: Birdsong
+- Amsterdam Sinfonietta: Kerst met John Holiday
+- Andries Tunru & Stefan Hendrikx: De nogal hyperbijzondere Tilburgse Oudejaars-improvisatie-extravaganza 2026
+- André Manuel: De Eenzame Ziel
+- Ara: Is Nothing Sacred Anymore?
+- Arie & Silvester: Breken de tent af!
+- Ashton Brothers: BROTHERS
+- Bas Erlings: Geef mij nu je angst
+- Beatrice de Graaf: Chaos in de Westerse wereld
+- Bee Gees by MainCourse: Fame, Family & Tragedy!
+- Bert Visscher & Martin van Waardenberg: The Sunshine Boys
+- Bertolf: Bluefinger Volume 2
+- Bureau Díptíc: Taalrondje in Tilburg
+- Buysse & Joosten: Guyland
+- Calefax & Joris Luyendijk: Joris Luyendijk in Calefaxland
+- Camerata RCO: Kamermuziek Souvenir
+- Cappella Amsterdam & Lavinia Meijer: Philip Glass wordt 90!
+- Cecilia Moisio Company: AN(I'M)A
+- Charly Luske: The Story of George Michael
+- Clean Pete: Klassieke Revue
+- Collectief BLAUWDRUK: LAATSTE KAARTEN
+- Comedytunes: Comedynight in de Studio
+- Compagnie Tiuri: Nothing Left On Blue
+- Conny Janssen Danst: BEHIND THE WALL
+- DE BESTORMING: Willem Voogd, Marisa van Eyle & Kharim Amier
+- Daan van der Hoeven: Mensenmens
+- Dana Winner: Hartstroom
+- Danny Vera: SINCE 1977
+- David van Rosmalen: Als ik jou was
+- Dawn Brothers & Friends: 50 Years The Last Waltz
+- De Niemanders: Cafe Habibi
+- De Règâhs: Groeten uit Den Haag
+- De Tafel van Martinus: Wetenschapstalkshow Tilburg University
+- De Verbouwing: Naar het boek van Saskia Noort
+- De Verleiders: Zoek Dekking
+- De Warme Winkel: Hamlet: R2D2_or_not_2B2
+- De toestand in de wereld volgens Harm Edens
+- Deutsche Kammerakademie Neuss am Rhein & Isabelle van Keulen: Vivaldi Recomposed
+- Diamond Baritones: The Circle of Life
+- Doetertoe Fist (12 t/m 17): i.s.m. Carnavalsstichting Tilburg
+- Dolf Jansen: Schaamteloos - Oudejaars 2026
+- Dry Land & Marquee Square Heroes: A Night of Marillion - Where Fish meets Hogarth
+- Duo Resonair: Lunchconcert
+- Ensemble Ouranos: Kamermuziek Souvenir
+- Estonian Philharmonic Chamber Choir: Meesterwerken van de moderne koorkunst
+- Euregio Jeugdorkest: IN ORBIT
+- Euregio Jeugdorkest: ROYAAL
+- Faulty Towers: The Dining Experience
+- Fee Suzanne de Ruiter: Melancholia
+- Fimme Bakker: Zwaargewicht
+- Firma Frictie: I’ll be your daddy
+- Flip Noorman: Bonobo
+- Fuse & Kinan Azmeh: FREE
+- Gerard van Maasakkers: Solo
+- Guido Belcanto: Paviljoen der Menselijke Driften
+- Hadewych van Gent: Resonanties
+- Her Majesty: Neil Young & Crazy Horse
+- Hermes Ahmadi: Welkom
+- Het Groot Tilburgs Schrobbelèrontbijt: Een stevige bodem in Kruikenstad-stijl
+- Het Zuidelijk Toneel: Nothing But The Truth
+- Het Zuidelijk Toneel: Vondels Angels
+- Het uur van de waarheid: Stefan de Walle, Donny Ronny, Bilal El Aoumari e.a.
+- Hooverphonic & Noémie Wolfs: 30 Year Anniversary
+- Huib Modderkolk: In De Digitale Loopgraven
+- ISH Dance Collective: DJANGAN!
+- ITA: Wuthering Heights
+- Igone de Jongh: Masterclass
+- Introdans: KYLIAN
+- Introdans: Swan Lake
+- Jaco Benckhuijsen & ADAM Quartet: IJS
+- Jade Mintjens: Bedankt om te komen
+- Jakop Ahlbom Company: A Fine Mess
+- Jan Verweij: Reeks Filosofische Gesprekken: Macht
+- Jan Verweij: Reeks Filosofische Gesprekken: Verantwoordelijkheid
+- Jan Verweij: Reeks Filosofische Gesprekken: Vrijheid
+- Jan-Willem Rozenboom, JW Roy & Guus Meeuwis: Rozenboom Invites
+- Jeanine de Bique & Maarten Engeltjes: Royals In Love
+- Jeroen Leenders: Heiden
+- Jeugdorkest Nederland: Casual Classics
+- Johnny de Mol: Goed dat jij bestaat!
+- Joosen en de Jager: Niks aan het handje
+- Joël Borelli: Joie de Vivre
+- Jules Keeris: Knegsel-Zuid
+- K.V. De Fènpruuvers: Leuterconcours 2027
+- Kamagurka: Op zekere dag
+- Kamerata Zuid & André Kuipers: Een muzikale ruimtereis
+- Kamerata Zuid & Francis van Broekhuizen: Grijs Gedraaid
+- Karin Bloemen: Renaissance 2.0
+- Karin Dirkx: Wa wilde dèk zeg?
+- Kasper van der Laan: Ruim
+- Klaas van der Eerden: Imperfect
+- Kommil Foo: Babel
+- Kouwvoetenfist: Feest in de Kruikenstudio
+- Krasse Kruiken Karnaval: i.s.m. KV De Flepsteppers
+- Krezip: Theatertour
+- Kyella: Lunchconcert
+- Lang Leve Annie M.G.: Suzan Seegers, Nandi van Beurden & Job Bovelander
+- Lebbis: Satan is moe
+- Leon van der Zanden: Try-out Special
+- Lets Radiokoor: Kanon Pokajanen
+- Lisa Ostermann: De Baas
+- Lonne Gosling: Morgen Weer Een Dag
+- Luuk Ransijn: Uitkijk
+- MATZER: Broos
+- MICHAEL STARRING BEN: 30 jaar Blood on the Dance Floor
+- Makershuis Tilburg: PreJaVu
+- Marco Schuitmaker: Recht uit het hart
+- Marie Koet: Eindspel
+- Marsyas Baroque: Bach in the Dark
+- Martijn Crins: Kooiapen
+- Martin String Quartet: Quartet is a Circle
+- Merijn Scholten: LEMMING
+- Merijn van de Laar: De Slaapwetenschapper
+- Mnozil Brass: Strau$$
+- Myrte Siebinga: GELUKKIG MAAR
+- Nabil: Daar is hij weer!
+- Nederlands Blazers Ensemble: Rasa & Raga
+- Nederlands Kamerorkest & Ivo Pogorelić: Chopins Pianoconcert nr. 2 & Mozarts Symfonie nr. 40
+- Nederlandse Bachvereniging: Magnificat
+- Nelson Goerner: Kamermuziek Souvenir
+- New European Ensemble & Elaine Mitchener: Mavericks 3: Visions
+- Next to Normal: Willemijn Verkaik, Edwin Jonker e.a.
+- Nhung Dam: Legende van de witte slang
+- Niek Barendsen & Michiel Nooter: Vrienden van Dorothy
+- Nieuwjaarsconcert: Verrassende Ontmoetingen
+- Nora: Waldemar Torenstra, Judith Noyons e.a.
+- OM en OM en OM (1,5+): Het Laagland
+- Ogham: St. Patricks Day
+- Opera Zuid: Frau Luna
+- Orkater: Een tijd van liefde
+- Ozark Henry: Theatertour
+- Paddington Trio: Kamermuziek Souvenir
+- Panama Pictures: Don't despair
+- Patrick Laureij: Kintsugi.
+- Pavel Haas Quartet: Kamermuziek Souvenir
+- PechaKucha Night Tilburg: #36
+- PechaKucha Night Tilburg: #37
+- Philzuid: Debussy's La Mer
+- Philzuid: Nieuwjaarsconcert
+- Philzuid: Zicht op de zee van Britten en Elgar
+- Philzuid: Zomer met Barber en Copland
+- Piaf: Suzan Seegers, Julia Berendse e.a.
+- Pip Utton: Trump
+- PubQuiz: Bij Benee
+- Pynarello: Romani!
+- RATATATATA!: Theo Maassen, Ilse Warringa, Plien & Bianca e.a.
+- Ralph van Raat, Rosanne Philippens & Laura Bohn: Adams, Reich & Glass
+- Raymi Sambo Maakt: Wachten op Marsha
+- Recirquel: Paradisum
+- Remy van Kesteren: THREADS
+- Richard Groenendijk: Gelukkig heb je mij nog
+- Ricky Risolles 3: Niet zo Indiscreet…
+- Rob Kemps: Laat me niet alleen
+- Rob Scheepers: Scheepers op z’n scherpst
+- Robin Scherpen: Memory & Traces
+- Ronald Goedemondt: Mijn Lieve Achterdocht
+- Rouwen en Vieren Tilburg: Tim Hobbelman, Karin Laureijssen & Janine Cloosterman
+- Rundfunk: Wagyu
+- SCT-XL met Marieke Liem en Filomena: Femicide: Feiten en Fabels
+- Salvador Sobral: A Flor do Recomeço
+- Selma Visscher: Trekvogel
+- Sherlock Holmes: Mark Rietman, Ferdi Stofmeel e.a.
+- Smells Like Nirvana: MTV Sessions
+- Soluna Duo: Lunchconcert
+- Sophie Anna Veelenturf | BERLIN: Swiping Right
+- Spark & Valer Sabadus: Kamermuziek Souvenir
+- Speels Collectief: IK BEN KAMER 15
+- Spraakmakers: Georgina Verbaan & Jan Decleir
+- Stephanie Struijk: Altijd En Nooit
+- Stoornis of my Life: Alex Klaasen e.a.
+- Tafel van Vijf Muziektheater: Mata Hari Returns
+- The Bellow Project: Lunchconcert
+- The Bodyguard: Gaia Aikman, Dorian Bindels e.a.
+- The Gesualdo Six & Matilda Lloyd: Radiant Dawn
+- The Kik: Hertaalt The Beatles (1962-1966)
+- The Ruggeds: Adrenaline
+- Theatergroep Aluin: Moeder aarde
+- Thomas van Luyn: Super Normaal
+- Tineke Schouten: Femme Vitaal
+- Tom America: Iemand met zo weinig talent
+- Tommy Wieringa & Jaap Scholten: Naar het front in Oekraïne
+- Toneelgroep Maastricht: De erfenis
+- Trio Con Brio Copenhagen: Kamermuziek Souvenir
+- VOCES8: Kamermuziek Souvenir
+- Van Vleuten en Van Muiswinkel: Alles Onder Controle
+- Van der Laan & Woe: Dinsdagmiddag
+- Verrassende Ontmoetingen: Herfstconcert
+- Via Rudolphi Producties | Collectief T&T: De Belangelozen
+- WArd/waRD | Ann Van den Broek: Facing Transitions
+- We Lusse Ze Gruun!: Frank van Pamelen e.a.
+- Wibi Soerjadi: Jubileumconcert
+- Wina Ricardo: Wina's Wereld
+- Wishful Singing: Metropolis
+- Yentl en de Boer: De Dagen
+- Young Classics: by Kamerata Zuid
+- ZIJ & Aron Elstak: MATCH
+- Zemlinsky Quartet & Lisa Larson: Kamermuziek Souvenir
+- het zuid land: Lucky Blue
+- laGeste | Stereo48: Badke(remix)
+
+## musisenstadstheater.nl (9)
+
+- Hommage aan Ramses Shaffy & Liesbeth List: Laat me
+- Johan Luijmes, orgel: Eusebius - Tweede Kerstdag 2026
+- Johan Luijmes, orgel: Eusebius - Tweede Paasdag 2027
+- Johan Luijmes: Zondagmiddagconcert  nr.  2 - Eusebiuskerk
+- Johan Luijmes: Zondagmiddagconcert  nr.  3 - Eusebiuskerk
+- Johan Luijmes: Zondagmiddagconcert  nr.  4 - Eusebiuskerk
+- Lente!: Pianoduo Scholtes & Janssens
+- Melancholia: Fee Suzanne de Ruiter
+- Mimetheatergroep Bambie: Bambie speelt Bambi
 
 ## ing.arena.brussels (3)
 

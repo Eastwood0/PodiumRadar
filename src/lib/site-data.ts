@@ -66,9 +66,10 @@ export interface SiteData {
   sources: SiteSource[];
 }
 
-/** As written to agenda.json: acts and source page may be left out (see expandSiteData). */
-export type CompactSiteEvent = Omit<SiteEvent, "a" | "p"> & { a?: string[]; p?: string };
-export type CompactSiteData = Omit<SiteData, "events"> & { events: CompactSiteEvent[] };
+/** As written to agenda.json: no id (the browser numbers the events), acts and source page may be left out (see expandSiteData). */
+export type CompactSiteEvent = Omit<SiteEvent, "a" | "p" | "id"> & { a?: string[]; p?: string };
+/** `more`: file with the events after the first part (see splitSiteData). */
+export type CompactSiteData = Omit<SiteData, "events"> & { events: CompactSiteEvent[]; more?: string };
 
 const STATUS: Record<Event["status"], StatusCode> = { gepland: "", uitverkocht: "u", verplaatst: "v", geannuleerd: "g" };
 
@@ -85,8 +86,8 @@ export function buildSiteData(
     venues: venues.map((v) => ({ id: v.id, n: v.name, city: v.city, cc: v.country, tier: v.tier, ...(v.website ? { web: v.website } : {}), ...(!used.has(v.id) && NO_SOURCE[v.id] ? { ns: NO_SOURCE[v.id] } : {}) })),
     events: events
       .filter((e) => e.venueId && used.has(e.venueId))
+      .sort((a, b) => a.start.localeCompare(b.start))
       .map((e) => ({
-        id: e.id,
         t: e.title,
         // Left out when the only act is the title itself, and "Concert" is the default kind: see expandSiteData.
         ...(e.artists.length === 1 && e.artists[0].name === e.title ? {} : { a: e.artists.map((x) => x.name) }),
@@ -110,13 +111,28 @@ export function buildSiteData(
 }
 
 /**
+ * Splits the agenda in two files (B48): the first `days` days, which the first screen needs, and the rest, which
+ * the browser loads right after. Keeps the first download small on a slow phone connection (Lighthouse LCP).
+ */
+export function splitSiteData(site: CompactSiteData, moreFile: string, days = 60): { first: CompactSiteData; rest: { events: CompactSiteEvent[] } } {
+  const cut = new Date(Date.parse(site.generatedAt) + days * 86_400_000).toISOString().slice(0, 10);
+  const near = site.events.filter((e) => e.s.slice(0, 10) < cut);
+  const later = site.events.filter((e) => e.s.slice(0, 10) >= cut);
+  return { first: { ...site, events: near, ...(later.length ? { more: moreFile } : {}) }, rest: { events: later } };
+}
+
+/**
  * The file leaves out what can be filled in again (acts equal to the title, kind "Concert", the source page
  * when it is the ticket link): about a fifth smaller, so phones parse it faster. The browser calls this once.
  */
-export function expandSiteData(raw: CompactSiteData): SiteData {
+export function expandSiteData(raw: CompactSiteData, more: CompactSiteEvent[] = []): SiteData {
   return {
-    ...raw,
-    events: raw.events.map((e) => ({ ...e, a: e.a ?? [e.t], g: e.g ?? (e.c === "m" ? "Concert" : undefined), p: e.p ?? e.u })),
+    generatedAt: raw.generatedAt,
+    baseline: raw.baseline,
+    venues: raw.venues,
+    sources: raw.sources,
+    // Ids are positions: both files are sorted by date, so the first part keeps its ids when the rest is added.
+    events: [...raw.events, ...more].map((e, i) => ({ ...e, id: `e${i}`, a: e.a ?? [e.t], g: e.g ?? (e.c === "m" ? "Concert" : undefined), p: e.p ?? e.u })),
   };
 }
 

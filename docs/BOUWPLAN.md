@@ -2,7 +2,7 @@
 
 > Werktitel: **Podiumradar**. Versie 0.10 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
-> Wijzigingen 0.9 → 0.10 (26 nov 2026): fase 3 uitgewerkt zonder inlog en zonder Ticketmaster (B42–B44), theaters (B45), Melkweg/Paradiso via Uit in Amsterdam (B46), Crawl-delay (B47).
+> Wijzigingen 0.9 → 0.10 (26 nov 2026): fase 3 uitgewerkt zonder inlog en zonder Ticketmaster (B42–B44), theaters (B45), Melkweg/Paradiso via Uit in Amsterdam (B46), Crawl-delay (B47), agenda in twee delen (B48).
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
 > Wijzigingen 0.3 → 0.4: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
 > Wijzigingen 0.2 → 0.3: verificaties fase 0 verwerkt (B15–B17, §17); `verified`-veld in Venue.
@@ -340,6 +340,7 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B45 | Theaters (B41) gebouwd: Munttheater, Maaspoort, Theater Heerlen + Theater Kerkrade + Toon Hermans Theater (één site, PLT), De Oranjerie (nieuwe site theaterroermond.nl), Carré, DeLaMar, Stadsschouwburg Utrecht, Schouwburg & Concertzaal Tilburg, Musis & Stadstheater, Theater Rotterdam (via Uitagenda Rotterdam). Geen bron: Parktheater (botcontrole), Theater aan het Vrijthof (zoekapp), Chassé (403, geen stadsagenda) | Verzoek Ralf 26 nov 2026; Kerkrade en Sittard horen bij dezelfde PLT-site en liggen in Limburg (B41) |
 | B46 | Melkweg (tweede bron naast B37) en Paradiso via "Uit in Amsterdam" (iamsterdam.com, officiële stadsagenda): alleen de rubrieken concerten en nachtleven met `?page=`, zoals robots.txt toestaat. De GraphQL-sleutel in Paradiso's eigen site wordt niet gebruikt | B23/B34-route; Melkweg stond op 0 events door de botcontrole. Paradiso via deze bron is onvolledig (±57 shows) |
 | B47 | De ophaler volgt `Crawl-delay` uit robots.txt (max 10 s) | Netjes gebruik (§14); o.a. Visit Groningen vraagt 2 s |
+| B48 | De agenda gaat in twee bestanden naar de browser: `agenda.json` met de komende 60 dagen (eerste scherm) en `agenda-later.json` met de rest, direct daarna geladen. Events krijgen geen id meer in het bestand (de browser nummert ze) | Met de theaters groeide het bestand naar 6.000 events / 337 kB gecomprimeerd en zakte Lighthouse mobiel naar 87–89; de id's alleen waren 80 kB. Vervangt het "één bestand" uit B29 |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

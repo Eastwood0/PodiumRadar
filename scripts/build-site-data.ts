@@ -4,7 +4,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import type { Event } from "../src/lib/schema";
-import { buildSiteData } from "../src/lib/site-data";
+import { buildSiteData, splitSiteData } from "../src/lib/site-data";
 import { loadVenues } from "../src/lib/venues";
 
 const read = <T>(p: string, f: T): T => (existsSync(p) ? (JSON.parse(readFileSync(p, "utf8")) as T) : f);
@@ -12,7 +12,10 @@ const { events, generatedAt } = read<{ events: Event[]; generatedAt?: string }>(
 const { sources } = read<{ sources: Record<string, { ok: boolean; count: number; lastSuccess?: string; venues: string[] }> }>("data/status.json", { sources: {} });
 
 const site = buildSiteData(events, loadVenues(), sources, generatedAt ?? new Date(0).toISOString());
+// First part (next 60 days) for the first screen, the rest in a second file the page loads right after (B48).
+const { first, rest } = splitSiteData(site, "data/agenda-later.json");
 mkdirSync("public/data", { recursive: true });
-const json = JSON.stringify(site);
+const json = JSON.stringify(first);
 writeFileSync("public/data/agenda.json", json);
-console.log(`public/data/agenda.json: ${site.events.length} events, ${Math.round(json.length / 1024)} kB`);
+writeFileSync("public/data/agenda-later.json", JSON.stringify(rest));
+console.log(`public/data/agenda.json: ${first.events.length} events, ${Math.round(json.length / 1024)} kB; agenda-later.json: ${rest.events.length} events`);
