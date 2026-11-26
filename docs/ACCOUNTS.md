@@ -49,6 +49,11 @@ Vanaf nu zet Cloudflare elke wijziging op main automatisch online, ook de nieuwe
 
 Let op: Cloudflare maakt hier tegenwoordig een "Worker" van met als deploy-opdracht `npx wrangler deploy`. Dat is goed: het bestand `wrangler.jsonc` in de repo zegt dat alleen de map `dist` online moet (statische site, geen code op de server). Laat de deploy-opdracht zoals hij is.
 
+Geen adres te zien ("no URL enabled")? Controleer dan:
+1. **Deployments**: de laatste poging moet groen zijn (anders **Retry deployment**).
+2. **Settings → Domains & Routes**: zet **workers.dev** aan (`wrangler.jsonc` vraagt dit ook met `"workers_dev": true`).
+3. Vraagt Cloudflare om een **workers.dev-subdomein** voor je account: kies er één (bijv. je naam). Het adres wordt dan `podiumradar.<subdomein>.workers.dev`.
+
 ## 5. Cloudflare: database voor de koppelcodes (vóór fase 3, volgt nog)
 
 Claude Code geeft je in fase 3 de exacte stappen; globaal gaat het om:
