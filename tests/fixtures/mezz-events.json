@@ -1,0 +1,160 @@
+[
+ {
+  "id": 25100,
+  "date": "2026-05-27T11:45:44",
+  "date_gmt": "2026-05-27T09:45:44",
+  "guid": {
+   "rendered": "https://www.mezz.nl/?post_type=wp_theatre_event&#038;p=25100"
+  },
+  "modified": "2026-11-26T11:35:04",
+  "modified_gmt": "2026-11-26T10:35:04",
+  "slug": "25100",
+  "status": "publish",
+  "type": "wp_theatre_event",
+  "link": "https://www.mezz.nl/wp_theatre_event/25100/",
+  "template": "",
+  "categories": [
+   25
+  ],
+  "tags": [
+   297,
+   44,
+   58
+  ],
+  "class_list": [
+   "post-25100",
+   "wp_theatre_event",
+   "type-wp_theatre_event",
+   "status-publish",
+   "hentry",
+   "category-concert",
+   "tag-electropop",
+   "tag-hiphop",
+   "tag-nederlandstalig"
+  ],
+  "acf": [],
+  "event": {
+   "divider": false,
+   "start": "26 november 2026",
+   "start_date": "november",
+   "short_description": "Een absurde mix van Nederlandstalige pop, hiphop en elektronische muziek.",
+   "remark": "+ zoef | TURF x MEZZ",
+   "status": "Laatste kaarten",
+   "ticket_url_iframe": "https://www.mezz.nl/event/prinssendegeit/25100"
+  },
+  "prod": {
+   "title": "Prins S. en De Geit",
+   "image": "https://www.mezz.nl/assets/uploads/2026/05/Prins-S.-en-De-Geit_header.jpg",
+   "link": "https://www.mezz.nl/programma/prinssendegeit/",
+   "sticker_status": false,
+   "sticker": "",
+   "highlight": false
+  }
+ },
+ {
+  "id": 25372,
+  "date": "2026-07-17T15:00:31",
+  "date_gmt": "2026-07-17T13:00:31",
+  "guid": {
+   "rendered": "https://www.mezz.nl/?post_type=wp_theatre_event&#038;p=25372"
+  },
+  "modified": "2026-11-26T11:45:23",
+  "modified_gmt": "2026-11-26T10:45:23",
+  "slug": "25372",
+  "status": "publish",
+  "type": "wp_theatre_event",
+  "link": "https://www.mezz.nl/wp_theatre_event/25372/",
+  "template": "",
+  "categories": [
+   433,
+   25
+  ],
+  "tags": [
+   595,
+   88,
+   596
+  ],
+  "class_list": [
+   "post-25372",
+   "wp_theatre_event",
+   "type-wp_theatre_event",
+   "status-publish",
+   "hentry",
+   "category-by-night",
+   "category-concert",
+   "tag-alternatieve-elektronica",
+   "tag-elektronica",
+   "tag-melodieuze-techno"
+  ],
+  "acf": [],
+  "event": {
+   "divider": false,
+   "start": "27 november 2026",
+   "start_date": "november",
+   "short_description": "Een avond ongefilterde dansdrang vol betoverende elektronica met warme, melancholische vocalen.",
+   "remark": "+ KROON / TURF x MEZZ",
+   "status": "_soldout",
+   "ticket_url_iframe": "https://www.mezz.nl/event/weval/25372"
+  },
+  "prod": {
+   "title": "WEVAL",
+   "image": "https://www.mezz.nl/assets/uploads/2026/07/Weval_header.jpg",
+   "link": "https://www.mezz.nl/programma/weval/",
+   "sticker_status": true,
+   "sticker": "tips",
+   "highlight": false
+  }
+ },
+ {
+  "id": 24983,
+  "date": "2026-05-19T10:45:09",
+  "date_gmt": "2026-05-19T08:45:09",
+  "guid": {
+   "rendered": "https://www.mezz.nl/?post_type=wp_theatre_event&#038;p=24983"
+  },
+  "modified": "2026-11-25T16:26:55",
+  "modified_gmt": "2026-11-25T15:26:55",
+  "slug": "24983",
+  "status": "publish",
+  "type": "wp_theatre_event",
+  "link": "https://www.mezz.nl/wp_theatre_event/24983/",
+  "template": "",
+  "categories": [
+   25
+  ],
+  "tags": [
+   53,
+   302,
+   41
+  ],
+  "class_list": [
+   "post-24983",
+   "wp_theatre_event",
+   "type-wp_theatre_event",
+   "status-publish",
+   "hentry",
+   "category-concert",
+   "tag-folk",
+   "tag-folkrock",
+   "tag-singer-songwriter"
+  ],
+  "acf": [],
+  "event": {
+   "divider": false,
+   "start": "16 december 2026",
+   "start_date": "december",
+   "short_description": "De grootmeester van de akoestische gitaar die folk-traditie mixt met rock-energie en bloedstollend mooie verhalen. ",
+   "remark": "Chassé x MEZZ",
+   "status": "tickets via Chassé",
+   "ticket_url_iframe": "https://www.mezz.nl/event/luka-bloom-2/24983"
+  },
+  "prod": {
+   "title": "Luka Bloom",
+   "image": "https://www.mezz.nl/assets/uploads/2026/05/Luka-Bloom_header.jpg",
+   "link": "https://www.mezz.nl/programma/luka-bloom-2/",
+   "sticker_status": true,
+   "sticker": "breda",
+   "highlight": true
+  }
+ }
+]

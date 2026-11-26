@@ -18,6 +18,7 @@ import { lanxessArena } from "./lanxess-arena";
 import { patronaat } from "./patronaat";
 import { pinkpop } from "./pinkpop";
 import { melkweg } from "./melkweg";
+import { mezz } from "./mezz";
 import { rudolfWeberArena } from "./rudolf-weber-arena";
 import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
 import { sparkassenpark } from "./sparkassenpark";
@@ -58,6 +59,7 @@ export const ADAPTERS: Adapter[] = [
   pinkpop,
   doornroosje,
   bosuil,
+  mezz,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

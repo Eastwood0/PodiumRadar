@@ -370,3 +370,14 @@ describe("De Bosuil (HTML programme with month headings)", async () => {
     expect(ev[1]).toMatchObject({ venueId: "de-bosuil", title: "The Fortunate Sons", start: "2026-11-28T12:00:00+01:00", status: "uitverkocht", sourceCategory: "Rock" });
   });
 });
+
+describe("Mezz (own WordPress API)", async () => {
+  const { parseMezz } = await import("../scripts/adapters/mezz");
+  const ev = parseMezz(fixture("mezz-events.json"));
+  it("reads Dutch dates, status and genre tags; skips shows in the Chassé theatre", () => {
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "mezz", title: "Prins S. en De Geit", start: "2026-11-26T12:00:00+01:00", hasTime: false, url: "https://www.mezz.nl/programma/prinssendegeit/", sourceId: "25100" });
+    expect(ev[0].sourceCategory).toContain("hiphop");
+    expect(ev[1].status).toBe("uitverkocht");
+  });
+});
