@@ -2,7 +2,10 @@ import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FilterBar } from "./FilterBar";
-import { applyFilters, type Filters, formatDate, formatDateTime, slug } from "./lib";
+import { Flag } from "./EventCard";
+import { applyFilters, type Filters, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
+
+const STATUS = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 
 type Common = { data: SiteData; venues: Map<string, SiteVenue> };
 
@@ -11,43 +14,70 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
   const events = useMemo(() => applyFilters(data.events, venues, filters), [data, venues, filters]);
   return (
     <>
-      <PageHead kicker="Agenda" title="Alles wat eraan komt" />
+      <PageHead title="Agenda" sub="Alle concerten van de komende twaalf maanden. Zet de schakelaar aan om ook shows, sport en beurzen te zien." />
       <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: true, month: true }} months={months} count={events.length} />
       <EventList key={JSON.stringify(filters)} events={events} venues={venues} data={data} empty={<p>Geen events met deze filters. Zet “Ook shows, sport en beurzen” aan of wis de filters.</p>} />
     </>
   );
 }
 
-/** Screen 3: every show of one artist in the venue agendas. Following and "Elders" arrive in phase 3. */
+const COUNTRY_NAME = { NL: "Nederland", BE: "België", DE: "Duitsland", GB: "het Verenigd Koninkrijk", FR: "Frankrijk" } as const;
+const joinNl = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} en ${xs.at(-1)}`);
+
+/** Screen 3: every show of one artist, printed like the tour dates on the back of a tour shirt. */
 export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: string }) {
   const events = useMemo(() => data.events.filter((e) => e.a.some((a) => slug(a) === artistSlug)), [data, artistSlug]);
   const name = events[0]?.a.find((a) => slug(a) === artistSlug) ?? artistSlug.replace(/-/g, " ");
-  const countries = new Set(events.map((e) => venues.get(e.v)?.cc));
+  if (!events.length)
+    return (
+      <section className="tour">
+        <h1 className="tour__name">{name}</h1>
+        <div className="empty">
+          <p>{name} staat nu in geen enkele agenda van de zalen op Podiumradar.</p>
+          <p>Straks kun je artiesten volgen; dan zie je het zodra er een show bijkomt.</p>
+        </div>
+      </section>
+    );
+  const countries = [...new Set(events.map((e) => venues.get(e.v)!.cc))].map((cc) => COUNTRY_NAME[cc]);
+  const years = [...new Set(events.map((e) => parts(e.s).y))];
   return (
-    <>
-      <PageHead
-        kicker="Artiest"
-        title={name}
-        sub={
-          events.length
-            ? `${events.length} ${events.length === 1 ? "show" : "shows"} in ${countries.size === 1 ? "één land" : `${countries.size} landen`} · eerstvolgende ${formatDate(events[0].s)}`
-            : undefined
-        }
-      />
-      <EventList
-        events={events}
-        venues={venues}
-        data={data}
-        empty={
-          <>
-            <p>
-              <strong>{name}</strong> staat nu in geen enkele agenda van de zalen op Podiumradar.
-            </p>
-            <p>Later kun je artiesten volgen; dan zie je het zodra er een show bijkomt.</p>
-          </>
-        }
-      />
-    </>
+    <section className="tour" aria-labelledby="tour-h">
+      <h1 id="tour-h" className="tour__name">
+        {name}
+      </h1>
+      <p className="tour__sub">
+        Live in {joinNl(countries)}, {years.length > 1 ? `${years[0]}–${years.at(-1)}` : years[0]}
+      </p>
+      <ol className="tour__dates">
+        {events.map((e) => {
+          const v = venues.get(e.v)!;
+          const p = parts(e.s);
+          const support = e.a.length > 1 || e.a[0] !== name ? e.t : "";
+          return (
+            <li key={e.id} className={e.st === "g" ? "is-cancelled" : undefined}>
+              <time dateTime={e.s} className="tour__date">
+                {p.d} {monthShort(p.m)} {p.y}
+              </time>
+              <span className="tour__city">{v.city}</span>
+              <span className="tour__venue">
+                <a href={venueHref(v.id)}>{v.n}</a>
+                {support && <span className="tour__bill"> ({support})</span>}
+                {e.st && <span className={`tag tag--${e.st}`}>{STATUS[e.st]}</span>}
+                {isNew(e, data) && <span className="tag tag--new">Nieuw</span>}
+              </span>
+              {e.st !== "g" && (
+                <a className="tour__tix" href={e.u} target="_blank" rel="noopener noreferrer">
+                  Tickets<span className="sr-only">
+                    {" "}
+                    voor {formatDate(e.s)} in {v.n} (opent de site van de verkoper)
+                  </span>
+                </a>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   );
 }
 
@@ -60,11 +90,16 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
   const source = data.sources.find((s) => s.venues.includes(id));
   return (
     <>
-      <PageHead kicker={`${v.city} · ${v.cc === "NL" ? "Nederland" : v.cc === "BE" ? "België" : "Duitsland"}${v.tier === "B" ? " · middelgrote zaal" : ""}`} title={v.n} />
+      <PageHead title={v.n}>
+        <p className="sub">
+          <Flag cc={v.cc} /> {v.city}, {COUNTRY_NAME[v.cc]}
+          {v.tier === "B" ? ". Middelgrote zaal" : ""}
+        </p>
+      </PageHead>
       <div className="venuebar">
         {v.web && (
           <a className="btn" href={v.web} target="_blank" rel="noopener noreferrer">
-            Officiële site<span className="sr-only"> van {v.n}</span>
+            Naar de site van {v.n}
           </a>
         )}
         {all.length > 0 && (
@@ -100,7 +135,7 @@ export function Sources({ data, venues }: Common) {
   const noSource = data.venues.filter((v) => v.ns);
   return (
     <>
-      <PageHead kicker="Bronnen" title="Waar de agenda vandaan komt" sub="Elke nacht leest Podiumradar de officiële agenda's van de zalen. Tickets koop je altijd bij de zaal of de verkoper die zij noemen." />
+      <PageHead title="Bronnen" sub="Elke nacht leest Podiumradar de officiële agenda's van de zalen. Tickets koop je altijd bij de zaal of de verkoper die zij noemen." />
       <ul className="srclist" aria-label="Bronnen met status">
         {data.sources.map((s) => (
           <li key={s.name}>
@@ -130,7 +165,7 @@ export function Sources({ data, venues }: Common) {
 export function NotFound() {
   return (
     <>
-      <PageHead kicker="Niet gevonden" title="Deze pagina bestaat niet" />
+      <PageHead title="Deze pagina bestaat niet" />
       <p>
         <a href="#overzicht">Terug naar het overzicht</a>
       </p>
@@ -138,12 +173,12 @@ export function NotFound() {
   );
 }
 
-export function PageHead({ kicker, title, sub }: { kicker: string; title: string; sub?: string }) {
+export function PageHead({ title, sub, children }: { title: string; sub?: string; children?: React.ReactNode }) {
   return (
     <header className="pagehead">
-      <p className="kicker">{kicker}</p>
       <h1 className="h1">{title}</h1>
       {sub && <p className="sub">{sub}</p>}
+      {children}
     </header>
   );
 }

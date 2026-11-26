@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { applyFilters, artistIndex, DEFAULT_FILTERS, formatDate, formatTime, isNew, level, monthKey, monthsFrom, parseRoute, slug } from "../src/app/lib";
+import { applyFilters, artistIndex, bill, DEFAULT_FILTERS, formatDate, formatTime, isNew, level, monthKey, monthsFrom, parseRoute, slug } from "../src/app/lib";
 import { createSearch } from "../src/app/search";
 import type { Event, Venue } from "../src/lib/schema";
-import { buildSiteData, type SiteEvent, type SiteVenue } from "../src/lib/site-data";
+import { buildSiteData, type SiteEvent, type SiteVenue, toLocalIso } from "../src/lib/site-data";
 
 const ev = (over: Partial<SiteEvent>): SiteEvent => ({ id: "1", t: "Band", a: ["Band"], v: "ziggo-dome", s: "2027-03-13T20:00:00+01:00", h: 1, st: "", c: "m", u: "https://x.example/t", p: "https://x.example/p", f: "2026-11-25", ...over });
 const venue = (id: string, cc: SiteVenue["cc"], tier: SiteVenue["tier"] = "A"): SiteVenue => ({ id, n: id, city: "Stad", cc, tier });
@@ -127,5 +127,39 @@ describe("buildSiteData", () => {
   });
   it("uses the earliest firstSeen as baseline", () => {
     expect(site.baseline).toBe("2026-11-20");
+  });
+});
+
+describe("toLocalIso", () => {
+  it("writes Amsterdam wall-clock time with the right offset for summer and winter", () => {
+    expect(toLocalIso("2027-07-31T22:30:00Z")).toBe("2027-08-01T00:30:00+02:00");
+    expect(toLocalIso("2027-01-10T19:00:00Z")).toBe("2027-01-10T20:00:00+01:00");
+    expect(toLocalIso("2027-03-13T20:00:00+01:00")).toBe("2027-03-13T20:00:00+01:00");
+  });
+  it("gives the same day and weekday as the slow formatter", () => {
+    expect(formatDate(toLocalIso("2027-07-31T22:30:00Z"))).toBe("zo 1 aug 2027");
+  });
+});
+
+describe("bill (opening poster)", () => {
+  const venues = new Map([venue("ziggo-dome", "NL"), venue("lanxess-arena", "DE"), venue("effenaar", "NL", "B")].map((v) => [v.id, v]));
+  const at = (d: string) => `2026-${d}T20:00:00+01:00`;
+  const events = [
+    ev({ id: "1", a: ["Muse"], s: at("11-29") }),
+    ev({ id: "2", a: ["Muse"], s: at("11-30") }),
+    ev({ id: "3", a: ["Westlife"], v: "lanxess-arena", s: at("11-26") }),
+    ev({ id: "4", a: ["Kensington"], s: at("12-03") }),
+    ev({ id: "5", a: ["Davina Michelle"], v: "effenaar", s: at("12-02") }),
+    ev({ id: "6", a: ["Cirque"], c: "o", s: at("12-01") }),
+    ev({ id: "7", a: ["Prodigy"], st: "g", s: at("11-28") }),
+    ev({ id: "8", a: ["Later"], s: at("12-30") }),
+  ];
+  const b = bill(events, venues, "2026-11-25T20:00:00Z");
+  it("puts big venues first, most nights on top, mid-size venues last", () => {
+    expect(b.headliners.map((x) => `${x.name}:${x.nights}`)).toEqual(["Muse:2", "Westlife:1", "Kensington:1"]);
+    expect(b.club.map((x) => x.name)).toEqual(["Davina Michelle"]);
+  });
+  it("leaves out non-music, cancelled shows and anything after 30 days", () => {
+    expect(b.total).toBe(5);
   });
 });

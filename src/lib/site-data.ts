@@ -82,7 +82,7 @@ export function buildSiteData(
         t: e.title,
         a: e.artists.map((x) => x.name),
         v: e.venueId!,
-        s: e.start,
+        s: toLocalIso(e.start),
         h: e.hasTime ? 1 : 0,
         st: STATUS[e.status],
         c: e.category === "muziek" ? "m" : "o",
@@ -90,10 +90,23 @@ export function buildSiteData(
         u: e.ticketUrl,
         p: e.sources[0].url,
         f: e.firstSeen,
-        ...(e.onSaleStart && e.onSaleStart > generatedAt ? { o: e.onSaleStart } : {}),
+        ...(e.onSaleStart && e.onSaleStart > generatedAt ? { o: toLocalIso(e.onSaleStart) } : {}),
       })),
     sources: Object.entries(sources)
       .map(([name, s]) => ({ name, ok: s.ok, count: s.count, lastSuccess: s.lastSuccess, venues: s.venues }))
       .sort((a, b) => a.name.localeCompare(b.name)),
   };
+}
+
+let localFmt: Intl.DateTimeFormat | undefined;
+/**
+ * Rewrites any ISO instant as Amsterdam wall-clock time with its offset ("2027-08-01T00:30:00+02:00").
+ * All venues share that time zone, so the browser can read day and month straight from the string
+ * instead of running a date formatter for 1.500+ events (keeps the first screen fast on phones).
+ */
+export function toLocalIso(iso: string): string {
+  localFmt ??= new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23", timeZoneName: "longOffset" });
+  const p = Object.fromEntries(localFmt.formatToParts(new Date(iso)).map((x) => [x.type, x.value]));
+  const offset = p.timeZoneName === "GMT" ? "+00:00" : p.timeZoneName.replace("GMT", "");
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}${offset}`;
 }

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { artistIndex, DEFAULT_FILTERS, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
+import { LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
 import { createSearch } from "./search";
@@ -65,8 +66,10 @@ export default function App() {
             <svg viewBox="0 0 32 32" aria-hidden="true" className="brand__mark">
               <circle cx="16" cy="16" r="14" />
               <circle cx="16" cy="16" r="8.5" />
-              <path d="M16 16 L27 9" />
-              <circle cx="21.5" cy="10" r="2.4" className="brand__blip" />
+              <g className="brand__sweep">
+                <path d="M16 16 L27 9" />
+              </g>
+              <circle cx="22.5" cy="9.5" r="2.6" className="brand__blip" />
             </svg>
             <span>Podiumradar</span>
           </a>
@@ -92,14 +95,14 @@ export default function App() {
             <strong>De agenda kon niet geladen worden.</strong> Controleer je verbinding en probeer het opnieuw.
           </div>
         ) : route.view === "overzicht" ? (
-          <>
-            <header className="pagehead pagehead--home">
-              <p className="kicker">Nederland · België · Duitsland</p>
-              <h1 className="h1">Wie speelt waar, de komende twaalf maanden</h1>
-              <p className="sub">Elk vakje is een zaal in een maand: hoe voller de kleur, hoe drukker. Tik erop voor de shows.</p>
-            </header>
-            {data ? <Overview data={data} venues={venues} months={months} filters={filters} setFilters={setFilters} /> : <Loading />}
-          </>
+          data ? (
+            <>
+              <LineUp data={data} venues={venues} />
+              <Overview data={data} venues={venues} months={months} filters={filters} setFilters={setFilters} />
+            </>
+          ) : (
+            <Loading />
+          )
         ) : !data ? (
           <Loading />
         ) : route.view === "agenda" ? (
@@ -117,9 +120,9 @@ export default function App() {
       <footer className="foot">
         <p>
           {data ? <>Laatst bijgewerkt {formatDateTime(data.generatedAt)}. </> : null}
-          Gegevens uit de officiële agenda's van de zalen, Uitagenda Rotterdam en UITagenda Utrecht. <a href="#bronnen">Alle bronnen</a>
+          De agenda komt elke nacht uit de officiële agenda's van de zalen, Uitagenda Rotterdam en UITagenda Utrecht. <a href="#bronnen">Bekijk alle bronnen</a>.
         </p>
-        <p>Privé-site voor een kleine vriendenkring. Controleer datum en tijd altijd bij de verkoper.</p>
+        <p>Een privé-site voor een kleine vriendenkring. Datum en tijd kunnen wijzigen: kijk bij het kopen van tickets altijd bij de verkoper.</p>
       </footer>
     </>
   );

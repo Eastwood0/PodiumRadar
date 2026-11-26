@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
+import { Flag } from "./EventCard";
 import { EventList } from "./EventList";
 import { FilterBar } from "./FilterBar";
 import { applyFilters, type Filters, LEVELS, level, MONTHS_LONG, monthKey, monthShort, venueHref } from "./lib";
@@ -40,7 +41,9 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
   const pickedVenue = picked ? venues.get(picked.v) : undefined;
 
   return (
-    <>
+    <section className="wall" aria-labelledby="wall-h">
+      <h2 id="wall-h" className="h2">Per zaal, per maand</h2>
+      <p className="sub">Elk vakje is één zaal in één maand. Hoe voller de kleur, hoe meer er speelt; tik erop voor de shows.</p>
       <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: false, month: false }} count={filtered.length} />
       <div className="board" role="region" aria-label="Overzicht per zaal en maand" tabIndex={0}>
         <table className="tl">
@@ -65,7 +68,7 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
               <Fragment key={c.cc}>
                 <tr className="tl__group">
                   <th colSpan={months.length + 1} scope="colgroup">
-                    {c.label}
+                    <Flag cc={c.cc} /> {c.label}
                   </th>
                 </tr>
                 {rows
@@ -76,7 +79,7 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
                         <a href={venueHref(v.id)}>{v.n}</a>
                         <span>
                           {v.city}
-                          {v.tier === "B" ? " · middelgroot" : ""}
+                          {v.tier === "B" ? ", middelgroot" : ""}
                         </span>
                       </th>
                       {!withSource.has(v.id) ? (
@@ -133,14 +136,14 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
           <div className="sheet__in">
             <header className="sheet__h">
               <div>
-                <p className="kicker">
-                  {MONTHS_LONG[+picked.m.slice(5) - 1]} {picked.m.slice(0, 4)} · {pickedEvents.length} {pickedEvents.length === 1 ? "event" : "events"}
-                </p>
                 <h2 id="sheet-title">
                   <a href={venueHref(pickedVenue.id)} onClick={() => dialog.current?.close()}>
                     {pickedVenue.n}
                   </a>
                 </h2>
+                <p className="sheet__sub">
+                  {MONTHS_LONG[+picked.m.slice(5) - 1]} {picked.m.slice(0, 4)}, {pickedEvents.length} {pickedEvents.length === 1 ? "event" : "events"}
+                </p>
               </div>
               <button type="button" className="close" onClick={() => dialog.current?.close()}>
                 <span aria-hidden="true">×</span>
@@ -151,6 +154,6 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
           </div>
         )}
       </dialog>
-    </>
+    </section>
   );
 }

@@ -15,6 +15,14 @@ const cache = new Map<string, Parts>();
 export function parts(iso: string): Parts {
   const hit = cache.get(iso);
   if (hit) return hit;
+  // Site data is already in Amsterdam time ("…+01:00", see toLocalIso): read it from the string.
+  const m = /^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)(?::\d\d)?(?:\.\d+)?\+0[12]:00$/.exec(iso);
+  if (m) {
+    const [y, mo, d] = [+m[1], +m[2], +m[3]];
+    const out = { y, m: mo, d, wd: new Date(Date.UTC(y, mo - 1, d)).getUTCDay(), hh: m[4], mm: m[5] };
+    cache.set(iso, out);
+    return out;
+  }
   fmt ??= new Intl.DateTimeFormat("en-GB", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
   const p = fmt.formatToParts(new Date(iso));
   const g = (t: string) => p.find((x) => x.type === t)?.value ?? "";
@@ -146,6 +154,52 @@ export function artistIndex(events: SiteEvent[]): ArtistEntry[] {
     }
   }
   return [...map.values()];
+}
+
+export interface BillEntry {
+  name: string;
+  nights: number;
+  /** First show in the period. */
+  s: string;
+  venue: SiteVenue;
+}
+export interface Bill {
+  from: string;
+  to: string;
+  headliners: BillEntry[];
+  support: BillEntry[];
+  club: BillEntry[];
+  total: number;
+}
+
+/**
+ * The opening "poster" of the overview: music in the next `days` days, one line per headlining act.
+ * Like a festival bill the order says something: big venues on top, acts with the most nights first,
+ * then the rest of the big venues, then the mid-size venues.
+ */
+export function bill(events: SiteEvent[], venues: Map<string, SiteVenue>, fromIso: string, days = 30): Bill {
+  const from = fromIso.slice(0, 10);
+  const to = new Date(Date.parse(from) + days * 86_400_000).toISOString().slice(0, 10);
+  const inRange = events.filter((e) => e.c === "m" && e.st !== "g" && e.s.slice(0, 10) >= from && e.s.slice(0, 10) < to && venues.has(e.v));
+  const byAct = new Map<string, BillEntry>();
+  for (const e of inRange) {
+    const key = `${slug(e.a[0] ?? e.t)}|${e.v}`;
+    const cur = byAct.get(key);
+    if (cur) cur.nights++;
+    else byAct.set(key, { name: e.a[0] ?? e.t, nights: 1, s: e.s, venue: venues.get(e.v)! });
+  }
+  const seen = new Set<string>();
+  const unique = [...byAct.values()].sort((a, b) => b.nights - a.nights || a.s.localeCompare(b.s)).filter((b) => {
+    const k = slug(b.name);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const big = unique.filter((b) => b.venue.tier === "A").sort((a, b) => b.nights - a.nights || a.s.localeCompare(b.s));
+  const mid = unique.filter((b) => b.venue.tier === "B").sort((a, b) => a.s.localeCompare(b.s));
+  const headliners = big.slice(0, 6);
+  const support = big.slice(6, 24).sort((a, b) => a.s.localeCompare(b.s));
+  return { from, to, headliners, support, club: mid.slice(0, 24), total: inRange.length };
 }
 
 /** Reads a stored value; storage can be missing or blocked, so failures fall back silently. */
