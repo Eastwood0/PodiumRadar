@@ -124,6 +124,21 @@ Alle robots.txt-bestanden hieronder zijn op deze datum gelezen; ze staan onze bo
 | D1 Free | 5 miljoen rijen lezen en 100.000 rijen schrijven per dag, 500 MB per database, 5 GB totaal; daarboven weigert D1 tot 00:00 UTC | Ruim genoeg: één rij per koppelcode | [D1 pricing](https://developers.cloudflare.com/d1/platform/pricing/), [D1 limits](https://developers.cloudflare.com/d1/platform/limits/) |
 | Worker-modules | Een Worker-module mag naast de handler geen andere exports hebben (`wrangler dev`: "Incorrect type for map entry") | Logica in `src/lib/sync-api.ts`, `src/worker.ts` exporteert alleen de handler | lokale test 26 nov 2026 |
 
+## Clubs en overige bronnen — Codex-onderzoek, door Claude nagecontroleerd, 26 november 2026 (avond)
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Lofi, BASIS | Eventpagina met alle avonden als JSON-LD (Lofi 19, alleen datum; BASIS 23, met tijd); robots.txt staat het toe | Gebouwd (`clubs.ts`) | [lofi.amsterdam/events](https://lofi.amsterdam/events/), [clubbasis.nl/events](https://clubbasis.nl/events/) |
+| Complex Maastricht | Agenda met 22 avonden; elke eventpagina heeft JSON-LD | Gebouwd | [complexmaastricht.nl/agenda](https://complexmaastricht.nl/agenda) |
+| Garage Noord | Ticketshop WeTicket publiceert een RSS-feed (13 events, UTC-tijden), gelinkt vanaf de organisatorpagina; robots.txt van api.weticket.io bevat geen beperkingen | Gebouwd (route B) | [feed](https://api.weticket.io/storefront/organizations/66e9ee18-9ff4-49b2-8c2b-a082710dd5e2/events.xml) |
+| Shelter, Radion, Thuishaven, Annabel, Toffler, Ekko, Dynamo, De Club | Robots ok, alleen HTML (8–59 events) | Volgende stap, per club een HTML-adapter | Codex-rapport 26 nov 2026 |
+| Perron Rotterdam | Definitief gesloten (april 2026) | Niet opnemen | [Uitagenda Rotterdam](https://www.uitagendarotterdam.nl/en/all-articles/thirteen-more-weekends-perron/) |
+| Resident Advisor | Voorwaarden art. 4.4(f): geen toegang "via automated devices, scripts, bots, spiders, crawlers or scrapers (except for standard search engine technologies)" zonder voorafgaande schriftelijke toestemming — zelf nagelezen | Route C alleen met schriftelijke toestemming; niet gebruikt | [ra.co/terms](https://ra.co/terms) |
+| TicketSwap | Locatiepagina's geven onze bot een controlescherm ("Verifying", HTTP 202) | Niet gebruiken (B23) | eigen controle 26 nov 2026 |
+| Paylogic | `agenda.paylogic.com/robots.txt`: `Disallow: /` | Niet gebruiken | [robots.txt](https://agenda.paylogic.com/robots.txt) |
+| Brabanthallen | Codex meldde de agenda als leesbaar, maar onze bot krijgt nog steeds een SiteGround-captcha (HTTP 202, `sgcaptcha`) | Blijft zonder bron (B23) | eigen controle 26 nov 2026 |
+| Gedeeltelijke stadsagenda's | Visit Zuid-Limburg (Nieuwe Nor), Explore Breda (Chassé), Visit Maastricht (Theater aan het Vrijthof), Visit Groningen (MartiniPlaza): JSON-LD per event, robots ok (soms crawl-delay 2), maar per zaal geen volledige lijst | Mogelijke aanvulling; voorgelegd aan Ralf | Codex-rapport 26 nov 2026 |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

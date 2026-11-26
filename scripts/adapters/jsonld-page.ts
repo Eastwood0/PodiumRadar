@@ -13,6 +13,8 @@ interface JsonLdPage {
   url: string;
   /** Keep only events whose location name matches (for sites that list several halls). */
   location?: RegExp;
+  /** Source label for every event when the site gives none, e.g. "clubnacht" for clubs (→ Dance & DJ, B49). */
+  category?: string;
 }
 
 export function parseJsonLdPage(html: string, page: JsonLdPage): SourceEvent[] {
@@ -23,7 +25,7 @@ export function parseJsonLdPage(html: string, page: JsonLdPage): SourceEvent[] {
     if (page.location && e.locationName && !page.location.test(e.locationName)) continue;
     // The page lists many events; the event's own URL is the stable id (not the agenda page).
     const ev = fromJsonLd(e, page.url, page.venueId, page.country);
-    if (ev) out.push({ ...ev, sourceId: e.url ?? e.offersUrl ?? `${ev.title}|${ev.start}` });
+    if (ev) out.push({ ...ev, sourceCategory: page.category ?? ev.sourceCategory, sourceId: e.url ?? e.offersUrl ?? `${ev.title}|${ev.start}` });
   }
   return out;
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-16"?>
+<rss version="2.0" xmlns:ev="http://purl.org/rss/1.0/modules/event/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:weticket="https://weticket.com/rss">
+  <channel>
+    <title>Garage Noord - Upcoming events</title>
+    <link>https://garagenoord.weticket.io/</link>
+    <description></description>
+    <atom:link href="http://api.weticket.io/storefront/organizations/66e9ee18-9ff4-49b2-8c2b-a082710dd5e2/events.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://weticket.ams3.digitaloceanspaces.com/theme/garage-thema_theme_logo_by_garagenoord_cd10fc68-e967-48cd-929c-92fda62193c8-019abb13-9e97-7171-887b-eb39eba66008.png</url>
+      <title>Garage Noord - Upcoming events</title>
+      <link>https://garagenoord.weticket.io/</link>
+    </image>
+    <item>
+      <title>Exert! w/ Derozan, ghenwa (nwaré) abou fayad, Zamity Mitelembe, Winnie Conradi, Adhi, Seok Yun</title>
+      <link>https://garagenoord.weticket.io/exert-w-derozan-ghenwa-nwar-abou-fayad-zamity-mitelembe-winnie-conradi-adhi-seok-yun</link>
+      <guid isPermaLink="false">d667dce3-6fac-4805-b8cf-5558db703530</guid>
+      <pubDate>Thu, 26 Nov 2026 21:00:00 +0100</pubDate>
+      <ev:startdate>2026-11-26T20:00:00.0000000Z</ev:startdate>
+      <ev:enddate>2026-11-27T00:00:00.0000000Z</ev:enddate>
+      <ev:organizer>Garage Noord</ev:organizer>
+      <description>A night of performances and raw improvisation, brought together by Amsterdam’s aural conduct record label and Studio Tumbuh. Celebrating the CD release of the first-time collaborations between these artists, focusing on experimentalism, musical tension and autonomy. Disorienting rhythms, suspended live electronics and instrumentation scattered across cultures, resonant with DIY, punk and club.</description>
+      <content:encoded><![CDATA[<p id="UwznkEYx6y">A night of performances and raw improvisation, brought together by Amsterdam’s aural conduct record label and Studio Tumbuh. Celebrating the CD release of the first-time collaborations between these artists, focusing on experimentalism, musical tension and autonomy. Disorienting rhythms, suspended live electronics and instrumentation scattered across cultures, resonant with DIY, punk and club.</p>]]></content:encoded>
+      <ev:location>Garage Noord, Garage Noord, Gedempt Hamerkanaal, Amsterdam, Netherlands</ev:location>
+      <enclosure url="https://weticket.ams3.digitaloceanspaces.com/event/7b3da1a7-6f16-400c-bffd-785c20bc147f1790089942-01a0c9ac-d3f7-7140-8935-86928a14269e.jpeg" type="image/jpeg" length="0" />
+      <media:content url="https://weticket.ams3.digitaloceanspaces.com/event/7b3da1a7-6f16-400c-bffd-785c20bc147f1790089942-01a0c9ac-d3f7-7140-8935-86928a14269e.jpeg" type="image/jpeg" medium="image" />
+    </item><item>
+      <title>VHS x Pacific Ondergronds</title>
+      <link>https://garagenoord.weticket.io/vhs-x-pacific-ondergronds</link>
+      <guid isPermaLink="false">50f36426-ff58-4f0a-b14b-65e376000472</guid>
+      <pubDate>Fri, 27 Nov 2026 23:30:00 +0100</pubDate>
+      <ev:startdate>2026-11-27T22:30:00.0000000Z</ev:startdate>
+      <ev:enddate>2026-11-28T06:00:00.0000000Z</ev:enddate>
+      <ev:organizer>Garage Noord</ev:organizer>
+      <description>When: Fri, 27 Nov 2026 23:30:00 +0100 — Where: Garage Noord, Garage Noord</description>
+      <ev:location>Garage Noord, Garage Noord</ev:location>
+      <enclosure url="https://weticket.ams3.digitaloceanspaces.com/event/vhs-x-pacific-ondergronds__by_garagenoord__cover_photo-01a15e14-9c64-706d-b96c-30221d1eb3f4.png" type="image/jpeg" length="0" />
+      <media:content url="https://weticket.ams3.digitaloceanspaces.com/event/vhs-x-pacific-ondergronds__by_garagenoord__cover_photo-01a15e14-9c64-706d-b96c-30221d1eb3f4.png" type="image/jpeg" medium="image" />
+    </item>
+  </channel>
+</rss>

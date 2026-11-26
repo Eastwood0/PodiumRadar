@@ -27,6 +27,7 @@ import { sparkassenpark } from "./sparkassenpark";
 import { spotGroningen } from "./spot-groningen";
 import { kattendans } from "./wp-theatre";
 import { carre } from "./carre";
+import { basis, complex, garageNoord, lofi } from "./clubs";
 import { delamar } from "./delamar";
 import { maaspoort } from "./maaspoort";
 import { musis } from "./musis";
@@ -85,6 +86,11 @@ export const ADAPTERS: Adapter[] = [
   stadsschouwburgUtrecht,
   theatersTilburg,
   musis,
+  // Clubs (B49, 26 nov 2026)
+  complex,
+  lofi,
+  garageNoord,
+  basis,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

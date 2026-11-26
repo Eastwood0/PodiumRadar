@@ -62,6 +62,11 @@ venues:
   - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }
   - { id: maassilo, name: Maassilo, city: Rotterdam, country: NL, tier: B }
   - { id: warehouse-elementenstraat, name: Warehouse Elementenstraat, city: Amsterdam, country: NL, tier: B }
+  # Clubs voor de DJ-agenda (B49, 26 nov 2026):
+  - { id: complex-maastricht, name: Complex, city: Maastricht, country: NL, tier: B, website: "https://complexmaastricht.nl/" }
+  - { id: lofi, name: Lofi, city: Amsterdam, country: NL, tier: B, website: "https://lofi.amsterdam/" }
+  - { id: garage-noord, name: Garage Noord, city: Amsterdam, country: NL, tier: B, website: "https://garagenoord.com/" }
+  - { id: basis-utrecht, name: BASIS, city: Utrecht, country: NL, tier: B, website: "https://clubbasis.nl/" }
 
   # --- België, A ---
   - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }

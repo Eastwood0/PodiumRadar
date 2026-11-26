@@ -553,3 +553,26 @@ describe("Uit in Amsterdam (iamsterdam.com) for Melkweg and Paradiso", async () 
     ]);
   });
 });
+
+describe("Clubs (B49)", async () => {
+  const { parseWeTicketFeed, agendaLinks } = await import("../scripts/adapters/clubs");
+  const { parseJsonLdPage } = await import("../scripts/adapters/jsonld-page");
+  const { classify } = await import("../scripts/lib/categorize");
+  it("Garage Noord: reads the WeTicket RSS feed with UTC start times", () => {
+    const ev = parseWeTicketFeed(fixture("weticket-feed.xml"), "garage-noord");
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "garage-noord", start: "2026-11-26T21:00:00+01:00", hasTime: true, sourceCategory: "clubnacht" });
+    expect(ev[0].url).toMatch(/^https:\/\/garagenoord\.weticket\.io\//);
+    expect(() => parseWeTicketFeed("<rss><channel></channel></rss>", "garage-noord")).toThrow();
+  });
+  it("Lofi: JSON-LD nights get the club label and count as Dance & DJ", () => {
+    const ev = parseJsonLdPage(fixture("lofi-events.html"), { venueId: "lofi", country: "NL", url: "https://lofi.amsterdam/events/", category: "clubnacht" });
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "lofi", sourceCategory: "clubnacht", hasTime: false });
+    expect(classify(ev[0].title, ev[0].sourceCategory).genre).toBe("Dance");
+  });
+  it("Complex: finds the event pages on the agenda, without the archive or other pages", () => {
+    const links = agendaLinks(fixture("complex-agenda.html"), "https://complexmaastricht.nl/agenda", /^https:\/\/complexmaastricht\.nl\/agenda\/(?!archive)[^/?#]+$/);
+    expect(links).toEqual(["https://complexmaastricht.nl/agenda/atmoz-5-12-26", "https://complexmaastricht.nl/agenda/bingoloco-04-12-26", "https://complexmaastricht.nl/agenda/bingoloco-04-12-26lateshow"]);
+  });
+});
