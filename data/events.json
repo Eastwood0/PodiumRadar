@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T11:20:52.485Z",
+ "generatedAt": "2026-11-26T13:11:57.991Z",
  "events": [
   {
    "id": "d11e913066b038fc",
@@ -1351,6 +1351,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/the-veils-4/",
    "sources": [
     {
@@ -1360,10 +1363,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "11d83ef59992f908",
@@ -2436,6 +2436,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/classified-6/",
    "sources": [
     {
@@ -2445,10 +2448,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Hiphop & R&B"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "0796b7333b2c034c",
@@ -2501,6 +2501,10 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/friction-2/",
    "sources": [
     {
@@ -2510,11 +2514,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Rock",
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "52d2147f4ea6c7d1",
@@ -5488,6 +5488,12 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "House"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/matt-nash/",
    "sources": [
     {
@@ -5497,13 +5503,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Dance & DJ"
-   ],
-   "danceStyles": [
-    "House"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "7c6d3ad54082d913",
@@ -6634,6 +6634,34 @@
    "lastSeen": "2026-11-26"
   },
   {
+   "id": "d93f0e8078339184",
+   "title": "BeestFeest",
+   "artists": [
+    {
+     "name": "BeestFeest"
+    }
+   ],
+   "venueId": "doornroosje",
+   "venueName": "Doornroosje",
+   "city": "Nijmegen",
+   "country": "NL",
+   "start": "2026-12-03T12:00:00+01:00",
+   "hasTime": false,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "ticketUrl": "https://www.doornroosje.nl/event/beestfeest-36/",
+   "sources": [
+    {
+     "name": "doornroosje.nl",
+     "sourceId": "https://www.doornroosje.nl/event/beestfeest-36/",
+     "url": "https://www.doornroosje.nl/event/beestfeest-36/"
+    }
+   ],
+   "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-26"
+  },
+  {
    "id": "96df548577c42abc",
    "title": "Bosuil Blues Bar",
    "artists": [
@@ -6840,6 +6868,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/kids-with-buns-4/",
    "sources": [
     {
@@ -6849,11 +6881,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Pop",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "bb54ab03a223262e",
@@ -7593,12 +7621,12 @@
     "Folk & singer-songwriter",
     "Pop"
    ],
-   "ticketUrl": "https://patronaat.nl/event/jack-and-the-weatherman-support-04-12-26/",
+   "ticketUrl": "https://patronaat.nl/en/event/jack-and-the-weatherman-support-04-12-26/",
    "sources": [
     {
      "name": "patronaat.nl",
-     "sourceId": "https://patronaat.nl/event/jack-and-the-weatherman-support-04-12-26/",
-     "url": "https://patronaat.nl/event/jack-and-the-weatherman-support-04-12-26/"
+     "sourceId": "https://patronaat.nl/en/event/jack-and-the-weatherman-support-04-12-26/",
+     "url": "https://patronaat.nl/en/event/jack-and-the-weatherman-support-04-12-26/"
     }
    ],
    "firstSeen": "2026-11-26",
@@ -11301,8 +11329,11 @@
    "start": "2026-12-09T12:00:00+01:00",
    "hasTime": false,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/alex-henry-foster/",
    "sources": [
     {
@@ -13387,6 +13418,37 @@
      "name": "muziekgieterij.nl",
      "sourceId": "https://muziekgieterij.stager.co/shop/concert/events/111647089?utm_campaign=261211-Nusantara+Beat-111647089&utm_source=Muziekgieterij+website&utm_medium=eventpublicity",
      "url": "https://muziekgieterij.nl/"
+    }
+   ],
+   "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-26"
+  },
+  {
+   "id": "a027defa7d6c1e2c",
+   "title": "Q Living Room x NOVASTOF",
+   "artists": [
+    {
+     "name": "Q Living Room"
+    },
+    {
+     "name": "NOVASTOF"
+    }
+   ],
+   "venueId": "grenswerk",
+   "venueName": "Grenswerk",
+   "city": "Venlo",
+   "country": "NL",
+   "start": "2026-12-11T20:00:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "ticketUrl": "https://www.grenswerk.nl/agenda/%f0%9d%97%a4-%f0%9d%97%9f%f0%9d%97%9c%f0%9d%97%a9%f0%9d%97%9c%f0%9d%97%a1%f0%9d%97%9a-%f0%9d%97%a5%f0%9d%97%a2%f0%9d%97%a2%f0%9d%97%a0-%f0%9d%97%ab-%f0%9d%97%a1%f0%9d%97%a2%f0%9d%97%a9%f0%9d%97%94/",
+   "sources": [
+    {
+     "name": "grenswerk.nl",
+     "sourceId": "https://www.grenswerk.nl/agenda/%f0%9d%97%a4-%f0%9d%97%9f%f0%9d%97%9c%f0%9d%97%a9%f0%9d%97%9c%f0%9d%97%a1%f0%9d%97%9a-%f0%9d%97%a5%f0%9d%97%a2%f0%9d%97%a2%f0%9d%97%a0-%f0%9d%97%ab-%f0%9d%97%a1%f0%9d%97%a2%f0%9d%97%a9%f0%9d%97%94/",
+     "url": "https://www.grenswerk.nl/agenda/%f0%9d%97%a4-%f0%9d%97%9f%f0%9d%97%9c%f0%9d%97%a9%f0%9d%97%9c%f0%9d%97%a1%f0%9d%97%9a-%f0%9d%97%a5%f0%9d%97%a2%f0%9d%97%a2%f0%9d%97%a0-%f0%9d%97%ab-%f0%9d%97%a1%f0%9d%97%a2%f0%9d%97%a9%f0%9d%97%94/"
     }
    ],
    "firstSeen": "2026-11-26",
@@ -16942,12 +17004,12 @@
     "Folk & singer-songwriter",
     "Pop"
    ],
-   "ticketUrl": "https://patronaat.nl/event/jaimi-faulkner-17-12-26/",
+   "ticketUrl": "https://patronaat.nl/en/event/jaimi-faulkner-17-12-26/",
    "sources": [
     {
      "name": "patronaat.nl",
-     "sourceId": "https://patronaat.nl/event/jaimi-faulkner-17-12-26/",
-     "url": "https://patronaat.nl/event/jaimi-faulkner-17-12-26/"
+     "sourceId": "https://patronaat.nl/en/event/jaimi-faulkner-17-12-26/",
+     "url": "https://patronaat.nl/en/event/jaimi-faulkner-17-12-26/"
     }
    ],
    "firstSeen": "2026-11-26",
@@ -17357,6 +17419,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Rock"
+   ],
    "ticketUrl": "https://www.013.nl/programma/130610/my-baby",
    "sources": [
     {
@@ -17366,11 +17432,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Jazz, soul & blues",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "9b7e1cbd41a36aa7",
@@ -17418,6 +17480,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/150556/the-selecter",
    "imageUrl": "https://assets.plaece.nl/thumb/7GtFiNlvNZnNe3Zg3tvGMI3TP02OIUxnswJb8m45DHQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS90aGUtc2VsZWN0ZXJfMjEwMTQyODk5NS53ZWJw.webp",
    "sources": [
@@ -17428,11 +17494,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Rock",
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "470de30b9ae1db46",
@@ -18025,6 +18087,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Rock"
+   ],
    "ticketUrl": "https://www.paard.nl/en/event/my-baby-7/",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/04/PRDps_Mailheader-MYBABY-.jpg",
    "sources": [
@@ -18035,11 +18101,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Jazz, soul & blues",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "8c499ba65c3ce035",
@@ -18268,6 +18330,10 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B",
+    "Pop"
+   ],
    "ticketUrl": "https://gashouder.nl/programma/antoon",
    "sources": [
     {
@@ -18277,11 +18343,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Hiphop & R&B",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "a95be02a1464e947",
@@ -18664,6 +18726,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter",
+    "Wereld & latin"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/121002/hush-8",
    "imageUrl": "https://assets.plaece.nl/thumb/mMdZA8s09f-BvrA6k73K5ixEIg19yTR8j4MCwTVbXxY/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS9odXNoXzEzNzAwNjE0NTAuanBn.jpg",
    "sources": [
@@ -18674,11 +18740,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Folk & singer-songwriter",
-    "Wereld & latin"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "9c3ff8d7c4bc23dc",
@@ -19163,7 +19225,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "ae7beb2d09329415",
@@ -19394,7 +19459,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -19626,8 +19691,8 @@
    "start": "2026-12-19T19:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
    "ticketUrl": "https://www.vorst-nationaal.be/evenement/the-lord-of-the-rings-the-fellowship-of-the-ring-in-concert-e3f1095",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000dnnvaMAA_original.jpg",
    "sources": [
@@ -19657,6 +19722,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter",
+    "Wereld & latin"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/150563/ahmet-kaya",
    "imageUrl": "https://assets.plaece.nl/thumb/4-2FSOAKmVPe6CTYl-6wk2Eey2Vl7YwLwGhPPuyZB4U/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS9haG1ldF8xMzYyNzk3NDQyLndlYnA.webp",
    "sources": [
@@ -19667,11 +19736,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Folk & singer-songwriter",
-    "Wereld & latin"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "8c14ed02af803157",
@@ -20027,7 +20092,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -20346,6 +20411,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ],
    "ticketUrl": "https://www.debosuil.nl/programma/steve-n-seagulls/",
    "sources": [
     {
@@ -20355,10 +20423,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Folk & singer-songwriter"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "e851bde5102610e9",
@@ -20552,6 +20617,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://muziekgieterij.stager.co/shop/concert/events/111613093?utm_campaign=261220-Tribute+fest+2026-111613093&utm_source=Muziekgieterij+website&utm_medium=eventpublicity",
    "imageUrl": "https://muziekgieterij.nl/wp-content/uploads/2026/01/2f942f5de1a44c699e56c43bc7f1ad8de17ef21c39891e270465b699884e219c.webp",
    "sources": [
@@ -20562,10 +20630,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "824610887131f8e2",
@@ -20703,8 +20768,8 @@
    "start": "2026-12-20T19:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
    "ticketUrl": "https://www.ticketmaster.be/event/1443288482?language=nl-be&brand=fnvn",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000dnnvaMAA_original.jpg",
    "sources": [
@@ -21245,7 +21310,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -21534,7 +21599,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -21679,6 +21744,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.eventim.de/event/broilers-santas-action-club-mitsubishi-electric-halle-21102816/",
    "imageUrl": "https://www.mitsubishi-electric-halle.de/fileadmin/_processed_/8/4/csm_kalender-broilers-santas-action-2026-1000x750_a11b1f10ae.jpg",
    "sources": [
@@ -21689,10 +21757,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "226b7c416a0de017",
@@ -21882,7 +21947,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -21969,7 +22034,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -21999,6 +22064,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.eventim.de/event/broilers-santas-action-club-mitsubishi-electric-halle-21102816/",
    "imageUrl": "https://www.mitsubishi-electric-halle.de/fileadmin/_processed_/8/4/csm_kalender-broilers-santas-action-2026-1000x750_a11b1f10ae.jpg",
    "sources": [
@@ -22009,10 +22077,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "21f52b9b90a8a0e6",
@@ -22059,7 +22124,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/het-ashton-brothers-kerstcircus-part-iii/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/192231/ab_kc_highres12502500.jpg",
    "sources": [
@@ -22364,7 +22429,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/gi-ga-gantische-kerstshow/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/154548/gi-ga-gantische-kerstshow-dec-2025-rotterdam-ahoy.jpg",
    "sources": [
@@ -23348,6 +23413,10 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ],
    "ticketUrl": "https://www.013.nl/programma/128536/morrissey",
    "sources": [
     {
@@ -23357,11 +23426,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Rock",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "b9afe74e6a195c52",
@@ -24326,6 +24391,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B",
+    "Pop"
+   ],
    "ticketUrl": "https://www.013.nl/programma/155786/extince",
    "sources": [
     {
@@ -24335,11 +24404,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Hiphop & R&B",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "d3004ecec5b20222",
@@ -24742,7 +24807,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/holiday-on-ice-cinema-of-dreams/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/155432/mobile-image-cod_768x860_4.jpg",
    "sources": [
@@ -25154,7 +25219,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/holiday-on-ice-cinema-of-dreams/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/155432/mobile-image-cod_768x860_4.jpg",
    "sources": [
@@ -25361,7 +25426,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/holiday-on-ice-cinema-of-dreams/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/155432/mobile-image-cod_768x860_4.jpg",
    "sources": [
@@ -25390,7 +25455,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/150626/licht-2-1",
    "imageUrl": "https://assets.plaece.nl/thumb/mRCW3O8TIEANDgM3JNGxz2RkCAlZKo0ffywuNNba44E/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS9saWNodF8xNzEzNDYyNzMxLndlYnA.webp",
    "sources": [
@@ -25419,7 +25484,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://www.ticketmaster.be/event/728565799?language=nl-be&brand=laa",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000NUy6MMAT_original.jpg",
    "sources": [
@@ -25803,7 +25868,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "2ec39cbf3914fc71",
@@ -26159,7 +26227,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Klassiek"
+   ]
   },
   {
    "id": "9dd65dfdf53dfc78",
@@ -26427,7 +26499,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "bc568d4a56e8e03b",
@@ -26937,7 +27012,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "0577579fe7682c10",
@@ -27030,7 +27108,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Wereld & latin"
+   ]
   },
   {
    "id": "d803acf9404e379b",
@@ -27211,7 +27292,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Wereld & latin"
+   ]
   },
   {
    "id": "982f042351e1da30",
@@ -27388,7 +27472,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "3f652a439fc21a5c",
@@ -27528,7 +27615,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "b64332ce9ca30bfe",
@@ -27613,7 +27703,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "62db628c63808bec",
@@ -27761,7 +27854,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "339e472b15f43240",
@@ -27975,7 +28071,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "9af22fe44558e558",
@@ -28032,7 +28131,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "54b39f269993f9c2",
@@ -28060,7 +28163,14 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "Hardstyle & hardcore"
+   ]
   },
   {
    "id": "2b062e6f5f075164",
@@ -28231,7 +28341,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://www.ticketmaster.be/event/145241067?language=nl-be&brand=laa",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000b1W5OMAU_original.jpg",
    "sources": [
@@ -28756,7 +28866,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "247b6f174724cfe6",
@@ -28901,7 +29014,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "f5b9f33e8954a73c",
@@ -28964,6 +29081,34 @@
      "name": "patronaat.nl",
      "sourceId": "https://patronaat.nl/event/vroegzat-16-01-27/",
      "url": "https://patronaat.nl/event/vroegzat-16-01-27/"
+    }
+   ],
+   "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-26"
+  },
+  {
+   "id": "4ab149d1c885e92c",
+   "title": "Gear Factory Social",
+   "artists": [
+    {
+     "name": "Gear Factory Social"
+    }
+   ],
+   "venueId": "grenswerk",
+   "venueName": "Grenswerk",
+   "city": "Venlo",
+   "country": "NL",
+   "start": "2027-01-16T13:00:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111726388",
+   "sources": [
+    {
+     "name": "grenswerk.nl",
+     "sourceId": "https://www.grenswerk.nl/agenda/gear-factory-2/",
+     "url": "https://www.grenswerk.nl/agenda/gear-factory-2/"
     }
    ],
    "firstSeen": "2026-11-26",
@@ -29566,7 +29711,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "32f9f75e026fee12",
@@ -29829,7 +29977,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Metal & punk"
+   ]
   },
   {
    "id": "bdcd7f77f664883b",
@@ -30005,7 +30157,14 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "House",
+    "Techno"
+   ]
   },
   {
    "id": "0d5e219405bdc4b7",
@@ -30257,7 +30416,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "20b231daf66b0491",
@@ -30801,7 +30963,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "ccb25aa5b516d54e",
@@ -30948,7 +31114,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "4d9a0ee34d06ba42",
@@ -31155,7 +31325,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "3e0bf30e87805eff",
@@ -31787,7 +31961,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "8b109760e1f01f12",
@@ -31848,7 +32025,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ]
   },
   {
    "id": "63ab71f333a22267",
@@ -32555,7 +32736,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "81bc98338ee346c1",
@@ -32796,7 +32980,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "6156b5d0b8c09531",
@@ -32917,7 +33105,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "269eb904b382f4bd",
@@ -33002,7 +33193,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "384d899595109406",
@@ -33149,7 +33343,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "abab8a2364b39fcd",
@@ -33298,7 +33496,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "8e81e1f735fdfc60",
@@ -33327,7 +33529,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Dance & DJ",
+    "Pop"
+   ]
   },
   {
    "id": "6763eefe734aac52",
@@ -33692,7 +33898,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "f41b4c8647efa882",
@@ -36340,7 +36549,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://shop.tickets.cm.com/bfbd34eb-41f0-8efc-8fa3-f4497208564e",
    "sources": [
     {
@@ -36732,7 +36941,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://shop.tickets.cm.com/99046e00-cbf9-b511-4120-8f1a5fd19481",
    "sources": [
     {
@@ -36920,7 +37129,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "927bc03ca63e4e30",
@@ -37345,7 +37558,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "5a5728c36a75aa76",
@@ -38155,7 +38371,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "0e2df9ed6b4e7752",
@@ -38711,7 +38931,7 @@
    "hasTime": false,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://ticket.westfalenhallen.de/eventim.webshop/webticket/seatmap?eventId=6642&el=true&language=de",
    "sources": [
     {
@@ -39819,7 +40039,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "47e6a8aa30ca2c01",
@@ -45452,7 +45675,7 @@
    "country": "NL",
    "start": "2027-03-05T12:00:00+01:00",
    "hasTime": false,
-   "status": "uitverkocht",
+   "status": "gepland",
    "category": "muziek",
    "genre": "Klassiek",
    "musicGenres": [
@@ -46574,7 +46797,7 @@
    "musicGenres": [
     "Dance & DJ"
    ],
-   "ticketUrl": "https://amsterdam.dldk.com/",
+   "ticketUrl": "https://feverup.com/m/739555",
    "sources": [
     {
      "name": "ziggodome.nl",
@@ -47575,6 +47798,38 @@
     }
    ],
    "firstSeen": "2026-11-25",
+   "lastSeen": "2026-11-26"
+  },
+  {
+   "id": "c7cf2809e9f70f56",
+   "title": "Gone Country",
+   "artists": [
+    {
+     "name": "Gone Country"
+    }
+   ],
+   "venueId": "effenaar",
+   "venueName": "Effenaar",
+   "city": "Eindhoven",
+   "country": "NL",
+   "start": "2027-03-11T12:00:00+01:00",
+   "hasTime": false,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ],
+   "ticketUrl": "https://www.effenaar.nl/agenda/gone-country-0",
+   "imageUrl": "https://d12y285rxlbnxt.cloudfront.net/2026-07/%20%E2%80%93%20Square%20afbeelding%20onlyGC.png",
+   "sources": [
+    {
+     "name": "effenaar.nl",
+     "sourceId": "entity:node/2083:nl",
+     "url": "https://www.effenaar.nl/agenda/gone-country-0"
+    }
+   ],
+   "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-26"
   },
   {
@@ -49769,7 +50024,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://www.ticketmaster.be/event/708204056?language=nl-be&brand=fnvn",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000eX1KsMAK_original.jpg",
    "sources": [
@@ -50400,7 +50655,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/blue-man-group-world-tour/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/215581/blue-man-group-world-tour.jpg",
    "sources": [
@@ -50731,7 +50986,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/blue-man-group-world-tour/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/215581/blue-man-group-world-tour.jpg",
    "sources": [
@@ -50788,7 +51043,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Dans",
    "ticketUrl": "https://www.ticketmaster.be/event/167475050?language=nl-be&brand=laa",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000fzkPiMAI_original.jpg",
    "sources": [
@@ -51403,7 +51658,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/blue-man-group-world-tour/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/215581/blue-man-group-world-tour.jpg",
    "sources": [
@@ -51885,7 +52140,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/cavalluna-the-colours-of-life/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/178105/cavalluna-the-colours-of-life-mrt-2027-rotterdam-ahoy.jpg",
    "sources": [
@@ -51914,7 +52169,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/blue-man-group-world-tour/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/215581/blue-man-group-world-tour.jpg",
    "sources": [
@@ -51976,7 +52231,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Musical",
    "ticketUrl": "https://www.ticketmaster.be/event/88449465?language=nl-be&brand=fnvn",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000iwNUMMA2_original.jpg",
    "sources": [
@@ -52050,7 +52305,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Rock",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "b50213c6c4ad528c",
@@ -52455,7 +52714,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/blue-man-group-world-tour/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/215581/blue-man-group-world-tour.jpg",
    "sources": [
@@ -52484,7 +52743,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/cavalluna-the-colours-of-life/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/178105/cavalluna-the-colours-of-life-mrt-2027-rotterdam-ahoy.jpg",
    "sources": [
@@ -53851,7 +54110,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/patrick-laureij-kintsugi/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/178102/patrick-laureij-kintsugi_-mrt-2027-rotterdam-ahoy__1_.jpg",
    "sources": [
@@ -54463,7 +54722,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/patrick-laureij-kintsugi/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/178102/patrick-laureij-kintsugi_-mrt-2027-rotterdam-ahoy__1_.jpg",
    "sources": [
@@ -60158,10 +60417,10 @@
   },
   {
    "id": "cbdfa2b7b957c73f",
-   "title": "CHASE ATLANTIC",
+   "title": "Chase Atlantic",
    "artists": [
     {
-     "name": "CHASE ATLANTIC"
+     "name": "Chase Atlantic"
     }
    ],
    "venueId": "lanxess-arena",
@@ -64023,8 +64282,8 @@
    "start": "2027-04-29T20:00:00+02:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
    "ticketUrl": "https://www.ticketmaster.be/event/972288469?language=nl-be&brand=fnvn",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000tz65eMAA_original.jpg",
    "sources": [
@@ -64052,8 +64311,11 @@
    "start": "2027-04-29T20:00:00+02:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
+   "musicGenres": [
+    "Wereld & latin"
+   ],
    "ticketUrl": "https://www.ticketmaster.be/event/237066608?language=nl-be&brand=afasdome",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000ZHcJGMA1_original.jpg",
    "sources": [
@@ -64801,6 +65063,34 @@
     }
    ],
    "firstSeen": "2026-11-25",
+   "lastSeen": "2026-11-26"
+  },
+  {
+   "id": "336c24daf7c0e6e6",
+   "title": "De Duystere Markt",
+   "artists": [
+    {
+     "name": "De Duystere Markt"
+    }
+   ],
+   "venueId": "klokgebouw",
+   "venueName": "Klokgebouw",
+   "city": "Eindhoven",
+   "country": "NL",
+   "start": "2027-05-02T12:00:00+02:00",
+   "hasTime": false,
+   "status": "gepland",
+   "category": "overig",
+   "genre": "Beurs",
+   "ticketUrl": "https://www.klokgebouw.nl/agenda/de-duystere-markt-2",
+   "sources": [
+    {
+     "name": "klokgebouw.nl",
+     "sourceId": "1375",
+     "url": "https://www.klokgebouw.nl/agenda/de-duystere-markt-2"
+    }
+   ],
+   "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-26"
   },
   {
@@ -69483,6 +69773,37 @@
    "lastSeen": "2026-11-26"
   },
   {
+   "id": "121429d45c74bc9e",
+   "title": "Jams & Gems",
+   "artists": [
+    {
+     "name": "Jams & Gems"
+    }
+   ],
+   "venueId": "klokgebouw",
+   "venueName": "Klokgebouw",
+   "city": "Eindhoven",
+   "country": "NL",
+   "start": "2027-05-23T12:00:00+02:00",
+   "hasTime": false,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Dance",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "ticketUrl": "https://www.klokgebouw.nl/agenda/jams-and-gems-2",
+   "sources": [
+    {
+     "name": "klokgebouw.nl",
+     "sourceId": "1376",
+     "url": "https://www.klokgebouw.nl/agenda/jams-and-gems-2"
+    }
+   ],
+   "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-26"
+  },
+  {
    "id": "be61ebc57030fadf",
    "title": "The Animals & Friends",
    "artists": [
@@ -69588,7 +69909,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/rutger-thomas-paco-live-in-ahoy/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/213569/rutger-thomas-paco-live-in-ahoy.jpg",
    "sources": [
@@ -70713,8 +71034,8 @@
    "start": "2027-05-29T20:00:00+02:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
    "ticketUrl": "https://www.ticketmaster.be/event/1331633481?language=nl-be&brand=laa",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000vlIaAMAU_original.jpg",
    "sources": [
@@ -73021,7 +73342,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ]
   },
   {
    "id": "c99e7df3bcb05cb5",
@@ -73368,7 +73692,7 @@
    "category": "muziek",
    "genre": "Festival",
    "musicGenres": [
-    "Rock",
+    "Hiphop & R&B",
     "Pop"
    ],
    "ticketUrl": "https://www.pinkpop.nl/",
@@ -75899,6 +76223,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B",
+    "Pop"
+   ],
    "ticketUrl": "https://www.paard.nl/en/tickets/149523",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/11/Websiteheader-kopie.jpg",
    "sources": [
@@ -75909,11 +76237,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Hiphop & R&B",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "b69d26b9905df885",
@@ -75931,7 +76255,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Show",
+   "genre": "Toneel",
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/tafkal-2027-most-wanted/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/178876/tafkal-2027-most-wanted.jpg",
    "sources": [
@@ -76577,6 +76901,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.westfalenhalle.de/events-tickets/eventfinder/event-detail/broilers/banda-live/",
    "sources": [
     {
@@ -76586,10 +76913,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-26",
-   "musicGenres": [
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-26"
   },
   {
    "id": "4f12f14f714782c3",
@@ -78566,8 +78890,8 @@
    "start": "2027-10-16T20:00:00+02:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "overig",
-   "genre": "Show",
+   "category": "muziek",
+   "genre": "Concert",
    "ticketUrl": "https://www.ticketmaster.be/event/1827218575?language=nl-be&brand=fnvn",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000wUUvKMAW_original.jpg",
    "sources": [
@@ -80978,7 +81302,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "3a1f97ef071631d0",
@@ -81128,7 +81456,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-26"
+   "lastSeen": "2026-11-26",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "0cab7cb997e31d37",

@@ -433,17 +433,19 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Feelgood Market
 - Hit The City
 
-## grenswerk.nl (3)
+## grenswerk.nl (4)
 
 - Karaoke Night
+- Q Living Room x NOVASTOF
 - WAT! for Dinner
 - Wim Naus en Lottie Boermans
 
-## doornroosje.nl (47)
+## doornroosje.nl (48)
 
 - 40UP
 - Ak’chamel
 - Bad Nerves
+- BeestFeest
 - Belle & Sebastian
 - Bertolf
 - Bram and Bass

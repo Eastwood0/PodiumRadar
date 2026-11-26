@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-26T11:20:52.485Z",
+  "generatedAt": "2026-11-26T13:11:57.991Z",
   "sources": {
     "afaslive.nl": {
       "ok": true,
       "count": 104,
       "previousCount": 104,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "afas-live"
       ],
@@ -15,7 +15,7 @@
       "ok": true,
       "count": 18,
       "previousCount": 18,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "johan-cruijff-arena"
       ],
@@ -23,9 +23,9 @@
     },
     "effenaar.nl": {
       "ok": true,
-      "count": 108,
+      "count": 109,
       "previousCount": 108,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "effenaar"
       ],
@@ -35,7 +35,7 @@
       "ok": true,
       "count": 170,
       "previousCount": 170,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "lanxess-arena"
       ],
@@ -45,7 +45,7 @@
       "ok": true,
       "count": 1,
       "previousCount": 1,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "veltins-arena"
       ],
@@ -55,7 +55,7 @@
       "ok": true,
       "count": 16,
       "previousCount": 16,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "rheinenergiestadion"
       ],
@@ -65,7 +65,7 @@
       "ok": true,
       "count": 46,
       "previousCount": 46,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "sportpaleis"
       ],
@@ -75,7 +75,7 @@
       "ok": true,
       "count": 39,
       "previousCount": 39,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "lotto-arena"
       ],
@@ -85,7 +85,7 @@
       "ok": true,
       "count": 60,
       "previousCount": 60,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "vorst-nationaal"
       ],
@@ -95,7 +95,7 @@
       "ok": true,
       "count": 10,
       "previousCount": 10,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "arena-hasselt"
       ],
@@ -105,7 +105,7 @@
       "ok": true,
       "count": 31,
       "previousCount": 31,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "palais-12"
       ],
@@ -115,7 +115,7 @@
       "ok": true,
       "count": 91,
       "previousCount": 91,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "psd-bank-dome"
       ],
@@ -125,7 +125,7 @@
       "ok": true,
       "count": 19,
       "previousCount": 19,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "merkur-spiel-arena"
       ],
@@ -135,7 +135,7 @@
       "ok": true,
       "count": 89,
       "previousCount": 89,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "mitsubishi-electric-halle"
       ],
@@ -145,7 +145,7 @@
       "ok": true,
       "count": 94,
       "previousCount": 94,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "westfalenhalle"
       ],
@@ -155,7 +155,7 @@
       "ok": true,
       "count": 57,
       "previousCount": 57,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "arena-oberhausen"
       ],
@@ -165,7 +165,7 @@
       "ok": true,
       "count": 24,
       "previousCount": 24,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "grugahalle"
       ],
@@ -175,7 +175,7 @@
       "ok": true,
       "count": 128,
       "previousCount": 128,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "ziggo-dome"
       ],
@@ -185,7 +185,7 @@
       "ok": true,
       "count": 151,
       "previousCount": 151,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "rotterdam-ahoy",
         "maassilo",
@@ -197,7 +197,7 @@
       "ok": true,
       "count": 25,
       "previousCount": 25,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "gelredome"
       ],
@@ -207,7 +207,7 @@
       "ok": true,
       "count": 144,
       "previousCount": 144,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "013"
       ],
@@ -217,7 +217,7 @@
       "ok": true,
       "count": 193,
       "previousCount": 193,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "tivolivredenburg"
       ],
@@ -227,7 +227,7 @@
       "ok": true,
       "count": 9,
       "previousCount": 9,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "sparkassenpark"
       ],
@@ -246,7 +246,7 @@
       "ok": true,
       "count": 109,
       "previousCount": 109,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "muziekgieterij"
       ],
@@ -256,7 +256,7 @@
       "ok": true,
       "count": 32,
       "previousCount": 32,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "gashouder"
       ],
@@ -265,8 +265,8 @@
     "paard.nl": {
       "ok": true,
       "count": 142,
-      "previousCount": 141,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "previousCount": 142,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "paard"
       ],
@@ -275,8 +275,8 @@
     "hedon-zwolle.nl": {
       "ok": true,
       "count": 104,
-      "previousCount": 103,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "previousCount": 104,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "hedon"
       ],
@@ -286,7 +286,7 @@
       "ok": true,
       "count": 141,
       "previousCount": 141,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "patronaat"
       ],
@@ -294,9 +294,9 @@
     },
     "klokgebouw.nl": {
       "ok": true,
-      "count": 39,
+      "count": 41,
       "previousCount": 39,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "klokgebouw"
       ],
@@ -304,9 +304,9 @@
     },
     "grenswerk.nl": {
       "ok": true,
-      "count": 74,
+      "count": 76,
       "previousCount": 74,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "grenswerk"
       ],
@@ -316,7 +316,7 @@
       "ok": true,
       "count": 3,
       "previousCount": 3,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "megaland"
       ],
@@ -326,7 +326,7 @@
       "ok": true,
       "count": 82,
       "previousCount": 82,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "palladium-koeln"
       ],
@@ -334,8 +334,9 @@
     },
     "doornroosje.nl": {
       "ok": true,
-      "count": 175,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "count": 176,
+      "previousCount": 175,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "doornroosje"
       ],
@@ -344,7 +345,8 @@
     "debosuil.nl": {
       "ok": true,
       "count": 62,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "previousCount": 62,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "de-bosuil"
       ],
@@ -353,7 +355,8 @@
     "mezz.nl": {
       "ok": true,
       "count": 135,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "previousCount": 135,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "mezz"
       ],
@@ -362,7 +365,8 @@
     "andrerieu.com (Vrijthof)": {
       "ok": true,
       "count": 12,
-      "lastSuccess": "2026-11-26T11:20:52.485Z",
+      "previousCount": 12,
+      "lastSuccess": "2026-11-26T13:11:57.991Z",
       "venues": [
         "vrijthof"
       ],
