@@ -391,3 +391,14 @@ describe("André Rieu for the Vrijthof", async () => {
     expect(ev[0]).toMatchObject({ title: "André Rieu", start: "2027-07-01T12:00:00+02:00", url: "https://www.andrerieu.com/nl/tour/maastricht-1-juli-2027-nederland" });
   });
 });
+
+describe("Spot Groningen (De Oosterpoort + Stadsschouwburg)", async () => {
+  const { parseSpot } = await import("../scripts/adapters/spot-groningen");
+  const ev = parseSpot(fixture("spot-programma.html"));
+  it("splits the two halls, reads time with offset and genres, skips other locations", () => {
+    expect(ev).toHaveLength(4);
+    expect(new Set(ev.map((e) => e.venueId))).toEqual(new Set(["oosterpoort", "stadsschouwburg-groningen"]));
+    const breij = ev.find((e) => e.title === "Claudia de Breij");
+    expect(breij).toMatchObject({ venueId: "stadsschouwburg-groningen", start: "2026-11-26T20:15:00+01:00", hasTime: true, status: "uitverkocht", sourceCategory: "cabaret" });
+  });
+});

@@ -23,6 +23,7 @@ import { mezz } from "./mezz";
 import { rudolfWeberArena } from "./rudolf-weber-arena";
 import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
 import { sparkassenpark } from "./sparkassenpark";
+import { spotGroningen } from "./spot-groningen";
 import type { Adapter } from "./types";
 import { uitagendaRotterdam } from "./uitagenda-rotterdam";
 import { uitagendaUtrecht } from "./uitagenda-utrecht";
@@ -62,6 +63,7 @@ export const ADAPTERS: Adapter[] = [
   bosuil,
   mezz,
   andreRieu,
+  spotGroningen,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

@@ -32,6 +32,7 @@ venues:
   - { id: melkweg, name: Melkweg, city: Amsterdam, country: NL, tier: B }
   - { id: martiniplaza, name: MartiniPlaza, city: Groningen, country: NL, tier: B }
   - { id: oosterpoort, name: De Oosterpoort, city: Groningen, country: NL, tier: B, aliases: [Spot Groningen] }
+  - { id: stadsschouwburg-groningen, name: Stadsschouwburg Groningen, city: Groningen, country: NL, tier: B, aliases: [Spot Groningen] }
   - { id: doornroosje, name: Doornroosje, city: Nijmegen, country: NL, tier: B }
   - { id: paard, name: Paard, city: Den Haag, country: NL, tier: B }
   - { id: hedon, name: Hedon, city: Zwolle, country: NL, tier: B }
