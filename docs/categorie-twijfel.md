@@ -251,7 +251,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (121)
+## paard.nl (122)
 
 - 40UP
 - 80S VERANTWOORD
@@ -260,7 +260,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - AMINA
 - ANA POPOVIC
 - ANOTHER TASTE
-- APOLLO BROWN &#038; SKYZOO
+- APOLLO BROWN & SKYZOO
 - BEN CAPLAN
 - BETTIE SERVEERT
 - BYWATER CALL
@@ -268,7 +268,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - CALEB CAUDLE
 - CALL IT OFF
 - CESAR: HET VERHAAL VAN EEN DRUMMER
-- CHEF&#8217;SPECIAL
+- CHEF’SPECIAL
 - CITY OF THE SUN
 - CLOUSEAU IN AMARE
 - DAKHABRAKHA
@@ -278,14 +278,14 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - DULFER TOTAL RESPONSE!
 - DUNE SESSIONS
 - EMO NIGHT MAINLAND
-- ERWIN NYHOFF &#038; THE PRODIGAL SONS
+- ERWIN NYHOFF & THE PRODIGAL SONS
 - EXTINCE
 - FATOUMATA DIAWARA
 - FIESTA MACUMBA
 - FILM: SUMMER OF SOUL
 - GALLOWSTREET
 - GIRLS OF THE INTERNET
-- GRIMNER, WAYLANDER &#038; VANSIND
+- GRIMNER, WAYLANDER & VANSIND
 - HAAGS POPGALA
 - HALLO VENRAY
 - HENGE
@@ -293,15 +293,15 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - HIGH FADE
 - HIGHGUEST
 - HIIGO
-- INDOROCK &#038; MORE 2026 met MARLON PICHEL
+- INDOROCK & MORE 2026 met MARLON PICHEL
 - JACK AND THE WEATHERMAN
 - JAKE XERXES FUSSELL
 - JAMES BROWN EXPERIENCE
 - JAN AKKERMAN 80
-- JASPER HØIBY&#8217;S 3ELEMENTS
+- JASPER HØIBY’S 3ELEMENTS
 - JET VAN DER STEEN
 - JIM GARDNER
-- JOB DUTCHTUBER &#038; BILLY THE KIT
+- JOB DUTCHTUBER & BILLY THE KIT
 - JOHN ILLSLEY [CANCELLED]
 - JOSHUA RADIN
 - JUNGLE BY NIGHT
@@ -309,13 +309,13 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - KIM WILDE
 - KOVACS
 - LA PEGATINA
-- MAITE HONTELÉ &#038; LA NOVIA
+- MAITE HONTELÉ & LA NOVIA
 - MAMA AFRICA
 - MARK EITZEL
 - MENSEN ZEGGEN DINGEN
 - MICK FLANNERY
 - MIDGE URE
-- MILES O&#8217;BRIEN
+- MILES O’BRIEN
 - MOBILHOME
 - MULA
 - MUSIC THAT CHANGED THE WORLD #2 [CANCELLED]
@@ -328,16 +328,16 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - OH VOYAGE
 - PAARD VAN STAL
 - PAULA COLE
-- PEARL &#038; THE OYSTERS
+- PEARL & THE OYSTERS
 - PERSONAL TRAINER
 - PICASSO 5/12
-- POLITIEKE JONGEREN &#8211; VERZET! PROTEST!
+- POLITIEKE JONGEREN – VERZET! PROTEST!
 - Paardcafé: Bandsessies
 - Paardcafé: Boyos Soundsystem
 - Paardcafé: Club3voor12 Den Haag
 - Paardcafé: Electroclash
 - Paardcafé: Fabel indie kerst
-- Paardcafé: Gettin&#8217; 80s 90s Wit It!
+- Paardcafé: Gettin’ 80s 90s Wit It!
 - Paardcafé: HPW special met Popradar
 - Paardcafé: Haags Hiphop Centrum
 - Paardcafé: Haagse Popweek Metal Night
@@ -359,6 +359,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - SUPAFLY 2027
 - Sniester 2027
 - TESSA ROSE JACKSON
+- THE 113
 - THE BIRD EXPERIENCE
 - THE BLACK SEEDS
 - THE BLUESBONES
@@ -391,6 +392,51 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - THE FORTUNATE SONS
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
+
+## patronaat.nl (28)
+
+- Any Given Day
+- Artin Muziek & friends
+- Back to the Disco
+- Born From Pain + Inherited
+- Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
+- Dream State
+- FUCK THE CISTEM
+- Geannuleerd: KMFDM
+- Hagane
+- Housequake
+- King Buffalo + Spirit Mother
+- Luicidal + Grindpad
+- Minor Operations Bookings presents: The Protos, Snackbar & Apeshit
+- Moonspell + Iotunn + TodoMal
+- Nieuwjaarsgala
+- Nordjevel + Svarttjern + Malphas + Unviar
+- Orden Ogan + Ensiferum + Angus McSix
+- Patronaatje tot t’ Gaatje
+- REZN + Coltaine
+- Show Me The Body
+- SiM + The Haunt
+- Sivert Høyem + support
+- State Power + Ker Ker
+- StonerGrungeFest met 22AD, Baardvader, Sustain
+- Sugar Spine + Braces
+- Terror + Bane + Start Today + Peace of Mind
+- Turmion Kätilöt + STAM1NA
+- YUNA XL
+
+## klokgebouw.nl (5)
+
+- Artsy & Craftsy Market by Abunai
+- CardManiacs
+- FeelGood Market
+- Feelgood Market
+- Hit The City
+
+## grenswerk.nl (3)
+
+- Karaoke Night
+- WAT! for Dinner
+- Wim Naus en Lottie Boermans
 
 ## ing.arena.brussels (3)
 
@@ -474,3 +520,29 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Simply Red
 - Take That
 - Tokio Hotel
+
+## koeln.de (Palladium) (23)
+
+- Bury Tomorrow
+- Der Herr der Ringe & Der Hobbit – Das Konzert
+- Die neue Heinz Erhardt Revue
+- Eiskönigin 1 & 2 – Musik Show auf Eis
+- Game of Thrones & House of the Dragon + A Knight of the Seven Kingdoms
+- HU4L VIP Meet and Greet Package – Hollywood Undead – EU/UK 2027
+- Hollywood Undead – EU/UK 2027
+- Meshuggah
+- Monet192 – Can You See Me
+- New Model Army + special guests – Weihnachtskonzert 2026
+- Only The Poets – One More Fright
+- PA69 – GOOD VIBES ONLY 2027
+- Pierce The Veil – Europe 2027
+- RY X
+- STAIND – Break The Cycle 25th Anniversary
+- Sticks & Stones – LGBTIQ+ Jobmesse
+- TRETTMANN – Stadt aus Gold
+- The Teskey Brothers
+- The Wombats proudly presents…. 20 Years of a Guide to Love, Loss & Desperation
+- Thrown
+- Undead Army VIP Merch Package – Hollywood Undead – EU/UK 2027
+- Vocatium Köln
+- WEIBER 2.0 – Der Mädelsabend geht weiter!
