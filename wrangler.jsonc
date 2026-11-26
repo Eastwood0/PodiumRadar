@@ -5,6 +5,8 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "podiumradar",
   "compatibility_date": "2026-11-01",
+  // Serve the site on <name>.<account>.workers.dev (otherwise the dashboard shows "no URL enabled").
+  "workers_dev": true,
   "assets": {
     "directory": "./dist"
   }
