@@ -9,6 +9,7 @@ import { pathToFileURL } from "node:url";
 const ALLOWED_EMAIL_DOMAINS = ["example.com", "example.org", "notify.cloudflare.com", "anthropic.com", "users.noreply.github.com"];
 
 const KEY_ASSIGNMENT = /(api[_-]?key|apikey|secret|token|password|client[_-]?secret)\b["']?\s*[:=]\s*["']?([A-Za-z0-9_-]{16,})/gi;
+const FILE_EXTENSION = /\.(png|jpe?g|gif|webp|avif|svg|pdf|mp4|webm)$/;
 const EMAIL = /\b[A-Za-z0-9._%+-]+@([A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g;
 const SKIP_FILES = new Set(["package-lock.json"]);
 
@@ -20,6 +21,8 @@ export function findSecrets(text) {
   }
   for (const m of text.matchAll(EMAIL)) {
     const domain = m[1].toLowerCase();
+    // File names like "L@HZ-HEADER.png" or "logo@2x.webp" in image links are not addresses.
+    if (FILE_EXTENSION.test(domain)) continue;
     if (!ALLOWED_EMAIL_DOMAINS.some((d) => domain === d || domain.endsWith(`.${d}`))) {
       findings.push(`e-mailadres met domein "${domain}"`);
     }

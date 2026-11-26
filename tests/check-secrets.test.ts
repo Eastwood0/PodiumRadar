@@ -18,3 +18,10 @@ describe("findSecrets", () => {
     expect(findSecrets("allowlist noreply@notify.cloudflare.com and test@example.com")).toEqual([]);
   });
 });
+
+describe("findSecrets: file names", () => {
+  it("does not treat image names with @ as e-mail addresses", () => {
+    expect(findSecrets('"imageUrl": "https://www.paard.nl/uploads/L@HZ-HEADER.png"')).toEqual([]);
+    expect(findSecrets("logo" + "@2x.webp")).toEqual([]);
+  });
+});
