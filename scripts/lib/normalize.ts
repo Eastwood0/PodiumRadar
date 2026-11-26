@@ -48,3 +48,16 @@ export function artistsFromTitle(title: string): string[] {
   const parts = clean.split(/\s+(?:\+|x|b2b)\s+/i).map((s) => s.trim()).filter(Boolean);
   return parts.length > 1 && parts.length <= 4 && parts.every((p) => p.length >= 2) ? parts : [clean || title];
 }
+
+const NAMED: Record<string, string> = {
+  amp: "&", quot: '"', apos: "'", lt: "<", gt: ">", nbsp: " ", ndash: "–", mdash: "—", hellip: "…",
+  lsquo: "‘", rsquo: "’", ldquo: "“", rdquo: "”", euml: "ë", eacute: "é", egrave: "è", uuml: "ü", ouml: "ö", auml: "ä", szlig: "ß",
+};
+
+/** Some sources (WordPress JSON-LD) leave HTML entities in names: "APOLLO BROWN &#038; SKYZOO". */
+export function decodeEntities(s: string): string {
+  return s
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&([a-z]+);/gi, (m, name) => NAMED[name.toLowerCase()] ?? m);
+}

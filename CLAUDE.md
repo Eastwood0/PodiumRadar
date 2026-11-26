@@ -77,7 +77,7 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Fase: **2 bezig** (gestart 25 november 2026). Fase 1 grotendeels af; open: Ticketmaster (B25), Palladium.
 - Bouwplan: versie 0.7, beslissingen t/m B33.
 - Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Lighthouse lokaal mobiel 96–98 / 100; 360 px zonder horizontaal scrollen.
-- Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 700 per run, cache `data/artist-genres.json`).
+- Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
 - Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
   - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder (HTML), Hedon (Angular ng-state).
   - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (be•at), ING Arena.

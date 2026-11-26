@@ -3,7 +3,7 @@ import type { SourceEvent } from "../adapters/types";
 import { localDate, TZ_BY_COUNTRY } from "./dates";
 import { classify } from "./categorize";
 import { eventGenres } from "./music-genre";
-import { artistsFromTitle, eventId, tokenSetSimilarity } from "./normalize";
+import { artistsFromTitle, decodeEntities, eventId, tokenSetSimilarity } from "./normalize";
 
 export const HORIZON_DAYS = 365;
 export const SAME_EVENT_SIMILARITY = 0.85; // bouwplan §7
@@ -27,7 +27,8 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
   const guesses: string[] = [];
   let dropped = 0;
   const until = new Date(Date.parse(today) + HORIZON_DAYS * 86_400_000).toISOString().slice(0, 10);
-  for (const s of raw) {
+  for (const r of raw) {
+    const s = { ...r, title: decodeEntities(r.title).trim(), artists: r.artists?.map((a) => decodeEntities(a).trim()) };
     const venue = venues.get(s.venueId);
     if (!venue) {
       dropped++;

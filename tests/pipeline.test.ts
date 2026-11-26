@@ -76,3 +76,12 @@ describe("normalize", () => {
     expect(artistsFromTitle("SARIUS x EPIS x BONSON")).toEqual(["SARIUS", "EPIS", "BONSON"]);
   });
 });
+
+describe("decodeEntities", async () => {
+  const { decodeEntities } = await import("../scripts/lib/normalize");
+  it("turns HTML entities in source names into characters", () => {
+    expect(decodeEntities("APOLLO BROWN &#038; SKYZOO")).toBe("APOLLO BROWN & SKYZOO");
+    expect(decodeEntities("&#8220;Sunset Session&#8221;")).toBe("“Sunset Session”");
+    expect(decodeEntities("Rock &amp; Roll &unknown;")).toBe("Rock & Roll &unknown;");
+  });
+});

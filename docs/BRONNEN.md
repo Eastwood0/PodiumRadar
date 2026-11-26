@@ -60,7 +60,7 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 
 | Onderwerp | Bevinding | Gevolg | Bron |
 |---|---|---|---|
-| MusicBrainz API | Max gemiddeld 1 verzoek per seconde per IP; elk verzoek moet een User-Agent met contactgegevens hebben; daarboven HTTP 503 | `scripts/genres.ts` gebruikt de wachtrij van 1 verzoek/s, User-Agent met repo-link, max 700 opzoekingen per run, stopt na 10 fouten | [Rate limiting](https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting) |
+| MusicBrainz API | Max gemiddeld 1 verzoek per seconde per IP; elk verzoek moet een User-Agent met contactgegevens hebben; daarboven HTTP 503 | `scripts/genres.ts` gebruikt de wachtrij van 1 verzoek/s, User-Agent met repo-link, max 400 opzoekingen per run met een extra pauze (ongeveer 1 per 2 seconden), wacht bij 503 en stopt na 15 fouten. GitHub-machines delen IP-adressen; op 26 nov gaven ze na 20–50 verzoeken 503 | [Rate limiting](https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting) |
 | DJguide | robots.txt: "Content-Usage: ai=n", lange lijst geblokkeerde bots en scrapers; geen API, RSS of iCal gevonden | Niet als bron gebruikt (B33) | [djguide.nl](https://www.djguide.nl/) |
 | Gashouder | Ging begin 2025 ongeveer anderhalf jaar dicht voor verbouwing (bericht 5 dec 2024) | Eigen site gashouder.nl; agenda via probe/snapshot controleren | [NH Nieuws](https://www.nhnieuws.nl/nieuws/343470/verbouwing-gashouder-jaar-dicht-amsterdam) |
 | Warehouse Elementenstraat | Geen eigen agenda-site gevonden; staat bij ADE, I amsterdam en ticketplatforms | Geen bron; komt mogelijk via Ticketmaster | [I amsterdam](https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/warehouse-elementenstraat) |

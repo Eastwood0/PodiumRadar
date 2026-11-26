@@ -14,7 +14,9 @@ import { apiGet } from "./lib/http";
 import { artistKey, type ArtistGenreEntry, genresFromTags, type Tag } from "./lib/music-genre";
 
 const EVENTS_FILE = "data/events.json";
-const BUDGET = Number(process.env.GENRE_BUDGET ?? 700);
+const BUDGET = Number(process.env.GENRE_BUDGET ?? 400);
+/** Extra pause on top of the 1 request/s queue: CI machines share IP addresses, MusicBrainz counts per IP. */
+const EXTRA_PAUSE_MS = 1000;
 const RECHECK_MISS_DAYS = 60;
 const RECHECK_HIT_DAYS = 180;
 const MAX_ACTS_PER_EVENT = 3;
@@ -43,9 +45,10 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 async function lookup(name: string, today: string): Promise<ArtistGenreEntry | "error"> {
   const url = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(`artist:"${luceneEscape(name)}"`)}&fmt=json&limit=5`;
   let r = await apiGet(url);
-  if (r.status === 503) {
-    // Over the limit (shared CI machines count too): back off once, then give up on this artist for today.
-    await sleep(5000);
+  for (const wait of [5_000, 20_000]) {
+    if (r.status !== 503) break;
+    // Over the limit (shared CI machines count too): back off, then try again.
+    await sleep(wait);
     r = await apiGet(url);
   }
   if (!r.ok) {
@@ -78,9 +81,10 @@ async function main() {
   let found = 0;
   let errors = 0;
   for (const [key, name] of todo) {
+    await sleep(EXTRA_PAUSE_MS);
     const res = await lookup(name, today);
     if (res === "error") {
-      if (++errors >= 10) {
+      if (++errors >= 15) {
         console.warn("MusicBrainz geeft herhaaldelijk fouten; stop voor vandaag");
         break;
       }
