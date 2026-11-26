@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+    <html lang="nl">
+<head>
+    <title>programma | Maaspoort Venlo</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes"/>
+
+    <link rel="stylesheet" type="text/css" href="/css/site.css?v=1790326033"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png?v=2">
+<link rel="manifest" href="/img/favicons/site.webmanifest?v=2">
+<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg?v=2" color="#fa50ff">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico?v=2">
+<meta name="apple-mobile-web-app-title" content="Maaspoort">
+<meta name="application-name" content="Maaspoort">
+<meta name="msapplication-TileColor" content="#3e0a4f">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml?v=2">
+<meta name="theme-color" content="#3e0a4f">        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TJL5XKH');</script>
+    <!-- End Google Tag Manager -->
+
+
+<!-- Global site tag (gtag.js) - AdWords: 782071576 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-782071576"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-782071576'); </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15710613-4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-15710613-4');
+</script>    
+
+
+<script type="text/javascript">
+
+	var general_translations = new Object();
+	
+	general_translations.translatable_pricecodes = JSON.parse('{"Normaal tarief":"Normaal tarief","Gereserveerde plaats inclusief lunch (FB foyer)":"Gereserveerde plaats inclusief lunch (FB foyer)","Kinderprijs":"Kinderprijs","Jongeren 13 t\/m 26 jaar":"Jongeren 13 t\/m 26 jaar","Toeschouwer":"Toeschouwer","Baby en Ouder":"Baby en Ouder","Vrienden van Sidera":"Vrienden van Sidera"}');
+	general_translations.translate_pricecode = function(t) {
+		if( typeof general_translations.translatable_pricecodes[t] != 'undefined' ) {
+			return general_translations.translatable_pricecodes[t]
+		}
+		return t;
+	};
+
+	general_translations.translatable_ranks = JSON.parse('{"Vrije plaatskeuze":"Volloopplaats","Geen rang (volloop)":"Geen rang (volloop)","Gouden rang":"Gouden rang","1e rang":"1e rang","2e rang":"2e rang","3e rang":"3e rang","4e rang":"4e rang","Rolstoelplaatsen":"Rolstoelplaatsen","Rolstoelplaats":"Rolstoelplaats","Vak GROEN: stoel 1 t\/m 244":"Vak GROEN: stoel 1 t\/m 244","vak GEEL: stoel 245 t\/m 518":"vak GEEL: stoel 245 t\/m 518","Vak BLAUW: stoel 519 t\/m 780":"Vak BLAUW: stoel 519 t\/m 780","Vak ROOD: stoel 781 t\/m 1013":"Vak ROOD: stoel 781 t\/m 1013"}');
+	general_translations.translate_rank = function(t) {
+		if( typeof general_translations.translatable_ranks[t] != 'undefined' ) {
+			return general_translations.translatable_ranks[t]
+		}
+		return t;
+	};
+
+	general_translations.language = 'nederlands';
+	general_translations.bestel_url = '/bestel';
+	general_translations.cart_url = '/winkelmandje/';
+	general_translations.payment_url = '/betaalmethode/';
+	general_translations.account_profile_url = '/account/mijn-gegevens/';
+	general_translations.account_url = '/account/';
+	general_translations.login_url = '/account/';
+	general_translations.orderhistory_url = '/account/mijn-bestellingen/';
+
+	general_translations.uur = 'uur';
+	general_translations.kaart = 'kaart';
+	general_translations.kaarten = 'kaarten';
+
+	general_translations.rij = 'rij';
+	general_translations.stoel = 'stoel';
+	general_translations.bas = 'Best beschikbare plaatsen';
+	general_translations.volloop = 'Volloop';
+
+	general_translations.opslaan = 'Opslaan';
+	general_translations.bestellen = 'Bestellen';
+	general_translations.aantal = 'Aantal';
+	general_translations.afronden = 'Afronden';
+	general_translations.afrekenen = 'Afrekenen';
+	general_translations.inloggen = 'Inloggen';
+	general_translations.uur = 'uur';
+	general_translations.optie_verlopen = 'Uw stoelkeuze van 1 of meerdere gekozen voorstellingen is verlopen. Klik op ok om door te gaan met de best beschikbare plaatsen, of klik op annuleren om nieuwe plaatsen te kiezen.';
+	general_translations.stoelen_mislukt = 'Helaas is het niet meer mogelijk om in dezelfde rang plaatsen voor u te boeken. Eventueel kunt u wel nog handmatig andere plaatsen selecteren.';
+
+	general_translations.bestel_statussen = new Object();
+	general_translations.bestel_statussen.tickets = 'Tickets';
+	general_translations.bestel_statussen.wachtlijst = 'Wachtlijst';
+	general_translations.bestel_statussen.geweest = 'Geweest';
+	general_translations.bestel_statussen.uitverkocht = 'Uitverkocht';
+	general_translations.bestel_statussen.geannuleerd = 'Geannuleerd';
+	general_translations.bestel_statussen.gratis = 'Gratis';
+	general_translations.bestel_statussen.ticketbureau = 'Via ticketbureau';
+
+</script>                <meta name="robots" content="index,follow"/>
+            <meta name="facebook-domain-verification" content="p2twfpts11he3j4lpd4j7wkqd6qyil" />
+                    <meta name="description" content="Bekijk hier de shows, voorstellingen en artiesten uit het programma van Maaspoort in Venlo. Koop je tickets snel en gemakkelijk online." />                </head>
+                <body class="page-show-overview "  data-page-id="1029"  >
+
+        <div class="alert-box-parent hide">
+            <div data-alert class="alert-box alert" data-alert-id="localstorage">
+                <div class="row">
+                    <div class="small-12 columns">
+                        Het lijkt er op dat u deze website in privé-modus bekijkt. Hierdoor kunnen bepaalde functionaliteiten niet juist werken. Om te kunnen boeken bezoekt u de website in de normale modus.                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+
+                <!-- Off-canvas menu -->
+                <aside class="left-off-canvas-menu">
+    <ul class="off-screen-nav-menu"><li class="level-1"><a href="/">Home</a></li><li class="level-1 active"><a href="/programma/">Programma</a></li><li class="level-1"><a href="/nieuws/">Nieuws</a></li><li class="level-1 has-children"><a href="/informatie/">Informatie</a><div class="sub-menu-wrap"><span class="title">Informatie</span><ul><li class="level-2 has-children"><a href="/informatie/bezoekersinformatie/">Bezoekersinformatie</a><div class="sub-menu-wrap"><span class="title">Bezoekersinformatie</span><ul><li class="level-3"><a href="/informatie/bezoekersinformatie/kaartverkoop/">Kaartverkoop</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/informatie-a-t-m-z/">Informatie A t/m Z</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/mensen-met-een-beperking/">Toegankelijkheid</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/zalen/">Zalen</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/privacy/">Privacy</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/brochure/">Brochure aanvragen</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/route-parkeren/">Route &amp; parkeren</a></li><li class="level-3"><a href="/informatie/bezoekersinformatie/contact/">Contact</a></li></ul></div></li><li class="level-2 has-children"><a href="/informatie/voordeel-extras/">Voordeel &amp; Extra&#039;s</a><div class="sub-menu-wrap"><span class="title">Voordeel &amp; Extra&#039;s</span><ul><li class="level-3"><a href="/informatie/voordeel-extras/vrienden-van-maaspoort/">Vrienden van Maaspoort</a></li><li class="level-3"><a href="/informatie/voordeel-extras/ontdek-beleef/">Ontdek &amp; Beleef</a></li><li class="level-3"><a href="/informatie/voordeel-extras/voordeel-met-je-biebpas/">Voordeel met je Biebpas</a></li><li class="level-3"><a href="/informatie/voordeel-extras/cadeaus/">Cadeaubonnen</a></li><li class="level-3"><a href="/informatie/voordeel-extras/last-minute-ckv/">Korting voor jongeren</a></li><li class="level-3"><a href="/informatie/voordeel-extras/podiumpas/">Podiumpas</a></li><li class="level-3"><a href="/informatie/voordeel-extras/regiotalent/">Uit de regio</a></li><li class="level-3"><a href="/informatie/voordeel-extras/vriendenloterij/">VriendenLoterij</a></li></ul></div></li><li class="level-2 has-children"><a href="/informatie/over-maaspoort/">Over Maaspoort</a><div class="sub-menu-wrap"><span class="title">Over Maaspoort</span><ul><li class="level-3"><a href="/informatie/over-maaspoort/visie-maaspoort/">Visie Maaspoort</a></li><li class="level-3"><a href="/informatie/over-maaspoort/vacatures-stages/">Werken bij Maaspoort</a></li><li class="level-3"><a href="/informatie/over-maaspoort/doneren-en-nalaten/">Schenken &amp; nalaten</a></li><li class="level-3"><a href="/informatie/over-maaspoort/anbi/">ANBI</a></li><li class="level-3"><a href="/informatie/over-maaspoort/duurzaamheid/">Duurzaamheid</a></li><li class="level-3"><a href="/informatie/over-maaspoort/kunst-in-maaspoort/">Kunst in Maaspoort</a></li><li class="level-3"><a href="/informatie/over-maaspoort/resonanz/">RESONANZ</a></li><li class="level-3"><a href="/informatie/over-maaspoort/stroomversnellers/">Stroomversnellers</a></li><li class="level-3"><a href="/informatie/over-maaspoort/backstage/">BACKSTAGE</a></li></ul></div></li><li class="level-2 has-children"><a href="/informatie/kids-theater/">Kids &amp; theater</a><div class="sub-menu-wrap"><span class="title">Kids &amp; theater</span><ul><li class="level-3"><a href="/informatie/kids-theater/jeugdfonds/">Jeugdfonds</a></li><li class="level-3"><a href="/informatie/kids-theater/gratis-naar-het-theater/">kinderen gratis naar theater</a></li><li class="level-3"><a href="/informatie/kids-theater/theater-kijken-doe-je-zo/">kids &amp; theater</a></li><li class="level-3"><a href="/informatie/kids-theater/koekeloere/">Koekeloere Festival</a></li></ul></div></li><li class="level-2 has-children"><a href="/informatie/theatertechniek/">Theatertechniek</a><div class="sub-menu-wrap"><span class="title">Theatertechniek</span><ul><li class="level-3"><a href="/informatie/theatertechniek/artiesten/">Artiesten</a></li><li class="level-3"><a href="/informatie/theatertechniek/techniek/">Techniek</a></li></ul></div></li></ul></div></li><li class="level-1 has-children"><a href="/ruimte-huren/">Congres &amp; events</a><div class="sub-menu-wrap"><span class="title">Congres &amp; events</span><ul><li class="level-2"><a href="/ruimte-huren/congres-events/">Congres &amp; events</a></li><li class="level-2 has-children"><a href="/ruimte-huren/algemeen/">Event organiseren</a><div class="sub-menu-wrap"><span class="title">Event organiseren</span><ul><li class="level-3"><a href="/ruimte-huren/algemeen/check-beschikbaarheid/">check beschikbaarheid</a></li><li class="level-3"><a href="/ruimte-huren/algemeen/algemene-informatie/">Algemene informatie</a></li><li class="level-3"><a href="/ruimte-huren/algemeen/onze-eventmanagers/">onze eventmanagers</a></li><li class="level-3"><a href="/ruimte-huren/algemeen/regio-venlo/">Regio Venlo</a></li></ul></div></li><li class="level-2 has-children"><a href="/ruimte-huren/mogelijkheden/">Mogelijkheden</a><div class="sub-menu-wrap"><span class="title">Mogelijkheden</span><ul><li class="level-3"><a href="/ruimte-huren/mogelijkheden/kerst/">kerst</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/congres-of-bijeenkomst/">congres of bijeenkomst</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/vergaderen-maaspoort/">vergadering</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/feesten-diners-borrels-1/">feest, diner of borrel</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/trouwlocatie/">bruiloft</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/uitvaart/">uitvaart</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/theaterarrangementen/">groepsarrangement</a></li><li class="level-3"><a href="/ruimte-huren/mogelijkheden/cultuurkorting/">culturele verhuur</a></li></ul></div></li><li class="level-2 has-children"><a href="/ruimte-huren/ruimtes/">Ruimtes</a><div class="sub-menu-wrap"><span class="title">Ruimtes</span><ul><li class="level-3"><a href="/ruimte-huren/ruimtes/theaterzalen/">Theaterzalen</a></li><li class="level-3"><a href="/ruimte-huren/ruimtes/vergaderzalen/">Vergaderzalen</a></li><li class="level-3"><a href="/ruimte-huren/ruimtes/foyers/">Foyers</a></li><li class="level-3"><a href="/ruimte-huren/ruimtes/restaurants/">Restaurant &amp; bars</a></li></ul></div></li></ul></div></li><li class="level-1 has-children"><a href="/zakelijk/">Theater &amp; Zaken</a><div class="sub-menu-wrap"><span class="title">Theater &amp; Zaken</span><ul><li class="level-2"><a href="/zakelijk/sponsoren/">Sponsoren</a></li><li class="level-2"><a href="/zakelijk/founders/">Founders</a></li><li class="level-2"><a href="/zakelijk/businessclub/">Cultuurpartners</a></li></ul></div></li><li class="level-1 has-children"><a href="/eten-drinken/">Eten &amp; drinken</a><div class="sub-menu-wrap"><span class="title">Eten &amp; drinken</span><ul><li class="level-2"><a href="/eten-drinken/arrangementen/">Arrangementen</a></li><li class="level-2"><a href="/eten-drinken/restobarsin/">Restobar SIN</a></li><li class="level-2"><a href="/eten-drinken/rooftopbar/">Scheuten Rooftop bar</a></li><li class="level-2"><a href="/eten-drinken/hotelbar-de-miste/">Hotelbar De Miste</a></li><li class="level-2"><a href="/eten-drinken/pauzedrankje-garderobe/">Pauzedrankje &amp; garderobe</a></li></ul></div></li><li class="level-1 has-children"><a href="/theaterhotel-venlo/">Hotel</a><div class="sub-menu-wrap"><span class="title">Hotel</span><ul><li class="level-2"><a href="/theaterhotel-venlo/theaterhotel-venlo/">Theaterhotel Venlo</a></li><li class="level-2"><a href="/theaterhotel-venlo/hotelbar-de-miste/">hotelbar De Miste</a></li></ul></div></li><li class="level-1 has-children"><a href="/cultuureducatie/">Educatie</a><div class="sub-menu-wrap"><span class="title">Educatie</span><ul><li class="level-2"><a href="/cultuureducatie/schoolvoorstelling/">Schoolvoorstellingen</a></li><li class="level-2"><a href="/cultuureducatie/bijzondere-backstage-tour/">Bijzondere Backstage Tour</a></li><li class="level-2"><a href="/cultuureducatie/rondleiding/">Rondleiding</a></li><li class="level-2"><a href="/cultuureducatie/spraekbox/">Spraekbox</a></li><li class="level-2"><a href="/cultuureducatie/schoolmusicals-bij-de-maaspoort/">schoolmusicals bij Maaspoort</a></li></ul></div></li></ul>    <ul class="off-screen-nav-menu add-header-links">
+        <li class="level-1"><a href="/informatie/bezoekersinformatie/contact/">Contact</a></li>
+    </ul>
+    <div class="off-screen-nav-links">
+        <a id="js_login" href="#login" class="off-canvas-login">inloggen</a>
+        <a href="/account/mijn-gegevens" class="off-canvas-account">account</a>
+    </div>
+    <ul class="languages-nav">
+                            <li>
+            <a href="/programma/">
+                <img class="lang-img" src="/img/flag-nl.png" alt="Nederlands">
+            </a>
+        </li>
+                        <li>
+            <a href="/de/programm/">
+                <img class="lang-img" src="/img/flag-de.png" alt="Deutsch">
+            </a>
+        </li>
+                        <li>
+            <a href="/en/programma/">
+                <img class="lang-img" src="/img/flag-en.png" alt="English">
+            </a>
+        </li>
+</ul>
+    <ul class="top-bar-social">
+            <li class="facebook"><a href="http://www.facebook.com/maaspoort" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/company/maaspoort" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li class="youtube"><a href="https://www.youtube.com/user/theatervenlo" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/maaspoortvenlo/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+
+</aside>
+
+                <!-- Main content -->
+
+                <div class="sticky-header">
+                    
+<section class="top-bar">
+        <div class="row show-for-large-up text-center">
+        <div class="small-12 columns">
+            <div class="usp-bar">
+                                            <div><span class="check-icon"></span> Ontvang direct je e-tickets </div>
+                                                    <div><span class="check-icon"></span>  Onze bezoekers beoordelen ons met een 9</div>
+                                    </div>
+        </div>
+    </div>
+    
+    <div class="row row-large-width">
+        <div class="small-6 small-offset-3 large-offset-0 large-2 columns">
+            <a href="/" class="top-bar-image">
+                <img class="top-bar-logo" src="/img/maaspoort-logo.svg?v=2" alt="Maaspoort - logo" width="150" height="48">
+            </a>
+        </div>
+
+        <div class="small-3 large-3 large-push-7 columns">
+            <ul class="top-bar-menu">
+                <li class="nav-item nav-item-contact">
+                    <a href="/informatie/bezoekersinformatie/contact/"><span>contact</span></a>
+                </li>
+                <li class="nav-item nav-item-login">
+                    <a id="js_login" href="#login"><span>inloggen</span></a>
+                </li>
+                <li class="nav-item nav-item-account">
+                    <a href="/account/mijn-gegevens"><span>account</span></a>
+                </li>
+                <li class="nav-item nav-item-wensenlijst">
+                    <a href="/account/mijn-favorieten">
+                        <span class="amount" data-hook="wishlistamount"></span>
+                        <span>favorieten</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-cart">
+                    <a data-hook="cart-count" href="/winkelmandje/" title="winkelwagen" data-count="0"><span>winkelwagen</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="small-12 large-7 large-pull-3 columns">
+                        <div class="primary-nav-search">
+                <form action="/zoekresultaten/" method="get" class="search_form">
+                    <input type="hidden" name="direct" value="true">
+                    <input id="search_lang" type="hidden" name="language" value="default">
+                    <input name="q" type="text" name="frm_search" placeholder="waar ben je naar op zoek?" class="input-search" id="js_input">
+                    <button type="submit"></button>
+                    <a class="btn" id="js_focus" href="javascript:void();"></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+                    
+<nav class="primary-nav">
+    <a href="javascript:;" class="left-off-canvas-toggle"><span></span></a>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <ul class="primary-nav-menu"><li class="level-1"><a href='/'>Home</a></li><li class="level-1 active"><a href='/programma/'>Programma</a></li><li class="level-1"><a href='/nieuws/'>Nieuws</a></li><li class="level-1 has-children"><a href='javascript:;'>Informatie</a><div class="sub-menu-wrap"><span class="title">Informatie</span><ul><li class="level-2 has-children"><a href='/informatie/bezoekersinformatie/'>Bezoekersinformatie</a><div class="sub-menu-wrap"><span class="title">Bezoekersinformatie</span><ul><li class="level-3"><a href='/informatie/bezoekersinformatie/kaartverkoop/'>Kaartverkoop</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/informatie-a-t-m-z/'>Informatie A t/m Z</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/mensen-met-een-beperking/'>Toegankelijkheid</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/zalen/'>Zalen</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/privacy/'>Privacy</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/brochure/'>Brochure aanvragen</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/route-parkeren/'>Route &amp; parkeren</a></li><li class="level-3"><a href='/informatie/bezoekersinformatie/contact/'>Contact</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/informatie/voordeel-extras/'>Voordeel &amp; Extra&#039;s</a><div class="sub-menu-wrap"><span class="title">Voordeel &amp; Extra&#039;s</span><ul><li class="level-3"><a href='/informatie/voordeel-extras/vrienden-van-maaspoort/'>Vrienden van Maaspoort</a></li><li class="level-3"><a href='/informatie/voordeel-extras/ontdek-beleef/'>Ontdek &amp; Beleef</a></li><li class="level-3"><a href='/informatie/voordeel-extras/voordeel-met-je-biebpas/'>Voordeel met je Biebpas</a></li><li class="level-3"><a href='/informatie/voordeel-extras/cadeaus/'>Cadeaubonnen</a></li><li class="level-3"><a href='/informatie/voordeel-extras/last-minute-ckv/'>Korting voor jongeren</a></li><li class="level-3"><a href='/informatie/voordeel-extras/podiumpas/'>Podiumpas</a></li><li class="level-3"><a href='/informatie/voordeel-extras/regiotalent/'>Uit de regio</a></li><li class="level-3"><a href='/informatie/voordeel-extras/vriendenloterij/'>VriendenLoterij</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/informatie/over-maaspoort/'>Over Maaspoort</a><div class="sub-menu-wrap"><span class="title">Over Maaspoort</span><ul><li class="level-3"><a href='/informatie/over-maaspoort/visie-maaspoort/'>Visie Maaspoort</a></li><li class="level-3"><a href='/informatie/over-maaspoort/vacatures-stages/'>Werken bij Maaspoort</a></li><li class="level-3"><a href='/informatie/over-maaspoort/doneren-en-nalaten/'>Schenken &amp; nalaten</a></li><li class="level-3"><a href='/informatie/over-maaspoort/anbi/'>ANBI</a></li><li class="level-3"><a href='/informatie/over-maaspoort/duurzaamheid/'>Duurzaamheid</a></li><li class="level-3"><a href='/informatie/over-maaspoort/kunst-in-maaspoort/'>Kunst in Maaspoort</a></li><li class="level-3"><a href='/informatie/over-maaspoort/resonanz/'>RESONANZ</a></li><li class="level-3"><a href='/informatie/over-maaspoort/stroomversnellers/'>Stroomversnellers</a></li><li class="level-3"><a href='/informatie/over-maaspoort/backstage/'>BACKSTAGE</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/informatie/kids-theater/'>Kids &amp; theater</a><div class="sub-menu-wrap"><span class="title">Kids &amp; theater</span><ul><li class="level-3"><a href='/informatie/kids-theater/jeugdfonds/'>Jeugdfonds</a></li><li class="level-3"><a href='/informatie/kids-theater/gratis-naar-het-theater/'>kinderen gratis naar theater</a></li><li class="level-3"><a href='/informatie/kids-theater/theater-kijken-doe-je-zo/'>kids &amp; theater</a></li><li class="level-3"><a href='/informatie/kids-theater/koekeloere/'>Koekeloere Festival</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/informatie/theatertechniek/'>Theatertechniek</a><div class="sub-menu-wrap"><span class="title">Theatertechniek</span><ul><li class="level-3"><a href='/informatie/theatertechniek/artiesten/'>Artiesten</a></li><li class="level-3"><a href='/informatie/theatertechniek/techniek/'>Techniek</a></li></ul><div class="purple-bar"></div></div></li></ul><div class="purple-bar"></div></div></li><li class="level-1 has-children"><a href='/events' class='event-link'>Congres &amp; events</a><div class="sub-menu-wrap"><span class="title">Congres &amp; events</span><ul><li class="level-2"></li><li class="level-2 has-children"><a href='/ruimte-huren/algemeen/'>Event organiseren</a><div class="sub-menu-wrap"><span class="title">Event organiseren</span><ul><li class="level-3"><a href='/ruimte-huren/algemeen/check-beschikbaarheid/'>check beschikbaarheid</a></li><li class="level-3"><a href='/ruimte-huren/algemeen/algemene-informatie/'>Algemene informatie</a></li><li class="level-3"><a href='/ruimte-huren/algemeen/onze-eventmanagers/'>onze eventmanagers</a></li><li class="level-3"><a href='/ruimte-huren/algemeen/regio-venlo/'>Regio Venlo</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/ruimte-huren/mogelijkheden/'>Mogelijkheden</a><div class="sub-menu-wrap"><span class="title">Mogelijkheden</span><ul><li class="level-3"><a href='/ruimte-huren/mogelijkheden/kerst/'>kerst</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/congres-of-bijeenkomst/'>congres of bijeenkomst</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/vergaderen-maaspoort/'>vergadering</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/feesten-diners-borrels-1/'>feest, diner of borrel</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/trouwlocatie/'>bruiloft</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/uitvaart/'>uitvaart</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/theaterarrangementen/'>groepsarrangement</a></li><li class="level-3"><a href='/ruimte-huren/mogelijkheden/cultuurkorting/'>culturele verhuur</a></li></ul><div class="purple-bar"></div></div></li><li class="level-2 has-children"><a href='/ruimte-huren/ruimtes/'>Ruimtes</a><div class="sub-menu-wrap"><span class="title">Ruimtes</span><ul><li class="level-3"><a href='/ruimte-huren/ruimtes/theaterzalen/'>Theaterzalen</a></li><li class="level-3"><a href='/ruimte-huren/ruimtes/vergaderzalen/'>Vergaderzalen</a></li><li class="level-3"><a href='/ruimte-huren/ruimtes/foyers/'>Foyers</a></li><li class="level-3"><a href='/ruimte-huren/ruimtes/restaurants/'>Restaurant &amp; bars</a></li></ul><div class="purple-bar"></div></div></li></ul><div class="purple-bar"></div></div></li><li class="level-1 has-children"><a href='/zakelijk/'>Theater &amp; Zaken</a><div class="sub-menu-wrap"><span class="title">Theater &amp; Zaken</span><ul><li class="level-2"><a href='/zakelijk/sponsoren/'>Sponsoren</a></li><li class="level-2"><a href='/zakelijk/founders/'>Founders</a></li><li class="level-2"><a href='/zakelijk/businessclub/'>Cultuurpartners</a></li></ul><div class="purple-bar"></div></div></li><li class="level-1 has-children"><a href='javascript:;'>Eten &amp; drinken</a><div class="sub-menu-wrap"><span class="title">Eten &amp; drinken</span><ul><li class="level-2"><a href='/eten-drinken/arrangementen/'>Arrangementen</a></li><li class="level-2"><a href='/eten-drinken/restobarsin/' target='_blank'>Restobar SIN</a></li><li class="level-2"><a href='/eten-drinken/rooftopbar/'>Scheuten Rooftop bar</a></li><li class="level-2"><a href='/eten-drinken/hotelbar-de-miste/'>Hotelbar De Miste</a></li><li class="level-2"><a href='/eten-drinken/pauzedrankje-garderobe/'>Pauzedrankje &amp; garderobe</a></li></ul><div class="purple-bar"></div></div></li><li class="level-1 has-children"><a href='javascript:;'>Hotel</a><div class="sub-menu-wrap"><span class="title">Hotel</span><ul><li class="level-2"><a href='/theaterhotel-venlo/theaterhotel-venlo/'>Theaterhotel Venlo</a></li><li class="level-2"><a href='/theaterhotel-venlo/hotelbar-de-miste/'>hotelbar De Miste</a></li></ul><div class="purple-bar"></div></div></li><li class="level-1 has-children"><a href='/cultuureducatie/'>Educatie</a><div class="sub-menu-wrap"><span class="title">Educatie</span><ul><li class="level-2"><a href='/cultuureducatie/schoolvoorstelling/'>Schoolvoorstellingen</a></li><li class="level-2"><a href='/cultuureducatie/bijzondere-backstage-tour/'>Bijzondere Backstage Tour</a></li><li class="level-2"><a href='/cultuureducatie/rondleiding/'>Rondleiding</a></li><li class="level-2"><a href='/cultuureducatie/spraekbox/'>Spraekbox</a></li><li class="level-2"><a href='/cultuureducatie/schoolmusicals-bij-de-maaspoort/'>schoolmusicals bij Maaspoort</a></li></ul><div class="purple-bar"></div></div></li></ul>            <ul class="languages-nav">
+                            <li>
+            <a href="/programma/">
+                <img class="lang-img" src="/img/flag-nl.png" alt="Nederlands">
+            </a>
+        </li>
+                        <li>
+            <a href="/de/programm/">
+                <img class="lang-img" src="/img/flag-de.png" alt="Deutsch">
+            </a>
+        </li>
+                        <li>
+            <a href="/en/programma/">
+                <img class="lang-img" src="/img/flag-en.png" alt="English">
+            </a>
+        </li>
+</ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+                </div>
+
+                    <div class="promotion-bar haslink" data-promotion-check onclick="document.location.href='/informatie/kids-theater/jeugdfonds/'">
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="promotion-title">alle kinderen gratis naar theater</div>
+                                    <a href="/informatie/kids-theater/jeugdfonds/" class="promotion-text">kies je bedrag en help mee</a>
+                            </div>
+        </div>
+    </div>
+                    <script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/www.maaspoort.nl\/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programma",
+            "item": "https:\/\/www.maaspoort.nl\/programma\/"
+        }
+    ]
+}
+</script>
+<div class="breadcrumbs-row">
+    <div class="row">
+        <div class="small-12 columns">
+            <div class="breadcrumbs">
+                <span class="breadcrumbs-title">Je bent hier:</span>
+                                                                            <span class="breadcrumbs-path">
+                            <a href="/">Home</a>                        </span>
+                                                    <span class="breadcrumbs-path">
+                    Programma                </span>
+            </div>
+        </div>
+    </div>
+</div>
+                <main>
+                    <div class='blur_onhover'></div>
+
+                    
+<div class="row collapse">
+    <div class="small-12 columns">
+        <h1 class="h1--light page-title">
+            Programma        </h1>
+        <div class="overview-filters" data-filter-holder>
+            <div class="filter-title" data-filter-toggle>
+                Filter            </div>
+            <div class="filter-holder">
+                <form data-role="filterform" data-entity="shows">
+                                        <select data-org-title="Genre" name="genre" id="genre" multiple="multiple">
+                            <option value="" disabled>
+                                Genre                            </option>
+                                                            <option value="1685" >Beeldend theater</option>
+                                                                <option value="1668" >Cabaret</option>
+                                                                <option value="1672" >Dans</option>
+                                                                <option value="1673" >Educatie</option>
+                                                                <option value="1674" >Events</option>
+                                                                <option value="1675" >Familie</option>
+                                                                <option value="1676" >Klassiek</option>
+                                                                <option value="1671" >Komedie</option>
+                                                                <option value="1677" >Musical</option>
+                                                                <option value="1678" >Muziek</option>
+                                                                <option value="1683" >Muziektheater</option>
+                                                                <option value="1680" >Opera/Operette</option>
+                                                                <option value="1682" >Show</option>
+                                                                <option value="1679" >Theatercollege</option>
+                                                                <option value="1684" >Toneel</option>
+                                                                <option value="1681" >Uit de regio</option>
+                                                        </select>
+                                            <select data-org-title="Series en selecties" name="series" id="series" multiple="multiple">
+                            <option value="" disabled>
+                                Series en selecties                            </option>
+                                                            <option value="18945" page-status="hidden">Cadeautips</option>
+                                                                <option value="20883" page-status="hidden">feestdagentips</option>
+                                                                <option value="41212" page-status="hidden">BACKSTAGE</option>
+                                                                <option value="13201" >Dansserie</option>
+                                                                <option value="24296" >GA! dit zien</option>
+                                                                <option value="22427" >GA! grote zaal</option>
+                                                                <option value="24297" >GA! klassiers</option>
+                                                                <option value="18017" >GA! ontdekken</option>
+                                                                <option value="18018" >In de lift</option>
+                                                                <option value="21863" >Maak je maandag!</option>
+                                                                <option value="24295" >Musicalserie</option>
+                                                                <option value="22766" >Opera serie Otello</option>
+                                                                <option value="21861" >Opera serie Romeo und Julia</option>
+                                                                <option value="41635" >Serie klassiek in Domani</option>
+                                                                <option value="17363" >Selectie biebpas voordeel</option>
+                                                                <option value="9858" >selectie CKV</option>
+                                                                <option value="6438" >selectie Kamermuziek Domani</option>
+                                                                <option value="16367" >selectie jongerenprijs</option>
+                                                                <option value="13453" >Selectie language no problem</option>
+                                                                <option value="22839" >Selectie met tolk</option>
+                                                                <option value="5747" >selectie Nationaal Theaterweekend</option>
+                                                                <option value="3883" >selectie Ontdekking</option>
+                                                                <option value="18783" >Selectie schoolvakanties</option>
+                                                                <option value="17486" >Selectie schoolvoorstellingen</option>
+                                                                <option value="15245" >Selectie SOB</option>
+                                                                <option value="4126" >selectie Staconcerten</option>
+                                                                <option value="20386" >Selectie Theater Overdag</option>
+                                                                <option value="6435" >selectie Tip van de programmeur</option>
+                                                                <option value="22301" page-status="hidden">Selectie Vriendenvoorstelling</option>
+                                                                <option value="41231" page-status="hidden">Erbij-zijner</option>
+                                                                <option value="41232" page-status="hidden">Fijnproever</option>
+                                                                <option value="41233" page-status="hidden">Levensgenieter</option>
+                                                                <option value="41235" page-status="hidden">Ont-moeter</option>
+                                                                <option value="41234" page-status="hidden">Pionier</option>
+                                                                <option value="15007" page-status="hidden">stadsfestival Aan de Waterkant</option>
+                                                                <option value="5674" page-status="hidden">selectie Pop in Limburg</option>
+                                                        </select>
+                                            <select data-org-title="Maand" name="month" id="month" multiple="multiple">
+                            <option value="" disabled>
+                                Maand                            </option>
+                                                            <option value="2026-11" >november 2026</option>
+                                                                <option value="2026-12" >december 2026</option>
+                                                                <option value="2027-01" >januari 2027</option>
+                                                                <option value="2027-02" >februari 2027</option>
+                                                                <option value="2027-03" >maart 2027</option>
+                                                                <option value="2027-04" >april 2027</option>
+                                                                <option value="2027-05" >mei 2027</option>
+                                                                <option value="2027-06" >juni 2027</option>
+                                                                <option value="2027-07" >juli 2027</option>
+                                                                <option value="2027-09" >september 2027</option>
+                                                                <option value="2027-11" >november 2027</option>
+                                                                <option value="2027-12" >december 2027</option>
+                                                        </select>
+                                            <select data-org-title="Prijs" name="price" id="price" multiple="multiple">
+                            <option value="" disabled>
+                                Prijs                            </option>
+                                                            <option value="0-1499" >Tot &euro; 15</option>
+                                                                <option value="1500-2499" >&euro; 15 tot &euro; 25</option>
+                                                                <option value="2500-3499" >&euro; 25 tot &euro; 35</option>
+                                                                <option value="3500-99999" >Vanaf &euro; 35</option>
+                                                        </select>
+                                            <select data-org-title="Locatie" name="location" id="location" multiple="multiple">
+                            <option value="" disabled>
+                                Locatie                            </option>
+                                                            <option value="1744" >Hela zaal</option>
+                                                                <option value="1716" >Frans Boermans zaal</option>
+                                                                <option value="1741" >BACKSTAGE | Piet Kingma zaal</option>
+                                                                <option value="3056" >VIP foyer</option>
+                                                                <option value="3059" >Rooftop bar</option>
+                                                                <option value="1710" >Domani | Venlo</option>
+                                                                <option value="1752" >Theater De Garage | Venlo</option>
+                                                                <option value="1723" >GRENSWERK | Venlo</option>
+                                                                <option value="15067" >Theater Mönchengladbach</option>
+                                                                <option value="21620" >Villa Flora | Villafloraweg 1 Venlo</option>
+                                                                <option value="22876" >Kookstudio de Garde | Molenstraat 14b Helden</option>
+                                                        </select>
+                                </form>
+            </div>
+            <!-- selected filters -->
+            <div data-role="filter-breadcrumb-holder">
+                <div data-role="filter-breadcrumb-title">Jouw selectie</div>
+                <div data-role="filter-breadcrumb-data"></div>
+                <div data-removefilter="all">Verwijder alle filters:</div>
+
+                <div class="no-entities" data-role="no-entities-found">
+                    Helaas zijn er geen voorstellingen gevonden                </div>
+
+            </div>
+            <!-- / selected filters -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div data-role="serie-banner-holder" class="serie-banner-holder"></div>
+
+<div class="progam__ajax-content" data-ssr-pages="10" data-ssr-page="1">
+            <div class="row collapse"><div class="small-12 columns"><div class="row decollapse"><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/goed-dat-jij-bestaat-try-out-johnny-de-mol-band/26-11-2026-20-15/'" data-label="“Laat je zien en laat je horen tijdens een avond op z’n Johnny’s, vol humor en muziek”" class="program-block">
+                    <div class="program-block-label">
+                geannuleerd
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">26</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Johnny de Mol & band" data-src="/resolve/image/6468/600x600" src="/resolve/image/6468/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Johnny de Mol & band</div>
+                    <div class="subtitle">Goed dat jij bestaat</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 35</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre program-block-genre--mobile">Show</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 35</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre">Show</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>do 26 november 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6468">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6468">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                                <button data-hook="order-link-placeholder" data-status="geannuleerd" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/soweto-gospel-choir-soweto-gospel-choir/27-11-2026-20-15/'" data-label="“Het publiek wordt meegenomen op een krachtige en verheffende reis.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">27</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Soweto Gospel Choir" data-src="/resolve/image/6506/600x600" src="/resolve/image/6506/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Soweto Gospel Choir</div>
+                    <div class="subtitle">JOY</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 34,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre program-block-genre--mobile">Show</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 34,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre">Show</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>vr 27 november 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6506">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6506">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6506">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/kabaret-mlodych-panow-w-venlo-polish-events/28-11-2026-19-00/'" data-label="“Wyjątkowa mieszanka satyry, inteligentnego humoru i ostrej obserwacji otaczającego nas świata.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">28</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Kabaret Młodych Panów w Venlo" data-src="/resolve/image/6830/600x600" src="/resolve/image/6830/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Kabaret Młodych Panów w Venlo</div>
+                    <div class="subtitle">Polish Events</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 55</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 55</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>za 28 november 2026 | 19:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                            <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6830">
+                    <span class="icon icon-wensenlijst"></span>
+                </a>
+                <a href="https://www.polishevents.nl/pl/kabaret-mlodych-panow-w-venlo/103?view=event&layout=intro" target="_blank" class="button button-primary button--small"><span class="icon icon-cart"></span></a>
+                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/dekpunt-jan-beuving/28-11-2026-20-15/'" data-label="“Wat deze twee feiten met elkaar te maken hebben, komt Jan uitleggen.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">28</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Jan Beuving" data-src="/resolve/image/6436/600x600" src="/resolve/image/6436/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Jan Beuving</div>
+                    <div class="subtitle">Dekpunt</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 23,50</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre program-block-genre--mobile">Cabaret</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 23,50</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre">Cabaret</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>za 28 november 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6436">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6436">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6436">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/koosje-domani-podium-voor-morgen/29-11-2026-15-00/'" data-label="“Een mix van neo-soul, folk, R&B en jazz, gedragen door een loepzuivere stem.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">29</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Koosje" data-src="/resolve/image/6536/600x600" src="/resolve/image/6536/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Koosje</div>
+                    <div class="subtitle">Domani Podium voor Morgen</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 18,50</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre program-block-genre--mobile">Muziek</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 18,50</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre">Muziek</a></div>
+                    <div class="program-block-location"><span>Domani | Venlo</span></div>
+                    <div class="program-block-datetime"><span>zo 29 november 2026 | 15:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6536">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6536">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6536">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/the-last-waltz/29-11-2026-20-15/'" data-label="“Dawn Brothers & Friends presenteren: 50 Years The Last Waltz”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">29</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="The Last Waltz" data-src="/resolve/image/6393/600x600" src="/resolve/image/6393/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">The Last Waltz</div>
+                    <div class="subtitle">Dawn Brothers & Friends</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 40</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre program-block-genre--mobile">Muziek</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 40</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre">Muziek</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>zo 29 november 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6393">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6393">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6393">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/het-nieuwe-klassieke-geluid-van-limburg-cool-chamber-orchestra-of-limburg-3/29-11-2026-20-15/'" data-label="“Beroemde Serenades van Tchaikovsky & Dvořák”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">29</span>
+            <span class="program-block-month">november</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Het nieuwe klassieke geluid van Limburg" data-src="/resolve/image/6644/600x600" src="/resolve/image/6644/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Het nieuwe klassieke geluid van Limburg</div>
+                    <div class="subtitle">COoL | Chamber Orchestra of Limburg</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 27,50</span> | <a data-disable-on-click href="/programma/#genre:klassiek" class="program-block-genre program-block-genre--mobile">Klassiek</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 27,50</span> | <a data-disable-on-click href="/programma/#genre:klassiek" class="program-block-genre">Klassiek</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>zo 29 november 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6644">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6644">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6644">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/dichterbij-psychologie-in-theater-1/01-12-2026-19-30/'" data-label="“Heb lief als nooit tevoren”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">01</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Dichterbij" data-src="/resolve/image/6759/600x600" src="/resolve/image/6759/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Dichterbij</div>
+                    <div class="subtitle">Psychologie in theater</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 43,50</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 43,50</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>di  1 december 2026 | 19:30</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                            <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6759">
+                    <span class="icon icon-wensenlijst"></span>
+                </a>
+                <a href="https://psychologieintheater.nl/events/dichter1dec26/" target="_blank" class="button button-primary button--small"><span class="icon icon-cart"></span></a>
+                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/the-kilkennys-the-kilkennys/01-12-2026-20-15/'" data-label="“De opzwepende meezingers die de hele zaal laten meebewegen.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">01</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="The Kilkennys" data-src="/resolve/image/6509/600x600" src="/resolve/image/6509/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">The Kilkennys</div>
+                    <div class="subtitle">Tunes from The Temple Bar</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 25</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre program-block-genre--mobile">Muziek</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 25</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre">Muziek</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>di  1 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6509">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6509">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6509">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/armoedeproblematiek-en-de-gevolgen-hiervan-michelle-van-tongerloo/02-12-2026-20-00/'" data-label="“Een inspirerende en confronterende lezing over de menselijke kant van armoede en de kracht van omzien naar elkaar.”" class="program-block">
+                    <div class="program-block-label">
+                Met Bibliotheek Venlo
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">02</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Michelle van Tongerloo" data-src="/resolve/image/6804/600x600" src="/resolve/image/6804/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Michelle van Tongerloo</div>
+                    <div class="subtitle">Armoedeproblematiek en de gevolgen hiervan</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>BACKSTAGE | Piet Kingma zaal</span></div>
+                    <div class="program-block-datetime"><span>wo  2 december 2026 | 20:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6804">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6804">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6804">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/the-drama-theater-oostpool/02-12-2026-20-15/'" data-label="“De Nederlandse klassenmaatschappij eindelijk op het hakblok”" class="program-block">
+                    <div class="program-block-label">
+                GA! serie
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">02</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="The Drama" data-src="/resolve/image/6472/600x600" src="/resolve/image/6472/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">The Drama</div>
+                    <div class="subtitle">Theater Oostpool</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 22,50</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre program-block-genre--mobile">Toneel</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 22,50</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre">Toneel</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>wo  2 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6472">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6472">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6472">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/cabarestafette-cabarestafette-26-27/02-12-2026-20-15/'" data-label="“Welke nieuwe stem in cabaret verdient de spotlight?”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">02</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Cabarestafette" data-src="/resolve/image/6619/600x600" src="/resolve/image/6619/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Cabarestafette</div>
+                    <div class="subtitle">Cabarestafette 26-27</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre program-block-genre--mobile">Cabaret</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre">Cabaret</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>wo  2 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6619">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6619">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6619">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/tekstverslaafd/03-12-2026-19-15/'"  class="program-block">
+                    <div class="program-block-label">
+                BACKSTAGE
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">03</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Tekstverslaafd" data-src="/resolve/image/6817/600x600" src="/resolve/image/6817/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Tekstverslaafd</div>
+                    <div class="subtitle">Open podium | Spoken word</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 0</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 0</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>BACKSTAGE | Piet Kingma zaal</span></div>
+                    <div class="program-block-datetime"><span>do  3 december 2026 | 19:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                            <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6817">
+                    <span class="icon icon-wensenlijst"></span>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSflAJnw3qJ-bL5SQIv30SCW3HF-EoQs7tym8Dn0UQ_zF1cyGw/viewform?usp=sharing&ouid=115007761232026087553" target="_blank" class="button button-primary button--small"><span class="icon icon-cart"></span></a>
+                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/vandaag-herman-van-veen/03-12-2026-20-15/'" data-label="“Kwam laatst op de markt iemand tegen die me verbaasd aankeek. ‘Bestaat u nog?’”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">03</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Herman van Veen" data-src="/resolve/image/6469/600x600" src="/resolve/image/6469/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Herman van Veen</div>
+                    <div class="subtitle">Vandaag</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 46,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre program-block-genre--mobile">Show</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 46,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre">Show</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>do  3 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6469">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6469">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6469">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/mythos-ragnarok-ragnarok/03-12-2026-20-15/'" data-label="“Een humorvolle, energieke en verrassend ontroerende hervertelling van de Noorse sagen.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">03</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Mythos: Ragnarök" data-src="/resolve/image/6475/600x600" src="/resolve/image/6475/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Mythos: Ragnarök</div>
+                    <div class="subtitle">Ragnarök</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 30,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre program-block-genre--mobile">Show</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 30,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre">Show</a></div>
+                    <div class="program-block-location"><span>Frans Boermans zaal</span></div>
+                    <div class="program-block-datetime"><span>do  3 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6475">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6475">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6475">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/vandaag-herman-van-veen/04-12-2026-20-15/'" data-label="“Kwam laatst op de markt iemand tegen die me verbaasd aankeek. ‘Bestaat u nog?’”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">04</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Herman van Veen" data-src="/resolve/image/6470/600x600" src="/resolve/image/6470/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Herman van Veen</div>
+                    <div class="subtitle">Vandaag</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 46,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre program-block-genre--mobile">Show</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 46,50</span> | <a data-disable-on-click href="/programma/#genre:show" class="program-block-genre">Show</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>vr  4 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6470">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6470">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6470">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/mannen-komen-van-mars-vrouwen-van-venus-reprise-huub-stapel/06-12-2026-15-00/'" data-label="“Een vervolg dat niemand zag aankomen – vooral Huub zelf niet.”" class="program-block">
+                    <div class="program-block-label">
+                laatste tickets
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">06</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Huub Stapel" data-src="/resolve/image/6471/600x600" src="/resolve/image/6471/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Huub Stapel</div>
+                    <div class="subtitle">Mannen komen van Mars, Vrouwen van Venus | Reprise</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 32,50</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre program-block-genre--mobile">Toneel</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 32,50</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre">Toneel</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>zo  6 december 2026 | 15:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6471">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6471">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6471">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/venlo.fit-sportgala-2026-gemeente-venlo/07-12-2026-19-30/'" data-label="“Venlo.fit Sportgala 2026”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">07</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Venlo.fit sportgala 2026" data-src="/resolve/image/6829/600x600" src="/resolve/image/6829/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Venlo.fit sportgala 2026</div>
+                    <div class="subtitle">Gemeente Venlo</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 12,50</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 12,50</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>ma  7 december 2026 | 19:30</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6829">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6829">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6829">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/bangura-princess-isatu-hassan-bangura/07-12-2026-20-15/'" data-label="“Een rauwe, rituele performance over verlies, herinnering en wedergeboorte”" class="program-block">
+                    <div class="program-block-label">
+                Maak je maandag!
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">07</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Wild Woman - Part 1: The Bone Collector" data-src="/resolve/image/6633/600x600" src="/resolve/image/6633/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Wild Woman - Part 1: The Bone Collector</div>
+                    <div class="subtitle">Princess Isatu Hassan Bangura</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre program-block-genre--mobile">Toneel</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 15</span> | <a data-disable-on-click href="/programma/#genre:toneel" class="program-block-genre">Toneel</a></div>
+                    <div class="program-block-location"><span>Theater De Garage | Venlo</span></div>
+                    <div class="program-block-datetime"><span>ma  7 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6633">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6633">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6633">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/the-living-room-workshops-by-house-of-vineyard-house-of-confetti/08-12-2026-19-00/'" data-label="“The Living Room Workshops - By House of Vineyard + House of Confetti”" class="program-block">
+                    <div class="program-block-label">
+                BACKSTAGE
+            </div>
+                <span class="program-block-date">
+            <span class="program-block-day">08</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="The Living Room Workshops" data-src="/resolve/image/6835/600x600" src="/resolve/image/6835/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">The Living Room Workshops</div>
+                    <div class="subtitle">By House of Vineyard + House of Confetti</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 10</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 10</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>BACKSTAGE | Piet Kingma zaal</span></div>
+                    <div class="program-block-datetime"><span>di  8 december 2026 | 19:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6835">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6835">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6835">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/het-zwanenmeer-met-live-orkest-ballet-van-de-staatsopera-van-stara-zagora-1/09-12-2026-19-15/'" data-label="“Een magische uitvoering om bij weg te dromen”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">09</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Het Zwanenmeer | Met live-orkest" data-src="/resolve/image/6473/600x600" src="/resolve/image/6473/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Het Zwanenmeer | Met live-orkest</div>
+                    <div class="subtitle">Ballet van de Staatsopera van Stara Zagora</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 49,50</span> | <a data-disable-on-click href="/programma/#genre:dans" class="program-block-genre program-block-genre--mobile">Dans</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 49,50</span> | <a data-disable-on-click href="/programma/#genre:dans" class="program-block-genre">Dans</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>wo  9 december 2026 | 19:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6473">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6473">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6473">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/kookworkshop-kerst-venlo-silverfood-universum/10-12-2026-18-00/'" data-label="“Feestelijk koken, samen genieten en ontdekken wat voeding voor je lichaam doet”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">10</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Kookworkshop – Kerst – Venlo" data-src="/resolve/image/6820/600x600" src="/resolve/image/6820/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Kookworkshop – Kerst – Venlo</div>
+                    <div class="subtitle">Silverfood Universum</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 30</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre program-block-genre--mobile">Events</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 30</span> | <a data-disable-on-click href="/programma/#genre:events" class="program-block-genre">Events</a></div>
+                    <div class="program-block-location"><span>Villa Flora | Villafloraweg 1 Venlo</span></div>
+                    <div class="program-block-datetime"><span>do 10 december 2026 | 18:00</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6820">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6820">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6820">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/noodzakelijk-kwaad-rene-van-meurs/10-12-2026-20-15/'" data-label="“Noodzakelijk Kwaad barst van de absurde conflicten die steeds grappiger escaleren”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">10</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="René van Meurs" data-src="/resolve/image/6474/600x600" src="/resolve/image/6474/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">René van Meurs</div>
+                    <div class="subtitle">Noodzakelijk kwaad</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 25</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre program-block-genre--mobile">Cabaret</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 25</span> | <a data-disable-on-click href="/programma/#genre:cabaret" class="program-block-genre">Cabaret</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>do 10 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6474">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6474">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6474">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div><div class="small-12 medium-6 large-4 end columns">
+    <div onclick="document.location.href='/programma/krezip-krezip/11-12-2026-20-15/'" data-label="“Het was een jaar van de terugkeer op de mainstage van ‘hun’ Pinkpop en een groots concert in de Ziggo Dome.”" class="program-block">
+                <span class="program-block-date">
+            <span class="program-block-day">11</span>
+            <span class="program-block-month">december</span>
+            <span class="program-block-year">2026</span>
+        </span>
+        <span class="program-block-image">
+            <img alt="Krezip" data-src="/resolve/image/6412/600x600" src="/resolve/image/6412/600x600">
+        </span>
+        <span class="program-block-details">
+            <div class="program-block-title">
+                <div>
+                    <div class="title">Krezip</div>
+                    <div class="subtitle">Theatertour</div>
+                    <div class="program-block-price program-block-price--mobile"><span>v.a. &euro; 44,50</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre program-block-genre--mobile">Muziek</a></div>
+                </div>
+
+                <div class="program-block-details-extra">
+                    <hr>
+                    <div class="program-block-price"><span>v.a. &euro; 44,50</span> | <a data-disable-on-click href="/programma/#genre:muziek" class="program-block-genre">Muziek</a></div>
+                    <div class="program-block-location"><span>Hela zaal</span></div>
+                    <div class="program-block-datetime"><span>vr 11 december 2026 | 20:15</span></div>
+                </div>
+            </div>
+        </span>
+        <div>
+                                                <div data-showid="6412">
+                        <a href="javascript:;" class="wensenlijst button button-primary button--small button-wensenlijst" data-hook="order-wishlist" data-showid="6412">
+                            <span class="icon icon-wensenlijst"></span>
+                        </a>
+                                            <a href="/bestel/6412">
+                                                <button data-hook="order-link-placeholder" data-status="reserveren" data-webstatus="" class="button button-primary button--small">
+                                <span class="icon icon-cart"></span>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+    </div>
+</div></div></div></div>    </div>
+
+<div class="row">
+    <nav class="nav nav--pagination program__pagination">
+        <div class="cols">
+        </div>
+    </nav>
+</div>                    <a id="js_back-to-top" class="button button-tertiary button--small back-to-top fixed">
+                        <span class="icon icon-up"></span>
+                    </a>
+                </main>
+                <footer>
+    <div class="row row--flex">
+
+        <div class="small-12 medium-6 large-3 columns">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h5>Contact &amp; adres</h5>
+
+<p><strong><a href="/informatie/bezoekersinformatie/contact/" rel="noreferrer noopener" target="_blank">Contact</a></strong><br />
+<strong><a href="/informatie/bezoekersinformatie/route-parkeren/" rel="noreferrer noopener" target="_blank">Route &amp; Parkeren</a></strong></p>
+
+<h5>Informatie</h5>
+
+<p><strong><a href="/informatie/over-maaspoort/visie-maaspoort/" rel="noreferrer noopener" target="_blank">Over ons</a><br />
+<a href="/informatie/over-maaspoort/vacatures-stages/" rel="noreferrer noopener" target="_blank">Vacatures</a><br />
+<a href="/informatie/theatertechniek/techniek/" rel="noreferrer noopener" target="_blank">Theatertechniek</a><br />
+<a href="/informatie/over-maaspoort/duurzaamheid/">Duurzaam ondernemen</a></strong><br />
+<strong><a href="/informatie/bezoekersinformatie/privacy/" rel="noreferrer noopener" target="_blank">Privacy</a></strong></p>
+
+<h5>huisgezelschap</h5>
+
+<p>Bij Club Lam mag je onbeschaamd jezelf zijn. Meer weten? <a href="https://clublam.nl/" rel="noreferrer noopener" target="_blank">Check het hier.</a></p>                    <hr class="show-medium">
+                </div>
+                <div class="medium-12 columns show-for-medium-only">
+                    <div class="footer__group">
+    <div>
+        <h5>wij danken onze partners</h5>
+        <p><a href="https://www.scheutenfoundation.nl/" rel="noreferrer noopener" target="_blank">Jacques en Ellen Scheuten Foundation</a> | <a href="https://www.hela.nl/consumenten/" rel="noreferrer noopener" target="_blank">Hela Thissen</a> | <a href="https://cpp.canon/" rel="noreferrer noopener" target="_blank">Canon</a> | <a href="https://www.leolux.nl/" rel="noreferrer noopener" target="_blank">Leolux</a> | <a href="https://www.scheuten.com/" rel="noreferrer noopener" target="_blank">Scheuten</a> | <a href="https://sormac.com/nl-nl">Sormac</a> | <a href="https://www.rabobank.nl/lokale-bank/noord-limburg/organisatie" rel="noreferrer noopener" target="_blank">Rabobank</a> | <a href="https://www.ewals.com/nl/?country=NL" rel="noreferrer noopener" target="_blank">Ewals Cargo Care</a> |<a href="https://www.sceltamushrooms.com/" rel="noreferrer noopener" target="_blank"> Scelta Mushrooms</a> | <a href="https://www.burgerlijkegodshuizen.nl/" rel="noreferrer noopener" target="_blank">Stichting Burgerlijke Godshuizen</a> | <a href="https://www.vostermans.com/nl/ventilation" rel="noreferrer noopener" target="_blank">Vostermans Companies</a> | <a href="https://www.unica.nl/" rel="noreferrer noopener" target="_blank">Unica</a></p>    </div>
+    <div class="footer__logos">
+        <h5>speciale dank aan</h5>
+        <a class="nohref" href="https://www.venlo.nl/" target="_blank"><img class="footer__image gemeente_venlo_logo" src="/img/gemeente-venlo.png" alt="Gemeente Venlo" width="auto" height="58"></a>
+        <a class="nohref" href="https://fondspodiumkunsten.nl/" target="_blank"><img class="footer__image" src="/img/fonds-podiumkunsten.png" alt="Fonds Podiumkunsten" width="100" height="72"></a>
+    </div>
+</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="small-12 medium-6 columns">
+            <div class="row">
+
+                <div class="small-12 large-6 columns">
+                    <h5>Nieuwsbrief</h5>
+
+<p>Altijd op de hoogte zijn van het laatste Maaspoort nieuws? Schrijf je hier in voor onze nieuwsbrief.</p>                    <div class="newsletter">
+
+                        <a href="#newsletter-block" class="js_fancybox_newsletter">Schrijf je in</a>
+
+                        <div style="display: none">
+                            <section class="newsletter-block" id="newsletter-block">
+                                <h4>Altijd op de hoogte blijven en kans maken op gratis theatertickets?</h4>
+                                <p>Altijd op de hoogte blijven van het laatste Maaspoort nieuws, aanbiedingen en specials? Schrijf je hier in voor onze nieuwsbrief. Onder de nieuwe inschrijvers verloten we maandelijks gratis theatertickets. De winnaars ontvangen persoonlijk bericht.</p>
+                                <div class="form-fields" data-hook="newsletter-subscribe">
+                                    <form method="post">
+                                        <select name="titel" class="select--inverse">
+                                            <option value="Aanhef">aanhef</option>
+                                            <option value="De heer">dhr.</option>
+                                            <option value="Mevrouw">mevr.</option>
+                                        </select>
+                                        <input type="hidden" name="bevestiging" value="QmVzdGUgaGVlci9tZXZyb3V3LAoKV2F0IGZpam4gZGF0IHdpaiBqZSBvcCBkZSBob29ndGUgbW9nZW4gaG91ZGVuISBKZSBob2VmdCBhbGxlZW4gamUgaW5zY2hyaWp2aW5nIG5vZyB0ZSBiZXZlc3RpZ2VuLgpEaXQga2FuIHZpYSBvbmRlcnN0YWFuZGUgbGluay4KCiMjQUNUSVZBVElFTElOSyMjCgpIYXJ0ZWxpamtlIGdyb2V0LAoKSGV0IE1hYXNwb29ydC10ZWFt" />
+                                        <input type="hidden" name="bevestigingsonderwerp" value="QmV2ZXN0aWcgam91dyBpbnNjaHJpanZpbmc=" />
+                                        <input type="text" id="frm-voornaam" name="voornaam" placeholder="naam" required pattern=".*\S+.*" title="Dit veld mag niet enkel een spatie bevatten">
+                                        <input type="text" id="frm-tussenvoegsel" name="tussenvoegsel" placeholder="tussenvoegsel">
+                                        <input type="text" id="frm-name" name="achternaam" placeholder="achternaam" required pattern=".*\S+.*" title="Dit veld mag niet enkel een spatie bevatten">
+                                        <input type="email" id="frm-email" name="email" placeholder="e-mailadres" required class="js_newsletter-input">
+                                        <input type="text" id="frm-woonplaats" name="woonplaats" placeholder="woonplaats" required pattern=".*\S+.*" title="Dit veld mag niet enkel een spatie bevatten">
+                                        <input type="hidden" id="frm-referer" name="referer" value="zuil_inschrijving">
+                                        <div class="newsletter-list-container">
+                                            <div data-hook="newsletter-items-footer" class="newsletter-list js_newsletter-list"></div>
+                                        </div>
+                                                                                    <div class="checkbox-container">
+                                                <input type="checkbox" required name="bevestigingsvoorwaarden" id="bevestigingsvoorwaarden_newsletter-block" value="SWsgbWVsZCBtZSBhYW4gdm9vciBkZSBuaWV1d3NicmllZg=="><label for="bevestigingsvoorwaarden_newsletter-block">Ik meld me aan voor de nieuwsbrief</label>
+                                            </div>
+                                                                                <button type="submit" class="button button-primary newsletter-submit">Schrijf je in</button>
+                                    </form>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+
+                    <h5 class="inline">volg ons op</h5>
+                    <ul class="top-bar-social">
+            <li class="facebook"><a href="http://www.facebook.com/maaspoort" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/company/maaspoort" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li class="youtube"><a href="https://www.youtube.com/user/theatervenlo" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/maaspoortvenlo/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+
+                    <hr class="show-medium">
+                </div>
+
+                <div class="small-12 large-6 columns">
+                    <h5>Hier kán het!</h5>
+
+<p>Welkom bij Maaspoort. Hier vieren we cultuur en het leven met een onvervalst joie de vivre. Onze gasten, artiesten, makers, partners en de vele mensen om ons heen, ervaren hier ‘het echte verschil maak je samen’.<br />
+Winnaar van de Red Dot Award Brands &amp; Communication Design 2024 in de categorie Corporate Design &amp; Identity.<br />
+<br />
+ </p>                    <h5>trotse partner van</h5>
+                    <a class="nohref" href="https://www.theaterdichtbij.nl/" target="_blank"><img class="footer__image" src="/img/theater-dichtbij.svg" alt="theaterdichtbij.nl" width="212" height="65" style="margin-top: 4px;"></a>
+                    <hr class="show-small">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="small-12 large-3 columns end hide-for-medium-only">
+            <div class="footer__group">
+    <div>
+        <h5>wij danken onze partners</h5>
+        <p><a href="https://www.scheutenfoundation.nl/" rel="noreferrer noopener" target="_blank">Jacques en Ellen Scheuten Foundation</a> | <a href="https://www.hela.nl/consumenten/" rel="noreferrer noopener" target="_blank">Hela Thissen</a> | <a href="https://cpp.canon/" rel="noreferrer noopener" target="_blank">Canon</a> | <a href="https://www.leolux.nl/" rel="noreferrer noopener" target="_blank">Leolux</a> | <a href="https://www.scheuten.com/" rel="noreferrer noopener" target="_blank">Scheuten</a> | <a href="https://sormac.com/nl-nl">Sormac</a> | <a href="https://www.rabobank.nl/lokale-bank/noord-limburg/organisatie" rel="noreferrer noopener" target="_blank">Rabobank</a> | <a href="https://www.ewals.com/nl/?country=NL" rel="noreferrer noopener" target="_blank">Ewals Cargo Care</a> |<a href="https://www.sceltamushrooms.com/" rel="noreferrer noopener" target="_blank"> Scelta Mushrooms</a> | <a href="https://www.burgerlijkegodshuizen.nl/" rel="noreferrer noopener" target="_blank">Stichting Burgerlijke Godshuizen</a> | <a href="https://www.vostermans.com/nl/ventilation" rel="noreferrer noopener" target="_blank">Vostermans Companies</a> | <a href="https://www.unica.nl/" rel="noreferrer noopener" target="_blank">Unica</a></p>    </div>
+    <div class="footer__logos">
+        <h5>speciale dank aan</h5>
+        <a class="nohref" href="https://www.venlo.nl/" target="_blank"><img class="footer__image gemeente_venlo_logo" src="/img/gemeente-venlo.png" alt="Gemeente Venlo" width="auto" height="58"></a>
+        <a class="nohref" href="https://fondspodiumkunsten.nl/" target="_blank"><img class="footer__image" src="/img/fonds-podiumkunsten.png" alt="Fonds Podiumkunsten" width="100" height="72"></a>
+    </div>
+</div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <span>© 2026 Maaspoort | <a href="https://www.itix.nl" target="_blank">Website by Itix</a>
+            <ul class="footer__links">
+                                <li><a href="/footer/disclaimer/">Disclaimer</a></li>
+                <li><a href="/footer/algemene-voorwaarden/">Algemene voorwaarden</a></li>
+                <li><a href="/footer/sitemap/">Sitemap</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    window.embeddedChatbotConfig = {
+        chatbotId: "UJO20zXjiDd3Pq52u7x_A",
+        domain: "www.chatbase.co"
+    }
+</script>
+<script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="UJO20zXjiDd3Pq52u7x_A"
+    domain="www.chatbase.co"
+    defer>
+</script>
+                <div id="login">
+    <div data-hook="account-login">
+        <h3>Inloggen</h3>
+                <form action="" method="post">
+            <label for="email">e-mailadres</label>
+            <input type="email" name="email" id="email" placeholder="bijv. gebruikersnaam@gmail.com">
+            <label for="wachtwoord">wachtwoord</label>
+            <input type="password" name="password" id="password" />
+            <button type="submit">inloggen</button>
+            <a href="/account/wachtwoord-vergeten/" class="login-link">wachtwoord vergeten</a>
+        </form>
+        <div class="sep">
+            <h3>Nog geen account?</h3>
+            <a href="/account/" class="new-account-link">account aanmaken</a>
+        </div>
+    </div>
+</div>
+
+                <!-- Close off-canvas -->
+                <a class="exit-off-canvas"></a>
+            </div>
+        </div>
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/jquery-2.1.0.min.js"><\/script>')</script>
+        <script src="/js/vendors.js?v=1790326033"></script><script src="/js/site.js?v=1790326033"></script><script src="/errors.js?v=1790326034"></script>        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6159600.js"></script>
+        
+<script>var as_config = {"as_minLength":"7","as_close_text":"\u2716","as_search_form":".search_form","as_search_input":".input-search","as_query_name":"q","as_query_url":"\/zoekresultaten\/","add_script":1};</script>
+<script src='/site/modules/AjaxSearch/AjaxSearch.js'></script></body>
+        </html>
