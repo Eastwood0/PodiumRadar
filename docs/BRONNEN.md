@@ -67,6 +67,18 @@ Elke regel: wat, bron, datum gecontroleerd. Niet uit het hoofd aanvullen; bij tw
 | Maassilo | Staat in de Uitagenda Rotterdam als locatie | Via de bestaande Uitagenda Rotterdam-adapter | [Uitagenda Rotterdam](https://uitagendarotterdam.nl/en/locations/location/maassilo) |
 | Probe nieuwe zalen | JSON-LD: Muziekgieterij, De Oosterpoort (Spot), Paard; sitemap + JSON-LD: Paradiso, Doornroosje; HTML: MartiniPlaza, Hedon, Mezz, Patronaat; JavaScript: De Bosuil, Grenswerk, Gashouder, Klokgebouw, Maassilo; 403: Nieuwe Nor; 202 (mogelijk botcontrole): Melkweg | Adapters in die volgorde | probe-results, 26 nov 2026 |
 
+## Zalen zonder bron, Melkweg — gecontroleerd 26 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Melkweg | Controlescherm van AWS WAF (HTTP 202, `gokuProps`/`awsWafCookieDomainList`), niet bij elk verzoek | Herhaalpogingen zonder het controlescherm uit te voeren (B37) | snapshot 26 nov 2026 |
+| koeln.de | robots.txt: `Disallow: /*?` (dus geen API met parameters), venuepagina's en `/seite/N/` toegestaan; venuepagina Palladium heeft JSON-LD, 16 events per pagina | Palladium via `/veranstaltungsort/palladium-koeln/seite/N/` | [koeln.de Palladium](https://www.koeln.de/veranstaltungsort/palladium-koeln/) |
+| De Kuip | Locatie "Stadion Feyenoord De Kuip" in Uitagenda Rotterdam, locatie-id 209292 (uit de afbeeldingspaden van de locatiepagina) | Via de Uitagenda Rotterdam-adapter | [Uitagenda Rotterdam](https://www.uitagendarotterdam.nl/en/locations/location/stadion-feyenoord-de-kuip) |
+| Pinkpop / Megaland | Pinkpop 2027: 18–20 juni 2027, Megaland Landgraaf; line-up met dag per act op de homepage; robots.txt staat het toe | Megaland via pinkpop.nl (B34) | [pinkpop.nl](https://www.pinkpop.nl/) |
+| MECC | robots.txt: crawl-delay 10; agenda laadt via JavaScript (admin-ajax) | Nog geen bron | [mecc.nl](https://www.mecc.nl/bezoeken/agenda/) |
+| I amsterdam | Locatiepagina's tonen geen eventlijst; agenda-filters met parameters verboden in robots.txt | Geen bron voor Melkweg/Warehouse | [iamsterdam.com](https://www.iamsterdam.com/robots.txt) |
+| MartiniPlaza | Agenda toont ±20 events; `?page=2` geeft dezelfde lijst (verder laden via JavaScript) | Nog uitzoeken | snapshot 26 nov 2026 |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

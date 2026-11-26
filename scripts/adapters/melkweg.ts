@@ -53,10 +53,22 @@ export function parseMelkweg(html: string): SourceEvent[] {
   return out;
 }
 
+/** Melkweg's firewall (AWS WAF) sometimes answers with a JavaScript challenge page instead of the agenda. */
+export const isBotCheck = (html: string) => /awsWafCookieDomainList|gokuProps/.test(html);
+
+/** We never run or solve the challenge (B23); we only ask again later, as a visitor would. */
+const RETRY_WAIT_MS = [120_000, 420_000];
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 export const melkweg: Adapter = {
   name: "melkweg.nl",
   venues: ["melkweg"],
   async fetch() {
-    return parseMelkweg((await fetchText(AGENDA)).body);
+    for (let attempt = 0; ; attempt++) {
+      const html = (await fetchText(AGENDA)).body;
+      if (!isBotCheck(html)) return parseMelkweg(html);
+      if (attempt >= RETRY_WAIT_MS.length) throw new Error("Melkweg: de site toont een botcontrole (AWS WAF); niet omzeild, vorige data blijft staan");
+      await sleep(RETRY_WAIT_MS[attempt]);
+    }
   },
 };

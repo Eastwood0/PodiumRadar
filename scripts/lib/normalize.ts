@@ -44,7 +44,13 @@ export function statusFrom(text: string | undefined): "gepland" | "uitverkocht" 
  * "&", "with" and "feat." are left alone: "Kool & The Gang" is one band.
  */
 export function artistsFromTitle(title: string): string[] {
-  const clean = title.replace(/\s*[–—-]\s*(live|tour|in concert|\d{2,4}).*$/i, "").replace(/\s*\((nieuwe datum|extra show|uitverkocht|new date)\)\s*/gi, " ").trim();
+  const clean = title
+    .replace(/\s*[–—-]\s*(live|tour|in concert|\d{2,4}).*$/i, "")
+    .replace(/\s*\((nieuwe datum|extra show|uitverkocht|new date|verplaatst)\)\s*/gi, " ")
+    .replace(/^(nieuwe datum|extra show|verplaatst|new date)\s*:\s*/i, "")
+    // "+ support", "+ special guest(s)": not an artist name
+    .replace(/\s*\+\s*(support|special guests?|guests?|supports?|voorprogramma)\s*$/i, "")
+    .trim();
   const parts = clean.split(/\s+(?:\+|x|b2b)\s+/i).map((s) => s.trim()).filter(Boolean);
   return parts.length > 1 && parts.length <= 4 && parts.every((p) => p.length >= 2) ? parts : [clean || title];
 }

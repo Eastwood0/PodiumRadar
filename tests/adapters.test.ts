@@ -290,3 +290,63 @@ describe("Hedon (Angular transfer state)", async () => {
     expect(() => parseHedon("<html></html>")).toThrow(/ng-state/);
   });
 });
+
+describe("Patronaat (HTML programme)", async () => {
+  const { parsePatronaat } = await import("../scripts/adapters/patronaat");
+  const ev = parsePatronaat(fixture("patronaat-programma.html"));
+  it("reads date, sold-out label and genre tags", () => {
+    expect(ev).toHaveLength(3);
+    expect(ev[1]).toMatchObject({ venueId: "patronaat", title: "Davina Michelle + support", start: "2026-11-26T12:00:00+01:00", hasTime: false, status: "uitverkocht", sourceCategory: "pop", url: "https://patronaat.nl/event/davina-michelle-support-26-11-26/" });
+  });
+});
+
+describe("Melkweg bot check", async () => {
+  const { isBotCheck } = await import("../scripts/adapters/melkweg");
+  it("recognises the firewall challenge page and not the real agenda", () => {
+    expect(isBotCheck(fixture("melkweg-botcheck.html"))).toBe(true);
+    expect(isBotCheck(fixture("melkweg-agenda.html"))).toBe(false);
+  });
+});
+
+describe("Palladium via koeln.de (JSON-LD)", async () => {
+  const { parseJsonLdPage } = await import("../scripts/adapters/jsonld-page");
+  const ev = parseJsonLdPage(fixture("koeln-palladium.html"), { venueId: "palladium-koeln", country: "DE", url: "https://www.koeln.de/veranstaltungsort/palladium-koeln/", location: /palladium/i });
+  it("keeps Palladium events with their own page as id", () => {
+    expect(ev).toHaveLength(3);
+    expect(ev[0]).toMatchObject({ venueId: "palladium-koeln", start: "2026-11-29T20:00:00+01:00", hasTime: true, url: "https://www.koeln.de/event/esdeekid-council-house-rat-tour/" });
+  });
+});
+
+describe("Klokgebouw (HTML agenda without year)", async () => {
+  const { parseKlokgebouw } = await import("../scripts/adapters/klokgebouw");
+  const ev = parseKlokgebouw(fixture("klokgebouw-agenda.html"), new Date("2026-11-26T10:00:00Z"));
+  it("reads day, kind and title and picks the coming year", () => {
+    expect(ev).toHaveLength(4);
+    expect(ev[2]).toMatchObject({ venueId: "klokgebouw", title: "Joy Indoor Festival", start: "2026-12-12T12:00:00+01:00", hasTime: false, sourceCategory: "Dance", sourceId: "1345" });
+  });
+});
+
+describe("Grenswerk (HTML agenda without year)", async () => {
+  const { parseGrenswerk } = await import("../scripts/adapters/grenswerk");
+  const ev = parseGrenswerk(fixture("grenswerk-agenda.html"), new Date("2026-11-26T10:00:00Z"));
+  it("reads start time, sold-out and genre; skips shows in the Maaspoort theatre", () => {
+    const jacek = ev.find((e) => e.title === "Jacek Stachursky");
+    expect(jacek).toMatchObject({ start: "2026-12-05T19:00:00+01:00", hasTime: true, sourceCategory: "concert, Pop", ticketUrl: "https://tubilet.com/pl/wydarzenia/29/szczegoly" });
+    expect(ev.find((e) => e.title === "Fortunate Sons")?.status).toBe("uitverkocht");
+    expect(ev.map((e) => e.title)).not.toContain("DeWolff");
+  });
+});
+
+describe("Pinkpop for Megaland (line-up per day)", async () => {
+  const { parsePinkpop } = await import("../scripts/adapters/pinkpop");
+  const ev = parsePinkpop(fixture("pinkpop-home.html"));
+  it("makes one event per festival day with that day's acts", () => {
+    expect(ev.map((e) => [e.title, e.start])).toEqual([
+      ["Pinkpop 2027 (vrijdag)", "2027-06-18T12:00:00+02:00"],
+      ["Pinkpop 2027 (zaterdag)", "2027-06-19T12:00:00+02:00"],
+      ["Pinkpop 2027 (zondag)", "2027-06-20T12:00:00+02:00"],
+    ]);
+    expect(ev[2].artists).toContain("blink-182");
+    expect(ev[0]).toMatchObject({ venueId: "megaland", sourceCategory: "festival", hasTime: false });
+  });
+});

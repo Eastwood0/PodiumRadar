@@ -41,8 +41,9 @@ const SOURCE_RULES: [RegExp, Genre][] = [
   [/comedy|humou?r|cabaret|kabarett|stand-?up|kleinkunst/i, "Comedy"],
   [/sport|eishockey|voetbal|fu(ss|ß)ball|handbal|basketbal|tennis|darts|boxen|wielren|wielerzesdaagse/i, "Sport"],
   [/familie|famille|kinder|kids|jeugd|jeunesse/i, "Familie"],
-  [/beurs|messe|markt|expo|tentoonstelling|evenementen|börse/i, "Beurs"],
+  [/beurs|messe|markt|expo|tentoonstelling|evenementen|börse|business|zakelijk|congres/i, "Beurs"],
   [/lezing|lezingen|kennis|debat|speaker|talk|podcast|literatuur|lesung/i, "Lezing"],
+  [/\b(workshop|livestream|hangout|handwerk|for dinner|filmavond|film|expositie)\b/i, "Overig"],
   [/musical|com[ée]die musicale|theater|theatre|th[ée]âtre|show|ballet|ballett|dans\b|circus|cirque|entertainment|film/i, "Show"],
   [/concert|konzert|muziek|music|musik|pop|rock|metal|hip ?hop|rap|jazz|blues|soul|funk|indie|punk|schlager|nederlands|dutch|singer|k-pop|reggae|latin|wereld|world|folk|country|r&b|urban|alternati/i, "Concert"],
 ];
@@ -55,7 +56,7 @@ const TITLE_RULES: [RegExp, Genre][] = [
   // Comedy
   [/\b(comedy|comedian|comedians|cabaret|kabarett|stand-?up|lacht?|lachende|humou?r)\b/i, "Comedy"],
   // Fairs and markets
-  [/\b(beurs|messe|börse|boerse|snuffelmarkt|vlooienmarkt|rommelmarkt|markt|expo|convention|congres|kongress|fair|cards & games|woonbeurs|studiekeuze|jobmedi|karrieremesse|banenmarkt)\b/i, "Beurs"],
+  [/\b(beurs|messe|börse|boerse|snuffelmarkt|vlooienmarkt|rommelmarkt|markt|expo|convention|congres|kongress|fair|cards & games|woonbeurs|studiekeuze|jobmedi|karrieremesse|banenmarkt|kerstmarkt|wintermarkt|kerstfair)\b/i, "Beurs"],
   [/\b(workshop|yoga|linedance|creatief|gebaren|popquiz|cursus|rondleiding)\b/i, "Overig"],
   // Family
   [/\b(sinterklaas|sint|kerstcircus|paw patrol|peppa|bluey|disney|nijntje|k3|studio 100|kinderen voor kinderen|kids|kinder)\b|\(\s*\d+\+\s*\)|\b\d+\+\s*$/i, "Familie"],

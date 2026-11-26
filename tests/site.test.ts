@@ -123,7 +123,7 @@ describe("search", () => {
 describe("buildSiteData", () => {
   const venues: Venue[] = [
     { id: "ziggo-dome", name: "Ziggo Dome", city: "Amsterdam", country: "NL", tier: "A", verified: false, aliases: [], website: "https://www.ziggodome.nl/", sources: { ticketmasterVenueIds: [] } },
-    { id: "de-kuip", name: "De Kuip", city: "Rotterdam", country: "NL", tier: "A", verified: false, aliases: [], sources: { ticketmasterVenueIds: [] } },
+    { id: "goffertpark", name: "Goffertpark", city: "Nijmegen", country: "NL", tier: "A", verified: false, aliases: [], sources: { ticketmasterVenueIds: [] } },
   ];
   const event: Event = {
     id: "e1", title: "Band", artists: [{ name: "Band" }], venueId: "ziggo-dome", venueName: "Ziggo Dome", city: "Amsterdam", country: "NL",
@@ -136,7 +136,7 @@ describe("buildSiteData", () => {
     expect(site.events).toEqual([{ id: "e1", t: "Band", a: ["Band"], v: "ziggo-dome", s: event.start, h: 1, st: "u", c: "m", g: "Concert", u: "https://t.example/1", p: "https://www.ziggodome.nl/x", f: "2026-11-25" }]);
   });
   it("adds the no-source reason only to venues without events", () => {
-    expect(site.venues.find((v) => v.id === "de-kuip")?.ns).toMatch(/Ticketmaster/);
+    expect(site.venues.find((v) => v.id === "goffertpark")?.ns).toMatch(/Ticketmaster/);
     expect(site.venues.find((v) => v.id === "ziggo-dome")?.ns).toBeUndefined();
   });
   it("uses the earliest firstSeen as baseline", () => {

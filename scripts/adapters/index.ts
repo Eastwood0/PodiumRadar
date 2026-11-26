@@ -5,12 +5,16 @@ import { dliveVenues } from "./d-live";
 import { effenaar } from "./effenaar";
 import { gashouder } from "./gashouder";
 import { gelredome } from "./gelredome";
+import { grenswerk } from "./grenswerk";
 import { grugahalle } from "./grugahalle";
 import { hedon } from "./hedon";
+import { klokgebouw } from "./klokgebouw";
 import { ingArena } from "./ing-arena";
 import { johanCruijffArena } from "./johan-cruijff-arena";
-import { muziekgieterij, paard } from "./jsonld-page";
+import { muziekgieterij, paard, palladiumKoeln } from "./jsonld-page";
 import { lanxessArena } from "./lanxess-arena";
+import { patronaat } from "./patronaat";
+import { pinkpop } from "./pinkpop";
 import { melkweg } from "./melkweg";
 import { rudolfWeberArena } from "./rudolf-weber-arena";
 import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
@@ -46,6 +50,10 @@ export const ADAPTERS: Adapter[] = [
   gashouder,
   paard,
   hedon,
+  patronaat,
+  klokgebouw,
+  grenswerk,
+  pinkpop,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena
@@ -59,4 +67,5 @@ export const ADAPTERS: Adapter[] = [
   rudolfWeberArena,
   grugahalle,
   sparkassenpark,
+  palladiumKoeln,
 ];

@@ -1,6 +1,6 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.7 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
+> Werktitel: **Podiumradar**. Versie 0.8 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
 > Wijzigingen 0.3 → 0.4: Ticketmaster-sleutel nog niet beschikbaar → venue-sites eerst (B19), Eventim-API niet bruikbaar (B20), venue-namen bijgewerkt (B21), adapter-aanpak (B22).
@@ -322,6 +322,10 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B31 | Muziekgenres (vaste lijst van 11: Pop, Rock, Metal & punk, Hiphop & R&B, Dance & DJ, Nederlandstalig, Schlager, Folk & singer-songwriter, Jazz/soul/blues, Klassiek, Wereld & latin) uit het label van de zaal of woorden in de titel, anders uit de tags van de artiest in MusicBrainz (gratis open database, 1 verzoek/s, cache in `data/artist-genres.json`). Genrefilter in Overzicht en Agenda; geen genre = valt weg bij een genrefilter | Akkoord Ralf 26 nov 2026 (koos "Zalen + MusicBrainz"). Max 2 genres per event; geen gok bij twijfel |
 | B32 | 17 Nederlandse zalen erbij: Limburg (De Bosuil, Grenswerk, Muziekgieterij, Nieuwe Nor), grote steden (Paradiso, Melkweg, MartiniPlaza, De Oosterpoort, Doornroosje, Paard, Hedon, Mezz, Patronaat) en dance-locaties (Gashouder, Klokgebouw, Maassilo, Warehouse Elementenstraat) | Akkoord Ralf 26 nov 2026. Bron per zaal volgens §4.2, zelfde regels (robots, 1 verzoek/s, geen blokkades omzeilen) |
 | B33 | DJ-feesten via de eigen agenda's van clubs en dance-locaties (B32) en het genre "Dance & DJ"; niet via DJguide | DJguide's robots.txt verbiedt hergebruik door AI en scrapers (Content-Usage: ai=n) en er is geen API; Ralf koos om geen toestemming te vragen |
+| B34 | Zalen zonder eigen agenda via een officiële stads- of organisatorbron, zoals al bij Ahoy/Tivoli (B23): De Kuip via Uitagenda Rotterdam, Palladium via koeln.de (stadsportaal), Megaland via de site van Pinkpop (één event per festivaldag met de acts van die dag) | Ralf: "fix de zalen zonder bron". Alleen bronnen die robots.txt toestaan; geen ticketplatforms of aggregators |
+| B35 | "Dance & DJ" krijgt een tweede filterrij met stijlen: Techno, House, Trance, Hardstyle & hardcore, Drum & bass, Disco, EDM (uit label/titel, anders MusicBrainz-tags; max 2) | Verzoek Ralf 26 nov 2026. Stijlen verfijnen alleen Dance; andere gekozen genres blijven gelden |
+| B36 | Namen waarop je kunt klikken (acts, zalen) krijgen bij aanwijzen een felroze markeerstift-achtergrond | Verzoek Ralf: duidelijker zien waar je op klikt |
+| B37 | Melkweg: bij een botcontrole (AWS-firewall, HTTP 202) vraagt de nachtelijke run het na 2 en na 9 minuten opnieuw; het controlescherm wordt nooit uitgevoerd of opgelost (B23). Lukt het niet, dan blijft de vorige stand staan. Melkweg staat in de verzoekbrief | Verzoek Ralf "lees Melkweg op een andere manier uit"; er is geen andere officiële bron (geen stadsagenda met Melkweg, geen feed) |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)

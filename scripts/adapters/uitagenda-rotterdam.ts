@@ -16,6 +16,7 @@ export const UITAGENDA_ROTTERDAM_LOCATIONS: { id: number; key: string; venueId: 
   { id: 49648, key: "rotterdam-ahoy", venueId: "rotterdam-ahoy" },
   { id: 49189, key: "rtm-stage", venueId: "rotterdam-ahoy" },
   { id: 49400, key: "maassilo", venueId: "maassilo" }, // B33: dance venue; its own site loads the agenda with JavaScript
+  { id: 209292, key: "de-kuip", venueId: "de-kuip" }, // De Kuip has no concert agenda of its own
 ];
 
 interface Item {

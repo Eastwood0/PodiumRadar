@@ -75,15 +75,17 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 
 ## Huidige stand
 - Fase: **2 bezig** (gestart 25 november 2026). Fase 1 grotendeels af; open: Ticketmaster (B25), Palladium.
-- Bouwplan: versie 0.7, beslissingen t/m B33.
+- Bouwplan: versie 0.8, beslissingen t/m B37.
 - Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Lighthouse lokaal mobiel 96–98 / 100; 360 px zonder horizontaal scrollen.
 - Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
 - Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
-  - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder (HTML), Hedon (Angular ng-state).
+  - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo + De Kuip (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data; AWS-botcontrole → herhaalpogingen, B37), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder, Patronaat, Klokgebouw, Grenswerk (HTML), Hedon (Angular ng-state), Megaland (via pinkpop.nl, B34).
   - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (be•at), ING Arena.
-  - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (d.live), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark.
-- Nieuwe NL-zalen nog te bouwen (B32; snapshots via workflow "Snapshot pages" → branch `snapshots`): Patronaat, Klokgebouw, De Oosterpoort/Spot (JSON-LD kapot, HTML nodig), De Bosuil, Grenswerk, Mezz, Doornroosje (alle HTML), MartiniPlaza (dataLayer per pagina, paginering uitzoeken), Paradiso (agenda via JavaScript, sitemap met duizenden oude events).
-- Geen bron (`src/lib/no-source.ts`): Brabanthallen, De Kuip, Goffertpark, Megaland, Vrijthof, Koning Boudewijnstadion, MECC, Palladium, Signal Iduna Park, Nieuwe Nor (403), Warehouse Elementenstraat (geen eigen agenda).
+  - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (d.live), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark, Palladium (via koeln.de, B34).
+- Nieuwe NL-zalen nog te bouwen (B32; snapshots via workflow "Snapshot pages" → branch `snapshots`): De Oosterpoort/Spot (JSON-LD kapot, HTML nodig), De Bosuil, Mezz, Doornroosje (HTML), MartiniPlaza (lijst laadt verder via JavaScript), Paradiso (agenda via JavaScript).
+- Zalen zonder bron, nog te onderzoeken: Vrijthof (André Rieu-site), Koning Boudewijnstadion, Signal Iduna Park, Goffertpark (geen geplande concerten gevonden).
+- Geen bron (`src/lib/no-source.ts`): Brabanthallen (captcha), Goffertpark, Vrijthof, Koning Boudewijnstadion, MECC, Signal Iduna Park, Nieuwe Nor (403), Warehouse Elementenstraat (geen eigen agenda).
+- Genres: dance-stijlen als tweede filterrij (B35); hover = roze markeerstift (B36).
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
 - Nooit bot-blokkades omzeilen (B23). Verzoekbrief alleen nog nodig voor Brabanthallen: `docs/verzoek-toegang.md`.
 - Fase 2 open: Cloudflare Pages + Access (Ralf, `docs/ACCOUNTS.md` stap 4) en inlogscherm testen; steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.

@@ -1,6 +1,6 @@
 # Verzoek om toegang voor Podiumradar
 
-Drie zalen tonen elke geautomatiseerde bezoeker een controlescherm (Cloudflare of captcha). Podiumradar omzeilt dat niet. Ahoy en TivoliVredenburg lezen we vast via de culturele stadsagenda's (B23); deze brief is vooral nog nodig voor Brabanthallen. Voor Tivoli kan hij de dekking vergroten (de stadsagenda loopt minder ver vooruit).
+Een paar zalen tonen geautomatiseerde bezoekers (soms) een controlescherm (Cloudflare, AWS of captcha) of weigeren ze. Podiumradar omzeilt dat niet. Ahoy en TivoliVredenburg lezen we vast via de culturele stadsagenda's (B23). Deze brief is nodig voor Brabanthallen, Melkweg en Nieuwe Nor; voor Tivoli kan hij de dekking vergroten (de stadsagenda loopt minder ver vooruit).
 
 Stuur onderstaande tekst naar het algemene contactadres van de zaal (te vinden op hun site). Vul je eigen naam in.
 
@@ -9,6 +9,8 @@ Stuur onderstaande tekst naar het algemene contactadres van de zaal (te vinden o
 | Rotterdam Ahoy | Cloudflare-controle op alle pagina's | Uitagenda Rotterdam |
 | TivoliVredenburg | Cloudflare-controle op agenda, sitemap en API | UITagenda Utrecht (ongeveer een kwart van het programma) |
 | Brabanthallen | Captcha op de agenda | nog geen |
+| Melkweg | AWS-firewall toont soms een controlescherm (HTTP 202) | eigen site, met twee herhaalpogingen per nacht; lukt het niet, dan blijft de vorige stand staan |
+| Nieuwe Nor | Weigert automatische bezoekers (HTTP 403) | nog geen |
 
 ---
 
