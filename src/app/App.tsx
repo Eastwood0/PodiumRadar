@@ -103,7 +103,7 @@ export default function App({ bill }: { bill?: Bill }) {
       </header>
       {partial && (
         <p className="stale" role="status">
-          Alleen de komende twee maanden zijn geladen. Herlaad de pagina voor de rest van het jaar.
+          Alleen de komende maand is geladen. Herlaad de pagina voor de rest van het jaar.
         </p>
       )}
       {stale && (

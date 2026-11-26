@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx -y aislop@0.23.0 scan:*)",
+      "Bash(npx -y aislop@0.23.0 fix:*)",
+      "Bash(npx -y aislop@0.23.0 rules:*)",
+      "Bash(npx aislop@0.23.0 scan:*)",
+      "Bash(npx aislop@0.23.0 fix:*)"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
@@ -13,7 +13,7 @@ type Common = { data: SiteData; venues: Map<string, SiteVenue> };
 export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }) {
   const follows = useFollows();
   // "Nieuw" compares with the previous visit; this visit is saved for next time once the page is open.
-  const previousVisit = useRef(getFollowState().lastVisit);
+  const [previousVisit] = useState(() => getFollowState().lastVisit);
   useEffect(() => {
     setFollowState({ ...getFollowState(), lastVisit: new Date().toISOString() }, false);
   }, []);
@@ -24,7 +24,7 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
   const events = useMemo(() => radarEvents(data.events, follows.artists), [data, follows.artists]);
   const playing = new Set(events.flatMap((e) => e.a.map(slug)));
   const quiet = follows.artists.filter((a) => !playing.has(slug(a)));
-  const fresh = (e: (typeof events)[number]) => newSince(e, previousVisit.current);
+  const fresh = (e: (typeof events)[number]) => newSince(e, previousVisit);
   const newCount = events.filter(fresh).length;
 
   return (

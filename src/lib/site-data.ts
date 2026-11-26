@@ -111,10 +111,10 @@ export function buildSiteData(
 }
 
 /**
- * Splits the agenda in two files (B48): the first `days` days, which the first screen needs, and the rest, which
+ * Splits the agenda in two files (B48): the first `days` days (30), which the first screen needs, and the rest, which
  * the browser loads right after. Keeps the first download small on a slow phone connection (Lighthouse LCP).
  */
-export function splitSiteData(site: CompactSiteData, moreFile: string, days = 60): { first: CompactSiteData; rest: { events: CompactSiteEvent[] } } {
+export function splitSiteData(site: CompactSiteData, moreFile: string, days = 30): { first: CompactSiteData; rest: { events: CompactSiteEvent[] } } {
   const cut = new Date(Date.parse(site.generatedAt) + days * 86_400_000).toISOString().slice(0, 10);
   const near = site.events.filter((e) => e.s.slice(0, 10) < cut);
   const later = site.events.filter((e) => e.s.slice(0, 10) >= cut);

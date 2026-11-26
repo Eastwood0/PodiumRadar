@@ -12,7 +12,7 @@ const { events, generatedAt } = read<{ events: Event[]; generatedAt?: string }>(
 const { sources } = read<{ sources: Record<string, { ok: boolean; count: number; lastSuccess?: string; venues: string[] }> }>("data/status.json", { sources: {} });
 
 const site = buildSiteData(events, loadVenues(), sources, generatedAt ?? new Date(0).toISOString());
-// First part (next 60 days) for the first screen, the rest in a second file the page loads right after (B48).
+// First part (next 30 days) for the first screen, the rest in a second file the page loads right after (B48).
 const { first, rest } = splitSiteData(site, "data/agenda-later.json");
 mkdirSync("public/data", { recursive: true });
 const json = JSON.stringify(first);

@@ -146,7 +146,7 @@ describe("buildSiteData", () => {
     expect(site.events).toEqual([{ t: "Band", v: "ziggo-dome", s: event.start, h: 1, st: "u", c: "m", u: "https://t.example/1", p: "https://www.ziggodome.nl/x", f: "2026-11-25" }]);
     expect(expandSiteData(structuredClone(site)).events[0]).toMatchObject({ id: "e0", a: ["Band"], g: "Concert" });
   });
-  it("splits off everything after 60 days into a second file; ids of the first part stay the same after merging", () => {
+  it("splits off everything after 30 days into a second file; ids of the first part stay the same after merging", () => {
     const soon = { ...event, id: "s", start: "2026-12-01T20:00:00+01:00", title: "Soon" };
     const all = buildSiteData([event, soon], venues, {}, "2026-11-26T04:17:00Z");
     expect(all.events.map((e) => e.t)).toEqual(["Soon", "Band"]); // sorted by date

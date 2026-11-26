@@ -61,7 +61,7 @@ export function collectEvents(value: Json, out: RawJsonLdEvent[] = [], depth = 0
     return out;
   }
   if (!isObj(value)) return out;
-  const t = types(value).find((x) => /Event$/.test(x));
+  const t = types(value).find((x) => x.endsWith("Event"));
   if (t) out.push(toEvent(value, t));
   for (const key of ["@graph", "itemListElement", "item", "subEvent", "mainEntity", "event", "events"]) {
     if (key in value) collectEvents(value[key], out, depth + 1);

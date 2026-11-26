@@ -1,6 +1,6 @@
 # Clubplan: meer DJ-avonden in de agenda (voorstel, 26 november 2026)
 
-**Status: voorstel voor Ralf. Er is nog niets gebouwd.**
+**Status: akkoord Ralf 26 nov 2026 op route A, B én C (B49), plus TicketSwap. Partyflock valt af (weigert bots, B23). Bouwen volgt.**
 
 Ralf vroeg om "meer clubs voor een goed gevulde DJ-kalender (Complex, Pixl, etc.)". Dit plan zet op een rij welke clubs erbij kunnen, hoe we hun agenda netjes ophalen en wat dat kost aan onderhoud. Kies hieronder een route; daarna bouw ik.
 

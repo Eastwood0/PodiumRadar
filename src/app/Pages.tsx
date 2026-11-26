@@ -2,9 +2,8 @@ import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
-import { FilterBar } from "./FilterBar";
 import { Flag } from "./EventCard";
-import { KindSwitch } from "./FilterBar";
+import { FilterBar, KindSwitch } from "./FilterBar";
 import { applyFilters, type Filters, kindOf, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
 
 const STATUS = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
