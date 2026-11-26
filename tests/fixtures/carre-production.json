@@ -1,0 +1,104 @@
+{
+ "node": {
+  "id": "01KWKWZ8K1CDGYGS4R4MMSD50V",
+  "kind": "production-page",
+  "data": {
+   "heading": "Agnes Obel",
+   "title": "Agnes Obel",
+   "subheading": "Gepresenteerd door Friendly Fire en Carré"
+  },
+  "production_id": "17248",
+  "filters": {
+   "genres": [
+    "concert_internationaal"
+   ]
+  },
+  "relations": {
+   "artists": [],
+   "banners": [],
+   "banners_2": [],
+   "faq_categories": [],
+   "footer": "DEFAULT_FOOTER",
+   "icons": [],
+   "image_ad": "01M1ZW8FZEK031S67V8Z7YQ0NC",
+   "image_header_large": "01M1ZWF9XRS2753HMX03WQGZWD",
+   "image_header_small": "01M1ZWF9XV3NBK7SKTV8AGBR35",
+   "image_sponsor": null,
+   "image_tabs": "01M1ZW8FZTB0S0MGADPA0AN27Y",
+   "image_thumb": "01M1ZWF9XGX84JN5CKB0WRT49M",
+   "menu_main": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+   "menu_top": "01DFB6QX4F96PV1G5Y8VF97GKR",
+   "not_found_page": "01DFDBF820Q4YYE7JXBXDF0327",
+   "questions": [],
+   "quote_widgets": [],
+   "related_production_pages": [],
+   "slideshow": null,
+   "subfooter": "DEFAULT_SUBFOOTER",
+   "tabs": "01F3N9CFWKD5H211C2740Y06TK_01JNZTV9V8Y19HNQ2XR5WTSNJ6"
+  },
+  "publication_date": "2026-09-09T09:50:00+02:00"
+ },
+ "filters": {
+  "genres": {
+   "values": [
+    {
+     "id": "cabaret",
+     "data": {
+      "name": "Cabaret"
+     }
+    },
+    {
+     "id": "concert_internationaal",
+     "data": {
+      "name": "Concert internationaal"
+     }
+    }
+   ]
+  }
+ },
+ "productions": {
+  "17248": {
+   "events": [
+    {
+     "id": "36657",
+     "start_date": "2027-09-27T20:00:00+02:00",
+     "sales_status": "on_sale",
+     "venue_id": "10008",
+     "data": {
+      "eventtype": "Voorstelling"
+     }
+    },
+    {
+     "id": 36658,
+     "start_date": "2027-09-28T20:00:00+02:00",
+     "sales_status": "sold_out",
+     "venue_id": 10008,
+     "data": {
+      "eventtype": "Voorstelling"
+     }
+    },
+    {
+     "id": 36659,
+     "start_date": "2027-09-29T20:00:00+02:00",
+     "sales_status": "on_sale",
+     "venue_id": 99,
+     "data": {
+      "eventtype": "Voorstelling"
+     }
+    }
+   ]
+  }
+ },
+ "venues": {
+  "10008": {
+   "data": {
+    "name": "Koninklijk Theater Carré"
+   }
+  },
+  "99": {
+   "data": {
+    "name": "Ziggo Dome"
+   }
+  }
+ }
+}

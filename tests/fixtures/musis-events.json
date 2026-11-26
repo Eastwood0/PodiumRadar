@@ -1,0 +1,126 @@
+{
+ "@context": "/api/contexts/Event",
+ "@id": "/api/events",
+ "@type": "Collection",
+ "totalItems": 274,
+ "member": [
+  {
+   "@id": "/api/events/10034",
+   "@type": "Event",
+   "id": 10034,
+   "production": {
+    "@type": "Production",
+    "@id": "/api/.well-known/genid/f54ac39f1849d8329f5a",
+    "title": "Sexodus (wordt verplaatst)",
+    "slug": "theater-utrecht-naomi-velissariou-sexodus",
+    "headerImage": "/media/00_voorstellingen_2627/03_November/261126-Sexodus-WH.png",
+    "performer": "Theater Utrecht | Naomi Velissariou",
+    "tags": [
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/ed8dc7b82fcd14e9a027",
+      "id": 9,
+      "name": "Muziektheater"
+     },
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/69d8278ed1078b2948b6",
+      "id": 12,
+      "name": "Toneel"
+     },
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/fa64fa2d18c72a9a0749",
+      "id": 26,
+      "name": "Language no problem"
+     },
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/dba259de10ec58b67a00",
+      "id": 56,
+      "name": "Gelrepas"
+     }
+    ]
+   },
+   "startsAt": "2026-11-26T20:30:00+01:00",
+   "continueSalesDuringEvent": false,
+   "continueSalesSoldOut": false,
+   "endTime": "2026-11-26T22:00:00+01:00",
+   "soldOut": false,
+   "fewTickets": false
+  },
+  {
+   "@id": "/api/events/9981",
+   "@type": "Event",
+   "id": 9981,
+   "production": {
+    "@type": "Production",
+    "@id": "/api/.well-known/genid/e5be9ca07c04015db78f",
+    "title": "Orkest Phion ism Nederlandse Reisopera",
+    "slug": "orkest-phion-to-die-for-a-comedy",
+    "headerImage": "/media/00_voorstellingen_2627/03_November/261127-To%20Die%20For-WH.png",
+    "performer": "To Die For (A Comedy)",
+    "tags": [
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/5ab6e17cda2abaf827f2",
+      "id": 7,
+      "name": "Klassiek"
+     },
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/661e57104a79b36bf0a7",
+      "id": 43,
+      "name": "Opera"
+     },
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/d8a6a113cf690e3e0d4f",
+      "id": 44,
+      "name": "Orkestraal"
+     }
+    ]
+   },
+   "startsAt": "2026-11-27T20:00:00+01:00",
+   "continueSalesDuringEvent": false,
+   "continueSalesSoldOut": false,
+   "endTime": "2026-11-27T22:30:00+01:00",
+   "soldOut": false,
+   "fewTickets": false
+  },
+  {
+   "@id": "/api/events/10033",
+   "@type": "Event",
+   "id": 10033,
+   "production": {
+    "@type": "Production",
+    "@id": "/api/.well-known/genid/1cfe5695d3df82a8874d",
+    "title": "Venus & Adonis",
+    "slug": "toneelschuur-producties-venus-adonis",
+    "headerImage": "/media/00_voorstellingen_2627/03_November/261127-%20Venus%20en%20Adonis-WH.png",
+    "performer": "Toneelschuur Producties",
+    "tags": [
+     {
+      "@type": "Tag",
+      "@id": "/api/.well-known/genid/69d8278ed1078b2948b6",
+      "id": 12,
+      "name": "Toneel"
+     }
+    ]
+   },
+   "startsAt": "2026-11-27T20:30:00+01:00",
+   "continueSalesDuringEvent": false,
+   "continueSalesSoldOut": false,
+   "endTime": "2026-11-27T22:00:00+01:00",
+   "soldOut": false,
+   "fewTickets": false
+  }
+ ],
+ "view": {
+  "@id": "/api/events?startsAt%5Bafter%5D=2026-11-26&page=1",
+  "@type": "PartialCollectionView",
+  "first": "/api/events?startsAt%5Bafter%5D=2026-11-26&page=1",
+  "last": "/api/events?startsAt%5Bafter%5D=2026-11-26&page=28",
+  "next": "/api/events?startsAt%5Bafter%5D=2026-11-26&page=2"
+ }
+}

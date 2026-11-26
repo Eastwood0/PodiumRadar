@@ -411,3 +411,97 @@ describe("De Kattendans (Theater for WordPress)", async () => {
     expect(ev[2]).toMatchObject({ title: "Roué Verveer", start: "2027-02-23T20:15:00+01:00", status: "uitverkocht" });
   });
 });
+
+describe("Maaspoort (programme pages)", async () => {
+  const { parseMaaspoort } = await import("../scripts/adapters/maaspoort");
+  const ev = parseMaaspoort(fixture("maaspoort-programma.html"));
+  it("reads date and time from the show link, title + subtitle, genre and the cancelled label", () => {
+    expect(ev).toHaveLength(3);
+    expect(ev[0]).toMatchObject({ venueId: "maaspoort", title: "Johnny de Mol & band: Goed dat jij bestaat", artists: ["Johnny de Mol & band"], start: "2026-11-26T20:15:00+01:00", status: "geannuleerd", sourceCategory: "Show" });
+    expect(ev[1].status).toBe("gepland");
+  });
+  it("skips shows in Grenswerk (own adapter)", () => {
+    const html = fixture("maaspoort-programma.html").replace("Frans Boermans zaal", "Grenswerk");
+    expect(parseMaaspoort(html)).toHaveLength(2);
+  });
+});
+
+describe("Parkstad Limburg Theaters (three houses)", async () => {
+  const { parsePlt, pltPages } = await import("../scripts/adapters/plt");
+  const html = fixture("plt-programma.html");
+  const ev = parsePlt(html);
+  it("maps each tile to its house by the logo and reads genre, date and time", () => {
+    expect(ev.map((e) => e.venueId)).toEqual(["toon-hermans-theater", "plt-heerlen", "plt-kerkrade"]);
+    expect(ev[1]).toMatchObject({ title: "CATS", start: "2026-11-26T20:00:00+01:00", sourceCategory: "Musical" });
+    expect(ev[0].title).toBe("Lex Uiting: Truuk Nao 't Zuuje");
+  });
+  it("reads the page count from the pagination", () => expect(pltPages(html)).toBe(53));
+});
+
+describe("Ticketmatic theatres (show page JSON-LD)", async () => {
+  const { parseTicketmaticPage } = await import("../scripts/adapters/ticketmatic-theatre");
+  it("Munttheater: TheaterEvent with performer and the first genre pill", () => {
+    const url = "https://www.munttheater.nl/agenda/coming-on-strong-golden-earring-tribute";
+    const ev = parseTicketmaticPage(fixture("munttheater-show.html"), url, { venueId: "munttheater", genre: ($) => $(".event-tags-wrapper .tag-pill").first().text().trim() });
+    expect(ev).toHaveLength(1);
+    expect(ev[0]).toMatchObject({ venueId: "munttheater", artists: ["Golden Earring Tribute"], start: "2027-01-20T20:15:00+01:00", hasTime: true, sourceCategory: "Muziek", sourceId: `${url}|2027-01-20T20:15:00+01:00` });
+  });
+  it("Stadsschouwburg Utrecht: company from the header data and genre from the info bar", () => {
+    const ev = parseTicketmaticPage(fixture("stadsschouwburg-utrecht-show.html"), "https://stadsschouwburg-utrecht.nl/agenda/seizoen-2026-2027/x", {
+      venueId: "stadsschouwburg-utrecht",
+      genre: ($) => $(".event-info-wrapper p.item.lowercase").first().text().trim(),
+    });
+    expect(ev[0]).toMatchObject({ title: "Richard Groenendijk: Gelukkig heb je mij nog", artists: ["Richard Groenendijk"], start: "2027-02-24T20:00:00+01:00", sourceCategory: "Cabaret" });
+  });
+  it("tolerates a page without header data", () => {
+    expect(parseTicketmaticPage("<html></html>", "https://x.nl/a", { venueId: "munttheater" })).toEqual([]);
+  });
+});
+
+describe("Carré (site JSON)", async () => {
+  const { parseCarre } = await import("../scripts/adapters/carre");
+  const ev = parseCarre(fixture("carre-production.json"), "https://carre.nl/voorstelling/agnes-obel");
+  it("reads every performance with sales status and genre name; skips performances elsewhere", () => {
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "carre", title: "Agnes Obel", start: "2027-09-27T20:00:00+02:00", status: "gepland", sourceCategory: "Concert internationaal", sourceId: "carre-36657" });
+    expect(ev[1].status).toBe("uitverkocht");
+  });
+  it("rejects JSON of another shape", () => expect(() => parseCarre('{"node":1}', "https://carre.nl/x")).toThrow());
+});
+
+describe("DeLaMar (production page)", async () => {
+  const { parseDelamar } = await import("../scripts/adapters/delamar");
+  const ev = parseDelamar(fixture("delamar-production.html"), "https://delamar.nl/voorstellingen/sara-kroos/");
+  it("reads one event per performance with time, genre and ticket link", () => {
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "delamar", title: "Sara Kroos: Prikkelarme Kermis", artists: ["Sara Kroos"], start: "2026-12-07T20:30:00+01:00", sourceCategory: "Cabaret", ticketUrl: "https://tickets.delamar.nl/nl/buyingflow/tickets/48417/106661/" });
+  });
+  it("returns nothing for a genre overview page without a production title", () => expect(parseDelamar("<html><body></body></html>", "https://delamar.nl/voorstellingen/cabaret/")).toEqual([]));
+});
+
+describe("Musis & Stadstheater (site API)", async () => {
+  const { parseMusis } = await import("../scripts/adapters/musis");
+  const { events, next } = parseMusis(fixture("musis-events.json"));
+  it("reads time with offset, performer, genre tags without series labels, and the next page", () => {
+    expect(events).toHaveLength(3);
+    expect(events[0]).toMatchObject({ venueId: "musis-arnhem", start: "2026-11-26T20:30:00+01:00", status: "verplaatst", sourceCategory: "Muziektheater, Toneel", sourceId: "musis-10034" });
+    expect(events[0].sourceCategory).not.toMatch(/Gelrepas|Language/);
+    expect(next).toContain("page=2");
+  });
+});
+
+describe("De Oranjerie Roermond (theaterroermond.nl)", async () => {
+  const { parseRoermondAgenda, parseRoermondProduction } = await import("../scripts/adapters/theater-roermond");
+  it("lists each production once with its genre", () => {
+    expect(parseRoermondAgenda(fixture("roermond-agenda.html"))).toEqual([
+      { url: "https://www.theaterroermond.nl/agenda/titanique", genre: "Musical" },
+      { url: "https://www.theaterroermond.nl/agenda/the-best-of-sven-matthijs", genre: "Special" },
+    ]);
+  });
+  it("reads the performances (not the dinner or parking rows) and picks the coming year", () => {
+    const ev = parseRoermondProduction(fixture("roermond-production.html"), "https://www.theaterroermond.nl/agenda/titanique", "Musical", new Date("2026-11-26T12:00:00Z"));
+    expect(ev.map((e) => e.start)).toEqual(["2026-11-27T20:00:00+01:00", "2026-11-28T20:00:00+01:00"]);
+    const later = parseRoermondProduction(fixture("roermond-production.html"), "https://www.theaterroermond.nl/agenda/titanique", "Musical", new Date("2026-12-15T12:00:00Z"));
+    expect(later[0].start).toBe("2027-11-27T20:00:00+01:00");
+  });
+});

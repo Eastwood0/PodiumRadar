@@ -46,12 +46,12 @@ const SOURCE_RULES: [RegExp, Genre][] = [
   [/familie|famille|kinder|kids|jeugd|jeunesse/i, "Familie"],
   [/beurs|messe|markt|expo|tentoonstelling|evenementen|börse|business|zakelijk|congres/i, "Beurs"],
   [/lezing|lezingen|kennis|debat|speaker|talk|podcast|literatuur|literair|theatercollege|lesung/i, "Lezing"],
-  [/\b(workshop|livestream|hangout|handwerk|for dinner|filmavond|film|expositie)\b/i, "Overig"],
+  [/\b(workshop|livestream|hangout|handwerk|for dinner|filmavond|film|expositie|educatie|onderwijs)\b/i, "Overig"],
   [/theaterconcert|muziektheater ?concert/i, "Concert"],
   [/musical|com[ée]die musicale/i, "Musical"],
   [/ballet|ballett|\bdans\b|\bdance theat|tanztheater/i, "Dans"],
-  [/show|circus|cirque|entertainment|magie|goochel/i, "Show"],
-  [/toneel|theater|theatre|th[ée]âtre|schauspiel|voorstelling/i, "Toneel"],
+  [/show|circus|cirque|entertainment|amusement|magie|goochel/i, "Show"],
+  [/toneel|theater|theatre|th[ée]âtre|schauspiel|komedie|kom[öo]die|voorstelling/i, "Toneel"],
   [/concert|konzert|muziek|music|musik|pop|rock|metal|hip ?hop|rap|jazz|blues|soul|funk|indie|punk|schlager|nederlands|dutch|singer|k-pop|reggae|latin|wereld|world|folk|country|r&b|urban|alternati/i, "Concert"],
 ];
 

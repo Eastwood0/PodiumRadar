@@ -40,6 +40,21 @@ venues:
   - { id: patronaat, name: Patronaat, city: Haarlem, country: NL, tier: B }
   # Theaters (B41):
   - { id: kattendans, name: De Kattendans, city: Bergeijk, country: NL, tier: B, website: "https://kattendans.nl/" }
+  # Theaters rond Weert / Limburg (B41, 26 nov 2026):
+  - { id: munttheater, name: Munttheater, city: Weert, country: NL, tier: B, website: "https://www.munttheater.nl/" }
+  - { id: maaspoort, name: Maaspoort, city: Venlo, country: NL, tier: B, website: "https://www.maaspoort.nl/" }
+  - { id: plt-heerlen, name: Theater Heerlen, city: Heerlen, country: NL, tier: B, aliases: [PLT, Parkstad Limburg Theaters], website: "https://www.plt.nl/" }
+  - { id: plt-kerkrade, name: Theater Kerkrade, city: Kerkrade, country: NL, tier: B, aliases: [PLT], website: "https://www.plt.nl/" }
+  - { id: toon-hermans-theater, name: Toon Hermans Theater, city: Sittard, country: NL, tier: B, aliases: [PLT], website: "https://www.plt.nl/" }
+  - { id: oranjerie-roermond, name: De Oranjerie, city: Roermond, country: NL, tier: B, aliases: [TheaterHotel De Oranjerie], website: "https://www.theaterroermond.nl/" }
+  - { id: parktheater-eindhoven, name: Parktheater, city: Eindhoven, country: NL, tier: B, website: "https://www.parktheater.nl/" }
+  - { id: theater-aan-het-vrijthof, name: Theater aan het Vrijthof, city: Maastricht, country: NL, tier: B, website: "https://www.theateraanhetvrijthof.nl/" }
+  # Grote theaters (B41):
+  - { id: carre, name: Carré, city: Amsterdam, country: NL, tier: B, aliases: [Koninklijk Theater Carré], website: "https://carre.nl/" }
+  - { id: delamar, name: DeLaMar, city: Amsterdam, country: NL, tier: B, website: "https://delamar.nl/" }
+  - { id: stadsschouwburg-utrecht, name: Stadsschouwburg Utrecht, city: Utrecht, country: NL, tier: B, website: "https://stadsschouwburg-utrecht.nl/" }
+  - { id: theaters-tilburg, name: Schouwburg & Concertzaal Tilburg, city: Tilburg, country: NL, tier: B, aliases: [Theaters Tilburg], website: "https://www.schouwburgconcertzaaltilburg.nl/" }
+  - { id: musis-arnhem, name: Musis & Stadstheater, city: Arnhem, country: NL, tier: B, aliases: [Musis Sacrum], website: "https://www.musisenstadstheater.nl/" }
   # Dance-locaties (B33: DJ-feesten via de eigen agenda's van clubs, niet via DJguide):
   - { id: gashouder, name: Gashouder, city: Amsterdam, country: NL, tier: B, aliases: [Westergas] }
   - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }

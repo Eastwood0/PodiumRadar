@@ -25,6 +25,13 @@ import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
 import { sparkassenpark } from "./sparkassenpark";
 import { spotGroningen } from "./spot-groningen";
 import { kattendans } from "./wp-theatre";
+import { carre } from "./carre";
+import { delamar } from "./delamar";
+import { maaspoort } from "./maaspoort";
+import { musis } from "./musis";
+import { plt } from "./plt";
+import { theaterRoermond } from "./theater-roermond";
+import { munttheater, stadsschouwburgUtrecht, theatersTilburg } from "./ticketmatic-theatre";
 import type { Adapter } from "./types";
 import { uitagendaRotterdam } from "./uitagenda-rotterdam";
 import { uitagendaUtrecht } from "./uitagenda-utrecht";
@@ -66,6 +73,16 @@ export const ADAPTERS: Adapter[] = [
   andreRieu,
   spotGroningen,
   kattendans,
+  // Theaters (B41, 26 nov 2026)
+  munttheater,
+  maaspoort,
+  plt, // Theater Heerlen, Theater Kerkrade, Toon Hermans Theater
+  theaterRoermond,
+  carre,
+  delamar,
+  stadsschouwburgUtrecht,
+  theatersTilburg,
+  musis,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena
