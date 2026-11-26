@@ -15,7 +15,7 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
   const events = useMemo(() => applyFilters(data.events, venues, filters), [data, venues, filters]);
   return (
     <>
-      <PageHead title="Agenda" sub="Alle concerten, theater en cabaret van de komende twaalf maanden. Kies hieronder wat je wilt zien." />
+      <PageHead title="Agenda" />
       <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: true, month: true }} months={months} count={events.length} />
       <EventList key={JSON.stringify(filters)} events={events} venues={venues} data={data} empty={<p>Geen events met deze filters. Kies “Alles” of wis de filters.</p>} />
     </>
@@ -129,7 +129,7 @@ export function Sources({ data, venues }: Common) {
   const noSource = data.venues.filter((v) => v.ns);
   return (
     <>
-      <PageHead title="Bronnen" sub="Elke nacht leest Podiumradar de officiële agenda's van de zalen. Tickets koop je altijd bij de zaal of de verkoper die zij noemen." />
+      <PageHead title="Bronnen" />
       <ul className="srclist" aria-label="Bronnen met status">
         {data.sources.map((s) => (
           <li key={s.name}>

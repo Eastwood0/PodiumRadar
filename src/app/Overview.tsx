@@ -43,7 +43,7 @@ export function Overview({ data, venues, months, filters, setFilters }: { data: 
   return (
     <section className="wall" aria-labelledby="wall-h">
       <h2 id="wall-h" className="h2">Per zaal, per maand</h2>
-      <p className="sub">Elk vakje is één zaal in één maand. Hoe voller de kleur, hoe meer er speelt; tik erop voor de shows.</p>
+      <p className="sub">Tik op een vakje voor de shows.</p>
       <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: false, month: false }} count={filtered.length} />
       <div className="board" role="region" aria-label="Overzicht per zaal en maand" tabIndex={0}>
         <table className="tl">

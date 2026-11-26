@@ -129,10 +129,9 @@ export default function App({ bill }: { bill?: Bill }) {
       </main>
       <footer className="foot">
         <p>
-          {data ? <>Laatst bijgewerkt {formatDateTime(data.generatedAt)}. </> : null}
-          De agenda komt elke nacht uit de officiële agenda's van de zalen, Uitagenda Rotterdam en UITagenda Utrecht. <a href="#bronnen">Bekijk alle bronnen</a>.
+          {data ? <>Laatst bijgewerkt {formatDateTime(data.generatedAt)} · </> : null}
+          <a href="#bronnen">Bronnen</a>
         </p>
-        <p>Een privé-site voor een kleine vriendenkring. Datum en tijd kunnen wijzigen: kijk bij het kopen van tickets altijd bij de verkoper.</p>
       </footer>
     </>
   );

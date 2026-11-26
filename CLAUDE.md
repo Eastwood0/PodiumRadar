@@ -74,6 +74,7 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
+- **Overdracht 26 nov 2026: lees eerst `docs/OVERDRACHT.md`** (openstaande verzoeken van Ralf, fase 3 akkoord, bevindingen theaters).
 - Fase: **2 bezig** (gestart 25 november 2026). Ticketmaster vervalt voorlopig (B38); radar alleen NL/BE/DE.
 - Bouwplan: versie 0.9, beslissingen t/m B41. Geen inlog (B39: voorkeuren in browser + koppelcode, fase 3), site open maar niet vindbaar (B40).
 - Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`), live op https://podiumradar.eastwood.workers.dev (26 nov 2026, account-subdomein door Ralf gewijzigd); elke push naar main wordt automatisch uitgerold.
@@ -91,4 +92,4 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
 - Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
 - Fase 2 open: live site controleren zodra Ralf het adres stuurt (niet vindbaar: noindex + robots); steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Openstaand voor Ralf: verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen) pas na zijn akkoord.
+- Openstaand voor Ralf: verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen): akkoord Ralf 26 nov 2026, nog niet begonnen.
