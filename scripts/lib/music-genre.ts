@@ -17,7 +17,7 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(post-?punk|indie|alternative|alt-rock|grunge|garage rock|shoegaze|britpop|emo|stoner|psychedelic rock|prog(ressive)? rock|rock|rock ?'?n'? ?roll|hard rock|blues rock|krautrock)\b/i, "Rock"],
   [/\b(loud|heavy metal|metal|metalcore|deathcore|death metal|black metal|thrash|doom|grindcore|nu metal|(?<!post-)(?<!post)punk|hardcore punk|pop punk|ska punk)\b/i, "Metal & punk"],
   [/\b(hip ?hop|hip-hop|rap|deutschrap|nederhop|trap|drill|grime|r&b|rnb|r ?'?n'? ?b|contemporary r&b|urban|boom bap|afroswing)\b/i, "Hiphop & R&B"],
-  [/\b(techno|house|deep house|tech house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
+  [/\b(techno|house|deep[- ]?house|tech[- ]?house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
   [/\b(nederpop|nederlandstalig|levenslied|smartlap|carnaval|nederhop|volkszanger|palingsound|limburgstalig|dialect)\b/i, "Nederlandstalig"],
   [/\b(schlager|volksmusik|volkstümliche musik|ballermann|après-ski|apres-ski|stimmungsmusik|deutscher schlager)\b/i, "Schlager"],
   [/\b(singer-?songwriter|folk|indie folk|country|americana|bluegrass|acoustic|akoestisch|chanson|cantautor|liedermacher|alt-country)\b/i, "Folk & singer-songwriter"],
@@ -32,7 +32,7 @@ const ALSO: [RegExp, MusicGenre][] = [[/\b(k-?pop|j-?pop|europop|dance-?pop|elec
 /** Words → dance style. "hardcore punk" is not hardcore (dance). */
 const DANCE_RULES: [RegExp, DanceStyle][] = [
   [/\b(techno|hard techno|minimal|acid|industrial techno|melodic techno|hypnotic techno)\b/i, "Techno"],
-  [/\b(house|deep ?house|tech ?house|afro ?house|progressive house|funky house|uk garage|garage house|amapiano|lo-?fi house)\b/i, "House"],
+  [/\b(house|deep[- ]?house|tech[- ]?house|afro[- ]?house|progressive house|funky house|uk garage|garage house|amapiano|lo-?fi house)\b/i, "House"],
   [/\b(trance|psy-?trance|psychedelic trance|uplifting|goa)\b/i, "Trance"],
   [/\b(hardstyle|rawstyle|hardcore(?!\s*punk)|gabber|frenchcore|uptempo|terror|hard dance|q-?dance|defqon)\b/i, "Hardstyle & hardcore"],
   [/\b(drum ?(and|&|n'?) ?bass|dnb|d&b|jungle|liquid funk|neurofunk|dubstep|bass music|riddim)\b/i, "Drum & bass"],

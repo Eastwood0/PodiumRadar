@@ -350,3 +350,23 @@ describe("Pinkpop for Megaland (line-up per day)", async () => {
     expect(ev[0]).toMatchObject({ venueId: "megaland", sourceCategory: "festival", hasTime: false });
   });
 });
+
+describe("Doornroosje (HTML programme with month headings)", async () => {
+  const { parseDoornroosje } = await import("../scripts/adapters/doornroosje");
+  const ev = parseDoornroosje(fixture("doornroosje-home.html"));
+  it("takes the year from the month heading and the date from the previous item for same-day shows", () => {
+    expect(ev[0]).toMatchObject({ venueId: "doornroosje", title: "Shantel & Bucovina Club Soundsystem", start: "2026-11-26T12:00:00+01:00", hasTime: false });
+    const sameDay = ev.find((e) => e.title === "NAFT");
+    expect(sameDay?.start).toBe("2026-11-26T12:00:00+01:00");
+    expect(ev.find((e) => e.title === "The Veils")?.artists).toEqual(["The Veils", "Anthonie Tonnon"]);
+  });
+});
+
+describe("De Bosuil (HTML programme with month headings)", async () => {
+  const { parseBosuil } = await import("../scripts/adapters/bosuil");
+  const ev = parseBosuil(fixture("bosuil-programma.html"));
+  it("reads day, genre, title and sold-out label", () => {
+    expect(ev).toHaveLength(4);
+    expect(ev[1]).toMatchObject({ venueId: "de-bosuil", title: "The Fortunate Sons", start: "2026-11-28T12:00:00+01:00", status: "uitverkocht", sourceCategory: "Rock" });
+  });
+});
