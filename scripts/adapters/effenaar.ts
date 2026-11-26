@@ -20,15 +20,25 @@ interface Hit {
  * Effenaar's agenda page embeds its full event list (search-index results) in the Next.js page data.
  * Level 1: structured JSON, no HTML scraping.
  */
+/** Follows a path of keys/indexes through unknown JSON; undefined as soon as a step is missing. */
+function dig(value: unknown, ...path: (string | number)[]): unknown {
+  let cur = value;
+  for (const key of path) {
+    if (cur === null || typeof cur !== "object") return undefined;
+    cur = (cur as Record<string | number, unknown>)[key];
+  }
+  return cur;
+}
+
 export function parseEffenaar(html: string): SourceEvent[] {
   const raw = load(html)("#__NEXT_DATA__").text();
   if (!raw) throw new Error("Effenaar: page data ontbreekt");
   const data = JSON.parse(raw);
   const queries: { queryKey: unknown; state: { data: unknown } }[] = data?.props?.pageProps?.dehydrated?.queries ?? [];
   const q = queries.find((x) => JSON.stringify(x.queryKey).includes("events-collection"));
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const results = (q?.state?.data as any)?.pageData?.algolia?.serverState?.initialResults?.production_events?.results?.[0];
-  const hits: Hit[] = results?.hits ?? [];
+  const results = dig(q?.state?.data, "pageData", "algolia", "serverState", "initialResults", "production_events", "results", 0);
+  const rawHits = dig(results, "hits");
+  const hits: Hit[] = Array.isArray(rawHits) ? rawHits : [];
   if (!q || !results) throw new Error("Effenaar: eventlijst niet gevonden in page data");
   const out: SourceEvent[] = [];
   for (const h of hits) {

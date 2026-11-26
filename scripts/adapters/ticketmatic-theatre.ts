@@ -89,7 +89,7 @@ export const stadsschouwburgUtrecht = ticketmaticAdapter({
   name: "stadsschouwburg-utrecht.nl",
   venueId: "stadsschouwburg-utrecht",
   sitemap: "https://stadsschouwburg-utrecht.nl/sitemap.xml",
-  pagePattern: /^https:\/\/stadsschouwburg-utrecht\.nl\/agenda\/seizoen-[^/]+\/[^/?#]+$/,
+  pagePattern: /^https:\/\/stadsschouwburg-utrecht\.nl\/agenda\/seizoen-[^/]+\/(?!inleiding-)[^/?#]+$/, // "inleiding" pages are listed but answer 404
   genre: ($) => text($, ".event-info-wrapper p.item.lowercase"),
 });
 

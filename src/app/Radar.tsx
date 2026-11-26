@@ -3,7 +3,7 @@ import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
 import { getFollowState, newSince, radarEvents, setFollowState, useFollows } from "./follow";
-import { artistHref, artistIndex, slug } from "./lib";
+import { artistHref, bill, slug } from "./lib";
 import { PageHead } from "./Pages";
 import { codeHref, createLink, formatCode, joinLink, onSyncFailure, refreshLink, syncFailed, unlink } from "./sync";
 
@@ -31,7 +31,7 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
     <>
       <PageHead title="Mijn radar" />
       {follows.artists.length === 0 ? (
-        <Suggestions data={data} />
+        <Suggestions data={data} venues={venues} />
       ) : (
         <>
           <ul className="follows" aria-label="Artiesten die je volgt">
@@ -55,25 +55,21 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
   );
 }
 
-/** Empty state: five acts with the most shows coming up, to follow with one tap. */
-function Suggestions({ data }: { data: SiteData }) {
-  const top = useMemo(
-    () =>
-      artistIndex(data.events.filter((e) => e.c === "m" && e.st !== "g"))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5),
-    [data],
-  );
+/** Empty state: the headliners of the coming 30 days (the same as the line-up on the overview), to follow with one tap. */
+function Suggestions({ data, venues }: Common) {
+  const top = useMemo(() => bill(data.events, venues, data.generatedAt).headliners.slice(0, 5), [data, venues]);
   return (
     <div className="empty">
       <p>Je volgt nog niemand. Tik op ☆ naast een artiest, of zoek bovenaan een naam en kies “Volg”.</p>
-      <ul className="follows" aria-label="Veel gespeeld">
-        {top.map((a) => (
-          <li key={a.slug}>
-            <a href={artistHref(a.name)}>{a.name}</a> <FollowButton name={a.name} />
-          </li>
-        ))}
-      </ul>
+      {top.length > 0 && (
+        <ul className="follows" aria-label="Binnenkort in de grote zalen">
+          {top.map((a) => (
+            <li key={a.name}>
+              <a href={artistHref(a.name)}>{a.name}</a> <FollowButton name={a.name} />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

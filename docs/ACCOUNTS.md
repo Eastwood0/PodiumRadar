@@ -54,12 +54,14 @@ Geen adres te zien ("no URL enabled")? Controleer dan:
 2. **Settings → Domains & Routes**: zet **workers.dev** aan (`wrangler.jsonc` vraagt dit ook met `"workers_dev": true`).
 3. Vraagt Cloudflare om een **workers.dev-subdomein** voor je account: kies er één (bijv. je naam). Het adres wordt dan `podiumradar.<subdomein>.workers.dev`.
 
-## 5. Cloudflare: database voor de koppelcodes (vóór fase 3, volgt nog)
+## 5. Cloudflare: database voor de koppelcodes (fase 3) — niets te doen
 
-Claude Code geeft je in fase 3 de exacte stappen; globaal gaat het om:
-1. Een D1-database aanmaken en koppelen aan het Pages-project.
-2. `TICKETMASTER_API_KEY` ook als geheime variabele in het Pages-project zetten.
-3. Een **service token** maken in Zero Trust, zodat de dagelijkse run (alleen-lezen) de lijst gevolgde artiesten mag ophalen.
+Sinds 26 nov 2026 (B42) maakt Cloudflare de database zelf aan bij de eerste uitrol na de fase-3-wijziging. Een Ticketmaster-sleutel en een service token zijn niet meer nodig (B38/B43).
+
+Alleen controleren, na de eerste uitrol vanaf main:
+1. Log in op dash.cloudflare.com → **Workers & Pages** → **podiumradar** → **Deployments**: de laatste uitrol moet groen zijn.
+2. Klik links op **Storage & Databases** → **D1 SQL Database**. Daar moet een database staan waarvan de naam met `podiumradar` begint.
+3. Open de site → **Mijn radar** → **Maak koppelcode**. Krijg je een code van 26 tekens, dan werkt het. Krijg je "Koppelen lukt nu niet", stuur Claude Code dan een schermafdruk van de mislukte uitrol (**Deployments** → de rode regel → **View build log**).
 
 ## 6. Optioneel: Bandsintown
 

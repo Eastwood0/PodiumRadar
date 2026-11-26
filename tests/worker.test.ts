@@ -92,6 +92,8 @@ describe("/api/sync", () => {
   it("refuses writes from another site", async () => {
     const res = await call(env(), "", body(["Anouk"], { headers: { "content-type": "application/json", origin: "https://evil.example" } }));
     expect(res.status).toBe(403);
+    const opaque = await call(env(), "", body(["Anouk"], { headers: { "content-type": "application/json", origin: "null" } }));
+    expect(opaque.status).toBe(403);
   });
 
   it("forgets a list on DELETE", async () => {

@@ -74,6 +74,16 @@ async function readArtists(req: Request): Promise<string[] | "too-large" | undef
   return [...new Set(list.map((a: string) => a.trim()))];
 }
 
+/** Browsers send Origin on POST/PUT/DELETE; a missing header (curl, tests) is allowed, "null" or another site is not. */
+function sameOrigin(origin: string | null, host: string): boolean {
+  if (origin === null) return true;
+  try {
+    return new URL(origin).host === host;
+  } catch {
+    return false;
+  }
+}
+
 let schemaReady: Promise<unknown> | undefined;
 const ensureSchema = (db: D1Like) =>
   (schemaReady ??= db.exec("CREATE TABLE IF NOT EXISTS sync (code_hash TEXT PRIMARY KEY, artists TEXT NOT NULL, updated_at TEXT NOT NULL)").catch((e: unknown) => {
@@ -84,8 +94,7 @@ const ensureSchema = (db: D1Like) =>
 export async function handleApi(req: Request, env: Env, url = new URL(req.url)): Promise<Response> {
   const m = url.pathname.match(/^\/api\/sync(?:\/([^/]+))?\/?$/);
   if (!m) return fail(404, "onbekend adres");
-  const sameSite = req.headers.get("origin");
-  if (req.method !== "GET" && sameSite && new URL(sameSite).host !== url.host) return fail(403, "andere site");
+  if (req.method !== "GET" && !sameOrigin(req.headers.get("origin"), url.host)) return fail(403, "andere site");
   await ensureSchema(env.DB);
   const now = new Date().toISOString();
 

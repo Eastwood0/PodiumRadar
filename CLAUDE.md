@@ -74,22 +74,18 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - Korte uitleg voor Ralf: wat is er veranderd, hoe kan hij het zien, wat moet hij eventueel zelf doen.
 
 ## Huidige stand
-- **Overdracht 26 nov 2026: lees eerst `docs/OVERDRACHT.md`** (openstaande verzoeken van Ralf, fase 3 akkoord, bevindingen theaters).
-- Fase: **2 bezig** (gestart 25 november 2026). Ticketmaster vervalt voorlopig (B38); radar alleen NL/BE/DE.
-- Bouwplan: versie 0.9, beslissingen t/m B41. Geen inlog (B39: voorkeuren in browser + koppelcode, fase 3), site open maar niet vindbaar (B40).
-- Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`), live op https://podiumradar.eastwood.workers.dev (26 nov 2026, account-subdomein door Ralf gewijzigd); elke push naar main wordt automatisch uitgerold.
-- Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Line-up wordt bij de build in de HTML gezet (snelle eerste weergave), lettertype vooraf geladen; Lighthouse lokaal mobiel 99 (overzicht) / 96 (agenda), CLS 0; 360 px zonder horizontaal scrollen.
-- Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
-- Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
-  - NL: Ziggo Dome, Johan Cruijff ArenA, AFAS Live, Rotterdam Ahoy + Maassilo + De Kuip (via Uitagenda Rotterdam), GelreDome, 013, Effenaar, TivoliVredenburg (via UITagenda Utrecht), Melkweg (Next.js-data; AWS-botcontrole → herhaalpogingen, B37), Muziekgieterij + Paard (JSON-LD, `jsonld-page.ts`), Gashouder, Patronaat, Klokgebouw, Grenswerk, Doornroosje, De Bosuil (HTML), Mezz (eigen WordPress-API), De Oosterpoort + Stadsschouwburg Groningen (Spot, HTML-attributen), De Kattendans (`wp-theatre.ts`, Theater for WordPress), Hedon (Angular ng-state), Megaland (via pinkpop.nl), Vrijthof (via andrerieu.com) (B34).
-  - BE: AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena (be•at), ING Arena.
-  - DE: LANXESS arena, RheinEnergieStadion, PSD Bank Dome, Merkur Spiel-Arena, Mitsubishi Electric Halle (d.live), Westfalenhalle, Veltins-Arena, Rudolf Weber-Arena, Grugahalle, SparkassenPark, Palladium (via koeln.de, B34).
-- Nog te bouwen (snapshots via workflow "Snapshot pages" → branch `snapshots`): MartiniPlaza en Paradiso (agenda via JavaScript, bron zoeken).
-- Theaters (B41) nog te bouwen; programmapagina's staan op branch `snapshots`: Munttheater Weert, Maaspoort Venlo, PLT Heerlen, Musis Arnhem, Stadsschouwburg Utrecht, Theaters Tilburg (veel met Ticketmatic), DeLaMar, Carré (JavaScript), Oranjerie Roermond, Parktheater Eindhoven (verbinding mislukt). Theater aan het Vrijthof: zoeklijst bevat maar een deel van de data → eigen API zoeken. Geweigerd (403): Chassé, Theater Rotterdam, cabaretinfo.nl. Soortfilter Muziek / Theater & cabaret / Alles staat al; soorten Toneel, Musical, Dans, Cabaret & comedy.
-- Zalen zonder bron, nog te onderzoeken: Koning Boudewijnstadion, Signal Iduna Park, Goffertpark (geen geplande concerten gevonden).
-- Geen bron (`src/lib/no-source.ts`): Brabanthallen (captcha), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Nieuwe Nor (403), Warehouse Elementenstraat (geen eigen agenda).
-- Genres: dance-stijlen als tweede filterrij (B35); hover = roze markeerstift (B36).
-- DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
-- Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
-- Fase 2 open: live site controleren zodra Ralf het adres stuurt (niet vindbaar: noindex + robots); steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Ralf stuurt géén verzoekbrieven (26 nov 2026): voor Brabanthallen, Melkweg, Nieuwe Nor, Chassé en Theater Rotterdam een officiële alternatieve bron zoeken (zie OVERDRACHT.md). Fase 3 (koppelcode, volgen): akkoord Ralf 26 nov 2026, nog niet begonnen.
+- **Overdracht: lees eerst `docs/OVERDRACHT.md`** (bijgewerkt 26 nov 2026, avond).
+- Fase: **2 afgerond op de open punten na; fase 3 gebouwd** (26 nov 2026, wacht op uitrol naar main + controle door Ralf). Ticketmaster vervalt (B38); radar = eigen agenda NL/BE/DE (B43).
+- Bouwplan: versie 0.10, beslissingen t/m B47. Geen inlog (B39/B42), site open maar niet vindbaar (B40).
+- Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`) + Worker-script `src/worker.ts` alleen voor `/api/*` (`run_worker_first`), D1-binding `DB` zonder id (wordt bij uitrol automatisch aangemaakt, B42). Live op https://podiumradar.eastwood.workers.dev; elke push naar main rolt uit.
+- Fase 3 (B42–B44): `src/app/follow.ts` (lijst in localStorage, sleutel `pr.follow`), `FollowButton.tsx` (☆ op kaarten en artiestpagina), `Radar.tsx` (`#radar`, Nieuw sinds vorig bezoek, koppelcode-UI, `#koppel-<code>`), `sync.ts` (client), `src/lib/sync-api.ts` (API: POST/GET/PUT/DELETE `/api/sync`, bewaart sha-256 van de code). Zoeken biedt "Volg “naam”". Overzicht: vakje met ster bij gevolgde artiest. Lokaal testen: `npm run build` en dan `npx wrangler dev` (lokale D1); Worker-modules mogen alleen de handler exporteren.
+- Website: affiche-stijl (B30, Archivo); tabs Overzicht / Agenda / Mijn radar (op < 480 px "Radar" en logo zonder woord). Lighthouse lokaal mobiel 90–94, toegankelijkheid 96–100; 360 px zonder horizontaal scrollen.
+- Genres (B31/B35): `scripts/lib/music-genre.ts`; MusicBrainz via `npm run genres`.
+- Bronnen actief: zie `scripts/adapters/index.ts` en `docs/dekking.md`. Nieuw op 26 nov 2026:
+  - Theaters (B45): `ticketmatic-theatre.ts` (Munttheater, Stadsschouwburg Utrecht, Schouwburg & Concertzaal Tilburg: sitemap + JSON-LD; Utrecht/Tilburg ±10 min per run), `maaspoort.ts`, `plt.ts` (Theater Heerlen, Theater Kerkrade, Toon Hermans Theater), `theater-roermond.ts` (De Oranjerie), `carre.ts` (eigen JSON), `delamar.ts`, `musis.ts` (eigen API), Theater Rotterdam via `uitagenda-rotterdam.ts`.
+  - Melkweg (tweede bron) en Paradiso via `iamsterdam.ts` (B46).
+  - `http.ts` volgt Crawl-delay (B47).
+- Geen bron (`src/lib/no-source.ts`): Brabanthallen, Nieuwe Nor, Chassé, Parktheater (botcontroles/403, geen stadsagenda gevonden), Theater aan het Vrijthof (zoekapp), MartiniPlaza (sitemap verouderd, verder laden verboden in robots.txt), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Warehouse Elementenstraat.
+- Nooit bot-blokkades omzeilen (B23); geen sleutels uit andermans frontend gebruiken (Paradiso-GraphQL).
+- Skills in het project: `.claude/skills/be-ambitious` en `.claude/skills/aislop` (zie README daar; de aislop-CLI mocht in de cloudsessie niet draaien → handmatige controle).
+- Wacht op Ralf: keuze clubplan (`docs/clubplan.md`), samenvoegen naar main, live controle fase 3.

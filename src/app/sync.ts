@@ -36,6 +36,12 @@ export async function joinLink(code: string): Promise<FollowState> {
 export async function refreshLink(): Promise<void> {
   const s = getFollowState();
   if (!s.code) return;
+  if (failed) {
+    // The last change here never reached the server: this device has the newest list, so send it.
+    await call(`/${encodeURIComponent(s.code)}`, { method: "PUT", body: JSON.stringify({ artists: s.artists }) });
+    setFailed(false);
+    return;
+  }
   const remote = await call<{ artists: string[] }>(`/${encodeURIComponent(s.code)}`);
   setFollowState({ ...getFollowState(), artists: remote.artists }, false);
 }
