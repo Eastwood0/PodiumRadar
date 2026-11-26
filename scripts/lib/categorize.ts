@@ -36,7 +36,7 @@ export const GROUP_OF: Record<Genre, Category> = {
 /** Source labels → genre. Tested against the labels the current sources actually use. */
 const SOURCE_RULES: [RegExp, Genre][] = [
   [/klassie?k|classic|klassik|orchest|chorale?|choral|opera|oper\b|kamermuziek/i, "Klassiek"],
-  [/\b(dance|techno|house|trance|hardstyle|hardcore|electro|edm|drum ?(&|and) ?bass|party|tanzveranstaltung|rave)\b/i, "Dance"],
+  [/\b(dance|techno|house|trance|hardstyle|hardcore|electro|edm|drum ?(&|and) ?bass|party|tanzveranstaltung|rave|clubnacht|clubavond)\b/i, "Dance"],
   [/festival/i, "Festival"],
   [/comedy|humou?r|cabaret|kabarett|stand-?up|kleinkunst/i, "Comedy"],
   [/sport|eishockey|voetbal|fu(ss|ß)ball|handbal|basketbal|tennis|darts|boxen|wielren|wielerzesdaagse/i, "Sport"],

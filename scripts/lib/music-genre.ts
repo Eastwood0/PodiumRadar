@@ -17,7 +17,7 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(post-?punk|indie|alternative|alt-rock|grunge|garage rock|shoegaze|britpop|emo|stoner|psychedelic rock|prog(ressive)? rock|rock|rock ?'?n'? ?roll|hard rock|blues rock|krautrock)\b/i, "Rock"],
   [/\b(heavy metal|metal|metalcore|deathcore|death metal|black metal|thrash|doom|grindcore|nu metal|(?<!post-)(?<!post)punk|hardcore punk|pop punk|ska punk)\b/i, "Metal & punk"],
   [/\b(hip ?hop|hip-hop|rap|deutschrap|nederhop|trap|drill|grime|r&b|rnb|r ?'?n'? ?b|contemporary r&b|urban|boom bap|afroswing)\b/i, "Hiphop & R&B"],
-  [/\b(techno|house|deep house|tech house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
+  [/\b(techno|house|deep house|tech house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
   [/\b(nederpop|nederlandstalig|levenslied|smartlap|carnaval|nederhop|volkszanger|palingsound|limburgstalig|dialect)\b/i, "Nederlandstalig"],
   [/\b(schlager|volksmusik|volkstümliche musik|ballermann|après-ski|apres-ski|stimmungsmusik|deutscher schlager)\b/i, "Schlager"],
   [/\b(singer-?songwriter|folk|indie folk|country|americana|bluegrass|acoustic|akoestisch|chanson|cantautor|liedermacher|alt-country)\b/i, "Folk & singer-songwriter"],

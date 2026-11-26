@@ -226,3 +226,45 @@ describe("SparkassenPark (WordPress, date in title)", () => {
     expect(ev[0]).toMatchObject({ venueId: "sparkassenpark", title: "Simon & Garfunkel", start: "2027-07-01T12:00:00+02:00", hasTime: false });
   });
 });
+
+describe("Melkweg (Next.js page data)", async () => {
+  const { parseMelkweg } = await import("../scripts/adapters/melkweg");
+  const ev = parseMelkweg(fixture("melkweg-agenda.html"));
+  it("reads events with status, kind of night and genre tags; skips private events", () => {
+    expect(ev).toHaveLength(3);
+    expect(ev[0]).toMatchObject({ venueId: "melkweg", title: "Def & brittneySGAT", start: "2026-11-26T19:30:00+01:00", hasTime: true, status: "uitverkocht", sourceCategory: "Concert, Hiphop, Rap", url: "https://www.melkweg.nl/nl/agenda/def-djbrittneysgat-26-11-2026", sourceId: "28566" });
+    expect(ev[1].sourceCategory).toBe("Clubnacht, Nederhop, EDM, Deephouse");
+    expect(ev.map((e) => e.title)).not.toContain("Galafeest Montessori Lyceum");
+  });
+  it("fails loudly when the page structure changes", () => {
+    expect(() => parseMelkweg("<html></html>")).toThrow(/page data/);
+  });
+});
+
+describe("Muziekgieterij (JSON-LD on the agenda page)", async () => {
+  const { parseJsonLdPage } = await import("../scripts/adapters/jsonld-page");
+  const page = { venueId: "muziekgieterij", country: "NL" as const, url: "https://muziekgieterij.nl/" };
+  const ev = parseJsonLdPage(fixture("muziekgieterij-home.html"), page);
+  it("reads times as real UTC and keeps line-up and ticket link", () => {
+    expect(ev[1]).toMatchObject({ venueId: "muziekgieterij", title: "Froukje", start: "2026-11-26T20:00:00+01:00", hasTime: true, artists: ["Jaïr Faria", "Froukje"], sourceCategory: "music" });
+    expect(ev[1].ticketUrl).toMatch(/^https:\/\/muziekgieterij\.stager\.co\//);
+    expect(new Set(ev.map((e) => e.sourceId)).size).toBe(ev.length);
+  });
+  it("fails loudly without JSON-LD", () => {
+    expect(() => parseJsonLdPage("<html></html>", page)).toThrow(/JSON-LD/);
+  });
+});
+
+describe("Gashouder (HTML programme, months without year)", async () => {
+  const { parseGashouder } = await import("../scripts/adapters/gashouder");
+  const ev = parseGashouder(fixture("gashouder-home.html"), new Date("2026-11-26T08:00:00Z"));
+  it("reads date, time, kind and status, and rolls the year over after December", () => {
+    expect(ev[0]).toMatchObject({ venueId: "gashouder", title: "Avatar", start: "2026-12-01T20:00:00+01:00", hasTime: true, sourceCategory: "live", url: "https://gashouder.nl/programma/avatar" });
+    const feb = ev.find((e) => e.start.startsWith("2027-02"));
+    expect(feb).toBeDefined();
+    expect(ev.some((e) => e.status === "uitverkocht")).toBe(true);
+  });
+  it("skips running exhibitions without a single date", () => {
+    expect(ev.map((e) => e.title)).not.toContain("The making of Gashouder");
+  });
+});

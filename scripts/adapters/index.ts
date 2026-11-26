@@ -3,11 +3,14 @@ import { afasLive } from "./afas-live";
 import { beatVenues } from "./beat-venues";
 import { dliveVenues } from "./d-live";
 import { effenaar } from "./effenaar";
+import { gashouder } from "./gashouder";
 import { gelredome } from "./gelredome";
 import { grugahalle } from "./grugahalle";
 import { ingArena } from "./ing-arena";
 import { johanCruijffArena } from "./johan-cruijff-arena";
+import { muziekgieterij } from "./jsonld-page";
 import { lanxessArena } from "./lanxess-arena";
+import { melkweg } from "./melkweg";
 import { rudolfWeberArena } from "./rudolf-weber-arena";
 import { rheinEnergieStadion, veltinsArena } from "./sitemap-jsonld";
 import { sparkassenpark } from "./sparkassenpark";
@@ -36,6 +39,10 @@ export const ADAPTERS: Adapter[] = [
   zero13,
   effenaar,
   uitagendaUtrecht,
+  // Nederland, toegevoegd 26 nov 2026 (B32/B33)
+  melkweg,
+  muziekgieterij,
+  gashouder,
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena
   ingArena,
