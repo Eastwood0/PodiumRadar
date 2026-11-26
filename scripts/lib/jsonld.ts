@@ -30,9 +30,12 @@ function firstStr(v: Json, key: string): string | undefined {
   return str(v);
 }
 
+/** Some sites put the schema.org type instead of a name in the list ("performer": ["Organization"]). */
+const SCHEMA_TYPES = /^(organization|person|performinggroup|musicgroup|theatergroup|dancegroup|thing)$/i;
+
 function names(v: Json): string[] {
   const list = Array.isArray(v) ? v : v === undefined ? [] : [v];
-  return list.map((x) => (isObj(x) ? str(x.name) : str(x))).filter((x): x is string => Boolean(x));
+  return list.map((x) => (isObj(x) ? str(x.name) : str(x))).filter((x): x is string => Boolean(x) && !SCHEMA_TYPES.test(x!.trim()));
 }
 
 function toEvent(o: Record<string, Json>, type: string): RawJsonLdEvent {

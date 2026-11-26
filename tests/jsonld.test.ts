@@ -27,3 +27,10 @@ describe("extractJsonLdEvents", () => {
     expect(extractJsonLdEvents(page([JSON.stringify({ "@type": "WebSite", name: "x" })])).events).toEqual([]);
   });
 });
+
+describe("performer names", () => {
+  it("ignores schema.org type names used instead of a name", () => {
+    const html = `<script type="application/ld+json">{"@type":"MusicEvent","name":"Berq","startDate":"2027-01-10T20:00:00+01:00","performer":["Organization"]}</script>`;
+    expect(extractJsonLdEvents(html).events[0].performers).toEqual([]);
+  });
+});

@@ -76,7 +76,7 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 ## Huidige stand
 - Fase: **2 bezig** (gestart 25 november 2026). Ticketmaster vervalt voorlopig (B38); radar alleen NL/BE/DE.
 - Bouwplan: versie 0.9, beslissingen t/m B41. Geen inlog (B39: voorkeuren in browser + koppelcode, fase 3), site open maar niet vindbaar (B40).
-- Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`); Ralf heeft het project aangemaakt, adres nog doorgeven.
+- Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`), live op https://podiumradar.ralfvanoosterhout.workers.dev (26 nov 2026); elke push naar main wordt automatisch uitgerold.
 - Website: nieuw ontwerp (B30, affiche-stijl, Archivo): Overzicht = line-up komende 30 dagen + zaal×maand-kaart met vlaggen; Agenda als tourlijst met filters incl. genres (B31); artiestpagina als tourshirt; Zaal; Bronnen. Line-up wordt bij de build in de HTML gezet (snelle eerste weergave), lettertype vooraf geladen; Lighthouse lokaal mobiel 99 (overzicht) / 96 (agenda), CLS 0; 360 px zonder horizontaal scrollen.
 - Genres (B31): `scripts/lib/music-genre.ts` (vaste lijst in `src/lib/genres.ts`); bron/titel eerst, anders MusicBrainz via `npm run genres` (stap in fetch.yml, max 400 per run, cache `data/artist-genres.json`).
 - Bronnen actief (zie `scripts/adapters/index.ts`, dekking in `docs/dekking.md`):
@@ -91,4 +91,4 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 - DJ-feesten (B33): via clubs + genre "Dance & DJ"; DJguide niet (robots/ai=n).
 - Nooit bot-blokkades omzeilen (B23). Verzoekbrief voor Brabanthallen, Melkweg en Nieuwe Nor: `docs/verzoek-toegang.md`.
 - Fase 2 open: live site controleren zodra Ralf het adres stuurt (niet vindbaar: noindex + robots); steekproef 120/123 (`docs/steekproef.md`); "backstreet boy" alleen op testdata.
-- Openstaand voor Ralf: adres van de live site doorgeven; verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen) pas na zijn akkoord.
+- Openstaand voor Ralf: verzoekbrieven versturen (hij doet dit zelf: Brabanthallen, Melkweg, Nieuwe Nor, eventueel Chassé/Theater Rotterdam). Fase 3 (koppelcode, volgen) pas na zijn akkoord.
