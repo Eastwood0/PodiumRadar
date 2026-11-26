@@ -40,16 +40,19 @@ function onHost<T>(host: string, task: () => Promise<T>): Promise<T> {
   return next;
 }
 
-async function rawFetch(url: string, accept: string, userAgent = USER_AGENT): Promise<FetchResult> {
+/** `redirect`: "manual" for pages (politeGet checks every redirect target itself), "follow" for robots.txt and APIs. */
+async function rawFetch(url: string, accept: string, userAgent = USER_AGENT, redirect: RequestRedirect = "follow"): Promise<FetchResult & { location?: string }> {
   const started = Date.now();
   try {
     const res = await fetch(url, {
       headers: { "User-Agent": userAgent, Accept: accept, "Accept-Language": "nl,en;q=0.8,de;q=0.6" },
-      redirect: "follow",
+      redirect,
       signal: AbortSignal.timeout(TIMEOUT_MS),
     });
+    const location = res.status >= 300 && res.status < 400 ? res.headers.get("location") ?? undefined : undefined;
     const body = await res.text();
     return {
+      location: location ? new URL(location, url).href : undefined,
       ok: res.ok,
       status: res.status,
       url,
@@ -69,6 +72,8 @@ export function getRobots(origin: string): Promise<RobotsRules | null> {
     robotsCache.set(
       origin,
       onHost(host, () => rawFetch(`${origin}/robots.txt`, "text/plain")).then((r) => {
+        // RFC 9309 §2.3.1.4: robots.txt unreachable (5xx or no connection) means "assume everything is disallowed".
+        if (r.status === 0 || r.status >= 500) return DISALLOW_ALL;
         const rules = r.ok && !/<html/i.test(r.body.slice(0, 500)) ? parseRobots(r.body) : null;
         if (rules?.crawlDelay) hostInterval.set(host, Math.max(MIN_INTERVAL_MS, Math.min(rules.crawlDelay, 10) * 1000));
         return rules;
@@ -78,17 +83,29 @@ export function getRobots(origin: string): Promise<RobotsRules | null> {
   return robotsCache.get(origin)!;
 }
 
-/** Polite GET: checks robots.txt first, then fetches with per-host rate limiting. */
+const DISALLOW_ALL: RobotsRules = { allow: [], disallow: ["/"], sitemaps: [] };
+const MAX_REDIRECTS = 5;
+
+/**
+ * Polite GET: checks robots.txt first, then fetches with per-host rate limiting. Redirects are followed by hand,
+ * so every target is checked against its own robots.txt and waits its turn on its own host.
+ */
 export async function politeGet(
   url: string,
   accept = "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
 ): Promise<FetchResult & { robotsBlocked?: boolean }> {
-  const u = new URL(url);
-  const robots = await getRobots(u.origin);
-  if (robots && !isAllowed(robots, u.pathname + u.search)) {
-    return { ok: false, status: 0, url, finalUrl: url, contentType: "", body: "", ms: 0, robotsBlocked: true };
+  let current = url;
+  for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
+    const u = new URL(current);
+    const robots = await getRobots(u.origin);
+    if (robots && !isAllowed(robots, u.pathname + u.search)) {
+      return { ok: false, status: 0, url, finalUrl: current, contentType: "", body: "", ms: 0, robotsBlocked: true };
+    }
+    const r = await onHost(u.host, () => rawFetch(current, accept, USER_AGENT, "manual"));
+    if (!r.location) return { ...r, url, finalUrl: current };
+    current = r.location;
   }
-  return onHost(u.host, () => rawFetch(url, accept));
+  return { ok: false, status: 0, url, finalUrl: current, contentType: "", body: "", ms: 0, error: "te veel doorverwijzingen" };
 }
 
 /** politeGet that throws when the page is blocked by robots.txt or does not return 2xx. */

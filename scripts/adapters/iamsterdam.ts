@@ -1,5 +1,6 @@
 import { fetchText } from "../lib/http";
 import { localToIso, TZ_BY_COUNTRY } from "../lib/dates";
+import { statusFrom } from "../lib/normalize";
 import type { Adapter, SourceEvent } from "./types";
 
 const BASE = "https://www.iamsterdam.com";
@@ -23,6 +24,8 @@ export interface IamsCard {
   dates: string[];
   location?: string;
   timeLabel?: string;
+  /** Labels on the card ("Uitverkocht", "Geannuleerd"), when the agenda sets them. */
+  badges?: string[];
 }
 
 /** The text that the page pushes into `self.__next_f`, decoded from its JavaScript string literals. */
@@ -78,6 +81,7 @@ export function parseIamsterdamPage(html: string): { cards: IamsCard[]; total?: 
       dates: (o.date as unknown[]).filter((d): d is string => typeof d === "string"),
       location: highlights.find((h) => h.id === "location")?.label,
       timeLabel: highlights.find((h) => h.id === "date")?.label,
+      badges: Array.isArray(o.badges) ? (o.badges as unknown[]).map((b) => (typeof b === "string" ? b : String((b as { label?: unknown })?.label ?? ""))).filter(Boolean) : undefined,
     });
   }
   const total = Number(text.match(/"total":(\d+)\}/)?.[1]);
@@ -106,6 +110,8 @@ function wallClock(value: string): { start: string; hasTime: boolean } | undefin
 const spansDays = (dates: string[]) => new Set(dates.map((d) => d.slice(0, 10))).size > 1;
 
 export function cardEvents(card: IamsCard, dates: string[], flags = { soldOut: false, cancelled: false }): SourceEvent[] {
+  // One-day cards are not opened (a detail page is ~770 kB): their status comes from the card's badges, if any.
+  const badge = statusFrom(card.badges?.join(" "));
   const venueId = card.location ? IAMSTERDAM_LOCATIONS[card.location] : undefined;
   if (!venueId) return [];
   const url = `${BASE}/${card.slug}`;
@@ -118,7 +124,7 @@ export function cardEvents(card: IamsCard, dates: string[], flags = { soldOut: f
       title: card.title,
       start: when.start,
       hasTime: when.hasTime,
-      status: flags.cancelled ? "geannuleerd" : flags.soldOut ? "uitverkocht" : "gepland",
+      status: flags.cancelled ? "geannuleerd" : flags.soldOut ? "uitverkocht" : (badge ?? "gepland"),
       url,
       sourceId: `${card.slug}|${d.slice(0, 16)}`,
     });

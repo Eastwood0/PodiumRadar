@@ -26,6 +26,22 @@ export function parseRoermondAgenda(html: string): { url: string; genre?: string
   return [...out].map(([url, genre]) => ({ url, genre }));
 }
 
+const WEEKDAYS = ["zo", "ma", "di", "wo", "do", "vr", "za"];
+
+/**
+ * The year of a date without year. The weekday on the page decides between this year and next (a past date then
+ * stays in the past and is dropped by the pipeline instead of moving a year ahead); without a weekday: inferYear.
+ */
+export function yearFor(day: number, month: number, weekday: string | undefined, today: Date): number {
+  const wd = weekday ? WEEKDAYS.indexOf(weekday.toLowerCase()) : -1;
+  if (wd >= 0) {
+    const y = today.getFullYear();
+    const match = [y, y + 1, y - 1].find((c) => new Date(Date.UTC(c, month - 1, day)).getUTCDay() === wd);
+    if (match) return match;
+  }
+  return inferYear(day, month, today);
+}
+
 export function parseRoermondProduction(html: string, pageUrl: string, genre: string | undefined, today = new Date()): SourceEvent[] {
   const $ = load(html);
   const title = $("h1").first().text().trim();
@@ -33,11 +49,11 @@ export function parseRoermondProduction(html: string, pageUrl: string, genre: st
   const out: SourceEvent[] = [];
   $(".event-sticky-menu .event-date .date-row").each((_, el) => {
     const row = $(el);
-    const m = row.text().replace(/\s+/g, " ").match(/(\d{1,2})\s+([a-z]{3,})\.?\s+om\s+(\d{1,2}:\d{2})/i);
-    const month = m && monthNumber(m[2]);
+    const m = row.text().replace(/\s+/g, " ").match(/(?:\b(ma|di|wo|do|vr|za|zo)\b\s+)?(\d{1,2})\s+([a-z]{3,})\.?\s+om\s+(\d{1,2}:\d{2})/i);
+    const month = m && monthNumber(m[3]);
     if (!m || !month) return;
-    const day = Number(m[1]);
-    const when = localToIso(inferYear(day, month, today), month, day, m[3], TZ_BY_COUNTRY.NL);
+    const day = Number(m[2]);
+    const when = localToIso(yearFor(day, month, m[1], today), month, day, m[4], TZ_BY_COUNTRY.NL);
     out.push({
       venueId: "oranjerie-roermond",
       title,

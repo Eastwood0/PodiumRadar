@@ -501,8 +501,19 @@ describe("De Oranjerie Roermond (theaterroermond.nl)", async () => {
   it("reads the performances (not the dinner or parking rows) and picks the coming year", () => {
     const ev = parseRoermondProduction(fixture("roermond-production.html"), "https://www.theaterroermond.nl/agenda/titanique", "Musical", new Date("2026-11-26T12:00:00Z"));
     expect(ev.map((e) => e.start)).toEqual(["2026-11-27T20:00:00+01:00", "2026-11-28T20:00:00+01:00"]);
+    // "Vr 27 nov" is a Friday in 2026, not in 2027: after the date it stays in the past (the pipeline drops it).
     const later = parseRoermondProduction(fixture("roermond-production.html"), "https://www.theaterroermond.nl/agenda/titanique", "Musical", new Date("2026-12-15T12:00:00Z"));
-    expect(later[0].start).toBe("2027-11-27T20:00:00+01:00");
+    expect(later[0].start).toBe("2026-11-27T20:00:00+01:00");
+  });
+});
+
+describe("Year for a date without year (weekday check)", async () => {
+  const { yearFor } = await import("../scripts/adapters/theater-roermond");
+  const today = new Date("2026-11-26T12:00:00Z");
+  it("uses the weekday: Sunday 27 June is in 2027; without weekday the next occurrence", () => {
+    expect(yearFor(27, 6, "zo", today)).toBe(2027);
+    expect(yearFor(27, 6, "za", today)).toBe(2026); // a Saturday 27 June is in the past: dropped later, not moved a year
+    expect(yearFor(27, 6, undefined, today)).toBe(2027);
   });
 });
 
@@ -527,6 +538,10 @@ describe("Uit in Amsterdam (iamsterdam.com) for Melkweg and Paradiso", async () 
     expect(cardEvents(cards[2], cards[2].dates)).toEqual([]);
     const [ev] = cardEvents(cards[0], cards[0].dates.slice(0, 1));
     expect(ev).toMatchObject({ venueId: "melkweg", start: "2026-10-26T23:00:00+01:00", hasTime: true, url: "https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/cheeky-monday" });
+  });
+  it("takes the status of a one-day card from its badges", () => {
+    const [ev] = cardEvents({ ...cards[0], badges: ["Geannuleerd"] }, cards[0].dates.slice(0, 1));
+    expect(ev.status).toBe("geannuleerd");
   });
   it("reads every date and the sold-out flag from a detail page", () => {
     const detail = parseIamsterdamDetail(fixture("iamsterdam-event.html"));

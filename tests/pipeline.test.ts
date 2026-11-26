@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { SourceEvent } from "../scripts/adapters/types";
 import { artistsFromTitle, normalizeName, statusFrom, tokenSetSimilarity } from "../scripts/lib/normalize";
-import { carryFirstSeen, dedupe, isOutage, toEvents } from "../scripts/lib/pipeline";
+import { carryFirstSeen, dedupe, isOutage, keepVenueOutages, toEvents } from "../scripts/lib/pipeline";
 import type { Venue } from "../src/lib/schema";
 
 const venue = (id: string, country: "NL" | "DE" = "NL"): Venue => ({ id, name: id, city: "X", country, tier: "A", verified: false, aliases: [], sources: { ticketmasterVenueIds: [] } });
@@ -37,6 +37,15 @@ describe("dedupe", () => {
     expect(out[0]).toMatchObject({ title: "Kovacs", hasTime: true, start: "2027-03-01T20:00:00+01:00", status: "uitverkocht" });
     expect(out[0].sources.map((s) => s.name)).toEqual(["site", "ticketmaster"]);
   });
+  it("keeps a matinee and an evening show of the same production apart; the first keeps its id", () => {
+    const matinee = toEvents([src({ title: "Titanique", start: "2027-03-01T14:30:00+01:00" })], "site", venues, TODAY).events[0];
+    const evening = toEvents([src({ title: "Titanique", start: "2027-03-01T20:00:00+01:00", sourceId: "2" })], "site", venues, TODAY).events[0];
+    const out = dedupe([matinee, evening]);
+    expect(out.map((e) => e.start)).toEqual([matinee.start, evening.start]);
+    expect(out[0].id).toBe(matinee.id);
+    expect(out[1].id).toBe(`${matinee.id}-2000`);
+    expect(dedupe([matinee, { ...evening, hasTime: false }])).toHaveLength(1); // a source without a time still merges
+  });
   it("keeps different shows on the same day apart", () => {
     const c = toEvents([src({ title: "Totaal Andere Act" })], "site", venues, TODAY).events[0];
     expect(dedupe([a, c])).toHaveLength(2);
@@ -51,6 +60,21 @@ describe("outage guard (< 50% of last run)", () => {
   it("ignores small sources and first runs", () => {
     expect(isOutage(0, 3)).toBe(false);
     expect(isOutage(0, undefined)).toBe(false);
+  });
+});
+
+describe("per-venue outage in a source with several venues", () => {
+  const many = (venueId: string, n: number) => Array.from({ length: n }, (_, i) => toEvents([src({ venueId, title: `Act ${venueId} ${i}`, sourceId: `${venueId}${i}` })], "multi", venues, TODAY).events[0]);
+  it("keeps last run's events for the venue that fell away, and reports it", () => {
+    const previous = [...many("zaal", 10), ...many("halle", 10)];
+    const { events, outages } = keepVenueOutages(many("zaal", 10), previous, ["zaal", "halle"]);
+    expect(outages).toEqual(["halle"]);
+    expect(events.filter((e) => e.venueId === "halle")).toHaveLength(10);
+  });
+  it("does nothing for a single-venue source or a healthy run", () => {
+    const previous = many("zaal", 10);
+    expect(keepVenueOutages([], previous, ["zaal"]).outages).toEqual([]);
+    expect(keepVenueOutages(many("zaal", 9), previous, ["zaal", "halle"]).outages).toEqual([]);
   });
 });
 

@@ -72,10 +72,16 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
 const nonEmpty = <T,>(xs: T[]) => (xs.length ? xs : undefined);
 
 const dayOf = (e: Event) => localDate(e.start, TZ_BY_COUNTRY[e.country] ?? "Europe/Amsterdam");
+/** Local "HHMM" of an event with a known start time. */
+const timeOf = (e: Event) =>
+  new Intl.DateTimeFormat("en-GB", { timeZone: TZ_BY_COUNTRY[e.country] ?? "Europe/Amsterdam", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(e.start)).replace(":", "");
+/** Two known, different start times on one day (matinee and evening show) are two events, not one. */
+const differentTimes = (a: Event, b: Event) => a.hasTime && b.hasTime && timeOf(a) !== timeOf(b);
 
 /**
- * Merges events that are the same show: same venue, same local day, similar title (≥ 0.85).
- * The first event wins title and time; later ones only fill gaps. Sources are combined.
+ * Merges events that are the same show: same venue, same local day, similar title (≥ 0.85), and not two different
+ * known start times (a matinee and an evening show stay two events; the later one gets its time in the id, so the
+ * id of the first stays the same as before). The first event wins title and time; later ones only fill gaps.
  */
 export function dedupe(events: Event[]): Event[] {
   const out: Event[] = [];
@@ -83,9 +89,10 @@ export function dedupe(events: Event[]): Event[] {
   for (const e of events) {
     const key = `${e.venueId ?? e.venueName}|${dayOf(e)}`;
     const bucket = byKey.get(key) ?? [];
-    const same = bucket.find((x) => tokenSetSimilarity(x.title, e.title) >= SAME_EVENT_SIMILARITY);
+    const same = bucket.find((x) => tokenSetSimilarity(x.title, e.title) >= SAME_EVENT_SIMILARITY && !differentTimes(x, e));
     if (!same) {
-      const copy = { ...e, sources: [...e.sources] };
+      const taken = bucket.some((x) => x.id === e.id);
+      const copy = { ...e, id: taken ? `${e.id}-${timeOf(e)}` : e.id, sources: [...e.sources] };
       bucket.push(copy);
       byKey.set(key, bucket);
       out.push(copy);
@@ -100,6 +107,17 @@ export function dedupe(events: Event[]): Event[] {
     same.danceStyles ??= e.danceStyles;
   }
   return out;
+}
+
+/**
+ * For a source with several venues: a venue whose count falls below half of last run (isOutage) keeps its
+ * previous events, so one empty hall does not disappear behind a source that looks healthy overall.
+ */
+export function keepVenueOutages(events: Event[], previous: Event[], venueIds: string[]): { events: Event[]; outages: string[] } {
+  if (venueIds.length < 2) return { events, outages: [] };
+  const outages = venueIds.filter((v) => isOutage(events.filter((e) => e.venueId === v).length, previous.filter((e) => e.venueId === v).length));
+  if (!outages.length) return { events, outages };
+  return { events: [...events.filter((e) => !outages.includes(e.venueId ?? "")), ...previous.filter((e) => outages.includes(e.venueId ?? ""))], outages };
 }
 
 /** Keeps firstSeen from the previous run so "Nieuw" labels stay correct. */

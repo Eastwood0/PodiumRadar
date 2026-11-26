@@ -1,22 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
 import { getFollowState, newSince, radarEvents, setFollowState, useFollows } from "./follow";
 import { artistHref, bill, slug } from "./lib";
 import { PageHead } from "./Pages";
-import { codeHref, createLink, formatCode, joinLink, onSyncFailure, refreshLink, syncFailed, unlink } from "./sync";
+import { cleanTyped, codeHref, createLink, formatCode, joinLink, type JoinMode, onSyncFailure, refreshLink, revokeLink, syncFailed, syncMessage, unlinkDevice } from "./sync";
 
 type Common = { data: SiteData; venues: Map<string, SiteVenue> };
 
 /** Screen 5 (bouwplan §9): the followed artists and all their coming shows, with "Nieuw" since the previous visit. */
 export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }) {
   const follows = useFollows();
-  // "Nieuw" compares with the previous visit; this visit is saved for next time once the page is open.
+  const [msg, setMsg] = useState("");
+  const linkRef = useRef<HTMLElement>(null);
+  // "Nieuw" compares with the data seen at the previous visit; this visit is saved once the whole agenda is in.
   const [previousVisit] = useState(() => getFollowState().lastVisit);
   useEffect(() => {
-    setFollowState({ ...getFollowState(), lastVisit: new Date().toISOString() }, false);
-  }, []);
+    if (data.complete) setFollowState({ ...getFollowState(), lastVisit: data.generatedAt.slice(0, 10) }, false);
+  }, [data]);
   useEffect(() => {
     if (!joinCode && getFollowState().code) refreshLink().catch(() => undefined); // offline: keep the local list
   }, [joinCode]);
@@ -26,10 +28,17 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
   const quiet = follows.artists.filter((a) => !playing.has(slug(a)));
   const fresh = (e: (typeof events)[number]) => newSince(e, previousVisit);
   const newCount = events.filter(fresh).length;
+  const toLink = () => linkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <>
       <PageHead title="Mijn radar" />
+      {msg && (
+        <p className="note" role="status">
+          {msg}
+        </p>
+      )}
+      {joinCode && <JoinPrompt code={joinCode} setMsg={setMsg} />}
       {follows.artists.length === 0 ? (
         <Suggestions data={data} venues={venues} />
       ) : (
@@ -41,7 +50,17 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
               </li>
             ))}
           </ul>
-          {quiet.length > 0 && <p className="sub">Nu geen shows: {quiet.join(", ")}. Je ziet het hier zodra er een bijkomt.</p>}
+          <p className="sub">
+            {follows.code ? "Gekoppeld met je andere apparaten. " : ""}
+            <button type="button" className="linkbtn" onClick={toLink}>
+              {follows.code ? "Koppeling beheren" : "Ook op je andere telefoon of laptop?"}
+            </button>
+          </p>
+          {!data.complete ? (
+            <p className="sub">De rest van de agenda wordt nog geladen…</p>
+          ) : (
+            quiet.length > 0 && <p className="sub">Nu geen shows: {quiet.join(", ")}. Je ziet het hier zodra er een bijkomt.</p>
+          )}
           {newCount > 0 && (
             <p className="note" role="status">
               {newCount} {newCount === 1 ? "nieuwe show" : "nieuwe shows"} sinds je vorige bezoek.
@@ -50,7 +69,7 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
           <EventList events={events} venues={venues} data={data} fresh={fresh} empty={<p>Geen van je artiesten staat nu in de agenda.</p>} />
         </>
       )}
-      <Link joinCode={joinCode} />
+      <Link sectionRef={linkRef} setMsg={setMsg} />
     </>
   );
 }
@@ -74,42 +93,96 @@ function Suggestions({ data, venues }: Common) {
   );
 }
 
-/** Link code: the same list on another phone or laptop (B42). */
-function Link({ joinCode }: { joinCode?: string }) {
+/** Opening a link code never links silently: the visitor chooses first (Codex review, 26 Nov 2026). */
+function JoinPrompt({ code, setMsg }: { code: string; setMsg: (m: string) => void }) {
   const follows = useFollows();
   const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState("");
+  const [done, setDone] = useState(false);
+  if (done || follows.code === code) return null;
+  const close = () => {
+    setDone(true);
+    history.replaceState(null, "", "#radar");
+  };
+  const join = async (mode: JoinMode) => {
+    setBusy(true);
+    try {
+      await joinLink(code, mode);
+      setMsg("Gekoppeld: dit apparaat gebruikt nu dezelfde lijst als je andere apparaten.");
+      close();
+    } catch (e) {
+      setMsg(syncMessage(e));
+    } finally {
+      setBusy(false);
+    }
+  };
+  const own = follows.artists.length;
+  return (
+    <section className="note join" aria-labelledby="join-h">
+      <h2 id="join-h" className="join__h">
+        Koppelcode {formatCode(code).slice(0, 9)}… openen?
+      </h2>
+      <p>Daarmee ziet dit apparaat dezelfde lijst als het apparaat waar de code vandaan komt. Iedereen met deze code kan die lijst zien en aanpassen.</p>
+      <div className="pair__actions">
+        {own > 0 ? (
+          <>
+            <button type="button" className="btn" disabled={busy} onClick={() => join("samenvoegen")}>
+              Koppelen en mijn {own} {own === 1 ? "artiest" : "artiesten"} toevoegen
+            </button>
+            <button type="button" className="btn" disabled={busy} onClick={() => join("overnemen")}>
+              Koppelen, alleen die lijst gebruiken
+            </button>
+          </>
+        ) : (
+          <button type="button" className="btn" disabled={busy} onClick={() => join("overnemen")}>
+            Koppelen
+          </button>
+        )}
+        <button type="button" className="btn btn--quiet" disabled={busy} onClick={close}>
+          Niet koppelen
+        </button>
+      </div>
+    </section>
+  );
+}
+
+/** Link code: the same list on another phone or laptop (B42). */
+function Link({ sectionRef, setMsg }: { sectionRef: React.RefObject<HTMLElement | null>; setMsg: (m: string) => void }) {
+  const follows = useFollows();
+  const [busy, setBusy] = useState(false);
   const [typed, setTyped] = useState("");
   const [failing, setFailing] = useState(syncFailed());
   useEffect(() => onSyncFailure(setFailing), []);
 
   const run = async (task: () => Promise<unknown>, ok: string) => {
     setBusy(true);
-    setMsg("");
     try {
       await task();
       setMsg(ok);
     } catch (e) {
-      setMsg(String(e).includes("404") ? "Deze code bestaat niet (meer). Controleer de tekens." : String(e).includes("400") ? "Dit is geen geldige code." : "Koppelen lukt nu niet. Je lijst blijft op dit apparaat bewaard; probeer het later opnieuw.");
+      setMsg(syncMessage(e));
     } finally {
       setBusy(false);
+      window.scrollTo({ top: 0, behavior: "smooth" }); // the message is at the top of the page
     }
   };
-
-  useEffect(() => {
-    if (!joinCode) return;
-    run(() => joinLink(joinCode), "Gekoppeld: je ziet nu dezelfde lijst als op je andere apparaat.").then(() => history.replaceState(null, "", "#radar"));
-  }, [joinCode]);
+  const unlinkHere = () => {
+    unlinkDevice();
+    setMsg("Dit apparaat is ontkoppeld. Je lijst staat er nog; je andere apparaten blijven gekoppeld.");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const revoke = () => {
+    if (confirm("De code werkt daarna op geen enkel apparaat meer. Doorgaan?")) run(revokeLink, "Code ingetrokken. Je lijst staat nog op dit apparaat; maak een nieuwe code om opnieuw te koppelen.");
+  };
 
   const link = follows.code && typeof location !== "undefined" ? `${location.origin}${location.pathname}${codeHref(follows.code)}` : "";
   return (
-    <section className="pair" aria-labelledby="link-h">
+    <section className="pair" aria-labelledby="link-h" ref={sectionRef}>
       <h2 id="link-h" className="h2">
         Op een ander apparaat
       </h2>
       {follows.code ? (
         <>
-          <p>Open deze link op je andere telefoon of laptop, of typ daar de code. Deel hem niet: wie de code heeft, kan je lijst aanpassen.</p>
+          <p>Open deze link op je andere telefoon of laptop, of typ daar de code. Deel hem niet: wie de code heeft, kan je lijst zien en aanpassen.</p>
           <p className="pair__code">
             <code>{formatCode(follows.code)}</code>
           </p>
@@ -117,39 +190,39 @@ function Link({ joinCode }: { joinCode?: string }) {
             <button type="button" className="btn" onClick={() => navigator.clipboard?.writeText(link).then(() => setMsg("Link gekopieerd."), () => setMsg(link))}>
               Kopieer link
             </button>
-            <button type="button" className="btn btn--quiet" disabled={busy} onClick={() => run(unlink, "Ontkoppeld. Je lijst staat nog op dit apparaat.")}>
-              Ontkoppel
+            <button type="button" className="btn btn--quiet" disabled={busy} onClick={unlinkHere}>
+              Dit apparaat ontkoppelen
+            </button>
+            <button type="button" className="btn btn--quiet" disabled={busy} onClick={revoke}>
+              Code overal intrekken
             </button>
           </div>
-          {failing && <p className="pair__msg">Je laatste wijziging staat nog niet op je andere apparaten (geen verbinding).</p>}
+          {failing && <p className="pair__msg">Je laatste wijziging staat nog niet op je andere apparaten; dat gebeurt zodra er weer verbinding is.</p>}
         </>
       ) : (
         <>
           <p>Maak een koppelcode; daarmee zet je dezelfde lijst op een ander apparaat. Er is geen account of e-mailadres nodig.</p>
           <div className="pair__actions">
-            <button type="button" className="btn" disabled={busy} onClick={() => run(createLink, "Code gemaakt.")}>
+            <button type="button" className="btn" disabled={busy || !follows.artists.length} onClick={() => run(createLink, "Code gemaakt. Je vindt hem onderaan bij “Op een ander apparaat”.")}>
               Maak koppelcode
             </button>
+            {!follows.artists.length && <span className="pair__msg">Volg eerst een artiest.</span>}
           </div>
           <form
             className="pair__join"
             onSubmit={(ev) => {
               ev.preventDefault();
-              if (typed.trim()) run(() => joinLink(typed.replace(/[\s-]/g, "").toUpperCase()), "Gekoppeld.");
+              const code = cleanTyped(typed);
+              if (code) location.hash = codeHref(code);
             }}
           >
             <label htmlFor="link-code">Heb je al een code?</label>
             <input id="link-code" value={typed} onChange={(ev) => setTyped(ev.target.value)} autoComplete="off" spellCheck={false} inputMode="text" placeholder="XXXX XXXX …" />
             <button type="submit" className="btn" disabled={busy || !typed.trim()}>
-              Koppel
+              Verder
             </button>
           </form>
         </>
-      )}
-      {msg && (
-        <p className="pair__msg" role="status">
-          {msg}
-        </p>
       )}
     </section>
   );

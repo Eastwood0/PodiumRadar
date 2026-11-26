@@ -64,12 +64,14 @@ export interface SiteData {
   venues: SiteVenue[];
   events: SiteEvent[];
   sources: SiteSource[];
+  /** False while the second agenda file (B48) has not arrived yet. */
+  complete: boolean;
 }
 
 /** As written to agenda.json: no id (the browser numbers the events), acts and source page may be left out (see expandSiteData). */
 export type CompactSiteEvent = Omit<SiteEvent, "a" | "p" | "id"> & { a?: string[]; p?: string };
 /** `more`: file with the events after the first part (see splitSiteData). */
-export type CompactSiteData = Omit<SiteData, "events"> & { events: CompactSiteEvent[]; more?: string };
+export type CompactSiteData = Omit<SiteData, "events" | "complete"> & { events: CompactSiteEvent[]; more?: string };
 
 const STATUS: Record<Event["status"], StatusCode> = { gepland: "", uitverkocht: "u", verplaatst: "v", geannuleerd: "g" };
 
@@ -125,14 +127,15 @@ export function splitSiteData(site: CompactSiteData, moreFile: string, days = 30
  * The file leaves out what can be filled in again (acts equal to the title, kind "Concert", the source page
  * when it is the ticket link): about a fifth smaller, so phones parse it faster. The browser calls this once.
  */
-export function expandSiteData(raw: CompactSiteData, more: CompactSiteEvent[] = []): SiteData {
+export function expandSiteData(raw: CompactSiteData, more?: CompactSiteEvent[]): SiteData {
   return {
+    complete: !raw.more || more !== undefined,
     generatedAt: raw.generatedAt,
     baseline: raw.baseline,
     venues: raw.venues,
     sources: raw.sources,
     // Ids are positions: both files are sorted by date, so the first part keeps its ids when the rest is added.
-    events: [...raw.events, ...more].map((e, i) => ({ ...e, id: `e${i}`, a: e.a ?? [e.t], g: e.g ?? (e.c === "m" ? "Concert" : undefined), p: e.p ?? e.u })),
+    events: [...raw.events, ...(more ?? [])].map((e, i) => ({ ...e, id: `e${i}`, a: e.a ?? [e.t], g: e.g ?? (e.c === "m" ? "Concert" : undefined), p: e.p ?? e.u })),
   };
 }
 

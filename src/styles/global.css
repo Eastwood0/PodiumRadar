@@ -1326,3 +1326,18 @@ a:hover {
     white-space: nowrap;
   }
 }
+.linkbtn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+.join__h {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}

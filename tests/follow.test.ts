@@ -46,5 +46,6 @@ describe("routes and search for following", () => {
     const known = [{ kind: "artiest" as const, label: "Backstreet Boys", detail: "", href: "#artiest-backstreet-boys" }];
     expect(withFollowOption("Backstreet Boys", known)).toEqual(known);
     expect(withFollowOption("b", [])).toEqual([]);
+    expect(withFollowOption(["iemand", "voorbeeld.nl"].join("@"), [])).toEqual([]);
   });
 });

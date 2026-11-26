@@ -4,7 +4,9 @@ import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, 
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
+import { getFollowState } from "./follow";
 import { Radar } from "./Radar";
+import { flush } from "./sync";
 import { createSearch } from "./search";
 import { SearchBox } from "./SearchBox";
 
@@ -32,6 +34,8 @@ export default function App({ bill }: { bill?: Bill }) {
     const head = document.querySelector<HTMLElement>(".top");
     const ro = head ? new ResizeObserver(() => document.documentElement.style.setProperty("--head-h", `${head.offsetHeight}px`)) : null;
     if (head) ro?.observe(head);
+    // A follow change from an earlier visit that never reached the server is sent now (it stays saved here until then).
+    if (getFollowState().pending) flush().catch(() => undefined);
     fetch("data/agenda.json")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       // A transition lets React render the big first screen in small slices, so the phone stays responsive.

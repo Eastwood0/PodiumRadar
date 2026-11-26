@@ -106,7 +106,7 @@ function score(qTokens: string[], qCompact: string, item: Item): number {
  */
 export function withFollowOption(query: string, hits: SearchHit[]): SearchHit[] {
   const name = query.trim().replace(/\s+/g, " ");
-  if (norm(name).replace(/ /g, "").length < 2) return hits;
+  if (norm(name).replace(/ /g, "").length < 2 || /\S+@\S+\.\S+/.test(name)) return hits; // never offer to store an e-mail address
   if (hits.some((h) => h.kind === "artiest" && norm(h.label) === norm(name))) return hits;
   return [...hits, { kind: "volg", label: `Volg “${name}”`, detail: "ook zonder geplande shows", href: artistHref(name), name }];
 }

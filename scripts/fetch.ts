@@ -8,7 +8,7 @@ import type { Event } from "../src/lib/schema";
 import { loadVenues } from "../src/lib/venues";
 import { ADAPTERS } from "./adapters";
 import { applyArtistGenres, loadArtistGenres } from "./lib/artist-genres";
-import { carryFirstSeen, dedupe, isOutage, sortEvents, toEvents, type SourceStatus } from "./lib/pipeline";
+import { carryFirstSeen, dedupe, keepVenueOutages, isOutage, sortEvents, toEvents, type SourceStatus } from "./lib/pipeline";
 
 const EVENTS_FILE = "data/events.json";
 const STATUS_FILE = "data/status.json";
@@ -55,9 +55,10 @@ async function main() {
       console.warn(`✗ ${a.name}: 0 events`);
       return;
     }
-    all.push(...events);
-    status[a.name] = { ok: true, count: events.length, previousCount: prevCount, lastSuccess: startedAt.toISOString(), venues: a.venues, dropped };
-    console.log(`✓ ${a.name}: ${events.length} events${dropped ? ` (${dropped} ongeldig, overgeslagen)` : ""}`);
+    const { events: kept, outages } = keepVenueOutages(events, prevOwn, a.venues);
+    all.push(...kept);
+    status[a.name] = { ok: true, count: events.length, previousCount: prevCount, lastSuccess: startedAt.toISOString(), venues: a.venues, dropped, ...(outages.length ? { error: `storing bij ${outages.join(", ")}: vorige data behouden` } : {}) };
+    console.log(`✓ ${a.name}: ${events.length} events${dropped ? ` (${dropped} ongeldig, overgeslagen)` : ""}${outages.length ? ` — storing bij ${outages.join(", ")}, vorige data behouden` : ""}`);
   });
 
   // Events from sources not run this time (FETCH_ONLY) stay as they were.

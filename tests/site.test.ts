@@ -159,6 +159,7 @@ describe("buildSiteData", () => {
     expect(merged.events.map((e) => [e.id, e.t])).toEqual([["e0", "Soon"], ["e1", "Band"]]);
     expect(merged.events[0].id).toBe(partial.events[0].id);
     expect("more" in merged).toBe(false);
+    expect([partial.complete, merged.complete]).toEqual([false, true]);
     expect(splitSiteData({ ...all, events: [all.events[0]] }, "x").first.more).toBeUndefined();
   });
   it("adds the no-source reason only to venues without events", () => {

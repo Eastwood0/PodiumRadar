@@ -15,8 +15,12 @@ export interface FollowState {
   artists: string[];
   /** Link code, when this list is linked to the server (B42). */
   code?: string;
-  /** ISO time the previous time "Mijn radar" was opened; shows first seen after it are "Nieuw". */
+  /** Day of the agenda data ("YYYY-MM-DD" of its generatedAt) seen at the previous visit to Mijn radar (B44). */
   lastVisit?: string;
+  /** A local change that the server has not confirmed yet; kept across reloads until it is sent. */
+  pending?: boolean;
+  /** Raised on every local change, so a slower server answer never overwrites a newer tap. */
+  rev?: number;
 }
 
 const EMPTY: FollowState = { artists: [] };
@@ -30,6 +34,8 @@ function read(): FollowState {
       artists: Array.isArray(v.artists) ? v.artists.filter((a): a is string => typeof a === "string").slice(0, MAX_FOLLOWS) : [],
       code: typeof v.code === "string" ? v.code : undefined,
       lastVisit: typeof v.lastVisit === "string" ? v.lastVisit : undefined,
+      pending: v.pending === true,
+      rev: typeof v.rev === "number" ? v.rev : 0,
     };
   } catch {
     return EMPTY; // storage blocked or broken: start empty, following still works for this visit
@@ -45,7 +51,9 @@ export function getFollowState(): FollowState {
   return state;
 }
 
+/** `notifyServer`: a change by the user (marked pending and pushed when linked); false for server answers and visits. */
 export function setFollowState(next: FollowState, notifyServer = true): void {
+  if (notifyServer) next = { ...next, rev: (next.rev ?? 0) + 1, pending: !!next.code };
   state = next;
   try {
     localStorage.setItem(KEY, JSON.stringify(next));
@@ -108,7 +116,10 @@ export function radarEvents(events: SiteEvent[], artists: string[]): SiteEvent[]
   return events.filter((e) => e.a.some((a) => keys.has(slug(a))));
 }
 
-/** "Nieuw" on the radar: first seen after the previous visit (B42). Without a previous visit nothing is new. */
+/**
+ * "Nieuw" on the radar: first seen in a later nightly run than the data shown at the previous visit (B44). Both are
+ * run days, so a visit before and after the same night's run compares correctly. No previous visit: nothing new.
+ */
 export const newSince = (e: SiteEvent, lastVisit: string | undefined) => !!lastVisit && e.f > lastVisit.slice(0, 10);
 
 /** Venue|month cells that hold a show of a followed artist (overview marking, B27). */
