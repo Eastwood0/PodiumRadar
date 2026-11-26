@@ -9,4 +9,6 @@ export const NO_SOURCE: Record<string, string> = {
   "mecc-maastricht": "De site geeft geen datums vrij; vooral beurzen, lage prioriteit.",
   "palladium-koeln": "Datums staan niet leesbaar op de site; volgt nog.",
   "signal-iduna-park": "De site laadt alles via JavaScript en toont vooral voetbal; komt via Ticketmaster.",
+  "nieuwe-nor": "De site weigert automatische bezoekers (403); niet omzeilen (B23).",
+  "warehouse-elementenstraat": "Geen eigen agenda: de zaal wordt verhuurd aan organisatoren; komt via Ticketmaster.",
 };

@@ -6,6 +6,7 @@ import { effenaar } from "./effenaar";
 import { gashouder } from "./gashouder";
 import { gelredome } from "./gelredome";
 import { grugahalle } from "./grugahalle";
+import { hedon } from "./hedon";
 import { ingArena } from "./ing-arena";
 import { johanCruijffArena } from "./johan-cruijff-arena";
 import { muziekgieterij, paard } from "./jsonld-page";
@@ -44,6 +45,7 @@ export const ADAPTERS: Adapter[] = [
   muziekgieterij,
   gashouder,
   paard,
+  hedon,
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

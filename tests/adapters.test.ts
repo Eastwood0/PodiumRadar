@@ -277,3 +277,16 @@ describe("Paard (JSON-LD per event in the agenda list)", async () => {
     expect(ev).toHaveLength(3);
   });
 });
+
+describe("Hedon (Angular transfer state)", async () => {
+  const { parseHedon } = await import("../scripts/adapters/hedon");
+  const ev = parseHedon(fixture("hedon-home.html"));
+  it("reads UTC start, sold-out status, genres and ticket link; skips shows elsewhere", () => {
+    expect(ev).toHaveLength(2);
+    expect(ev[0]).toMatchObject({ venueId: "hedon", title: "THE DIRTY DADDIES", start: "2027-01-29T20:30:00+01:00", hasTime: true, status: "uitverkocht", sourceCategory: "Rock, Pop / Rock", url: "https://www.hedon-zwolle.nl/voorstelling/32830/the-dirty-daddies", sourceId: "32830" });
+    expect(ev[0].ticketUrl).toMatch(/^https:\/\/shop\.tickets\.cm\.com\//);
+  });
+  it("fails loudly without transfer state", () => {
+    expect(() => parseHedon("<html></html>")).toThrow(/ng-state/);
+  });
+});
