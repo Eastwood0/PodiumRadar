@@ -268,3 +268,12 @@ describe("Gashouder (HTML programme, months without year)", async () => {
     expect(ev.map((e) => e.title)).not.toContain("The making of Gashouder");
   });
 });
+
+describe("Paard (JSON-LD per event in the agenda list)", async () => {
+  const { parseJsonLdPage } = await import("../scripts/adapters/jsonld-page");
+  const ev = parseJsonLdPage(fixture("paard-events.html"), { venueId: "paard", country: "NL", url: "https://www.paard.nl/en/event/" });
+  it("reads local times without offset as Dutch time and uses the event page as id", () => {
+    expect(ev[0]).toMatchObject({ venueId: "paard", title: "SONS", start: "2026-11-26T19:00:00+01:00", hasTime: true, url: "https://www.paard.nl/en/event/sons-4/", sourceId: "https://www.paard.nl/en/event/sons-4/" });
+    expect(ev).toHaveLength(3);
+  });
+});

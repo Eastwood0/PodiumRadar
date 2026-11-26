@@ -4,7 +4,8 @@ import type { Adapter, SourceEvent } from "./types";
 
 /**
  * Uitagenda Rotterdam (the city's cultural agenda, run by Rotterdam Festivals) publishes per location the same
- * JSON its own website loads. Used for Rotterdam Ahoy, whose own site blocks all automated visitors (B23).
+ * JSON its own website loads. Used for Rotterdam Ahoy, whose own site blocks all automated visitors (B23), and for
+ * Maassilo, whose own site loads its agenda with JavaScript.
  * Level 2 (shared platform, JSON).
  */
 const BASE = "https://www.uitagendarotterdam.nl";
@@ -14,6 +15,7 @@ const PAGE_SIZE = 100;
 export const UITAGENDA_ROTTERDAM_LOCATIONS: { id: number; key: string; venueId: string }[] = [
   { id: 49648, key: "rotterdam-ahoy", venueId: "rotterdam-ahoy" },
   { id: 49189, key: "rtm-stage", venueId: "rotterdam-ahoy" },
+  { id: 49400, key: "maassilo", venueId: "maassilo" }, // B33: dance venue; its own site loads the agenda with JavaScript
 ];
 
 interface Item {

@@ -39,3 +39,6 @@ export function jsonLdPageAdapter(name: string, page: JsonLdPage): Adapter {
 }
 
 export const muziekgieterij = jsonLdPageAdapter("muziekgieterij.nl", { venueId: "muziekgieterij", country: "NL", url: "https://muziekgieterij.nl/" });
+
+/** Paard (Den Haag): every event in the English agenda list carries JSON-LD; halls (Grote Zaal, GR8, Café) are all Paard. */
+export const paard = jsonLdPageAdapter("paard.nl", { venueId: "paard", country: "NL", url: "https://www.paard.nl/en/event/" });
