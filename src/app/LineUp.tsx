@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { artistHref, type Bill, bill, type BillEntry, MONTHS_LONG, parts } from "./lib";
 
@@ -25,17 +25,19 @@ function Act({ b }: { b: BillEntry }) {
 /** The opening of the overview, set like a festival bill: what is on in the coming 30 days. */
 export function LineUp({ data, venues }: { data: SiteData; venues: Map<string, SiteVenue> }) {
   const b = useMemo(() => bill(data.events, venues, data.generatedAt), [data, venues]);
-  return <BillView b={b} />;
+  const [full, setFull] = useState(false);
+  return <BillView b={b} full={full} onToggle={() => setFull((x) => !x)} />;
 }
 
 /**
- * The bill itself. The build also renders it straight into the page (index.astro), so the first screen
- * shows the line-up before the full agenda has even been downloaded.
+ * The bill itself: six headliners, the rest behind "Meer namen" (B53: the full bill took two phone screens).
+ * The build also renders it straight into the page (index.astro), so the first screen shows the line-up before the
+ * full agenda has been downloaded; that static copy has no toggle.
  */
-export function BillView({ b }: { b: Bill }) {
+export function BillView({ b, full = false, onToggle }: { b: Bill; full?: boolean; onToggle?: () => void }) {
   if (!b.headliners.length) return null;
-  const shown = b.headliners.length + b.support.length + b.club.length;
   const until = new Date(Date.parse(b.to) - 86_400_000).toISOString();
+  const more = b.support.length + b.club.length;
   return (
     <section className="bill" aria-labelledby="bill-h">
       <h1 id="bill-h" className="bill__h">
@@ -46,25 +48,36 @@ export function BillView({ b }: { b: Bill }) {
           <Act key={x.name} b={x} />
         ))}
       </ul>
-      {b.support.length > 0 && (
+      {full && b.support.length > 0 && (
         <ul className="bill__row bill__row--2">
           {b.support.map((x) => (
             <Act key={x.name} b={x} />
           ))}
         </ul>
       )}
-      {b.club.length > 0 && (
+      {full && b.club.length > 0 && (
         <ul className="bill__row bill__row--3" aria-label="In de middelgrote zalen">
           {b.club.map((x) => (
             <Act key={x.name} b={x} />
           ))}
         </ul>
       )}
-      {b.total > shown && (
-        <p className="bill__more">
-          En nog {b.total - shown} andere concerten in deze periode. <a href="#agenda">Naar de agenda</a>
-        </p>
-      )}
+      <div className="bill__foot">
+        {onToggle && more > 0 && (
+          <button type="button" className="btn btn--quiet" aria-expanded={full} onClick={onToggle}>
+            {full ? "Minder namen" : `Meer namen (${more})`}
+          </button>
+        )}
+        <a className="btn" href="#agenda/weekend">
+          Dit weekend
+        </a>
+        <a className="btn" href="#agenda/week">
+          Komende 7 dagen
+        </a>
+        <a className="bill__all" href="#agenda">
+          Naar de agenda
+        </a>
+      </div>
     </section>
   );
 }

@@ -81,7 +81,7 @@ export function parseEkko(html: string, today = new Date()): SourceEvent[] {
     const m = dm && monthNumber(dm[2]);
     const category = clean(node.find("button").first().text());
     // Only event pages: the agenda also lists the café's meals ("Eten in EKKO").
-    if (!/^https:\/\/ekko\.nl\/event\//.test(url) || !title || !dm || !m || /eten|food|diner/i.test(category)) return;
+    if (!url.startsWith("https://ekko.nl/event/") || !title || !dm || !m || /eten|food|diner/i.test(category)) return;
     const d = Number(dm[1]);
     out.push(make("ekko", title, inferYear(d, m, today), m, d, undefined, url, { sourceCategory: /club/i.test(category) ? CLUB : category || undefined }));
   });

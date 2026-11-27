@@ -52,7 +52,7 @@ export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: 
           )}
           <time dateTime={e.s}>
             <span className="sr-only">{formatDate(e.s)}, </span>
-            {e.h ? formatTime(e.s) : "tijd volgt"}
+            {e.h ? formatTime(e.s) : "tijd nog onbekend"}
           </time>
         </p>
         {(fresh || e.st || e.o || e.mg || (e.g && e.g !== "Concert")) && (
@@ -78,8 +78,12 @@ export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: 
         )}
       </div>
       {!cancelled && (
-        <a className="row__tix" href={e.u} target="_blank" rel="noopener noreferrer">
-          Tickets<span className="sr-only"> voor {e.t} (opent de site van de verkoper)</span>
+        <a className={`row__tix${e.st === "u" ? " row__tix--quiet" : ""}`} href={e.u} target="_blank" rel="noopener noreferrer">
+          {e.st === "u" ? "Bekijk" : "Tickets"}
+          <span className="sr-only">
+            {" "}
+            {e.st === "u" ? "(uitverkocht)" : "voor"} {e.t} (opent de site van de verkoper)
+          </span>
         </a>
       )}
     </article>

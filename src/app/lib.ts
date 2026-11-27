@@ -74,7 +74,7 @@ export function slug(s: string): string {
 
 export type Route =
   | { view: "overzicht" }
-  | { view: "agenda" }
+  | { view: "agenda"; when?: Exclude<When, ""> }
   | { view: "bronnen" }
   | { view: "radar"; join?: string }
   | { view: "artiest"; slug: string }
@@ -85,6 +85,7 @@ export function parseRoute(hash: string): Route {
   const h = decodeURIComponent(hash.replace(/^#/, ""));
   if (h.startsWith("artiest-") && h.length > 8) return { view: "artiest", slug: h.slice(8) };
   if (h.startsWith("zaal-") && h.length > 5) return { view: "zaal", id: h.slice(5) };
+  if (h === "agenda/weekend" || h === "agenda/week") return { view: "agenda", when: h.slice(7) as Exclude<When, ""> };
   if (h === "agenda" || h === "bronnen") return { view: h };
   if (h === "radar") return { view: "radar" };
   if (h.startsWith("koppel-") && h.length > 7) return { view: "radar", join: h.slice(7) };
@@ -126,7 +127,11 @@ export function migrateFilters(stored: Partial<Filters> & { all?: boolean }): Fi
   return { ...DEFAULT_FILTERS, ...rest, kind: rest.kind ?? (all ? "alles" : "muziek") };
 }
 
+export type When = "" | "weekend" | "week";
+
 export interface Filters {
+  /** A short period from today: the coming weekend (Fri–Sun) or the coming 7 days. Replaces the month choice. */
+  when: When;
   country: "" | "NL" | "BE" | "DE";
   tier: "" | "A" | "B";
   venue: string;
@@ -138,7 +143,28 @@ export interface Filters {
   /** Dance styles, only used while "Dance & DJ" is among the genres. */
   dance: string[];
 }
-export const DEFAULT_FILTERS: Filters = { country: "", tier: "", venue: "", month: "", kind: "muziek", genres: [], dance: [] };
+export const DEFAULT_FILTERS: Filters = { when: "", country: "", tier: "", venue: "", month: "", kind: "muziek", genres: [], dance: [] };
+
+/** Today in Amsterdam as "YYYY-MM-DD". */
+export function todayLocal(now = new Date()): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(now);
+}
+
+const addDays = (day: string, n: number) => new Date(Date.parse(`${day}T12:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
+
+/**
+ * First and last day (inclusive) of a "when" choice. "weekend": Friday to Sunday of this weekend; from Friday
+ * on it starts today. "week": today and the six days after it.
+ */
+export function whenRange(when: Exclude<When, "">, today: string): [string, string] {
+  if (when === "week") return [today, addDays(today, 6)];
+  const wd = new Date(`${today}T12:00:00Z`).getUTCDay(); // 0 = Sunday … 5 = Friday, 6 = Saturday
+  const toSunday = (7 - wd) % 7;
+  if (wd === 0 || wd >= 5) return [today, addDays(today, toSunday)];
+  return [addDays(today, 5 - wd), addDays(today, toSunday)];
+}
+
+export const WHEN_LABEL: Record<Exclude<When, "">, string> = { weekend: "Dit weekend", week: "Komende 7 dagen" };
 
 /**
  * An event matches when it has one of the chosen genres. Chosen dance styles narrow only "Dance & DJ":
@@ -150,7 +176,9 @@ export function matchesGenres(e: SiteEvent, f: Filters): boolean {
   return f.genres.some((g) => mg.includes(g) && (g !== "Dance & DJ" || !f.dance.length || !!e.ds?.some((d) => f.dance.includes(d))));
 }
 
-export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>, f: Filters): SiteEvent[] {
+/** `today` only matters for the "when" filter. Genres apply only where the genre row is shown (not for theatre). */
+export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>, f: Filters, today = todayLocal()): SiteEvent[] {
+  const range = f.when ? whenRange(f.when, today) : undefined;
   return events.filter((e) => {
     const v = venues.get(e.v);
     if (!v) return false;
@@ -159,7 +187,8 @@ export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>
     if (f.tier && v.tier !== f.tier) return false;
     if (f.venue && e.v !== f.venue) return false;
     if (f.month && monthKey(e.s) !== f.month) return false;
-    if (!matchesGenres(e, f)) return false;
+    if (range && (e.s.slice(0, 10) < range[0] || e.s.slice(0, 10) > range[1])) return false;
+    if (f.kind !== "theater" && !matchesGenres(e, f)) return false;
     return true;
   });
 }

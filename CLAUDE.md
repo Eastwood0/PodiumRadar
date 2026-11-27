@@ -85,9 +85,10 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
 ## Huidige stand
 - **Overdracht: lees eerst `docs/OVERDRACHT.md`** (bijgewerkt 26 nov 2026, avond).
 - Fase: **2 afgerond op de open punten na; fase 3 gebouwd en live** (26 nov 2026, ~18:00; Codex-review verwerkt). Ticketmaster vervalt (B38); radar = eigen agenda NL/BE/DE (B43).
-- Bouwplan: versie 0.10, beslissingen t/m B52. Geen inlog (B39/B42), site open maar niet vindbaar (B40).
+- Bouwplan: versie 0.11, beslissingen t/m B53. Geen inlog (B39/B42), site open maar niet vindbaar (B40).
 - Hosting: Cloudflare Workers static assets via `wrangler.jsonc` (map `dist`) + Worker-script `src/worker.ts` alleen voor `/api/*` (`run_worker_first`), D1-binding `DB` zonder id (wordt bij uitrol automatisch aangemaakt, B42). Live op https://podiumradar.eastwood.workers.dev; elke push naar main rolt uit.
 - Fase 3 (B42–B44): `src/app/follow.ts` (lijst in localStorage, sleutel `pr.follow`), `FollowButton.tsx` (☆ op kaarten en artiestpagina), `Radar.tsx` (`#radar`, Nieuw sinds vorig bezoek, koppelcode-UI, `#koppel-<code>`), `sync.ts` (client), `src/lib/sync-api.ts` (API: POST/GET/PUT/DELETE `/api/sync`, bewaart sha-256 van de code). Zoeken biedt "Volg “naam”". Overzicht: vakje met ster bij gevolgde artiest. Lokaal testen: `npm run build` en dan `npx wrangler dev` (lokale D1); Worker-modules mogen alleen de handler exporteren.
+- Herindeling 27 nov 2026 (B53): affiche 6 namen + "Meer namen", knoppen Dit weekend / Komende 7 dagen (`#agenda/weekend`, `#agenda/week`); `FilterBar.tsx` (Wanneer + maand, zaalkiezer `VenuePicker.tsx` met typeahead A–Z, soort, "Meer filters"); `Overview.tsx` telefoon = maandlijst, laptop = jaartabel. Tests in `tests/filters.test.ts`.
 - Website: affiche-stijl (B30, Archivo); tabs Overzicht / Agenda / Mijn radar (op < 480 px "Radar" en logo zonder woord). Lighthouse lokaal mobiel 90–94, toegankelijkheid 96–100; 360 px zonder horizontaal scrollen.
 - Genres (B31/B35): `scripts/lib/music-genre.ts`; MusicBrainz via `npm run genres`.
 - Bronnen actief: zie `scripts/adapters/index.ts` en `docs/dekking.md`. Nieuw op 26 nov 2026:

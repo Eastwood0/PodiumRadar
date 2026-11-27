@@ -4,7 +4,7 @@ import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
 import { Flag } from "./EventCard";
 import { FilterBar, KindSwitch } from "./FilterBar";
-import { applyFilters, type Filters, kindOf, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
+import { applyFilters, DEFAULT_FILTERS, type Filters, kindOf, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
 
 const STATUS = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 
@@ -16,8 +16,21 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
   return (
     <>
       <PageHead title="Agenda" />
-      <FilterBar data={data} filters={filters} setFilters={setFilters} show={{ venue: true, month: true }} months={months} count={events.length} />
-      <EventList key={JSON.stringify(filters)} events={events} venues={venues} data={data} empty={<p>Geen events met deze filters. Kies “Alles” of wis de filters.</p>} />
+      <FilterBar data={data} venues={venues} filters={filters} setFilters={setFilters} show={{ venue: true, month: true, when: true }} months={months} count={events.length} />
+      <EventList
+        key={JSON.stringify(filters)}
+        events={events}
+        venues={venues}
+        data={data}
+        empty={
+          <>
+            <p>Geen shows met deze filters.</p>
+            <button type="button" className="btn" onClick={() => setFilters({ ...DEFAULT_FILTERS, kind: filters.kind })}>
+              Wis filters
+            </button>
+          </>
+        }
+      />
     </>
   );
 }
@@ -35,7 +48,11 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
         <h1 className="tour__name">{name}</h1>
         <FollowButton name={name} big />
         <div className="empty">
-          <p>{name} staat nu in geen enkele agenda van de zalen op Podiumradar.</p>
+          {!data.complete ? (
+            <p>De rest van de agenda wordt nog geladen…</p>
+          ) : (
+            <p>{name} staat nu in geen enkele agenda van de zalen op Podiumradar.</p>
+          )}
           <p>Volg deze artiest, dan zie je het in Mijn radar zodra er een show bijkomt (na de volgende nachtelijke update).</p>
         </div>
       </section>
@@ -99,17 +116,22 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
           {v.tier === "B" ? ". Middelgrote zaal" : ""}
         </p>
       </PageHead>
-      <div className="venuebar">
-        {v.web && (
-          <a className="btn" href={v.web} target="_blank" rel="noopener noreferrer">
-            Naar de site van {v.n}
-          </a>
-        )}
-        {all.length > 0 && <KindSwitch kind={filters.kind} onChange={(kind) => setFilters({ ...filters, kind })} />}
-      </div>
+      {all.length > 0 && (
+        <div className="venuebar">
+          <KindSwitch kind={filters.kind} onChange={(kind) => setFilters({ ...filters, kind })} />
+        </div>
+      )}
       {v.ns && (
         <div className="note">
           <strong>Nog geen agenda voor deze zaal.</strong> {v.ns}
+          {v.web && (
+            <>
+              {" "}
+              <a href={v.web} target="_blank" rel="noopener noreferrer">
+                Naar de site van {v.n}
+              </a>
+            </>
+          )}
         </div>
       )}
       {source && (
@@ -117,6 +139,14 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
           Bron: {source.name}
           {source.lastSuccess ? `, bijgewerkt ${formatDateTime(source.lastSuccess)}` : ""}
           {!source.ok && " · laatste ophaalpoging mislukt, dit is de vorige stand"}
+          {v.web && (
+            <>
+              {" · "}
+              <a href={v.web} target="_blank" rel="noopener noreferrer">
+                officiële agenda
+              </a>
+            </>
+          )}
         </p>
       )}
       {!v.ns && (

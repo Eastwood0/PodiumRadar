@@ -43,19 +43,21 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
         <Suggestions data={data} venues={venues} />
       ) : (
         <>
-          <ul className="follows" aria-label="Artiesten die je volgt">
-            {follows.artists.map((a) => (
-              <li key={a}>
-                <a href={artistHref(a)}>{a}</a> <FollowButton name={a} />
-              </li>
-            ))}
-          </ul>
-          <p className="sub">
-            {follows.code ? "Gekoppeld met je andere apparaten. " : ""}
+          <details className="fold radar__follows">
+            <summary>
+              Gevolgde artiesten ({follows.artists.length}){follows.code ? " · gekoppeld" : ""}
+            </summary>
+            <ul className="follows" aria-label="Artiesten die je volgt">
+              {follows.artists.map((a) => (
+                <li key={a}>
+                  <a href={artistHref(a)}>{a}</a> <FollowButton name={a} />
+                </li>
+              ))}
+            </ul>
             <button type="button" className="linkbtn" onClick={toLink}>
               {follows.code ? "Koppeling beheren" : "Ook op je andere telefoon of laptop?"}
             </button>
-          </p>
+          </details>
           {!data.complete ? (
             <p className="sub">De rest van de agenda wordt nog geladen…</p>
           ) : (
@@ -63,10 +65,10 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
           )}
           {newCount > 0 && (
             <p className="note" role="status">
-              {newCount} {newCount === 1 ? "nieuwe show" : "nieuwe shows"} sinds je vorige bezoek.
+              {newCount} {newCount === 1 ? "nieuwe show" : "nieuwe shows"} sinds je vorige bezoek (label “Nieuw”).
             </p>
           )}
-          <EventList events={events} venues={venues} data={data} fresh={fresh} empty={<p>Geen van je artiesten staat nu in de agenda.</p>} />
+          <EventList events={events} venues={venues} data={data} fresh={fresh} empty={<p>{data.complete ? "Geen van je artiesten staat nu in de agenda." : "De agenda wordt nog geladen…"}</p>} />
         </>
       )}
       <Link sectionRef={linkRef} setMsg={setMsg} />

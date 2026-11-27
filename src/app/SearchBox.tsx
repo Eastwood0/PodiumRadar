@@ -3,13 +3,16 @@ import { getFollowState, isFollowed, setFollowState, toggled } from "./follow";
 import { type SearchHit, withFollowOption } from "./search";
 
 /** Combobox: type, pick with arrows/enter or tap. Opens the artist or venue page. */
-export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | null }) {
+export function SearchBox({ search, failed = false }: { search: ((q: string) => SearchHit[]) | null; failed?: boolean }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const listId = useId();
   const wrap = useRef<HTMLDivElement>(null);
   const hits = useMemo(() => (search ? withFollowOption(q, search(q)) : []), [search, q]);
+  useEffect(() => {
+    document.getElementById(`${listId}-${active}`)?.scrollIntoView({ block: "nearest" });
+  }, [active, listId]);
 
   useEffect(() => {
     const close = (ev: MouseEvent) => {
@@ -50,7 +53,7 @@ export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | n
         aria-activedescendant={showList && hits[active] ? `${listId}-${active}` : undefined}
         aria-autocomplete="list"
         autoComplete="off"
-        placeholder={search ? "Zoek artiest of zaal" : "Agenda laden…"}
+        placeholder={search ? "Zoek artiest of zaal" : failed ? "Zoeken niet beschikbaar" : "Agenda laden…"}
         disabled={!search}
         value={q}
         onChange={(ev) => {
@@ -67,9 +70,11 @@ export function SearchBox({ search }: { search: ((q: string) => SearchHit[]) | n
             ev.preventDefault();
             setActive((i) => Math.max(i - 1, 0));
           } else if (ev.key === "Enter") {
+            if (!showList) return; // Enter after Escape must not run a hidden choice (such as "Volg")
             ev.preventDefault();
             go(hits[active]);
           } else if (ev.key === "Escape") setOpen(false);
+          else if (ev.key === "Tab") setOpen(false);
         }}
       />
       {showList && (

@@ -28,6 +28,8 @@ export default function App({ bill }: { bill?: Bill }) {
     const onHash = () => {
       setRoute(currentRoute());
       window.scrollTo(0, 0);
+      // Screen readers and keyboard users start at the new page, not at the link they left.
+      document.getElementById("inhoud")?.focus({ preventScroll: true });
     };
     window.addEventListener("hashchange", onHash);
     // Sticky month headings sit right under the header, whose height depends on the screen width.
@@ -60,6 +62,18 @@ export default function App({ bill }: { bill?: Bill }) {
     save(FILTER_KEY, f);
   }, []);
 
+  // "#agenda/weekend" and "#agenda/week" (buttons on the overview) set the period and show the agenda.
+  useEffect(() => {
+    if (route.view !== "agenda" || !route.when) return;
+    const when = route.when;
+    setFiltersState((f) => {
+      const next = { ...f, when, month: "" };
+      save(FILTER_KEY, next);
+      return next;
+    });
+    history.replaceState(null, "", "#agenda");
+  }, [route]);
+
   const venues = useMemo(() => new Map<string, SiteVenue>((data?.venues ?? []).map((v) => [v.id, v])), [data]);
   const months = useMemo(() => (data ? monthsFrom(data.generatedAt) : []), [data]);
   const search = useMemo(() => {
@@ -74,7 +88,14 @@ export default function App({ bill }: { bill?: Bill }) {
 
   return (
     <>
-      <a className="skip" href="#inhoud">
+      <a
+        className="skip"
+        href="#inhoud"
+        onClick={(ev) => {
+          ev.preventDefault(); // "#inhoud" is not a page: jump to the content without changing the route
+          document.getElementById("inhoud")?.focus();
+        }}
+      >
         Naar de inhoud
       </a>
       <header className="top">
@@ -102,7 +123,7 @@ export default function App({ bill }: { bill?: Bill }) {
               <span className="tab-short">Radar</span>
             </a>
           </nav>
-          <SearchBox search={search} />
+          <SearchBox search={search} failed={error} />
         </div>
       </header>
       {partial && (
