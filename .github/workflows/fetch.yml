@@ -27,7 +27,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -37,10 +37,10 @@ jobs:
       - run: npm ci
       - name: Fetch
         run: npm run fetch
-      - name: Music genres (MusicBrainz, max 1 request per second)
+      - name: Music genres (MusicBrainz 1 request/s, then iTunes Search ~18/min)
         run: npm run genres
         continue-on-error: true
-        timeout-minutes: 15
+        timeout-minutes: 45
       - name: Coverage report
         run: npm run coverage
       - name: Commit data

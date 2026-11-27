@@ -1,5 +1,7 @@
 /**
- * Music genres per artist from MusicBrainz (B31), for music events whose source gives no genre.
+ * Music genres per artist (B31, B55), for music events whose source gives no genre: MusicBrainz first, then
+ * Apple's iTunes Search (primaryGenreName, about 20 requests per minute, docs/BRONNEN.md) for artists MusicBrainz
+ * does not know or has no tags for (many DJs and local acts).
  * - Looks up artists that are not in data/artist-genres.json yet (or whose last check is old),
  *   at most GENRE_BUDGET per run, 1 request per second (MusicBrainz rule, docs/BRONNEN.md).
  * - Accepts a match only when the name (or an alias) is the same after normalising and the search score is ≥ 90;
@@ -11,17 +13,20 @@ import { readFileSync, writeFileSync } from "node:fs";
 import type { Event } from "../src/lib/schema";
 import { applyArtistGenres, loadArtistGenres, saveArtistGenres } from "./lib/artist-genres";
 import { apiGet } from "./lib/http";
-import { artistKey, type ArtistGenreEntry, danceStylesFromTags, genresFromTags, type Tag } from "./lib/music-genre";
+import { artistKey, type ArtistGenreEntry, danceStylesFromTags, fromItunesGenre, genresFromTags, type Tag, tributeTarget } from "./lib/music-genre";
 
 const EVENTS_FILE = "data/events.json";
-const BUDGET = Number(process.env.GENRE_BUDGET ?? 400);
+const BUDGET = Number(process.env.GENRE_BUDGET ?? 2000);
 /** Extra pause on top of the 1 request/s queue: CI machines share IP addresses, MusicBrainz counts per IP. */
 const EXTRA_PAUSE_MS = 1000;
 /** Hard stop so the daily run always finishes: MusicBrainz can slow us down a lot with 503s. */
-const MAX_MINUTES = Number(process.env.GENRE_MAX_MINUTES ?? 12);
+const MAX_MINUTES = Number(process.env.GENRE_MAX_MINUTES ?? 40);
 const RECHECK_MISS_DAYS = 60;
 const RECHECK_HIT_DAYS = 180;
-const MAX_ACTS_PER_EVENT = 3;
+const MAX_ACTS_PER_EVENT = 4;
+/** Apple: "approximately 20 calls per minute"; one every 3.2 s stays under it. */
+const ITUNES_INTERVAL_MS = 3200;
+let lastItunes = 0;
 
 interface MbArtist {
   id: string;
@@ -63,6 +68,32 @@ async function lookup(name: string, today: string): Promise<ArtistGenreEntry | "
   return { mbid: hit.id, genres, dance: genres.includes("Dance & DJ") ? danceStylesFromTags(hit.tags ?? []) : [], checked: today };
 }
 
+interface ItunesArtist {
+  artistName: string;
+  primaryGenreName?: string;
+}
+
+/** Apple's iTunes Search: the artist with exactly this name in the Dutch store, or none. Exported for tests. */
+export function pickItunes(name: string, results: ItunesArtist[]): ItunesArtist | undefined {
+  const key = artistKey(name);
+  return results.find((r) => artistKey(r.artistName) === key && r.primaryGenreName);
+}
+
+async function itunes(name: string, entry: ArtistGenreEntry, today: string): Promise<ArtistGenreEntry | "error"> {
+  const wait = lastItunes + ITUNES_INTERVAL_MS - Date.now();
+  if (wait > 0) await sleep(wait);
+  lastItunes = Date.now();
+  const r = await apiGet(`https://itunes.apple.com/search?term=${encodeURIComponent(name)}&country=NL&media=music&entity=musicArtist&limit=10`);
+  if (!r.ok) {
+    console.warn(`iTunes ${r.status || r.error} voor "${name}"`);
+    return "error";
+  }
+  const hit = pickItunes(name, (JSON.parse(r.body) as { results?: ItunesArtist[] }).results ?? []);
+  const found = hit?.primaryGenreName ? fromItunesGenre(hit.primaryGenreName) : { genres: [], dance: [] };
+  if (!found.genres.length) return { ...entry, itunes: today };
+  return { ...entry, genres: found.genres, dance: found.dance, from: "itunes", itunes: today };
+}
+
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
   const file = JSON.parse(readFileSync(EVENTS_FILE, "utf8")) as { generatedAt: string; events: Event[] };
@@ -71,13 +102,15 @@ async function main() {
   const wanted = new Map<string, string>(); // key → name as written
   for (const e of file.events) {
     const needsDance = e.musicGenres?.includes("Dance & DJ") && !e.danceStyles?.length;
-    if (e.category !== "muziek" || (e.musicGenres?.length && !needsDance)) continue;
-    for (const a of e.artists.slice(0, MAX_ACTS_PER_EVENT)) {
-      const key = artistKey(a.name);
+    const theatreGuess = e.category === "overig" && e.categoryGuess;
+    if ((e.category !== "muziek" && !theatreGuess) || (e.musicGenres?.length && !needsDance)) continue;
+    for (const raw of e.artists.slice(0, MAX_ACTS_PER_EVENT)) {
+      const name = tributeTarget(raw.name) ?? raw.name;
+      const key = artistKey(name);
       if (key.length < 2 || wanted.has(key)) continue;
       const c = cache[key];
-      const stale = c && (daysSince(c.checked, today) > (c.genres.length ? RECHECK_HIT_DAYS : RECHECK_MISS_DAYS) || (c.genres.includes("Dance & DJ") && !c.dance));
-      if (!c || stale) wanted.set(key, a.name);
+      const stale = c && (daysSince(c.checked, today) > (c.genres.length ? RECHECK_HIT_DAYS : RECHECK_MISS_DAYS) || (c.genres.includes("Dance & DJ") && !c.dance?.length && !c.itunes));
+      if (!c || stale || (!c.genres.length && !c.itunes)) wanted.set(key, name);
     }
   }
   const todo = [...wanted.entries()].slice(0, BUDGET);
@@ -85,14 +118,21 @@ async function main() {
 
   let found = 0;
   let errors = 0;
+  let done = 0;
   const deadline = Date.now() + MAX_MINUTES * 60_000;
   for (const [key, name] of todo) {
     if (Date.now() > deadline) {
       console.log(`MusicBrainz: tijdslimiet van ${MAX_MINUTES} minuten bereikt; de rest volgt morgen`);
       break;
     }
-    await sleep(EXTRA_PAUSE_MS);
-    const res = await lookup(name, today);
+    const prev = cache[key];
+    // A MusicBrainz miss from an earlier run that iTunes has not seen yet: straight to iTunes.
+    let res: ArtistGenreEntry | "error" = prev && !prev.genres.length && !prev.itunes && daysSince(prev.checked, today) <= RECHECK_MISS_DAYS ? prev : "error";
+    if (res === "error") {
+      await sleep(EXTRA_PAUSE_MS);
+      res = await lookup(name, today);
+      if (res !== "error") res = { ...res, from: res.genres.length ? "musicbrainz" : undefined };
+    }
     if (res === "error") {
       if (++errors >= 15) {
         console.warn("MusicBrainz geeft herhaaldelijk fouten; stop voor vandaag");
@@ -100,14 +140,22 @@ async function main() {
       }
       continue;
     }
+    const needsDance = res.genres.includes("Dance & DJ") && !res.dance?.length;
+    if ((!res.genres.length || needsDance) && !res.itunes) {
+      const viaItunes = await itunes(name, res, today);
+      if (viaItunes !== "error") res = needsDance && viaItunes.from === "itunes" ? { ...res, dance: viaItunes.dance, itunes: today } : viaItunes;
+    }
     cache[key] = res;
     if (res.genres.length) found++;
+    if (++done % 50 === 0) saveArtistGenres(cache); // a cut-off run keeps what it found
   }
   saveArtistGenres(cache);
 
   const events = applyArtistGenres(file.events, cache);
   writeFileSync(EVENTS_FILE, JSON.stringify({ ...file, events }, null, 1) + "\n");
   const music = events.filter((e) => e.category === "muziek");
+  const dance = music.filter((e) => e.musicGenres?.includes("Dance & DJ"));
+  console.log(`Dance & DJ: ${dance.filter((e) => e.danceStyles?.length).length} van ${dance.length} met een stijl`);
   const withGenre = music.filter((e) => e.musicGenres?.length).length;
   console.log(`Genre gevonden voor ${found} van ${todo.length} gezochte artiesten; ${withGenre} van ${music.length} concerten hebben nu een genre`);
 }

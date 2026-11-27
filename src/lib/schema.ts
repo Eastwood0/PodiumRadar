@@ -16,6 +16,8 @@ export const VenueSchema = z.object({
   city: z.string().min(1),
   country: VenueCountry,
   tier: z.enum(["A", "B"]),
+  /** Theatre or club: decides the category when an event has no clear words (scripts/lib/categorize.ts). */
+  type: z.enum(["theater", "club"]).optional(),
   /** false until name, location and sources are verified in phase 1. */
   verified: z.boolean().default(false),
   lat: z.number().min(-90).max(90).optional(),
@@ -77,6 +79,8 @@ export const EventSchema = z.object({
   musicGenres: z.array(z.enum(MUSIC_GENRES)).max(2).optional(),
   /** Styles within Dance & DJ (max 2): techno, house… */
   danceStyles: z.array(z.enum(DANCE_STYLES)).max(2).optional(),
+  /** Set when the category was the venue's default (no evidence): an artist found as a musician turns it into muziek. */
+  categoryGuess: z.literal(true).optional(),
   ticketUrl: HttpUrl,
   imageUrl: HttpUrl.optional(),
   sources: z

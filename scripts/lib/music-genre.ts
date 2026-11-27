@@ -17,7 +17,7 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(post-?punk|indie|alternative|alt-rock|grunge|garage rock|shoegaze|britpop|emo|stoner|psychedelic rock|prog(ressive)? rock|rock|rock ?'?n'? ?roll|hard rock|blues rock|krautrock)\b/i, "Rock"],
   [/\b(loud|heavy metal|metal|metalcore|deathcore|death metal|black metal|thrash|doom|grindcore|nu metal|(?<!post-)(?<!post)punk|hardcore punk|pop punk|ska punk)\b/i, "Metal & punk"],
   [/\b(hip ?hop|hip-hop|rap|deutschrap|nederhop|trap|drill|grime|r&b|rnb|r ?'?n'? ?b|contemporary r&b|urban|boom bap|afroswing)\b/i, "Hiphop & R&B"],
-  [/\b(techno|house|deep[- ]?house|tech[- ]?house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
+  [/\b(techno|tekno|hardtek|house|deep[- ]?house|tech[- ]?house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
   [/\b(nederpop|nederlandstalig|levenslied|smartlap|carnaval|nederhop|volkszanger|palingsound|limburgstalig|dialect)\b/i, "Nederlandstalig"],
   [/\b(schlager|volksmusik|volkstümliche musik|ballermann|après-ski|apres-ski|stimmungsmusik|deutscher schlager)\b/i, "Schlager"],
   [/\b(singer-?songwriter|folk|indie folk|country|americana|bluegrass|acoustic|akoestisch|chanson|cantautor|liedermacher|alt-country)\b/i, "Folk & singer-songwriter"],
@@ -31,7 +31,7 @@ const ALSO: [RegExp, MusicGenre][] = [[/\b(k-?pop|j-?pop|europop|dance-?pop|elec
 
 /** Words → dance style. "hardcore punk" is not hardcore (dance). */
 const DANCE_RULES: [RegExp, DanceStyle][] = [
-  [/\b(techno|hard techno|minimal|acid|industrial techno|melodic techno|hypnotic techno)\b/i, "Techno"],
+  [/\b(techno|tekno|hardtek|hard techno|minimal|acid|industrial techno|melodic techno|hypnotic techno)\b/i, "Techno"],
   [/\b(house|deep[- ]?house|tech[- ]?house|afro[- ]?house|progressive house|funky house|uk garage|garage house|amapiano|lo-?fi house)\b/i, "House"],
   [/\b(trance|psy-?trance|psychedelic trance|uplifting|goa)\b/i, "Trance"],
   [/\b(hardstyle|rawstyle|hardcore(?!\s*punk)|gabber|frenchcore|uptempo|terror|hard dance|q-?dance|defqon)\b/i, "Hardstyle & hardcore"],
@@ -111,6 +111,10 @@ export function eventDanceStyles(title: string, sourceCategory: string | undefin
 export interface ArtistGenreEntry {
   /** MusicBrainz id of the matched artist; absent when no reliable match was found. */
   mbid?: string;
+  /** Where the genre came from: MusicBrainz tags, or Apple's iTunes Search (primaryGenreName) when MusicBrainz had none. */
+  from?: "musicbrainz" | "itunes";
+  /** Day iTunes was asked (also when it had nothing), so a MusicBrainz miss is tried there once. */
+  itunes?: string;
   genres: MusicGenre[];
   /** Dance styles from the same tags; absent in entries made before dance styles existed. */
   dance?: DanceStyle[];
@@ -119,20 +123,65 @@ export interface ArtistGenreEntry {
 }
 export type ArtistGenreCache = Record<string, ArtistGenreEntry>;
 
-type WithGenres = { category: string; artists: { name: string }[]; musicGenres?: MusicGenre[]; danceStyles?: DanceStyle[] };
+/** iTunes' own genre names that the word rules would miss or misread ("Singer/Songwriter", "R&B/Soul"). */
+const ITUNES: Record<string, MusicGenre[]> = {
+  "singer/songwriter": ["Folk & singer-songwriter"],
+  "r&b/soul": ["Hiphop & R&B"],
+  "hip-hop/rap": ["Hiphop & R&B"],
+  "dutch pop": ["Nederlandstalig"],
+  nederpop: ["Nederlandstalig"],
+  "música tropical": ["Wereld & latin"],
+  "música mexicana": ["Wereld & latin"],
+  "urbano latino": ["Wereld & latin"],
+  "k-pop": ["Pop", "Wereld & latin"],
+  "j-pop": ["Pop", "Wereld & latin"],
+  "hard rock": ["Rock"],
+  "heavy metal": ["Metal & punk"],
+  "christian & gospel": ["Jazz, soul & blues"],
+  "easy listening": ["Pop"],
+  "vocal": ["Pop"],
+  "new age": ["Klassiek"],
+};
 
-/** Fills musicGenres (and dance styles) from the artist cache for music events that have none of their own. */
+/** iTunes `primaryGenreName` → our genres and dance styles. Soundtrack, comedy, spoken word, children's music: none. */
+export function fromItunesGenre(name: string): { genres: MusicGenre[]; dance: DanceStyle[] } {
+  const key = name.toLowerCase().trim();
+  if (/soundtrack|comedy|spoken|children|kinder|fitness|holiday|karaoke|audiobook/.test(key)) return { genres: [], dance: [] };
+  const genres = ITUNES[key] ?? genresInText(name).slice(0, 2);
+  return { genres, dance: genres.includes("Dance & DJ") ? danceStylesInText(name).slice(0, 2) : [] };
+}
+
+/** "AC/DC tribute", "Tribute to Queen", "Abba Tributeband": the act whose genre a tribute show has. */
+export function tributeTarget(name: string): string | undefined {
+  const m = name.match(/^(?:a )?tribute (?:to|aan|an)\s+(.+)$/i) ?? name.match(/^(.+?)\s+(?:tribute(?:\s*band| show| act)?|tributeband|revival|experience|forever)\b.*$/i);
+  return m?.[1]?.trim() || undefined;
+}
+
+type WithGenres = { category: string; genre?: string; categoryGuess?: true; artists: { name: string }[]; musicGenres?: MusicGenre[]; danceStyles?: DanceStyle[] };
+
+/** The cache entries for an act: itself, or for a tribute show the act it pays tribute to. */
+const entriesFor = (name: string, cache: ArtistGenreCache) => [cache[artistKey(name)], cache[artistKey(tributeTarget(name) ?? "")]];
+
+/**
+ * Fills musicGenres (and dance styles) from the artist cache for music events that have none of their own. In a
+ * theatre, an event without clear words counts as theatre (categoryGuess); if its performer is a known musician it
+ * is a concert after all.
+ */
 export function applyArtistGenres<T extends WithGenres>(events: T[], cache: ArtistGenreCache): T[] {
   return events.map((e) => {
-    if (e.category !== "muziek") return e;
-    let out = e;
-    if (!out.musicGenres?.length) {
-      const hit = e.artists.map((a) => cache[artistKey(a.name)]).find((c) => c?.genres.length);
-      if (hit) out = { ...out, musicGenres: hit.genres };
+    const known = e.artists.flatMap((a) => entriesFor(a.name, cache)).find((c) => c?.genres.length);
+    if (e.category !== "muziek") {
+      if (!e.categoryGuess || !known) return e;
+      e = { ...e, category: "muziek", genre: "Concert" };
     }
+    let out = e;
+    if (!out.musicGenres?.length && known) out = { ...out, musicGenres: known.genres };
     if (out.musicGenres?.includes("Dance & DJ") && !out.danceStyles?.length) {
-      const hit = e.artists.map((a) => cache[artistKey(a.name)]).find((c) => c?.dance?.length);
-      if (hit) out = { ...out, danceStyles: hit.dance };
+      // A club night: the style most of its line-up has (two techno DJs and one house DJ is a techno night).
+      const votes = new Map<DanceStyle, number>();
+      for (const a of e.artists) for (const d of entriesFor(a.name, cache).find((c) => c?.dance?.length)?.dance ?? []) votes.set(d, (votes.get(d) ?? 0) + 1);
+      const ranked = [...votes.entries()].sort((a, b) => b[1] - a[1]);
+      if (ranked.length) out = { ...out, danceStyles: ranked.filter(([, n]) => n * 2 > ranked[0][1]).slice(0, 2).map(([d]) => d) };
     }
     return out;
   });

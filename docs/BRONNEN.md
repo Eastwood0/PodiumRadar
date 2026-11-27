@@ -149,6 +149,21 @@ Alle robots.txt-bestanden hieronder zijn op deze datum gelezen; ze staan onze bo
 | RADION, Shelter, Thuishaven, EKKO, Dynamo, Annabel, TOFFLER | Alleen HTML; robots.txt staat de agendapagina's toe; live 190 events | `clubs-html.ts` | eigen controle 26 nov 2026 |
 | Fetch-workflow | Run 27 faalde op een conflict in de datafiles (main kreeg intussen nieuwere data); de volgende run leverde alles | Workflow: bij conflict wint de data van de nieuwste run, één herhaling | GitHub Actions 26 nov 2026 |
 
+## Genrebronnen en deellinks — gecontroleerd 27 november 2026
+
+Onderzoek door Codex (webzoektocht met proefopvragingen), de kernfeiten door Claude zelf in de officiële documentatie nagelezen.
+
+| Bron | Wat | Bron |
+|---|---|---|
+| Apple iTunes Search API | `https://itunes.apple.com/search?term=…&country=NL&media=music&entity=musicArtist&limit=10`; genre in `primaryGenreName`; geen sleutel genoemd; "limited to approximately 20 calls per minute (subject to change)"; "Large websites should set up caching logic for the search and lookup requests". Proef (Codex): Techno voor Nico Moreno, Carla Schmitt, Melvin Spix; Pop voor Davina Michelle en Racoon; Metal voor Rammstein. Wij: max 1 per 3,2 s, uitkomst gecachet in `data/artist-genres.json` | [Apple Search API](https://performance-partners.apple.com/search-api) |
+| MusicBrainz | Blijft eerste bron (1 verzoek/s, eigen User-Agent). Nico Moreno en Charlotte de Witte hebben techno-tags; Carla Schmitt en Melvin Spix geen. Data CC BY-NC-SA 3.0 (genres/tags), bronvermelding op de site | [API](https://musicbrainz.org/doc/MusicBrainz_API) · [licentie](https://musicbrainz.org/doc/About/Data_License) |
+| Wikidata | P136 (genre), CC0, geen sleutel; SPARQL ca. 4/s. Nu niet gebruikt: iTunes dekt dezelfde artiesten beter | [Data access](https://www.wikidata.org/wiki/Wikidata:Data_access) |
+| Discogs | Goede stijlen voor DJ's, maar "You may not cache or store the Content longer than is necessary" → niet gebruikt | [API-voorwaarden](https://support.discogs.com/hc/en-us/articles/360009334593-API-Terms-of-Use) |
+| Last.fm | artist.getTopTags, gratis sleutel nodig (account van Ralf), privé niet-commercieel toegestaan → optioneel, nu niet gebruikt | [voorwaarden](https://www.last.fm/api/tos) |
+| Spotify, Deezer, Beatport, Resident Advisor | Spotify: genres "Deprecated"; Deezer: "no local copy"; Beatport: alleen licentiehouders; RA: schriftelijke toestemming → geen van alle gebruikt | Codex-rapport 27 nov 2026 |
+| Google Maps URLs | `https://www.google.com/maps/search/?api=1&query=…`; "You don't need a Google API key to use Maps URLs" → knop Route | [Maps URLs](https://developers.google.com/maps/documentation/urls/get-started) |
+| WhatsApp klik-om-te-chatten | `https://wa.me/?text=urlencodedtext`, zonder nummer: je kiest daarna zelf een contact → Deel show / Deel voorstel op een laptop | [WhatsApp FAQ](https://faq.whatsapp.com/5913398998672934) |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

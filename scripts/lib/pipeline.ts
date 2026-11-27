@@ -36,12 +36,12 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
     }
     const tz = TZ_BY_COUNTRY[venue.country];
     const day = localDate(s.start, tz);
-    const kind = classify(s.title, s.sourceCategory);
+    const kind = classify(s.title, s.sourceCategory, undefined, venue.type);
     if (day < today || day > until) continue; // outside scope, not an error
     const candidate = {
       id: eventId(venue.id, day, s.title),
       title: s.title,
-      artists: (s.artists?.length ? s.artists : artistsFromTitle(s.title)).map((name) => ({ name })),
+      artists: (s.artists?.length ? s.artists : artistsFromTitle(s.title, { lineup: kind.genre === "Dance" })).map((name) => ({ name })),
       venueId: venue.id,
       venueName: venue.name,
       city: venue.city,
@@ -51,6 +51,7 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
       status: s.status ?? "gepland",
       onSaleStart: s.onSaleStart,
       category: kind.category,
+      ...(kind.reason === "gok" && venue.type ? { categoryGuess: true as const } : {}),
       genre: kind.genre,
       musicGenres: kind.category === "muziek" ? nonEmpty(eventGenres(s.title, s.sourceCategory, kind.genre)) : undefined,
       danceStyles: kind.category === "muziek" ? nonEmpty(eventDanceStyles(s.title, s.sourceCategory)) : undefined,

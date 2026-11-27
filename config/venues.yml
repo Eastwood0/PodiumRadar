@@ -32,48 +32,48 @@ venues:
   - { id: melkweg, name: Melkweg, city: Amsterdam, country: NL, tier: B }
   - { id: martiniplaza, name: MartiniPlaza, city: Groningen, country: NL, tier: B }
   - { id: oosterpoort, name: De Oosterpoort, city: Groningen, country: NL, tier: B, aliases: [Spot Groningen] }
-  - { id: stadsschouwburg-groningen, name: Stadsschouwburg Groningen, city: Groningen, country: NL, tier: B, aliases: [Spot Groningen] }
+  - { id: stadsschouwburg-groningen, name: Stadsschouwburg Groningen, city: Groningen, country: NL, tier: B, type: theater, aliases: [Spot Groningen] }
   - { id: doornroosje, name: Doornroosje, city: Nijmegen, country: NL, tier: B }
   - { id: paard, name: Paard, city: Den Haag, country: NL, tier: B }
   - { id: hedon, name: Hedon, city: Zwolle, country: NL, tier: B }
   - { id: mezz, name: Mezz, city: Breda, country: NL, tier: B }
   - { id: patronaat, name: Patronaat, city: Haarlem, country: NL, tier: B }
   # Theaters (B41):
-  - { id: kattendans, name: De Kattendans, city: Bergeijk, country: NL, tier: B, website: "https://kattendans.nl/" }
+  - { id: kattendans, name: De Kattendans, city: Bergeijk, country: NL, tier: B, type: theater, website: "https://kattendans.nl/" }
   # Theaters rond Weert / Limburg (B41, 26 nov 2026):
-  - { id: munttheater, name: Munttheater, city: Weert, country: NL, tier: B, website: "https://www.munttheater.nl/" }
-  - { id: maaspoort, name: Maaspoort, city: Venlo, country: NL, tier: B, website: "https://www.maaspoort.nl/" }
-  - { id: plt-heerlen, name: Theater Heerlen, city: Heerlen, country: NL, tier: B, aliases: [PLT, Parkstad Limburg Theaters], website: "https://www.plt.nl/" }
-  - { id: plt-kerkrade, name: Theater Kerkrade, city: Kerkrade, country: NL, tier: B, aliases: [PLT], website: "https://www.plt.nl/" }
-  - { id: toon-hermans-theater, name: Toon Hermans Theater, city: Sittard, country: NL, tier: B, aliases: [PLT], website: "https://www.plt.nl/" }
-  - { id: oranjerie-roermond, name: De Oranjerie, city: Roermond, country: NL, tier: B, aliases: [TheaterHotel De Oranjerie], website: "https://www.theaterroermond.nl/" }
-  - { id: parktheater-eindhoven, name: Parktheater, city: Eindhoven, country: NL, tier: B, website: "https://www.parktheater.nl/" }
-  - { id: theater-aan-het-vrijthof, name: Theater aan het Vrijthof, city: Maastricht, country: NL, tier: B, website: "https://www.theateraanhetvrijthof.nl/" }
+  - { id: munttheater, name: Munttheater, city: Weert, country: NL, tier: B, type: theater, website: "https://www.munttheater.nl/" }
+  - { id: maaspoort, name: Maaspoort, city: Venlo, country: NL, tier: B, type: theater, website: "https://www.maaspoort.nl/" }
+  - { id: plt-heerlen, name: Theater Heerlen, city: Heerlen, country: NL, tier: B, type: theater, aliases: [PLT, Parkstad Limburg Theaters], website: "https://www.plt.nl/" }
+  - { id: plt-kerkrade, name: Theater Kerkrade, city: Kerkrade, country: NL, tier: B, type: theater, aliases: [PLT], website: "https://www.plt.nl/" }
+  - { id: toon-hermans-theater, name: Toon Hermans Theater, city: Sittard, country: NL, tier: B, type: theater, aliases: [PLT], website: "https://www.plt.nl/" }
+  - { id: oranjerie-roermond, name: De Oranjerie, city: Roermond, country: NL, tier: B, type: theater, aliases: [TheaterHotel De Oranjerie], website: "https://www.theaterroermond.nl/" }
+  - { id: parktheater-eindhoven, name: Parktheater, city: Eindhoven, country: NL, tier: B, type: theater, website: "https://www.parktheater.nl/" }
+  - { id: theater-aan-het-vrijthof, name: Theater aan het Vrijthof, city: Maastricht, country: NL, tier: B, type: theater, website: "https://www.theateraanhetvrijthof.nl/" }
   # Grote theaters (B41):
-  - { id: carre, name: Carré, city: Amsterdam, country: NL, tier: B, aliases: [Koninklijk Theater Carré], website: "https://carre.nl/" }
-  - { id: delamar, name: DeLaMar, city: Amsterdam, country: NL, tier: B, website: "https://delamar.nl/" }
-  - { id: stadsschouwburg-utrecht, name: Stadsschouwburg Utrecht, city: Utrecht, country: NL, tier: B, website: "https://stadsschouwburg-utrecht.nl/" }
-  - { id: theaters-tilburg, name: Schouwburg & Concertzaal Tilburg, city: Tilburg, country: NL, tier: B, aliases: [Theaters Tilburg], website: "https://www.schouwburgconcertzaaltilburg.nl/" }
-  - { id: musis-arnhem, name: Musis & Stadstheater, city: Arnhem, country: NL, tier: B, aliases: [Musis Sacrum], website: "https://www.musisenstadstheater.nl/" }
-  - { id: theater-rotterdam, name: Theater Rotterdam, city: Rotterdam, country: NL, tier: B, aliases: [Rotterdamse Schouwburg, TR25 Schouwburg], website: "https://www.theaterrotterdam.nl/" }
-  - { id: chasse, name: Chassé Theater, city: Breda, country: NL, tier: B, website: "https://www.chasse.nl/" }
+  - { id: carre, name: Carré, city: Amsterdam, country: NL, tier: B, type: theater, aliases: [Koninklijk Theater Carré], website: "https://carre.nl/" }
+  - { id: delamar, name: DeLaMar, city: Amsterdam, country: NL, tier: B, type: theater, website: "https://delamar.nl/" }
+  - { id: stadsschouwburg-utrecht, name: Stadsschouwburg Utrecht, city: Utrecht, country: NL, tier: B, type: theater, website: "https://stadsschouwburg-utrecht.nl/" }
+  - { id: theaters-tilburg, name: Schouwburg & Concertzaal Tilburg, city: Tilburg, country: NL, tier: B, type: theater, aliases: [Theaters Tilburg], website: "https://www.schouwburgconcertzaaltilburg.nl/" }
+  - { id: musis-arnhem, name: Musis & Stadstheater, city: Arnhem, country: NL, tier: B, type: theater, aliases: [Musis Sacrum], website: "https://www.musisenstadstheater.nl/" }
+  - { id: theater-rotterdam, name: Theater Rotterdam, city: Rotterdam, country: NL, tier: B, type: theater, aliases: [Rotterdamse Schouwburg, TR25 Schouwburg], website: "https://www.theaterrotterdam.nl/" }
+  - { id: chasse, name: Chassé Theater, city: Breda, country: NL, tier: B, type: theater, website: "https://www.chasse.nl/" }
   # Dance-locaties (B33: DJ-feesten via de eigen agenda's van clubs, niet via DJguide):
   - { id: gashouder, name: Gashouder, city: Amsterdam, country: NL, tier: B, aliases: [Westergas] }
   - { id: klokgebouw, name: Klokgebouw, city: Eindhoven, country: NL, tier: B }
   - { id: maassilo, name: Maassilo, city: Rotterdam, country: NL, tier: B }
   - { id: warehouse-elementenstraat, name: Warehouse Elementenstraat, city: Amsterdam, country: NL, tier: B }
   # Clubs voor de DJ-agenda (B49, 26 nov 2026):
-  - { id: complex-maastricht, name: Complex, city: Maastricht, country: NL, tier: B, website: "https://complexmaastricht.nl/" }
-  - { id: lofi, name: Lofi, city: Amsterdam, country: NL, tier: B, website: "https://lofi.amsterdam/" }
-  - { id: garage-noord, name: Garage Noord, city: Amsterdam, country: NL, tier: B, website: "https://garagenoord.com/" }
-  - { id: basis-utrecht, name: BASIS, city: Utrecht, country: NL, tier: B, website: "https://clubbasis.nl/" }
-  - { id: radion, name: RADION, city: Amsterdam, country: NL, tier: B, website: "https://radion.amsterdam/" }
-  - { id: shelter, name: Shelter, city: Amsterdam, country: NL, tier: B, website: "https://shelteramsterdam.nl/" }
-  - { id: thuishaven, name: Thuishaven, city: Amsterdam, country: NL, tier: B, website: "https://thuishaven.nl/" }
-  - { id: ekko, name: EKKO, city: Utrecht, country: NL, tier: B, website: "https://ekko.nl/" }
-  - { id: dynamo-eindhoven, name: Dynamo, city: Eindhoven, country: NL, tier: B, website: "https://www.dynamo-eindhoven.nl/" }
-  - { id: annabel, name: Annabel, city: Rotterdam, country: NL, tier: B, website: "https://annabel.nu/" }
-  - { id: toffler, name: TOFFLER, city: Rotterdam, country: NL, tier: B, website: "https://www.toffler.nl/" }
+  - { id: complex-maastricht, name: Complex, city: Maastricht, country: NL, tier: B, type: club, website: "https://complexmaastricht.nl/" }
+  - { id: lofi, name: Lofi, city: Amsterdam, country: NL, tier: B, type: club, website: "https://lofi.amsterdam/" }
+  - { id: garage-noord, name: Garage Noord, city: Amsterdam, country: NL, tier: B, type: club, website: "https://garagenoord.com/" }
+  - { id: basis-utrecht, name: BASIS, city: Utrecht, country: NL, tier: B, type: club, website: "https://clubbasis.nl/" }
+  - { id: radion, name: RADION, city: Amsterdam, country: NL, tier: B, type: club, website: "https://radion.amsterdam/" }
+  - { id: shelter, name: Shelter, city: Amsterdam, country: NL, tier: B, type: club, website: "https://shelteramsterdam.nl/" }
+  - { id: thuishaven, name: Thuishaven, city: Amsterdam, country: NL, tier: B, type: club, website: "https://thuishaven.nl/" }
+  - { id: ekko, name: EKKO, city: Utrecht, country: NL, tier: B, type: club, website: "https://ekko.nl/" }
+  - { id: dynamo-eindhoven, name: Dynamo, city: Eindhoven, country: NL, tier: B, type: club, website: "https://www.dynamo-eindhoven.nl/" }
+  - { id: annabel, name: Annabel, city: Rotterdam, country: NL, tier: B, type: club, website: "https://annabel.nu/" }
+  - { id: toffler, name: TOFFLER, city: Rotterdam, country: NL, tier: B, type: club, website: "https://www.toffler.nl/" }
 
   # --- België, A ---
   - { id: sportpaleis, name: AFAS Dome, city: Antwerpen, country: BE, tier: A, aliases: [Sportpaleis], website: "https://www.afas-dome.be/" }

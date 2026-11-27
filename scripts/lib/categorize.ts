@@ -4,7 +4,7 @@
  *   1. manual corrections in config/categorie-correcties.yml
  *   2. the source's own category label (NL/DE/EN/FR)
  *   3. clear words in the title (sport fixtures, comedy, fairs, family shows, music words)
- *   4. otherwise: muziek, marked as a guess
+ *   4. otherwise the venue's type (theatre → toneel, club → dance), else muziek; both marked as a guess
  */
 import { readFileSync, existsSync } from "node:fs";
 import { parse } from "yaml";
@@ -63,17 +63,20 @@ const TITLE_RULES: [RegExp, Genre][] = [
   // Comedy
   [/\b(comedy|comedian|comedians|cabaret|kabarett|stand-?up|lacht?|lachende|humou?r)\b/i, "Comedy"],
   // Fairs and markets
+  [/\w*(beurs|messe|börse|boerse|markt|quiz)\b|\b(comic ?con|tattoo ?con)\b/i, "Beurs"],
+  [/\b(esports?|e-sports|iem|gaming|lan ?party|tattoo\w*|banen\w*|open dag|opendag|congres\w*)\b/i, "Beurs"],
   [/\b(beurs|messe|börse|boerse|snuffelmarkt|vlooienmarkt|rommelmarkt|markt|expo|convention|congres|kongress|fair|cards & games|woonbeurs|studiekeuze|jobmedi|karrieremesse|banenmarkt|kerstmarkt|wintermarkt|kerstfair)\b/i, "Beurs"],
-  [/\b(workshop|yoga|linedance|creatief|gebaren|popquiz|cursus|rondleiding)\b/i, "Overig"],
+  [/\b(workshop|yoga|linedance|creatief|gebaren|popquiz|cursus|rondleiding|filosofisch\w*|gesprekk?en|talkshow|wetenschap\w*|rouwen)\b/i, "Overig"],
+  [/\b(company(?=\s*:)|compagnie|cabaretcollege|toneelgroep|theatergroep|volkstoneel|tejater|monoloog|voorstelling)\b/i, "Toneel"],
   // Family
   [/\b(sinterklaas|sint|kerstcircus|paw patrol|peppa|bluey|disney|nijntje|k3|studio 100|kinderen voor kinderen|kids|kinder)\b|\(\s*\d+\+\s*\)|\b\d+\+\s*$/i, "Familie"],
   // Shows
   [/\b(holiday on ice|on ice|circus|zirkus|cirque|musical|ballet|ballett|theater|theatre|magie|magic|let.?s dance|freek vonk|quiz|bingo|lezing|podcast|talk|book talks|gala)\b/i, "Show"],
   // Music signals
-  [/\b(in concert|live in concert|symphon|philharmon|orchestra|orkest|klassiek|requiem|passion|messiah|matth[äa]us)\b/i, "Klassiek"],
+  [/\b(in concert|live in concert|symphon\w*|philharmon\w*|philzuid|orchestra|orkest|\w*orkest|klassiek|requiem|passion|messiah|matth[äa]us|strijkkwartet|kamermuziek|pianoconcert|vioolconcert)\b/i, "Klassiek"],
   [/\b(festival|fest)\b/i, "Festival"],
   [/\b(rave|techno|hardstyle|trance|dj|b2b|club|party|xxl|edm)\b/i, "Dance"],
-  [/\b(tour|live|band|tribute|unplugged|acoustic|akoestisch|album|sings|zingt|feat\.?|ft\.?|& friends|en vrienden|und band)\b/i, "Concert"],
+  [/\b(tour|live|band|tribute|unplugged|acoustic|akoestisch|album|sings|zingt|feat\.?|ft\.?|& friends|en vrienden|und band|\w*concert|\w*konzert|koor|mannenkoor|harmonie|fanfare|blaasmuziek|brassband|bigband|big band|soundsystem|songs)\b/i, "Concert"],
 ];
 
 export interface Corrections {
@@ -101,7 +104,7 @@ export function loadCorrections(path = "config/categorie-correcties.yml"): { muz
 
 const lower = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
-export function classify(title: string, sourceCategory?: string, corrections = loadCorrections()): Classification {
+export function classify(title: string, sourceCategory?: string, corrections = loadCorrections(), venueType?: "theater" | "club"): Classification {
   const t = lower(title);
   const pinnedOther = corrections.overig.find(([p]) => t.includes(lower(p)));
   if (pinnedOther) return { category: "overig", genre: pinnedOther[1], reason: "correctie" };
@@ -115,5 +118,7 @@ export function classify(title: string, sourceCategory?: string, corrections = l
   if (/^[\p{L}0-9 .'’]+ [-–] [\p{L}0-9 .'’]+$/u.test(title.trim()) && /\b(jong|united|city|sc|rc|rot|blau|weiss|wei(ß|ss))\b/i.test(title)) {
     return { category: "overig", genre: "Sport", reason: "titel" };
   }
+  if (venueType === "theater") return { category: "overig", genre: "Toneel", reason: "gok" };
+  if (venueType === "club") return { category: "muziek", genre: "Dance", reason: "gok" };
   return { category: "muziek", genre: "Concert", reason: "gok" };
 }
