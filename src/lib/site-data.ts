@@ -51,6 +51,8 @@ export interface SiteVenue {
 
 export interface SiteSource {
   name: string;
+  /** A city agenda that lists only part of a venue's programme (B46/B52): the site says so next to the venue. */
+  partial?: true;
   ok: boolean;
   count: number;
   lastSuccess?: string;
@@ -72,6 +74,9 @@ export interface SiteData {
 export type CompactSiteEvent = Omit<SiteEvent, "a" | "p" | "id"> & { a?: string[]; p?: string };
 /** `more`: file with the events after the first part (see splitSiteData). */
 export type CompactSiteData = Omit<SiteData, "events" | "complete"> & { events: CompactSiteEvent[]; more?: string };
+
+/** Sources that are a city or regional agenda: they list what the venue reports to them, not always everything. */
+export const PARTIAL_SOURCES = new Set(["iamsterdam.com", "uitagendarotterdam.nl", "uitagendautrecht.nl", "visitgroningen.nl", "visitmaastricht.com", "explorebreda.com (Chassé)"]);
 
 const STATUS: Record<Event["status"], StatusCode> = { gepland: "", uitverkocht: "u", verplaatst: "v", geannuleerd: "g" };
 
@@ -107,7 +112,7 @@ export function buildSiteData(
         ...(e.onSaleStart && e.onSaleStart > generatedAt ? { o: toLocalIso(e.onSaleStart) } : {}),
       })),
     sources: Object.entries(sources)
-      .map(([name, s]) => ({ name, ok: s.ok, count: s.count, lastSuccess: s.lastSuccess, venues: s.venues }))
+      .map(([name, s]) => ({ name, ...(PARTIAL_SOURCES.has(name) ? { partial: true as const } : {}), ok: s.ok, count: s.count, lastSuccess: s.lastSuccess, venues: s.venues }))
       .sort((a, b) => a.name.localeCompare(b.name)),
   };
 }

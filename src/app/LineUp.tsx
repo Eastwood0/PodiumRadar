@@ -40,6 +40,18 @@ export function BillView({ b, full = false, onToggle }: { b: Bill; full?: boolea
   const more = b.support.length + b.club.length;
   return (
     <section className="bill" aria-labelledby="bill-h">
+      {/* First what people come for on a phone: tonight and this weekend, before the big names (Codex). */}
+      <nav className="bill__quick" aria-label="Snel naar">
+        <a className="btn" href="#agenda/vandaag">
+          Vandaag
+        </a>
+        <a className="btn" href="#agenda/weekend">
+          Dit weekend
+        </a>
+        <a className="btn" href="#agenda/week">
+          7 dagen
+        </a>
+      </nav>
       <h1 id="bill-h" className="bill__h">
         Podiumradar presenteert, van {longDate(`${b.from}T12:00:00Z`)} tot {longDate(until)}
       </h1>
@@ -54,12 +66,6 @@ export function BillView({ b, full = false, onToggle }: { b: Bill; full?: boolea
             {full ? "Minder namen" : `Meer namen (${more})`}
           </button>
         )}
-        <a className="btn" href="#agenda/weekend">
-          Dit weekend
-        </a>
-        <a className="btn" href="#agenda/week">
-          Komende 7 dagen
-        </a>
         <a className="bill__all" href="#agenda">
           Naar de agenda
         </a>

@@ -28,6 +28,9 @@ const shortDay = (iso: string) => {
   const p = parts(`${iso}T12:00:00Z`);
   return `${p.d} ${MONTHS_LONG[p.m - 1].slice(0, 3)}`;
 };
+/** "za 28 nov": one chosen day. */
+export const dayLabel = (day: string) => `${["zo", "ma", "di", "wo", "do", "vr", "za"][new Date(`${day}T12:00:00Z`).getUTCDay()]} ${shortDay(day)}`;
+
 /** "28 nov – 30 nov": the exact days behind "Dit weekend" or "7 dagen". */
 function rangeLabel(when: Exclude<When, "">): string {
   const [from, to] = whenRange(when, todayLocal());
@@ -45,7 +48,7 @@ const fieldsOf = (show: Show): (keyof Filters)[] => [
   "dance",
   ...(show.venue ? (["venue"] as const) : []),
   ...(show.month ? (["month"] as const) : []),
-  ...(show.when ? (["when"] as const) : []),
+  ...(show.when ? (["when", "day"] as const) : []),
 ];
 
 /**
@@ -112,7 +115,7 @@ export function FilterBar({
           {show.when && (
             <div className="seg" role="group" aria-label="Wanneer">
               {(["", "weekend", "week"] as When[]).map((w) => (
-                <button key={w || "all"} type="button" aria-pressed={filters.when === w && !(w === "" && filters.month)} onClick={() => set({ when: w, month: "" })}>
+                <button key={w || "all"} type="button" aria-pressed={filters.when === w && !(w === "" && (filters.month || filters.day))} onClick={() => set({ when: w, month: "", day: "" })}>
                   {w === "week" ? "7 dagen" : w ? WHEN_LABEL[w] : "Alles"}
                 </button>
               ))}
@@ -121,7 +124,7 @@ export function FilterBar({
           {show.month && (
             <label className="sel">
               <span className="sr-only">Maand</span>
-              <select value={filters.month} onChange={(e) => set({ month: e.target.value, when: "" })}>
+              <select value={filters.month} onChange={(e) => set({ month: e.target.value, when: "", day: "" })}>
                 <option value="">Maand</option>
                 {months.map((m) => (
                   <option key={m} value={m}>
@@ -129,6 +132,12 @@ export function FilterBar({
                   </option>
                 ))}
               </select>
+            </label>
+          )}
+          {show.when && (
+            <label className={`sel sel--day${filters.day ? " has-value" : ""}`}>
+              <span className="sel__label">Dag</span>
+              <input type="date" value={filters.day} min={todayLocal()} max={months.length ? `${months.at(-1)}-31` : undefined} onChange={(e) => set({ day: e.target.value, when: "", month: "" })} />
             </label>
           )}
         </div>
@@ -143,6 +152,7 @@ export function FilterBar({
         <p className="filters__count" aria-live="polite">
           {count} {count === 1 ? "show" : "shows"}
           {show.when && filters.when && !filters.month && <> · {rangeLabel(filters.when)}</>}
+          {show.when && filters.day && <> · {dayLabel(filters.day)}</>}
           {changed && (
             <>
               {" · "}

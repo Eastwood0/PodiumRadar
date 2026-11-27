@@ -1,6 +1,7 @@
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 import { FollowButton } from "./FollowButton";
-import { artistHref, dayName, GENRE_LABEL, formatDate, formatTime, isNew, parts, venueHref } from "./lib";
+import { artistHref, dayName, GENRE_LABEL, formatDate, formatTime, isNew, parts, showHref, venueHref } from "./lib";
+import { ProposalToggle } from "./Proposal";
 
 const STATUS_LABEL = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 const COUNTRY = { NL: "Nederland", BE: "België", DE: "Duitsland", GB: "Verenigd Koninkrijk", FR: "Frankrijk" } as const;
@@ -9,11 +10,70 @@ export function Flag({ cc }: { cc: SiteVenue["cc"] }) {
   return <span className={`flag flag--${cc}`} role="img" aria-label={COUNTRY[cc]} title={COUNTRY[cc]} />;
 }
 
+/** Genre labels: the dance style when known (Techno, House…), else the music genre; for other events the kind. */
+function genreItems(e: SiteEvent) {
+  const items = (e.mg ?? []).flatMap((g) => (g === "Dance & DJ" && e.ds?.length ? e.ds : [g]));
+  if (e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek"))) items.push(GENRE_LABEL[e.g] ?? e.g);
+  return [...new Set(items)].map((g) => (
+    <li key={g} className="tag tag--genre">
+      {g}
+    </li>
+  ));
+}
+
+/** Status and genre labels on their own (the show page). */
+export function GenreTags({ e }: { e: SiteEvent }) {
+  const items = genreItems(e);
+  if (!items.length && !e.st) return null;
+  return (
+    <ul className="tags" aria-label="Kenmerken">
+      {e.st && <li className={`tag tag--${e.st}`}>{STATUS_LABEL[e.st]}</li>}
+      {items}
+    </ul>
+  );
+}
+
+/**
+ * Where the button leads, said before you tap (Codex): the ticket seller, or the venue's page when the source gives
+ * no ticket link; a sold-out show leads to the venue page. Cancelled shows get no button.
+ */
+export function TicketLink({ e, big = false }: { e: SiteEvent; big?: boolean }) {
+  if (e.st === "g") return null;
+  const soldOut = e.st === "u";
+  const seller = !soldOut && e.u !== e.p;
+  const label = soldOut ? (big ? "Uitverkocht, bekijk bij de zaal" : "Uitverkocht") : seller ? (big ? "Naar kaartverkoop" : "Kaarten") : big ? "Bekijk bij de zaal" : "Bij de zaal";
+  return (
+    <a className={`${big ? "btn btn--tix" : "row__tix"}${soldOut ? " row__tix--quiet" : ""}`} href={soldOut ? e.p : e.u} target="_blank" rel="noopener noreferrer">
+      {label}
+      <span className="sr-only">
+        {" "}
+        {e.t} ({seller ? "opent de kaartverkoop" : "opent de site van de zaal"})
+      </span>
+    </a>
+  );
+}
+
 /**
  * One line of the agenda, set like the tour dates on the back of a shirt: day, act (with ☆), where, tickets.
  * `fresh`: the rule for the "Nieuw" label; default: first seen in the last 7 days. Mijn radar uses "since the previous visit".
  */
-export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: { e: SiteEvent; venue: SiteVenue; data: SiteData; showVenue?: boolean; fresh?: (e: SiteEvent) => boolean }) {
+export function EventCard({
+  e,
+  venue,
+  data,
+  showVenue = true,
+  fresh: isFresh,
+  note,
+}: {
+  e: SiteEvent;
+  venue: SiteVenue;
+  data: SiteData;
+  showVenue?: boolean;
+  fresh?: (e: SiteEvent) => boolean;
+  /** A change to point out, e.g. "Nu uitverkocht" in Mijn radar. */
+  note?: (e: SiteEvent) => string | undefined;
+}) {
+  const changed = note?.(e);
   const p = parts(e.s);
   const cancelled = e.st === "g";
   const fresh = isFresh ? isFresh(e) : isNew(e, data);
@@ -26,12 +86,12 @@ export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: 
       </p>
       <div className="row__main">
         <h3 className="row__act">
-          {single ? (
+          <a href={showHref(e)}>{e.t}</a>
+          {single && (
             <>
-              <a href={artistHref(e.a[0])}>{e.t}</a> <FollowButton name={e.a[0]} />
+              {" "}
+              <FollowButton name={e.a[0]} />
             </>
-          ) : (
-            e.t
           )}
         </h3>
         {!single && e.a.length > 0 && (
@@ -55,37 +115,20 @@ export function EventCard({ e, venue, data, showVenue = true, fresh: isFresh }: 
             {e.h ? formatTime(e.s) : "tijd nog onbekend"}
           </time>
         </p>
-        {(fresh || e.st || e.o || e.mg || (e.g && e.g !== "Concert")) && (
+        {(fresh || changed || e.st || e.o || e.mg || (e.g && e.g !== "Concert")) && (
           <ul className="tags" aria-label="Kenmerken">
             {fresh && <li className="tag tag--new">Nieuw</li>}
-            {e.st && <li className={`tag tag--${e.st}`}>{STATUS_LABEL[e.st]}</li>}
+            {changed && <li className="tag tag--new">{changed}</li>}
+            {e.st && !changed && <li className={`tag tag--${e.st}`}>{STATUS_LABEL[e.st]}</li>}
             {e.o && <li className="tag tag--sale">Voorverkoop vanaf {formatDate(e.o)}</li>}
-            {e.mg?.map((g) =>
-              g === "Dance & DJ" && e.ds?.length ? (
-                e.ds.map((d) => (
-                  <li key={d} className="tag tag--genre">
-                    {d}
-                  </li>
-                ))
-              ) : (
-                <li key={g} className="tag tag--genre">
-                  {g}
-                </li>
-              ),
-            )}
-            {e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek")) && <li className="tag">{GENRE_LABEL[e.g] ?? e.g}</li>}
+            {genreItems(e)}
           </ul>
         )}
       </div>
-      {!cancelled && (
-        <a className={`row__tix${e.st === "u" ? " row__tix--quiet" : ""}`} href={e.u} target="_blank" rel="noopener noreferrer">
-          {e.st === "u" ? "Bekijk" : "Tickets"}
-          <span className="sr-only">
-            {" "}
-            {e.st === "u" ? "(uitverkocht)" : "voor"} {e.t} (opent de site van de verkoper)
-          </span>
-        </a>
-      )}
+      <div className="row__act-col">
+        <TicketLink e={e} />
+        <ProposalToggle e={e} />
+      </div>
     </article>
   );
 }

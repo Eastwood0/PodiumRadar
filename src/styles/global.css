@@ -89,6 +89,7 @@
 .bill__act a,
 .row__act,
 .tour__name,
+.show__title,
 .tour__date,
 .tour__city,
 .month__h,
@@ -649,7 +650,8 @@ a:hover {
   min-width: 6.5rem;
   max-width: 14rem;
 }
-.sel select {
+.sel select,
+.sel input {
   width: 100%;
   height: 2.75rem;
   padding: 0 1.5rem 0 0.5rem;
@@ -1635,4 +1637,179 @@ a:hover {
   margin: 0.75rem 0 0;
   font-size: 0.9rem;
   color: var(--ink-2);
+}
+
+/* ---------- Show page, back link, proposal (B56) ---------- */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+.back:hover {
+  text-decoration: underline;
+}
+.tour .back {
+  display: flex;
+  margin-inline: auto 0;
+}
+.show__when {
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 650;
+  color: var(--ink-2);
+}
+.show__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.5rem, 1.25rem + 7vw, 6rem);
+  line-height: 0.88;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.show__where {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+}
+.show__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.btn--tix {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: var(--blue-ink);
+}
+.btn--tix.row__tix--quiet {
+  border-color: var(--rule);
+  background: none;
+  color: var(--ink);
+}
+.show__note {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--pink);
+  background: var(--paper-2);
+  font-size: 0.9rem;
+}
+.show .h2 {
+  margin-top: 2rem;
+}
+.list--plain .row:last-child {
+  border-bottom: 0;
+}
+.row__act-col {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+.row__act-col .row__tix {
+  margin: 0;
+}
+@media (min-width: 40rem) {
+  .row__act-col {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+    margin: 0;
+  }
+}
+.pick {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  color: var(--ink-2);
+  font: 700 1.2rem/1 var(--font);
+  cursor: pointer;
+}
+.pick:hover,
+.pick:focus-visible {
+  color: var(--ink);
+}
+.pick.is-on {
+  background: var(--pink);
+  color: var(--pink-ink);
+}
+.pick--big {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding: 0 1rem;
+  border: 1.5px solid var(--rule);
+  font: inherit;
+  font-weight: 650;
+  color: var(--ink);
+}
+.pick--big.is-on {
+  border-color: var(--pink);
+}
+.pbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem max(1rem, env(safe-area-inset-left)) calc(0.6rem + env(safe-area-inset-bottom));
+  border-top: 2px solid var(--ink);
+  background: var(--paper);
+}
+.pbar__n {
+  margin: 0 auto 0 0;
+  font-weight: 650;
+}
+.widen,
+.changes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.changes p {
+  margin: 0 auto 0 0;
+}
+.widen__n {
+  margin-left: 0.25rem;
+  color: var(--ink-2);
+  font-weight: 400;
+}
+.bill__quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+.sel--day {
+  position: relative;
+}
+.sel__label {
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+.sel--day.has-value .sel__label,
+.sel--day:focus-within .sel__label {
+  display: none;
+}
+.sel--day:not(.has-value) input:not(:focus) {
+  color: transparent;
 }

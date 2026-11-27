@@ -1,11 +1,14 @@
-import { startTransition, useCallback, useEffect, useMemo, useState } from "react";
+import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } from "../lib/site-data";
 import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, PageHead, Sources, VenuePage } from "./Pages";
 import { getFollowState } from "./follow";
+import { navigated, replaced, startNav } from "./nav";
+import { ProposalBar } from "./Proposal";
 import { Radar } from "./Radar";
+import { ShowPage } from "./ShowPage";
 import { flush } from "./sync";
 import { createSearch } from "./search";
 import { SearchBox } from "./SearchBox";
@@ -26,14 +29,18 @@ export default function App({ bill }: { bill?: Bill }) {
   const [partial, setPartial] = useState(false);
   const [route, setRoute] = useState<Route>({ view: "overzicht" });
   const [filters, setFiltersState] = useState<Filters>(DEFAULT_FILTERS);
+  const restoreY = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     setRoute(currentRoute());
     // Stored filters from an older version may miss newer fields: fill them with the defaults.
-    setFiltersState({ ...migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})), when: "" });
+    setFiltersState({ ...migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})), when: "", day: "" });
+    startNav();
     const onHash = () => {
+      const back = navigated(window.scrollY);
+      restoreY.current = back;
       setRoute(currentRoute());
-      window.scrollTo(0, 0);
+      if (back === undefined) window.scrollTo(0, 0);
       // Screen readers and keyboard users start at the new page, not at the link they left.
       document.getElementById("inhoud")?.focus({ preventScroll: true });
     };
@@ -81,18 +88,31 @@ export default function App({ bill }: { bill?: Bill }) {
       return next;
     });
     history.replaceState(null, "", "#agenda");
+    replaced();
     setRoute({ view: "agenda" });
   }, [route]);
 
+  // "Terug": once the page you return to has rendered, scroll to where you were.
+  useEffect(() => {
+    const y = restoreY.current;
+    if (y === undefined || !data) return;
+    restoreY.current = undefined;
+    requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+  }, [route, data]);
+
   // The period lives in the address ("#agenda/weekend", "#agenda/week"), so a shared or bookmarked link keeps it
   // and "Naar de agenda" always means the whole agenda (B54). It is not stored with the other filters.
-  const agendaFilters = useMemo<Filters>(() => ({ ...filters, when: route.view === "agenda" ? (route.when ?? "") : "" }), [filters, route]);
+  const agendaFilters = useMemo<Filters>(
+    () => ({ ...filters, when: route.view === "agenda" ? (route.when ?? "") : "", day: route.view === "agenda" ? (route.day ?? "") : "" }),
+    [filters, route],
+  );
   const setAgendaFilters = useCallback(
     (f: Filters) => {
-      setFilters({ ...f, when: "" });
-      const hash = f.when ? `#agenda/${f.when}` : "#agenda";
+      setFilters({ ...f, when: "", day: "" });
+      const hash = f.day ? `#agenda/dag-${f.day}` : f.when ? `#agenda/${f.when}` : "#agenda";
       if (location.hash !== hash) {
         history.replaceState(null, "", hash); // a filter change is not a new page: no extra Back step, no jump to the top
+        replaced();
         setRoute(parseRoute(hash));
       }
     },
@@ -186,6 +206,8 @@ export default function App({ bill }: { bill?: Bill }) {
           <Loading title={route.view === "agenda" ? "Agenda" : route.view === "radar" ? "Mijn radar" : undefined} />
         ) : route.view === "agenda" ? (
           <Agenda data={data} venues={venues} months={months} filters={agendaFilters} setFilters={setAgendaFilters} />
+        ) : route.view === "show" ? (
+          <ShowPage data={data} venues={venues} showKey={route.key} />
         ) : route.view === "artiest" ? (
           <ArtistPage data={data} venues={venues} artistSlug={route.slug} />
         ) : route.view === "zaal" ? (
@@ -198,6 +220,7 @@ export default function App({ bill }: { bill?: Bill }) {
           <NotFound />
         )}
       </main>
+      {data && <ProposalBar data={data} venues={venues} />}
       <footer className="foot">
         <p>
           {data ? <>Laatst bijgewerkt {formatDateTime(data.generatedAt)} · </> : null}

@@ -75,7 +75,8 @@ export function slug(s: string): string {
 
 export type Route =
   | { view: "overzicht" }
-  | { view: "agenda"; when?: Exclude<When, "">; place?: string }
+  | { view: "agenda"; when?: Exclude<When, "">; day?: string; place?: string }
+  | { view: "show"; key: string }
   | { view: "bronnen" }
   | { view: "radar"; join?: string }
   | { view: "artiest"; slug: string }
@@ -87,6 +88,9 @@ export function parseRoute(hash: string): Route {
   if (h.startsWith("artiest-") && h.length > 8) return { view: "artiest", slug: h.slice(8) };
   if (h.startsWith("zaal-") && h.length > 5) return { view: "zaal", id: h.slice(5) };
   if (h === "agenda/weekend" || h === "agenda/week") return { view: "agenda", when: h.slice(7) as Exclude<When, ""> };
+  if (/^agenda\/dag-\d{4}-\d{2}-\d{2}$/.test(h)) return { view: "agenda", day: h.slice(11) };
+  if (h === "agenda/vandaag") return { view: "agenda", day: todayLocal() };
+  if (h.startsWith("show-") && h.length > 5) return { view: "show", key: h.slice(5) };
   if (h.startsWith("regio-") && h.length > 6) return { view: "agenda", place: `${PLACE_PREFIX}${h.slice(6)}` };
   if (h === "agenda" || h === "bronnen") return { view: h };
   if (h === "radar") return { view: "radar" };
@@ -95,6 +99,9 @@ export function parseRoute(hash: string): Route {
 }
 export const artistHref = (name: string) => `#artiest-${slug(name)}`;
 export const venueHref = (id: string) => `#zaal-${id}`;
+/** Stable key of one show (date, venue, title), so a shared link opens the same show tomorrow too. */
+export const showKey = (e: { s: string; v: string; t: string }) => slug(`${e.s.slice(0, 10)} ${e.v} ${e.t}`).slice(0, 90).replace(/-$/, "");
+export const showHref = (e: { s: string; v: string; t: string }) => `#show-${showKey(e)}`;
 
 /** "Nieuw": first seen in the last 7 days, but not part of the very first import. */
 export function isNew(e: SiteEvent, data: Pick<SiteData, "generatedAt" | "baseline">): boolean {
@@ -134,6 +141,8 @@ export type When = "" | "weekend" | "week";
 export interface Filters {
   /** A short period from today: the coming weekend (Fri–Sun) or the coming 7 days. Replaces the month choice. */
   when: When;
+  /** One day (YYYY-MM-DD), "Kies een dag"; like `when` it lives in the address, not in the stored filters. */
+  day: string;
   country: "" | "NL" | "BE" | "DE";
   tier: "" | "A" | "B";
   venue: string;
@@ -145,7 +154,7 @@ export interface Filters {
   /** Dance styles, only used while "Dance & DJ" is among the genres. */
   dance: string[];
 }
-export const DEFAULT_FILTERS: Filters = { when: "", country: "", tier: "", venue: "", month: "", kind: "muziek", genres: [], dance: [] };
+export const DEFAULT_FILTERS: Filters = { day: "", when: "", country: "", tier: "", venue: "", month: "", kind: "muziek", genres: [], dance: [] };
 
 /** Today in Amsterdam as "YYYY-MM-DD". */
 export function todayLocal(now = new Date()): string {
@@ -191,6 +200,7 @@ export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>
     if (!matchesPlace(f.venue, v, places)) return false;
     if (f.month && monthKey(e.s) !== f.month) return false;
     if (range && (e.s.slice(0, 10) < range[0] || e.s.slice(0, 10) > range[1])) return false;
+    if (f.day && e.s.slice(0, 10) !== f.day) return false;
     if (f.kind !== "theater" && !matchesGenres(e, f)) return false;
     return true;
   });

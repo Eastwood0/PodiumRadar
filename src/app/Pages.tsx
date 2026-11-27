@@ -1,10 +1,12 @@
 import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
+import { BackLink } from "./BackLink";
+import { sourceNote } from "./sources";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
-import { Flag } from "./EventCard";
+import { Flag, TicketLink } from "./EventCard";
 import { FilterBar, KindSwitch } from "./FilterBar";
-import { applyFilters, DEFAULT_FILTERS, type Filters, kindOf, formatDate, formatDateTime, isNew, monthShort, parts, slug, venueHref } from "./lib";
+import { applyFilters, DEFAULT_FILTERS, type Filters, kindOf, formatDateTime, isNew, monthShort, parts, showHref, slug, venueHref } from "./lib";
 
 const STATUS = { u: "Uitverkocht", v: "Verplaatst", g: "Geannuleerd" } as const;
 
@@ -17,20 +19,46 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
     <>
       <PageHead title="Agenda" />
       <FilterBar data={data} venues={venues} filters={filters} setFilters={setFilters} show={{ venue: true, month: true, when: true }} months={months} count={events.length} />
+      {venues.get(filters.venue) && sourceNote(data, venues.get(filters.venue)!) && <p className="show__note">{sourceNote(data, venues.get(filters.venue)!)}</p>}
       <EventList
         key={JSON.stringify(filters)}
+        memo={`agenda ${JSON.stringify(filters)}`}
         events={events}
         venues={venues}
         data={data}
-        empty={
-          <>
-            <p>Geen shows met deze filters.</p>
-            <button type="button" className="btn" onClick={() => setFilters(DEFAULT_FILTERS)}>
-              Wis filters
-            </button>
-          </>
-        }
+        empty={<Widen data={data} venues={venues} filters={filters} setFilters={setFilters} />}
       />
+    </>
+  );
+}
+
+/** One filter less, with what it would give: so "nothing on Saturday in Limburg" leads somewhere in one tap. */
+const WIDEN: { label: string; active: (f: Filters) => boolean; patch: Partial<Filters> }[] = [
+  { label: "Alle dagen", active: (f) => !!(f.day || f.when || f.month), patch: { day: "", when: "", month: "" } },
+  { label: "Alle zalen en regio’s", active: (f) => !!f.venue, patch: { venue: "" } },
+  { label: "Alle genres", active: (f) => f.genres.length > 0, patch: { genres: [], dance: [] } },
+  { label: "Alle landen", active: (f) => !!f.country, patch: { country: "" } },
+  { label: "Elke zaalgrootte", active: (f) => !!f.tier, patch: { tier: "" } },
+  { label: "Ook theater en overig", active: (f) => f.kind !== "alles", patch: { kind: "alles" } },
+];
+
+function Widen({ data, venues, filters, setFilters }: Common & { filters: Filters; setFilters: (f: Filters) => void }) {
+  const options = WIDEN.filter((w) => w.active(filters))
+    .map((w) => ({ ...w, n: applyFilters(data.events, venues, { ...filters, ...w.patch }).length }))
+    .filter((w) => w.n > 0);
+  return (
+    <>
+      <p>{data.complete ? "Geen shows met deze filters." : "Nog niets gevonden; de rest van de agenda wordt nog geladen…"}</p>
+      <div className="widen">
+        {options.map((w) => (
+          <button key={w.label} type="button" className="btn btn--quiet" onClick={() => setFilters({ ...filters, ...w.patch })}>
+            {w.label} <span className="widen__n">({w.n})</span>
+          </button>
+        ))}
+        <button type="button" className="btn" onClick={() => setFilters(DEFAULT_FILTERS)}>
+          Wis alle filters
+        </button>
+      </div>
     </>
   );
 }
@@ -45,6 +73,7 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
   if (!events.length)
     return (
       <section className="tour">
+        <BackLink />
         <h1 className="tour__name">{name}</h1>
         <FollowButton name={name} big />
         <div className="empty">
@@ -61,6 +90,7 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
   const years = [...new Set(events.map((e) => parts(e.s).y))];
   return (
     <section className="tour" aria-labelledby="tour-h">
+      <BackLink />
       <h1 id="tour-h" className="tour__name">
         {name}
       </h1>
@@ -75,9 +105,11 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
           const support = e.a.length > 1 || e.a[0] !== name ? e.t : "";
           return (
             <li key={e.id} className={e.st === "g" ? "is-cancelled" : undefined}>
-              <time dateTime={e.s} className="tour__date">
-                {p.d} {monthShort(p.m)} {p.y}
-              </time>
+              <a href={showHref(e)} className="tour__date">
+                <time dateTime={e.s}>
+                  {p.d} {monthShort(p.m)} {p.y}
+                </time>
+              </a>
               <span className="tour__city">{v.city}</span>
               <span className="tour__venue">
                 <a href={venueHref(v.id)}>{v.n}</a>
@@ -85,16 +117,9 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
                 {e.st && <span className={`tag tag--${e.st}`}>{STATUS[e.st]}</span>}
                 {isNew(e, data) && <span className="tag tag--new">Nieuw</span>}
               </span>
-              {e.st !== "g" && (
-                <a className={`tour__tix${e.st === "u" ? " row__tix--quiet" : ""}`} href={e.u} target="_blank" rel="noopener noreferrer">
-                  {e.st === "u" ? "Bekijk" : "Tickets"}
-                  <span className="sr-only">
-                    {" "}
-                    voor {formatDate(e.s)} in {v.n}
-                    {e.st === "u" ? ", uitverkocht" : ""} (opent de site van de verkoper)
-                  </span>
-                </a>
-              )}
+              <span className="tour__tix">
+                <TicketLink e={e} />
+              </span>
             </li>
           );
         })}
@@ -112,6 +137,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
   const source = data.sources.find((s) => s.venues.includes(id));
   return (
     <>
+      <BackLink />
       <PageHead title={v.n}>
         <p className="sub">
           <Flag cc={v.cc} /> {v.city}, {COUNTRY_NAME[v.cc]}
@@ -141,6 +167,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
           Bron: {source.name}
           {source.lastSuccess ? `, bijgewerkt ${formatDateTime(source.lastSuccess)}` : ""}
           {!source.ok && " · laatste ophaalpoging mislukt, dit is de vorige stand"}
+          {source.partial && " (stadsagenda: niet altijd volledig)"}
           {v.web && (
             <>
               {" · "}
@@ -163,6 +190,7 @@ export function Sources({ data, venues }: Common) {
   const noSource = data.venues.filter((v) => v.ns);
   return (
     <>
+      <BackLink />
       <PageHead title="Bronnen" />
       <ul className="srclist" aria-label="Bronnen met status">
         {data.sources.map((s) => (

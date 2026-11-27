@@ -3,11 +3,23 @@ import type { SiteData, SiteVenue } from "../lib/site-data";
 import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
 import { getFollowState, newSince, radarEvents, setFollowState, useFollows } from "./follow";
-import { artistHref, bill, slug } from "./lib";
+import { artistHref, bill, showKey, slug } from "./lib";
 import { PageHead } from "./Pages";
 import { cleanTyped, codeHref, createLink, formatCode, joinLink, type JoinMode, onSyncFailure, refreshLink, revokeLink, syncFailed, syncMessage, unlinkDevice } from "./sync";
 
 type Common = { data: SiteData; venues: Map<string, SiteVenue> };
+
+/** Status per show at the previous visit, to point out "Nu uitverkocht", "Nu verplaatst" (Codex: what changed). */
+const SEEN_KEY = "pr.radar-status";
+const NOW: Record<string, string> = { u: "Nu uitverkocht", v: "Nu verplaatst", g: "Nu geannuleerd", "": "Weer te koop" };
+function readSeen(): Record<string, string> {
+  try {
+    const v = JSON.parse(localStorage.getItem(SEEN_KEY) ?? "{}") as unknown;
+    return v && typeof v === "object" ? (v as Record<string, string>) : {};
+  } catch {
+    return {}; // no storage: no change labels, the list itself still works
+  }
+}
 
 /** Screen 5 (bouwplan §9): the followed artists and all their coming shows, with "Nieuw" since the previous visit. */
 export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }) {
@@ -16,6 +28,8 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
   const linkRef = useRef<HTMLElement>(null);
   // "Nieuw" compares with the data seen at the previous visit; this visit is saved once the whole agenda is in.
   const [previousVisit] = useState(() => getFollowState().lastVisit);
+  const [seen] = useState(readSeen);
+  const [onlyChanges, setOnlyChanges] = useState(false);
   useEffect(() => {
     if (data.complete) setFollowState({ ...getFollowState(), lastVisit: data.generatedAt.slice(0, 10) }, false);
   }, [data]);
@@ -23,11 +37,26 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
     if (!joinCode && getFollowState().code) refreshLink().catch(() => undefined); // offline: keep the local list
   }, [joinCode]);
 
-  const events = useMemo(() => radarEvents(data.events, follows.artists), [data, follows.artists]);
-  const playing = new Set(events.flatMap((e) => e.a.map(slug)));
+  const all = useMemo(() => radarEvents(data.events, follows.artists), [data, follows.artists]);
+  // This visit's statuses become the comparison for the next visit, once the whole agenda is in.
+  useEffect(() => {
+    if (!data.complete) return;
+    try {
+      localStorage.setItem(SEEN_KEY, JSON.stringify(Object.fromEntries(all.map((e) => [showKey(e), e.st]))));
+    } catch {
+      // not stored: next visit simply shows no change labels
+    }
+  }, [all, data.complete]);
+  const change = (e: (typeof all)[number]) => {
+    const before = seen[showKey(e)];
+    return before !== undefined && before !== e.st ? NOW[e.st] : undefined;
+  };
+  const playing = new Set(all.flatMap((e) => e.a.map(slug)));
   const quiet = follows.artists.filter((a) => !playing.has(slug(a)));
-  const fresh = (e: (typeof events)[number]) => newSince(e, previousVisit);
-  const newCount = events.filter(fresh).length;
+  const fresh = (e: (typeof all)[number]) => newSince(e, previousVisit);
+  const newCount = all.filter(fresh).length;
+  const changeCount = all.filter((e) => change(e)).length;
+  const events = onlyChanges ? all.filter((e) => fresh(e) || change(e)) : all;
   const toLink = () => linkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
@@ -54,21 +83,23 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
                 </li>
               ))}
             </ul>
+            {data.complete && quiet.length > 0 && <p className="sub">Nu geen shows: {quiet.join(", ")}. Je ziet het hier zodra er een bijkomt.</p>}
             <button type="button" className="linkbtn" onClick={toLink}>
               {follows.code ? "Koppeling beheren" : "Ook op je andere telefoon of laptop?"}
             </button>
           </details>
-          {!data.complete ? (
-            <p className="sub">De rest van de agenda wordt nog geladen…</p>
-          ) : (
-            quiet.length > 0 && <p className="sub">Nu geen shows: {quiet.join(", ")}. Je ziet het hier zodra er een bijkomt.</p>
+          {!data.complete && <p className="sub">De rest van de agenda wordt nog geladen…</p>}
+          {newCount + changeCount > 0 && (
+            <div className="note changes" role="status">
+              <p>
+                Sinds je vorige bezoek: {[newCount && `${newCount} ${newCount === 1 ? "nieuwe show" : "nieuwe shows"}`, changeCount && `${changeCount} ${changeCount === 1 ? "show veranderd" : "shows veranderd"}`].filter(Boolean).join(" en ")}.
+              </p>
+              <button type="button" className="btn btn--quiet" aria-pressed={onlyChanges} onClick={() => setOnlyChanges((x) => !x)}>
+                {onlyChanges ? "Toon alles" : "Alleen wat er veranderd is"}
+              </button>
+            </div>
           )}
-          {newCount > 0 && (
-            <p className="note" role="status">
-              {newCount} {newCount === 1 ? "nieuwe show" : "nieuwe shows"} sinds je vorige bezoek (label “Nieuw”).
-            </p>
-          )}
-          <EventList events={events} venues={venues} data={data} fresh={fresh} empty={<p>{data.complete ? "Geen van je artiesten staat nu in de agenda." : "De agenda wordt nog geladen…"}</p>} />
+          <EventList events={events} venues={venues} data={data} fresh={fresh} note={change} memo="radar" empty={<p>{data.complete ? "Geen van je artiesten staat nu in de agenda." : "De agenda wordt nog geladen…"}</p>} />
         </>
       )}
       <Link sectionRef={linkRef} setMsg={setMsg} />
