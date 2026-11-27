@@ -638,6 +638,38 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
 
+## patronaat.nl (29)
+
+- Any Given Day
+- Artin Muziek & friends
+- Back to the Disco
+- Born From Pain + Inherited
+- Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
+- Complexity Presents: Trhä
+- Disco Del Mundo
+- Dream State
+- FUCK THE CISTEM
+- Geannuleerd: KMFDM
+- Hagane
+- Housequake
+- King Buffalo + Spirit Mother
+- Luicidal + Grindpad
+- Moonspell + Iotunn + TodoMal
+- Nieuwjaarsgala
+- Nordjevel + Svarttjern + Malphas + Unviar
+- Orden Ogan + Ensiferum + Angus McSix
+- Patronaatje tot t’ Gaatje
+- REZN + Coltaine
+- Show Me The Body
+- SiM + The Haunt
+- Sivert Høyem + support
+- State Power + Ker Ker
+- StonerGrungeFest met 22AD, Baardvader, Sustain
+- Sugar Spine + Braces
+- Terror + Bane + Start Today + Peace of Mind
+- Turmion Kätilöt + STAM1NA
+- YUNA XL
+
 ## klokgebouw.nl (6)
 
 - Artsy & Craftsy Market by Abunai
@@ -1008,6 +1040,16 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Amber Arcades, I am Oak & The T.S. Eliot Appreciation Society
 - Class of 2027
 
+## dynamo-eindhoven.nl (7)
+
+- BIOTOOP
+- FREE YOUTH COLLECTIVE
+- HOME GROWN SESSIONS #32
+- Own The Spot: Indoor Edition
+- Queerhoven Boardgame Night
+- ZINLOOS GELUID
+- the noise of holland
+
 ## visitgroningen.nl (74)
 
 - 3JS – 20 jaar 3JS
@@ -1099,6 +1141,12 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - LAKSHMI
 - Mus & Kapitein Kwaadbaard en De 5 Slangen
 - The Current
+
+## ing.arena.brussels (3)
+
+- DE MIA’S 2026
+- DEMON SLAYER 29.11
+- TAYC
 
 ## rheinenergiestadion.de (4)
 
