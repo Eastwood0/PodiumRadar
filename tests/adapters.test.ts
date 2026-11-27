@@ -615,3 +615,19 @@ describe("HTML clubs (B49)", async () => {
     expect(ev[1].artists).toEqual(["Ranger Trucco (3HR set)", "Capron", "Sydney Dé"]);
   });
 });
+
+describe("City marketing agendas on the plaece platform (B52)", async () => {
+  const { plaeceItems, plaeceEvents } = await import("../scripts/adapters/plaece");
+  const items = plaeceItems(fixture("plaece-agenda.html"));
+  it("reads the ItemList and keeps only our venue, one event per performance, with the real show time", () => {
+    expect(items).toHaveLength(2);
+    const ev = plaeceEvents(items, [[/martini ?plaza/i, "martiniplaza"]]);
+    expect(ev).toHaveLength(1);
+    expect(ev[0]).toMatchObject({ venueId: "martiniplaza", title: "William Janz", start: "2026-11-27T20:00:00+01:00", hasTime: true });
+  });
+  it("gives a performance without a time the day only, and an empty page no items", () => {
+    const ev = plaeceEvents([{ name: "X", URL: "https://www.visitgroningen.nl/x", location: { name: "Martiniplaza" }, eventSchedule: [{ startDate: "2027-01-10T00:00:00" }] }], [[/martiniplaza/i, "martiniplaza"]]);
+    expect(ev[0].hasTime).toBe(false);
+    expect(plaeceItems("<html></html>")).toEqual([]);
+  });
+});

@@ -50,5 +50,11 @@ jobs:
           git add data/ docs/dekking.md docs/categorie-twijfel.md
           if git diff --cached --quiet; then echo "Geen wijzigingen"; exit 0; fi
           git commit -m "Data: $(date -u +%Y-%m-%d) ($(node -e 'console.log(require("./data/events.json").events.length)') events)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # Only data files are committed here. If main got other data meanwhile (another run, a merge), this run's
+          # data is the newest, so it wins the conflict (-X theirs = the commit being replayed). Retry once on a race.
+          for attempt in 1 2; do
+            git pull --rebase -X theirs origin main && git push origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 15
+          done
+          exit 1

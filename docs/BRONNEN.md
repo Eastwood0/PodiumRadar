@@ -139,6 +139,16 @@ Alle robots.txt-bestanden hieronder zijn op deze datum gelezen; ze staan onze bo
 | Brabanthallen | Codex meldde de agenda als leesbaar, maar onze bot krijgt nog steeds een SiteGround-captcha (HTTP 202, `sgcaptcha`) | Blijft zonder bron (B23) | eigen controle 26 nov 2026 |
 | Gedeeltelijke stadsagenda's | Visit Zuid-Limburg (Nieuwe Nor), Explore Breda (Chassé), Visit Maastricht (Theater aan het Vrijthof), Visit Groningen (MartiniPlaza): JSON-LD per event, robots ok (soms crawl-delay 2), maar per zaal geen volledige lijst | Mogelijke aanvulling; voorgelegd aan Ralf | Codex-rapport 26 nov 2026 |
 
+## Aanvullende stadsagenda's en clubs — gecontroleerd 27 november 2026
+
+| Onderwerp | Bevinding | Gevolg | Bron |
+|---|---|---|---|
+| Visit Maastricht, Visit Groningen | Zelfde platform ("plaece"). De agendapagina (`?page=N` toegestaan, crawl-delay 2) bevat een ItemList met per event de locatie en alle speelmomenten (`eventSchedule`); `startDate` van het Event is de publicatiedatum. Maastricht 115 items (5 pagina's), Groningen 868 (37 pagina's) | `plaece.ts`: Theater aan het Vrijthof (19), MartiniPlaza (184), gedeeltelijk | [visitmaastricht.com/nl/uitagenda](https://www.visitmaastricht.com/nl/uitagenda), [visitgroningen.nl culturele agenda](https://www.visitgroningen.nl/nl/ontdekken/stad/culturele-agenda) |
+| Explore Breda | Locatiepagina Chassé linkt een selectie voorstellingen; elke pagina heeft JSON-LD (tijden in UTC), maar de `url` in de JSON-LD is kapot ("explorebreda.comnl") | Adapter gebruikt het paginaadres; 13 voorstellingen, gedeeltelijk | [explorebreda.com Chassé](https://www.explorebreda.com/nl/locaties/chasse-theater) |
+| Visit Zuid-Limburg | Agendalijst laadt via een script onder `/mxms/`, dat robots.txt verbiedt (alleen `/mxms/api/` en `/mxms/media/` mogen); er was per ongeluk één verzoek naar dat script, daarna gestopt en niet gebruikt | Geen bron voor Nieuwe Nor | [robots.txt](https://www.visitzuidlimburg.nl/robots.txt) |
+| RADION, Shelter, Thuishaven, EKKO, Dynamo, Annabel, TOFFLER | Alleen HTML; robots.txt staat de agendapagina's toe; live 190 events | `clubs-html.ts` | eigen controle 26 nov 2026 |
+| Fetch-workflow | Run 27 faalde op een conflict in de datafiles (main kreeg intussen nieuwere data); de volgende run leverde alles | Workflow: bij conflict wint de data van de nieuwste run, één herhaling | GitHub Actions 26 nov 2026 |
+
 ## Uit de planfase (9 oktober 2026, nog niet opnieuw gecontroleerd)
 
 | Onderwerp | Bevinding | Bron |

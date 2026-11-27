@@ -94,8 +94,8 @@ Komt later: `npm run venues:resolve` (Ticketmaster-ID's, zodra de sleutel werkt)
   - Theaters (B45): `ticketmatic-theatre.ts` (Munttheater, Stadsschouwburg Utrecht, Schouwburg & Concertzaal Tilburg: sitemap + JSON-LD; Utrecht/Tilburg ±10 min per run), `maaspoort.ts`, `plt.ts` (Theater Heerlen, Theater Kerkrade, Toon Hermans Theater), `theater-roermond.ts` (De Oranjerie), `carre.ts` (eigen JSON), `delamar.ts`, `musis.ts` (eigen API), Theater Rotterdam via `uitagenda-rotterdam.ts`.
   - Melkweg (tweede bron) en Paradiso via `iamsterdam.ts` (B46).
   - `http.ts` volgt Crawl-delay (B47).
-- Geen bron (`src/lib/no-source.ts`): Brabanthallen, Nieuwe Nor, Chassé, Parktheater (botcontroles/403, geen stadsagenda gevonden), Theater aan het Vrijthof (zoekapp), MartiniPlaza (sitemap verouderd, verder laden verboden in robots.txt), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Warehouse Elementenstraat.
+- Geen bron (`src/lib/no-source.ts`): Brabanthallen, Nieuwe Nor, Parktheater (botcontroles/403), Goffertpark, Koning Boudewijnstadion, MECC, Signal Iduna Park, Warehouse Elementenstraat.
 - Nooit bot-blokkades omzeilen (B23); geen sleutels uit andermans frontend gebruiken (Paradiso-GraphQL).
 - Skills in het project: `.claude/skills/be-ambitious` en `.claude/skills/aislop` (zie README daar; de aislop-CLI mocht in de cloudsessie niet draaien → handmatige controle).
 - Clubs (B49/B51): `clubs.ts` (Complex, Lofi, BASIS, Garage Noord via WeTicket-feed). Resident Advisor alleen met schriftelijke toestemming; TicketSwap en Paylogic niet.
-- Wacht op Ralf: gedeeltelijke stadsagenda's voor zalen zonder bron?; RA-toestemming vragen?; HTML-clubs (Ekko, Dynamo, Shelter, Radion, Thuishaven, Annabel, Toffler) bouwen.
+- HTML-clubs (B52): `clubs-html.ts` (RADION, Shelter, Thuishaven, EKKO, Dynamo, Annabel, TOFFLER). Gedeeltelijke stadsagenda's: `plaece.ts` (Visit Groningen → MartiniPlaza, Visit Maastricht → Theater aan het Vrijthof) en Explore Breda → Chassé (`clubs.ts`). Nieuwe Nor: Visit Zuid-Limburg alleen via een door robots.txt verboden script → geen bron. Geen RA (B52).

@@ -27,7 +27,8 @@ import { sparkassenpark } from "./sparkassenpark";
 import { spotGroningen } from "./spot-groningen";
 import { kattendans } from "./wp-theatre";
 import { carre } from "./carre";
-import { basis, complex, garageNoord, lofi } from "./clubs";
+import { basis, complex, exploreBredaChasse, garageNoord, lofi } from "./clubs";
+import { visitGroningen, visitMaastricht } from "./plaece";
 import { annabel, dynamo, ekko, radion, shelter, thuishaven, toffler } from "./clubs-html";
 import { delamar } from "./delamar";
 import { maaspoort } from "./maaspoort";
@@ -99,6 +100,10 @@ export const ADAPTERS: Adapter[] = [
   dynamo,
   annabel,
   toffler,
+  // Partial sources via city marketing agendas for venues without their own (B52)
+  visitGroningen, // MartiniPlaza
+  visitMaastricht, // Theater aan het Vrijthof
+  exploreBredaChasse, // Chassé
   // Maassilo zit in uitagendaRotterdam
   // België
   ...beatVenues, // AFAS Dome, Lotto Arena, Vorst Nationaal, Trixxo Arena

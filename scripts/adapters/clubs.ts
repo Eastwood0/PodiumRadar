@@ -58,8 +58,12 @@ export function agendaLinks(html: string, base: string, pattern: RegExp): string
   return [...new Set(urls)];
 }
 
-/** Agenda page → every event page → its JSON-LD (one request per event page, max 1 per second). */
-function agendaJsonLdAdapter(name: string, venueId: string, agenda: string, pattern: RegExp): Adapter {
+/**
+ * Agenda page → every event page → its JSON-LD (one request per event page, max 1 per second). `category`: label for
+ * every event (default "clubnacht"; null keeps the site's own type). The event page itself is the link: some
+ * sites print a broken URL in their JSON-LD.
+ */
+export function agendaJsonLdAdapter(name: string, venueId: string, agenda: string, pattern: RegExp, category: string | null = CLUB): Adapter {
   return {
     name,
     venues: [venueId],
@@ -71,7 +75,7 @@ function agendaJsonLdAdapter(name: string, venueId: string, agenda: string, patt
         try {
           for (const e of extractJsonLdEvents((await fetchText(u)).body).events) {
             const ev = fromJsonLd(e, u, venueId, "NL");
-            if (ev) out.push({ ...ev, sourceCategory: CLUB, sourceId: `${u}|${ev.start}` });
+            if (ev) out.push({ ...ev, url: u, sourceCategory: category ?? ev.sourceCategory, sourceId: `${u}|${ev.start}` });
           }
         } catch (e) {
           failed++;
@@ -87,3 +91,15 @@ function agendaJsonLdAdapter(name: string, venueId: string, agenda: string, patt
 
 /** Complex (Maastricht): the agenda lists every night; each event page carries JSON-LD with start time. */
 export const complex = agendaJsonLdAdapter("complexmaastricht.nl", "complex-maastricht", "https://complexmaastricht.nl/agenda", /^https:\/\/complexmaastricht\.nl\/agenda\/(?!archive)[^/?#]+$/);
+
+/**
+ * Chassé Theater (Breda): its own site refuses bots (403). Explore Breda, the city's marketing site, has a location page
+ * for Chassé that links a selection of its shows; each show page carries JSON-LD (B52, partial source).
+ */
+export const exploreBredaChasse = agendaJsonLdAdapter(
+  "explorebreda.com (Chassé)",
+  "chasse",
+  "https://www.explorebreda.com/nl/locaties/chasse-theater",
+  /^https:\/\/www\.explorebreda\.com\/nl\/evenementen\/[^/?#]+$/,
+  null,
+);
