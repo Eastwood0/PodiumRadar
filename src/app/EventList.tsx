@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 import { EventCard } from "./EventCard";
 import { MONTHS_LONG, monthKey } from "./lib";
 
 const PAGE = 60;
+/** The first render shows a screenful only, so the first shows appear sooner on a slow phone; the rest follows at once. */
+const FIRST = 16;
 
 /** Chronological list with month headings; renders in pages so long lists stay fast on phones. */
 export function EventList({ events, venues, data, showVenue = true, empty, fresh }: { events: SiteEvent[]; venues: Map<string, SiteVenue>; data: SiteData; showVenue?: boolean; empty: React.ReactNode; fresh?: (e: SiteEvent) => boolean }) {
-  const [shown, setShown] = useState(PAGE);
+  const [shown, setShown] = useState(FIRST);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setTimeout(() => setShown((n) => Math.max(n, PAGE)), 0));
+    return () => cancelAnimationFrame(id);
+  }, []);
   if (!events.length) return <div className="empty">{empty}</div>;
   const visible = events.slice(0, shown);
   const groups: { key: string; items: SiteEvent[] }[] = [];

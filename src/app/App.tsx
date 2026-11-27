@@ -3,7 +3,7 @@ import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } f
 import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
-import { Agenda, ArtistPage, NotFound, Sources, VenuePage } from "./Pages";
+import { Agenda, ArtistPage, NotFound, PageHead, Sources, VenuePage } from "./Pages";
 import { getFollowState } from "./follow";
 import { Radar } from "./Radar";
 import { flush } from "./sync";
@@ -11,6 +11,12 @@ import { createSearch } from "./search";
 import { SearchBox } from "./SearchBox";
 
 const FILTER_KEY = "pr.filters";
+/**
+ * Runs a second after the first screen, once the browser has nothing urgent to do, so the rest of the year does not
+ * compete with the first shows for bandwidth on a slow connection. Safari has no requestIdleCallback.
+ */
+const afterIdle = (task: () => void) =>
+  setTimeout(() => (typeof requestIdleCallback === "function" ? requestIdleCallback(task, { timeout: 2000 }) : task()), 1000);
 const currentRoute = () => (typeof location === "undefined" ? ({ view: "overzicht" } as Route) : parseRoute(location.hash));
 
 /** `bill`: the opening line-up, computed at build time so it is in the HTML before any data loads. */
@@ -44,11 +50,14 @@ export default function App({ bill }: { bill?: Bill }) {
       .then((d: CompactSiteData) => {
         startTransition(() => setData(expandSiteData(d)));
         // The rest of the year comes in a second file, after the first screen (B48). If it fails, the first part stays.
-        if (d.more)
-          fetch(d.more)
-            .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-            .then((rest: { events: CompactSiteData["events"] }) => startTransition(() => setData(expandSiteData(d, rest.events))))
-            .catch(() => setPartial(true));
+        const more = d.more;
+        if (more)
+          afterIdle(() =>
+            fetch(more)
+              .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+              .then((rest: { events: CompactSiteData["events"] }) => startTransition(() => setData(expandSiteData(d, rest.events))))
+              .catch(() => setPartial(true)),
+          );
       })
       .catch(() => setError(true));
     return () => {
@@ -174,7 +183,7 @@ export default function App({ bill }: { bill?: Bill }) {
             </>
           )
         ) : !data ? (
-          <Loading />
+          <Loading title={route.view === "agenda" ? "Agenda" : route.view === "radar" ? "Mijn radar" : undefined} />
         ) : route.view === "agenda" ? (
           <Agenda data={data} venues={venues} months={months} filters={agendaFilters} setFilters={setAgendaFilters} />
         ) : route.view === "artiest" ? (
@@ -199,13 +208,17 @@ export default function App({ bill }: { bill?: Bill }) {
   );
 }
 
-function Loading() {
+/** While the agenda downloads, the page title is already there instead of an empty screen. */
+function Loading({ title }: { title?: string }) {
   return (
-    <div className="loading" role="status">
-      <span className="sr-only">Agenda laden…</span>
-      {Array.from({ length: 6 }, (_, i) => (
-        <div key={i} className="loading__row" aria-hidden="true" />
-      ))}
-    </div>
+    <>
+      {title && <PageHead title={title} />}
+      <div className="loading" role="status">
+        <span className="sr-only">Agenda laden…</span>
+        {Array.from({ length: 6 }, (_, i) => (
+          <div key={i} className="loading__row" aria-hidden="true" />
+        ))}
+      </div>
+    </>
   );
 }
