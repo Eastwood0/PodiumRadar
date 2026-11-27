@@ -1,8 +1,9 @@
 import type { SiteVenue } from "../lib/site-data";
 import { artistHref, type ArtistEntry, venueHref } from "./lib";
+import { areaWords, PLACE_PREFIX, placesFor, wholeLabel } from "./places";
 
 export interface SearchHit {
-  kind: "artiest" | "zaal" | "volg";
+  kind: "artiest" | "zaal" | "regio" | "volg";
   label: string;
   detail: string;
   href: string;
@@ -118,7 +119,13 @@ export function createSearch(artists: ArtistEntry[], venues: SiteVenue[], descri
   };
   const items: Item[] = [
     ...artists.map((a) => make("artiest", a.name, "", artistHref(a.name), describeArtist(a), a.count)),
-    ...venues.map((v) => make("zaal", v.n, `${v.city} ${CITY_ALIASES[v.city] ?? ""}`, venueHref(v.id), `${v.city} · ${v.cc}`, 1000)),
+    ...venues.map((v) => make("zaal", v.n, `${v.city} ${CITY_ALIASES[v.city] ?? ""} ${areaWords(v.city)}`, venueHref(v.id), `${v.city} · ${v.cc}`, 1000)),
+    // A region or whole city opens the agenda filtered on it ("#regio-noord-brabant", B54).
+    // Ranked above the venues it contains ("Noord-Brabant" before "013" for "brabant"): no penalty for a two-word name.
+    ...placesFor(venues).map((p) => ({
+      ...make("regio", p.name, `${p.aliases.join(" ")} ${CITY_ALIASES[p.name] ?? ""}`, `#regio-${p.id.slice(PLACE_PREFIX.length)}`, `${wholeLabel(p.kind)} · agenda`, 2000),
+      size: 1,
+    })),
   ];
   return (query: string, limit = 8): SearchHit[] => {
     const n = norm(query);

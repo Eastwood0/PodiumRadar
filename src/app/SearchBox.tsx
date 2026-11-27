@@ -38,7 +38,7 @@ export function SearchBox({ search, failed = false }: { search: ((q: string) => 
   return (
     <div className="search" ref={wrap}>
       <label htmlFor={`${listId}-input`} className="sr-only">
-        Zoek artiest of zaal
+        Zoek artiest, zaal of regio
       </label>
       <svg className="search__icon" viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="11" cy="11" r="7" />
@@ -53,7 +53,7 @@ export function SearchBox({ search, failed = false }: { search: ((q: string) => 
         aria-activedescendant={showList && hits[active] ? `${listId}-${active}` : undefined}
         aria-autocomplete="list"
         autoComplete="off"
-        placeholder={search ? "Zoek artiest of zaal" : failed ? "Zoeken niet beschikbaar" : "Agenda laden…"}
+        placeholder={search ? "Zoek artiest, zaal of regio" : failed ? "Zoeken niet beschikbaar" : "Agenda laden…"}
         disabled={!search}
         value={q}
         onChange={(ev) => {

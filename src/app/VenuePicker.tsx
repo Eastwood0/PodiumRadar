@@ -1,4 +1,5 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { wholeLabel } from "./places";
 import { norm, typoDistance } from "./search";
 
 export interface VenueOption {
@@ -8,15 +9,28 @@ export interface VenueOption {
   cc: "NL" | "BE" | "DE";
   /** Shows that match the other filters. */
   count: number;
+  /** Set for a whole region or city ("provincie", "stad", …) instead of one venue. */
+  kind?: string;
+  /** Number of venues in that region or city. */
+  venues?: number;
+  /** Extra words that find it, e.g. the province of a venue's city. */
+  alt?: string;
 }
 
 const COUNTRY = { NL: "Nederland", BE: "België", DE: "Duitsland" } as const;
 const ORDER = ["NL", "BE", "DE"] as const;
 const collator = new Intl.Collator("nl", { sensitivity: "base", numeric: true });
 
-/** Sorted A–Z within each country, Nederland first (the list the picker opens with). */
+const group = (o: VenueOption) => (o.kind ? -1 : ORDER.indexOf(o.cc));
+
+/** Regions and cities first, then venues A–Z within each country, Nederland first (the list the picker opens with). */
 export function sortVenues(list: VenueOption[]): VenueOption[] {
-  return [...list].sort((a, b) => ORDER.indexOf(a.cc) - ORDER.indexOf(b.cc) || collator.compare(a.n, b.n));
+  return [...list].sort((a, b) => group(a) - group(b) || ORDER.indexOf(a.cc) - ORDER.indexOf(b.cc) || collator.compare(a.n, b.n));
+}
+
+/** "Noord-Brabant (hele provincie)", "Amsterdam (hele stad)" or "Ziggo Dome, Amsterdam". */
+export function optionLabel(o: { n: string; city: string; kind?: string }): string {
+  return o.kind ? `${o.n} (${wholeLabel(o.kind)})` : `${o.n}, ${o.city}`;
 }
 
 /**
@@ -28,7 +42,7 @@ export function venueScore(query: string, v: VenueOption): number | undefined {
   if (!q) return 0;
   const name = norm(v.n);
   if (name.startsWith(q)) return 0;
-  const words = `${name} ${norm(v.city)}`.split(" ");
+  const words = `${name} ${norm(v.city)} ${norm(v.alt ?? "")}`.split(" ").filter(Boolean);
   let total = 1;
   for (const t of q.split(" ")) {
     if (words.some((w) => w.startsWith(t))) continue;
@@ -52,7 +66,7 @@ export function VenuePicker({
 }: {
   venues: VenueOption[];
   /** The chosen venue, also when it has no shows under the other filters: it must stay visible and clearable. */
-  selected?: { id: string; n: string; city: string };
+  selected?: { id: string; n: string; city: string; kind?: string };
   onChange: (id: string) => void;
 }) {
   const [q, setQ] = useState("");
@@ -65,7 +79,7 @@ export function VenuePicker({
 
   const hits = useMemo(() => {
     const sorted = sortVenues(venues);
-    if (!q.trim()) return sorted;
+    if (!q.trim()) return sorted.filter((v) => v.kind !== "stad"); // whole cities appear once you type
     return sorted
       .map((v) => ({ v, s: venueScore(q, v) }))
       .filter((x): x is { v: VenueOption; s: number } => x.s !== undefined)
@@ -116,7 +130,7 @@ export function VenuePicker({
           aria-activedescendant={open && active >= 0 && hits[active] ? `${id}-${active}` : undefined}
           autoComplete="off"
           spellCheck={false}
-          placeholder={selected ? `${selected.n}, ${selected.city}` : "Alle zalen · zoek zaal of stad"}
+          placeholder={selected ? optionLabel(selected) : "Alle zalen · zoek zaal, stad of regio"}
           className={selected ? "has-value" : undefined}
           value={q}
           onChange={(ev) => {
@@ -145,7 +159,7 @@ export function VenuePicker({
         {selected && (
           <button type="button" className="vpick__clear" onClick={() => pick(undefined)}>
             <span aria-hidden="true">×</span>
-            <span className="sr-only">Zaalkeuze wissen ({selected.n})</span>
+            <span className="sr-only">Keuze wissen ({selected.n})</span>
           </button>
         )}
       </div>
@@ -158,9 +172,9 @@ export function VenuePicker({
           )}
           {hits.map((v, i) => (
             <li key={v.id} role="presentation">
-              {grouped && (i === 0 || hits[i - 1].cc !== v.cc) && (
+              {grouped && (i === 0 || group(hits[i - 1]) !== group(v)) && (
                 <span className="vpick__group" aria-hidden="true">
-                  {COUNTRY[v.cc]}
+                  {v.kind ? "Regio’s" : COUNTRY[v.cc]}
                 </span>
               )}
               <div
@@ -175,8 +189,8 @@ export function VenuePicker({
               >
                 <span className="vpick__name">{v.n}</span>
                 <span className="vpick__meta">
-                  {v.city}
-                  {!grouped && ` · ${v.cc}`}
+                  {v.kind ? `${wholeLabel(v.kind)} · ${v.venues} ${v.venues === 1 ? "zaal" : "zalen"}` : v.city}
+                  {(!grouped || v.kind) && ` · ${v.cc}`}
                 </span>
                 <span className="vpick__count">{v.count}</span>
               </div>

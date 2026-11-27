@@ -1,4 +1,5 @@
 /** Helpers for the website: formatting, slugs, routes and "new" labels. Pure functions, unit-tested. */
+import { matchesPlace, PLACE_PREFIX, placesFor } from "./places";
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 
 export const TZ = "Europe/Amsterdam";
@@ -74,7 +75,7 @@ export function slug(s: string): string {
 
 export type Route =
   | { view: "overzicht" }
-  | { view: "agenda"; when?: Exclude<When, ""> }
+  | { view: "agenda"; when?: Exclude<When, "">; place?: string }
   | { view: "bronnen" }
   | { view: "radar"; join?: string }
   | { view: "artiest"; slug: string }
@@ -86,6 +87,7 @@ export function parseRoute(hash: string): Route {
   if (h.startsWith("artiest-") && h.length > 8) return { view: "artiest", slug: h.slice(8) };
   if (h.startsWith("zaal-") && h.length > 5) return { view: "zaal", id: h.slice(5) };
   if (h === "agenda/weekend" || h === "agenda/week") return { view: "agenda", when: h.slice(7) as Exclude<When, ""> };
+  if (h.startsWith("regio-") && h.length > 6) return { view: "agenda", place: `${PLACE_PREFIX}${h.slice(6)}` };
   if (h === "agenda" || h === "bronnen") return { view: h };
   if (h === "radar") return { view: "radar" };
   if (h.startsWith("koppel-") && h.length > 7) return { view: "radar", join: h.slice(7) };
@@ -179,13 +181,14 @@ export function matchesGenres(e: SiteEvent, f: Filters): boolean {
 /** `today` only matters for the "when" filter. Genres apply only where the genre row is shown (not for theatre). */
 export function applyFilters(events: SiteEvent[], venues: Map<string, SiteVenue>, f: Filters, today = todayLocal()): SiteEvent[] {
   const range = f.when ? whenRange(f.when, today) : undefined;
+  const places = f.venue.startsWith(PLACE_PREFIX) ? placesFor([...venues.values()]) : [];
   return events.filter((e) => {
     const v = venues.get(e.v);
     if (!v) return false;
     if (f.kind !== "alles" && kindOf(e) !== f.kind) return false;
     if (f.country && v.cc !== f.country) return false;
     if (f.tier && v.tier !== f.tier) return false;
-    if (f.venue && e.v !== f.venue) return false;
+    if (!matchesPlace(f.venue, v, places)) return false;
     if (f.month && monthKey(e.s) !== f.month) return false;
     if (range && (e.s.slice(0, 10) < range[0] || e.s.slice(0, 10) > range[1])) return false;
     if (f.kind !== "theater" && !matchesGenres(e, f)) return false;

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { DANCE_STYLES, MUSIC_GENRES } from "../lib/genres";
 import { applyFilters, DEFAULT_FILTERS, type Filters, type Kind, MONTHS_LONG, parts, todayLocal, type When, WHEN_LABEL, whenRange } from "./lib";
+import { areaWords, PLACE_PREFIX, placesFor } from "./places";
 import { type VenueOption, VenuePicker } from "./VenuePicker";
 
 const KINDS: { kind: Kind; label: string }[] = [
@@ -76,18 +77,31 @@ export function FilterBar({
   const extra = (filters.country ? 1 : 0) + (filters.tier ? 1 : 0) + (genresShown ? filters.genres.length + filters.dance.length : 0);
 
   // Venues with their number of shows under the other filters, so the picker never offers an empty venue.
+  // Regions and whole cities (B54) come with the venues; each only when it has shows.
+  const places = useMemo(() => placesFor(data.venues), [data.venues]);
   const venueOptions = useMemo<VenueOption[]>(() => {
     if (!show.venue) return [];
     const counts = new Map<string, number>();
     for (const e of applyFilters(data.events, venueMap, { ...filters, venue: "" })) counts.set(e.v, (counts.get(e.v) ?? 0) + 1);
-    return data.venues.filter((v) => counts.has(v.id)).map((v) => ({ id: v.id, n: v.n, city: v.city, cc: v.cc, count: counts.get(v.id)! }));
-  }, [show.venue, data, venueMap, filters]);
+    const single = data.venues.filter((v) => counts.has(v.id)).map((v) => ({ id: v.id, n: v.n, city: v.city, cc: v.cc, count: counts.get(v.id)!, alt: areaWords(v.city) }));
+    const areas = places
+      .map((p) => {
+        const inside = single.filter((v) => p.cities.includes(v.city));
+        return { id: p.id, n: p.name, city: "", cc: p.cc, kind: p.kind, venues: inside.length, alt: p.aliases.join(" "), count: inside.reduce((n, v) => n + v.count, 0) };
+      })
+      .filter((p) => p.count > 0);
+    return [...areas, ...single];
+  }, [show.venue, data, venueMap, filters, places]);
+  const place = places.find((p) => p.id === filters.venue);
+  const selected = place ? { id: place.id, n: place.name, city: "", kind: place.kind } : venueMap.get(filters.venue);
 
   /** Changing country or size keeps the chosen venue only if it still fits. */
   const keepVenue = (patch: Partial<Filters>) => {
-    const v = show.venue ? venueMap.get(filters.venue) : undefined;
+    const v = venueMap.get(filters.venue);
     const next = { ...filters, ...patch };
-    const fits = !v || ((!next.country || v.cc === next.country) && (!next.tier || v.tier === next.tier));
+    const fitsPlace = !next.country || next.country === place?.cc;
+    const fitsVenue = !v || ((!next.country || v.cc === next.country) && (!next.tier || v.tier === next.tier));
+    const fits = !show.venue || (filters.venue.startsWith(PLACE_PREFIX) ? fitsPlace : fitsVenue);
     setFilters(fits ? next : { ...next, venue: "" });
   };
 
@@ -121,7 +135,7 @@ export function FilterBar({
       )}
       {show.venue && (
         <div className="filters__row">
-          <VenuePicker venues={venueOptions} selected={venueMap.get(filters.venue)} onChange={(venue) => set({ venue })} />
+          <VenuePicker venues={venueOptions} selected={selected} onChange={(venue) => set({ venue })} />
         </div>
       )}
       <div className="filters__row">

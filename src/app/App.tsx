@@ -24,7 +24,7 @@ export default function App({ bill }: { bill?: Bill }) {
   useEffect(() => {
     setRoute(currentRoute());
     // Stored filters from an older version may miss newer fields: fill them with the defaults.
-    setFiltersState(migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})));
+    setFiltersState({ ...migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})), when: "" });
     const onHash = () => {
       setRoute(currentRoute());
       window.scrollTo(0, 0);
@@ -62,17 +62,33 @@ export default function App({ bill }: { bill?: Bill }) {
     save(FILTER_KEY, f);
   }, []);
 
-  // "#agenda/weekend" and "#agenda/week" (buttons on the overview) set the period and show the agenda.
+  // "#regio-<id>" (from the search box) opens the agenda filtered on that region or city.
   useEffect(() => {
-    if (route.view !== "agenda" || !route.when) return;
-    const when = route.when;
+    if (route.view !== "agenda" || !route.place) return;
+    const place = route.place;
     setFiltersState((f) => {
-      const next = { ...f, when, month: "" };
+      const next = { ...f, venue: place, country: "" as const };
       save(FILTER_KEY, next);
       return next;
     });
     history.replaceState(null, "", "#agenda");
+    setRoute({ view: "agenda" });
   }, [route]);
+
+  // The period lives in the address ("#agenda/weekend", "#agenda/week"), so a shared or bookmarked link keeps it
+  // and "Naar de agenda" always means the whole agenda (B54). It is not stored with the other filters.
+  const agendaFilters = useMemo<Filters>(() => ({ ...filters, when: route.view === "agenda" ? (route.when ?? "") : "" }), [filters, route]);
+  const setAgendaFilters = useCallback(
+    (f: Filters) => {
+      setFilters({ ...f, when: "" });
+      const hash = f.when ? `#agenda/${f.when}` : "#agenda";
+      if (location.hash !== hash) {
+        history.replaceState(null, "", hash); // a filter change is not a new page: no extra Back step, no jump to the top
+        setRoute(parseRoute(hash));
+      }
+    },
+    [setFilters],
+  );
 
   const venues = useMemo(() => new Map<string, SiteVenue>((data?.venues ?? []).map((v) => [v.id, v])), [data]);
   const months = useMemo(() => (data ? monthsFrom(data.generatedAt) : []), [data]);
@@ -160,7 +176,7 @@ export default function App({ bill }: { bill?: Bill }) {
         ) : !data ? (
           <Loading />
         ) : route.view === "agenda" ? (
-          <Agenda data={data} venues={venues} months={months} filters={filters} setFilters={setFilters} />
+          <Agenda data={data} venues={venues} months={months} filters={agendaFilters} setFilters={setAgendaFilters} />
         ) : route.view === "artiest" ? (
           <ArtistPage data={data} venues={venues} artistSlug={route.slug} />
         ) : route.view === "zaal" ? (

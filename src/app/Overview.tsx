@@ -5,6 +5,7 @@ import { EventList } from "./EventList";
 import { FilterBar } from "./FilterBar";
 import { followedCells, useFollows } from "./follow";
 import { applyFilters, type Filters, LEVELS, level, MONTHS_LONG, monthKey, monthShort, venueHref } from "./lib";
+import { areaWords } from "./places";
 import { sortVenues, venueScore } from "./VenuePicker";
 
 const COUNTRIES = [
@@ -224,7 +225,7 @@ function MonthList({ rows, months, counts, starred, open, complete }: Grid & { c
   const m = months[i];
   const list = rows
     .map((v) => ({ v, n: counts.get(`${v.id}|${m}`)?.length ?? 0 }))
-    .filter((x) => x.n > 0 && venueScore(q, { ...x.v, count: x.n }) !== undefined);
+    .filter((x) => x.n > 0 && venueScore(q, { ...x.v, count: x.n, alt: areaWords(x.v.city) }) !== undefined);
   const max = Math.max(1, ...list.map((x) => x.n));
   if (!m) return null;
   return (
@@ -250,8 +251,8 @@ function MonthList({ rows, months, counts, starred, open, complete }: Grid & { c
         </button>
       </div>
       <label className="mlist__search">
-        <span className="sr-only">Zoek zaal of stad</span>
-        <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Zoek zaal of stad" autoComplete="off" />
+        <span className="sr-only">Zoek zaal, stad of regio</span>
+        <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Zoek zaal, stad of regio" autoComplete="off" />
       </label>
       {list.length === 0 ? (
         <p className="empty">{complete ? `Geen shows in ${monthName(m)}${q ? ` voor “${q}”` : ""}.` : "De agenda wordt nog geladen…"}</p>

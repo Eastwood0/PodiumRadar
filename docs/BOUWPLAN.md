@@ -1,6 +1,6 @@
 # Podiumradar — Bouwplan
 
-> Werktitel: **Podiumradar**. Versie 0.11 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
+> Werktitel: **Podiumradar**. Versie 0.12 · status **AKKOORD** (Ralf: "Start de bouw", 25 november 2026; fase 1 gestart zonder Ticketmaster)
 > Dit document is de bron van waarheid voor wát er gebouwd wordt. `CLAUDE.md` beschrijft hóé Claude Code werkt.
 > Wijzigingen 0.9 → 0.10 (26 nov 2026): fase 3 uitgewerkt zonder inlog en zonder Ticketmaster (B42–B44), theaters (B45), Melkweg/Paradiso via Uit in Amsterdam (B46), Crawl-delay (B47), agenda in twee delen (B48).
 > Wijzigingen t.o.v. 0.4: zalen achter een bot-blokkade via de culturele stadsagenda (B23); Ziggo Dome en gedeelde platforms via hun eigen JSON (B24); Ticketmaster wacht op goedkeuring (B25).
@@ -346,6 +346,7 @@ Claude Code schrijft hiervoor `docs/ACCOUNTS.md` met genummerde stappen.
 | B51 | Uitwerking B49 na controle: (C) Resident Advisor eist vooraf schriftelijke toestemming voor bots (art. 4.4(f)) en valt daarom af zolang die er niet is; (B) TicketSwap toont een botcontrole en Paylogic verbiedt bots in robots.txt, dus alleen open organisatorfeeds zoals WeTicket. Eerste clubs: Complex, Lofi, BASIS, Garage Noord | Codex-onderzoek 26 nov 2026, door Claude nagecontroleerd; harde regel: robots.txt en voorwaarden respecteren, nooit blokkades omzeilen (B23) |
 | B52 | Geen toestemming vragen aan Resident Advisor: route C blijft dicht. Wel: zeven clubs met alleen HTML (RADION, Shelter, Thuishaven, EKKO, Dynamo, Annabel, TOFFLER) en de gedeeltelijke stadsagenda's als aanvulling voor zalen zonder eigen bron | Ralf 26 nov 2026: "1. Ja 2. Ja 3. Nee" |
 | B53 | Herindeling site: affiche ingekort tot 6 namen met "Meer namen" en snelle ingangen "Dit weekend" / "Komende 7 dagen"; filter "Wanneer" (weekend, 7 dagen) naast de maand; zaalkeuze als zoekveld met typeahead, A–Z per land; minder gebruikte filters onder "Meer filters"; overzicht op de telefoon per maand een lijst in plaats van de jaartabel; zalen zonder bron samengevat op één regel | Ralf 26 nov 2026: affiche "neemt veel plek in", zaal zoeken kon niet typen en stond niet op alfabet; Codex-review + metingen (overzicht 7,8 → 4,3 schermen) |
+| B54 | Periode in het adres (`#agenda/weekend`, `#agenda/week`; gewone agenda = `#agenda`, periode wordt niet onthouden). Filteren en zoeken op regio of hele stad: provincies en gebieden met 2+ steden (Randstad, Noord-/Zuid-Holland, Gelderland, Noord-Brabant, Limburg, Zuid-Limburg, Vlaanderen, Noordrijn-Westfalen, Ruhrgebied) en elke stad met 2+ zalen; lijst in `src/app/places.ts`, uit te breiden zonder andere code | Ralf 27 nov 2026: "Doe de weekend-link en zoeken op regio ook" |
 | B17 | Venue-gegevens die nog niet gecontroleerd zijn (`verified: false`) zonder coördinaten/website/ID's | Geen ongecontroleerde feiten in de config; fase 1 vult ze in |
 
 ## 17. Aannames (te valideren)
