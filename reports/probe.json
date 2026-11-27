@@ -1,0 +1,5508 @@
+{
+  "at": "2026-11-27T12:49:41.932Z",
+  "reports": [
+    {
+      "id": "ziggo-dome",
+      "name": "Ziggo Dome",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.ziggodome.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.ziggodome.nl/agenda/",
+          "bytes": 389223,
+          "title": "Ziggo Dome - Agenda",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.ziggodome.nl/nl/agenda/",
+            "https://www.ziggodome.nl/en/agenda/",
+            "https://www.ziggodome.nl/agenda/",
+            "https://www.ziggodome.nl/premium-tickets/"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.ziggodome.nl/",
+          "status": 200,
+          "bytes": 396470,
+          "title": "Ziggo Dome",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.ziggodome.nl/agenda/",
+            "https://www.ziggodome.nl/premium-tickets/"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.ziggodome.nl/nl/agenda/",
+          "status": 200,
+          "finalUrl": "https://www.ziggodome.nl/agenda/",
+          "bytes": 389223,
+          "title": "Ziggo Dome - Agenda",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.ziggodome.nl/nl/agenda/",
+            "https://www.ziggodome.nl/en/agenda/",
+            "https://www.ziggodome.nl/agenda/",
+            "https://www.ziggodome.nl/premium-tickets/"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.ziggodome.nl/en/agenda/",
+          "status": 200,
+          "bytes": 381319,
+          "title": "Ziggo Dome - Agenda",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.ziggodome.nl/en/agenda/",
+            "https://www.ziggodome.nl/nl/agenda/",
+            "https://www.ziggodome.nl/agenda/",
+            "https://www.ziggodome.nl/premium-tickets/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.ziggodome.nl/agenda/",
+          "status": 200,
+          "bytes": 389223,
+          "title": "Ziggo Dome - Agenda",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.ziggodome.nl/nl/agenda/",
+            "https://www.ziggodome.nl/en/agenda/",
+            "https://www.ziggodome.nl/agenda/",
+            "https://www.ziggodome.nl/premium-tickets/"
+          ],
+          "visibleDates": 1
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "http://localhost:3011/sitemap-local.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "robots.txt"
+      },
+      "eventim": {
+        "market": "web__eventim-nl",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "johan-cruijff-arena",
+      "name": "Johan Cruijff ArenA",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.johancruijffarena.nl/en/calendar/",
+          "status": 200,
+          "bytes": 75564,
+          "title": "Johan Cruijff ArenA | Calendar",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.johancruijffarena.nl/en/calendar/",
+            "https://www.johancruijffarena.nl/en/tickets-visits/",
+            "https://www.johancruijffarena.nl/en/concert-arrangementen/",
+            "https://www.johancruijffarena.nl/en/business/business-events/",
+            "https://www.johancruijffarena.nl/en/calendar/467166-ajax-fcdenbosch/",
+            "https://www.johancruijffarena.nl/en/calendar/457744-ajax-fc-utrecht/",
+            "https://www.johancruijffarena.nl/en/calendar/457723-ajax-sc-cambuur/",
+            "https://www.johancruijffarena.nl/en/calendar/461452-ajax-getafecf/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.johancruijffarena.nl/",
+          "status": 200,
+          "finalUrl": "https://www.johancruijffarena.nl/home/",
+          "bytes": 72451,
+          "title": "Johan Cruijff ArenA | Welkom in de Johan Cruijff ArenA!",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.johancruijffarena.nl/kalender/",
+            "https://www.johancruijffarena.nl/tickets-bezoek/",
+            "https://www.johancruijffarena.nl/zakelijk/business-events/",
+            "https://www.johancruijffarena.nl/kalender/467166-ajax-fcdenbosch/",
+            "https://www.johancruijffarena.nl/nieuws/evenementen/u2-treedt-op-in-de-johan-cruijff-arena/",
+            "https://www.johancruijffarena.nl/kalender/457744-ajax-fc-utrecht/",
+            "https://www.johancruijffarena.nl/kalender/457723-ajax-sc-cambuur/",
+            "https://www.johancruijffarena.nl/kalender/461452-ajax-getafecf/"
+          ],
+          "visibleDates": 8
+        },
+        {
+          "url": "https://www.johancruijffarena.nl/en/tickets-visits/",
+          "status": 200,
+          "bytes": 40754,
+          "title": "Johan Cruijff ArenA | Visits & Tickets",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.johancruijffarena.nl/en/calendar/",
+            "https://www.johancruijffarena.nl/en/tickets-visits/",
+            "https://www.johancruijffarena.nl/en/concert-arrangementen/",
+            "https://www.johancruijffarena.nl/en/business/business-events/",
+            "https://www.johancruijffarena.nl/en/tickets-visits/football-concert/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.johancruijffarena.nl/kalender/",
+          "status": 200,
+          "bytes": 78359,
+          "title": "Johan Cruijff ArenA | Kalender",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.johancruijffarena.nl/kalender/",
+            "https://www.johancruijffarena.nl/tickets-bezoek/",
+            "https://www.johancruijffarena.nl/zakelijk/business-events/",
+            "https://www.johancruijffarena.nl/kalender/467166-ajax-fcdenbosch/",
+            "https://www.johancruijffarena.nl/kalender/457744-ajax-fc-utrecht/",
+            "https://www.johancruijffarena.nl/kalender/457723-ajax-sc-cambuur/",
+            "https://www.johancruijffarena.nl/kalender/461452-ajax-getafecf/",
+            "https://www.johancruijffarena.nl/kalender/457765-ajax-fc-groningen/"
+          ],
+          "visibleDates": 12
+        },
+        {
+          "url": "https://www.johancruijffarena.nl/tickets-bezoek/",
+          "status": 200,
+          "bytes": 45670,
+          "title": "Johan Cruijff ArenA | Bezoek & Tickets",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.johancruijffarena.nl/kalender/",
+            "https://www.johancruijffarena.nl/tickets-bezoek/",
+            "https://www.johancruijffarena.nl/zakelijk/business-events/",
+            "https://www.johancruijffarena.nl/tickets-bezoek/voetbal-concert/",
+            "https://www.johancruijffarena.nl/nieuwsbrief-voor-concerten/",
+            "https://www.johancruijffarena.nl/arrangementen/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.johancruijffarena.nl/sitemap.xml",
+        "eventUrls": 287,
+        "sample": [
+          "https://www.johancruijffarena.nl/kalender/468050-backstreet-boys/",
+          "https://www.johancruijffarena.nl/kalender/467259-u2/",
+          "https://www.johancruijffarena.nl/kalender/467001-u2/"
+        ],
+        "note": "index met 16 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.johancruijffarena.nl/kalender/339628-ajax-vrouwen-bayern-munchen-frauen/",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "afas-live",
+      "name": "AFAS Live",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.afaslive.nl/agenda",
+          "status": 200,
+          "bytes": 211730,
+          "title": "AFAS Live - AFAS Live",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {
+            "ticketmaster": 149,
+            "paylogic": 4,
+            "eventim": 9,
+            "eventbrite": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afaslive.nl/agenda",
+            "https://www.afaslive.nl/agenda/quido-van-de-graaf",
+            "https://www.afaslive.nl/nieuws/nieuwsbrief-aanmelden",
+            "https://www.afaslive.nl/premium",
+            "https://www.afaslive.nl/agenda/ademnood-discobal",
+            "https://www.afaslive.nl/agenda/esdeekid",
+            "https://www.afaslive.nl/agenda/beth-hart",
+            "https://www.afaslive.nl/agenda/beabadoobee"
+          ],
+          "visibleDates": 109
+        },
+        {
+          "url": "https://www.afaslive.nl/",
+          "status": 200,
+          "bytes": 43021,
+          "title": "Home - AFAS Live",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afaslive.nl/agenda",
+            "https://www.afaslive.nl/agenda/quido-van-de-graaf",
+            "https://www.afaslive.nl/nieuws/nieuwsbrief-aanmelden",
+            "https://www.afaslive.nl/premium",
+            "https://www.afaslive.nl/agenda/beabadoobee",
+            "https://www.afaslive.nl/agenda/role-model",
+            "https://www.afaslive.nl/agenda/bullet-for-my-valentine",
+            "https://www.afaslive.nl/agenda/lizzymcalpine"
+          ],
+          "visibleDates": 28
+        },
+        {
+          "url": "https://www.afaslive.nl/agenda/quido-van-de-graaf",
+          "status": 200,
+          "bytes": 39893,
+          "title": "Quido van de Graaf op 27 november 2026 in AFAS Live - AFAS Live",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {
+            "ticketmaster": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afaslive.nl/agenda",
+            "https://www.afaslive.nl/agenda/quido-van-de-graaf",
+            "https://www.afaslive.nl/en/agenda/quido-van-de-graaf",
+            "https://www.afaslive.nl/nieuws/nieuwsbrief-aanmelden",
+            "https://www.afaslive.nl/premium"
+          ],
+          "visibleDates": 3
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.afaslive.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 0 sitemaps, geen event-sitemap herkend"
+      },
+      "eventim": {
+        "market": "web__eventim-nl",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "rotterdam-ahoy",
+      "name": "Rotterdam Ahoy",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.ahoy.nl/agenda",
+          "status": 403,
+          "bytes": 5686
+        },
+        {
+          "url": "https://www.ahoy.nl/",
+          "status": 403,
+          "bytes": 5668
+        }
+      ],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.ahoy.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 403"
+      },
+      "eventim": {
+        "market": "web__eventim-nl",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "de-kuip",
+      "name": "De Kuip",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.dekuip.nl/",
+          "status": 200,
+          "finalUrl": "https://www.dekuip.com/nl",
+          "bytes": 702335,
+          "title": "Officiële website van De Kuip: Rondleidingen, zaalverhuur en events",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "http://feye-flagsmith-edge-proxy-prd-ca/api/v1/\\"
+          ],
+          "agendaLinks": [
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-100",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-250",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-500-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-2000",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-50.000-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/exclusieve-locaties",
+            "https://www.dekuip.com/nl/meeting-events/successen/succesverhalen",
+            "https://www.dekuip.com/nl/meeting-events/offerte-aanvragen"
+          ],
+          "visibleDates": 11
+        },
+        {
+          "url": "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-100",
+          "status": 200,
+          "bytes": 190936,
+          "title": "Zaal huren tot 100 personen in Rotterdam Zuid?",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "http://feye-flagsmith-edge-proxy-prd-ca/api/v1/\\"
+          ],
+          "agendaLinks": [
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-100",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-250",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-500-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-2000",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-50.000-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/exclusieve-locaties",
+            "https://www.dekuip.com/nl/meeting-events/successen/succesverhalen",
+            "https://www.dekuip.com/nl/meeting-events/offerte-aanvragen"
+          ],
+          "visibleDates": 10
+        },
+        {
+          "url": "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-250",
+          "status": 200,
+          "bytes": 205448,
+          "title": "Zaal huren tot 250 personen in Rotterdam Zuid?",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "http://feye-flagsmith-edge-proxy-prd-ca/api/v1/\\"
+          ],
+          "agendaLinks": [
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-100",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-250",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-500-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-2000",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/tot-50.000-personen",
+            "https://www.dekuip.com/nl/meeting-events/zalen-ruimtes/exclusieve-locaties",
+            "https://www.dekuip.com/nl/meeting-events/successen/succesverhalen",
+            "https://www.dekuip.com/nl/meeting-events/offerte-aanvragen"
+          ],
+          "visibleDates": 10
+        }
+      ],
+      "robots": "none",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.dekuip.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 404"
+      }
+    },
+    {
+      "id": "gelredome",
+      "name": "GelreDome",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.gelredome.nl/agenda",
+          "status": 200,
+          "bytes": 163989,
+          "title": "Agenda | GelreDome",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.gelredome.nl/agenda"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.gelredome.nl/",
+          "status": 200,
+          "bytes": 121432,
+          "title": "GelreDome | Het Grootste Theater Van Nederland",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.gelredome.nl/agenda"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.gelredome.nl/sitemap.xml",
+        "eventUrls": 9,
+        "sample": [
+          "https://www.gelredome.nl/agenda/archief",
+          "https://www.gelredome.nl/evenement/afscheidsconcert-normaal",
+          "https://www.gelredome.nl/evenement/coop-in-concert"
+        ],
+        "detailUrl": "https://www.gelredome.nl/evenement/music-show-scotland",
+        "detailJsonLd": 0
+      },
+      "eventim": {
+        "market": "web__eventim-nl",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "goffertpark",
+      "name": "Goffertpark",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.goffertpark.nl/",
+          "status": 0,
+          "robotsBlocked": true
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.goffertpark.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "robots.txt"
+      }
+    },
+    {
+      "id": "mecc-maastricht",
+      "name": "MECC",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.mecc.nl/",
+          "status": 200,
+          "bytes": 195345,
+          "title": "MECC Maastricht | For you, we go beyond boundaries",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mecc.nl/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.mecc.nl/wp-json/pys-facebook/v1/event",
+            "https://maps.googleapis.com/maps/api/js?ver=1.0",
+            "https://www.mecc.nl/wp-json/",
+            "https://www.mecc.nl/wp-json/eventon/v1/data?evo-ajax=%%endpoint%%"
+          ],
+          "agendaLinks": [
+            "https://www.mecc.nl/organize_event/organiseer-jouw-corporate-event/",
+            "https://www.mecc.nl/organiseer-jouw-zakelijk-event/",
+            "https://www.mecc.nl/organiseer-jouw-hybride-event/",
+            "https://www.mecc.nl/organiseer-jouw-event/",
+            "https://www.mecc.nl/bezoeken/agenda/",
+            "https://www.mecc.nl/organize_event/organise-a-conference/",
+            "https://www.mecc.nl/organize_event/organise-a-exhibition/",
+            "https://www.mecc.nl/organize_event/organise-a-business-event/"
+          ],
+          "visibleDates": 21
+        },
+        {
+          "url": "https://www.mecc.nl/organize_event/organiseer-jouw-corporate-event/",
+          "status": 200,
+          "finalUrl": "https://www.mecc.nl/organiseer-jouw-corporate-event/",
+          "bytes": 196870,
+          "title": "Organiseer jouw corporate event | MECC Maastricht",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mecc.nl/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.mecc.nl/wp-json/pys-facebook/v1/event",
+            "https://maps.googleapis.com/maps/api/js?ver=1.0",
+            "https://www.mecc.nl/wp-json/",
+            "https://www.mecc.nl/wp-json/eventon/v1/data?evo-ajax=%%endpoint%%"
+          ],
+          "agendaLinks": [
+            "https://www.mecc.nl/organize_event/organiseer-jouw-corporate-event/",
+            "https://www.mecc.nl/organiseer-jouw-zakelijk-event/",
+            "https://www.mecc.nl/organiseer-jouw-hybride-event/",
+            "https://www.mecc.nl/organiseer-jouw-event/",
+            "https://www.mecc.nl/bezoeken/agenda/",
+            "https://www.mecc.nl/organiseer-jouw-corporate-event/",
+            "https://www.mecc.nl/en/organise-your-corporate-event/",
+            "https://www.mecc.nl/organise-your-event/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.mecc.nl/organiseer-jouw-zakelijk-event/",
+          "status": 200,
+          "bytes": 198628,
+          "title": "Organiseer jouw zakelijk event | MECC Maastricht",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mecc.nl/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.mecc.nl/wp-json/pys-facebook/v1/event",
+            "https://maps.googleapis.com/maps/api/js?ver=1.0",
+            "https://www.mecc.nl/wp-json/",
+            "https://www.mecc.nl/wp-json/eventon/v1/data?evo-ajax=%%endpoint%%"
+          ],
+          "agendaLinks": [
+            "https://www.mecc.nl/organize_event/organiseer-jouw-corporate-event/",
+            "https://www.mecc.nl/organiseer-jouw-zakelijk-event/",
+            "https://www.mecc.nl/organiseer-jouw-hybride-event/",
+            "https://www.mecc.nl/organiseer-jouw-event/",
+            "https://www.mecc.nl/bezoeken/agenda/",
+            "https://www.mecc.nl/en/organise-your-business-event/",
+            "https://www.mecc.nl/organise-your-event/",
+            "https://www.mecc.nl/organiseer-jouw-event"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "WordPress-API (eventon/v1)"
+      },
+      "sitemap": {
+        "url": "https://www.mecc.nl/sitemap_index.xml",
+        "eventUrls": 578,
+        "sample": [
+          "https://www.mecc.nl/en/organize_event/",
+          "https://www.mecc.nl/en/organise-your-corporate-event/",
+          "https://www.mecc.nl/en/organise-your-business-event/"
+        ],
+        "note": "index met 14 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.mecc.nl/en/events/ecvim-ca/",
+        "detailJsonLd": 0
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "wpml/v1",
+        "activity-log/v1",
+        "contact-form-7/v1",
+        "pys-profile/v1",
+        "pys/v1",
+        "redirection/v1",
+        "seoaiwp/v2",
+        "wordfence-login-security/v1",
+        "wordfence/v1",
+        "yoast/v1",
+        "wp/v2",
+        "wpml/st/v1",
+        "wpml/tm/v1",
+        "wpml/ate/v1",
+        "go-live-update-urls/v1",
+        "gtm4wp/v2",
+        "wp-2fa-methods/v1",
+        "wp-2fa-passkeys/v1",
+        "wp-mail-smtp/setup-wizard/v1",
+        "gravity-pdf/v1",
+        "aios/v1/onboarding",
+        "eventon/v1",
+        "evo-admin",
+        "acfml/v1",
+        "pys-facebook/v1",
+        "pys-openai/v1",
+        "otgs/installer/v1",
+        "code-snippets/v1",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "wp-abilities/v1"
+      ]
+    },
+    {
+      "id": "vrijthof",
+      "name": "Vrijthof",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "brabanthallen",
+      "name": "Brabanthallen",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.brabanthallen.nl/",
+          "status": 200,
+          "bytes": 121296,
+          "title": "The floor is yours - Brabanthallen 's Hertogenbosch",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WPML ver:5.1.0 stt:37;",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.brabanthallen.nl/organiseren/organiseer/",
+            "https://www.brabanthallen.nl/organiseren/ruimtes/?category=concert",
+            "https://www.brabanthallen.nl/updates/?filter=eventcase",
+            "https://www.brabanthallen.nl/updates/brandweerwagens-en-demonstraties-zo-koos-het-brandweerevent-de-juiste-locatie/",
+            "https://www.brabanthallen.nl/agenda/"
+          ],
+          "visibleDates": 3
+        },
+        {
+          "url": "https://www.brabanthallen.nl/organiseren/organiseer/",
+          "status": 200,
+          "bytes": 136156,
+          "title": "Organiseer je event in Brabanthallen - Brabanthallen 's-Hertogenbosch",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WPML ver:5.1.0 stt:37;",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.brabanthallen.nl/agenda/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.brabanthallen.nl/organiseren/ruimtes/?category=concert",
+          "status": 200,
+          "bytes": 94887,
+          "title": "Onze ruimtes - Brabanthallen 's-Hertogenbosch",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WPML ver:5.1.0 stt:37;",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.brabanthallen.nl/agenda/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.brabanthallen.nl/agenda/",
+          "status": 200,
+          "bytes": 157751,
+          "title": "Aankomende evenementen - Brabanthallen 's-Hertogenbosch",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WPML ver:5.1.0 stt:37;",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.brabanthallen.nl/agenda/",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026/",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261127&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261128&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261129&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261130&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-brabantse-winter-20/",
+            "https://www.brabanthallen.nl/agenda/holiday-on-ice-cinema-of-dreams/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.brabanthallen.nl/agenda/de-winterfair-2026/",
+          "status": 200,
+          "bytes": 93845,
+          "title": "Dé Winterfair - Brabanthallen 's-Hertogenbosch",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WPML ver:5.1.0 stt:37;",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026/",
+            "https://www.brabanthallen.nl/agenda/",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261127&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261128&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261129&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261130&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261201&start_time=1795773600&end_time=1795802400",
+            "https://www.brabanthallen.nl/agenda/de-winterfair-2026?event_date=20261202&start_time=1795773600&end_time=1795802400"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.brabanthallen.nl/sitemap_index.xml",
+        "eventUrls": 92,
+        "sample": [
+          "https://www.brabanthallen.nl/agenda/paw-patrol-live-heroes-unite/",
+          "https://www.brabanthallen.nl/agenda/holiday-on-ice-cinema-of-dreams/",
+          "https://www.brabanthallen.nl/agenda/food-tech-event-2/"
+        ],
+        "note": "index met 5 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.brabanthallen.nl/agenda/prefab-3/",
+        "detailJsonLd": 0
+      },
+      "wpNamespaces": [
+        "fluent-smtp",
+        "wpml/v1",
+        "akismet/v1",
+        "contact-form-7/v1",
+        "duplicator/v1",
+        "git-installer/v1",
+        "redirection/v1",
+        "rankmath/v1",
+        "rankmath/v1/setupWizard",
+        "simple-history/v1",
+        "webp-converter/v1",
+        "wpml/st/v1",
+        "aam/v2",
+        "wpml/tm/v1",
+        "wpml/ate/v1",
+        "duplicate-post/v1",
+        "filebird/v1",
+        "filebird/public/v1",
+        "wp-rocket/v1",
+        "rankmath/v1/ai-visibility",
+        "rankmath/v1/status",
+        "aios/v1/onboarding",
+        "regenerate-thumbnails/v1",
+        "otgs/installer/v1",
+        "mcp",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "wp-abilities/v1"
+      ]
+    },
+    {
+      "id": "megaland",
+      "name": "Megaland",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.megaland.nl/",
+          "status": 0,
+          "robotsBlocked": true
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.megaland.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "robots.txt"
+      }
+    },
+    {
+      "id": "tivolivredenburg",
+      "name": "TivoliVredenburg",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.tivolivredenburg.nl/agenda/",
+          "status": 403,
+          "bytes": 5701
+        },
+        {
+          "url": "https://www.tivolivredenburg.nl/",
+          "status": 403,
+          "bytes": 5680
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.tivolivredenburg.nl/sitemap_index.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 403"
+      }
+    },
+    {
+      "id": "013",
+      "name": "013",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.013.nl/programma",
+          "status": 200,
+          "bytes": 350872,
+          "title": "Programma",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.013.nl/programma",
+            "https://www.013.nl/en/events",
+            "https://www.013.nl/programma/145139/sugar-spine",
+            "https://www.013.nl/programma/128467/crush-xl-presents",
+            "https://www.013.nl/programma/143470/allt",
+            "https://www.013.nl/programma/156684/brandalarm",
+            "https://www.013.nl/programma/150057/013-years-subquake",
+            "https://www.013.nl/programma/128241/sevendust"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.013.nl/",
+          "status": 200,
+          "bytes": 368722,
+          "title": "013 Poppodium Tilburg",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.013.nl/programma",
+            "https://www.013.nl/programma/163712/pierce-the-veil",
+            "https://www.013.nl/programma/162422/mula",
+            "https://www.013.nl/programma/162012/frank-turner-the-sleeping-souls",
+            "https://www.013.nl/programma/162777/k3",
+            "https://www.013.nl/programma/125264/de-unie",
+            "https://www.013.nl/programma/140186/froukje-extra-show",
+            "https://www.013.nl/programma/157445/dragonforce"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.013.nl/en/events",
+          "status": 200,
+          "bytes": 350366,
+          "title": "013 Poppodium Tilburg | Events",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.013.nl/en/events",
+            "https://www.013.nl/programma",
+            "https://www.013.nl/en/events/145139/sugar-spine",
+            "https://www.013.nl/en/events/128467/crush-xl-presents",
+            "https://www.013.nl/en/events/143470/allt",
+            "https://www.013.nl/en/events/156684/brandalarm",
+            "https://www.013.nl/en/events/150057/013-years-subquake",
+            "https://www.013.nl/en/events/128241/sevendust"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.013.nl/programma/163712/pierce-the-veil",
+          "status": 200,
+          "bytes": 76975,
+          "title": "Pierce The Veil - 16 juni | 013 Poppodium Tilburg",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 2,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "Pierce The Veil - 16 juni",
+              "url": "https://www.013.nl/programma/163712/pierce-the-veil"
+            },
+            {
+              "type": "MusicEvent",
+              "name": "Pierce The Veil",
+              "startDate": "2027-06-16T19:30:00+02:00",
+              "url": "https://www.013.nl/programma/163712/pierce-the-veil"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.013.nl/programma",
+            "https://www.013.nl/programma/163712/pierce-the-veil",
+            "https://www.013.nl/en/events/163712/pierce-the-veil",
+            "https://www.013.nl/programma/143444/imminence",
+            "https://www.013.nl/programma/140392/black-veil-brides",
+            "https://www.013.nl/programma/135855/sleeping-with-sirens"
+          ],
+          "visibleDates": 2
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (1000 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://www.013.nl/sitemaps-1-sitemap.xml",
+        "eventUrls": 1000,
+        "sample": [
+          "https://www.013.nl/programma/163077/internationale-vrouwendag",
+          "https://www.013.nl/programma/163906/stratovarius-fabio-liones-dawn-of-victory",
+          "https://www.013.nl/programma/163553/true-spirt-fest"
+        ],
+        "note": "index met 28 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.013.nl/programma/114064/draaimolen-openingsconcert",
+        "detailJsonLd": 2
+      }
+    },
+    {
+      "id": "effenaar",
+      "name": "Effenaar",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.effenaar.nl/agenda",
+          "status": 200,
+          "bytes": 3352263,
+          "title": "Agenda - Effenaar",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 507,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.effenaar.nl/agenda",
+            "https://www.effenaar.nl/agenda/we-are-back-0",
+            "https://www.effenaar.nl/agenda/hiltje",
+            "https://www.effenaar.nl/agenda/horse-company",
+            "https://www.effenaar.nl/agenda/racoon",
+            "https://www.effenaar.nl/agenda/polyphonic",
+            "https://www.effenaar.nl/agenda/archief",
+            "https://www.effenaar.nl/agenda/jack-weatherman"
+          ],
+          "visibleDates": 218
+        },
+        {
+          "url": "https://www.effenaar.nl/",
+          "status": 200,
+          "bytes": 2660160,
+          "title": "Spaces - Effenaar",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 507,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.effenaar.nl/agenda",
+            "https://www.effenaar.nl/nl/agenda/racoon",
+            "https://www.effenaar.nl/nl/agenda/effenaar-oud-nieuw-2026",
+            "https://www.effenaar.nl/agenda/emre-fel",
+            "https://www.effenaar.nl/nl/agenda/abba-gold-christmas-special-show-2026",
+            "https://www.effenaar.nl/agenda/bezerkus-bingo-2",
+            "https://www.effenaar.nl/agenda/portland-2dec",
+            "https://www.effenaar.nl/agenda/maite-hontele-la-novia"
+          ],
+          "visibleDates": 111
+        },
+        {
+          "url": "https://www.effenaar.nl/agenda/we-are-back-0",
+          "status": 200,
+          "bytes": 2501668,
+          "title": "We Are Back - Effenaar",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "We Are Back",
+              "startDate": "2026-12-05T15:30:00+01:00"
+            }
+          ],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 509,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.effenaar.nl/agenda",
+            "https://www.effenaar.nl/agenda?genres.title=dance",
+            "https://www.effenaar.nl/agenda/naft-0",
+            "https://www.effenaar.nl/agenda/no-barrier-4dec",
+            "https://www.effenaar.nl/agenda/effenaar-oud-nieuw-2026"
+          ],
+          "visibleDates": 113
+        },
+        {
+          "url": "https://www.effenaar.nl/nl/agenda/racoon",
+          "status": 200,
+          "bytes": 2510675,
+          "title": "Racoon - Effenaar",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "Racoon",
+              "startDate": "2027-04-16T20:15:00+01:00"
+            }
+          ],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 509,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.effenaar.nl/agenda",
+            "https://www.effenaar.nl/agenda?genres.title=Pop%20/%20Rock",
+            "https://www.effenaar.nl/agenda/ruben-hillen",
+            "https://www.effenaar.nl/agenda/pop-koor-xl-21mrt",
+            "https://www.effenaar.nl/agenda/jim-gardner"
+          ],
+          "visibleDates": 113
+        },
+        {
+          "url": "https://www.effenaar.nl/agenda?genres.title=dance",
+          "status": 200,
+          "bytes": 2112373,
+          "title": "Agenda - Effenaar",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 325,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.effenaar.nl/agenda",
+            "https://www.effenaar.nl/agenda/we-are-back-0",
+            "https://www.effenaar.nl/agenda/hiltje",
+            "https://www.effenaar.nl/agenda/horse-company",
+            "https://www.effenaar.nl/agenda/racoon",
+            "https://www.effenaar.nl/agenda/polyphonic",
+            "https://www.effenaar.nl/agenda/archief",
+            "https://www.effenaar.nl/agenda/no-barrier-4dec"
+          ],
+          "visibleDates": 87
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "Next.js-data in pagina (JSON)"
+      },
+      "sitemap": {
+        "url": "https://www.effenaar.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 404"
+      }
+    },
+    {
+      "id": "de-bosuil",
+      "name": "De Bosuil",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.debosuil.nl/agenda",
+          "status": 404,
+          "bytes": 118
+        },
+        {
+          "url": "https://www.debosuil.nl/",
+          "status": 200,
+          "bytes": 236019,
+          "title": "Homepage | Poppodium de Bosuil",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.debosuil.nl/programma/",
+            "https://www.debosuil.nl/programma/archief/",
+            "https://www.debosuil.nl/programma/billy-joel-experience-ft-string-quartet/",
+            "https://www.debosuil.nl/programma/black-bottle-riot/",
+            "https://www.debosuil.nl/programma/bee-gees-by-maincourse/",
+            "https://www.debosuil.nl/programma/mondo-generator/",
+            "https://www.debosuil.nl/programma/laura-cox/",
+            "https://www.debosuil.nl/programma/the-fortunate-sons-2026/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.debosuil.nl/programma/",
+          "status": 200,
+          "bytes": 591571,
+          "title": "Programma | Poppodium de Bosuil",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.debosuil.nl/programma/",
+            "https://www.debosuil.nl/programma/archief/",
+            "https://www.debosuil.nl/programma/laura-cox/",
+            "https://www.debosuil.nl/programma/the-fortunate-sons-2026/",
+            "https://www.debosuil.nl/programma/temple-of-wave/",
+            "https://www.debosuil.nl/programma/nieuwe-helden2026/",
+            "https://www.debosuil.nl/programma/john-corabi-friends/",
+            "https://www.debosuil.nl/programma/bosuil-blues-bar-redred/"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.debosuil.nl/programma/archief/",
+          "status": 200,
+          "bytes": 844472,
+          "title": "Programma archief | Poppodium de Bosuil",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "SEOmatic",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.debosuil.nl/programma/",
+            "https://www.debosuil.nl/programma/archief/",
+            "https://www.debosuil.nl/programma/archief/2022",
+            "https://www.debosuil.nl/programma/archief/2023",
+            "https://www.debosuil.nl/programma/archief/2024",
+            "https://www.debosuil.nl/programma/archief/2025",
+            "https://www.debosuil.nl/programma/archief/2026",
+            "https://www.debosuil.nl/programma/the-doors-in-concert/"
+          ],
+          "visibleDates": 1
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.debosuil.nl/sitemaps-1-sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 15 sitemaps, geen event-sitemap herkend"
+      }
+    },
+    {
+      "id": "grenswerk",
+      "name": "Grenswerk",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.grenswerk.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.grenswerk.nl/agenda/",
+          "bytes": 152755,
+          "title": "Evenementen | Grenswerk",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.grenswerk.nl/agenda/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.grenswerk.nl/agenda"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.grenswerk.nl/",
+          "status": 200,
+          "bytes": 63072,
+          "title": "Grenswerk",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.grenswerk.nl/agenda"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.grenswerk.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": []
+      }
+    },
+    {
+      "id": "muziekgieterij",
+      "name": "Muziekgieterij",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.muziekgieterij.nl/agenda",
+          "status": 404,
+          "finalUrl": "https://muziekgieterij.nl/agenda",
+          "bytes": 76681
+        },
+        {
+          "url": "https://www.muziekgieterij.nl/",
+          "status": 403,
+          "bytes": 107
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (124 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://muziekgieterij.nl/sitemap_index.xml",
+        "eventUrls": 124,
+        "sample": [
+          "https://muziekgieterij.nl/en/event/",
+          "https://muziekgieterij.nl/en/event/stuurbaard-bakkebaard-zzz-2027-01-23/",
+          "https://muziekgieterij.nl/en/event/igorrr-secret-chief-3-fange-2027-04-02/"
+        ],
+        "note": "index met 10 sitemaps, gelezen: 1",
+        "detailUrl": "https://muziekgieterij.nl/event/dub-hub-2026-11-28/",
+        "detailJsonLd": 1
+      }
+    },
+    {
+      "id": "nieuwe-nor",
+      "name": "Nieuwe Nor",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.nieuwenor.nl/agenda",
+          "status": 403,
+          "bytes": 5691
+        },
+        {
+          "url": "https://www.nieuwenor.nl/",
+          "status": 403,
+          "bytes": 5651
+        }
+      ],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.nieuwenor.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 403"
+      }
+    },
+    {
+      "id": "paradiso",
+      "name": "Paradiso",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.paradiso.nl/programma",
+          "status": 200,
+          "finalUrl": "https://www.paradiso.nl/",
+          "bytes": 898992,
+          "title": "Paradiso",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paradiso.nl/",
+            "https://www.paradiso.nl/programma/fatoumata-diawara/2765584",
+            "https://www.paradiso.nl/programma/james-smith/2894999",
+            "https://www.paradiso.nl/programma/nothhingspecial/2916269",
+            "https://www.paradiso.nl/programma/the-bug-club/2925624",
+            "https://www.paradiso.nl/programma/lucky-done-gone-all-night/2904370",
+            "https://www.paradiso.nl/programma/hamdi/2933817",
+            "https://www.paradiso.nl/programma/elmiene/2860874"
+          ],
+          "visibleDates": 102
+        },
+        {
+          "url": "https://www.paradiso.nl/",
+          "status": 200,
+          "bytes": 898992,
+          "title": "Paradiso",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paradiso.nl/",
+            "https://www.paradiso.nl/programma/fatoumata-diawara/2765584",
+            "https://www.paradiso.nl/programma/james-smith/2894999",
+            "https://www.paradiso.nl/programma/nothhingspecial/2916269",
+            "https://www.paradiso.nl/programma/the-bug-club/2925624",
+            "https://www.paradiso.nl/programma/lucky-done-gone-all-night/2904370",
+            "https://www.paradiso.nl/programma/hamdi/2933817",
+            "https://www.paradiso.nl/programma/elmiene/2860874"
+          ],
+          "visibleDates": 102
+        },
+        {
+          "url": "https://www.paradiso.nl/programma/fatoumata-diawara/2765584",
+          "status": 200,
+          "bytes": 958464,
+          "title": "Fatoumata Diawara | Paradiso",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "Fatoumata Diawara + Carolina Mama",
+              "startDate": "2026-11-27T18:30:00+01:00",
+              "url": "https://www.paradiso.nl/programma/fatoumata-diawara/2765584"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paradiso.nl/",
+            "https://www.paradiso.nl/programma/fatoumata-diawara/2765584",
+            "https://www.paradiso.nl/programma/james-smith/2894999",
+            "https://www.paradiso.nl/programma/nothhingspecial/2916269",
+            "https://www.paradiso.nl/programma/the-bug-club/2925624",
+            "https://www.paradiso.nl/programma/lucky-done-gone-all-night/2904370",
+            "https://www.paradiso.nl/programma/hamdi/2933817",
+            "https://www.paradiso.nl/programma/elmiene/2860874"
+          ],
+          "visibleDates": 105
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (200 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://www.paradiso.nl/sitemap.xml",
+        "eventUrls": 200,
+        "sample": [
+          "https://www.paradiso.nl/programma/trockener-kecks/2940733",
+          "https://www.paradiso.nl/programma/trockener-kecks/2940810",
+          "https://www.paradiso.nl/programma/mula/2956522"
+        ],
+        "note": "index met 51 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.paradiso.nl/programma/priya-ragu-madras-tour/2956258",
+        "detailJsonLd": 1
+      }
+    },
+    {
+      "id": "melkweg",
+      "name": "Melkweg",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.melkweg.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.melkweg.nl/nl/agenda/",
+          "bytes": 780317,
+          "title": "Agenda | Melkweg Amsterdam",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 263,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.melkweg.nl/nl/agenda/",
+            "https://www.melkweg.nl/en/agenda/",
+            "https://www.melkweg.nl/nl/agenda/no-need-to-pretend-11-10-2026/",
+            "https://www.melkweg.nl/nl/agenda/leap-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/this-is-spinal-tap-1984-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/modestep-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/phantom-wizard-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/krackfree-soundsystem-10-year-anniversary-27-11-2026/"
+          ],
+          "visibleDates": 266
+        },
+        {
+          "url": "https://www.melkweg.nl/",
+          "status": 200,
+          "finalUrl": "https://www.melkweg.nl/nl/",
+          "bytes": 673065,
+          "title": "Melkweg Amsterdam",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 65,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.melkweg.nl/nl/agenda/",
+            "https://www.melkweg.nl/nl/agenda/homohop-09-01-2027/",
+            "https://www.melkweg.nl/nl/agenda/the-baseballs-26-03-2028/",
+            "https://www.melkweg.nl/nl/agenda/paul-smith-maximo-park-16-05-2027/",
+            "https://www.melkweg.nl/nl/agenda/tony-junior-presents-30-01-2027/",
+            "https://www.melkweg.nl/nl/agenda/boombox-17-02-2027/",
+            "https://www.melkweg.nl/nl/agenda/joker-out-15-04-2027/",
+            "https://www.melkweg.nl/nl/agenda/stand-atlantic-03-03-2027/"
+          ],
+          "visibleDates": 367
+        },
+        {
+          "url": "https://www.melkweg.nl/nl/agenda/",
+          "status": 200,
+          "bytes": 780317,
+          "title": "Agenda | Melkweg Amsterdam",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 263,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.melkweg.nl/nl/agenda/",
+            "https://www.melkweg.nl/en/agenda/",
+            "https://www.melkweg.nl/nl/agenda/no-need-to-pretend-11-10-2026/",
+            "https://www.melkweg.nl/nl/agenda/leap-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/this-is-spinal-tap-1984-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/modestep-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/phantom-wizard-27-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/krackfree-soundsystem-10-year-anniversary-27-11-2026/"
+          ],
+          "visibleDates": 266
+        },
+        {
+          "url": "https://www.melkweg.nl/en/agenda/",
+          "status": 200,
+          "bytes": 759029,
+          "title": "Agenda | Melkweg Amsterdam",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 255,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.melkweg.nl/en/agenda/",
+            "https://www.melkweg.nl/nl/agenda/",
+            "https://www.melkweg.nl/en/agenda/no-need-to-pretend-11-10-2026/",
+            "https://www.melkweg.nl/en/agenda/leap-27-11-2026/",
+            "https://www.melkweg.nl/en/agenda/this-is-spinal-tap-1984-27-11-2026/",
+            "https://www.melkweg.nl/en/agenda/modestep-27-11-2026/",
+            "https://www.melkweg.nl/en/agenda/phantom-wizard-27-11-2026/",
+            "https://www.melkweg.nl/en/agenda/krackfree-soundsystem-10-year-anniversary-27-11-2026/"
+          ],
+          "visibleDates": 258
+        },
+        {
+          "url": "https://www.melkweg.nl/nl/agenda/homohop-09-01-2027/",
+          "status": 200,
+          "bytes": 100793,
+          "title": "Homohop | Melkweg Amsterdam",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {
+            "ticketmaster": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.melkweg.nl/nl/agenda/",
+            "https://www.melkweg.nl/en/agenda/homohop-09-01-2027/",
+            "https://www.melkweg.nl/nl/agenda/op-je-mannie-11-12-2026/",
+            "https://www.melkweg.nl/nl/agenda/encore-28-11-2026/",
+            "https://www.melkweg.nl/nl/agenda/funkshun-nightmarket-18-12-2026/",
+            "https://www.melkweg.nl/nl/agenda/encore-new-years-eve-2026-31-12-2026/"
+          ],
+          "visibleDates": 15
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "Next.js-data in pagina (JSON)"
+      },
+      "sitemap": {
+        "url": "https://www.melkweg.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 2 sitemaps, geen event-sitemap herkend"
+      }
+    },
+    {
+      "id": "martiniplaza",
+      "name": "MartiniPlaza",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.martiniplaza.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.martiniplaza.nl/nl/agenda",
+          "bytes": 143828,
+          "title": "Agenda | Martiniplaza",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.martiniplaza.nl/nl/agenda",
+            "https://www.martiniplaza.nl/nl/agenda/evita",
+            "https://www.martiniplaza.nl/nl/agenda/titanique",
+            "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+            "https://www.martiniplaza.nl/nl/agenda/vrienden-voor-het-leven-2026",
+            "https://www.martiniplaza.nl/nl/agenda/williamjanz",
+            "https://www.martiniplaza.nl/nl/agenda/tammo-zingt-folk",
+            "https://www.martiniplaza.nl/nl/agenda/the-witcher"
+          ],
+          "visibleDates": 36
+        },
+        {
+          "url": "https://www.martiniplaza.nl/",
+          "status": 200,
+          "bytes": 135257,
+          "title": "Martiniplaza",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.martiniplaza.nl/nl/agenda",
+            "https://www.martiniplaza.nl/nl/agenda/evita",
+            "https://www.martiniplaza.nl/nl/agenda/titanique",
+            "https://www.martiniplaza.nl/nl/agenda/hans-klok-the-illusionists",
+            "https://www.martiniplaza.nl/nl/agenda/voor-haar",
+            "https://www.martiniplaza.nl/nl/agenda/judas-priest",
+            "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+            "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027"
+          ],
+          "visibleDates": 26
+        },
+        {
+          "url": "https://www.martiniplaza.nl/nl/agenda",
+          "status": 200,
+          "bytes": 143828,
+          "title": "Agenda | Martiniplaza",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.martiniplaza.nl/nl/agenda",
+            "https://www.martiniplaza.nl/nl/agenda/evita",
+            "https://www.martiniplaza.nl/nl/agenda/titanique",
+            "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+            "https://www.martiniplaza.nl/nl/agenda/vrienden-voor-het-leven-2026",
+            "https://www.martiniplaza.nl/nl/agenda/williamjanz",
+            "https://www.martiniplaza.nl/nl/agenda/tammo-zingt-folk",
+            "https://www.martiniplaza.nl/nl/agenda/the-witcher"
+          ],
+          "visibleDates": 36
+        },
+        {
+          "url": "https://www.martiniplaza.nl/nl/agenda/evita",
+          "status": 200,
+          "bytes": 84668,
+          "title": "EVITA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.martiniplaza.nl/nl/agenda",
+            "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15507",
+            "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15508",
+            "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15509",
+            "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15510",
+            "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15511",
+            "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+            "https://www.martiniplaza.nl/nl/agenda/titanique"
+          ],
+          "visibleDates": 5
+        },
+        {
+          "url": "https://www.martiniplaza.nl/nl/agenda/koop-ticket?programId=15507",
+          "status": 200,
+          "finalUrl": "https://apps.ticketmatic.com/widgets/martiniplaza/addtickets?edit=yes&event=15507&flow=return&l=nl&oncompletion=return&reservemoretickets=yes&returnurl=https%3A%2F%2Fwww.martiniplaza.nl%2Fmvc%2Fevent%2Freturn%3Fupsellids%3D15518%2C15522%2C15528%26eventid%3D15507%26step1%3Dtrue&skinid=10004&accesskey=b3e7c12891ce37e1a7837208&signature=088586CBFBA54E9501AA50BE0258F115924B18BBA2797E289E021755BD85722F",
+          "bytes": 131038,
+          "title": "Ticketmatic",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [],
+          "visibleDates": 7
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.martiniplaza.nl/sitemap.xml",
+        "eventUrls": 1837,
+        "sample": [
+          "https://www.martiniplaza.nl/nl/agenda",
+          "https://www.martiniplaza.nl/nl/agenda/koop-ticket",
+          "https://www.martiniplaza.nl/nl/magazine/huisje-boompje-baby-event-groot-succes"
+        ],
+        "detailUrl": "https://www.martiniplaza.nl/agenda/free-your-mind-pre-party",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "oosterpoort",
+      "name": "De Oosterpoort",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.spotgroningen.nl/programma",
+          "status": 200,
+          "bytes": 923679,
+          "title": "Programma - Spot Groningen",
+          "jsonLdBlocks": 2,
+          "jsonLdEvents": 482,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            },
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            },
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 482,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.spotgroningen.nl/programma/",
+            "https://www.spotgroningen.nl/programma/verzameling/english/",
+            "https://www.spotgroningen.nl/programma/flemming-4/",
+            "https://www.spotgroningen.nl/programma/het-nationale-theater-31/",
+            "https://www.spotgroningen.nl/programma/jp-den-tex-tineke-schoemaker/",
+            "https://www.spotgroningen.nl/programma/subterranean-street-society-2/",
+            "https://www.spotgroningen.nl/programma/the-veils-2/",
+            "https://www.spotgroningen.nl/programma/nanoek-4/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.spotgroningen.nl/",
+          "status": 200,
+          "bytes": 222223,
+          "title": "Spot Groningen",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.spotgroningen.nl/programma/",
+            "https://www.spotgroningen.nl/programma/verzameling/english/",
+            "https://www.spotgroningen.nl/events/rhythm-blues-night/",
+            "https://www.spotgroningen.nl/programma/kingfishr-4/",
+            "https://www.spotgroningen.nl/programma/judas-priest/",
+            "https://www.spotgroningen.nl/programma/my-first-festival-2-12-jaar/",
+            "https://www.spotgroningen.nl/programma/het-nationale-theater-31/",
+            "https://www.spotgroningen.nl/programma/paul-haenen/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.spotgroningen.nl/programma/",
+          "status": 200,
+          "bytes": 923728,
+          "title": "Programma - Spot Groningen",
+          "jsonLdBlocks": 2,
+          "jsonLdEvents": 482,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            },
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            },
+            {
+              "type": "Event",
+              "name": "{{ event.title | escape }}",
+              "startDate": "{{ event.performance_datetime | date('c') }}",
+              "url": "{{ event.link }}"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 482,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.spotgroningen.nl/programma/",
+            "https://www.spotgroningen.nl/programma/verzameling/english/",
+            "https://www.spotgroningen.nl/programma/flemming-4/",
+            "https://www.spotgroningen.nl/programma/het-nationale-theater-31/",
+            "https://www.spotgroningen.nl/programma/jp-den-tex-tineke-schoemaker/",
+            "https://www.spotgroningen.nl/programma/subterranean-street-society-2/",
+            "https://www.spotgroningen.nl/programma/the-veils-2/",
+            "https://www.spotgroningen.nl/programma/nanoek-4/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.spotgroningen.nl/programma/verzameling/english/",
+          "status": 200,
+          "bytes": 421762,
+          "title": "English - Spot Groningen",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.spotgroningen.nl/programma/",
+            "https://www.spotgroningen.nl/programma/verzameling/english/",
+            "https://www.spotgroningen.nl/events/rhythm-blues-night/english/",
+            "https://www.spotgroningen.nl/events/masterpiece/english/",
+            "https://www.spotgroningen.nl/events/takeroot/english/",
+            "https://www.spotgroningen.nl/events/rockit/english/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "JSON-LD op agendapagina (482 events)"
+      },
+      "sitemap": {
+        "url": "https://www.spotgroningen.nl/sitemap_index.xml",
+        "eventUrls": 2000,
+        "sample": [
+          "https://www.spotgroningen.nl/programma/lunchconcert-noord-nederlands-orkest-12-dec-2018/",
+          "https://www.spotgroningen.nl/programma/lunchconcert-prins-claus-conservatorium-20-maart-2019/",
+          "https://www.spotgroningen.nl/programma/3fm-serious-talent-presents/"
+        ],
+        "note": "index met 24 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.spotgroningen.nl/programma/brodsky-quartet-sjostakovitsj-3/",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "stadsschouwburg-groningen",
+      "name": "Stadsschouwburg Groningen",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "doornroosje",
+      "name": "Doornroosje",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.doornroosje.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.doornroosje.nl/",
+          "bytes": 346436,
+          "title": "Doornroosje - Poppodium Nijmegen",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.doornroosje.nl/event/cake/",
+            "https://www.doornroosje.nl/event/zeitgeist-2026/",
+            "https://www.doornroosje.nl/event/tiny-habits/",
+            "https://www.doornroosje.nl/event/davina-michelle-5/",
+            "https://www.doornroosje.nl/event/bad-nerves-3/",
+            "https://www.doornroosje.nl/event/striptopia/",
+            "https://www.doornroosje.nl/event/karnivool/",
+            "https://www.doornroosje.nl/event/jungle-by-night-6/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.doornroosje.nl/",
+          "status": 200,
+          "bytes": 346436,
+          "title": "Doornroosje - Poppodium Nijmegen",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.doornroosje.nl/event/cake/",
+            "https://www.doornroosje.nl/event/zeitgeist-2026/",
+            "https://www.doornroosje.nl/event/tiny-habits/",
+            "https://www.doornroosje.nl/event/davina-michelle-5/",
+            "https://www.doornroosje.nl/event/bad-nerves-3/",
+            "https://www.doornroosje.nl/event/striptopia/",
+            "https://www.doornroosje.nl/event/karnivool/",
+            "https://www.doornroosje.nl/event/jungle-by-night-6/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.doornroosje.nl/event/cake/",
+          "status": 200,
+          "bytes": 124679,
+          "title": "CAKE // Doornroosje Nijmegen // dinsdag 8 juni 2027",
+          "jsonLdBlocks": 2,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "CAKE",
+              "startDate": "2027-06-08T20:45:00+00:00"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.doornroosje.nl/event/zeitgeist-2026/",
+          "status": 200,
+          "finalUrl": "https://www.doornroosje.nl/festival/zeitgeist/",
+          "bytes": 240106,
+          "title": "Zeitgeist 2026 // Doornroosje Nijmegen // zaterdag 5 december",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {
+            "paylogic": 2
+          },
+          "apiHints": [],
+          "agendaLinks": [],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (926 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://www.doornroosje.nl/sitemap_index.xml",
+        "eventUrls": 926,
+        "sample": [
+          "https://www.doornroosje.nl/en/event/pip-blom-3/",
+          "https://www.doornroosje.nl/event/pip-blom-3/",
+          "https://www.doornroosje.nl/event/igorrr-3/"
+        ],
+        "note": "index met 8 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.doornroosje.nl/event/parker-millsap-3/",
+        "detailJsonLd": 1
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "simple-page-ordering/v1",
+        "crop_thumbnails/v1",
+        "redirection/v1",
+        "yoast/v1",
+        "wp-all-import/v1",
+        "pll/v1",
+        "duplicate-post/v1",
+        "gf/v2",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "wp-abilities/v1"
+      ]
+    },
+    {
+      "id": "paard",
+      "name": "Paard",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.paard.nl/agenda",
+          "status": 200,
+          "finalUrl": "https://www.paard.nl/en/agenda-2/",
+          "bytes": 67456,
+          "title": "Agenda - PAARD",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paard.nl/en/agenda-2/",
+            "https://www.paard.nl/en/event/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.paard.nl/",
+          "status": 200,
+          "bytes": 81894,
+          "title": "PAARD",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paard.nl/event/",
+            "https://www.paard.nl/event/haags-popgala-3/",
+            "https://www.paard.nl/event/james-brown-experience/",
+            "https://www.paard.nl/event/cesar-het-verhaal-van-een-drummer/",
+            "https://www.paard.nl/event/hiigo/",
+            "https://www.paard.nl/event/shrek-rave/",
+            "https://www.paard.nl/event/film-summer-of-soul/",
+            "https://www.paard.nl/event/call-it-off/"
+          ],
+          "visibleDates": 9
+        },
+        {
+          "url": "https://www.paard.nl/en/agenda-2/",
+          "status": 200,
+          "bytes": 67456,
+          "title": "Agenda - PAARD",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paard.nl/en/agenda-2/",
+            "https://www.paard.nl/en/event/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.paard.nl/en/event/",
+          "status": 200,
+          "bytes": 353182,
+          "title": "Evenementen - PAARD",
+          "jsonLdBlocks": 142,
+          "jsonLdEvents": 141,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "HIIGO",
+              "startDate": "2026-11-27T18:30",
+              "url": "https://www.paard.nl/en/event/hiigo-2/"
+            },
+            {
+              "type": "Event",
+              "name": "Paardcafé: Popquiz XL",
+              "startDate": "2026-11-27T19:00",
+              "url": "https://www.paard.nl/en/event/paardcafe-popquiz-xl-7/"
+            },
+            {
+              "type": "Event",
+              "name": "SHREK RAVE",
+              "startDate": "2026-11-27T20:00",
+              "url": "https://www.paard.nl/en/event/shrek-rave-2/"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 141,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paard.nl/event/",
+            "https://www.paard.nl/en/event/",
+            "https://www.paard.nl/en/event/hiigo-2/",
+            "https://www.paard.nl/en/event/paardcafe-popquiz-xl-7/",
+            "https://www.paard.nl/en/event/shrek-rave-2/",
+            "https://www.paard.nl/en/event/paardcafe-gettin-80s-90s-wit-it-78/",
+            "https://www.paard.nl/en/event/call-it-off-2/",
+            "https://www.paard.nl/en/event/film-summer-of-soul-2/"
+          ],
+          "visibleDates": 122
+        },
+        {
+          "url": "https://www.paard.nl/event/",
+          "status": 200,
+          "bytes": 361228,
+          "title": "Evenementen - PAARD",
+          "jsonLdBlocks": 143,
+          "jsonLdEvents": 142,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "HIIGO",
+              "startDate": "2026-11-27T18:30",
+              "url": "https://www.paard.nl/event/hiigo/"
+            },
+            {
+              "type": "Event",
+              "name": "Paardcafé: Popquiz XL",
+              "startDate": "2026-11-27T19:00",
+              "url": "https://www.paard.nl/event/paardcafe-popquiz-xl-6/"
+            },
+            {
+              "type": "Event",
+              "name": "SHREK RAVE",
+              "startDate": "2026-11-27T20:00",
+              "url": "https://www.paard.nl/event/shrek-rave/"
+            }
+          ],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 142,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.paard.nl/event/",
+            "https://www.paard.nl/en/event/",
+            "https://www.paard.nl/event/hiigo/",
+            "https://www.paard.nl/event/paardcafe-popquiz-xl-6/",
+            "https://www.paard.nl/event/shrek-rave/",
+            "https://www.paard.nl/event/paardcafe-gettin-80s-90s-wit-it-77/",
+            "https://www.paard.nl/event/call-it-off/",
+            "https://www.paard.nl/event/film-summer-of-soul/"
+          ],
+          "visibleDates": 146
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "JSON-LD op agendapagina (142 events)"
+      },
+      "sitemap": {
+        "url": "https://www.paard.nl/sitemap.xml",
+        "eventUrls": 2001,
+        "sample": [
+          "https://www.paard.nl/en/event/klm-urban-trail-2/",
+          "https://www.paard.nl/event/klm-urban-trail/",
+          "https://www.paard.nl/en/event/paardcafe-osoul-all-night-long-4/"
+        ],
+        "note": "index met 26 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.paard.nl/en/event/",
+        "detailJsonLd": 141
+      }
+    },
+    {
+      "id": "hedon",
+      "name": "Hedon",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.hedon-zwolle.nl/programma",
+          "status": 404,
+          "bytes": 376789
+        },
+        {
+          "url": "https://www.hedon-zwolle.nl/",
+          "status": 200,
+          "bytes": 756805,
+          "title": "Hedon | Jouw zaal voor concerten en dance-events",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 109,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.hedon-zwolle.nl/api/portal/active",
+            "https://www.hedon-zwolle.nl/api/portals/switcher",
+            "https://www.hedon-zwolle.nl/api/dictionary",
+            "https://www.hedon-zwolle.nl/api/menu",
+            "https://www.hedon-zwolle.nl/api/landing-pages/home"
+          ],
+          "agendaLinks": [
+            "https://www.hedon-zwolle.nl/voorstelling/32817/tankstation-festival-2026",
+            "https://www.hedon-zwolle.nl/voorstelling/33136/racoon-extra-show",
+            "https://www.hedon-zwolle.nl/voorstelling/32891/jimmy-carr-extra-show",
+            "https://www.hedon-zwolle.nl/voorstelling/32847/davina-michelle-extra-show",
+            "https://www.hedon-zwolle.nl/voorstelling/32884/daredevils-zing-nederlands-met-me",
+            "https://www.hedon-zwolle.nl/voorstelling/33057/politie-warnsveld-extra-show",
+            "https://www.hedon-zwolle.nl/voorstelling/32998/tangarine-ijsselconcert-vroeg",
+            "https://www.hedon-zwolle.nl/voorstelling/32999/tangarine-ijsselconcert-laat"
+          ],
+          "visibleDates": 25
+        },
+        {
+          "url": "https://www.hedon-zwolle.nl/voorstelling/32817/tankstation-festival-2026",
+          "status": 200,
+          "bytes": 461492,
+          "title": "TANKSTATION FESTIVAL 2026 - Hedon Zwolle",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 119,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.hedon-zwolle.nl/api/portal/active",
+            "https://www.hedon-zwolle.nl/api/portals/switcher",
+            "https://www.hedon-zwolle.nl/api/menu",
+            "https://www.hedon-zwolle.nl/api/dictionary",
+            "https://www.hedon-zwolle.nl/api/events"
+          ],
+          "agendaLinks": [
+            "https://www.hedon-zwolle.nl/voorstelling/32847/davina-michelle-extra-show"
+          ],
+          "visibleDates": 23
+        },
+        {
+          "url": "https://www.hedon-zwolle.nl/voorstelling/33136/racoon-extra-show",
+          "status": 200,
+          "bytes": 380562,
+          "title": "RACOON - EXTRA SHOW - Hedon Zwolle",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 119,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.hedon-zwolle.nl/api/portal/active",
+            "https://www.hedon-zwolle.nl/api/portals/switcher",
+            "https://www.hedon-zwolle.nl/api/menu",
+            "https://www.hedon-zwolle.nl/api/dictionary",
+            "https://www.hedon-zwolle.nl/api/event/33136"
+          ],
+          "agendaLinks": [
+            "https://www.hedon-zwolle.nl/voorstelling/32847/davina-michelle-extra-show"
+          ],
+          "visibleDates": 21
+        },
+        {
+          "url": "https://www.hedon-zwolle.nl/voorstelling/32847/davina-michelle-extra-show",
+          "status": 200,
+          "bytes": 388512,
+          "title": "DAVINA MICHELLE - EXTRA SHOW - Hedon Zwolle",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 119,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://www.hedon-zwolle.nl/api/portal/active",
+            "https://www.hedon-zwolle.nl/api/dictionary",
+            "https://www.hedon-zwolle.nl/api/menu",
+            "https://www.hedon-zwolle.nl/api/portals/switcher",
+            "https://www.hedon-zwolle.nl/api/event/32847"
+          ],
+          "agendaLinks": [],
+          "visibleDates": 21
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.hedon-zwolle.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 404"
+      }
+    },
+    {
+      "id": "mezz",
+      "name": "Mezz",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.mezz.nl/agenda",
+          "status": 404,
+          "bytes": 96067
+        },
+        {
+          "url": "https://www.mezz.nl/",
+          "status": 200,
+          "bytes": 161973,
+          "title": "Home - Mezz",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mezz.nl/",
+            "https://www.mezz.nl/upcoming_productions",
+            "https://www.mezz.nl/upcoming_events"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mezz.nl/programma/",
+            "https://www.mezz.nl/tickets/",
+            "https://www.mezz.nl/programma/the-orb/",
+            "https://www.mezz.nl/programma/new-cool-collective-4/",
+            "https://www.mezz.nl/programma/pulse-x-unit/",
+            "https://www.mezz.nl/programma/ronde-3/",
+            "https://www.mezz.nl/programma/sutts/",
+            "https://www.mezz.nl/programma/black-hole-itwt-2027/"
+          ],
+          "visibleDates": 8
+        },
+        {
+          "url": "https://www.mezz.nl/programma/",
+          "status": 200,
+          "bytes": 146039,
+          "title": "Programma - Mezz",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mezz.nl/programma/",
+            "https://www.mezz.nl/upcoming_productions",
+            "https://www.mezz.nl/upcoming_events"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mezz.nl/programma/",
+            "https://www.mezz.nl/tickets/"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.mezz.nl/tickets/",
+          "status": 200,
+          "bytes": 36434,
+          "title": "Tickets - Mezz",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.mezz.nl/tickets/",
+            "https://www.mezz.nl/upcoming_productions",
+            "https://www.mezz.nl/upcoming_events"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.mezz.nl/sitemap_index.xml",
+        "eventUrls": 2000,
+        "sample": [
+          "https://www.mezz.nl/wp_theatre_event/378/",
+          "https://www.mezz.nl/wp_theatre_event/382/",
+          "https://www.mezz.nl/wp_theatre_event/384/"
+        ],
+        "note": "index met 13 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.mezz.nl/wp_theatre_event/16377/",
+        "detailJsonLd": 0
+      },
+      "wpNamespaces": [
+        "ithemes-security/rpc",
+        "ithemes-security/v1",
+        "oembed/1.0",
+        "real-media-library/v1",
+        "real-product-manager-wp-client/v1",
+        "real-utils/v1",
+        "safe-svg/v1",
+        "yoast/v1",
+        "wp-super-cache/v1",
+        "duplicate-post/v1",
+        "monsterinsights/v1",
+        "realmedialibrary/v1",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "wp-abilities/v1"
+      ]
+    },
+    {
+      "id": "patronaat",
+      "name": "Patronaat",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.patronaat.nl/programma",
+          "status": 403,
+          "bytes": 107
+        },
+        {
+          "url": "https://www.patronaat.nl/",
+          "status": 403,
+          "bytes": 107
+        }
+      ],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.patronaat.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 415"
+      }
+    },
+    {
+      "id": "kattendans",
+      "name": "De Kattendans",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "munttheater",
+      "name": "Munttheater",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "maaspoort",
+      "name": "Maaspoort",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "plt-heerlen",
+      "name": "Theater Heerlen",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "plt-kerkrade",
+      "name": "Theater Kerkrade",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "toon-hermans-theater",
+      "name": "Toon Hermans Theater",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "oranjerie-roermond",
+      "name": "De Oranjerie",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "parktheater-eindhoven",
+      "name": "Parktheater",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "theater-aan-het-vrijthof",
+      "name": "Theater aan het Vrijthof",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "carre",
+      "name": "Carré",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "delamar",
+      "name": "DeLaMar",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "stadsschouwburg-utrecht",
+      "name": "Stadsschouwburg Utrecht",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "theaters-tilburg",
+      "name": "Schouwburg & Concertzaal Tilburg",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "musis-arnhem",
+      "name": "Musis & Stadstheater",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "theater-rotterdam",
+      "name": "Theater Rotterdam",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "chasse",
+      "name": "Chassé Theater",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "gashouder",
+      "name": "Gashouder",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://gashouder.nl/",
+          "status": 200,
+          "bytes": 208749,
+          "title": "Home | Gashouder",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": true,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://vivenu.com/web/deliver/js/v1/embed.js"
+          ],
+          "agendaLinks": [
+            "https://gashouder.nl/programma/the-making-of-gashouder",
+            "https://gashouder.nl/programma/kettama",
+            "https://gashouder.nl/programma/chris-stassy",
+            "https://gashouder.nl/programma/esdeekid",
+            "https://gashouder.nl/programma/avatar",
+            "https://gashouder.nl/programma/nia-archives",
+            "https://gashouder.nl/programma/kingfishr",
+            "https://gashouder.nl/programma/skepta"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://westergas.nl/agenda",
+          "status": 403,
+          "bytes": 107
+        },
+        {
+          "url": "https://gashouder.nl/programma/the-making-of-gashouder",
+          "status": 200,
+          "bytes": 76081,
+          "title": "The Making of Gashouder | Gashouder",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "The making of Gashouder",
+              "startDate": "2026-10-29T23:00:00.000+00:00",
+              "url": "https://gashouder.nl/programma/the-making-of-gashouder"
+            }
+          ],
+          "nextData": false,
+          "nuxt": true,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://vivenu.com/web/deliver/js/v1/embed.js"
+          ],
+          "agendaLinks": [],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://gashouder.nl/programma/kettama",
+          "status": 200,
+          "bytes": 72669,
+          "title": "KETTAMA | Gashouder",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 1,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "KETTAMA",
+              "startDate": "2026-11-27T22:00:00.000+00:00",
+              "url": "https://gashouder.nl/programma/kettama"
+            }
+          ],
+          "nextData": false,
+          "nuxt": true,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://vivenu.com/web/deliver/js/v1/embed.js"
+          ],
+          "agendaLinks": [],
+          "visibleDates": 1
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://gashouder.nl/sitemap_index.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 2 sitemaps, geen event-sitemap herkend"
+      }
+    },
+    {
+      "id": "klokgebouw",
+      "name": "Klokgebouw",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.klokgebouw.nl/agenda",
+          "status": 200,
+          "bytes": 137752,
+          "title": "Klokgebouw",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB5hUnWSzseF6fuTk1g62ridX6a1-ApN6A"
+          ],
+          "agendaLinks": [
+            "https://www.klokgebouw.nl/agenda",
+            "https://www.klokgebouw.nl/agenda/cisco-connect-benelux",
+            "https://www.klokgebouw.nl/agenda/kerstmarkt",
+            "https://www.klokgebouw.nl/agenda/joy-indoor-festival-2026",
+            "https://www.klokgebouw.nl/agenda/eindhovense-kerstborrel-2026",
+            "https://www.klokgebouw.nl/agenda/hidden-garden-presents-joris-voorn-and-bart-skils",
+            "https://www.klokgebouw.nl/agenda/memorylane-2026",
+            "https://www.klokgebouw.nl/agenda/liquicity-winterfestival"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.klokgebouw.nl/",
+          "status": 200,
+          "bytes": 40311,
+          "title": "Klokgebouw",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB5hUnWSzseF6fuTk1g62ridX6a1-ApN6A"
+          ],
+          "agendaLinks": [
+            "https://www.klokgebouw.nl/agenda",
+            "https://www.klokgebouw.nl/agenda/cisco-connect-benelux",
+            "https://www.klokgebouw.nl/agenda/kerstmarkt",
+            "https://www.klokgebouw.nl/agenda/joy-indoor-festival-2026",
+            "https://www.klokgebouw.nl/agenda/eindhovense-kerstborrel-2026",
+            "https://www.klokgebouw.nl/agenda/hidden-garden-presents-joris-voorn-and-bart-skils",
+            "https://www.klokgebouw.nl/nieuws/helldorado-peter-pan-speedrock-viert-30-jarig-jubileum-met-unieke-show",
+            "https://www.klokgebouw.nl/agenda/danssalon-2027"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.klokgebouw.nl/agenda/cisco-connect-benelux",
+          "status": 200,
+          "bytes": 22025,
+          "title": "Klokgebouw",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB5hUnWSzseF6fuTk1g62ridX6a1-ApN6A"
+          ],
+          "agendaLinks": [
+            "https://www.klokgebouw.nl/agenda",
+            "https://www.klokgebouw.nl/agenda/playgrounds-2027-2"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.klokgebouw.nl/agenda/playgrounds-2027-2",
+          "status": 200,
+          "bytes": 22528,
+          "title": "Klokgebouw",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB5hUnWSzseF6fuTk1g62ridX6a1-ApN6A"
+          ],
+          "agendaLinks": [
+            "https://www.klokgebouw.nl/agenda",
+            "https://www.klokgebouw.nl/agenda/cisco-connect-benelux"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.klokgebouw.nl/sitemap.xml",
+        "eventUrls": 0,
+        "sample": []
+      }
+    },
+    {
+      "id": "maassilo",
+      "name": "Maassilo",
+      "country": "NL",
+      "pages": [
+        {
+          "url": "https://www.maassilo.com/",
+          "status": 200,
+          "finalUrl": "https://maassilo.com/",
+          "bytes": 69304,
+          "title": "Maassilo Rotterdam | Concerten, Dance, Events & Business",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://maassilo.com/agenda/",
+            "https://maassilo.com/agenda"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://maassilo.com/agenda",
+          "status": 200,
+          "finalUrl": "https://maassilo.com/agenda/",
+          "bytes": 66254,
+          "title": "Agenda Archive - Maassilo",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://maassilo.com/agenda/",
+            "https://maassilo.com/agenda",
+            "https://maassilo.com/agenda/unresolved-bloodline-warbound-protocol-2/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://maassilo.com/agenda/",
+          "status": 200,
+          "bytes": 66254,
+          "title": "Agenda Archive - Maassilo",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://maassilo.com/agenda/",
+            "https://maassilo.com/agenda",
+            "https://maassilo.com/agenda/unresolved-bloodline-warbound-protocol-2/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://maassilo.com/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 3 sitemaps, geen event-sitemap herkend"
+      }
+    },
+    {
+      "id": "warehouse-elementenstraat",
+      "name": "Warehouse Elementenstraat",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "complex-maastricht",
+      "name": "Complex",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "lofi",
+      "name": "Lofi",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "garage-noord",
+      "name": "Garage Noord",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "basis-utrecht",
+      "name": "BASIS",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "radion",
+      "name": "RADION",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "shelter",
+      "name": "Shelter",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "thuishaven",
+      "name": "Thuishaven",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "ekko",
+      "name": "EKKO",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "dynamo-eindhoven",
+      "name": "Dynamo",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "annabel",
+      "name": "Annabel",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "toffler",
+      "name": "TOFFLER",
+      "country": "NL",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "sportpaleis",
+      "name": "AFAS Dome",
+      "country": "BE",
+      "pages": [
+        {
+          "url": "https://www.sportpaleis.be/",
+          "status": 200,
+          "finalUrl": "https://www.afas-dome.be/",
+          "bytes": 597351,
+          "title": "AFAS Dome Antwerpen, het vroegere Sportpaleis | AFAS Dome",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afas-dome.be/kalender",
+            "https://www.afas-dome.be/evenement/de-grote-sinterklaasshow-2026-e7dd86de",
+            "https://www.afas-dome.be/nieuws/pik-deze-shows-mee-met-15-black-friday-korting"
+          ],
+          "visibleDates": 43
+        },
+        {
+          "url": "https://www.sportpaleis.be/agenda",
+          "status": 404,
+          "finalUrl": "https://www.afas-dome.be/agenda",
+          "bytes": 138362
+        },
+        {
+          "url": "https://www.afas-dome.be/kalender",
+          "status": 200,
+          "bytes": 193534,
+          "title": "Kalender en programma | AFAS Dome",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afas-dome.be/kalender",
+            "https://www.afas-dome.be/en/calendar"
+          ],
+          "visibleDates": 5
+        },
+        {
+          "url": "https://www.afas-dome.be/evenement/de-grote-sinterklaasshow-2026-e7dd86de",
+          "status": 200,
+          "bytes": 201290,
+          "title": "De Grote Sinterklaasshow 2026 | Tickets | AFAS Dome",
+          "jsonLdBlocks": 2,
+          "jsonLdEvents": 3,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "De Grote Sinterklaasshow 2026",
+              "startDate": "2026-11-28T09:00:00.000Z",
+              "url": "https://www.afas-dome.be/nl/evenement/de-grote-sinterklaasshow-2026-e7dd86de"
+            },
+            {
+              "type": "Event",
+              "name": "De Grote Sinterklaasshow 2026",
+              "startDate": "2026-11-28T13:00:00.000Z",
+              "url": "https://www.afas-dome.be/nl/evenement/de-grote-sinterklaasshow-2026-e7dd86de"
+            },
+            {
+              "type": "Event",
+              "name": "De Grote Sinterklaasshow 2026",
+              "startDate": "2026-11-28T16:30:00.000Z",
+              "url": "https://www.afas-dome.be/nl/evenement/de-grote-sinterklaasshow-2026-e7dd86de"
+            }
+          ],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 4,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {
+            "ticketmaster": 3
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afas-dome.be/evenement/de-grote-sinterklaasshow-2026-e7dd86de",
+            "https://www.afas-dome.be/fr/evenement/de-grote-sinterklaasshow-2026-e7dd86de",
+            "https://www.afas-dome.be/en/event/de-grote-sinterklaasshow-2026-e7dd86de",
+            "https://www.afas-dome.be/kalender"
+          ],
+          "visibleDates": 20
+        },
+        {
+          "url": "https://www.afas-dome.be/en/calendar",
+          "status": 200,
+          "bytes": 192767,
+          "title": "Event calendar | AFAS Dome",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.afas-dome.be/kalender",
+            "https://www.afas-dome.be/en/calendar"
+          ],
+          "visibleDates": 1
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "JSON-LD op agendapagina (3 events)"
+      },
+      "sitemap": {
+        "url": "https://www.afas-dome.be/sitemap.xml",
+        "eventUrls": 123,
+        "sample": [
+          "https://www.afas-dome.be/en/calendar",
+          "https://www.afas-dome.be/evenement/de-grote-sinterklaasshow-2026-e7dd86de",
+          "https://www.afas-dome.be/evenement/hot-wheels-stunt-show-85190f97"
+        ],
+        "detailUrl": "https://www.afas-dome.be/en/event/rosalia-4237f40",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "lotto-arena",
+      "name": "Lotto Arena",
+      "country": "BE",
+      "pages": [
+        {
+          "url": "https://www.lotto-arena.be/",
+          "status": 200,
+          "bytes": 488652,
+          "title": "Lotto Arena Antwerpen: concerten en sport | Lotto Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lotto-arena.be/kalender",
+            "https://www.lotto-arena.be/evenement/likeme-in-concert-2027-6018c9d2"
+          ],
+          "visibleDates": 14
+        },
+        {
+          "url": "https://www.lotto-arena.be/agenda",
+          "status": 404,
+          "bytes": 136723
+        },
+        {
+          "url": "https://www.lotto-arena.be/kalender",
+          "status": 200,
+          "bytes": 191732,
+          "title": "Kalender en programma | Lotto Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lotto-arena.be/kalender",
+            "https://www.lotto-arena.be/en/calendar"
+          ],
+          "visibleDates": 5
+        },
+        {
+          "url": "https://www.lotto-arena.be/evenement/likeme-in-concert-2027-6018c9d2",
+          "status": 200,
+          "bytes": 162054,
+          "title": "#LikeMe In Concert 2027 | Tickets | Lotto Arena",
+          "jsonLdBlocks": 2,
+          "jsonLdEvents": 2,
+          "jsonLdSample": [
+            {
+              "type": "Event",
+              "name": "#LikeMe In Concert 2027",
+              "startDate": "2027-04-10T12:30:00.000Z",
+              "url": "https://www.lotto-arena.be/nl/evenement/likeme-in-concert-2027-6018c9d2"
+            },
+            {
+              "type": "Event",
+              "name": "#LikeMe In Concert 2027",
+              "startDate": "2027-04-10T16:00:00.000Z",
+              "url": "https://www.lotto-arena.be/nl/evenement/likeme-in-concert-2027-6018c9d2"
+            }
+          ],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 3,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {
+            "ticketmaster": 2
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lotto-arena.be/evenement/likeme-in-concert-2027-6018c9d2",
+            "https://www.lotto-arena.be/fr/evenement/likeme-in-concert-2027-6018c9d2",
+            "https://www.lotto-arena.be/en/event/likeme-in-concert-2027-6018c9d2",
+            "https://www.lotto-arena.be/kalender"
+          ],
+          "visibleDates": 9
+        },
+        {
+          "url": "https://www.lotto-arena.be/en/calendar",
+          "status": 200,
+          "bytes": 190431,
+          "title": "Event calendar | Lotto Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lotto-arena.be/kalender",
+            "https://www.lotto-arena.be/en/calendar"
+          ],
+          "visibleDates": 1
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.lotto-arena.be/sitemap.xml",
+        "eventUrls": 123,
+        "sample": [
+          "https://www.lotto-arena.be/en/calendar",
+          "https://www.lotto-arena.be/evenement/likeme-in-concert-2027-6018c9d2",
+          "https://www.lotto-arena.be/evenement/likeme-in-concert-2026-2f291394"
+        ],
+        "detailUrl": "https://www.lotto-arena.be/en/event/bazart-85ebd8f4",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "vorst-nationaal",
+      "name": "Vorst Nationaal",
+      "country": "BE",
+      "pages": [
+        {
+          "url": "https://www.vorst-nationaal.be/",
+          "status": 200,
+          "bytes": 699316,
+          "title": "Vorst Nationaal: concertzaal in Brussel | Vorst Nationaal",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.vorst-nationaal.be/kalender",
+            "https://www.vorst-nationaal.be/nieuws/carpoolen-naar-concert",
+            "https://www.vorst-nationaal.be/evenement/intouchables-in-concert-8a0a41e7"
+          ],
+          "visibleDates": 38
+        },
+        {
+          "url": "https://www.forest-national.be/",
+          "status": 200,
+          "bytes": 605924,
+          "title": "Forest National : concerts à Bruxelles | Forest National",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.forest-national.be/nouvelles/covoiturage-pour-aller-a-un-concert",
+            "https://www.forest-national.be/evenement/intouchables-en-cineconcert-8a0a41e7",
+            "https://www.forest-national.be/nouvelles/revele-par-le-tube-show-me-love-wizthemc-debarque-a-forest-national",
+            "https://www.forest-national.be/nouvelles/bistronomy-experience-forest-national-diner-concert"
+          ],
+          "visibleDates": 18
+        },
+        {
+          "url": "https://www.vorst-nationaal.be/kalender",
+          "status": 200,
+          "bytes": 211245,
+          "title": "Kalender en programma | Vorst Nationaal",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.vorst-nationaal.be/kalender"
+          ],
+          "visibleDates": 1
+        },
+        {
+          "url": "https://www.vorst-nationaal.be/nieuws/carpoolen-naar-concert",
+          "status": 200,
+          "bytes": 200010,
+          "title": "Carpool naar je concert met Slinger | Nieuws | Vorst Nationaal",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.vorst-nationaal.be/nieuws/carpoolen-naar-concert",
+            "https://www.vorst-nationaal.be/kalender",
+            "https://www.vorst-nationaal.be/nieuws/pik-deze-shows-mee-met-15-black-friday-korting",
+            "https://www.vorst-nationaal.be/nieuws/keolis-event-shuttle-vorst-nationaal"
+          ],
+          "visibleDates": 8
+        },
+        {
+          "url": "https://www.forest-national.be/nouvelles/covoiturage-pour-aller-a-un-concert",
+          "status": 200,
+          "bytes": 193021,
+          "title": "Covoiturez pour aller à votre concert avec Slinger | Actualite | Forest National",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.forest-national.be/nouvelles/covoiturage-pour-aller-a-un-concert",
+            "https://www.forest-national.be/nouvelles/les-preventes-a-portee-de-main-avec-votre-beat-account",
+            "https://www.forest-national.be/nouvelles/keolis-event-shuttle-forest-national"
+          ],
+          "visibleDates": 10
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (125 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://www.vorst-nationaal.be/sitemap.xml",
+        "eventUrls": 125,
+        "sample": [
+          "https://www.forest-national.be/en/calendar",
+          "https://www.vorst-nationaal.be/evenement/intouchables-in-concert-8a0a41e7",
+          "https://www.vorst-nationaal.be/evenement/rocky-in-concert-49b27a4b"
+        ],
+        "detailUrl": "https://www.forest-national.be/en/event/john-summit-e768f740",
+        "detailJsonLd": 1
+      }
+    },
+    {
+      "id": "palais-12",
+      "name": "ING Arena",
+      "country": "BE",
+      "pages": [
+        {
+          "url": "https://ing.arena.brussels/",
+          "status": 403,
+          "bytes": 107
+        },
+        {
+          "url": "https://www.palais12.com/",
+          "status": 403,
+          "bytes": 107
+        }
+      ],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://ing.arena.brussels/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 415"
+      }
+    },
+    {
+      "id": "koning-boudewijnstadion",
+      "name": "Koning Boudewijnstadion",
+      "country": "BE",
+      "pages": [],
+      "robots": "none",
+      "verdict": {
+        "level": "geen",
+        "how": "geen eigen agenda-site bekend"
+      }
+    },
+    {
+      "id": "arena-hasselt",
+      "name": "Trixxo Arena",
+      "country": "BE",
+      "pages": [
+        {
+          "url": "https://www.trixxoarena.be/",
+          "status": 200,
+          "finalUrl": "https://www.trixxo-arena.be/",
+          "bytes": 509780,
+          "title": "Trixxo Arena Hasselt, vroeger Ethias Arena | Trixxo Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.trixxo-arena.be/kalender"
+          ],
+          "visibleDates": 25
+        },
+        {
+          "url": "https://www.trixxo-arena.be/kalender",
+          "status": 200,
+          "bytes": 204853,
+          "title": "Kalender en programma | Trixxo Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.trixxo-arena.be/kalender",
+            "https://www.trixxo-arena.be/en/calendar"
+          ],
+          "visibleDates": 3
+        },
+        {
+          "url": "https://www.trixxo-arena.be/en/calendar",
+          "status": 200,
+          "bytes": 203618,
+          "title": "Event calendar | Trixxo Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": true,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.trixxo-arena.be/kalender",
+            "https://www.trixxo-arena.be/en/calendar"
+          ],
+          "visibleDates": 3
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.trixxo-arena.be/sitemap.xml",
+        "eventUrls": 69,
+        "sample": [
+          "https://www.trixxo-arena.be/en/calendar",
+          "https://www.trixxo-arena.be/evenement/the-big-event-beren-en-poppenbeurs-c9e7dc33",
+          "https://www.trixxo-arena.be/evenement/pxl-jobevent-2026-c954bd41"
+        ],
+        "detailUrl": "https://www.trixxo-arena.be/en/event/book-fair-b750f5fc",
+        "detailJsonLd": 0
+      }
+    },
+    {
+      "id": "lanxess-arena",
+      "name": "LANXESS arena",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.lanxess-arena.de/events",
+          "status": 404,
+          "bytes": 12260
+        },
+        {
+          "url": "https://www.lanxess-arena.de/",
+          "status": 200,
+          "bytes": 156978,
+          "title": "LANXESS arena",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lanxess-arena.de/events-tickets/newsletter",
+            "https://www.lanxess-arena.de/events-tickets/eventkalender",
+            "https://www.lanxess-arena.de/events-tickets/lanxess-arena-ticket-shop",
+            "https://www.lanxess-arena.de/events-tickets/vorverkaufsstellen",
+            "https://www.lanxess-arena.de/events-tickets/gruppenservice",
+            "https://www.lanxess-arena.de/events-tickets/busreisen-/-touristik",
+            "https://www.lanxess-arena.de/events-tickets/wertgutscheine",
+            "https://www.lanxess-arena.de/veranstaltungsreihe/1live-koeln-comedy-nacht-xxl-2027"
+          ],
+          "visibleDates": 38
+        },
+        {
+          "url": "https://www.lanxess-arena.de/events-tickets/newsletter",
+          "status": 200,
+          "bytes": 60012,
+          "title": "Newsletter",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lanxess-arena.de/events-tickets/newsletter",
+            "https://www.lanxess-arena.de/events-tickets/eventkalender",
+            "https://www.lanxess-arena.de/events-tickets/lanxess-arena-ticket-shop",
+            "https://www.lanxess-arena.de/events-tickets/vorverkaufsstellen",
+            "https://www.lanxess-arena.de/events-tickets/gruppenservice",
+            "https://www.lanxess-arena.de/events-tickets/busreisen-/-touristik",
+            "https://www.lanxess-arena.de/events-tickets/wertgutscheine",
+            "https://www.lanxess-arena.de/veranstaltungsreihe/1live-koeln-comedy-nacht-xxl-2027"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.lanxess-arena.de/events-tickets/eventkalender",
+          "status": 200,
+          "bytes": 864525,
+          "title": "Eventkalender",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.lanxess-arena.de/events-tickets/newsletter",
+            "https://www.lanxess-arena.de/events-tickets/eventkalender",
+            "https://www.lanxess-arena.de/events-tickets/lanxess-arena-ticket-shop",
+            "https://www.lanxess-arena.de/events-tickets/vorverkaufsstellen",
+            "https://www.lanxess-arena.de/events-tickets/gruppenservice",
+            "https://www.lanxess-arena.de/events-tickets/busreisen-/-touristik",
+            "https://www.lanxess-arena.de/events-tickets/wertgutscheine",
+            "https://www.lanxess-arena.de/veranstaltungsreihe/1live-koeln-comedy-nacht-xxl-2027"
+          ],
+          "visibleDates": 216
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.lanxess-arena.de/sitemap.xml?sitemap=pages",
+        "eventUrls": 32,
+        "sample": [
+          "https://www.lanxess-arena.de/events-tickets/lanxess-arena-ticket-shop",
+          "https://www.lanxess-arena.de/events-tickets/gruppenservice",
+          "https://www.lanxess-arena.de/events-tickets/busreisen-/-touristik"
+        ],
+        "detailUrl": "https://www.lanxess-arena.de/veranstaltungsreihe/upw-europe-2027",
+        "detailJsonLd": 0
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "rheinenergiestadion",
+      "name": "RheinEnergieStadion",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.rheinenergiestadion.de/",
+          "status": 200,
+          "bytes": 246884,
+          "title": "RheinEnergieSTADION - Die vielseitige Eventlocation in Köln",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.rheinenergiestadion.de/feed/",
+            "https://www.rheinenergiestadion.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.rheinenergiestadion.de/firmenevents/",
+            "https://www.rheinenergiestadion.de/private-events/",
+            "https://www.rheinenergiestadion.de/ueberblick-eventlocations/",
+            "https://www.rheinenergiestadion.de/eventlocation-mieten/",
+            "https://www.rheinenergiestadion.de/eventloge-nord/",
+            "https://www.rheinenergiestadion.de/veranstaltungsmanagement/",
+            "https://www.rheinenergiestadion.de/events/koeln-elversberg/ical/",
+            "https://www.rheinenergiestadion.de/events/1-fc-koeln-rb-leipzig-4/ical/"
+          ],
+          "visibleDates": 24
+        },
+        {
+          "url": "https://www.rheinenergiestadion.de/firmenevents/",
+          "status": 200,
+          "bytes": 202991,
+          "title": "Erfolgreiche Firmenevents im RheinEnergieSTADION",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.rheinenergiestadion.de/feed/",
+            "https://www.rheinenergiestadion.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.rheinenergiestadion.de/firmenevents/",
+            "https://www.rheinenergiestadion.de/private-events/",
+            "https://www.rheinenergiestadion.de/ueberblick-eventlocations/",
+            "https://www.rheinenergiestadion.de/eventlocation-mieten/",
+            "https://www.rheinenergiestadion.de/eventloge-nord/",
+            "https://www.rheinenergiestadion.de/veranstaltungsmanagement/",
+            "https://www.rheinenergiestadion.de/en/corporate-events/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.rheinenergiestadion.de/private-events/",
+          "status": 200,
+          "bytes": 202311,
+          "title": "Unvergessliche Private Events im RheinEnergieSTADION",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.rheinenergiestadion.de/feed/",
+            "https://www.rheinenergiestadion.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 7.1.5",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.rheinenergiestadion.de/firmenevents/",
+            "https://www.rheinenergiestadion.de/private-events/",
+            "https://www.rheinenergiestadion.de/ueberblick-eventlocations/",
+            "https://www.rheinenergiestadion.de/eventlocation-mieten/",
+            "https://www.rheinenergiestadion.de/eventloge-nord/",
+            "https://www.rheinenergiestadion.de/veranstaltungsmanagement/",
+            "https://www.rheinenergiestadion.de/en/private-events/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (167 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://www.rheinenergiestadion.de/sitemap.xml",
+        "eventUrls": 167,
+        "sample": [
+          "https://www.rheinenergiestadion.de/events/1-fc-koeln-borussia-dortmund-2/",
+          "https://www.rheinenergiestadion.de/events/1-fc-koeln-sc-freiburg/",
+          "https://www.rheinenergiestadion.de/events/1-fc-koeln-rb-leipzig-4/"
+        ],
+        "note": "index met 7 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.rheinenergiestadion.de/events/1-fc-koeln-vfb-stuttgart-2/",
+        "detailJsonLd": 1
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "fluent-smtp",
+        "wpml/v1",
+        "borlabs-cookie/v1",
+        "cf7apps/v1",
+        "contact-form-7/v1",
+        "events-manager/v1",
+        "tnp",
+        "rankmath/v1",
+        "rankmath/v1/setupWizard",
+        "wordfence-login-security/v1",
+        "wordfence/v1",
+        "wpbot/v1",
+        "wpml/st/v1",
+        "aam/v2",
+        "wpml/tm/v1",
+        "wpml/ate/v1",
+        "oauth/v1",
+        "ai1wm/v1",
+        "newsletter",
+        "rankmath/v1/ai-visibility",
+        "rankmath/v1/status",
+        "acfml/v1",
+        "otgs/installer/v1",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "wp-abilities/v1"
+      ]
+    },
+    {
+      "id": "palladium-koeln",
+      "name": "Palladium",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.palladium-koeln.de/events",
+          "status": 200,
+          "finalUrl": "https://www.palladium-koeln.de/",
+          "bytes": 256384,
+          "title": "Palladium Köln - Palladium",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.palladium-koeln.de/feed/",
+            "https://www.palladium-koeln.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 6.7.12",
+          "ticketLinks": {
+            "livenation": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.palladium-koeln.de/programm/"
+          ],
+          "visibleDates": 6
+        },
+        {
+          "url": "https://www.palladium-koeln.de/",
+          "status": 200,
+          "bytes": 256384,
+          "title": "Palladium Köln - Palladium",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.palladium-koeln.de/feed/",
+            "https://www.palladium-koeln.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 6.7.12",
+          "ticketLinks": {
+            "livenation": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.palladium-koeln.de/programm/"
+          ],
+          "visibleDates": 6
+        },
+        {
+          "url": "https://www.palladium-koeln.de/programm/",
+          "status": 200,
+          "bytes": 241357,
+          "title": "Programm - Palladium",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.palladium-koeln.de/feed/",
+            "https://www.palladium-koeln.de/comments/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 6.7.12",
+          "ticketLinks": {
+            "livenation": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.palladium-koeln.de/programm/"
+          ],
+          "visibleDates": 31
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.palladium-koeln.de/sitemap_index.xml",
+        "eventUrls": 418,
+        "sample": [
+          "https://www.palladium-koeln.de/event/nina-chuba/",
+          "https://www.palladium-koeln.de/event/gims/",
+          "https://www.palladium-koeln.de/event/kettcar/"
+        ],
+        "note": "index met 4 sitemaps, gelezen: 2",
+        "detailUrl": "https://www.palladium-koeln.de/event/querbeat-2/",
+        "detailJsonLd": 0
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "duplicator/v1",
+        "wordfence-login-security/v1",
+        "wordfence/v1",
+        "yoast/v1",
+        "wp-all-import/v1",
+        "complianz/v1",
+        "elementor/v1",
+        "elementor-pro/v1",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1"
+      ],
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "psd-bank-dome",
+      "name": "PSD Bank Dome",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.psd-bank-dome.de/",
+          "status": 200,
+          "bytes": 369628,
+          "title": "PSD BANK DOME",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {
+            "eventim": 4
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.psd-bank-dome.de/events-tickets/eventkalender",
+            "https://www.psd-bank-dome.de/events-tickets/ticketinfos",
+            "https://www.psd-bank-dome.de/veranstalter/konzerte-shows",
+            "https://www.psd-bank-dome.de/veranstalter/corporate-events",
+            "https://www.psd-bank-dome.de/veranstalter/sport-events",
+            "https://www.psd-bank-dome.de/vip-hospitality/club-tickets",
+            "https://www.psd-bank-dome.de/event/kehlani-05-12-2026",
+            "https://www.psd-bank-dome.de/event/rin-06-12-2026"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.psd-bank-dome.de/events-tickets/eventkalender",
+          "status": 200,
+          "bytes": 347638,
+          "title": "Eventkalender - PSD BANK DOME",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.psd-bank-dome.de/en/events-tickets/event-calendar",
+            "https://www.psd-bank-dome.de/events-tickets/eventkalender",
+            "https://www.psd-bank-dome.de/events-tickets/ticketinfos",
+            "https://www.psd-bank-dome.de/veranstalter/konzerte-shows",
+            "https://www.psd-bank-dome.de/veranstalter/corporate-events",
+            "https://www.psd-bank-dome.de/veranstalter/sport-events",
+            "https://www.psd-bank-dome.de/vip-hospitality/club-tickets"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.psd-bank-dome.de/events-tickets/ticketinfos",
+          "status": 200,
+          "bytes": 355600,
+          "title": "Ticketinfos - PSD BANK DOME",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.psd-bank-dome.de/en/events-tickets/ticket-information",
+            "https://www.psd-bank-dome.de/events-tickets/eventkalender",
+            "https://www.psd-bank-dome.de/events-tickets/ticketinfos",
+            "https://www.psd-bank-dome.de/veranstalter/konzerte-shows",
+            "https://www.psd-bank-dome.de/veranstalter/corporate-events",
+            "https://www.psd-bank-dome.de/veranstalter/sport-events",
+            "https://www.psd-bank-dome.de/vip-hospitality/club-tickets"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.psd-bank-dome.de/en/events-tickets/event-calendar",
+          "status": 200,
+          "bytes": 345784,
+          "title": "Event Calendar - PSD BANK DOME",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.psd-bank-dome.de/events-tickets/eventkalender",
+            "https://www.psd-bank-dome.de/en/events-tickets/event-calendar",
+            "https://www.psd-bank-dome.de/en/events-tickets/ticket-information",
+            "https://www.psd-bank-dome.de/en/organiser/concerts-shows",
+            "https://www.psd-bank-dome.de/en/organiser/corporate-events",
+            "https://www.psd-bank-dome.de/en/organiser/sports-events",
+            "https://www.psd-bank-dome.de/en/vip-hospitality/club-tickets"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.psd-bank-dome.de/en/events-tickets/ticket-information",
+          "status": 200,
+          "bytes": 354162,
+          "title": "Ticket information - PSD BANK DOME",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.psd-bank-dome.de/events-tickets/ticketinfos",
+            "https://www.psd-bank-dome.de/en/events-tickets/event-calendar",
+            "https://www.psd-bank-dome.de/en/events-tickets/ticket-information",
+            "https://www.psd-bank-dome.de/en/organiser/concerts-shows",
+            "https://www.psd-bank-dome.de/en/organiser/corporate-events",
+            "https://www.psd-bank-dome.de/en/organiser/sports-events",
+            "https://www.psd-bank-dome.de/en/vip-hospitality/club-tickets"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.psd-bank-dome.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 1 sitemaps, geen event-sitemap herkend"
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "merkur-spiel-arena",
+      "name": "Merkur Spiel-Arena",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.merkur-spiel-arena.de/",
+          "status": 200,
+          "bytes": 372659,
+          "title": "MERKUR SPIEL-ARENA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {
+            "eventim": 1,
+            "livenation": 1
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.merkur-spiel-arena.de/events-tickets/eventkalender",
+            "https://www.merkur-spiel-arena.de/events-tickets/ticketinfos",
+            "https://www.merkur-spiel-arena.de/besucherinfos/blockplan-konzert",
+            "https://www.merkur-spiel-arena.de/veranstalter/konzerte-shows",
+            "https://www.merkur-spiel-arena.de/veranstalter/corporate-events",
+            "https://www.merkur-spiel-arena.de/veranstalter/sport-events",
+            "https://www.merkur-spiel-arena.de/event/foo-fighters-17-06-2027",
+            "https://www.merkur-spiel-arena.de/event/kabayel-vs-hysa-28-11-2026"
+          ],
+          "visibleDates": 2
+        },
+        {
+          "url": "https://www.merkur-spiel-arena.de/events-tickets/eventkalender",
+          "status": 200,
+          "bytes": 350246,
+          "title": "Eventkalender - MERKUR SPIEL-ARENA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.merkur-spiel-arena.de/en/events-tickets/event-calendar",
+            "https://www.merkur-spiel-arena.de/events-tickets/eventkalender",
+            "https://www.merkur-spiel-arena.de/events-tickets/ticketinfos",
+            "https://www.merkur-spiel-arena.de/besucherinfos/blockplan-konzert",
+            "https://www.merkur-spiel-arena.de/veranstalter/konzerte-shows",
+            "https://www.merkur-spiel-arena.de/veranstalter/corporate-events",
+            "https://www.merkur-spiel-arena.de/veranstalter/sport-events",
+            "https://www.merkur-spiel-arena.de/events-tickets-1"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.merkur-spiel-arena.de/events-tickets/ticketinfos",
+          "status": 200,
+          "bytes": 360437,
+          "title": "Ticketinfos - MERKUR SPIEL-ARENA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.merkur-spiel-arena.de/en/events-tickets/ticket-information",
+            "https://www.merkur-spiel-arena.de/events-tickets/eventkalender",
+            "https://www.merkur-spiel-arena.de/events-tickets/ticketinfos",
+            "https://www.merkur-spiel-arena.de/besucherinfos/blockplan-konzert",
+            "https://www.merkur-spiel-arena.de/veranstalter/konzerte-shows",
+            "https://www.merkur-spiel-arena.de/veranstalter/corporate-events",
+            "https://www.merkur-spiel-arena.de/veranstalter/sport-events",
+            "https://www.merkur-spiel-arena.de/events-tickets-1"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.merkur-spiel-arena.de/en/events-tickets/event-calendar",
+          "status": 200,
+          "bytes": 347464,
+          "title": "Event Calendar - MERKUR SPIEL-ARENA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.merkur-spiel-arena.de/events-tickets/eventkalender",
+            "https://www.merkur-spiel-arena.de/en/events-tickets/event-calendar",
+            "https://www.merkur-spiel-arena.de/en/events-tickets/ticket-information",
+            "https://www.merkur-spiel-arena.de/en/organiser/concerts-shows",
+            "https://www.merkur-spiel-arena.de/en/organiser/corporate-events",
+            "https://www.merkur-spiel-arena.de/en/organiser/sports-events",
+            "https://www.merkur-spiel-arena.de/en/events-tickets-1"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.merkur-spiel-arena.de/en/events-tickets/ticket-information",
+          "status": 200,
+          "bytes": 358165,
+          "title": "Ticket Information - MERKUR SPIEL-ARENA",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.merkur-spiel-arena.de/events-tickets/ticketinfos",
+            "https://www.merkur-spiel-arena.de/en/events-tickets/event-calendar",
+            "https://www.merkur-spiel-arena.de/en/events-tickets/ticket-information",
+            "https://www.merkur-spiel-arena.de/en/organiser/concerts-shows",
+            "https://www.merkur-spiel-arena.de/en/organiser/corporate-events",
+            "https://www.merkur-spiel-arena.de/en/organiser/sports-events",
+            "https://www.merkur-spiel-arena.de/en/events-tickets-1"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.merkur-spiel-arena.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 1 sitemaps, geen event-sitemap herkend"
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "mitsubishi-electric-halle",
+      "name": "Mitsubishi Electric Halle",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.mitsubishi-electric-halle.de/",
+          "status": 200,
+          "bytes": 352028,
+          "title": "Mitsubishi Electric HALLE",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mitsubishi-electric-halle.de/events-tickets/eventkalender",
+            "https://www.mitsubishi-electric-halle.de/rock-kitchen",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/konzerte-shows",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/corporate-events",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/sport-events",
+            "https://www.mitsubishi-electric-halle.de/event/the-legend-of-korra-in-concert",
+            "https://www.mitsubishi-electric-halle.de/event/wahnsinn-die-show-2027-17-03-2027",
+            "https://www.mitsubishi-electric-halle.de/event/greenbeats-11-04-2027"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.mitsubishi-electric-halle.de/events-tickets/eventkalender",
+          "status": 200,
+          "bytes": 345779,
+          "title": "Eventkalender - Mitsubishi Electric HALLE",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mitsubishi-electric-halle.de/en/events-tickets/event-calendar",
+            "https://www.mitsubishi-electric-halle.de/events-tickets/eventkalender",
+            "https://www.mitsubishi-electric-halle.de/rock-kitchen",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/konzerte-shows",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/corporate-events",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/sport-events",
+            "https://www.mitsubishi-electric-halle.de/events-tickets",
+            "https://www.mitsubishi-electric-halle.de/events-tickets/ticketinfos"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.mitsubishi-electric-halle.de/rock-kitchen",
+          "status": 200,
+          "bytes": 362669,
+          "title": "ROCK KITCHEN - Mitsubishi Electric HALLE",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mitsubishi-electric-halle.de/events-tickets/eventkalender",
+            "https://www.mitsubishi-electric-halle.de/rock-kitchen",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/konzerte-shows",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/corporate-events",
+            "https://www.mitsubishi-electric-halle.de/veranstalter/sport-events",
+            "https://www.mitsubishi-electric-halle.de/events-tickets",
+            "https://www.mitsubishi-electric-halle.de/events-tickets/ticketinfos"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.mitsubishi-electric-halle.de/en/events-tickets/event-calendar",
+          "status": 200,
+          "bytes": 344068,
+          "title": "Event Calendar - Mitsubishi Electric HALLE",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.mitsubishi-electric-halle.de/events-tickets/eventkalender",
+            "https://www.mitsubishi-electric-halle.de/en/events-tickets/event-calendar",
+            "https://www.mitsubishi-electric-halle.de/en/organiser/concerts-shows",
+            "https://www.mitsubishi-electric-halle.de/en/organiser/corporate-events",
+            "https://www.mitsubishi-electric-halle.de/en/organiser/sports-events",
+            "https://www.mitsubishi-electric-halle.de/en/events-tickets",
+            "https://www.mitsubishi-electric-halle.de/en/events-tickets/ticket-information"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://www.mitsubishi-electric-halle.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 1 sitemaps, geen event-sitemap herkend"
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "westfalenhalle",
+      "name": "Westfalenhalle",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.westfalenhallen.de/",
+          "status": 200,
+          "finalUrl": "https://www.westfalenhallen-gruppe.de/",
+          "bytes": 196007,
+          "title": "Messen, Kongresse, Konzerte und Sportveranstaltungen in Dortmund | Westfalenhallen-Gruppe",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {
+            "eventbrite": 1,
+            "eventim": 17
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.westfalenhallen-gruppe.de/eventkalender/naechste-veranstaltungen/"
+          ],
+          "visibleDates": 44
+        },
+        {
+          "url": "https://www.westfalenhallen-gruppe.de/eventkalender/naechste-veranstaltungen/",
+          "status": 200,
+          "bytes": 164420,
+          "title": "Veranstaltungen - Westfalenhallen UG GmbH | Westfalenhallen-Gruppe",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {
+            "eventbrite": 1,
+            "eventim": 18
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.westfalenhallen-gruppe.de/eventkalender/naechste-veranstaltungen/",
+            "https://www.westfalenhallen-gruppe.de/en/event-calendar/upcoming-events/"
+          ],
+          "visibleDates": 40
+        },
+        {
+          "url": "https://www.westfalenhallen-gruppe.de/en/event-calendar/upcoming-events/",
+          "status": 200,
+          "bytes": 160825,
+          "title": "Upcoming events | Westfalenhallen-Gruppe",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "generator": "TYPO3 CMS",
+          "ticketLinks": {
+            "eventbrite": 1,
+            "eventim": 18
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://www.westfalenhallen-gruppe.de/eventkalender/naechste-veranstaltungen/",
+            "https://www.westfalenhallen-gruppe.de/en/event-calendar/upcoming-events/"
+          ],
+          "visibleDates": 40
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.westfalenhallen.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "index met 4 sitemaps, gelezen: 1"
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "signal-iduna-park",
+      "name": "Signal Iduna Park",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.signal-iduna-park.de/",
+          "status": 200,
+          "bytes": 9836,
+          "title": "SIGNAL IDUNA PARK - Home",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [],
+          "visibleDates": 8
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "https://www.signal-iduna-park.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "status 404"
+      }
+    },
+    {
+      "id": "veltins-arena",
+      "name": "Veltins-Arena",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.veltins-arena.de/",
+          "status": 200,
+          "finalUrl": "https://veltins-arena.de/",
+          "bytes": 127908,
+          "title": "VELTINS-Arena Gelsenkirchen | Meistbesuchtes Stadion Deutschlands",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WordPress 6.0.2",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://veltins-arena.de/events/",
+            "https://veltins-arena.de/business/firmenevents/",
+            "https://veltins-arena.de/business/firmenevents/firmenfeiern/",
+            "https://veltins-arena.de/business/firmenevents/tagungen/",
+            "https://veltins-arena.de/business/firmenevents/weihnachtsfeier/",
+            "https://veltins-arena.de/business/firmenevents/hybride-events/",
+            "https://veltins-arena.de/business/privatevents/",
+            "https://veltins-arena.de/business/privatevents/hochzeiten/"
+          ],
+          "visibleDates": 5
+        },
+        {
+          "url": "https://veltins-arena.de/events/",
+          "status": 200,
+          "bytes": 91138,
+          "title": "Eventübersicht - Alle Events in der VELTINS-Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://veltins-arena.de/events/feed/"
+          ],
+          "wordpress": true,
+          "generator": "WordPress 6.0.2",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://veltins-arena.de/events/",
+            "https://veltins-arena.de/business/firmenevents/",
+            "https://veltins-arena.de/business/firmenevents/firmenfeiern/",
+            "https://veltins-arena.de/business/firmenevents/tagungen/",
+            "https://veltins-arena.de/business/firmenevents/weihnachtsfeier/",
+            "https://veltins-arena.de/business/firmenevents/hybride-events/",
+            "https://veltins-arena.de/business/privatevents/",
+            "https://veltins-arena.de/business/privatevents/hochzeiten/"
+          ],
+          "nextPage": "https://veltins-arena.de/events/page/2/",
+          "visibleDates": 0
+        },
+        {
+          "url": "https://veltins-arena.de/business/firmenevents/",
+          "status": 200,
+          "bytes": 109939,
+          "title": "Firmenfeier, Weihnachtsfeier im Ruhrgebiet und in NRW- VELTINS-Arena",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 1,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "generator": "WordPress 6.0.2",
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://veltins-arena.de/events/",
+            "https://veltins-arena.de/business/firmenevents/",
+            "https://veltins-arena.de/business/firmenevents/firmenfeiern/",
+            "https://veltins-arena.de/business/firmenevents/tagungen/",
+            "https://veltins-arena.de/business/firmenevents/weihnachtsfeier/",
+            "https://veltins-arena.de/business/firmenevents/hybride-events/",
+            "https://veltins-arena.de/business/privatevents/",
+            "https://veltins-arena.de/business/privatevents/hochzeiten/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "1",
+        "how": "sitemap (29 event-URL's) + JSON-LD op detailpagina"
+      },
+      "sitemap": {
+        "url": "https://veltins-arena.de/sitemap_index.xml",
+        "eventUrls": 29,
+        "sample": [
+          "https://veltins-arena.de/events/andreas-gabalier/",
+          "https://veltins-arena.de/events/rammstein/",
+          "https://veltins-arena.de/events/iron-maiden/"
+        ],
+        "note": "index met 6 sitemaps, gelezen: 2",
+        "detailUrl": "https://veltins-arena.de/events/robbie-williams-live-2025/",
+        "detailJsonLd": 1
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "wpml/v1",
+        "yoast/v1",
+        "wpml/tm/v1",
+        "wpml/ate/v1",
+        "wpml/st/v1",
+        "wp-rocket/v1",
+        "regenerate-thumbnails/v1",
+        "otgs/installer/v1",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1",
+        "acf/v3"
+      ],
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "arena-oberhausen",
+      "name": "Rudolf Weber-Arena",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.rudolf-weber-arena.de/",
+          "status": 0,
+          "robotsBlocked": true
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "geen",
+        "how": "site niet bereikbaar of geweigerd"
+      },
+      "sitemap": {
+        "url": "https://www.rudolf-weber-arena.de/sitemap.xml",
+        "eventUrls": 0,
+        "sample": [],
+        "note": "robots.txt"
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "grugahalle",
+      "name": "Grugahalle",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.grugahalle.de/",
+          "status": 200,
+          "finalUrl": "https://www.grugahalle.de/multipurpose-hall/",
+          "bytes": 49990,
+          "title": "Grugahalle | GRUGAHALLE - Anything is possible",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [
+            "https://www.grugahalle.de/multipurpose-hall/news/gh_news_rss_en.xml"
+          ],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.${c}apis.com/maps/api/js?"
+          ],
+          "agendaLinks": [
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/event-technology/",
+            "https://www.grugahalle.de/multipurpose-hall/the-grugahalle/event-impressions/",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/essener-schallplatten-boerse-2024-11-03-en-6.html",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/essener-karnevals-verein-e-v-volkskarneval-2017-2019-03-01-en-13.html",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/das-grosse-familien-event-weihnachtssingen-in-essen-2027-12-17-en.html",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/gruga-va-detailseite_26465.html"
+          ],
+          "visibleDates": 21
+        },
+        {
+          "url": "https://www.grugahalle.de/multipurpose-hall/events-dates/",
+          "status": 200,
+          "bytes": 95697,
+          "title": "Grugahalle | List view of the events calendar",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.${c}apis.com/maps/api/js?"
+          ],
+          "agendaLinks": [
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/event-technology/",
+            "https://www.grugahalle.de/multipurpose-hall/the-grugahalle/event-impressions/",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/knasterbart-branntweihnachten-2025-12-20-en-4.html",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/herr-schroeder-der-rest-ist-hausaufgabe-2026-12-04-en.html",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/detail/essener-schallplatten-boerse-2024-11-03-en-6.html"
+          ],
+          "visibleDates": 35
+        },
+        {
+          "url": "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/",
+          "status": 200,
+          "bytes": 126954,
+          "title": "Grugahalle | Overview Room for your events",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.${c}apis.com/maps/api/js?"
+          ],
+          "agendaLinks": [
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/event-technology/",
+            "https://www.grugahalle.de/multipurpose-hall/the-grugahalle/event-impressions/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/detail/grugahalle.html",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/detail/foyer.html",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/detail/room-g.html"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/",
+          "status": 200,
+          "bytes": 79149,
+          "title": "Grugahalle | Veranstaltungskalender Listenansicht",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.${c}apis.com/maps/api/js?"
+          ],
+          "agendaLinks": [
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/",
+            "https://www.grugahalle.de/multipurpose-hall/events-dates/",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/veranstaltungstechnik/",
+            "https://www.grugahalle.de/mehrzweckhalle/die-grugahalle/veranstaltungsimpressionen/",
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/detail/oezcan-cosar-vip-2026-11-28-de.html",
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/detail/herr-schroeder-der-rest-ist-hausaufgabe-2026-12-04-de.html",
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/detail/ddt-2026-12-05-de.html"
+          ],
+          "visibleDates": 35
+        },
+        {
+          "url": "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/",
+          "status": 200,
+          "bytes": 113221,
+          "title": "Grugahalle | Übersicht Raum für Ihre Veranstaltung",
+          "jsonLdBlocks": 0,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": false,
+          "ticketLinks": {},
+          "apiHints": [
+            "https://maps.${c}apis.com/maps/api/js?"
+          ],
+          "agendaLinks": [
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/",
+            "https://www.grugahalle.de/multipurpose-hall/for-organisers/room-for-your-events/",
+            "https://www.grugahalle.de/mehrzweckhalle/veranstaltungen-termine/",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/veranstaltungstechnik/",
+            "https://www.grugahalle.de/mehrzweckhalle/die-grugahalle/veranstaltungsimpressionen/",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/detail/grugahalle.html",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/detail/foyer.html",
+            "https://www.grugahalle.de/mehrzweckhalle/fuer-veranstalter/raum-fuer-ihre-veranstaltung/detail/raum-g.html"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "3",
+        "how": "HTML-agenda met zichtbare datums"
+      },
+      "sitemap": {
+        "url": "http://www.grugahalle.de/mehrzweckhalle/sitemap/sitemap_de.xml",
+        "eventUrls": 15,
+        "sample": [
+          "https://www.grugahalle.de/mehrzweckhalle/aktuelles-grugahalle/detail/aryana-sayeed-ladies-only-concert-525",
+          "https://www.grugahalle.de/mehrzweckhalle/aktuelles-grugahalle/detail/burger-pommes-x-eierkopf-show-2026-508",
+          "https://www.grugahalle.de/mehrzweckhalle/aktuelles-grugahalle/detail/das-grosse-familien-event-weihnachtssingen-in-essen-520"
+        ],
+        "detailUrl": "https://www.grugahalle.de/mehrzweckhalle/aktuelles-grugahalle/detail/max-raabe-und-palast-orchester-neues-programm-2027-491",
+        "detailJsonLd": 0
+      },
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    },
+    {
+      "id": "sparkassenpark",
+      "name": "Sparkassenpark",
+      "country": "DE",
+      "pages": [
+        {
+          "url": "https://www.sparkassenpark.de/",
+          "status": 200,
+          "finalUrl": "https://sparkassenpark.de/",
+          "bytes": 256155,
+          "title": "Startseite | SparkassenPark Mönchengladbach",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {
+            "eventim": 32
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://sparkassenpark.de/veranstaltungen-im-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/tickets-fuer-schwerbehinderte/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2025/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2024/",
+            "https://sparkassenpark.de/veranstaltung/winterlichter-schloss-rheydt/",
+            "https://sparkassenpark.de/veranstaltung/james-blunt-13-06-2027-idstein/",
+            "https://sparkassenpark.de/veranstaltung/fall-out-boy-28-05-2027-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/veranstaltung/pur-04-06-2027-sparkassenpark-moenchengladbach/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://sparkassenpark.de/veranstaltungen-im-sparkassenpark-moenchengladbach/",
+          "status": 200,
+          "bytes": 186673,
+          "title": "Konzerte im SparkassenPark Mönchengladbach",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {
+            "eventim": 12
+          },
+          "apiHints": [],
+          "agendaLinks": [
+            "https://sparkassenpark.de/veranstaltungen-im-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/tickets-fuer-schwerbehinderte/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2025/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2024/",
+            "https://sparkassenpark.de/veranstaltung/fall-out-boy-28-05-2027-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/veranstaltung/pur-04-06-2027-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/veranstaltung/take-that-06-06-2027-moenchengladbach/",
+            "https://sparkassenpark.de/veranstaltung/santiano-12-06-2027-sparkassenpark-moenchengladbach/"
+          ],
+          "visibleDates": 0
+        },
+        {
+          "url": "https://sparkassenpark.de/tickets-fuer-schwerbehinderte/",
+          "status": 200,
+          "bytes": 155818,
+          "title": "Tickets für Schwerbehinderte | Sparkassenpark",
+          "jsonLdBlocks": 1,
+          "jsonLdEvents": 0,
+          "jsonLdSample": [],
+          "nextData": false,
+          "nuxt": false,
+          "dateKeyHits": 0,
+          "icsLinks": [],
+          "feedLinks": [],
+          "wordpress": true,
+          "ticketLinks": {},
+          "apiHints": [],
+          "agendaLinks": [
+            "https://sparkassenpark.de/veranstaltungen-im-sparkassenpark-moenchengladbach/",
+            "https://sparkassenpark.de/tickets-fuer-schwerbehinderte/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2025/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/on-tour/galerie-on-tour-2024/",
+            "https://sparkassenpark.de/sparkassenpark-veranstaltungen/"
+          ],
+          "visibleDates": 0
+        }
+      ],
+      "robots": "ok",
+      "verdict": {
+        "level": "?",
+        "how": "agenda gevonden maar geen data herkend (mogelijk JavaScript)"
+      },
+      "sitemap": {
+        "url": "https://sparkassenpark.de/sitemap_index.xml",
+        "eventUrls": 511,
+        "sample": [
+          "https://sparkassenpark.de/veranstaltung/madchenklamotte-monchnegladbach-2022/",
+          "https://sparkassenpark.de/veranstaltung/saga-moenchengladbach-2022/",
+          "https://sparkassenpark.de/veranstaltung/maria-clara-groppler-moenchengladbach-2022/"
+        ],
+        "note": "index met 3 sitemaps, gelezen: 1",
+        "detailUrl": "https://sparkassenpark.de/veranstaltung/stars-of-sounds-aarberg/",
+        "detailJsonLd": 0
+      },
+      "wpNamespaces": [
+        "oembed/1.0",
+        "contact-form-7/v1",
+        "redirection/v1",
+        "wordfence-login-security/v1",
+        "wordfence/v1",
+        "yoast/v1",
+        "hummingbird/v1",
+        "wp-mail-smtp/v1",
+        "wp/v2",
+        "wp-site-health/v1",
+        "wp-block-editor/v1"
+      ],
+      "eventim": {
+        "market": "web__eventim-de",
+        "status": 0,
+        "error": "robots.txt"
+      }
+    }
+  ]
+}
