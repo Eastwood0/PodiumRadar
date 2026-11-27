@@ -70,7 +70,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 
 - Oranje Fonds 25 jaar
 
-## 013.nl (117)
+## 013.nl (114)
 
 - 16 Horsepower
 - 40UP - Big Bang
@@ -121,7 +121,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ilse DeLange
 - Imminence
 - Internationale vrouwendag
-- Irste kruikenconcert
 - JOB Dutchtuber & Billy The Kit
 - KELLAR ALL NIGHT
 - Kim Wilde
@@ -166,7 +165,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - The Bronx + Mariachi El Bronx
 - The Dead South
 - The Dirty Daddies
-- The Elvis Concert 2027
 - The Halo Effect
 - The James Brown Experience
 - The Pogues
@@ -175,7 +173,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - This Is Lenny Jay's Michael
 - Tommy Tilburg
 - Turnover
-- Twidde Kruikenconcert
 - Uncle Acid And the Deadbeats
 - Up Close with D-Block & S-te-Fan
 - Van Dik Hout
@@ -223,7 +220,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Wasserette
 - Y2Kerst
 
-## iamsterdam.com (248)
+## iamsterdam.com (247)
 
 - 1984 Night at the Arcade
 - 80's Verantwoord
@@ -342,7 +339,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Keo
 - Kerstgala College Zuyd
 - Kiss All Hipsters
-- KrackFree Soundsystem - 10 year anniversary
 - Kyle Alessandro
 - KÖFN
 - La Roux
@@ -503,7 +499,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (120)
+## paard.nl (119)
 
 - 40UP
 - 80S VERANTWOORD
@@ -585,7 +581,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - PIETERNEL
 - POLITIEKE JONGEREN – VERZET! PROTEST!
 - Paardcafé: Bandsessies
-- Paardcafé: Boyos Soundsystem
 - Paardcafé: Club3voor12 Den Haag
 - Paardcafé: Electroclash
 - Paardcafé: Fabel indie kerst
@@ -642,37 +637,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - THE FORTUNATE SONS
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
-
-## patronaat.nl (28)
-
-- Any Given Day
-- Artin Muziek & friends
-- Back to the Disco
-- Born From Pain + Inherited
-- Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
-- Disco Del Mundo
-- Dream State
-- FUCK THE CISTEM
-- Geannuleerd: KMFDM
-- Hagane
-- Housequake
-- King Buffalo + Spirit Mother
-- Luicidal + Grindpad
-- Moonspell + Iotunn + TodoMal
-- Nieuwjaarsgala
-- Nordjevel + Svarttjern + Malphas + Unviar
-- Orden Ogan + Ensiferum + Angus McSix
-- Patronaatje tot t’ Gaatje
-- REZN + Coltaine
-- Show Me The Body
-- SiM + The Haunt
-- Sivert Høyem + support
-- State Power + Ker Ker
-- StonerGrungeFest met 22AD, Baardvader, Sustain
-- Sugar Spine + Braces
-- Terror + Bane + Start Today + Peace of Mind
-- Turmion Kätilöt + STAM1NA
-- YUNA XL
 
 ## klokgebouw.nl (6)
 
@@ -763,34 +727,30 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Thomas van Luyn
 - Vrije Keuze Abonnement
 
-## kattendans.nl (8)
+## kattendans.nl (7)
 
 - Accordeonvereniging De Lustige Klanken
 - Bands & Slagwerkgroep Echo der Kempen
 - De Grote Jaren 80 Show
-- Harmonie Echo der Kempen
 - Hartstocht
 - Meester Mark
 - Toneelvereniging ’t Abele Spel
 - WensMuziek
 
-## munttheater.nl (11)
+## munttheater.nl (9)
 
 - Aldenborghlezing en boekpresentatie: 500 jaar Pieter Bruegel - Een verborgen geschiedenis
 - Dansschool Fresh: De Magische Kerstster
 - LVO weert: Muziekgala
 - Rogstaekers Boonte Aovendj
 - Rogstaekers Boonte Femiliê Middig
-- Stichting Cultuur OpMaat en Harmonie St.-Joseph: Muziek Verbindt!
 - Stichting Rogstad: Code Napoleon
-- Sylvesterconcert: S(w)ing When You're Winning!: Harmonie St.-Joseph 1880 Weert
 - WOKMUZIEKTHEATER: MARTHA
 - Zegevieren met Manieren: Jan Jaap van Weering
 - the Ray-Stabbing Singers: Draadloos
 
-## maaspoort.nl (12)
+## maaspoort.nl (11)
 
-- Christmas in perfect harmony: Kon. Harmonie St. Cecilia Tegelen en mannenkoor de Meulezengers
 - Kabaret Młodych Panów w Venlo: Polish Events
 - Kookworkshop – Kerst – Peel en Maas: Silverfood Universum
 - Kookworkshop – Kerst – Venlo: Silverfood Universum
@@ -803,52 +763,41 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Travel Through Time: Moord in Maaspoort
 - Venlo.fit sportgala 2026: Gemeente Venlo
 
-## plt.nl (18)
+## plt.nl (11)
 
 - Bachs Weihnachtsoratorium: Heerlense Oratoriumvereniging
-- Chèvremonts Mannenkoor 1912: Kerstconcert
 - De Sjatkis: Leedjes en leidjes oet os sjtad
-- Fanfare St. Caecilia Schimmert: Jury aan Huis
 - Franciscus - De Familiemusical
-- Het Kerkraads Volkstoneel: Wits te wat v’r dunt? V’r junt!
 - Het Parkstad Limburg Sterreheim Buuttegala
 - Het Sittards KampsVanBaar Buuttegala
 - Het StreekTheater: Pension Siestermans
 - Internationale Vrouwendag Limburg 2027
 - Knipa meets Ploum
-- Oranjeconcert 2027: Harmonie St. Jozef Kaalheide
-- Philharmonie Bocholtz en Opera Compact: De Kracht van het Verhaal
-- Proms I Kirchroa: Koninklijk Kerkraads Mannenkoor St. Lambertus, Mannenkoor David en Chèvremonts Mannenkoor 1912
 - Studio Suus: Up in the Air
 - Vasteloavendskonzeët: Kerkraads Symfonie i.s.m. PLT & Kirchöatsjer Vasteloavends Verain
-- WATREMONT: Harmonie L’Union Born & Friends
 - ‘n Uurtje Kerst met PMK2019
 
-## theaterroermond.nl (11)
+## theaterroermond.nl (9)
 
-- Bruisende Blaasmuziek
 - Johnny de Mol
 - Kerst in "de Royal"
 - Kienjermusical 2027
 - Lachenderwies
 - Mariska Bauer
 - Nieuwe Helden
-- Nieuwjaarsconcert
 - Rob Kemps
 - Simsala Saartje & het cijferstrand
 - The Best of Sven & Matthijs!
 
-## delamar.nl (13)
+## delamar.nl (11)
 
 - An evening with April: Een spelshow met variété en prijzen
-- Café DeLaMar met Cornald Maas: Een nieuwe culturele talkshow
 - Dominique Schreinemachers: Return to Base
 - Evi Hanssen: Bloedheet & tranen
 - Fred van Leer: Ik weet het eigenlijk niet
 - Jimmy Nelson: Through the Human Lens
 - Joep van Deudekom en Rob Urgert: De Verbinders!
 - Lieven Scheire: Robots
-- Lisa Loeb: Cabaretcollege: Fopfeminisme
 - Minder telefoon, meer leven: Hoe je afkickt van je smartphone
 - Raymond Mens: De Tussenstand in Amerika
 - Rob Kemps: Laat me niet alleen
@@ -875,7 +824,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Utrechts Sprookjestheater: De Gelaarsde Kat
 - Verkennen Mars: Voorproevers #3
 
-## schouwburgconcertzaaltilburg.nl (201)
+## schouwburgconcertzaaltilburg.nl (166)
 
 - 20 jaar 3JS
 - 40 jaar Rowwen Hèze: Rhobijn
@@ -897,14 +846,11 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Bureau Díptíc: Taalrondje in Tilburg
 - Buysse & Joosten: Guyland
 - Calefax & Joris Luyendijk: Joris Luyendijk in Calefaxland
-- Camerata RCO: Kamermuziek Souvenir
 - Cappella Amsterdam & Lavinia Meijer: Philip Glass wordt 90!
-- Cecilia Moisio Company: AN(I'M)A
 - Charly Luske: The Story of George Michael
 - Clean Pete: Klassieke Revue
 - Collectief BLAUWDRUK: LAATSTE KAARTEN
 - Comedytunes: Comedynight in de Studio
-- Compagnie Tiuri: Nothing Left On Blue
 - Conny Janssen Danst: BEHIND THE WALL
 - DE BESTORMING: Willem Voogd, Marisa van Eyle & Kharim Amier
 - Daan van der Hoeven: Mensenmens
@@ -914,7 +860,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Dawn Brothers & Friends: 50 Years The Last Waltz
 - De Niemanders: Cafe Habibi
 - De Règâhs: Groeten uit Den Haag
-- De Tafel van Martinus: Wetenschapstalkshow Tilburg University
 - De Verbouwing: Naar het boek van Saskia Noort
 - De Verleiders: Zoek Dekking
 - De Warme Winkel: Hamlet: R2D2_or_not_2B2
@@ -923,11 +868,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Diamond Baritones: The Circle of Life
 - Doetertoe Fist (12 t/m 17): i.s.m. Carnavalsstichting Tilburg
 - Dry Land & Marquee Square Heroes: A Night of Marillion - Where Fish meets Hogarth
-- Duo Resonair: Lunchconcert
-- Ensemble Ouranos: Kamermuziek Souvenir
-- Estonian Philharmonic Chamber Choir: Meesterwerken van de moderne koorkunst
-- Euregio Jeugdorkest: IN ORBIT
-- Euregio Jeugdorkest: ROYAAL
 - Faulty Towers: The Dining Experience
 - Fee Suzanne de Ruiter: Melancholia
 - Fimme Bakker: Zwaargewicht
@@ -951,14 +891,9 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Introdans: Swan Lake
 - Jaco Benckhuijsen & ADAM Quartet: IJS
 - Jade Mintjens: Bedankt om te komen
-- Jakop Ahlbom Company: A Fine Mess
-- Jan Verweij: Reeks Filosofische Gesprekken: Macht
-- Jan Verweij: Reeks Filosofische Gesprekken: Verantwoordelijkheid
-- Jan Verweij: Reeks Filosofische Gesprekken: Vrijheid
 - Jan-Willem Rozenboom, JW Roy & Guus Meeuwis: Rozenboom Invites
 - Jeanine de Bique & Maarten Engeltjes: Royals In Love
 - Jeroen Leenders: Heiden
-- Jeugdorkest Nederland: Casual Classics
 - Johnny de Mol: Goed dat jij bestaat!
 - Joosen en de Jager: Niks aan het handje
 - Joël Borelli: Joie de Vivre
@@ -975,7 +910,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Kouwvoetenfist: Feest in de Kruikenstudio
 - Krasse Kruiken Karnaval: i.s.m. KV De Flepsteppers
 - Krezip: Theatertour
-- Kyella: Lunchconcert
 - Lang Leve Annie M.G.: Suzan Seegers, Nandi van Beurden & Job Bovelander
 - Lebbis: Satan is moe
 - Leon van der Zanden: Try-out Special
@@ -997,33 +931,23 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Myrte Siebinga: GELUKKIG MAAR
 - Nabil: Daar is hij weer!
 - Nederlands Blazers Ensemble: Rasa & Raga
-- Nederlands Kamerorkest & Ivo Pogorelić: Chopins Pianoconcert nr. 2 & Mozarts Symfonie nr. 40
 - Nederlandse Bachvereniging: Magnificat
-- Nelson Goerner: Kamermuziek Souvenir
 - New European Ensemble & Elaine Mitchener: Mavericks 3: Visions
 - Next to Normal: Willemijn Verkaik, Edwin Jonker e.a.
 - Nhung Dam: Legende van de witte slang
 - Niek Barendsen & Michiel Nooter: Vrienden van Dorothy
-- Nieuwjaarsconcert: Verrassende Ontmoetingen
 - Nora: Waldemar Torenstra, Judith Noyons e.a.
 - OM en OM en OM (1,5+): Het Laagland
 - Ogham: St. Patricks Day
 - Opera Zuid: Frau Luna
 - Orkater: Een tijd van liefde
 - Ozark Henry: Theatertour
-- Paddington Trio: Kamermuziek Souvenir
 - Panama Pictures: Don't despair
 - Patrick Laureij: Kintsugi.
-- Pavel Haas Quartet: Kamermuziek Souvenir
 - PechaKucha Night Tilburg: #36
 - PechaKucha Night Tilburg: #37
-- Philzuid: Debussy's La Mer
-- Philzuid: Nieuwjaarsconcert
-- Philzuid: Zicht op de zee van Britten en Elgar
-- Philzuid: Zomer met Barber en Copland
 - Piaf: Suzan Seegers, Julia Berendse e.a.
 - Pip Utton: Trump
-- PubQuiz: Bij Benee
 - Pynarello: Romani!
 - RATATATATA!: Theo Maassen, Ilse Warringa, Plien & Bianca e.a.
 - Ralph van Raat, Rosanne Philippens & Laura Bohn: Adams, Reich & Glass
@@ -1036,57 +960,44 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Rob Scheepers: Scheepers op z’n scherpst
 - Robin Scherpen: Memory & Traces
 - Ronald Goedemondt: Mijn Lieve Achterdocht
-- Rouwen en Vieren Tilburg: Tim Hobbelman, Karin Laureijssen & Janine Cloosterman
 - Rundfunk: Wagyu
 - SCT-XL met Marieke Liem en Filomena: Femicide: Feiten en Fabels
 - Salvador Sobral: A Flor do Recomeço
 - Selma Visscher: Trekvogel
 - Sherlock Holmes: Mark Rietman, Ferdi Stofmeel e.a.
 - Smells Like Nirvana: MTV Sessions
-- Soluna Duo: Lunchconcert
 - Sophie Anna Veelenturf | BERLIN: Swiping Right
-- Spark & Valer Sabadus: Kamermuziek Souvenir
 - Speels Collectief: IK BEN KAMER 15
 - Spraakmakers: Georgina Verbaan & Jan Decleir
 - Stephanie Struijk: Altijd En Nooit
 - Stoornis of my Life: Alex Klaasen e.a.
 - Tafel van Vijf Muziektheater: Mata Hari Returns
-- The Bellow Project: Lunchconcert
 - The Bodyguard: Gaia Aikman, Dorian Bindels e.a.
 - The Gesualdo Six & Matilda Lloyd: Radiant Dawn
 - The Kik: Hertaalt The Beatles (1962-1966)
 - The Ruggeds: Adrenaline
-- Theatergroep Aluin: Moeder aarde
 - Thomas van Luyn: Super Normaal
 - Tineke Schouten: Femme Vitaal
 - Tom America: Iemand met zo weinig talent
 - Tommy Wieringa & Jaap Scholten: Naar het front in Oekraïne
-- Toneelgroep Maastricht: De erfenis
-- Trio Con Brio Copenhagen: Kamermuziek Souvenir
 - Van Vleuten en Van Muiswinkel: Alles Onder Controle
 - Van der Laan & Woe: Dinsdagmiddag
-- Verrassende Ontmoetingen: Herfstconcert
 - Via Rudolphi Producties | Collectief T&T: De Belangelozen
 - WArd/waRD | Ann Van den Broek: Facing Transitions
 - We Lusse Ze Gruun!: Frank van Pamelen e.a.
-- Wibi Soerjadi: Jubileumconcert
 - Wina Ricardo: Wina's Wereld
 - Wishful Singing: Metropolis
 - Yentl en de Boer: De Dagen
 - Young Classics: by Kamerata Zuid
 - ZIJ & Aron Elstak: MATCH
-- Zemlinsky Quartet & Lisa Larson: Kamermuziek Souvenir
 - het zuid land: Lucky Blue
 - laGeste | Stereo48: Badke(remix)
 
-## musisenstadstheater.nl (9)
+## musisenstadstheater.nl (6)
 
 - Hommage aan Ramses Shaffy & Liesbeth List: Laat me
 - Johan Luijmes, orgel: Eusebius - Tweede Kerstdag 2026
 - Johan Luijmes, orgel: Eusebius - Tweede Paasdag 2027
-- Johan Luijmes: Zondagmiddagconcert  nr.  2 - Eusebiuskerk
-- Johan Luijmes: Zondagmiddagconcert  nr.  3 - Eusebiuskerk
-- Johan Luijmes: Zondagmiddagconcert  nr.  4 - Eusebiuskerk
 - Lente!: Pianoduo Scholtes & Janssens
 - Melancholia: Fee Suzanne de Ruiter
 - Mimetheatergroep Bambie: Bambie speelt Bambi
@@ -1097,18 +1008,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Amber Arcades, I am Oak & The T.S. Eliot Appreciation Society
 - Class of 2027
 
-## dynamo-eindhoven.nl (8)
-
-- BIOTOOP
-- FREE YOUTH COLLECTIVE
-- HOME GROWN SESSIONS #32
-- Mwah gaming pubquiz
-- Own The Spot: Indoor Edition
-- Queerhoven Boardgame Night
-- ZINLOOS GELUID
-- the noise of holland
-
-## visitgroningen.nl (75)
+## visitgroningen.nl (74)
 
 - 3JS – 20 jaar 3JS
 - ABBA The Music – From Waterloo to Dancing Queen
@@ -1126,7 +1026,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - De Grote Dino Show
 - De Kleine Prins
 - De Nog Grotere Slijmmusical
-- De Noordelijke Banenbeurs 2027
 - Dirk Scheele - Winterpret
 - Donar Groningen –  Okapi Aalst 2027
 - Donar Groningen – CB Liege 2027
@@ -1186,36 +1085,20 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - William Janz
 - ‘Maris, Wat Eten We Vandaag’  - Mariska Bauer
 
-## visitmaastricht.com (10)
+## visitmaastricht.com (6)
 
-- 't Mestreechs Volleks Tejater | ANNIE
 - De Bevers Zijn Er Bijna!
 - Introdans - Swan Lake
-- Kerstconcert - Mastreechter Staar
 - Merijn Scholten - LEMMING
 - NDT 2 - Blast a universe
-- Philzuid - Debussy's La Mer
 - Sherlock Holmes
 - The Diamond Baritones - Wonderland
-- Wibi Soerjadi - Jubileumconcert
 
-## explorebreda.com (Chassé) (5)
+## explorebreda.com (Chassé) (3)
 
-- Kamermuziek: In Dolce Armonia
-- Kamermuziek: Once Upon a time in Vienna
 - LAKSHMI
 - Mus & Kapitein Kwaadbaard en De 5 Slangen
 - The Current
-
-## ing.arena.brussels (3)
-
-- DE MIA’S 2026
-- DEMON SLAYER 29.11
-- TAYC
-
-## lanxess-arena.de (1)
-
-- IEM Cologne 2027
 
 ## rheinenergiestadion.de (4)
 
@@ -1265,9 +1148,8 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - The World of Hans Zimmer
 - Till Lindemann
 
-## grugahalle.de (10)
+## grugahalle.de (9)
 
-- Aryana Sayeed Ladies Only Concert
 - DDT
 - Das große Familien-Event – WEIHNACHTSSINGEN IN ESSEN
 - FEUERSCHWANZ - METFEST
@@ -1290,10 +1172,9 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Take That
 - Tokio Hotel
 
-## koeln.de (Palladium) (23)
+## koeln.de (Palladium) (20)
 
 - Bury Tomorrow
-- Der Herr der Ringe & Der Hobbit – Das Konzert
 - Die neue Heinz Erhardt Revue
 - Eiskönigin 1 & 2 – Musik Show auf Eis
 - Game of Thrones & House of the Dragon + A Knight of the Seven Kingdoms
@@ -1301,13 +1182,11 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Hollywood Undead – EU/UK 2027
 - Meshuggah
 - Monet192 – Can You See Me
-- New Model Army + special guests – Weihnachtskonzert 2026
 - Only The Poets – One More Fright
 - PA69 – GOOD VIBES ONLY 2027
 - Pierce The Veil – Europe 2027
 - RY X
 - STAIND – Break The Cycle 25th Anniversary
-- Sticks & Stones – LGBTIQ+ Jobmesse
 - TRETTMANN – Stadt aus Gold
 - The Teskey Brothers
 - The Wombats proudly presents…. 20 Years of a Guide to Love, Loss & Desperation
