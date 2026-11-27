@@ -48,23 +48,9 @@ export function BillView({ b, full = false, onToggle }: { b: Bill; full?: boolea
           <Act key={x.name} b={x} />
         ))}
       </ul>
-      {full && b.support.length > 0 && (
-        <ul className="bill__row bill__row--2">
-          {b.support.map((x) => (
-            <Act key={x.name} b={x} />
-          ))}
-        </ul>
-      )}
-      {full && b.club.length > 0 && (
-        <ul className="bill__row bill__row--3" aria-label="In de middelgrote zalen">
-          {b.club.map((x) => (
-            <Act key={x.name} b={x} />
-          ))}
-        </ul>
-      )}
       <div className="bill__foot">
         {onToggle && more > 0 && (
-          <button type="button" className="btn btn--quiet" aria-expanded={full} onClick={onToggle}>
+          <button type="button" className="btn btn--quiet" aria-expanded={full} aria-controls="bill-more" onClick={onToggle}>
             {full ? "Minder namen" : `Meer namen (${more})`}
           </button>
         )}
@@ -77,6 +63,22 @@ export function BillView({ b, full = false, onToggle }: { b: Bill; full?: boolea
         <a className="bill__all" href="#agenda">
           Naar de agenda
         </a>
+      </div>
+      <div id="bill-more">
+        {full && b.support.length > 0 && (
+          <ul className="bill__row bill__row--2">
+            {b.support.map((x) => (
+              <Act key={x.name} b={x} />
+            ))}
+          </ul>
+        )}
+        {full && b.club.length > 0 && (
+          <ul className="bill__row bill__row--3" aria-label="In de middelgrote zalen">
+            {b.club.map((x) => (
+              <Act key={x.name} b={x} />
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );

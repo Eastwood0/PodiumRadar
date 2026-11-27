@@ -45,14 +45,23 @@ export function venueScore(query: string, v: VenueOption): number | undefined {
  * Searchable venue choice (WAI-ARIA combobox): type part of a name or city, or open the A–Z list per country.
  * Arrow keys move, Enter picks, Escape closes, Tab leaves. Replaces a long native select.
  */
-export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]; value: string; onChange: (id: string) => void }) {
+export function VenuePicker({
+  venues,
+  selected,
+  onChange,
+}: {
+  venues: VenueOption[];
+  /** The chosen venue, also when it has no shows under the other filters: it must stay visible and clearable. */
+  selected?: { id: string; n: string; city: string };
+  onChange: (id: string) => void;
+}) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
   const id = useId();
   const wrap = useRef<HTMLDivElement>(null);
   const list = useRef<HTMLUListElement>(null);
-  const selected = venues.find((v) => v.id === value);
+  const value = selected?.id ?? "";
 
   const hits = useMemo(() => {
     const sorted = sortVenues(venues);
@@ -66,7 +75,10 @@ export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]
 
   useEffect(() => {
     const close = (ev: MouseEvent) => {
-      if (wrap.current && !wrap.current.contains(ev.target as Node)) setOpen(false);
+      if (wrap.current && !wrap.current.contains(ev.target as Node)) {
+        setOpen(false);
+        setQ(""); // typed text that was not picked does not linger: the field shows the active choice again
+      }
     };
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
@@ -79,6 +91,12 @@ export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]
     onChange(v?.id ?? "");
     setQ("");
     setOpen(false);
+    setActive(-1);
+  };
+  const close = () => {
+    setOpen(false);
+    setQ("");
+    setActive(-1);
   };
   const grouped = !q.trim();
 
@@ -95,7 +113,7 @@ export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]
           aria-expanded={open}
           aria-controls={`${id}-list`}
           aria-autocomplete="list"
-          aria-activedescendant={open && hits[active] ? `${id}-${active}` : undefined}
+          aria-activedescendant={open && active >= 0 && hits[active] ? `${id}-${active}` : undefined}
           autoComplete="off"
           spellCheck={false}
           placeholder={selected ? `${selected.n}, ${selected.city}` : "Alle zalen · zoek zaal of stad"}
@@ -104,26 +122,24 @@ export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]
           onChange={(ev) => {
             setQ(ev.target.value);
             setOpen(true);
-            setActive(0);
+            setActive(ev.target.value.trim() ? 0 : -1);
           }}
           onFocus={() => setOpen(true)}
           onClick={() => setOpen(true)}
           onKeyDown={(ev) => {
             if (ev.key === "ArrowDown") {
               ev.preventDefault();
+              setActive((i) => (!open ? 0 : Math.min(i + 1, hits.length - 1)));
               setOpen(true);
-              setActive((i) => Math.min(i + 1, hits.length - 1));
             } else if (ev.key === "ArrowUp") {
               ev.preventDefault();
-              setActive((i) => Math.max(i - 1, 0));
+              setActive((i) => (!open || i < 0 ? hits.length - 1 : Math.max(i - 1, 0)));
+              setOpen(true);
             } else if (ev.key === "Enter") {
-              if (!open) return;
+              if (!open || !hits[active]) return; // nothing highlighted: Enter changes nothing
               ev.preventDefault();
               pick(hits[active]);
-            } else if (ev.key === "Escape") {
-              setOpen(false);
-              setQ("");
-            } else if (ev.key === "Tab") setOpen(false);
+            } else if (ev.key === "Escape" || ev.key === "Tab") close();
           }}
         />
         {selected && (
@@ -136,7 +152,7 @@ export function VenuePicker({ venues, value, onChange }: { venues: VenueOption[]
       {open && (
         <ul id={`${id}-list`} role="listbox" aria-label="Zalen" className="vpick__list" ref={list}>
           {hits.length === 0 && (
-            <li className="vpick__none" role="presentation">
+            <li className="vpick__none" role="status">
               Geen zaal gevonden voor “{q.trim()}”
             </li>
           )}

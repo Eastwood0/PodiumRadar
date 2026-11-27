@@ -25,7 +25,7 @@ export function Agenda({ data, venues, months, filters, setFilters }: Common & {
         empty={
           <>
             <p>Geen shows met deze filters.</p>
-            <button type="button" className="btn" onClick={() => setFilters({ ...DEFAULT_FILTERS, kind: filters.kind })}>
+            <button type="button" className="btn" onClick={() => setFilters(DEFAULT_FILTERS)}>
               Wis filters
             </button>
           </>
@@ -86,10 +86,12 @@ export function ArtistPage({ data, venues, artistSlug }: Common & { artistSlug: 
                 {isNew(e, data) && <span className="tag tag--new">Nieuw</span>}
               </span>
               {e.st !== "g" && (
-                <a className="tour__tix" href={e.u} target="_blank" rel="noopener noreferrer">
-                  Tickets<span className="sr-only">
+                <a className={`tour__tix${e.st === "u" ? " row__tix--quiet" : ""}`} href={e.u} target="_blank" rel="noopener noreferrer">
+                  {e.st === "u" ? "Bekijk" : "Tickets"}
+                  <span className="sr-only">
                     {" "}
-                    voor {formatDate(e.s)} in {v.n} (opent de site van de verkoper)
+                    voor {formatDate(e.s)} in {v.n}
+                    {e.st === "u" ? ", uitverkocht" : ""} (opent de site van de verkoper)
                   </span>
                 </a>
               )}

@@ -1123,9 +1123,15 @@ a:hover {
 }
 .tour__tix {
   grid-area: tix;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   font-weight: 700;
   font-size: 0.9rem;
   white-space: nowrap;
+}
+#bill-more > .bill__row:first-child {
+  margin-top: 1.5rem;
 }
 .tour__dates .is-cancelled .tour__date,
 .tour__dates .is-cancelled .tour__city {

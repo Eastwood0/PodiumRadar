@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import type { SiteData, SiteVenue } from "../lib/site-data";
 import { DANCE_STYLES, MUSIC_GENRES } from "../lib/genres";
-import { applyFilters, DEFAULT_FILTERS, type Filters, type Kind, MONTHS_LONG, type When, WHEN_LABEL } from "./lib";
+import { applyFilters, DEFAULT_FILTERS, type Filters, type Kind, MONTHS_LONG, parts, todayLocal, type When, WHEN_LABEL, whenRange } from "./lib";
 import { type VenueOption, VenuePicker } from "./VenuePicker";
 
 const KINDS: { kind: Kind; label: string }[] = [
@@ -21,6 +21,16 @@ export function KindSwitch({ kind, onChange }: { kind: Kind; onChange: (k: Kind)
       ))}
     </div>
   );
+}
+
+const shortDay = (iso: string) => {
+  const p = parts(`${iso}T12:00:00Z`);
+  return `${p.d} ${MONTHS_LONG[p.m - 1].slice(0, 3)}`;
+};
+/** "28 nov – 30 nov": the exact days behind "Dit weekend" or "7 dagen". */
+function rangeLabel(when: Exclude<When, "">): string {
+  const [from, to] = whenRange(when, todayLocal());
+  return from === to ? shortDay(from) : `${shortDay(from)} – ${shortDay(to)}`;
 }
 
 type Show = { venue: boolean; month: boolean; when: boolean };
@@ -75,7 +85,7 @@ export function FilterBar({
 
   /** Changing country or size keeps the chosen venue only if it still fits. */
   const keepVenue = (patch: Partial<Filters>) => {
-    const v = venueMap.get(filters.venue);
+    const v = show.venue ? venueMap.get(filters.venue) : undefined;
     const next = { ...filters, ...patch };
     const fits = !v || ((!next.country || v.cc === next.country) && (!next.tier || v.tier === next.tier));
     setFilters(fits ? next : { ...next, venue: "" });
@@ -111,13 +121,14 @@ export function FilterBar({
       )}
       {show.venue && (
         <div className="filters__row">
-          <VenuePicker venues={venueOptions} value={filters.venue} onChange={(venue) => set({ venue })} />
+          <VenuePicker venues={venueOptions} selected={venueMap.get(filters.venue)} onChange={(venue) => set({ venue })} />
         </div>
       )}
       <div className="filters__row">
         <KindSwitch kind={filters.kind} onChange={(kind) => set({ kind })} />
         <p className="filters__count" aria-live="polite">
           {count} {count === 1 ? "show" : "shows"}
+          {show.when && filters.when && !filters.month && <> · {rangeLabel(filters.when)}</>}
           {changed && (
             <>
               {" · "}
