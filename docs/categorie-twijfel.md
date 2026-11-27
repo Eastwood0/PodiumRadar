@@ -1,6 +1,6 @@
 # Categorie: twijfelgevallen
 
-Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-26).
+Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-27).
 Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-correcties.yml`.
 
 ## ziggodome.nl (3)
@@ -197,13 +197,14 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - TRAITRS + Cold Union
 - Yves Berendse
 
-## uitagendautrecht.nl (22)
+## uitagendautrecht.nl (23)
 
 - 40UP Big Bang
 - 4AM.
 - Back To The Disco met Gerard Ekdom
 - Blackout
 - De Microclub
+- Discozwemmen
 - Fiesta Macumba XL
 - Ghosttown
 - Housequake: History Of House
@@ -222,7 +223,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Wasserette
 - Y2Kerst
 
-## iamsterdam.com (249)
+## iamsterdam.com (248)
 
 - 1984 Night at the Arcade
 - 80's Verantwoord
@@ -241,6 +242,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Anna Tsuchiya
 - Ax and the Hatchetmen
 - Ayra Starr
+- Backstage Pass
 - Basement
 - Bee Gees by MainCourse
 - Bente
@@ -251,7 +253,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Blind Channel
 - Blondshell
 - Boombox
-- Boy Harsher
 - Breathe.
 - Büyük Ev Ablukada
 - Charlotte Cardin
@@ -355,7 +356,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - London Calling
 - Loreen
 - Loïs Lane
-- Luca St
 - Lucky Done Gone - All Night
 - Luminosity 19 Year Anniversary
 - MC4D
@@ -378,7 +378,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Music Lab - Meervaart Studio x Melkweg
 - My Baby
 - NTO
-- Nachtburgemeester Verkiezing 2026
 - New Model Army
 - Newton Faulkner
 - Nia Archives
@@ -435,6 +434,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Spike Fuck
 - Spin Doctors
 - Stand Atlantic
+- Stand Atlantic / Scene Queen
 - Stella Lefty
 - Stephen Lynch
 - Stereo MC's
@@ -503,7 +503,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (123)
+## paard.nl (120)
 
 - 40UP
 - 80S VERANTWOORD
@@ -568,7 +568,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - MICK FLANNERY
 - MIDGE URE
 - MILES O’BRIEN
-- MOBILHOME
 - MULA
 - MUSIC THAT CHANGED THE WORLD #2 [CANCELLED]
 - MUSIC THAT CHANGED THE WORLD #4
@@ -605,9 +604,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - RUBEN HILLEN
 - RUDEBOY X BOSKAT
 - SLOMOSA
-- SNACKBAR THE AMBASSADOR
 - SON MIEUX IN AMARE
-- SONS
 - STATE POWER
 - SUPAFLY 2027
 - Sniester 2027
@@ -645,6 +642,37 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - THE FORTUNATE SONS
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
+
+## patronaat.nl (28)
+
+- Any Given Day
+- Artin Muziek & friends
+- Back to the Disco
+- Born From Pain + Inherited
+- Complexity Presents: Dragged Into Sunlight + Mizmor + This Gift is a Curse
+- Disco Del Mundo
+- Dream State
+- FUCK THE CISTEM
+- Geannuleerd: KMFDM
+- Hagane
+- Housequake
+- King Buffalo + Spirit Mother
+- Luicidal + Grindpad
+- Moonspell + Iotunn + TodoMal
+- Nieuwjaarsgala
+- Nordjevel + Svarttjern + Malphas + Unviar
+- Orden Ogan + Ensiferum + Angus McSix
+- Patronaatje tot t’ Gaatje
+- REZN + Coltaine
+- Show Me The Body
+- SiM + The Haunt
+- Sivert Høyem + support
+- State Power + Ker Ker
+- StonerGrungeFest met 22AD, Baardvader, Sustain
+- Sugar Spine + Braces
+- Terror + Bane + Start Today + Peace of Mind
+- Turmion Kätilöt + STAM1NA
+- YUNA XL
 
 ## klokgebouw.nl (6)
 
@@ -746,6 +774,20 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Toneelvereniging ’t Abele Spel
 - WensMuziek
 
+## munttheater.nl (11)
+
+- Aldenborghlezing en boekpresentatie: 500 jaar Pieter Bruegel - Een verborgen geschiedenis
+- Dansschool Fresh: De Magische Kerstster
+- LVO weert: Muziekgala
+- Rogstaekers Boonte Aovendj
+- Rogstaekers Boonte Femiliê Middig
+- Stichting Cultuur OpMaat en Harmonie St.-Joseph: Muziek Verbindt!
+- Stichting Rogstad: Code Napoleon
+- Sylvesterconcert: S(w)ing When You're Winning!: Harmonie St.-Joseph 1880 Weert
+- WOKMUZIEKTHEATER: MARTHA
+- Zegevieren met Manieren: Jan Jaap van Weering
+- the Ray-Stabbing Singers: Draadloos
+
 ## maaspoort.nl (12)
 
 - Christmas in perfect harmony: Kon. Harmonie St. Cecilia Tegelen en mannenkoor de Meulezengers
@@ -833,7 +875,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Utrechts Sprookjestheater: De Gelaarsde Kat
 - Verkennen Mars: Voorproevers #3
 
-## schouwburgconcertzaaltilburg.nl (204)
+## schouwburgconcertzaaltilburg.nl (201)
 
 - 20 jaar 3JS
 - 40 jaar Rowwen Hèze: Rhobijn
@@ -880,7 +922,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Deutsche Kammerakademie Neuss am Rhein & Isabelle van Keulen: Vivaldi Recomposed
 - Diamond Baritones: The Circle of Life
 - Doetertoe Fist (12 t/m 17): i.s.m. Carnavalsstichting Tilburg
-- Dolf Jansen: Schaamteloos - Oudejaars 2026
 - Dry Land & Marquee Square Heroes: A Night of Marillion - Where Fish meets Hogarth
 - Duo Resonair: Lunchconcert
 - Ensemble Ouranos: Kamermuziek Souvenir
@@ -897,7 +938,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Guido Belcanto: Paviljoen der Menselijke Driften
 - Hadewych van Gent: Resonanties
 - Her Majesty: Neil Young & Crazy Horse
-- Hermes Ahmadi: Welkom
 - Het Groot Tilburgs Schrobbelèrontbijt: Een stevige bodem in Kruikenstad-stijl
 - Het Zuidelijk Toneel: Nothing But The Truth
 - Het Zuidelijk Toneel: Vondels Angels
@@ -1023,7 +1063,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Tommy Wieringa & Jaap Scholten: Naar het front in Oekraïne
 - Toneelgroep Maastricht: De erfenis
 - Trio Con Brio Copenhagen: Kamermuziek Souvenir
-- VOCES8: Kamermuziek Souvenir
 - Van Vleuten en Van Muiswinkel: Alles Onder Controle
 - Van der Laan & Woe: Dinsdagmiddag
 - Verrassende Ontmoetingen: Herfstconcert
@@ -1068,6 +1107,105 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Queerhoven Boardgame Night
 - ZINLOOS GELUID
 - the noise of holland
+
+## visitgroningen.nl (75)
+
+- 3JS – 20 jaar 3JS
+- ABBA The Music – From Waterloo to Dancing Queen
+- ArtOranje 2027
+- Autosalon van het Noorden 2027
+- Carmina Burana
+- Charly Luske - The Story of George Michael
+- Christel de Laat - Kende da!? (UITVERKOCHT)
+- Cliff & The Shadows Tributeband
+- Country Time!
+- Daddy Cool turns 50
+- Darkride - 75-jarig jubileum van de Efteling
+- De Bevers – De Bevers zijn er bijna!
+- De Circusbroers
+- De Grote Dino Show
+- De Kleine Prins
+- De Nog Grotere Slijmmusical
+- De Noordelijke Banenbeurs 2027
+- Dirk Scheele - Winterpret
+- Donar Groningen –  Okapi Aalst 2027
+- Donar Groningen – CB Liege 2027
+- Donar Groningen – Coretec Oostende 2027
+- Donar Groningen – HKK Zrinjski 1992 2027
+- Donar Groningen – Heroes Den Bosch 2026
+- Donar Groningen – House of Talents Spurs Kortrijk 2027
+- Donar Groningen – Kangoeroes Basket Mechelen 2026
+- Donar Groningen – Landstede Hammers 2026
+- Donar Groningen – Spartak Pleven 2027
+- Donar Groningen – Windrose Giants Antwerp 2027
+- Donna's Hot Stuff
+- EVITA
+- Efteling vertelt... Baron 1898
+- Esther van der Voort - Mama is Boos
+- Eye of Melian - Forest of Forgetting
+- FEM.Event 2027
+- Girls on Fire 3
+- Hans Klok - The Illusionists
+- Hollandse Toppers
+- Huub Stapel - Mannen komen van Mars, vrouwen van Venus
+- Ilse DeLange
+- Internationaal Indoor Concours Hippique Groningen 2027
+- Jay Francis - Tunnelvisie
+- Johnny de Mol - Goed dat jij bestaat!
+- Judas Priest
+- Juf Roos gaat op vakantie
+- Laat me
+- Marco Schuitmaker - Recht uit het hart
+- Martiniplaza Connect
+- Master of film music - Ennio Morricone
+- Matthijn Buwalda - De rest mag je hebben
+- Mees Kees - De Husselrace
+- Motel Westcoast 20 Years!
+- Nienke Plas – Appeltje Eitje
+- Oliver en het avontuur van de straatkinderen
+- Paraview 2027
+- Pink Floyd Project - 50 years of Animals & In The Flesh 1977
+- Rock Sympho Show – Time Machine 2027
+- Route du Soleil
+- SDM EINDSHOWS 2026
+- Sportgala Groningen 2026
+- Symposium Sportgala 2026
+- TAFKAL - MOST WANTED (2027)
+- TROUWAMBTENAAR JEROEN SMITS - VAN STRAAT NAAR TOGA
+- Take It To The Limit - A celebration of the Eagles
+- The Best of Simon & Garfunkel
+- The NextStreetboys
+- The Wanderer
+- The Witcher
+- Tineke Schouten – Femme Vitaal
+- Titanique
+- Titus & Fien De Revue - Vooruit, nog één keertje dan
+- Van der Laan & Woe – Dinsdagmiddag
+- Vlieg Met Me Mee
+- Vrienden Voor Het Leven 2026
+- William Janz
+- ‘Maris, Wat Eten We Vandaag’  - Mariska Bauer
+
+## visitmaastricht.com (10)
+
+- 't Mestreechs Volleks Tejater | ANNIE
+- De Bevers Zijn Er Bijna!
+- Introdans - Swan Lake
+- Kerstconcert - Mastreechter Staar
+- Merijn Scholten - LEMMING
+- NDT 2 - Blast a universe
+- Philzuid - Debussy's La Mer
+- Sherlock Holmes
+- The Diamond Baritones - Wonderland
+- Wibi Soerjadi - Jubileumconcert
+
+## explorebreda.com (Chassé) (5)
+
+- Kamermuziek: In Dolce Armonia
+- Kamermuziek: Once Upon a time in Vienna
+- LAKSHMI
+- Mus & Kapitein Kwaadbaard en De 5 Slangen
+- The Current
 
 ## ing.arena.brussels (3)
 
