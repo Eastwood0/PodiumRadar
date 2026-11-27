@@ -8,6 +8,14 @@ interface Entry {
   id: number;
   hash: string;
   y: number;
+  /** The link followed from this page: its address and which one of the links with that address it was. */
+  link?: { href: string; index: number };
+}
+
+let pendingLink: Entry["link"];
+/** Called on a click on an in-page link, just before the address changes. */
+export function rememberLink(href: string, index: number): void {
+  pendingLink = { href, index };
 }
 
 const stack: Entry[] = [];
@@ -38,14 +46,18 @@ export function startNav(): void {
  * `restore`: the scroll position when this was a step back or forward to a known page, else undefined (start at the
  * top). `from`: the address of the page you left, to put the focus back on the link that led there.
  */
-export function navigated(leavingY: number): { restore?: number; from?: string } {
+export function navigated(leavingY: number): { restore?: number; from?: string; link?: Entry["link"] } {
   const leaving = stack.find((e) => e.id === currentId);
-  if (leaving) leaving.y = leavingY;
+  if (leaving) {
+    leaving.y = leavingY;
+    if (pendingLink && pendingLink.href === current()) leaving.link = pendingLink;
+  }
+  pendingLink = undefined;
   const id = stateId();
   const known = id === undefined ? undefined : stack.find((e) => e.id === id);
   if (known) {
     currentId = known.id;
-    return { restore: known.y, from: leaving?.hash };
+    return { restore: known.y, from: leaving?.hash, link: known.link };
   }
   // A new page: the entries after the current one are gone from the browser's history (it branched off here).
   const at = stack.findIndex((e) => e.id === currentId);

@@ -3,7 +3,7 @@ import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 import { BackLink } from "./BackLink";
 import { EventCard, Flag, GenreTags, TicketLink } from "./EventCard";
 import { FollowButton } from "./FollowButton";
-import { artistHref, formatDate, formatTime, kindOf, showKey, slug, venueHref } from "./lib";
+import { artistHref, findShow, formatDate, formatTime, kindOf, slug, venueHref } from "./lib";
 import { AREAS } from "./places";
 import { ProposalToggle, shareText, siteBase } from "./Proposal";
 import { sourceNote } from "./sources";
@@ -27,7 +27,7 @@ export const routeHref = (v: SiteVenue) => `https://www.google.com/maps/search/?
  * with friends, other nights of the same act and, especially when it is sold out, what else is on that night nearby.
  */
 export function ShowPage({ data, venues, showKey: key }: Common & { showKey: string }) {
-  const e = useMemo(() => data.events.find((x) => showKey(x) === key), [data, key]);
+  const e = useMemo(() => findShow(data.events, key), [data, key]);
   const v = e && venues.get(e.v);
   const others = useMemo(() => {
     if (!e) return [];

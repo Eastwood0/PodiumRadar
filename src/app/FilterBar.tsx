@@ -144,7 +144,7 @@ export function FilterBar({
                 aria-label="Dag"
                 value={filters.day}
                 min={todayLocal()}
-                max={data.events.at(-1)?.s.slice(0, 10)}
+                max={data.complete ? data.events.at(-1)?.s.slice(0, 10) : new Date(Date.now() + 366 * 86_400_000).toISOString().slice(0, 10)}
                 onChange={(e) => set({ day: e.target.value, when: "", month: "" })}
               />
             </label>

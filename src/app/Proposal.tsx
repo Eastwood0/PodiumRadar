@@ -1,6 +1,6 @@
 import { useEffect, useSyncExternalStore } from "react";
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
-import { formatDate, formatTime, showHref, showKey } from "./lib";
+import { findShow, formatDate, formatTime, showHref, showKey } from "./lib";
 
 /**
  * "Voorstel": pick two or three shows and send them as one message to the group app (Codex, 27 Nov 2026).
@@ -71,7 +71,8 @@ export function ProposalToggle({ e, big = false }: { e: SiteEvent; big?: boolean
 /** Bar at the bottom while shows are picked: send them in one message, or start over. */
 export function ProposalBar({ data, venues }: { data: SiteData; venues: Map<string, SiteVenue> }) {
   const list = useProposal();
-  const events = list.map((k) => data.events.find((e) => showKey(e) === k)).filter((e): e is SiteEvent => !!e);
+  const events = list.map((k) => findShow(data.events, k)).filter((e): e is SiteEvent => !!e);
+  const waiting = !data.complete && events.length < list.length; // a pick from later in the year is still loading
   // Shows that are over or gone from the agenda drop out once the whole agenda is in (Codex).
   useEffect(() => {
     if (data.complete && events.length < list.length) write(events.map(showKey));
@@ -82,8 +83,8 @@ export function ProposalBar({ data, venues }: { data: SiteData; venues: Map<stri
       <p className="pbar__n" aria-live="polite">
         {events.length} in je voorstel
       </p>
-      <button type="button" className="btn" disabled={!events.length} onClick={() => shareText("Voorstel", proposalText(events, venues, siteBase()))}>
-        Deel voorstel
+      <button type="button" className="btn" disabled={!events.length || waiting} onClick={() => shareText("Voorstel", proposalText(events, venues, siteBase()))}>
+        {waiting ? "Even laden…" : "Deel voorstel"}
       </button>
       <button
         type="button"

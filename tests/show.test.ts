@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { applyFilters, DEFAULT_FILTERS, parseRoute, showHref, showKey, todayLocal } from "../src/app/lib";
-import { canGoBack, navigated, startNav } from "../src/app/nav";
+import { applyFilters, DEFAULT_FILTERS, findShow, indexShows, parseRoute, showHref, showKey, todayLocal } from "../src/app/lib";
+import { canGoBack, navigated, rememberLink, startNav } from "../src/app/nav";
 import { proposalText } from "../src/app/Proposal";
 import { sourceNote } from "../src/app/sources";
 import type { SiteData, SiteEvent, SiteVenue } from "../src/lib/site-data";
@@ -13,12 +13,30 @@ const data = (sources: SiteData["sources"]): SiteData => ({ generatedAt: "2026-1
 describe("show links (Deel show)", () => {
   it("gives a show the same key every day, from date, venue and title", () => {
     const e = ev("Claydrum presents Nico Moreno / Carla Schmitt");
-    expect(showKey(e)).toBe("2026-11-27t22-30-complex-maastricht-claydrum-presents-nico-moreno-carla-schmitt");
+    indexShows([e]);
+    expect(showKey(e)).toBe("2026-11-27-complex-maastricht-claydrum-presents-nico-moreno-carla-schmitt");
     expect(parseRoute(showHref(e))).toEqual({ view: "show", key: showKey(e) });
   });
+  it("keeps the link when the start time becomes known later (Codex: U2)", () => {
+    const before = { ...ev("U2"), s: "2027-06-12T00:00:00+02:00", h: 0 as const };
+    const after = { ...before, s: "2027-06-12T20:00:00+02:00", h: 1 as const };
+    indexShows([before]);
+    const k = showKey(before);
+    indexShows([after]);
+    expect(showKey(after)).toBe(k);
+  });
   it("keeps a matinee and the evening show of the same title apart (The Streamers at 11:30 and 18:00)", () => {
-    expect(showKey(ev("The Streamers", "2027-09-25T11:30:00+02:00"))).not.toBe(showKey(ev("The Streamers", "2027-09-25T18:00:00+02:00")));
-    expect(showKey(ev("A"))).not.toBe(showKey(ev("B")));
+    const early = ev("The Streamers", "2027-09-25T11:30:00+02:00");
+    const late = ev("The Streamers", "2027-09-25T18:00:00+02:00");
+    indexShows([early, late, ev("B")]);
+    expect(showKey(early)).not.toBe(showKey(late));
+    expect(findShow([early, late], showKey(late))).toBe(late);
+    expect(showKey(ev("B"))).not.toMatch(/-\d{4}$/);
+  });
+  it("still opens links in the earlier format with the time after the date", () => {
+    const e = ev("Nico Moreno");
+    indexShows([e]);
+    expect(findShow([e], "2026-11-27t22-30-complex-maastricht-nico-moreno")).toBe(e);
   });
 });
 
@@ -61,9 +79,16 @@ describe("Terug", () => {
     expect(b.click("#show-a", 2400)).toEqual({});
     expect(canGoBack()).toBe(true);
     b.click("#artiest-b", 300);
-    expect(b.back(0)).toEqual({ restore: 300, from: "#artiest-b" });
-    expect(b.back(0)).toEqual({ restore: 2400, from: "#show-a" });
+    expect(b.back(0)).toMatchObject({ restore: 300, from: "#artiest-b" });
+    expect(b.back(0)).toMatchObject({ restore: 2400, from: "#show-a" });
     expect(canGoBack()).toBe(false);
+  });
+  it("remembers which of several identical links was followed (a venue linked from many rows)", () => {
+    const b = browser("#agenda");
+    startNav();
+    rememberLink("#zaal-melkweg", 7);
+    b.click("#zaal-melkweg", 3000);
+    expect(b.back(0)).toEqual({ restore: 3000, from: "#zaal-melkweg", link: { href: "#zaal-melkweg", index: 7 } });
   });
   it("treats a new link to the page you came from as a new step, not as a step back (Codex)", () => {
     const b = browser("#show-a");
@@ -71,7 +96,7 @@ describe("Terug", () => {
     b.click("#agenda", 0); // "Naar de agenda" on a shared show
     expect(b.click("#show-a", 900)).toEqual({}); // the same show again via the list: a new page
     expect(canGoBack()).toBe(true);
-    expect(b.back(0)).toEqual({ restore: 900, from: "#show-a" });
+    expect(b.back(0)).toMatchObject({ restore: 900, from: "#show-a" });
   });
 });
 

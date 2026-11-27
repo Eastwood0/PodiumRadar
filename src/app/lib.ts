@@ -105,11 +105,39 @@ export function parseRoute(hash: string): Route {
 }
 export const artistHref = (name: string) => `#artiest-${slug(name)}`;
 export const venueHref = (id: string) => `#zaal-${id}`;
+type ShowLike = { s: string; v: string; t: string };
+const baseKey = (e: ShowLike) => slug(`${e.s.slice(0, 10)} ${e.v} ${e.t}`).slice(0, 90).replace(/-$/, "");
+let twice = new Set<string>();
+
 /**
- * Stable key of one show (date and start time, venue, title), so a shared link opens the same show tomorrow too and a
- * matinee and evening show of the same title stay apart (Codex: 597 shows shared a key without the time).
+ * Call when the data changes. A title that plays twice on one day in one venue (matinee and evening: 597 shows,
+ * Codex) gets its start time in the key; every other show keeps date, venue and title only, so its link survives a
+ * start time that becomes known later.
  */
-export const showKey = (e: { s: string; v: string; t: string }) => slug(`${e.s.slice(0, 16)} ${e.v} ${e.t}`).slice(0, 100).replace(/-$/, "");
+export function indexShows(events: ShowLike[]): void {
+  const seen = new Set<string>();
+  const dup = new Set<string>();
+  for (const e of events) {
+    const b = baseKey(e);
+    if (seen.has(b)) dup.add(b);
+    else seen.add(b);
+  }
+  twice = dup;
+}
+
+/** Stable key of one show, so a shared link opens the same show tomorrow too. */
+export const showKey = (e: ShowLike) => {
+  const b = baseKey(e);
+  return twice.has(b) ? `${b}-${e.s.slice(11, 16).replace(":", "")}` : b;
+};
+
+/** The show behind a link, also for links in an earlier format (with the time right after the date). */
+export function findShow<T extends ShowLike>(events: T[], key: string): T | undefined {
+  return (
+    events.find((e) => showKey(e) === key) ??
+    events.find((e) => baseKey(e) === key || slug(`${e.s.slice(0, 16)} ${e.v} ${e.t}`).slice(0, 100).replace(/-$/, "") === key)
+  );
+}
 export const showHref = (e: { s: string; v: string; t: string }) => `#show-${showKey(e)}`;
 
 /** "Nieuw": first seen in the last 7 days, but not part of the very first import. */

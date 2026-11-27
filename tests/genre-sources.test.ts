@@ -109,7 +109,8 @@ describe("false positives found by Codex (27 Nov 2026)", () => {
     expect(eventDanceStyles("Sienna Spiro – My House Tour", undefined)).toEqual([]);
     expect(withoutTour("Sienna Spiro – My House Tour 2027")).toBe("Sienna Spiro");
   });
-  it("keeps hardcore punk out of Dance & DJ", () => {
+  it("keeps hardcore punk out of Dance & DJ, also as the venue's own label", () => {
+    expect(classify("Integrity", "Hardcore punk", none).genre).not.toBe("Dance");
     expect(genresInText("hardcore punk")).toEqual(["Metal & punk"]);
     expect(genresInText("hardcore")).toContain("Dance & DJ");
   });

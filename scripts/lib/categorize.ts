@@ -40,7 +40,7 @@ export const GROUP_OF: Record<Genre, Category> = {
 const SOURCE_RULES: [RegExp, Genre][] = [
   // Whole words: "klassiekers" (pop classics) and "classic rock" are not classical music (Codex).
   [/\b(klassieke?|klassik|klassische?|classical|klassiek muziek)\b|orchest|\bchorale?\b|\bchoral\b|\bopera\b|\boper\b|kamermuziek/i, "Klassiek"],
-  [/\b(dance|techno|house|trance|hardstyle|hardcore|electro|edm|drum ?(&|and) ?bass|party|tanzveranstaltung|rave|clubnacht|clubavond)\b/i, "Dance"],
+  [/\b(dance|techno|house|trance|hardstyle|hardcore(?!\s*punk)|electro|edm|drum ?(&|and) ?bass|party|tanzveranstaltung|rave|clubnacht|clubavond)\b/i, "Dance"],
   [/festival/i, "Festival"],
   [/comedy|humou?r|cabaret|kabarett|stand-?up|kleinkunst/i, "Comedy"],
   [/sport|eishockey|voetbal|fu(ss|ß)ball|handbal|basketbal|tennis|darts|boxen|wielren|wielerzesdaagse/i, "Sport"],

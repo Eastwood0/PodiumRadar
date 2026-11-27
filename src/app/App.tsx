@@ -1,11 +1,11 @@
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type CompactSiteData, expandSiteData, type SiteData, type SiteVenue } from "../lib/site-data";
-import { artistIndex, type Bill, DEFAULT_FILTERS, migrateFilters, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
+import { artistIndex, type Bill, DEFAULT_FILTERS, indexShows, migrateFilters, type Filters, formatDate, formatDateTime, hoursOld, load, monthsFrom, parseRoute, type Route, save } from "./lib";
 import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, PageHead, Sources, VenuePage } from "./Pages";
 import { getFollowState } from "./follow";
-import { navigated, replaceHash, startNav } from "./nav";
+import { navigated, rememberLink, replaceHash, startNav } from "./nav";
 import { ProposalBar } from "./Proposal";
 import { Radar } from "./Radar";
 import { ShowPage } from "./ShowPage";
@@ -29,7 +29,7 @@ export default function App({ bill }: { bill?: Bill }) {
   const [partial, setPartial] = useState(false);
   const [route, setRoute] = useState<Route>({ view: "overzicht" });
   const [filters, setFiltersState] = useState<Filters>(DEFAULT_FILTERS);
-  const restoreY = useRef<{ y: number; focus?: string } | undefined>(undefined);
+  const restoreY = useRef<{ y: number; focus?: string; index: number } | undefined>(undefined);
 
   useEffect(() => {
     setRoute(currentRoute());
@@ -38,7 +38,7 @@ export default function App({ bill }: { bill?: Bill }) {
     startNav();
     const onHash = () => {
       const nav = navigated(window.scrollY);
-      restoreY.current = nav.restore === undefined ? undefined : { y: nav.restore, focus: nav.from };
+      restoreY.current = nav.restore === undefined ? undefined : { y: nav.restore, focus: nav.link?.href ?? nav.from, index: nav.link?.index ?? 0 };
       setRoute(currentRoute());
       if (nav.restore !== undefined) return; // focus and scroll follow once the page is back (effect below)
       window.scrollTo(0, 0);
@@ -46,6 +46,14 @@ export default function App({ bill }: { bill?: Bill }) {
       document.getElementById("inhoud")?.focus({ preventScroll: true });
     };
     window.addEventListener("hashchange", onHash);
+    // Which link was followed (a venue can be linked from many rows), so Terug puts the focus back on that one.
+    const onClick = (ev: MouseEvent) => {
+      const a = (ev.target as Element | null)?.closest?.<HTMLAnchorElement>('#inhoud a[href^="#"]');
+      const href = a?.getAttribute("href");
+      if (!a || !href) return;
+      rememberLink(href, [...document.querySelectorAll(`#inhoud a[href="${CSS.escape(href)}"]`)].indexOf(a));
+    };
+    document.addEventListener("click", onClick, true);
     // Sticky month headings sit right under the header, whose height depends on the screen width.
     const head = document.querySelector<HTMLElement>(".top");
     const ro = head ? new ResizeObserver(() => document.documentElement.style.setProperty("--head-h", `${head.offsetHeight}px`)) : null;
@@ -70,6 +78,7 @@ export default function App({ bill }: { bill?: Bill }) {
       .catch(() => setError(true));
     return () => {
       window.removeEventListener("hashchange", onHash);
+      document.removeEventListener("click", onClick, true);
       ro?.disconnect();
     };
   }, []);
@@ -101,7 +110,8 @@ export default function App({ bill }: { bill?: Bill }) {
       requestAnimationFrame(() => {
         window.scrollTo(0, r.y);
         // Keyboard and screen reader: continue at the link you followed, not at the top of the list.
-        const link = r.focus ? document.querySelector<HTMLElement>(`#inhoud a[href="${CSS.escape(r.focus)}"]`) : null;
+        const links = r.focus ? document.querySelectorAll<HTMLElement>(`#inhoud a[href="${CSS.escape(r.focus)}"]`) : [];
+        const link = links[r.index] ?? links[0];
         (link ?? document.getElementById("inhoud"))?.focus({ preventScroll: true });
       }),
     );
@@ -125,7 +135,10 @@ export default function App({ bill }: { bill?: Bill }) {
     [setFilters],
   );
 
-  const venues = useMemo(() => new Map<string, SiteVenue>((data?.venues ?? []).map((v) => [v.id, v])), [data]);
+  const venues = useMemo(() => {
+    if (data) indexShows(data.events); // show links need to know which titles play twice a day
+    return new Map<string, SiteVenue>((data?.venues ?? []).map((v) => [v.id, v]));
+  }, [data]);
   const months = useMemo(() => (data ? monthsFrom(data.generatedAt) : []), [data]);
   const search = useMemo(() => {
     if (!data) return null;
