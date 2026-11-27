@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T06:37:08.677Z",
+ "generatedAt": "2026-11-27T07:15:22.581Z",
  "events": [
   {
    "id": "9c80341ee7e94067",
@@ -2091,6 +2091,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/104784/van-dik-hout",
    "imageUrl": "https://assets.plaece.nl/thumb/4OTJW9aNVd7GEJF9_xhpP396ZkMgE0GIfZ3XTXk5xGI/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS92YW4tZGlrLWhvdXRfMzU5MzI4MDkzNi53ZWJw.webp",
    "sources": [
@@ -2101,11 +2105,7 @@
     }
    ],
    "firstSeen": "2026-11-27",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Pop",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "d27da8c9215711a5",
@@ -7990,6 +7990,12 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "Trance"
+   ],
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/4267089228/the-witcher",
    "sources": [
     {
@@ -7999,13 +8005,7 @@
     }
    ],
    "firstSeen": "2026-11-27",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Dance & DJ"
-   ],
-   "danceStyles": [
-    "Trance"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "29e63cd599109289-2000",
@@ -18358,6 +18358,10 @@
    "musicGenres": [
     "Dance & DJ"
    ],
+   "danceStyles": [
+    "House",
+    "Techno"
+   ],
    "ticketUrl": "https://www.fourvenues.com/shelter-amsterdam/OT1B",
    "sources": [
     {
@@ -18367,11 +18371,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "danceStyles": [
-    "House",
-    "Techno"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "0a899e0425767129",
@@ -19849,6 +19849,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Wereld & latin",
+    "Rock"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/the-skints",
    "sources": [
     {
@@ -19858,11 +19862,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Wereld & latin",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "b0b5ced02d11d6ea-1930",
@@ -20125,6 +20125,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2785893641/the-wanderer-1",
    "sources": [
     {
@@ -20134,10 +20137,7 @@
     }
    ],
    "firstSeen": "2026-11-27",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "b0b5ced02d11d6ea-2000",
@@ -20452,6 +20452,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/lelo",
    "sources": [
     {
@@ -20461,10 +20464,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Hiphop & R&B"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "0fc1d8b921c1e7be",
@@ -21088,6 +21088,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/bilal",
    "sources": [
     {
@@ -21097,10 +21100,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Jazz, soul & blues"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "33a970cb99c4e2d8",
@@ -22334,6 +22334,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/kadavar",
    "sources": [
     {
@@ -22343,10 +22346,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "e335c7987ea46d7f",
@@ -22482,6 +22482,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/gurriers",
    "sources": [
     {
@@ -22491,10 +22494,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "dcd0984d1583c566",
@@ -22541,6 +22541,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Hiphop & R&B",
+    "Jazz, soul & blues"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/sekou",
    "sources": [
     {
@@ -22550,11 +22554,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Hiphop & R&B",
-    "Jazz, soul & blues"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "59ccc9ec3e247699",
@@ -23216,6 +23216,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/opus-kink",
    "sources": [
     {
@@ -23225,10 +23228,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "45a5b2eb68c16f02",
@@ -23308,6 +23308,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://ekko.nl/event/altin-gun/",
    "sources": [
     {
@@ -23317,10 +23320,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "160c263f7314009e",
@@ -26132,6 +26132,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Klassiek"
+   ],
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/amsterdam-sinfonietta-kerst-met-john-holiday",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/kerst-met-john-holiday.8402/kerst-met-john-holiday.jpg",
    "sources": [
@@ -26142,10 +26145,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Klassiek"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "6d2c9a2c78b60010",
@@ -26818,6 +26818,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ],
    "ticketUrl": "https://www.maaspoort.nl/programma/krezip-krezip/11-12-2026-20-15/",
    "sources": [
     {
@@ -26827,11 +26831,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "80f5f763ae9e46d7",
@@ -27167,6 +27167,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock"
+   ],
    "ticketUrl": "https://www.explorebreda.com/nl/evenementen/the-current",
    "imageUrl": "https://breda-marketing.stream.prepr.io/5qrvnn4rs4f/w_1920/the-current-3840-x-21609.webp",
    "sources": [
@@ -27177,10 +27180,7 @@
     }
    ],
    "firstSeen": "2026-11-27",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "0d30c3f823ec9d9c",
@@ -27199,6 +27199,12 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "Disco"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/tonique-and-man",
    "sources": [
     {
@@ -27208,13 +27214,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Dance & DJ"
-   ],
-   "danceStyles": [
-    "Disco"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "8edc4353d7d54963",
@@ -27997,6 +27997,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ],
    "ticketUrl": "https://ekko.nl/event/high-hi/",
    "sources": [
     {
@@ -28006,11 +28010,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Pop",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "569e66f5be7609cb",
@@ -28930,6 +28930,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Metal & punk"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/mammoth",
    "sources": [
     {
@@ -28939,11 +28943,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock",
-    "Metal & punk"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "a7b9a380feb8c6d7",
@@ -29106,6 +29106,13 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "House",
+    "Techno"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/tonic-walter",
    "sources": [
     {
@@ -29115,14 +29122,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Dance & DJ"
-   ],
-   "danceStyles": [
-    "House",
-    "Techno"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "5747458974304c2d",
@@ -32463,7 +32463,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Wereld & latin",
+    "Rock"
+   ]
   },
   {
    "id": "43792426a71b209d",
@@ -33038,7 +33042,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Wereld & latin",
+    "Rock"
+   ]
   },
   {
    "id": "f785730f6d35452f",
@@ -34449,7 +34457,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "b26a7b55cfac136e",
@@ -37486,7 +37498,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "danceStyles": [
+    "Techno"
+   ]
   },
   {
    "id": "e2b92490fb2f7739",
@@ -37720,7 +37735,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "8c499ba65c3ce035",
@@ -40904,7 +40922,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Dance & DJ"
+   ]
   },
   {
    "id": "84a5018025506805",
@@ -41863,7 +41884,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "danceStyles": [
+    "Drum & bass",
+    "Techno"
+   ]
   },
   {
    "id": "3f81f4b5aed0ab43",
@@ -99973,6 +99998,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Wereld & latin",
+    "Rock"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/concerten-en-muziek/concerten/the-skints",
    "sources": [
     {
@@ -99982,11 +100011,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Wereld & latin",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "df0212ea5c0e5307",
@@ -106991,6 +107016,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ],
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/theatertour-krezip",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/theatertour.7389/theatertour.jpg",
    "sources": [
@@ -107001,11 +107030,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "4463a12765e23c6d",
@@ -110191,6 +110216,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ],
    "ticketUrl": "https://annabel.nu/van-dik-hout-2/",
    "sources": [
     {
@@ -110200,11 +110229,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Pop",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "e21be91e2bdd1af3",
@@ -118470,6 +118495,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ],
    "ticketUrl": "https://www.013.nl/programma/135844/van-dik-hout",
    "sources": [
     {
@@ -118479,11 +118508,7 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Pop",
-    "Rock"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "46cd0228bd96a3ce",
@@ -126507,6 +126532,10 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ],
    "ticketUrl": "https://carre.nl/voorstelling/krezip",
    "sources": [
     {
@@ -126516,11 +126545,7 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27",
-   "musicGenres": [
-    "Rock",
-    "Pop"
-   ]
+   "lastSeen": "2026-11-27"
   },
   {
    "id": "15ca03df4821d4ae",
