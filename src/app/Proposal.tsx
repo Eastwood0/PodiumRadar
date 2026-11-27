@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import type { SiteData, SiteEvent, SiteVenue } from "../lib/site-data";
 import { formatDate, formatTime, showHref, showKey } from "./lib";
 
@@ -63,7 +63,7 @@ export function ProposalToggle({ e, big = false }: { e: SiteEvent; big?: boolean
   return (
     <button type="button" className={`pick${big ? " pick--big" : ""}${on ? " is-on" : ""}`} aria-pressed={on} onClick={() => toggleProposal(key)}>
       <span aria-hidden="true">{on ? "✓" : "＋"}</span>
-      {big ? <span>{on ? "In je voorstel" : "Zet in voorstel"}</span> : <span className="sr-only">{e.t} in je voorstel aan vrienden</span>}
+      {big ? <span>Voorstel aan vrienden</span> : <span className="sr-only">{e.t} in je voorstel aan vrienden</span>}
     </button>
   );
 }
@@ -71,17 +71,28 @@ export function ProposalToggle({ e, big = false }: { e: SiteEvent; big?: boolean
 /** Bar at the bottom while shows are picked: send them in one message, or start over. */
 export function ProposalBar({ data, venues }: { data: SiteData; venues: Map<string, SiteVenue> }) {
   const list = useProposal();
-  if (!list.length) return null;
   const events = list.map((k) => data.events.find((e) => showKey(e) === k)).filter((e): e is SiteEvent => !!e);
+  // Shows that are over or gone from the agenda drop out once the whole agenda is in (Codex).
+  useEffect(() => {
+    if (data.complete && events.length < list.length) write(events.map(showKey));
+  }, [data.complete, events, list.length]);
+  if (!list.length) return null;
   return (
     <div className="pbar" role="region" aria-label="Voorstel aan vrienden">
-      <p className="pbar__n">
-        {list.length} in je voorstel
+      <p className="pbar__n" aria-live="polite">
+        {events.length} in je voorstel
       </p>
       <button type="button" className="btn" disabled={!events.length} onClick={() => shareText("Voorstel", proposalText(events, venues, siteBase()))}>
         Deel voorstel
       </button>
-      <button type="button" className="btn btn--quiet" onClick={() => write([])}>
+      <button
+        type="button"
+        className="btn btn--quiet"
+        onClick={() => {
+          write([]);
+          document.getElementById("inhoud")?.focus({ preventScroll: true }); // the bar and its buttons are gone
+        }}
+      >
         Wis
       </button>
     </div>

@@ -4,6 +4,7 @@ import { EventList } from "./EventList";
 import { FollowButton } from "./FollowButton";
 import { getFollowState, newSince, radarEvents, setFollowState, useFollows } from "./follow";
 import { artistHref, bill, showKey, slug } from "./lib";
+import { replaceHash } from "./nav";
 import { PageHead } from "./Pages";
 import { cleanTyped, codeHref, createLink, formatCode, joinLink, type JoinMode, onSyncFailure, refreshLink, revokeLink, syncFailed, syncMessage, unlinkDevice } from "./sync";
 
@@ -95,7 +96,7 @@ export function Radar({ data, venues, joinCode }: Common & { joinCode?: string }
                 Sinds je vorige bezoek: {[newCount && `${newCount} ${newCount === 1 ? "nieuwe show" : "nieuwe shows"}`, changeCount && `${changeCount} ${changeCount === 1 ? "show veranderd" : "shows veranderd"}`].filter(Boolean).join(" en ")}.
               </p>
               <button type="button" className="btn btn--quiet" aria-pressed={onlyChanges} onClick={() => setOnlyChanges((x) => !x)}>
-                {onlyChanges ? "Toon alles" : "Alleen wat er veranderd is"}
+                Alleen wat er veranderd is
               </button>
             </div>
           )}
@@ -134,7 +135,7 @@ function JoinPrompt({ code, setMsg }: { code: string; setMsg: (m: string) => voi
   if (done || follows.code === code) return null;
   const close = () => {
     setDone(true);
-    history.replaceState(null, "", "#radar");
+    replaceHash("#radar");
   };
   const join = async (mode: JoinMode) => {
     setBusy(true);

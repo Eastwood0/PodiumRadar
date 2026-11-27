@@ -5,7 +5,7 @@ import { BillView, LineUp } from "./LineUp";
 import { Overview } from "./Overview";
 import { Agenda, ArtistPage, NotFound, PageHead, Sources, VenuePage } from "./Pages";
 import { getFollowState } from "./follow";
-import { navigated, replaced, startNav } from "./nav";
+import { navigated, replaceHash, startNav } from "./nav";
 import { ProposalBar } from "./Proposal";
 import { Radar } from "./Radar";
 import { ShowPage } from "./ShowPage";
@@ -29,7 +29,7 @@ export default function App({ bill }: { bill?: Bill }) {
   const [partial, setPartial] = useState(false);
   const [route, setRoute] = useState<Route>({ view: "overzicht" });
   const [filters, setFiltersState] = useState<Filters>(DEFAULT_FILTERS);
-  const restoreY = useRef<number | undefined>(undefined);
+  const restoreY = useRef<{ y: number; focus?: string } | undefined>(undefined);
 
   useEffect(() => {
     setRoute(currentRoute());
@@ -37,10 +37,11 @@ export default function App({ bill }: { bill?: Bill }) {
     setFiltersState({ ...migrateFilters(load<Partial<Filters>>(FILTER_KEY, {})), when: "", day: "" });
     startNav();
     const onHash = () => {
-      const back = navigated(window.scrollY);
-      restoreY.current = back;
+      const nav = navigated(window.scrollY);
+      restoreY.current = nav.restore === undefined ? undefined : { y: nav.restore, focus: nav.from };
       setRoute(currentRoute());
-      if (back === undefined) window.scrollTo(0, 0);
+      if (nav.restore !== undefined) return; // focus and scroll follow once the page is back (effect below)
+      window.scrollTo(0, 0);
       // Screen readers and keyboard users start at the new page, not at the link they left.
       document.getElementById("inhoud")?.focus({ preventScroll: true });
     };
@@ -87,17 +88,23 @@ export default function App({ bill }: { bill?: Bill }) {
       save(FILTER_KEY, next);
       return next;
     });
-    history.replaceState(null, "", "#agenda");
-    replaced();
+    replaceHash("#agenda");
     setRoute({ view: "agenda" });
   }, [route]);
 
   // "Terug": once the page you return to has rendered, scroll to where you were.
   useEffect(() => {
-    const y = restoreY.current;
-    if (y === undefined || !data) return;
+    const r = restoreY.current;
+    if (r === undefined || !data) return;
     restoreY.current = undefined;
-    requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        window.scrollTo(0, r.y);
+        // Keyboard and screen reader: continue at the link you followed, not at the top of the list.
+        const link = r.focus ? document.querySelector<HTMLElement>(`#inhoud a[href="${CSS.escape(r.focus)}"]`) : null;
+        (link ?? document.getElementById("inhoud"))?.focus({ preventScroll: true });
+      }),
+    );
   }, [route, data]);
 
   // The period lives in the address ("#agenda/weekend", "#agenda/week"), so a shared or bookmarked link keeps it
@@ -111,8 +118,7 @@ export default function App({ bill }: { bill?: Bill }) {
       setFilters({ ...f, when: "", day: "" });
       const hash = f.day ? `#agenda/dag-${f.day}` : f.when ? `#agenda/${f.when}` : "#agenda";
       if (location.hash !== hash) {
-        history.replaceState(null, "", hash); // a filter change is not a new page: no extra Back step, no jump to the top
-        replaced();
+        replaceHash(hash); // a filter change is not a new page: no extra Back step, no jump to the top
         setRoute(parseRoute(hash));
       }
     },

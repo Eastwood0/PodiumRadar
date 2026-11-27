@@ -13,11 +13,11 @@ const data = (sources: SiteData["sources"]): SiteData => ({ generatedAt: "2026-1
 describe("show links (Deel show)", () => {
   it("gives a show the same key every day, from date, venue and title", () => {
     const e = ev("Claydrum presents Nico Moreno / Carla Schmitt");
-    expect(showKey(e)).toBe("2026-11-27-complex-maastricht-claydrum-presents-nico-moreno-carla-schmitt");
+    expect(showKey(e)).toBe("2026-11-27t22-30-complex-maastricht-claydrum-presents-nico-moreno-carla-schmitt");
     expect(parseRoute(showHref(e))).toEqual({ view: "show", key: showKey(e) });
   });
-  it("keeps a matinee and the evening show of a title on the same day under one key only when the title is equal", () => {
-    expect(showKey(ev("A", "2026-11-27T14:00:00+01:00"))).toBe(showKey(ev("A", "2026-11-27T20:00:00+01:00")));
+  it("keeps a matinee and the evening show of the same title apart (The Streamers at 11:30 and 18:00)", () => {
+    expect(showKey(ev("The Streamers", "2027-09-25T11:30:00+02:00"))).not.toBe(showKey(ev("The Streamers", "2027-09-25T18:00:00+02:00")));
     expect(showKey(ev("A"))).not.toBe(showKey(ev("B")));
   });
 });
@@ -37,26 +37,41 @@ describe("one free evening (Kies een dag)", () => {
 
 describe("Terug", () => {
   afterEach(() => vi.unstubAllGlobals());
-  const go = (hash: string, y: number) => {
-    vi.stubGlobal("location", { hash });
-    return navigated(y);
-  };
-  it("returns to the scroll position of the page you came from", () => {
-    vi.stubGlobal("location", { hash: "#agenda" });
+  /** A tiny browser history: link clicks push an entry without state, back/forward restore an entry's state. */
+  function browser(start: string) {
+    const entries: { hash: string; state: unknown }[] = [{ hash: start, state: null }];
+    let at = 0;
+    const location = { get hash() { return entries[at].hash; } };
+    const history = {
+      get state() { return entries[at].state; },
+      replaceState(state: unknown, _t: string, url?: string) { entries[at] = { hash: url ?? entries[at].hash, state }; },
+    };
+    vi.stubGlobal("location", location);
+    vi.stubGlobal("history", history);
+    return {
+      click(hash: string, y: number) { entries.splice(at + 1); entries.push({ hash, state: null }); at++; return navigated(y); },
+      back(y: number) { at--; return navigated(y); },
+    };
+  }
+
+  it("returns to the scroll position of the page you came from, and to the link you followed", () => {
+    const b = browser("#agenda");
     startNav();
     expect(canGoBack()).toBe(false); // opened straight from a link: "Naar de agenda"
-    expect(go("#show-a", 2400)).toBeUndefined();
+    expect(b.click("#show-a", 2400)).toEqual({});
     expect(canGoBack()).toBe(true);
-    expect(go("#artiest-b", 300)).toBeUndefined();
-    expect(go("#show-a", 0)).toBe(300);
-    expect(go("#agenda", 0)).toBe(2400);
+    b.click("#artiest-b", 300);
+    expect(b.back(0)).toEqual({ restore: 300, from: "#artiest-b" });
+    expect(b.back(0)).toEqual({ restore: 2400, from: "#show-a" });
     expect(canGoBack()).toBe(false);
   });
-  it("treats a new link to the same page as a new step, not as a step back", () => {
-    vi.stubGlobal("location", { hash: "#agenda" });
+  it("treats a new link to the page you came from as a new step, not as a step back (Codex)", () => {
+    const b = browser("#show-a");
     startNav();
-    go("#show-a", 100);
-    expect(go("#show-b", 50)).toBeUndefined();
+    b.click("#agenda", 0); // "Naar de agenda" on a shared show
+    expect(b.click("#show-a", 900)).toEqual({}); // the same show again via the list: a new page
+    expect(canGoBack()).toBe(true);
+    expect(b.back(0)).toEqual({ restore: 900, from: "#show-a" });
   });
 });
 

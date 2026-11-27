@@ -10,9 +10,10 @@ export function Flag({ cc }: { cc: SiteVenue["cc"] }) {
   return <span className={`flag flag--${cc}`} role="img" aria-label={COUNTRY[cc]} title={COUNTRY[cc]} />;
 }
 
-/** Genre labels: the dance style when known (Techno, House…), else the music genre; for other events the kind. */
+/** Genre labels: the music genres (with the dance style when known); for other events the kind (Comedy, Sport…). */
 function genreItems(e: SiteEvent) {
-  const items = (e.mg ?? []).flatMap((g) => (g === "Dance & DJ" && e.ds?.length ? e.ds : [g]));
+  // "Dance & DJ" and its style both, so the labels match the filter and its sub-filter (Techno, House…).
+  const items = (e.mg ?? []).flatMap((g) => (g === "Dance & DJ" && e.ds?.length ? [g, ...e.ds] : [g]));
   if (e.g && e.g !== "Concert" && !(e.mg && (e.g === "Dance" || e.g === "Klassiek"))) items.push(GENRE_LABEL[e.g] ?? e.g);
   return [...new Set(items)].map((g) => (
     <li key={g} className="tag tag--genre">

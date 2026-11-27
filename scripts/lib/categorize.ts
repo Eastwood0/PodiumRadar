@@ -38,7 +38,8 @@ export const GROUP_OF: Record<Genre, Category> = {
 
 /** Source labels → genre. Tested against the labels the current sources actually use. */
 const SOURCE_RULES: [RegExp, Genre][] = [
-  [/klassie?k|classic|klassik|orchest|chorale?|choral|opera|oper\b|kamermuziek/i, "Klassiek"],
+  // Whole words: "klassiekers" (pop classics) and "classic rock" are not classical music (Codex).
+  [/\b(klassieke?|klassik|klassische?|classical|klassiek muziek)\b|orchest|\bchorale?\b|\bchoral\b|\bopera\b|\boper\b|kamermuziek/i, "Klassiek"],
   [/\b(dance|techno|house|trance|hardstyle|hardcore|electro|edm|drum ?(&|and) ?bass|party|tanzveranstaltung|rave|clubnacht|clubavond)\b/i, "Dance"],
   [/festival/i, "Festival"],
   [/comedy|humou?r|cabaret|kabarett|stand-?up|kleinkunst/i, "Comedy"],
@@ -59,7 +60,7 @@ const TITLE_RULES: [RegExp, Genre][] = [
   // Sport: fixtures and competitions
   [/\b(fc|sv|vfl|tsv|bvb|ajax|feyenoord|vitesse|psv|fortuna|haie|uefa|bundesliga|eredivisie|keuken kampioen|champions league|europa league|conference league|nations league|world cup|wk|ek|handball|basketball|volleyball|eishockey|darts|boxing|boksen|glory|wwe|ufc|monster jam|supercross|turnkunst|interland|league|cup|meisterschaft|championship|grand prix|zesdaagse)\b/i, "Sport"],
   [/\bvs\.?\s/i, "Sport"],
-  [/\b(wrestling|wxw|worldcup|marathon|basket\w*|korfbal|ijshockey|turnen)\b/i, "Sport"],
+  [/\b(wrestling|wxw|worldcup|marathon|basket\w*|korfbal|ijshockey|turnen|concours|hippique|jumping amsterdam|indoor brabant|paardensport|springconcours|dressuur)\b/i, "Sport"],
   // Comedy
   [/\b(comedy|comedian|comedians|cabaret|kabarett|stand-?up|lacht?|lachende|humou?r)\b/i, "Comedy"],
   // Fairs and markets

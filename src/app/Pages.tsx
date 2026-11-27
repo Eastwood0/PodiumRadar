@@ -52,7 +52,11 @@ function Widen({ data, venues, filters, setFilters }: Common & { filters: Filter
       <div className="widen">
         {options.map((w) => (
           <button key={w.label} type="button" className="btn btn--quiet" onClick={() => setFilters({ ...filters, ...w.patch })}>
-            {w.label} <span className="widen__n">({w.n})</span>
+            {w.label}{" "}
+            <span className="widen__n">
+              ({w.n}
+              {data.complete ? "" : "+"})
+            </span>
           </button>
         ))}
         <button type="button" className="btn" onClick={() => setFilters(DEFAULT_FILTERS)}>
@@ -179,7 +183,7 @@ export function VenuePage({ data, venues, id, filters, setFilters }: Common & { 
         </p>
       )}
       {!v.ns && (
-        <EventList key={`${id}${filters.kind}`} events={events} venues={venues} data={data} showVenue={false} empty={<p>Niets van deze soort in deze zaal. Kies hierboven een andere soort of “Alles”.</p>} />
+        <EventList key={`${id}${filters.kind}`} memo={`zaal ${id} ${filters.kind}`} events={events} venues={venues} data={data} showVenue={false} empty={<p>Niets van deze soort in deze zaal. Kies hierboven een andere soort of “Alles”.</p>} />
       )}
     </>
   );

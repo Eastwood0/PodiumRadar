@@ -136,8 +136,17 @@ export function FilterBar({
           )}
           {show.when && (
             <label className={`sel sel--day${filters.day ? " has-value" : ""}`}>
-              <span className="sel__label">Dag</span>
-              <input type="date" value={filters.day} min={todayLocal()} max={months.length ? `${months.at(-1)}-31` : undefined} onChange={(e) => set({ day: e.target.value, when: "", month: "" })} />
+              <span className="sel__label" aria-hidden="true">
+                Dag
+              </span>
+              <input
+                type="date"
+                aria-label="Dag"
+                value={filters.day}
+                min={todayLocal()}
+                max={data.events.at(-1)?.s.slice(0, 10)}
+                onChange={(e) => set({ day: e.target.value, when: "", month: "" })}
+              />
             </label>
           )}
         </div>

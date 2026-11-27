@@ -76,7 +76,9 @@ interface ItunesArtist {
 /** Apple's iTunes Search: the artist with exactly this name in the Dutch store, or none. Exported for tests. */
 export function pickItunes(name: string, results: ItunesArtist[]): ItunesArtist | undefined {
   const key = artistKey(name);
-  return results.find((r) => artistKey(r.artistName) === key && r.primaryGenreName);
+  const same = results.filter((r) => artistKey(r.artistName) === key && r.primaryGenreName);
+  // Namesakes with different genres (two artists called "Annie"): no guess (Codex).
+  return new Set(same.map((r) => r.primaryGenreName)).size === 1 ? same[0] : undefined;
 }
 
 async function itunes(name: string, entry: ArtistGenreEntry, today: string): Promise<ArtistGenreEntry | "error"> {

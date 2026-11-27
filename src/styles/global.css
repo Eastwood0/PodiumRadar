@@ -1813,3 +1813,7 @@ a:hover {
 .sel--day:not(.has-value) input:not(:focus) {
   color: transparent;
 }
+/* The proposal bar sits over the bottom of the page: keep a focused button above it (WCAG 2.4.11). */
+:root:has(.pbar) {
+  scroll-padding-bottom: 5.5rem;
+}

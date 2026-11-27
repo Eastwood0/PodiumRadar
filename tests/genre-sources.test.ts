@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { classify } from "../scripts/lib/categorize";
-import { applyArtistGenres, artistKey, type DanceStyle, fromItunesGenre, genresInText, type MusicGenre, tributeTarget } from "../scripts/lib/music-genre";
+import { applyArtistGenres, artistKey, type DanceStyle, eventDanceStyles, eventGenres, fromItunesGenre, genresInText, type MusicGenre, tributeTarget, withoutTour } from "../scripts/lib/music-genre";
 import { artistsFromTitle } from "../scripts/lib/normalize";
 import { pickItunes } from "../scripts/genres";
 
@@ -94,3 +94,33 @@ describe("applying artist genres", () => {
     expect(applyArtistGenres([ev(["Remy van Kesteren"], { category: "overig", genre: "Toneel" })], cache)[0].category).toBe("overig");
   });
 });
+
+describe("false positives found by Codex (27 Nov 2026)", () => {
+  it("does not read tour names as genres", () => {
+    expect(eventGenres("U2 – World Tour", undefined, "Concert")).toEqual([]);
+    expect(eventDanceStyles("Sienna Spiro – My House Tour", undefined)).toEqual([]);
+    expect(withoutTour("Sienna Spiro – My House Tour 2027")).toBe("Sienna Spiro");
+  });
+  it("keeps hardcore punk out of Dance & DJ", () => {
+    expect(genresInText("hardcore punk")).toEqual(["Metal & punk"]);
+    expect(genresInText("hardcore")).toContain("Dance & DJ");
+  });
+  it("reads 'klassiekers' (pop classics) as no genre, 'Klassieke muziek' as classical", () => {
+    expect(classify("The Scene", "klassiekers / tributes", none).genre).not.toBe("Klassiek");
+    expect(classify("Winterreise", "Klassieke muziek", none).genre).toBe("Klassiek");
+  });
+  it("puts a horse show under sport", () => {
+    expect(classify("Jumping Amsterdam – Concours Hippique", undefined, none).category).toBe("overig");
+  });
+  it("finds the act behind a tribute show, also after a show name", () => {
+    expect(tributeTarget("Völkerball – A Tribute to Rammstein")).toBe("Rammstein");
+    expect(tributeTarget("Starman – David Bowie Tribute")).toBe("David Bowie");
+    expect(tributeTarget("60 years of Pink Floyd: A Pink Floyd Experience")).toBe("Pink Floyd");
+    expect(tributeTarget("Nathan Ball")).toBeUndefined();
+  });
+  it("skips namesakes with different genres on iTunes", () => {
+    const two = [{ artistName: "Annie", primaryGenreName: "Pop" }, { artistName: "Annie", primaryGenreName: "Electronic" }];
+    expect(pickItunes("Annie", two)).toBeUndefined();
+  });
+});
+

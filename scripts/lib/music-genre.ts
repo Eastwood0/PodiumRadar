@@ -17,13 +17,13 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(post-?punk|indie|alternative|alt-rock|grunge|garage rock|shoegaze|britpop|emo|stoner|psychedelic rock|prog(ressive)? rock|rock|rock ?'?n'? ?roll|hard rock|blues rock|krautrock)\b/i, "Rock"],
   [/\b(loud|heavy metal|metal|metalcore|deathcore|death metal|black metal|thrash|doom|grindcore|nu metal|(?<!post-)(?<!post)punk|hardcore punk|pop punk|ska punk)\b/i, "Metal & punk"],
   [/\b(hip ?hop|hip-hop|rap|deutschrap|nederhop|trap|drill|grime|r&b|rnb|r ?'?n'? ?b|contemporary r&b|urban|boom bap|afroswing)\b/i, "Hiphop & R&B"],
-  [/\b(techno|tekno|hardtek|house|deep[- ]?house|tech[- ]?house|trance|hardstyle|hardcore|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
+  [/\b(techno|tekno|hardtek|house|deep[- ]?house|tech[- ]?house|trance|hardstyle|hardcore(?!\s*punk)|gabber|frenchcore|uptempo|edm|electronic|electronica|electro|elektronische?|drum (and|&|n) bass|dnb|jungle|dubstep|bass music|big room|dance|club|clubnacht|clubavond|nachtleven|dj|rave|disco|italo|eurodance|hard dance|ambient|downtempo|breakbeat|uk garage)\b/i, "Dance & DJ"],
   [/\b(nederpop|nederlandstalig|levenslied|smartlap|carnaval|nederhop|volkszanger|palingsound|limburgstalig|dialect)\b/i, "Nederlandstalig"],
   [/\b(schlager|volksmusik|volkstümliche musik|ballermann|après-ski|apres-ski|stimmungsmusik|deutscher schlager)\b/i, "Schlager"],
   [/\b(singer-?songwriter|folk|indie folk|country|americana|bluegrass|acoustic|akoestisch|chanson|cantautor|liedermacher|alt-country)\b/i, "Folk & singer-songwriter"],
   [/\b(jazz|smooth jazz|swing|big band|bebop|fusion|soul|neo-?soul|motown|blues|funk|gospel|rhythm and blues)\b/i, "Jazz, soul & blues"],
   [/\b(classical|klassiek|klassik|klassisch|opera|oper|orchestra|orkest|orchester|symphon\w*|baroque|barok|chamber music|kamermuziek|kammermusik|choir|koor|chor|contemporary classical|requiem|philharmoni\w*)\b/i, "Klassiek"],
-  [/\b(latin|latino|reggaeton|salsa|bachata|cumbia|samba|bossa nova|flamenco|fado|tango|reggae|dancehall|dub|afrobeats?|afro|amapiano|world|wereld|weltmusik|arabic|turkish|türkçe|bollywood|balkan|klezmer|celtic|cuban|brazilian|k-?pop|j-?pop|c-?pop|mandopop|cantopop)\b/i, "Wereld & latin"],
+  [/\b(latin|latino|reggaeton|salsa|bachata|cumbia|samba|bossa nova|flamenco|fado|tango|reggae|dancehall|dub|afrobeats?|afro|amapiano|world music|wereldmuziek|weltmusik|arabic|turkish|türkçe|bollywood|balkan|klezmer|celtic|cuban|brazilian|k-?pop|j-?pop|c-?pop|mandopop|cantopop)\b/i, "Wereld & latin"],
   [/\b(top ?40|top ?2000|top ?100|classic hits|greatest hits|hitparade|fanparty|foute? (party|feestje|avond)|80'?s|90'?s|00'?s|pop|synth-?pop|electropop|dance-?pop|indie pop|teen pop|art pop|dream pop|power pop|europop|chamber pop|soft rock|adult contemporary|boy ?band|girl ?group|ballad|deutschpop)\b/i, "Pop"],
 ];
 // K-pop is pop in most people's ears; the Wereld rule above catches the word first, so add Pop too.
@@ -96,8 +96,13 @@ export function artistKey(name: string): string {
 }
 
 /** Genres an event shows by itself: the source label, words in the title, and the broad category. */
+/** A title without its tour name: "U2 – World Tour" is not world music, "Sienna Spiro – My House Tour" not house. */
+export function withoutTour(title: string): string {
+  return title.replace(/\s*[-–—:]\s*[^-–—:]*\btour(nee)?\b.*$/i, "").replace(/\b(\S+\s+){0,2}(world\s+)?tour(nee)?\b.*$/i, "");
+}
+
 export function eventGenres(title: string, sourceCategory: string | undefined, displayGenre: string): MusicGenre[] {
-  const out = new Set<MusicGenre>([...genresInText(sourceCategory), ...genresInText(title)]);
+  const out = new Set<MusicGenre>([...genresInText(sourceCategory), ...genresInText(withoutTour(title))]);
   if (displayGenre === "Dance") out.add("Dance & DJ");
   if (displayGenre === "Klassiek") out.add("Klassiek");
   return [...out].slice(0, 2);
@@ -105,7 +110,7 @@ export function eventGenres(title: string, sourceCategory: string | undefined, d
 
 /** Dance styles an event shows by itself (only meaningful when it is Dance & DJ). */
 export function eventDanceStyles(title: string, sourceCategory: string | undefined): DanceStyle[] {
-  return [...new Set([...danceStylesInText(sourceCategory), ...danceStylesInText(title)])].slice(0, 2);
+  return [...new Set([...danceStylesInText(sourceCategory), ...danceStylesInText(withoutTour(title))])].slice(0, 2);
 }
 
 export interface ArtistGenreEntry {
@@ -153,8 +158,16 @@ export function fromItunesGenre(name: string): { genres: MusicGenre[]; dance: Da
 
 /** "AC/DC tribute", "Tribute to Queen", "Abba Tributeband": the act whose genre a tribute show has. */
 export function tributeTarget(name: string): string | undefined {
-  const m = name.match(/^(?:a )?tribute (?:to|aan|an)\s+(.+)$/i) ?? name.match(/^(.+?)\s+(?:tribute(?:\s*band| show| act)?|tributeband|revival|experience|forever)\b.*$/i);
-  return m?.[1]?.trim() || undefined;
+  // Also after a show name: "Völkerball – A Tribute to Rammstein", "Starman – David Bowie Tribute".
+  for (const part of name.split(/\s+[-–—]\s+|\s*:\s+/).reverse()) {
+    const m =
+      part.match(/^(?:a |the |een )?(?:tribute|ode|eerbetoon) (?:to|aan|an)\s+(?:the music of\s+)?(.+)$/i) ??
+      part.match(/^(?:a |the )?(.+?)\s+(?:tribute(?:\s*band| show| act| concert)?|tributeband|revival|experience|forever)\b.*$/i);
+    const target = m?.[1]?.replace(/^(\d+ (years|jaar) of|the best of|the story of|the music of)\s+/i, "").trim();
+    if (target && target.length >= 2) return target;
+  }
+  const story = name.match(/^(?:the story of|the music of|the best of|een avond met de muziek van)\s+(.+)$/i);
+  return story?.[1]?.trim() || undefined;
 }
 
 type WithGenres = { category: string; genre?: string; categoryGuess?: true; artists: { name: string }[]; musicGenres?: MusicGenre[]; danceStyles?: DanceStyle[] };
