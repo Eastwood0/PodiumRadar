@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T11:23:37.676Z",
+ "generatedAt": "2026-11-27T12:14:11.545Z",
  "events": [
   {
    "id": "9c80341ee7e94067",
@@ -729,10 +729,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-scene-support-27-11-26/",
    "sources": [
@@ -1851,7 +1850,7 @@
    "title": "To Die For (A Comedy): Orkest Phion ism Nederlandse Reisopera",
    "artists": [
     {
-     "name": "To Die For (A Comedy)"
+     "name": "To Die For"
     }
    ],
    "venueId": "musis-arnhem",
@@ -2718,6 +2717,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.paard.nl/en/event/paardcafe-gettin-80s-90s-wit-it-78/",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/10/80S90S-WEB-HEADER-02.jpg",
    "sources": [
@@ -3481,10 +3483,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Dance & DJ",
-    "Klassiek"
+    "Dance & DJ"
    ],
    "danceStyles": [
     "Techno"
@@ -3723,7 +3724,7 @@
    "title": "Toffler Presents Ranger Trucco (3HR set)",
    "artists": [
     {
-     "name": "Ranger Trucco (3HR set)"
+     "name": "Ranger Trucco"
     },
     {
      "name": "Capron"
@@ -3753,7 +3754,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "danceStyles": [
+    "House"
+   ]
   },
   {
    "id": "2b0dc43c072467cf",
@@ -4099,7 +4103,7 @@
    "title": "Space Academy\n                                 (8+): Missie Maan",
    "artists": [
     {
-     "name": "Space Academy\n                                 (8+)"
+     "name": "Space Academy"
     }
    ],
    "venueId": "delamar",
@@ -4155,7 +4159,7 @@
    "title": "Stuntelman (4+): Het Laagland",
    "artists": [
     {
-     "name": "Stuntelman (4+)"
+     "name": "Stuntelman"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -4632,46 +4636,11 @@
    "lastSeen": "2026-11-27"
   },
   {
-   "id": "15938f3e5d5ee6e6",
-   "title": "PRINS S. EN DE GEIT X RESIDENTIE ORKEST",
-   "artists": [
-    {
-     "name": "PRINS S. EN DE GEIT"
-    },
-    {
-     "name": "RESIDENTIE ORKEST"
-    }
-   ],
-   "venueId": "paard",
-   "venueName": "Paard",
-   "city": "Den Haag",
-   "country": "NL",
-   "start": "2026-11-28T19:00:00+01:00",
-   "hasTime": true,
-   "status": "gepland",
-   "category": "muziek",
-   "genre": "Klassiek",
-   "musicGenres": [
-    "Klassiek"
-   ],
-   "ticketUrl": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/",
-   "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/05/SYMPHONIC-JUNCTION-PRINS-S-BANNER.png",
-   "sources": [
-    {
-     "name": "paard.nl",
-     "sourceId": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/",
-     "url": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/"
-    }
-   ],
-   "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
-  },
-  {
    "id": "c223084de950f206-1900",
    "title": "Space Academy\n                                 (8+): Missie Maan",
    "artists": [
     {
-     "name": "Space Academy\n                                 (8+)"
+     "name": "Space Academy"
     }
    ],
    "venueId": "delamar",
@@ -4689,6 +4658,41 @@
      "name": "delamar.nl",
      "sourceId": "https://delamar.nl/voorstellingen/space-academy/|2026-11-28T19:00:00+01:00",
      "url": "https://delamar.nl/voorstellingen/space-academy/"
+    }
+   ],
+   "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-27"
+  },
+  {
+   "id": "15938f3e5d5ee6e6",
+   "title": "PRINS S. EN DE GEIT X RESIDENTIE ORKEST",
+   "artists": [
+    {
+     "name": "PRINS S. EN DE GEIT"
+    },
+    {
+     "name": "RESIDENTIE ORKEST"
+    }
+   ],
+   "venueId": "paard",
+   "venueName": "Paard",
+   "city": "Den Haag",
+   "country": "NL",
+   "start": "2026-11-28T19:15:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Klassiek",
+   "musicGenres": [
+    "Klassiek"
+   ],
+   "ticketUrl": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/",
+   "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/05/SYMPHONIC-JUNCTION-PRINS-S-BANNER.png",
+   "sources": [
+    {
+     "name": "paard.nl",
+     "sourceId": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/",
+     "url": "https://www.paard.nl/en/event/prins-s-en-de-geit-x-residentie-orkest-2/"
     }
    ],
    "firstSeen": "2026-11-26",
@@ -5122,7 +5126,7 @@
    "title": "Kommil Foo (BE): Babel",
    "artists": [
     {
-     "name": "Kommil Foo (BE)"
+     "name": "Kommil Foo"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -5601,7 +5605,7 @@
    "title": "Roomful of Teeth (VS): Caroline Shaw – Partita",
    "artists": [
     {
-     "name": "Roomful of Teeth (VS)"
+     "name": "Roomful of Teeth"
     }
    ],
    "venueId": "plt-heerlen",
@@ -5801,7 +5805,7 @@
    "title": "Club Night",
    "artists": [
     {
-     "name": "M-HIGH (all night)"
+     "name": "M-HIGH"
     },
     {
      "name": "Alec Dienaar B2B Stipp"
@@ -6840,8 +6844,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Toneel",
-   "categoryGuess": true,
+   "genre": "Show",
    "ticketUrl": "https://www.plt.nl/programma/franciscus-de-familiemusical/29-11-2026-14-00",
    "sources": [
     {
@@ -7276,7 +7279,7 @@
    "title": "Oliver en het avontuur van de straatkinderen (8+): Nationaal Jeugd Musical Theater",
    "artists": [
     {
-     "name": "Oliver en het avontuur van de straatkinderen (8+)"
+     "name": "Oliver en het avontuur van de straatkinderen"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -7397,7 +7400,7 @@
    "title": "MIJNMIJNMIJN (5+): coupedeboule",
    "artists": [
     {
-     "name": "MIJNMIJNMIJN (5+)"
+     "name": "MIJNMIJNMIJN"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -8035,10 +8038,11 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
+    "Hiphop & R&B",
     "Dance & DJ"
    ],
    "danceStyles": [
-    "House"
+    "Hardstyle & hardcore"
    ],
    "ticketUrl": "https://www.koeln.de/event/esdeekid-council-house-rat-tour/",
    "sources": [
@@ -9514,7 +9518,7 @@
      "name": "Matt Nash"
     },
     {
-     "name": "Kefsky (DJ-set)"
+     "name": "Kefsky"
     }
    ],
    "venueId": "doornroosje",
@@ -9941,7 +9945,7 @@
    "title": "Time Machine (12+): HNTjong & Theater Utrecht",
    "artists": [
     {
-     "name": "Time Machine (12+)"
+     "name": "Time Machine"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -10088,7 +10092,7 @@
    "title": "Joe Jackson - Hope and Fury Tour 2026",
    "artists": [
     {
-     "name": "Joe Jackson - Hope and Fury Tour 2026"
+     "name": "Joe Jackson"
     }
    ],
    "venueId": "carre",
@@ -10109,7 +10113,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "57666547b398e1c3",
@@ -11347,7 +11355,7 @@
    "title": "Time Machine (12+): HNTjong & Theater Utrecht",
    "artists": [
     {
-     "name": "Time Machine (12+)"
+     "name": "Time Machine"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -11494,7 +11502,7 @@
    "title": "Joe Jackson - Hope and Fury Tour 2026",
    "artists": [
     {
-     "name": "Joe Jackson - Hope and Fury Tour 2026"
+     "name": "Joe Jackson"
     }
    ],
    "venueId": "carre",
@@ -11515,7 +11523,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Jazz, soul & blues"
+   ]
   },
   {
    "id": "0ebadcce982f00f1",
@@ -11964,7 +11976,7 @@
    "title": "Luka Bloom (IE)",
    "artists": [
     {
-     "name": "Luka Bloom (IE)"
+     "name": "Luka Bloom"
     }
    ],
    "venueId": "plt-heerlen",
@@ -11985,7 +11997,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "f14eea43d5606065",
@@ -13592,7 +13607,7 @@
    "title": "Vrouwejaars 2026",
    "artists": [
     {
-     "name": "Vrouwejaars 2026"
+     "name": "Vrouwejaars"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -13975,7 +13990,7 @@
    "title": "Jade Mintjens (BE): Bedankt om te komen",
    "artists": [
     {
-     "name": "Jade Mintjens (BE)"
+     "name": "Jade Mintjens"
     }
    ],
    "venueId": "plt-heerlen",
@@ -14047,7 +14062,8 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Jazz, soul & blues"
+    "Jazz, soul & blues",
+    "Wereld & latin"
    ],
    "ticketUrl": "https://shop.tickets.cm.com/97795b23-83c4-9be1-8a75-a22b271862b5",
    "sources": [
@@ -14065,7 +14081,7 @@
    "title": "Nu Art Orchestra & Anna Webber (CA): JUNO",
    "artists": [
     {
-     "name": "Nu Art Orchestra & Anna Webber (CA)"
+     "name": "Nu Art Orchestra & Anna Webber"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -15154,6 +15170,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/80s-verantwoord",
    "sources": [
     {
@@ -16426,7 +16445,7 @@
    "title": "Sam Alfred (all night)",
    "artists": [
     {
-     "name": "Sam Alfred (all night)"
+     "name": "Sam Alfred"
     },
     {
      "name": "Malom"
@@ -16456,7 +16475,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "danceStyles": [
+    "House"
+   ]
   },
   {
    "id": "30172d95ea5f5625",
@@ -17118,7 +17140,7 @@
    "title": "TOFFLER Presents GIGSTA B2B Fabio Santos (3HR set)",
    "artists": [
     {
-     "name": "GIGSTA B2B Fabio Santos (3HR set)"
+     "name": "GIGSTA B2B Fabio Santos"
     },
     {
      "name": "Ive Lovers"
@@ -18649,7 +18671,7 @@
      "name": "Seor"
     },
     {
-     "name": "Charlie Boon (all night)"
+     "name": "Charlie Boon"
     }
    ],
    "venueId": "shelter",
@@ -19530,7 +19552,7 @@
    "title": "Beuk! (4+): Kim van Zeben & Rogier in ’t Hout",
    "artists": [
     {
-     "name": "Beuk! (4+)"
+     "name": "Beuk!"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -19705,7 +19727,7 @@
    "title": "Samar en de bange koning (8+): George Tobal Producties & Theater De Krakeling",
    "artists": [
     {
-     "name": "Samar en de bange koning (8+)"
+     "name": "Samar en de bange koning"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -20870,7 +20892,7 @@
    "title": "Venlo.fit sportgala 2026: Gemeente Venlo",
    "artists": [
     {
-     "name": "Venlo.fit sportgala 2026"
+     "name": "Venlo.fit sportgala"
     }
    ],
    "venueId": "maaspoort",
@@ -24127,7 +24149,8 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Hiphop & R&B"
+    "Hiphop & R&B",
+    "Pop"
    ],
    "ticketUrl": "https://www.mezz.nl/event/zwartewater/25128",
    "sources": [
@@ -24564,7 +24587,7 @@
    "title": "ANÚNA (IE): On a Cold Winter's Night",
    "artists": [
     {
-     "name": "ANÚNA (IE)"
+     "name": "ANÚNA"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -24576,6 +24599,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Klassiek"
+   ],
    "ticketUrl": "https://www.plt.nl/programma/anuna-on-a-cold-winters-night/10-12-2026-20-00",
    "sources": [
     {
@@ -24941,7 +24967,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
     "Rock",
     "Metal & punk"
@@ -26004,7 +26030,7 @@
    "title": "TOFFLER Presents Trancemaster Krause (3HR set)",
    "artists": [
     {
-     "name": "Trancemaster Krause (3HR set)"
+     "name": "Trancemaster Krause"
     },
     {
      "name": "Trias Kinetica"
@@ -27057,8 +27083,7 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Dance & DJ"
+    "Pop"
    ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/40-up-let-s-dance-again/10353",
    "sources": [
@@ -27399,7 +27424,7 @@
    "title": "Dayna Kurtz & Robert Maché (VS)",
    "artists": [
     {
-     "name": "Dayna Kurtz & Robert Maché (VS)"
+     "name": "Dayna Kurtz & Robert Maché"
     }
    ],
    "venueId": "plt-heerlen",
@@ -27427,7 +27452,7 @@
    "title": "Erkan Oğur & İsmail Hakkı Demircioğlu (TR): Masters of Anatolia",
    "artists": [
     {
-     "name": "Erkan Oğur & İsmail Hakkı Demircioğlu (TR)"
+     "name": "Erkan Oğur & İsmail Hakkı Demircioğlu"
     }
    ],
    "venueId": "plt-heerlen",
@@ -27891,16 +27916,16 @@
    "title": "systematic show_case",
    "artists": [
     {
-     "name": "Michael Mayer (Kompakt)"
+     "name": "Michael Mayer"
     },
     {
-     "name": "Marc Romboy (Systematic)"
+     "name": "Marc Romboy"
     },
     {
-     "name": "Dany Rodriguez (Link Audio)"
+     "name": "Dany Rodriguez"
     },
     {
-     "name": "Sedaction (E.P.I.Q.)"
+     "name": "Sedaction"
     }
    ],
    "venueId": "muziekgieterij",
@@ -27922,7 +27947,14 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "Techno",
+    "House"
+   ]
   },
   {
    "id": "cba2425dffbe5ebc",
@@ -28848,7 +28880,7 @@
    "title": "TOFFLER Presents Menesix all night long",
    "artists": [
     {
-     "name": "Menesix all night long"
+     "name": "Menesix"
     }
    ],
    "venueId": "toffler",
@@ -28872,7 +28904,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "danceStyles": [
+    "House"
+   ]
   },
   {
    "id": "c9c2da35b61ba94b",
@@ -29149,7 +29184,7 @@
    "title": "Kerst Musical Gala 2026",
    "artists": [
     {
-     "name": "Kerst Musical Gala 2026"
+     "name": "Kerst Musical Gala"
     }
    ],
    "venueId": "maaspoort",
@@ -29484,6 +29519,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/115978/one-direction-fanparty-1",
    "imageUrl": "https://assets.plaece.nl/thumb/VnpDfzfNY-tIZAryv_kXOaI7VY6Jz1Gium55F3LM9W4/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS9vbmUtZGlyZWN0aW9uLWZhbnBhcnR5XzM1NTgwMTYyMjkuanBn.jpg",
    "sources": [
@@ -29529,7 +29567,7 @@
    "title": "Kerst Musical Gala 2026: Stichting Musical Stella Duce",
    "artists": [
     {
-     "name": "Kerst Musical Gala 2026"
+     "name": "Kerst Musical Gala"
     }
    ],
    "venueId": "maaspoort",
@@ -30310,6 +30348,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.foutefeestje.nl/venlo/",
    "sources": [
     {
@@ -31339,10 +31380,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/niels-geusebroek-sings-coldplay-13-12-26/",
    "sources": [
@@ -31576,7 +31616,7 @@
    "title": "Kerst Musical Gala 2026: Stichting Musical Stella Duce",
    "artists": [
     {
-     "name": "Kerst Musical Gala 2026"
+     "name": "Kerst Musical Gala"
     }
    ],
    "venueId": "maaspoort",
@@ -31741,7 +31781,7 @@
      "name": "Showcase MHZ"
     },
     {
-     "name": "Limburgse Popprijs 2026"
+     "name": "Limburgse Popprijs"
     },
     {
      "name": "Showcase MHZ"
@@ -31831,7 +31871,7 @@
    "title": "Het Koffertje (4+): De Horde",
    "artists": [
     {
-     "name": "Het Koffertje (4+)"
+     "name": "Het Koffertje"
     }
    ],
    "venueId": "plt-heerlen",
@@ -32064,7 +32104,7 @@
    "title": "TANKSTATION FESTIVAL 2026",
    "artists": [
     {
-     "name": "TANKSTATION FESTIVAL 2026"
+     "name": "TANKSTATION FESTIVAL"
     }
    ],
    "venueId": "hedon",
@@ -32242,7 +32282,7 @@
    "title": "Het Koffertje (4+): De Horde",
    "artists": [
     {
-     "name": "Het Koffertje (4+)"
+     "name": "Het Koffertje"
     }
    ],
    "venueId": "plt-heerlen",
@@ -32298,7 +32338,7 @@
    "title": "Kerst Musical Gala 2026: Stichting Musical Stella Duce",
    "artists": [
     {
-     "name": "Kerst Musical Gala 2026"
+     "name": "Kerst Musical Gala"
     }
    ],
    "venueId": "maaspoort",
@@ -32507,7 +32547,7 @@
    "title": "Chèvremonts Mannenkoor 1912: Kerstconcert",
    "artists": [
     {
-     "name": "Chèvremonts Mannenkoor 1912"
+     "name": "Chèvremonts Mannenkoor"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -33896,7 +33936,7 @@
    "title": "CONTRA (12+): Wabi Sabi Theater i.s.m. Het Houten Huis & HIIIT",
    "artists": [
     {
-     "name": "CONTRA (12+)"
+     "name": "CONTRA"
     }
    ],
    "venueId": "plt-heerlen",
@@ -33934,8 +33974,8 @@
    "start": "2026-12-15T19:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2264519945/donar-groningen-kangoeroes-basket-mechelen-2026",
    "sources": [
     {
@@ -34137,6 +34177,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Wereld & latin"
+   ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/erkan-ogur-en-ismail-hakki-demircioglu/10322",
    "sources": [
     {
@@ -34973,9 +35016,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.paard.nl/en/tickets/144706",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/09/MTCTW-web.jpg",
    "sources": [
@@ -36608,7 +36648,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -37430,6 +37470,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.uitagendautrecht.nl/evenement/88978/top-2000-live",
    "imageUrl": "https://assets.plaece.nl/thumb/0TiGHwCocgHJNgyA0wq9cAwBjGMDx0M-saGJB_mxxgw/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC11YmFzZS9pbWFnZS90b3AtMjAwMF8yMDc1NTMxNDUwLndlYnA.webp",
    "sources": [
@@ -38335,6 +38378,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/90s-now",
    "sources": [
     {
@@ -39164,7 +39210,7 @@
    "country": "NL",
    "start": "2026-12-18T20:15:00+01:00",
    "hasTime": true,
-   "status": "gepland",
+   "status": "uitverkocht",
    "category": "overig",
    "genre": "Comedy",
    "ticketUrl": "https://www.spotgroningen.nl/programma/guido-weijers-6/",
@@ -39545,7 +39591,7 @@
    "title": "Kamagurka (BE): Op zekere dag",
    "artists": [
     {
-     "name": "Kamagurka (BE)"
+     "name": "Kamagurka"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -39791,7 +39837,7 @@
      "name": "Dennis Quin B2B Job de Jong"
     },
     {
-     "name": "Laure de Greef (all night)"
+     "name": "Laure de Greef"
     }
    ],
    "venueId": "shelter",
@@ -40966,10 +41012,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Jazz, soul & blues",
-    "Klassiek"
+    "Jazz, soul & blues"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-hillbilly-moonshiners-19-12-26/",
    "sources": [
@@ -41083,7 +41128,7 @@
    "title": "Woezel & Pip, de Musical\n                                 (2+): Feest in de Tovertuin",
    "artists": [
     {
-     "name": "Woezel & Pip, de Musical\n                                 (2+)"
+     "name": "Woezel & Pip, de Musical"
     }
    ],
    "venueId": "delamar",
@@ -41255,7 +41300,7 @@
    "title": "Woezel & Pip, de Musical\n                                 (2+): Feest in de Tovertuin",
    "artists": [
     {
-     "name": "Woezel & Pip, de Musical\n                                 (2+)"
+     "name": "Woezel & Pip, de Musical"
     }
    ],
    "venueId": "delamar",
@@ -41492,7 +41537,7 @@
    "title": "Het KADO als het ware (6+): Theater als het ware",
    "artists": [
     {
-     "name": "Het KADO als het ware (6+)"
+     "name": "Het KADO als het ware"
     }
    ],
    "venueId": "plt-heerlen",
@@ -42710,7 +42755,7 @@
    "title": "Houtje (3+): Het Ministerie van Onverrichter Zake",
    "artists": [
     {
-     "name": "Houtje (3+)"
+     "name": "Houtje"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -42739,7 +42784,7 @@
    "title": "VILT (2+): Plan-d | Andreas Denk",
    "artists": [
     {
-     "name": "VILT (2+)"
+     "name": "VILT"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -42950,10 +42995,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://patronaat.nl/event/focus-20-12-26/",
    "sources": [
@@ -43593,7 +43637,7 @@
    "title": "De Circusbroers\n                                 (4+): Een knotsgekke circusshow",
    "artists": [
     {
-     "name": "De Circusbroers\n                                 (4+)"
+     "name": "De Circusbroers"
     }
    ],
    "venueId": "delamar",
@@ -44520,8 +44564,8 @@
    "start": "2026-12-21T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -44548,8 +44592,8 @@
    "start": "2026-12-21T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -44751,6 +44795,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.mezz.nl/event/quizm-top-2000-4/26236",
    "sources": [
     {
@@ -44855,7 +44902,7 @@
    "title": "De Waanzinnige Boomhut van 78 verdiepingen (6+): Meneer Monster",
    "artists": [
     {
-     "name": "De Waanzinnige Boomhut van 78 verdiepingen (6+)"
+     "name": "De Waanzinnige Boomhut van 78 verdiepingen"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -44911,7 +44958,7 @@
    "title": "Pippi en de Piraten (6+): Theater Terra",
    "artists": [
     {
-     "name": "Pippi en de Piraten (6+)"
+     "name": "Pippi en de Piraten"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -45338,8 +45385,8 @@
    "start": "2026-12-22T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -45366,8 +45413,8 @@
    "start": "2026-12-22T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -45623,7 +45670,7 @@
    "title": "Peppa Pig Live (2+): Samen op Stap! (reprise)",
    "artists": [
     {
-     "name": "Peppa Pig Live (2+)"
+     "name": "Peppa Pig Live"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -45679,7 +45726,7 @@
    "title": "Hans & Grietje op de vlucht! (8+): Opera Rebels Collective, Opera2Day & Studio Youkali",
    "artists": [
     {
-     "name": "Hans & Grietje op de vlucht! (8+)"
+     "name": "Hans & Grietje op de vlucht!"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -45765,7 +45812,7 @@
    "title": "Peppa Pig Live (2+): Samen op Stap! (reprise)",
    "artists": [
     {
-     "name": "Peppa Pig Live (2+)"
+     "name": "Peppa Pig Live"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -46401,8 +46448,8 @@
    "start": "2026-12-23T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -46429,8 +46476,8 @@
    "start": "2026-12-23T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -46821,7 +46868,7 @@
    "title": "De musical zonder billen (4+): Jaski & Groenteman",
    "artists": [
     {
-     "name": "De musical zonder billen (4+)"
+     "name": "De musical zonder billen"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -47675,8 +47722,8 @@
    "start": "2026-12-24T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -47703,8 +47750,8 @@
    "start": "2026-12-24T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -48092,6 +48139,38 @@
    "lastSeen": "2026-11-27"
   },
   {
+   "id": "23cb32817f6b14f5",
+   "title": "Paardcafé: A very Prosciutto Christmas Party!",
+   "artists": [
+    {
+     "name": "Paardcafé"
+    }
+   ],
+   "venueId": "paard",
+   "venueName": "Paard",
+   "city": "Den Haag",
+   "country": "NL",
+   "start": "2026-12-24T22:30:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Dance",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "ticketUrl": "https://www.paard.nl/en/event/paardcafe-a-very-prosciutto-christmas-party-2/",
+   "imageUrl": "https://www.paard.nl/wp-content/uploads/2025/03/PROSCIUTTO-BANNER-NEW.jpg",
+   "sources": [
+    {
+     "name": "paard.nl",
+     "sourceId": "https://www.paard.nl/en/event/paardcafe-a-very-prosciutto-christmas-party-2/",
+     "url": "https://www.paard.nl/en/event/paardcafe-a-very-prosciutto-christmas-party-2/"
+    }
+   ],
+   "firstSeen": "2026-11-27",
+   "lastSeen": "2026-11-27"
+  },
+  {
    "id": "65c302a9b5c58fcf",
    "title": "Discozwemmen",
    "artists": [
@@ -48135,8 +48214,8 @@
    "start": "2026-12-25T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -48335,8 +48414,8 @@
    "start": "2026-12-25T15:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Show",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2156643090/hans-klok-the-illusionists",
    "sources": [
     {
@@ -48528,8 +48607,8 @@
    "start": "2026-12-26T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -49069,8 +49148,8 @@
    "start": "2026-12-26T15:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Show",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2156643090/hans-klok-the-illusionists",
    "sources": [
     {
@@ -49099,6 +49178,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/top-2000-live-listen-to-the-music",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/listen-to-the-music.7541/listen-to-the-music.jpg",
    "sources": [
@@ -49532,8 +49614,8 @@
    "start": "2026-12-27T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -49560,8 +49642,8 @@
    "start": "2026-12-27T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -50169,7 +50251,7 @@
    "title": "Simsala Saartje en de oliebollen met poedersuiker (4+)",
    "artists": [
     {
-     "name": "Simsala Saartje en de oliebollen met poedersuiker (4+)"
+     "name": "Simsala Saartje en de oliebollen met poedersuiker"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -50197,7 +50279,7 @@
    "title": "Buurman & Buurman\n                                 (4+): Buurman & Buurman bouwen een feestje",
    "artists": [
     {
-     "name": "Buurman & Buurman\n                                 (4+)"
+     "name": "Buurman & Buurman"
     }
    ],
    "venueId": "delamar",
@@ -50446,8 +50528,8 @@
    "start": "2026-12-27T15:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Show",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2156643090/hans-klok-the-illusionists",
    "sources": [
     {
@@ -50464,7 +50546,7 @@
    "title": "Buurman & Buurman\n                                 (4+): Buurman & Buurman bouwen een feestje",
    "artists": [
     {
-     "name": "Buurman & Buurman\n                                 (4+)"
+     "name": "Buurman & Buurman"
     }
    ],
    "venueId": "delamar",
@@ -50492,7 +50574,7 @@
    "title": "Simsala Saartje en de oliebollen met poedersuiker (4+)",
    "artists": [
     {
-     "name": "Simsala Saartje en de oliebollen met poedersuiker (4+)"
+     "name": "Simsala Saartje en de oliebollen met poedersuiker"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -50958,7 +51040,7 @@
    "title": "Rhythm of the Dance (IE): The Christmas Show",
    "artists": [
     {
-     "name": "Rhythm of the Dance (IE)"
+     "name": "Rhythm of the Dance"
     }
    ],
    "venueId": "plt-heerlen",
@@ -51027,6 +51109,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.grenswerk.nl/agenda/classic-hits-in-concert-zo/",
    "sources": [
     {
@@ -51084,8 +51169,8 @@
    "start": "2026-12-28T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -51112,8 +51197,8 @@
    "start": "2026-12-28T08:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -51286,6 +51371,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.mezz.nl/event/quizm-top-2000-5/26234",
    "sources": [
     {
@@ -51646,7 +51734,7 @@
    "title": "De Notenkraker (8+): Staatsopera van Stara Zagora (BG)",
    "artists": [
     {
-     "name": "De Notenkraker (8+)"
+     "name": "De Notenkraker"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -51979,6 +52067,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.grenswerk.nl/agenda/classic-hits-in-concert-ma/",
    "sources": [
     {
@@ -52090,8 +52181,8 @@
    "start": "2026-12-29T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -52118,8 +52209,8 @@
    "start": "2026-12-29T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -53055,6 +53146,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/326912890/top-2000-live-listen-to-the-music",
    "sources": [
     {
@@ -53227,6 +53321,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.grenswerk.nl/agenda/classic-hits-in-concert-di/",
    "sources": [
     {
@@ -53323,8 +53420,8 @@
    "start": "2026-12-30T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -53351,8 +53448,8 @@
    "start": "2026-12-30T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -53600,7 +53697,7 @@
    "title": "Efteling vertelt… Baron 1898\n                                 (6+): Een spannende musical voor de hele familie",
    "artists": [
     {
-     "name": "Efteling vertelt… Baron 1898\n                                 (6+)"
+     "name": "Efteling vertelt… Baron 1898"
     }
    ],
    "venueId": "delamar",
@@ -53628,7 +53725,7 @@
    "title": "Fien & Teun - Het Wonderlijke Winterfeest (2+) (reprise): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Fien & Teun - Het Wonderlijke Winterfeest (2+) (reprise)"
+     "name": "Fien & Teun - Het Wonderlijke Winterfeest (2+)"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -53773,7 +53870,7 @@
    "title": "Samar en de bange koning (8+): George Tobal & De Krakeling",
    "artists": [
     {
-     "name": "Samar en de bange koning (8+)"
+     "name": "Samar en de bange koning"
     }
    ],
    "venueId": "plt-heerlen",
@@ -53857,7 +53954,7 @@
    "title": "Efteling vertelt… Baron 1898\n                                 (6+): Een spannende musical voor de hele familie",
    "artists": [
     {
-     "name": "Efteling vertelt… Baron 1898\n                                 (6+)"
+     "name": "Efteling vertelt… Baron 1898"
     }
    ],
    "venueId": "delamar",
@@ -54189,6 +54286,9 @@
    "status": "uitverkocht",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.grenswerk.nl/agenda/classic-hits-in-concert-wo/",
    "sources": [
     {
@@ -54305,8 +54405,8 @@
    "start": "2026-12-31T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -54422,7 +54522,7 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Dance",
    "musicGenres": [
     "Hiphop & R&B",
     "Dance & DJ"
@@ -54519,7 +54619,8 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
-    "Dance & DJ"
+    "Dance & DJ",
+    "Pop"
    ],
    "ticketUrl": "https://www.mezz.nl/event/nye-6/25633",
    "sources": [
@@ -55186,7 +55287,7 @@
    "title": "HEDON NYE 2026",
    "artists": [
     {
-     "name": "HEDON NYE 2026"
+     "name": "HEDON NYE"
     }
    ],
    "venueId": "hedon",
@@ -55231,8 +55332,8 @@
    "start": "2027-01-01T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -55474,7 +55575,7 @@
      "name": "Tonno Disko"
     },
     {
-     "name": "Tourist Trap Soundsystem (all night)"
+     "name": "Tourist Trap Soundsystem"
     }
    ],
    "venueId": "shelter",
@@ -55515,8 +55616,8 @@
    "start": "2027-01-02T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -55755,7 +55856,7 @@
    "title": "Het Koffertje (4+): De Horde",
    "artists": [
     {
-     "name": "Het Koffertje (4+)"
+     "name": "Het Koffertje"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -55841,7 +55942,7 @@
    "title": "De Kleine Prins\n                                 (8+): René van Kooten / Alex van Bergen e.a.",
    "artists": [
     {
-     "name": "De Kleine Prins\n                                 (8+)"
+     "name": "De Kleine Prins"
     }
    ],
    "venueId": "delamar",
@@ -55869,7 +55970,7 @@
    "title": "Het Koffertje (4+): De Horde",
    "artists": [
     {
-     "name": "Het Koffertje (4+)"
+     "name": "Het Koffertje"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -55982,7 +56083,7 @@
    "title": "Aladdin - De Musical (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Aladdin - De Musical (4+)"
+     "name": "Aladdin - De Musical"
     }
    ],
    "venueId": "plt-heerlen",
@@ -56010,7 +56111,7 @@
    "title": "Alice in Wonderland (8+): De Toneelmakerij & DOX",
    "artists": [
     {
-     "name": "Alice in Wonderland (8+)"
+     "name": "Alice in Wonderland"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -56039,7 +56140,7 @@
    "title": "Het Koffertje (4+): De Horde",
    "artists": [
     {
-     "name": "Het Koffertje (4+)"
+     "name": "Het Koffertje"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -56096,7 +56197,7 @@
    "title": "De Kleine Prins\n                                 (8+): René van Kooten / Alex van Bergen e.a.",
    "artists": [
     {
-     "name": "De Kleine Prins\n                                 (8+)"
+     "name": "De Kleine Prins"
     }
    ],
    "venueId": "delamar",
@@ -56475,7 +56576,7 @@
    "title": "Club Night",
    "artists": [
     {
-     "name": "Merel Helderman B2B Tommy Chikara B2B Kyra Khaldi (all night)"
+     "name": "Merel Helderman B2B Tommy Chikara B2B Kyra Khaldi"
     },
     {
      "name": "Aqui"
@@ -56528,8 +56629,8 @@
    "start": "2027-01-03T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -56575,7 +56676,7 @@
    "title": "Pim & Pom – Kunst op pootjes! (2+): Pim & Pom Theaterproducties",
    "artists": [
     {
-     "name": "Pim & Pom – Kunst op pootjes! (2+)"
+     "name": "Pim & Pom – Kunst op pootjes!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -56717,7 +56818,7 @@
    "title": "Aladdin - De Musical (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Aladdin - De Musical (4+)"
+     "name": "Aladdin - De Musical"
     }
    ],
    "venueId": "plt-heerlen",
@@ -56803,7 +56904,7 @@
    "title": "De Kleine Prins\n                                 (8+): René van Kooten / Alex van Bergen e.a.",
    "artists": [
     {
-     "name": "De Kleine Prins\n                                 (8+)"
+     "name": "De Kleine Prins"
     }
    ],
    "venueId": "delamar",
@@ -56965,7 +57066,11 @@
     }
    ],
    "firstSeen": "2026-11-27",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Folk & singer-songwriter",
+    "Rock"
+   ]
   },
   {
    "id": "9a93ec645985e906-1600",
@@ -57000,7 +57105,7 @@
    "title": "Aladdin - De Musical (4+): Van Hoorne Studios - met tolk NGT",
    "artists": [
     {
-     "name": "Aladdin - De Musical (4+)"
+     "name": "Aladdin - De Musical"
     }
    ],
    "venueId": "plt-heerlen",
@@ -57183,6 +57288,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111599221",
    "sources": [
     {
@@ -57272,8 +57380,8 @@
    "start": "2027-01-04T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -57385,8 +57493,8 @@
    "start": "2027-01-05T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -57651,8 +57759,8 @@
    "start": "2027-01-06T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -58119,8 +58227,8 @@
    "start": "2027-01-07T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -58733,8 +58841,8 @@
    "start": "2027-01-08T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -59105,6 +59213,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ],
    "ticketUrl": "https://www.spotgroningen.nl/programma/the-james-brown-experience/",
    "sources": [
     {
@@ -59678,7 +59789,7 @@
      "name": "Sasha GiGi"
     },
     {
-     "name": "Thijs Koning (all night)"
+     "name": "Thijs Koning"
     }
    ],
    "venueId": "shelter",
@@ -59751,8 +59862,8 @@
    "start": "2027-01-09T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -59779,8 +59890,8 @@
    "start": "2027-01-09T08:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -60620,7 +60731,7 @@
    "title": "Dolf Jansen - Schaamteloos 2027",
    "artists": [
     {
-     "name": "Dolf Jansen - Schaamteloos 2027"
+     "name": "Dolf Jansen - Schaamteloos"
     }
    ],
    "venueId": "carre",
@@ -61213,7 +61324,7 @@
      "name": "Sophie McAlister"
     },
     {
-     "name": "Labouts B2B Mery (all night)"
+     "name": "Labouts B2B Mery"
     }
    ],
    "venueId": "shelter",
@@ -61290,8 +61401,8 @@
    "start": "2027-01-10T07:00:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Sport",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/1275235741/internationaal-indoor-concours-hippique-groningen-2027",
    "sources": [
     {
@@ -61415,10 +61526,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/gruppo-sportivo-stop-motion-50th-anniversary-tour-10-01-27/",
    "sources": [
@@ -61854,7 +61964,7 @@
    "title": "De dinozoekers - Triceratops (5+): Achref Adhadhi & Desiree van Haaren",
    "artists": [
     {
-     "name": "De dinozoekers - Triceratops (5+)"
+     "name": "De dinozoekers - Triceratops"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -62276,6 +62386,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ],
    "ticketUrl": "https://www.013.nl/programma/125097/the-james-brown-experience",
    "sources": [
     {
@@ -63066,10 +63179,7 @@
    "hasTime": false,
    "status": "uitverkocht",
    "category": "muziek",
-   "genre": "Klassiek",
-   "musicGenres": [
-    "Klassiek"
-   ],
+   "genre": "Concert",
    "ticketUrl": "https://patronaat.nl/event/rob-lamberti-presents-a-celebration-of-george-michael-13-01-27/",
    "sources": [
     {
@@ -63706,8 +63816,7 @@
    "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-27",
    "musicGenres": [
-    "Jazz, soul & blues",
-    "Wereld & latin"
+    "Jazz, soul & blues"
    ]
   },
   {
@@ -65237,7 +65346,7 @@
    "title": "London Philharmonic Orchestra (UK): Grieg & Sibelius",
    "artists": [
     {
-     "name": "London Philharmonic Orchestra (UK)"
+     "name": "London Philharmonic Orchestra"
     }
    ],
    "venueId": "plt-heerlen",
@@ -65707,7 +65816,7 @@
    "title": "Novastar (BE)",
    "artists": [
     {
-     "name": "Novastar (BE)"
+     "name": "Novastar"
     }
    ],
    "venueId": "plt-heerlen",
@@ -65728,7 +65837,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "efc37c6a48eb68cd",
@@ -65746,10 +65859,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://shop.tickets.cm.com/af15e696-b1be-32bd-8eb0-9052f5304972",
    "sources": [
@@ -66037,7 +66149,8 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
-    "Dance & DJ"
+    "Dance & DJ",
+    "Pop"
    ],
    "ticketUrl": "https://www.klokgebouw.nl/agenda/80s-90s-party",
    "sources": [
@@ -66463,7 +66576,7 @@
    "title": "De musical zonder billen\n                                 (4+): Jaski & Groenteman",
    "artists": [
     {
-     "name": "De musical zonder billen\n                                 (4+)"
+     "name": "De musical zonder billen"
     }
    ],
    "venueId": "delamar",
@@ -66491,7 +66604,7 @@
    "title": "De musical zonder billen\n                                 (4+): Jaski & Groenteman",
    "artists": [
     {
-     "name": "De musical zonder billen\n                                 (4+)"
+     "name": "De musical zonder billen"
     }
    ],
    "venueId": "delamar",
@@ -66664,7 +66777,7 @@
    "title": "Alex Agnew (BE): No More Heroes",
    "artists": [
     {
-     "name": "Alex Agnew (BE)"
+     "name": "Alex Agnew"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -67453,7 +67566,7 @@
    "title": "Club Night",
    "artists": [
     {
-     "name": "Emma 2000"
+     "name": "Emma"
     },
     {
      "name": "George Smeddles"
@@ -67691,10 +67804,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Jazz, soul & blues",
-    "Klassiek"
+    "Jazz, soul & blues"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-james-brown-experience-17-01-27/",
    "sources": [
@@ -67749,7 +67861,7 @@
    "title": "De NÓG Grotere Slijmmusical (6+): Bazar Media",
    "artists": [
     {
-     "name": "De NÓG Grotere Slijmmusical (6+)"
+     "name": "De NÓG Grotere Slijmmusical"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -67777,7 +67889,7 @@
    "title": "Juf Braaksel de Musical (6+): Sander van Voorst tot Voorst, Suzanna Pleiter e.a.",
    "artists": [
     {
-     "name": "Juf Braaksel de Musical (6+)"
+     "name": "Juf Braaksel de Musical"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -67788,7 +67900,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Familie",
+   "genre": "Show",
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/juf-braaksel-sander-van-voorst-tot-voorst",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/sander-van-voorst-tot-voorst-suzanna-pleiter-ea.8512/sander-van-voorst-tot-voorst-suzanna-pleiter-ea.jpg",
    "sources": [
@@ -68103,7 +68215,7 @@
    "title": "Pinokkio (7+): Holland Opera, New European Ensemble & Cat Smits Company",
    "artists": [
     {
-     "name": "Pinokkio (7+)"
+     "name": "Pinokkio"
     }
    ],
    "venueId": "plt-heerlen",
@@ -68160,7 +68272,7 @@
    "title": "De NÓG Grotere Slijmmusical (6+): Bazar Media",
    "artists": [
     {
-     "name": "De NÓG Grotere Slijmmusical (6+)"
+     "name": "De NÓG Grotere Slijmmusical"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -68188,7 +68300,7 @@
    "title": "Juf Braaksel de Musical (6+): Sander van Voorst tot Voorst, Suzanna Pleiter e.a.",
    "artists": [
     {
-     "name": "Juf Braaksel de Musical (6+)"
+     "name": "Juf Braaksel de Musical"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -68199,7 +68311,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Familie",
+   "genre": "Show",
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/juf-braaksel-sander-van-voorst-tot-voorst",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/sander-van-voorst-tot-voorst-suzanna-pleiter-ea.8512/sander-van-voorst-tot-voorst-suzanna-pleiter-ea.jpg",
    "sources": [
@@ -69690,9 +69802,6 @@
    "status": "geannuleerd",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.paard.nl/en/event/28-10-music-that-changed-the-world-2/",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/09/MTCTW-web.jpg",
    "sources": [
@@ -72663,6 +72772,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Jazz, soul & blues"
+   ],
    "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111584466",
    "sources": [
     {
@@ -72708,10 +72820,10 @@
    "title": "Residency Night with Simone De Kunovich",
    "artists": [
     {
-     "name": "Simone De Kunovich B2B ISAbella (all night)"
+     "name": "Simone De Kunovich B2B ISAbella"
     },
     {
-     "name": "Jordino (all night)"
+     "name": "Jordino"
     }
    ],
    "venueId": "shelter",
@@ -72913,10 +73025,7 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
-   "musicGenres": [
-    "Klassiek"
-   ],
+   "genre": "Concert",
    "ticketUrl": "https://patronaat.nl/event/genesis-project-23-01-27/",
    "sources": [
     {
@@ -74498,7 +74607,7 @@
    "title": "Katiuscia Principato leest voor uit Kom maar, kipjes! (2+): Nationale Voorleesdagen",
    "artists": [
     {
-     "name": "Katiuscia Principato leest voor uit Kom maar, kipjes! (2+)"
+     "name": "Katiuscia Principato leest voor uit Kom maar, kipjes!"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -75189,7 +75298,7 @@
    "title": "Lady en de Vage Hond (4+): Het Kleine Theater",
    "artists": [
     {
-     "name": "Lady en de Vage Hond (4+)"
+     "name": "Lady en de Vage Hond"
     }
    ],
    "venueId": "plt-heerlen",
@@ -75306,7 +75415,7 @@
    "title": "Boef (4+): Grote Mensen",
    "artists": [
     {
-     "name": "Boef (4+)"
+     "name": "Boef"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -76889,7 +76998,7 @@
    "title": "Mata Hari Returns - De dansende spion (14+): Tafel van Vijf Muziektheater",
    "artists": [
     {
-     "name": "Mata Hari Returns - De dansende spion (14+)"
+     "name": "Mata Hari Returns - De dansende spion"
     }
    ],
    "venueId": "plt-heerlen",
@@ -77846,7 +77955,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -78437,7 +78546,7 @@
    "title": "Young Gun Silver Fox (UK / VS): An Acoustic Evening With",
    "artists": [
     {
-     "name": "Young Gun Silver Fox (UK / VS)"
+     "name": "Young Gun Silver Fox"
     }
    ],
    "venueId": "plt-heerlen",
@@ -78564,10 +78673,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/",
    "sources": [
@@ -78911,6 +79019,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.effenaar.nl/agenda/we-all-love-29jan",
    "imageUrl": "https://d12y285rxlbnxt.cloudfront.net/2026-10/EFFJAN2027173DCB61-39AF-44AB-A588-1061EB4AC882.PNG",
    "sources": [
@@ -79046,7 +79157,7 @@
    "title": "De Proefkeuken en de WC van tijd (8+): Pieter Hulst, Willem Voogd e.a. - met blindentolk",
    "artists": [
     {
-     "name": "De Proefkeuken en de WC van tijd (8+)"
+     "name": "De Proefkeuken en de WC van tijd"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -79552,8 +79663,7 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Jazz, soul & blues",
-    "Wereld & latin"
+    "Jazz, soul & blues"
    ],
    "ticketUrl": "https://www.spotgroningen.nl/programma/vanderlinde-king-of-the-world-ruben-hoeke/",
    "sources": [
@@ -80054,8 +80164,7 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
-    "Dance & DJ",
-    "Wereld & latin"
+    "Dance & DJ"
    ],
    "ticketUrl": "https://tickets.scandal.events/ec05b00217614ab3a3df91e9643fcdc7/offsale",
    "sources": [
@@ -80365,6 +80474,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.effenaar.nl/agenda/80sanders-30jan",
    "imageUrl": "https://d12y285rxlbnxt.cloudfront.net/2026-03/80s%20anders%E2%80%93%20Square%20afbeelding%20only.png",
    "sources": [
@@ -80872,7 +80984,7 @@
    "title": "Juf Braaksel de Musical\n                                 (6+): Een swingend en spannend avontuur voor het hele gezin",
    "artists": [
     {
-     "name": "Juf Braaksel de Musical\n                                 (6+)"
+     "name": "Juf Braaksel de Musical"
     }
    ],
    "venueId": "delamar",
@@ -81108,7 +81220,7 @@
    "title": "Juf Braaksel de Musical\n                                 (6+): Een swingend en spannend avontuur voor het hele gezin",
    "artists": [
     {
-     "name": "Juf Braaksel de Musical\n                                 (6+)"
+     "name": "Juf Braaksel de Musical"
     }
    ],
    "venueId": "delamar",
@@ -81136,7 +81248,7 @@
    "title": "BRRRothers (6+): Danstheater AYA",
    "artists": [
     {
-     "name": "BRRRothers (6+)"
+     "name": "BRRRothers"
     }
    ],
    "venueId": "plt-heerlen",
@@ -81316,6 +81428,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Wereld & latin"
+   ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/charivari-trio-jubileum-concert/10330",
    "sources": [
     {
@@ -81887,7 +82002,7 @@
      "name": "Lucas Alexander"
     },
     {
-     "name": "Sonan (all night)"
+     "name": "Sonan"
     }
    ],
    "venueId": "shelter",
@@ -81949,7 +82064,7 @@
    "title": "Tuimelaar (6-18 mnd): Frisse Oren",
    "artists": [
     {
-     "name": "Tuimelaar (6-18 mnd)"
+     "name": "Tuimelaar"
     }
    ],
    "venueId": "plt-heerlen",
@@ -82006,7 +82121,7 @@
    "title": "OM en OM en OM (1,5+): Het Laagland",
    "artists": [
     {
-     "name": "OM en OM en OM (1,5+)"
+     "name": "OM en OM en OM"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -82093,7 +82208,7 @@
    "title": "Tuimelaar (6-18 mnd): Frisse Oren",
    "artists": [
     {
-     "name": "Tuimelaar (6-18 mnd)"
+     "name": "Tuimelaar"
     }
    ],
    "venueId": "plt-heerlen",
@@ -82293,10 +82408,7 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
-   "musicGenres": [
-    "Klassiek"
-   ],
+   "genre": "Concert",
    "ticketUrl": "https://patronaat.nl/event/station-to-station-31-01-27/",
    "sources": [
     {
@@ -82306,7 +82418,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "aa1bec0bfe502431",
@@ -82344,7 +82459,7 @@
    "title": "Kienjermusical 2027",
    "artists": [
     {
-     "name": "Kienjermusical 2027"
+     "name": "Kienjermusical"
     }
    ],
    "venueId": "oranjerie-roermond",
@@ -82355,8 +82470,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Toneel",
-   "categoryGuess": true,
+   "genre": "Show",
    "ticketUrl": "https://www.theaterroermond.nl/agenda/kienjermusical-2027",
    "sources": [
     {
@@ -82493,7 +82607,7 @@
    "title": "Kim van Zeben Theaterproducties (NTW): Beuk! 4+",
    "artists": [
     {
-     "name": "Kim van Zeben Theaterproducties (NTW)"
+     "name": "Kim van Zeben Theaterproducties"
     }
    ],
    "venueId": "stadsschouwburg-utrecht",
@@ -82588,8 +82702,8 @@
    "start": "2027-01-31T14:30:00+01:00",
    "hasTime": true,
    "status": "gepland",
-   "category": "muziek",
-   "genre": "Concert",
+   "category": "overig",
+   "genre": "Show",
    "ticketUrl": "https://www.visitgroningen.nl/nl/doen/uitgaan/2394419981/de-nog-grotere-slijmmusical",
    "sources": [
     {
@@ -82634,7 +82748,7 @@
    "title": "OM en OM en OM (1,5+): Het Laagland",
    "artists": [
     {
-     "name": "OM en OM en OM (1,5+)"
+     "name": "OM en OM en OM"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -82726,7 +82840,7 @@
    "title": "Jonathan Fournel (FR): Bach, Schubert, Chopin & Liszt",
    "artists": [
     {
-     "name": "Jonathan Fournel (FR)"
+     "name": "Jonathan Fournel"
     }
    ],
    "venueId": "plt-heerlen",
@@ -82821,7 +82935,7 @@
    "title": "Pinokkio (7+): Holland Opera, New European Ensemble & Cat Smits Company",
    "artists": [
     {
-     "name": "Pinokkio (7+)"
+     "name": "Pinokkio"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -82850,7 +82964,7 @@
    "title": "Kienjermusical 2027",
    "artists": [
     {
-     "name": "Kienjermusical 2027"
+     "name": "Kienjermusical"
     }
    ],
    "venueId": "oranjerie-roermond",
@@ -82861,8 +82975,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Toneel",
-   "categoryGuess": true,
+   "genre": "Show",
    "ticketUrl": "https://www.theaterroermond.nl/agenda/kienjermusical-2027",
    "sources": [
     {
@@ -82879,7 +82992,7 @@
    "title": "Kim van Zeben Theaterproducties (NTW): Beuk! 4+",
    "artists": [
     {
-     "name": "Kim van Zeben Theaterproducties (NTW)"
+     "name": "Kim van Zeben Theaterproducties"
     }
    ],
    "venueId": "stadsschouwburg-utrecht",
@@ -83408,7 +83521,7 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
     "Rock",
     "Jazz, soul & blues"
@@ -84337,7 +84450,7 @@
    "title": "Swan Lake (6+): Introdans",
    "artists": [
     {
-     "name": "Swan Lake (6+)"
+     "name": "Swan Lake"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -84687,7 +84800,7 @@
    "title": "Vastelaovend concert 2027: Philzuid",
    "artists": [
     {
-     "name": "Vastelaovend concert 2027"
+     "name": "Vastelaovend concert"
     }
    ],
    "venueId": "maaspoort",
@@ -84878,10 +84991,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-bootleg-beatles-04-02-27/",
    "sources": [
@@ -85751,7 +85863,7 @@
    "title": "Doetertoe Fist (12 t/m 17): i.s.m. Carnavalsstichting Tilburg",
    "artists": [
     {
-     "name": "Doetertoe Fist (12 t/m 17)"
+     "name": "Doetertoe Fist"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -86045,7 +86157,7 @@
    "title": "Vox Luminis (BE): Henry Purcell, Dido and Aeneas",
    "artists": [
     {
-     "name": "Vox Luminis (BE)"
+     "name": "Vox Luminis"
     }
    ],
    "venueId": "plt-heerlen",
@@ -86339,7 +86451,7 @@
    "title": "Club Night",
    "artists": [
     {
-     "name": "Kara Okay (all night)"
+     "name": "Kara Okay"
     },
     {
      "name": "TBA"
@@ -86356,6 +86468,9 @@
    "genre": "Dance",
    "musicGenres": [
     "Dance & DJ"
+   ],
+   "danceStyles": [
+    "House"
    ],
    "ticketUrl": "https://www.fourvenues.com/shelter-amsterdam/UJHE",
    "sources": [
@@ -89044,10 +89159,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/treasure-11-02-27/",
    "sources": [
@@ -90400,7 +90514,7 @@
    "title": "Danae Dörken (DE) & Pascal Schumacher (LU): GLASS for TWO",
    "artists": [
     {
-     "name": "Danae Dörken (DE) & Pascal Schumacher (LU)"
+     "name": "Danae Dörken & Pascal Schumacher"
     }
    ],
    "venueId": "plt-heerlen",
@@ -91149,7 +91263,7 @@
    "title": "GRRR… ik ben een boze dino!\n                                 (4+): Lil Ones | Fraasie e.a.",
    "artists": [
     {
-     "name": "GRRR… ik ben een boze dino!\n                                 (4+)"
+     "name": "GRRR… ik ben een boze dino!"
     }
    ],
    "venueId": "delamar",
@@ -91205,7 +91319,7 @@
    "title": "GRRR… ik ben een boze dino!\n                                 (4+): Lil Ones | Fraasie e.a.",
    "artists": [
     {
-     "name": "GRRR… ik ben een boze dino!\n                                 (4+)"
+     "name": "GRRR… ik ben een boze dino!"
     }
    ],
    "venueId": "delamar",
@@ -91283,7 +91397,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "7c548c896304bc78",
@@ -91747,7 +91864,7 @@
    "title": "Anne Sofie von Otter (SE) & Oxalys (BE)",
    "artists": [
     {
-     "name": "Anne Sofie von Otter (SE) & Oxalys (BE)"
+     "name": "Anne Sofie von Otter & Oxalys"
     }
    ],
    "venueId": "plt-heerlen",
@@ -91935,6 +92052,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.spotgroningen.nl/programma/taylor-swift-fanparty/",
    "sources": [
     {
@@ -92623,7 +92743,7 @@
    "title": "GRRR… ik ben een boze dino!\n                                 (4+): Lil Ones | Fraasie e.a.",
    "artists": [
     {
-     "name": "GRRR… ik ben een boze dino!\n                                 (4+)"
+     "name": "GRRR… ik ben een boze dino!"
     }
    ],
    "venueId": "delamar",
@@ -93543,7 +93663,7 @@
    "title": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman (BE): GLA55",
    "artists": [
     {
-     "name": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman (BE)"
+     "name": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman"
     }
    ],
    "venueId": "plt-heerlen",
@@ -94160,7 +94280,7 @@
    "title": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman (BE): GLA55",
    "artists": [
     {
-     "name": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman (BE)"
+     "name": "Anne Teresa De Keersmaeker / Rosas i.s.m. Ictus & Bl!ndman"
     }
    ],
    "venueId": "plt-heerlen",
@@ -94334,7 +94454,7 @@
    "title": "Till Death Do Us Part (Or Not): Amsterdam Sinfonietta & ISH Dance Collective",
    "artists": [
     {
-     "name": "Till Death Do Us Part (Or Not)"
+     "name": "Till Death Do Us Part"
     }
    ],
    "venueId": "musis-arnhem",
@@ -95596,7 +95716,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Nederlandstalig",
+    "Pop"
+   ]
   },
   {
    "id": "ad43164bd487bbc0",
@@ -95841,7 +95965,7 @@
    "title": "Enslaved + Solstafir",
    "artists": [
     {
-     "name": "Enslaved + Solstafir"
+     "name": "Enslaved + Solstafir"
     },
     {
      "name": "Gaahls Wyrd"
@@ -96166,6 +96290,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.paard.nl/en/tickets/148635",
    "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/11/website-80s-verantwoord.jpg",
    "sources": [
@@ -97231,7 +97358,8 @@
    "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-27",
    "danceStyles": [
-    "Techno"
+    "Techno",
+    "House"
    ]
   },
   {
@@ -97718,7 +97846,7 @@
    "firstSeen": "2026-11-25",
    "lastSeen": "2026-11-27",
    "musicGenres": [
-    "Dance & DJ"
+    "Rock"
    ]
   },
   {
@@ -98420,7 +98548,7 @@
    "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-27",
    "musicGenres": [
-    "Pop"
+    "Rock"
    ]
   },
   {
@@ -99053,7 +99181,7 @@
    "title": "Bill Laurance (UK) & Michael League (VS): Close to Home",
    "artists": [
     {
-     "name": "Bill Laurance (UK) & Michael League (VS)"
+     "name": "Bill Laurance & Michael League"
     }
    ],
    "venueId": "plt-heerlen",
@@ -99343,7 +99471,7 @@
    "title": "Workshop Botis Seva / Far From The Norm (UK)",
    "artists": [
     {
-     "name": "Workshop Botis Seva / Far From The Norm (UK)"
+     "name": "Workshop Botis Seva / Far From The Norm"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -99428,7 +99556,7 @@
    "title": "OM en OM en OM (1,5+): Het Laagland- PLUUSJ",
    "artists": [
     {
-     "name": "OM en OM en OM (1,5+)"
+     "name": "OM en OM en OM"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -99563,10 +99691,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Metal & punk",
-    "Klassiek"
+    "Metal & punk"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-tool-experience-previous-the-perfect-tool-21-02-27/",
    "sources": [
@@ -99615,7 +99742,7 @@
    "title": "Heb je mijn zusje gezien? (2+): Hoge Fronten",
    "artists": [
     {
-     "name": "Heb je mijn zusje gezien? (2+)"
+     "name": "Heb je mijn zusje gezien?"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -99671,7 +99798,7 @@
    "title": "Mus & kapitein Kwaadbaard en De 5 Slangen\n                                 (8+): Gebaseerd op het boek van Kevin Hassing",
    "artists": [
     {
-     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen\n                                 (8+)"
+     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "delamar",
@@ -99756,7 +99883,7 @@
    "title": "Vrij Lief (10+): Opera Compact",
    "artists": [
     {
-     "name": "Vrij Lief (10+)"
+     "name": "Vrij Lief"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -99936,7 +100063,7 @@
    "title": "Pippi en de Piraten (6+): Theater Terra",
    "artists": [
     {
-     "name": "Pippi en de Piraten (6+)"
+     "name": "Pippi en de Piraten"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -99964,7 +100091,7 @@
    "title": "Heb je mijn zusje gezien? (2+): Hoge Fronten",
    "artists": [
     {
-     "name": "Heb je mijn zusje gezien? (2+)"
+     "name": "Heb je mijn zusje gezien?"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -100108,7 +100235,7 @@
    "title": "Mus & kapitein Kwaadbaard en De 5 Slangen\n                                 (8+): Gebaseerd op het boek van Kevin Hassing",
    "artists": [
     {
-     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen\n                                 (8+)"
+     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "delamar",
@@ -100136,7 +100263,7 @@
    "title": "Vrij Lief (10+): Opera Compact",
    "artists": [
     {
-     "name": "Vrij Lief (10+)"
+     "name": "Vrij Lief"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -101355,7 +101482,7 @@
    "title": "Loreena McKennitt - The Mask and Mirror 30th Anniversary Tour",
    "artists": [
     {
-     "name": "Loreena McKennitt - The Mask and Mirror 30th Anniversary Tour"
+     "name": "Loreena McKennitt"
     }
    ],
    "venueId": "carre",
@@ -101376,7 +101503,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Wereld & latin",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "450df26b7c28af07",
@@ -101868,7 +101999,7 @@
    "title": "Het Kleurenmonster (3+): Theater Stof",
    "artists": [
     {
-     "name": "Het Kleurenmonster (3+)"
+     "name": "Het Kleurenmonster"
     }
    ],
    "venueId": "plt-heerlen",
@@ -101988,7 +102119,7 @@
    "title": "Far From The Norm / Botis Seva (UK): Sing Child Sing",
    "artists": [
     {
-     "name": "Far From The Norm / Botis Seva (UK)"
+     "name": "Far From The Norm / Botis Seva"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -102048,7 +102179,7 @@
    "title": "Loreena McKennitt - The Mask and Mirror 30th Anniversary Tour",
    "artists": [
     {
-     "name": "Loreena McKennitt - The Mask and Mirror 30th Anniversary Tour"
+     "name": "Loreena McKennitt"
     }
    ],
    "venueId": "carre",
@@ -102069,7 +102200,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Wereld & latin",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "09d3182484797e34",
@@ -102766,7 +102901,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -102798,7 +102933,7 @@
    "title": "De Erfenis (try-out): Toneelgroep Maastricht",
    "artists": [
     {
-     "name": "De Erfenis (try-out)"
+     "name": "De Erfenis"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -102916,7 +103051,7 @@
    "title": "Estonian Philharmonic Chamber Choir (EE): Martin, Glass & Pärt",
    "artists": [
     {
-     "name": "Estonian Philharmonic Chamber Choir (EE)"
+     "name": "Estonian Philharmonic Chamber Choir"
     }
    ],
    "venueId": "plt-heerlen",
@@ -105209,7 +105344,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop"
+   ]
   },
   {
    "id": "00ff24117bd0828b",
@@ -105651,7 +105789,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop"
+   ]
   },
   {
    "id": "23d39c7055dc1932",
@@ -105680,7 +105821,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Jazz, soul & blues",
+    "Wereld & latin"
+   ]
   },
   {
    "id": "3e7896d4eb7b3ba1",
@@ -105715,7 +105860,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "671b24d8f0fa7ea3",
@@ -105743,7 +105891,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "8894108cfc3cea70",
@@ -105949,7 +106100,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "4e4bb15cff3fd165",
@@ -105984,7 +106138,7 @@
    "title": "SINCE 1977: Danny Vera",
    "artists": [
     {
-     "name": "SINCE 1977"
+     "name": "SINCE"
     }
    ],
    "venueId": "musis-arnhem",
@@ -106153,7 +106307,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Folk & singer-songwriter",
+    "Wereld & latin"
+   ]
   },
   {
    "id": "e223da69bd189a0d",
@@ -106214,7 +106372,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop"
+   ]
   },
   {
    "id": "86c37ee9ebb7480a",
@@ -106827,7 +106988,7 @@
    "title": "Familiecarrousel (4+): Theater Sonnevanck",
    "artists": [
     {
-     "name": "Familiecarrousel (4+)"
+     "name": "Familiecarrousel"
     }
    ],
    "venueId": "plt-heerlen",
@@ -106939,7 +107100,7 @@
    "title": "Woezel & Pip - Feest in de Tovertuin (2+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Woezel & Pip - Feest in de Tovertuin (2+)"
+     "name": "Woezel & Pip - Feest in de Tovertuin"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -107026,7 +107187,7 @@
    "title": "Familie Mattheus (8+): Luthers Bach Ensemble",
    "artists": [
     {
-     "name": "Familie Mattheus (8+)"
+     "name": "Familie Mattheus"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -107140,7 +107301,7 @@
    "title": "Familiecarrousel (6+): Theater Sonnevanck",
    "artists": [
     {
-     "name": "Familiecarrousel (6+)"
+     "name": "Familiecarrousel"
     }
    ],
    "venueId": "plt-heerlen",
@@ -107400,7 +107561,7 @@
    "title": "Waar je uitkomt als je weggaat (5+): The100Hands",
    "artists": [
     {
-     "name": "Waar je uitkomt als je weggaat (5+)"
+     "name": "Waar je uitkomt als je weggaat"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -107429,7 +107590,7 @@
    "title": "Familiecarrousel (8+): Theater Sonnevanck",
    "artists": [
     {
-     "name": "Familiecarrousel (8+)"
+     "name": "Familiecarrousel"
     }
    ],
    "venueId": "plt-heerlen",
@@ -107535,7 +107696,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "805b35034d9486b3",
@@ -107596,7 +107760,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "1dc6a3f5c9169bc7",
@@ -107624,7 +107791,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock",
+    "Pop"
+   ]
   },
   {
    "id": "76d8560e7fba6e52",
@@ -107652,7 +107823,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "bcf74ee8223f774c",
@@ -107680,7 +107854,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "af4b73490832ffe4",
@@ -107740,7 +107917,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "bdb48cf382981570",
@@ -107768,7 +107948,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "476106d0816703e5",
@@ -108131,7 +108314,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk",
+    "Rock"
+   ]
   },
   {
    "id": "1543cac4ba230512",
@@ -108188,7 +108375,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ]
   },
   {
    "id": "480f7a9e204c42e8",
@@ -108690,7 +108881,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Metal & punk"
+   ]
   },
   {
    "id": "1361444cb78269dc",
@@ -108719,7 +108914,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "06e218b0cdd8a2de",
@@ -108747,7 +108945,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ]
   },
   {
    "id": "595674f13059affd",
@@ -108910,10 +109112,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111693060",
    "sources": [
@@ -108953,7 +109154,11 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Wereld & latin",
+    "Folk & singer-songwriter"
+   ]
   },
   {
    "id": "9772ff1e5d9c36c2",
@@ -109135,7 +109340,7 @@
    "title": "Ruud Smulders: winnaar Poelifinario 2026: Rüdsichtslos",
    "artists": [
     {
-     "name": "Ruud Smulders: winnaar Poelifinario 2026"
+     "name": "Ruud Smulders: winnaar Poelifinario"
     }
    ],
    "venueId": "munttheater",
@@ -109329,7 +109534,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "1c813a2dfbfd3260",
@@ -109423,7 +109631,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "88e7455a6b5a1a94",
@@ -109547,7 +109758,13 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Dance & DJ"
+   ],
+   "danceStyles": [
+    "Techno"
+   ]
   },
   {
    "id": "589e4b1b393ae604",
@@ -109576,7 +109793,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Rock"
+   ]
   },
   {
    "id": "d01b13f6b399409a",
@@ -109637,7 +109858,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Metal & punk"
+   ]
   },
   {
    "id": "998df97b3adb7b97",
@@ -110138,7 +110362,7 @@
    "title": "Demonen (try-out): Peter Pannekoek",
    "artists": [
     {
-     "name": "Demonen (try-out)"
+     "name": "Demonen"
     }
    ],
    "venueId": "munttheater",
@@ -110563,7 +110787,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "e5b7375952a7b476",
@@ -110766,10 +110993,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-dirty-daddies-05-03-27/",
    "sources": [
@@ -111137,7 +111363,7 @@
    "title": "Jools Holland (UK)",
    "artists": [
     {
-     "name": "Jools Holland (UK)"
+     "name": "Jools Holland"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -111579,7 +111805,7 @@
    "title": "Cie. Manuel Roque (CA): bang bang",
    "artists": [
     {
-     "name": "Cie. Manuel Roque (CA)"
+     "name": "Cie. Manuel Roque"
     }
    ],
    "venueId": "plt-heerlen",
@@ -112046,7 +112272,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "a8852abf0c628a3a",
@@ -112154,10 +112383,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://patronaat.nl/event/made-in-purple-55-years-of-made-in-japan-06-03-27/",
    "sources": [
@@ -112561,7 +112789,7 @@
    "title": "Behoorlijk Boos (5+): Oortwolk",
    "artists": [
     {
-     "name": "Behoorlijk Boos (5+)"
+     "name": "Behoorlijk Boos"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -113845,8 +114073,7 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Dance & DJ",
-    "Wereld & latin"
+    "Dance & DJ"
    ],
    "ticketUrl": "https://weeztix.shop/6b33tbyf",
    "sources": [
@@ -114191,7 +114418,7 @@
    "title": "BALBALLOONA (3+): Neverlike",
    "artists": [
     {
-     "name": "BALBALLOONA (3+)"
+     "name": "BALBALLOONA"
     }
    ],
    "venueId": "plt-heerlen",
@@ -114219,7 +114446,7 @@
    "title": "BOUT! (6+): Plan-d | Andreas Denk (NL/DE)",
    "artists": [
     {
-     "name": "BOUT! (6+)"
+     "name": "BOUT!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -114388,7 +114615,7 @@
    "title": "Coppelia (AL): Filmhuis de Spiegel",
    "artists": [
     {
-     "name": "Coppelia (AL)"
+     "name": "Coppelia"
     }
    ],
    "venueId": "plt-heerlen",
@@ -114715,7 +114942,7 @@
    "title": "Stiltestorm (8+): Philzuid, Het Laagland & SALLY Dansgezelschap Maastricht",
    "artists": [
     {
-     "name": "Stiltestorm (8+)"
+     "name": "Stiltestorm"
     }
    ],
    "venueId": "plt-heerlen",
@@ -114743,7 +114970,7 @@
    "title": "BALBALLOONA (3+): Neverlike",
    "artists": [
     {
-     "name": "BALBALLOONA (3+)"
+     "name": "BALBALLOONA"
     }
    ],
    "venueId": "plt-heerlen",
@@ -114799,7 +115026,7 @@
    "title": "Zeg maar dag (4+): Maas theater en dans",
    "artists": [
     {
-     "name": "Zeg maar dag (4+)"
+     "name": "Zeg maar dag"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -115367,7 +115594,7 @@
    "title": "Internationale Vrouwendag Limburg 2027",
    "artists": [
     {
-     "name": "Internationale Vrouwendag Limburg 2027"
+     "name": "Internationale Vrouwendag Limburg"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -115542,7 +115769,7 @@
    "title": "Pip Utton (GB): Trump",
    "artists": [
     {
-     "name": "Pip Utton (GB)"
+     "name": "Pip Utton"
     }
    ],
    "venueId": "musis-arnhem",
@@ -115831,7 +116058,7 @@
    "title": "Peeping Tom (BE): Chroniques",
    "artists": [
     {
-     "name": "Peeping Tom (BE)"
+     "name": "Peeping Tom"
     }
    ],
    "venueId": "plt-heerlen",
@@ -116094,7 +116321,7 @@
    "title": "Meiden en Prinsen (8+) (try-out): Het Filiaal Theatermakers - met tolk NGT",
    "artists": [
     {
-     "name": "Meiden en Prinsen (8+) (try-out)"
+     "name": "Meiden en Prinsen (8+)"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -117015,7 +117242,10 @@
     }
    ],
    "firstSeen": "2026-11-25",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "dc145c7a6c317bab",
@@ -117757,7 +117987,7 @@
    "title": "Clouseau (BE): Staconcert",
    "artists": [
     {
-     "name": "Clouseau (BE)"
+     "name": "Clouseau"
     }
    ],
    "venueId": "plt-heerlen",
@@ -118094,7 +118324,10 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Rock"
+   ]
   },
   {
    "id": "191d46882919b13c",
@@ -118643,6 +118876,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/qmusic-top-40-live/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/219772/qmusic-top-40-live.jpg",
    "sources": [
@@ -119878,7 +120114,7 @@
    "title": "Southern Bluesnight 2027: All about the blues",
    "artists": [
     {
-     "name": "Southern Bluesnight 2027"
+     "name": "Southern Bluesnight"
     }
    ],
    "venueId": "plt-heerlen",
@@ -120767,7 +121003,8 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
-    "Dance & DJ"
+    "Dance & DJ",
+    "Pop"
    ],
    "ticketUrl": "https://clubzer00s.nl/evenement/club-zer00s-grenswerk-venlo-maart-2027/",
    "sources": [
@@ -121613,7 +121850,7 @@
    "title": "Nog langer gelukkig (7+): Oortwolk",
    "artists": [
     {
-     "name": "Nog langer gelukkig (7+)"
+     "name": "Nog langer gelukkig"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -123350,7 +123587,7 @@
    "title": "Idio Chichava (MZ): Dzudza",
    "artists": [
     {
-     "name": "Idio Chichava (MZ)"
+     "name": "Idio Chichava"
     }
    ],
    "venueId": "plt-heerlen",
@@ -124173,7 +124410,7 @@
    "title": "Beyond the Music (IE): U2 Greatest Hits - Orchestra Version",
    "artists": [
     {
-     "name": "Beyond the Music (IE)"
+     "name": "Beyond the Music"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -124186,7 +124423,8 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Klassiek"
+    "Klassiek",
+    "Pop"
    ],
    "ticketUrl": "https://www.plt.nl/programma/beyond-the-music-u2-greatest-hits/18-03-2027-20-00",
    "sources": [
@@ -124450,12 +124688,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Dance & DJ"
-   ],
-   "danceStyles": [
-    "House"
-   ],
    "ticketUrl": "https://www.koeln.de/event/sienna-spiro-my-house-tour/",
    "sources": [
     {
@@ -124905,7 +125137,7 @@
    "title": "OM en OM en OM (1,5+): Het Laagland",
    "artists": [
     {
-     "name": "OM en OM en OM (1,5+)"
+     "name": "OM en OM en OM"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -126239,7 +126471,7 @@
    "title": "Pip Utton (UK): Trump",
    "artists": [
     {
-     "name": "Pip Utton (UK)"
+     "name": "Pip Utton"
     }
    ],
    "venueId": "plt-heerlen",
@@ -126682,7 +126914,7 @@
    "title": "Een Wereld Vol Muziek (6+): Strijkersensemble Waterviool e.a.",
    "artists": [
     {
-     "name": "Een Wereld Vol Muziek (6+)"
+     "name": "Een Wereld Vol Muziek"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -127557,7 +127789,7 @@
    "title": "De Dinoshow (2+): A.vontura Silent Disco Theater",
    "artists": [
     {
-     "name": "De Dinoshow (2+)"
+     "name": "De Dinoshow"
     }
    ],
    "venueId": "plt-heerlen",
@@ -128062,7 +128294,7 @@
    "title": "Workshop Compagnie par Terre / Anne Nguyen (FR)",
    "artists": [
     {
-     "name": "Workshop Compagnie par Terre / Anne Nguyen (FR)"
+     "name": "Workshop Compagnie par Terre / Anne Nguyen"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -128264,7 +128496,7 @@
    "title": "Pops of the Top (3+): Maas theater en dans",
    "artists": [
     {
-     "name": "Pops of the Top (3+)"
+     "name": "Pops of the Top"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -128293,7 +128525,7 @@
    "title": "De Bende van de Witte Roos (8+): Het Ministerie van Onverrichter zake & Garage TDI",
    "artists": [
     {
-     "name": "De Bende van de Witte Roos (8+)"
+     "name": "De Bende van de Witte Roos"
     }
    ],
    "venueId": "plt-heerlen",
@@ -128321,7 +128553,7 @@
    "title": "Jaap van Zweden, Antwerp Symphony Orchestra (BE) & Bruce Liu (CA): Tsjaikovski en Stravinsky",
    "artists": [
     {
-     "name": "Jaap van Zweden, Antwerp Symphony Orchestra (BE) & Bruce Liu (CA)"
+     "name": "Jaap van Zweden, Antwerp Symphony Orchestra & Bruce Liu"
     }
    ],
    "venueId": "plt-heerlen",
@@ -128411,7 +128643,7 @@
    "title": "Compagnie par Terre / Anne Nguyen (FR): Witch Hunting",
    "artists": [
     {
-     "name": "Compagnie par Terre / Anne Nguyen (FR)"
+     "name": "Compagnie par Terre / Anne Nguyen"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -130542,7 +130774,7 @@
    "firstSeen": "2026-11-26",
    "lastSeen": "2026-11-27",
    "musicGenres": [
-    "Dance & DJ"
+    "Rock"
    ]
   },
   {
@@ -130609,7 +130841,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -132750,10 +132982,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/tributeconcert-riplive-remembering-2026-27-03-27/",
    "sources": [
@@ -134329,7 +134560,7 @@
    "title": "Micky Overman Tour 2027",
    "artists": [
     {
-     "name": "Micky Overman Tour 2027"
+     "name": "Micky Overman Tour"
     }
    ],
    "venueId": "carre",
@@ -134648,7 +134879,7 @@
    "title": "Gewoontedieren (7+): Percossa",
    "artists": [
     {
-     "name": "Gewoontedieren (7+)"
+     "name": "Gewoontedieren"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -134987,6 +135218,35 @@
     }
    ],
    "firstSeen": "2026-11-25",
+   "lastSeen": "2026-11-27"
+  },
+  {
+   "id": "5adc0083318f02e2",
+   "title": "BEZ OBMEZHEN",
+   "artists": [
+    {
+     "name": "BEZ OBMEZHEN"
+    }
+   ],
+   "venueId": "paard",
+   "venueName": "Paard",
+   "city": "Den Haag",
+   "country": "NL",
+   "start": "2027-03-30T17:30:00+02:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "ticketUrl": "https://www.paard.nl/en/tickets/150029",
+   "imageUrl": "https://www.paard.nl/wp-content/uploads/2026/11/bezobmezhen.jpg",
+   "sources": [
+    {
+     "name": "paard.nl",
+     "sourceId": "https://www.paard.nl/en/event/bez-obmezhen-4/",
+     "url": "https://www.paard.nl/en/event/bez-obmezhen-4/"
+    }
+   ],
+   "firstSeen": "2026-11-27",
    "lastSeen": "2026-11-27"
   },
   {
@@ -135550,7 +135810,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Dance & DJ"
+   ]
   },
   {
    "id": "11512ac5ee51ff31",
@@ -135642,7 +135906,7 @@
    "title": "Evi Hanssen (BE): Bloedheet & Tranen (reprise)",
    "artists": [
     {
-     "name": "Evi Hanssen (BE)"
+     "name": "Evi Hanssen"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -135899,7 +136163,7 @@
    "title": "Simon Oslender | Steve Gadd | Will Lee | Bruno Müller (DE / VS): True Story Tour 2027",
    "artists": [
     {
-     "name": "Simon Oslender | Steve Gadd | Will Lee | Bruno Müller (DE / VS)"
+     "name": "Simon Oslender | Steve Gadd | Will Lee | Bruno Müller"
     }
    ],
    "venueId": "plt-heerlen",
@@ -137886,7 +138150,7 @@
    "title": "laGeste | Stereo48 (BE): Badke(remix)",
    "artists": [
     {
-     "name": "laGeste | Stereo48 (BE)"
+     "name": "laGeste | Stereo48"
     }
    ],
    "venueId": "musis-arnhem",
@@ -138015,6 +138279,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.effenaar.nl/agenda/80s-anders-11",
    "imageUrl": "https://d12y285rxlbnxt.cloudfront.net/2026-03/80s%20anders%E2%80%93%20Square%20afbeelding%20only.png",
    "sources": [
@@ -138556,7 +138823,7 @@
    "title": "Gewoontedieren (7+): Percossa",
    "artists": [
     {
-     "name": "Gewoontedieren (7+)"
+     "name": "Gewoontedieren"
     }
    ],
    "venueId": "plt-heerlen",
@@ -139282,7 +139549,11 @@
     }
    ],
    "firstSeen": "2026-11-26",
-   "lastSeen": "2026-11-27"
+   "lastSeen": "2026-11-27",
+   "musicGenres": [
+    "Pop",
+    "Dance & DJ"
+   ]
   },
   {
    "id": "18b34dbaa76a0e66",
@@ -139530,7 +139801,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
     "Rock",
     "Pop"
@@ -139730,7 +140001,7 @@
    "title": "Houtje (3+): Het Ministerie van Onverrichter Zake",
    "artists": [
     {
-     "name": "Houtje (3+)"
+     "name": "Houtje"
     }
    ],
    "venueId": "plt-heerlen",
@@ -140065,7 +140336,7 @@
    "title": "Aladdin de Musical (4+): Stijn Mac Gillavry, Natascha Molly e.a.",
    "artists": [
     {
-     "name": "Aladdin de Musical (4+)"
+     "name": "Aladdin de Musical"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -140076,7 +140347,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Familie",
+   "genre": "Show",
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/aladdin-de-musical",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/stijn-mac-gillavry-natascha-molly-ea.8573/stijn-mac-gillavry-natascha-molly-ea.jpg",
    "sources": [
@@ -140297,7 +140568,7 @@
    "title": "Bodemvriend (8+): Boven Water Muziektheater",
    "artists": [
     {
-     "name": "Bodemvriend (8+)"
+     "name": "Bodemvriend"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -140325,7 +140596,7 @@
    "title": "Donnie wil de hoofdrol (4+): Donnie Stories",
    "artists": [
     {
-     "name": "Donnie wil de hoofdrol (4+)"
+     "name": "Donnie wil de hoofdrol"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -140471,7 +140742,7 @@
    "title": "Carnival of Life (4+): Canti Vaganti",
    "artists": [
     {
-     "name": "Carnival of Life (4+)"
+     "name": "Carnival of Life"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -140500,7 +140771,7 @@
    "title": "Aladdin de Musical (4+): Stijn Mac Gillavry, Natascha Molly e.a.",
    "artists": [
     {
-     "name": "Aladdin de Musical (4+)"
+     "name": "Aladdin de Musical"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -140511,7 +140782,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "overig",
-   "genre": "Familie",
+   "genre": "Show",
    "ticketUrl": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/aladdin-de-musical",
    "imageUrl": "https://static.schouwburgconcertzaaltilburg.nl/cache/stijn-mac-gillavry-natascha-molly-ea.8573/stijn-mac-gillavry-natascha-molly-ea.jpg",
    "sources": [
@@ -141526,7 +141797,7 @@
    "title": "Gabriel Rios (PR)  & Augusto Bracho (VE): Sietepè",
    "artists": [
     {
-     "name": "Gabriel Rios (PR)  & Augusto Bracho (VE)"
+     "name": "Gabriel Rios & Augusto Bracho"
     }
    ],
    "venueId": "plt-heerlen",
@@ -142302,10 +142573,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/edwin-evers-band-08-04-27/",
    "sources": [
@@ -142334,10 +142604,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/jeff-buckley-performed-by-slow-pilot-08-04-27/",
    "sources": [
@@ -142715,7 +142984,7 @@
    "title": "Robots (16+): Lieven Scheire",
    "artists": [
     {
-     "name": "Robots (16+)"
+     "name": "Robots"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -143342,10 +143611,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/edwin-evers-band-09-04-27/",
    "sources": [
@@ -145422,9 +145690,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.koeln.de/event/palaye-royale-the-amsterdamage-world-tour-2027/",
    "sources": [
     {
@@ -145961,7 +146226,7 @@
    "title": "Dreumesconcert (1,5+): Krulmuziek | Klassiek voor de kleintjes",
    "artists": [
     {
-     "name": "Dreumesconcert (1,5+)"
+     "name": "Dreumesconcert"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -145993,7 +146258,7 @@
    "title": "Babyconcert (0,5+): Krulmuziek | Klassiek voor de kleintjes",
    "artists": [
     {
-     "name": "Babyconcert (0,5+)"
+     "name": "Babyconcert"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -146054,7 +146319,7 @@
    "title": "OM en OM en OM (1,5+): Het Laagland",
    "artists": [
     {
-     "name": "OM en OM en OM (1,5+)"
+     "name": "OM en OM en OM"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -146082,7 +146347,7 @@
    "title": "Peuter- & kleuterconcert (2+): Krulmuziek | NEUS!",
    "artists": [
     {
-     "name": "Peuter- & kleuterconcert (2+)"
+     "name": "Peuter- & kleuterconcert"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -146374,7 +146639,7 @@
    "title": "De Waanzinnige Boomhut van 78 verdiepingen\n                                 (6+): Meneer Monster",
    "artists": [
     {
-     "name": "De Waanzinnige Boomhut van 78 verdiepingen\n                                 (6+)"
+     "name": "De Waanzinnige Boomhut van 78 verdiepingen"
     }
    ],
    "venueId": "delamar",
@@ -146430,7 +146695,7 @@
    "title": "Maya Show: Samen Picknicken (1+): Studio 100",
    "artists": [
     {
-     "name": "Maya Show: Samen Picknicken (1+)"
+     "name": "Maya Show: Samen Picknicken"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -146458,7 +146723,7 @@
    "title": "Babyconcert (0,5+): Krulmuziek | Klassiek voor de kleintjes",
    "artists": [
     {
-     "name": "Babyconcert (0,5+)"
+     "name": "Babyconcert"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -146662,7 +146927,7 @@
    "title": "Dreumesconcert (1,5+): Krulmuziek | Klassiek voor de kleintjes",
    "artists": [
     {
-     "name": "Dreumesconcert (1,5+)"
+     "name": "Dreumesconcert"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -146809,7 +147074,7 @@
    "title": "De Waanzinnige Boomhut van 78 verdiepingen\n                                 (6+): Meneer Monster",
    "artists": [
     {
-     "name": "De Waanzinnige Boomhut van 78 verdiepingen\n                                 (6+)"
+     "name": "De Waanzinnige Boomhut van 78 verdiepingen"
     }
    ],
    "venueId": "delamar",
@@ -146837,7 +147102,7 @@
    "title": "Maya Show: Samen Picknicken (1+): Studio 100",
    "artists": [
     {
-     "name": "Maya Show: Samen Picknicken (1+)"
+     "name": "Maya Show: Samen Picknicken"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -146865,7 +147130,7 @@
    "title": "Meiden & Prinsen (8+): Het Filiaal theatermakers & Nederlandse Bachvereniging",
    "artists": [
     {
-     "name": "Meiden & Prinsen (8+)"
+     "name": "Meiden & Prinsen"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -146962,10 +147227,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://shop.tickets.cm.com/25667cd2-4f3b-80bc-8560-617352589e39",
    "sources": [
@@ -147986,7 +148250,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
     "Rock",
     "Pop"
@@ -148663,7 +148927,7 @@
    "title": "Aynur (TR)",
    "artists": [
     {
-     "name": "Aynur (TR)"
+     "name": "Aynur"
     }
    ],
    "venueId": "plt-heerlen",
@@ -149192,7 +149456,7 @@
    "title": "The Tribute - Live in Concert",
    "artists": [
     {
-     "name": "The Tribute - Live in Concert"
+     "name": "The Tribute"
     }
    ],
    "venueId": "ziggo-dome",
@@ -150470,7 +150734,7 @@
    "title": "Damien Rice - ‘O’ 25th Anniversary Tour",
    "artists": [
     {
-     "name": "Damien Rice - ‘O’ 25th Anniversary Tour"
+     "name": "Damien Rice"
     }
    ],
    "venueId": "carre",
@@ -151637,7 +151901,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -151665,7 +151929,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -151693,7 +151957,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -151784,7 +152048,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -151812,7 +152076,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -151901,7 +152165,7 @@
    "title": "Damien Rice - ‘O’ 25th Anniversary Tour",
    "artists": [
     {
-     "name": "Damien Rice - ‘O’ 25th Anniversary Tour"
+     "name": "Damien Rice"
     }
    ],
    "venueId": "carre",
@@ -152214,7 +152478,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152420,7 +152684,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152567,7 +152831,7 @@
    "title": "Ozark Henry (BE): Theatertour",
    "artists": [
     {
-     "name": "Ozark Henry (BE)"
+     "name": "Ozark Henry"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -152654,7 +152918,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152682,7 +152946,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152710,7 +152974,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152738,7 +153002,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152766,7 +153030,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152794,7 +153058,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152822,7 +153086,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152850,7 +153114,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152878,7 +153142,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152906,7 +153170,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152934,7 +153198,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -152962,7 +153226,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153018,7 +153282,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153253,7 +153517,7 @@
    "title": "De nog grotere slijmmusical (6+)",
    "artists": [
     {
-     "name": "De nog grotere slijmmusical (6+)"
+     "name": "De nog grotere slijmmusical"
     }
    ],
    "venueId": "musis-arnhem",
@@ -153281,7 +153545,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company - Engels gesproken",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153309,7 +153573,7 @@
    "title": "Mus & kapitein Kwaadbaard en De 5 Slangen (8+): Sterke Verhalen",
    "artists": [
     {
-     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen (8+)"
+     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -153338,7 +153602,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153366,7 +153630,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153507,7 +153771,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153535,7 +153799,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company - Turks gesproken",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153563,7 +153827,7 @@
    "title": "Djumbala! (2+): Oorkaan & Podium Mozaïek",
    "artists": [
     {
-     "name": "Djumbala! (2+)"
+     "name": "Djumbala!"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -153620,7 +153884,7 @@
    "title": "Ik heb ik heb wat jij niet hebt   ◆ 12+",
    "artists": [
     {
-     "name": "Ik heb ik heb wat jij niet hebt   ◆ 12+"
+     "name": "Ik heb ik heb wat jij niet hebt ◆ 12+"
     }
    ],
    "venueId": "kattendans",
@@ -153766,7 +154030,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153794,7 +154058,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153935,7 +154199,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company - Duits gesproken",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153963,7 +154227,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -153991,7 +154255,7 @@
    "title": "Het meisje dat de wereld schreef (8+): Cézanne Tegelberg & Company",
    "artists": [
     {
-     "name": "Het meisje dat de wereld schreef (8+)"
+     "name": "Het meisje dat de wereld schreef"
     }
    ],
    "venueId": "plt-heerlen",
@@ -154019,7 +154283,7 @@
    "title": "De nog grotere slijmmusical (6+)",
    "artists": [
     {
-     "name": "De nog grotere slijmmusical (6+)"
+     "name": "De nog grotere slijmmusical"
     }
    ],
    "venueId": "musis-arnhem",
@@ -154047,7 +154311,7 @@
    "title": "Mus & kapitein Kwaadbaard en De 5 Slangen (8+): Sterke Verhalen",
    "artists": [
     {
-     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen (8+)"
+     "name": "Mus & kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -154189,7 +154453,7 @@
    "title": "The ELVIS Concert 2027",
    "artists": [
     {
-     "name": "The ELVIS Concert 2027"
+     "name": "The ELVIS Concert"
     }
    ],
    "venueId": "muziekgieterij",
@@ -154893,7 +155157,7 @@
    "title": "Robrecht Vanden Thoren (BE): Ten minste houdbaar tot",
    "artists": [
     {
-     "name": "Robrecht Vanden Thoren (BE)"
+     "name": "Robrecht Vanden Thoren"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -154961,9 +155225,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://ekko.nl/event/world-news/",
    "sources": [
     {
@@ -155216,7 +155477,7 @@
    "title": "Matt Simons (VS)",
    "artists": [
     {
-     "name": "Matt Simons (VS)"
+     "name": "Matt Simons"
     }
    ],
    "venueId": "plt-heerlen",
@@ -155457,8 +155718,7 @@
    "category": "muziek",
    "genre": "Klassiek",
    "musicGenres": [
-    "Klassiek",
-    "Wereld & latin"
+    "Klassiek"
    ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/ana-carmen-balestra-a-world-turned-upside-down/9866",
    "sources": [
@@ -155864,7 +156124,7 @@
    "title": "DANSLAB 3 (12+): SALLY Dansgezelschap Maastricht i.s.m. Via Zuid",
    "artists": [
     {
-     "name": "DANSLAB 3 (12+)"
+     "name": "DANSLAB 3"
     }
    ],
    "venueId": "plt-heerlen",
@@ -156863,7 +157123,7 @@
    "title": "ArtEZ dansopleiding - Dance Artist Presents 2027",
    "artists": [
     {
-     "name": "ArtEZ dansopleiding - Dance Artist Presents 2027"
+     "name": "ArtEZ dansopleiding - Dance Artist Presents"
     }
    ],
    "venueId": "musis-arnhem",
@@ -157864,10 +158124,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/jared-grant-off-the-wall-03-12-26/",
    "sources": [
@@ -158602,10 +158861,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111659169",
    "sources": [
@@ -158623,7 +158881,7 @@
    "title": "Yannick Noben (BE): Geef Acht + 2",
    "artists": [
     {
-     "name": "Yannick Noben (BE)"
+     "name": "Yannick Noben"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -158854,7 +159112,7 @@
    "title": "Gregory Page (VS): Page Center Stage",
    "artists": [
     {
-     "name": "Gregory Page (VS)"
+     "name": "Gregory Page"
     }
    ],
    "venueId": "plt-heerlen",
@@ -158911,7 +159169,7 @@
    "title": "Kim Wilde (UK): Staconcert",
    "artists": [
     {
-     "name": "Kim Wilde (UK)"
+     "name": "Kim Wilde"
     }
    ],
    "venueId": "plt-heerlen",
@@ -159025,7 +159283,7 @@
    "title": "Floortje in d'r deretuin (1,5+): Goud Verteltheater",
    "artists": [
     {
-     "name": "Floortje in d'r deretuin (1,5+)"
+     "name": "Floortje in d'r deretuin"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -159084,7 +159342,7 @@
    "title": "Wauw (2+): Bonte Hond",
    "artists": [
     {
-     "name": "Wauw (2+)"
+     "name": "Wauw"
     }
    ],
    "venueId": "plt-heerlen",
@@ -159385,7 +159643,7 @@
    "title": "Mus & Kapitein Kwaadbaard en De 5 Slangen (8+): Sterke Verhalen",
    "artists": [
     {
-     "name": "Mus & Kapitein Kwaadbaard en De 5 Slangen (8+)"
+     "name": "Mus & Kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -159672,7 +159930,7 @@
    "title": "Mus & Kapitein Kwaadbaard en De 5 Slangen (8+): Sterke Verhalen",
    "artists": [
     {
-     "name": "Mus & Kapitein Kwaadbaard en De 5 Slangen (8+)"
+     "name": "Mus & Kapitein Kwaadbaard en De 5 Slangen"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -159965,7 +160223,7 @@
    "title": "Oranjeconcert 2027: Harmonie St. Jozef Kaalheide",
    "artists": [
     {
-     "name": "Oranjeconcert 2027"
+     "name": "Oranjeconcert"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -160090,8 +160348,7 @@
    "category": "muziek",
    "genre": "Klassiek",
    "musicGenres": [
-    "Klassiek",
-    "Wereld & latin"
+    "Klassiek"
    ],
    "ticketUrl": "https://www.eventim.nl/event/the-world-of-hans-zimmer-ziggo-dome-21359745/?affiliate=2FF",
    "sources": [
@@ -160547,7 +160804,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -160792,9 +161049,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.ticketmaster.be/event/237066608?language=nl-be&brand=afasdome",
    "imageUrl": "https://dam.beatvenues.be/a0WP500000ZHcJGMA1_original.jpg",
    "sources": [
@@ -161435,9 +161689,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.rudolf-weber-arena.de/arena_events/the-world-of-hans-zimmer-2027/?eventdate=734",
    "sources": [
     {
@@ -162448,7 +162699,7 @@
    "title": "Les Siècles (FR): Beethoven nr. 5 en nr. 7",
    "artists": [
     {
-     "name": "Les Siècles (FR)"
+     "name": "Les Siècles"
     }
    ],
    "venueId": "plt-heerlen",
@@ -163171,7 +163422,7 @@
    "title": "Chris de Burgh 2027",
    "artists": [
     {
-     "name": "Chris de Burgh 2027"
+     "name": "Chris de Burgh"
     }
    ],
    "venueId": "carre",
@@ -164619,7 +164870,8 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
-    "Dance & DJ"
+    "Dance & DJ",
+    "Pop"
    ],
    "ticketUrl": "https://grenswerk.stager.co/shop/default/events/111656707",
    "sources": [
@@ -165954,7 +166206,7 @@
    "title": "The Dire Straits Experience (UK): Hand Upon The Lever | 2027 World Tour | Staconcert",
    "artists": [
     {
-     "name": "The Dire Straits Experience (UK)"
+     "name": "The Dire Straits Experience"
     }
    ],
    "venueId": "plt-heerlen",
@@ -165966,9 +166218,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.plt.nl/programma/the-dire-straits-experience-/08-05-2027-20-30",
    "sources": [
     {
@@ -166046,7 +166295,7 @@
    "title": "Stampvoeten op tafel (2+): Knars",
    "artists": [
     {
-     "name": "Stampvoeten op tafel (2+)"
+     "name": "Stampvoeten op tafel"
     }
    ],
    "venueId": "plt-heerlen",
@@ -166258,10 +166507,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/rumours-of-fleetwood-mac-09-05-27/",
    "sources": [
@@ -166336,7 +166584,7 @@
    "title": "GRRR… ik ben een boze dino!  (4+): Lil Ones",
    "artists": [
     {
-     "name": "GRRR… ik ben een boze dino!  (4+)"
+     "name": "GRRR… ik ben een boze dino!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -166393,7 +166641,7 @@
    "title": "Nijntje op de fiets (2+): Prentenboekjesfestival",
    "artists": [
     {
-     "name": "Nijntje op de fiets (2+)"
+     "name": "Nijntje op de fiets"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -166435,8 +166683,7 @@
    "category": "muziek",
    "genre": "Klassiek",
    "musicGenres": [
-    "Klassiek",
-    "Wereld & latin"
+    "Klassiek"
    ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/orkest-phion-kamermuziek-side-by-side/10106",
    "sources": [
@@ -166482,7 +166729,7 @@
    "title": "Anansi de Spin en de gulzige Tijger (3+): Prentenboekjesfestival",
    "artists": [
     {
-     "name": "Anansi de Spin en de gulzige Tijger (3+)"
+     "name": "Anansi de Spin en de gulzige Tijger"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -166626,7 +166873,7 @@
    "title": "Nijntje op de fiets (2+): Prentenboekjesfestival",
    "artists": [
     {
-     "name": "Nijntje op de fiets (2+)"
+     "name": "Nijntje op de fiets"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -166655,7 +166902,7 @@
    "title": "GRRR… ik ben een boze dino!  (4+): Lil Ones",
    "artists": [
     {
-     "name": "GRRR… ik ben een boze dino!  (4+)"
+     "name": "GRRR… ik ben een boze dino!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -169205,10 +169452,10 @@
   },
   {
    "id": "3b7958131cc95daa",
-   "title": "Klaas van Eerden",
+   "title": "Klaas van der Eerden",
    "artists": [
     {
-     "name": "Klaas van Eerden"
+     "name": "Klaas van der Eerden"
     }
    ],
    "venueId": "stadsschouwburg-groningen",
@@ -169422,10 +169669,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://shop.tickets.cm.com/caa75bb4-c911-84ba-95f5-07ada5c839f7",
    "sources": [
@@ -171212,10 +171458,9 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://shop.tickets.cm.com/6f2597b9-d674-6d63-6bf0-6ca51b01540e",
    "sources": [
@@ -171324,7 +171569,7 @@
    "title": "Kikker is kikker\n                                 (3+): Theater Terra",
    "artists": [
     {
-     "name": "Kikker is kikker\n                                 (3+)"
+     "name": "Kikker is kikker"
     }
    ],
    "venueId": "delamar",
@@ -172994,7 +173239,7 @@
    "title": "VOCES8 (UK) & Amsterdam Sinfonietta: Birdsong",
    "artists": [
     {
-     "name": "VOCES8 (UK) & Amsterdam Sinfonietta"
+     "name": "VOCES8 & Amsterdam Sinfonietta"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -173483,10 +173728,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/joy-division-undercover-50-years-of-joy-division-21-05-27/",
    "sources": [
@@ -173708,7 +173952,7 @@
    "title": "Colin Blunstone (UK): Supportact: Jesse Lynn Madera",
    "artists": [
     {
-     "name": "Colin Blunstone (UK)"
+     "name": "Colin Blunstone"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -173910,7 +174154,7 @@
    "title": "The 85-89 Tour: Cock Robin",
    "artists": [
     {
-     "name": "The 85-89 Tour"
+     "name": "The 85"
     }
    ],
    "venueId": "musis-arnhem",
@@ -174333,10 +174577,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Rock",
-    "Klassiek"
+    "Rock"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-doors-alive-22-05-27/",
    "sources": [
@@ -175547,7 +175790,7 @@
    "title": "Juf Roos gaat op vakantie (2+)",
    "artists": [
     {
-     "name": "Juf Roos gaat op vakantie (2+)"
+     "name": "Juf Roos gaat op vakantie"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -175631,7 +175874,7 @@
    "title": "Kikker is Kikker (3+): Theater Terra",
    "artists": [
     {
-     "name": "Kikker is Kikker (3+)"
+     "name": "Kikker is Kikker"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -175660,7 +175903,7 @@
    "title": "Meiden & Prinsen\n                                 (8+): Omdat het leven geen sprookje is",
    "artists": [
     {
-     "name": "Meiden & Prinsen\n                                 (8+)"
+     "name": "Meiden & Prinsen"
     }
    ],
    "venueId": "delamar",
@@ -175719,7 +175962,7 @@
    "title": "WEG ERMEE (5-12): WIRWAR",
    "artists": [
     {
-     "name": "WEG ERMEE (5-12)"
+     "name": "WEG ERMEE"
     }
    ],
    "venueId": "plt-heerlen",
@@ -175747,7 +175990,7 @@
    "title": "JoepTube (8+): de zAAk A",
    "artists": [
     {
-     "name": "JoepTube (8+)"
+     "name": "JoepTube"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -175805,7 +176048,7 @@
    "title": "Juf Roos gaat op vakantie (2+)",
    "artists": [
     {
-     "name": "Juf Roos gaat op vakantie (2+)"
+     "name": "Juf Roos gaat op vakantie"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -177328,7 +177571,7 @@
    "title": "Behind The Bar (HipHop)",
    "artists": [
     {
-     "name": "Behind The Bar (HipHop)"
+     "name": "Behind The Bar"
     }
    ],
    "venueId": "muziekgieterij",
@@ -177642,7 +177885,7 @@
    "title": "Tilburgs Cabaret Festival 2027: Halve finale 1",
    "artists": [
     {
-     "name": "Tilburgs Cabaret Festival 2027"
+     "name": "Tilburgs Cabaret Festival"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -177784,7 +178027,7 @@
    "title": "Johnny Trash (BE): Johnny Trash' tweede jeugd",
    "artists": [
     {
-     "name": "Johnny Trash (BE)"
+     "name": "Johnny Trash"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -178334,7 +178577,7 @@
    "title": "Tilburgs Cabaret Festival 2027: Halve finale 2",
    "artists": [
     {
-     "name": "Tilburgs Cabaret Festival 2027"
+     "name": "Tilburgs Cabaret Festival"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -179794,7 +180037,7 @@
    "title": "Halve Verhalen (6+): de Stilte & TOEAC",
    "artists": [
     {
-     "name": "Halve Verhalen (6+)"
+     "name": "Halve Verhalen"
     }
    ],
    "venueId": "plt-heerlen",
@@ -181331,7 +181574,7 @@
    "title": "BRYGGEN (BE): Max Richter - four seasons changed",
    "artists": [
     {
-     "name": "BRYGGEN (BE)"
+     "name": "BRYGGEN"
     }
    ],
    "venueId": "plt-heerlen",
@@ -181509,7 +181752,7 @@
    "title": "Tilburgs Cabaret Festival 2027: Finale",
    "artists": [
     {
-     "name": "Tilburgs Cabaret Festival 2027"
+     "name": "Tilburgs Cabaret Festival"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -182097,7 +182340,7 @@
    "title": "Robert Cray Band (VS)",
    "artists": [
     {
-     "name": "Robert Cray Band (VS)"
+     "name": "Robert Cray Band"
     }
    ],
    "venueId": "plt-heerlen",
@@ -182137,9 +182380,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.johancruijffarena.nl/kalender/466110-u2/",
    "sources": [
     {
@@ -182272,7 +182512,7 @@
    "title": "De Gruffalo (3+): Meneer Monster",
    "artists": [
     {
-     "name": "De Gruffalo (3+)"
+     "name": "De Gruffalo"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -182471,7 +182711,7 @@
    "title": "JoepTube (8+): de zAAk A",
    "artists": [
     {
-     "name": "JoepTube (8+)"
+     "name": "JoepTube"
     }
    ],
    "venueId": "plt-heerlen",
@@ -182499,7 +182739,7 @@
    "title": "Over een kleine mol... (2+): Meneer Monster",
    "artists": [
     {
-     "name": "Over een kleine mol... (2+)"
+     "name": "Over een kleine mol..."
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -182527,7 +182767,7 @@
    "title": "Het Geweldige Grote Mensen Stuk (8+): Cat Smits Company",
    "artists": [
     {
-     "name": "Het Geweldige Grote Mensen Stuk (8+)"
+     "name": "Het Geweldige Grote Mensen Stuk"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -182584,7 +182824,7 @@
    "title": "Over een kleine mol... (2+): Meneer Monster",
    "artists": [
     {
-     "name": "Over een kleine mol... (2+)"
+     "name": "Over een kleine mol..."
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -182685,9 +182925,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.johancruijffarena.nl/kalender/466163-u2/",
    "sources": [
     {
@@ -183061,10 +183298,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/gipsy-kings-ft-nicolas-reyes-08-06-27/",
    "sources": [
@@ -183548,7 +183784,7 @@
    "title": "THE WAILERS — EXODUS 2027 WORLD TOUR - ALBUM OF THE CENTURY: The Wailers",
    "artists": [
     {
-     "name": "THE WAILERS — EXODUS 2027 WORLD TOUR - ALBUM OF THE CENTURY"
+     "name": "THE WAILERS"
     }
    ],
    "venueId": "musis-arnhem",
@@ -183561,8 +183797,8 @@
    "category": "muziek",
    "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Wereld & latin"
+    "Wereld & latin",
+    "Pop"
    ],
    "ticketUrl": "https://www.musisenstadstheater.nl/nl/agenda/the-wailers/10387",
    "sources": [
@@ -183592,9 +183828,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.johancruijffarena.nl/kalender/467001-u2/",
    "sources": [
     {
@@ -184087,10 +184320,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Pop",
-    "Klassiek"
+    "Pop"
    ],
    "ticketUrl": "https://patronaat.nl/event/the-bruceband-plays-best-of-springsteen-e-street-band-tour-2027-11-06-27/",
    "sources": [
@@ -184205,9 +184437,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.johancruijffarena.nl/kalender/467259-u2/",
    "sources": [
     {
@@ -184810,7 +185039,7 @@
    "title": "Kiekeboe! (1+): Theater Stof",
    "artists": [
     {
-     "name": "Kiekeboe! (1+)"
+     "name": "Kiekeboe!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -184926,7 +185155,7 @@
    "title": "Kiekeboe! (1+): Theater Stof",
    "artists": [
     {
-     "name": "Kiekeboe! (1+)"
+     "name": "Kiekeboe!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -184954,7 +185183,7 @@
    "title": "Efteling vertelt… Baron 1898 (6+)",
    "artists": [
     {
-     "name": "Efteling vertelt… Baron 1898 (6+)"
+     "name": "Efteling vertelt… Baron 1898"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -184982,7 +185211,7 @@
    "title": "GRRR... ik ben een boze dino! (4+): Lil Ones presenteert",
    "artists": [
     {
-     "name": "GRRR... ik ben een boze dino! (4+)"
+     "name": "GRRR... ik ben een boze dino!"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -185042,7 +185271,7 @@
    "title": "GRRR... ik ben een boze dino! (4+): Lil Ones presenteert",
    "artists": [
     {
-     "name": "GRRR... ik ben een boze dino! (4+)"
+     "name": "GRRR... ik ben een boze dino!"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -185071,7 +185300,7 @@
    "title": "Efteling vertelt… Baron 1898 (6+)",
    "artists": [
     {
-     "name": "Efteling vertelt… Baron 1898 (6+)"
+     "name": "Efteling vertelt… Baron 1898"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -185189,7 +185418,7 @@
    "title": "Musicals Gone Mad '27: De Bonte Avond van het musicalseizoen",
    "artists": [
     {
-     "name": "Musicals Gone Mad '27"
+     "name": "Musicals Gone Mad"
     }
    ],
    "venueId": "delamar",
@@ -186390,7 +186619,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -186549,6 +186778,7 @@
    "category": "muziek",
    "genre": "Dance",
    "musicGenres": [
+    "Pop",
     "Dance & DJ"
    ],
    "ticketUrl": "https://www.qmusicfouteparty.nl/",
@@ -186597,7 +186827,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -186684,7 +186914,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -187015,10 +187245,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
-   "musicGenres": [
-    "Klassiek"
-   ],
+   "genre": "Concert",
    "ticketUrl": "https://fifthstageevents.nl/agenda/grenswerk-venlo-za19juni2027",
    "sources": [
     {
@@ -187035,7 +187262,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -187063,7 +187290,7 @@
    "title": "KOKOON+ (2+): Musica & Sounding Bodies",
    "artists": [
     {
-     "name": "KOKOON+ (2+)"
+     "name": "KOKOON+"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -187092,7 +187319,7 @@
    "title": "Pinkpop 2027 (zondag)",
    "artists": [
     {
-     "name": "blink-182"
+     "name": "blink"
     },
     {
      "name": "Nothing But Thieves"
@@ -187179,7 +187406,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -187297,7 +187524,7 @@
    "title": "K3 Show: Superhelden (3+): Studio 100",
    "artists": [
     {
-     "name": "K3 Show: Superhelden (3+)"
+     "name": "K3 Show: Superhelden"
     }
    ],
    "venueId": "plt-heerlen",
@@ -187369,9 +187596,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Rock"
-   ],
    "ticketUrl": "https://www.uitagendarotterdam.nl/agenda/scorpions-love-peace-rock-n-roll-tour-2027/",
    "imageUrl": "https://www.uitagendarotterdam.nl/images/productions/219764/scorpions-love-peace-rock-n-roll-tour-2027.jpg",
    "sources": [
@@ -188559,7 +188783,7 @@
    "title": "Aladdin de Musical\n                                 (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Aladdin de Musical\n                                 (4+)"
+     "name": "Aladdin de Musical"
     }
    ],
    "venueId": "delamar",
@@ -188972,7 +189196,7 @@
    "title": "Stilte (1+): Club Wauw",
    "artists": [
     {
-     "name": "Stilte (1+)"
+     "name": "Stilte"
     }
    ],
    "venueId": "plt-heerlen",
@@ -189029,7 +189253,7 @@
    "title": "Stilte (1+): Club Wauw",
    "artists": [
     {
-     "name": "Stilte (1+)"
+     "name": "Stilte"
     }
    ],
    "venueId": "plt-heerlen",
@@ -189143,7 +189367,7 @@
    "title": "Aladdin de Musical\n                                 (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Aladdin de Musical\n                                 (4+)"
+     "name": "Aladdin de Musical"
     }
    ],
    "venueId": "delamar",
@@ -189171,7 +189395,7 @@
    "title": "Titus & Fien - Vooruit, nog een keertje dan! (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Titus & Fien - Vooruit, nog een keertje dan! (4+)"
+     "name": "Titus & Fien - Vooruit, nog een keertje dan!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -189283,7 +189507,7 @@
    "title": "Aladdin de Musical\n                                 (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Aladdin de Musical\n                                 (4+)"
+     "name": "Aladdin de Musical"
     }
    ],
    "venueId": "delamar",
@@ -189311,7 +189535,7 @@
    "title": "Titus & Fien - Vooruit, nog een keertje dan! (4+): Van Hoorne Studios",
    "artists": [
     {
-     "name": "Titus & Fien - Vooruit, nog een keertje dan! (4+)"
+     "name": "Titus & Fien - Vooruit, nog een keertje dan!"
     }
    ],
    "venueId": "plt-heerlen",
@@ -191054,7 +191278,7 @@
    "title": "Fontys Musical Show 2027: Studenten Muziek- en Musicaltheater Fontys",
    "artists": [
     {
-     "name": "Fontys Musical Show 2027"
+     "name": "Fontys Musical Show"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -191922,7 +192146,7 @@
    "title": "Stoornis of My Life (reprise): Van Alex Klaasen",
    "artists": [
     {
-     "name": "Stoornis of My Life (reprise)"
+     "name": "Stoornis of My Life"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -192122,7 +192346,7 @@
    "title": "Stoornis of My Life (reprise): Van Alex Klaasen",
    "artists": [
     {
-     "name": "Stoornis of My Life (reprise)"
+     "name": "Stoornis of My Life"
     }
    ],
    "venueId": "toon-hermans-theater",
@@ -192677,9 +192901,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.mojo.nl/concerten/stray-kids",
    "imageUrl": "https://cdn.prod.website-files.com/674576c933a56741fdd8eadc/6afea8115af129c8ef12b037_StrayKids-2027-Arnhem-1080x1920-NS.jpg",
    "sources": [
@@ -192765,9 +192986,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.mojo.nl/concerten/stray-kids",
    "imageUrl": "https://cdn.prod.website-files.com/674576c933a56741fdd8eadc/6afea8115af129c8ef12b037_StrayKids-2027-Arnhem-1080x1920-NS.jpg",
    "sources": [
@@ -194738,7 +194956,7 @@
    "title": "KOKOON+ (2+): Musica & Sounding Bodies",
    "artists": [
     {
-     "name": "KOKOON+ (2+)"
+     "name": "KOKOON+"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -194767,7 +194985,7 @@
    "title": "KOKOON+ (2+): Musica & Sounding Bodies",
    "artists": [
     {
-     "name": "KOKOON+ (2+)"
+     "name": "KOKOON+"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -194796,7 +195014,7 @@
    "title": "KOKOON+ (2+): Musica & Sounding Bodies",
    "artists": [
     {
-     "name": "KOKOON+ (2+)"
+     "name": "KOKOON+"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -195083,7 +195301,7 @@
    "title": "Gilbert O'Sullivan (IE)",
    "artists": [
     {
-     "name": "Gilbert O'Sullivan (IE)"
+     "name": "Gilbert O'Sullivan"
     }
    ],
    "venueId": "plt-heerlen",
@@ -195373,7 +195591,7 @@
    "title": "BLUEFINGER FESTIVAL 2027",
    "artists": [
     {
-     "name": "BLUEFINGER FESTIVAL 2027"
+     "name": "BLUEFINGER FESTIVAL"
     }
    ],
    "venueId": "hedon",
@@ -195636,7 +195854,7 @@
    "title": "75-jarig jubileum van de Efteling: Darkride",
    "artists": [
     {
-     "name": "75-jarig jubileum van de Efteling"
+     "name": "75"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -195848,7 +196066,7 @@
    "title": "75-jarig jubileum van de Efteling: Darkride",
    "artists": [
     {
-     "name": "75-jarig jubileum van de Efteling"
+     "name": "75"
     }
    ],
    "venueId": "theaters-tilburg",
@@ -196436,10 +196654,9 @@
    "hasTime": false,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
-    "Jazz, soul & blues",
-    "Klassiek"
+    "Jazz, soul & blues"
    ],
    "ticketUrl": "https://patronaat.nl/event/new-purple-celebration-the-music-of-prince-30-09-27/",
    "sources": [
@@ -196757,7 +196974,7 @@
    "hasTime": true,
    "status": "gepland",
    "category": "muziek",
-   "genre": "Klassiek",
+   "genre": "Concert",
    "musicGenres": [
     "Rock",
     "Jazz, soul & blues"
@@ -197736,9 +197953,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.koeln.de/event/frank-turner-the-sleeping-souls-last-evenings-world-tour-2027-3/",
    "sources": [
     {
@@ -197799,9 +198013,6 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
-   "musicGenres": [
-    "Wereld & latin"
-   ],
    "ticketUrl": "https://www.ticketmaster.nl/event/209091797",
    "imageUrl": "https://www.afaslive.nl/files/News/Nieuws/Nieuwsberichten-September/Tijdelijke-persfoto-Brit-Floyd.png",
    "sources": [
@@ -199133,6 +199344,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.lanxess-arena.de/eventdetail/1487",
    "sources": [
     {
@@ -200449,7 +200663,7 @@
    "title": "Mit d'r kop in de wolke (reprise): De Ummer d'r Neaver Musical",
    "artists": [
     {
-     "name": "Mit d'r kop in de wolke (reprise)"
+     "name": "Mit d'r kop in de wolke"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -200505,7 +200719,7 @@
    "title": "Mit d'r kop in de wolke (reprise): De Ummer d'r Neaver Musical",
    "artists": [
     {
-     "name": "Mit d'r kop in de wolke (reprise)"
+     "name": "Mit d'r kop in de wolke"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -200646,7 +200860,7 @@
    "title": "Mit d'r kop in de wolke (reprise): De Ummer d'r Neaver Musical",
    "artists": [
     {
-     "name": "Mit d'r kop in de wolke (reprise)"
+     "name": "Mit d'r kop in de wolke"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -200714,6 +200928,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://ticket.westfalenhallen.de/eventim.webshop/webticket/seatmap?eventId=6691&el=true",
    "sources": [
     {
@@ -200745,6 +200962,9 @@
    "status": "gepland",
    "category": "muziek",
    "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
    "ticketUrl": "https://www.doornroosje.nl/event/bettie-serveert-4/",
    "sources": [
     {
@@ -200820,7 +201040,7 @@
    "title": "Mit d'r kop in de wolke (reprise): De Ummer d'r Neaver Musical",
    "artists": [
     {
-     "name": "Mit d'r kop in de wolke (reprise)"
+     "name": "Mit d'r kop in de wolke"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -200904,7 +201124,7 @@
    "title": "Mit d'r kop in de wolke (reprise): De Ummer d'r Neaver Musical",
    "artists": [
     {
-     "name": "Mit d'r kop in de wolke (reprise)"
+     "name": "Mit d'r kop in de wolke"
     }
    ],
    "venueId": "plt-kerkrade",
@@ -201760,6 +201980,38 @@
    "lastSeen": "2026-11-27"
   },
   {
+   "id": "6be7744a8362c831",
+   "title": "MIKA",
+   "artists": [
+    {
+     "name": "MIKA"
+    }
+   ],
+   "venueId": "ziggo-dome",
+   "venueName": "Ziggo Dome",
+   "city": "Amsterdam",
+   "country": "NL",
+   "start": "2027-11-22T19:00:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "onSaleStart": "2026-12-04T09:00:00+01:00",
+   "category": "muziek",
+   "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
+   "ticketUrl": "https://www.ticketmaster.nl/artist/mika-tickets/34222?venueId=2717&CL_ORIGIN=MOJONIEUWSBRIEF",
+   "sources": [
+    {
+     "name": "ziggodome.nl",
+     "sourceId": "93ab0b14-59c6-4d01-b162-961159cc2def",
+     "url": "https://www.ziggodome.nl/agenda/"
+    }
+   ],
+   "firstSeen": "2026-11-27",
+   "lastSeen": "2026-11-27"
+  },
+  {
    "id": "9b2d932471b95b25",
    "title": "Paradise Lost",
    "artists": [
@@ -201817,6 +202069,38 @@
     }
    ],
    "firstSeen": "2026-11-26",
+   "lastSeen": "2026-11-27"
+  },
+  {
+   "id": "01c10ca32877126b",
+   "title": "MIKA",
+   "artists": [
+    {
+     "name": "MIKA"
+    }
+   ],
+   "venueId": "sportpaleis",
+   "venueName": "AFAS Dome",
+   "city": "Antwerpen",
+   "country": "BE",
+   "start": "2027-11-23T18:30:00+01:00",
+   "hasTime": true,
+   "status": "gepland",
+   "category": "muziek",
+   "genre": "Concert",
+   "musicGenres": [
+    "Pop"
+   ],
+   "ticketUrl": "https://www.afas-dome.be/evenement/mika-6dfdb8da",
+   "imageUrl": "https://dam.beatvenues.be/a0WP500000zAC82MAG_original.jpg",
+   "sources": [
+    {
+     "name": "afas-dome.be",
+     "sourceId": "6dfdb8da-1012018391",
+     "url": "https://www.afas-dome.be/evenement/mika-6dfdb8da"
+    }
+   ],
+   "firstSeen": "2026-11-27",
    "lastSeen": "2026-11-27"
   },
   {

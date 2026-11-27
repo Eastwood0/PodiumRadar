@@ -499,7 +499,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (119)
+## paard.nl (120)
 
 - 40UP
 - 80S VERANTWOORD
@@ -511,6 +511,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - APOLLO BROWN & SKYZOO
 - BEN CAPLAN
 - BETTIE SERVEERT
+- BEZ OBMEZHEN
 - BYWATER CALL
 - CAFÉ EUROPA EINDEJAARSSHOW
 - CALEB CAUDLE
@@ -638,7 +639,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
 
-## patronaat.nl (29)
+## patronaat.nl (32)
 
 - Any Given Day
 - Artin Muziek & friends
@@ -650,6 +651,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Dream State
 - FUCK THE CISTEM
 - Geannuleerd: KMFDM
+- Genesis Project – Philled with Collins
 - Hagane
 - Housequake
 - King Buffalo + Spirit Mother
@@ -660,6 +662,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Orden Ogan + Ensiferum + Angus McSix
 - Patronaatje tot t’ Gaatje
 - REZN + Coltaine
+- Rob Lamberti presents A Celebration of George Michael • PHIL
 - Show Me The Body
 - SiM + The Haunt
 - Sivert Høyem + support
@@ -667,6 +670,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - StonerGrungeFest met 22AD, Baardvader, Sustain
 - Sugar Spine + Braces
 - Terror + Bane + Start Today + Peace of Mind
+- The Tool Experience (previously The Perfect Tool)
 - Turmion Kätilöt + STAM1NA
 - YUNA XL
 
@@ -795,11 +799,10 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Travel Through Time: Moord in Maaspoort
 - Venlo.fit sportgala 2026: Gemeente Venlo
 
-## plt.nl (11)
+## plt.nl (10)
 
 - Bachs Weihnachtsoratorium: Heerlense Oratoriumvereniging
 - De Sjatkis: Leedjes en leidjes oet os sjtad
-- Franciscus - De Familiemusical
 - Het Parkstad Limburg Sterreheim Buuttegala
 - Het Sittards KampsVanBaar Buuttegala
 - Het StreekTheater: Pension Siestermans
@@ -809,11 +812,10 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Vasteloavendskonzeët: Kerkraads Symfonie i.s.m. PLT & Kirchöatsjer Vasteloavends Verain
 - ‘n Uurtje Kerst met PMK2019
 
-## theaterroermond.nl (9)
+## theaterroermond.nl (8)
 
 - Johnny de Mol
 - Kerst in "de Royal"
-- Kienjermusical 2027
 - Lachenderwies
 - Mariska Bauer
 - Nieuwe Helden
@@ -1050,7 +1052,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - ZINLOOS GELUID
 - the noise of holland
 
-## visitgroningen.nl (74)
+## visitgroningen.nl (70)
 
 - 3JS – 20 jaar 3JS
 - ABBA The Music – From Waterloo to Dancing Queen
@@ -1067,7 +1069,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - De Circusbroers
 - De Grote Dino Show
 - De Kleine Prins
-- De Nog Grotere Slijmmusical
 - Dirk Scheele - Winterpret
 - Donar Groningen –  Okapi Aalst 2027
 - Donar Groningen – CB Liege 2027
@@ -1075,7 +1076,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Donar Groningen – HKK Zrinjski 1992 2027
 - Donar Groningen – Heroes Den Bosch 2026
 - Donar Groningen – House of Talents Spurs Kortrijk 2027
-- Donar Groningen – Kangoeroes Basket Mechelen 2026
 - Donar Groningen – Landstede Hammers 2026
 - Donar Groningen – Spartak Pleven 2027
 - Donar Groningen – Windrose Giants Antwerp 2027
@@ -1086,11 +1086,9 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Eye of Melian - Forest of Forgetting
 - FEM.Event 2027
 - Girls on Fire 3
-- Hans Klok - The Illusionists
 - Hollandse Toppers
 - Huub Stapel - Mannen komen van Mars, vrouwen van Venus
 - Ilse DeLange
-- Internationaal Indoor Concours Hippique Groningen 2027
 - Jay Francis - Tunnelvisie
 - Johnny de Mol - Goed dat jij bestaat!
 - Judas Priest

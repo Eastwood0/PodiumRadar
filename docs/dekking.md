@@ -1,12 +1,12 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T11:23:37.676Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T12:14:11.545Z).
 
-**68 van 77 venues** hebben data, samen 6795 events (3612 muziek).
+**68 van 77 venues** hebben data, samen 6799 events (3577 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
-| Ziggo Dome | NL | 128 | 109 | 2027-11-24 | ziggodome.nl ✅ |  |
+| Ziggo Dome | NL | 129 | 110 | 2027-11-24 | ziggodome.nl ✅ |  |
 | Johan Cruijff ArenA | NL | 18 | 11 | 2027-07-17 | johancruijffarena.nl ✅ |  |
 | AFAS Live | NL | 105 | 78 | 2027-11-27 | afaslive.nl ✅ |  |
 | Rotterdam Ahoy | NL | 145 | 71 | 2027-11-27 | uitagendarotterdam.nl ✅ |  |
@@ -26,11 +26,11 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T11:23:37.
 | Nieuwe Nor | NL | 0 | 0 | — | — | De site weigert automatische bezoekers (403); niet omzeilen (B23). |
 | Paradiso | NL | 56 | 55 | 2027-05-25 | iamsterdam.com ✅ |  |
 | Melkweg | NL | 226 | 224 | 2027-11-18 | melkweg.nl ❌, iamsterdam.com ✅ |  |
-| MartiniPlaza | NL | 180 | 133 | 2027-11-13 | visitgroningen.nl ✅ |  |
+| MartiniPlaza | NL | 180 | 98 | 2027-11-13 | visitgroningen.nl ✅ |  |
 | De Oosterpoort | NL | 256 | 212 | 2027-11-27 | spotgroningen.nl ✅ |  |
 | Stadsschouwburg Groningen | NL | 159 | 15 | 2027-10-14 | spotgroningen.nl ✅ |  |
 | Doornroosje | NL | 173 | 163 | 2027-11-13 | doornroosje.nl ✅ |  |
-| Paard | NL | 138 | 135 | 2027-11-25 | paard.nl ✅ |  |
+| Paard | NL | 140 | 137 | 2027-11-25 | paard.nl ✅ |  |
 | Hedon | NL | 102 | 99 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
 | Mezz | NL | 135 | 132 | 2027-11-17 | mezz.nl ✅ |  |
 | Patronaat | NL | 139 | 137 | 2027-11-07 | patronaat.nl ✅ |  |
@@ -46,7 +46,7 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T11:23:37.
 | Carré | NL | 218 | 41 | 2027-11-25 | carre.nl ✅ |  |
 | DeLaMar | NL | 317 | 11 | 2027-10-23 | delamar.nl ✅ |  |
 | Stadsschouwburg Utrecht | NL | 422 | 14 | 2027-07-11 | stadsschouwburg-utrecht.nl ✅ |  |
-| Schouwburg & Concertzaal Tilburg | NL | 364 | 76 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
+| Schouwburg & Concertzaal Tilburg | NL | 364 | 72 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
 | Musis & Stadstheater | NL | 272 | 129 | 2027-11-25 | musisenstadstheater.nl ✅ |  |
 | Theater Rotterdam | NL | 147 | 3 | 2027-10-31 | uitagendarotterdam.nl ✅ |  |
 | Chassé Theater | NL | 13 | 4 | 2027-03-06 | explorebreda.com (Chassé) ✅ |  |
@@ -65,7 +65,7 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T11:23:37.
 | Dynamo | NL | 39 | 32 | 2027-10-15 | dynamo-eindhoven.nl ✅ |  |
 | Annabel | NL | 25 | 25 | 2027-04-24 | annabel.nu ✅ |  |
 | TOFFLER | NL | 8 | 8 | 2026-12-19 | toffler.nl ✅ |  |
-| AFAS Dome | BE | 48 | 32 | 2027-11-27 | afas-dome.be ✅ |  |
+| AFAS Dome | BE | 49 | 33 | 2027-11-27 | afas-dome.be ✅ |  |
 | Lotto Arena | BE | 40 | 20 | 2027-11-25 | lotto-arena.be ✅ |  |
 | Vorst Nationaal | BE | 60 | 50 | 2027-11-26 | vorst-nationaal.be ✅ |  |
 | ING Arena | BE | 32 | 23 | 2027-11-27 | ing.arena.brussels ✅ |  |
