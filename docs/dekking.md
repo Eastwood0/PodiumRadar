@@ -1,8 +1,8 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T12:14:11.545Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:04:00.304Z).
 
-**68 van 77 venues** hebben data, samen 6799 events (3577 muziek).
+**68 van 77 venues** hebben data, samen 6804 events (3633 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
@@ -26,13 +26,13 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T12:14:11.
 | Nieuwe Nor | NL | 0 | 0 | — | — | De site weigert automatische bezoekers (403); niet omzeilen (B23). |
 | Paradiso | NL | 56 | 55 | 2027-05-25 | iamsterdam.com ✅ |  |
 | Melkweg | NL | 226 | 224 | 2027-11-18 | melkweg.nl ❌, iamsterdam.com ✅ |  |
-| MartiniPlaza | NL | 180 | 98 | 2027-11-13 | visitgroningen.nl ✅ |  |
-| De Oosterpoort | NL | 256 | 212 | 2027-11-27 | spotgroningen.nl ✅ |  |
+| MartiniPlaza | NL | 180 | 133 | 2027-11-13 | visitgroningen.nl ❌ |  |
+| De Oosterpoort | NL | 257 | 213 | 2027-11-27 | spotgroningen.nl ✅ |  |
 | Stadsschouwburg Groningen | NL | 159 | 15 | 2027-10-14 | spotgroningen.nl ✅ |  |
-| Doornroosje | NL | 173 | 163 | 2027-11-13 | doornroosje.nl ✅ |  |
+| Doornroosje | NL | 174 | 163 | 2027-11-13 | doornroosje.nl ✅ |  |
 | Paard | NL | 140 | 137 | 2027-11-25 | paard.nl ✅ |  |
-| Hedon | NL | 102 | 99 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
-| Mezz | NL | 135 | 132 | 2027-11-17 | mezz.nl ✅ |  |
+| Hedon | NL | 103 | 100 | 2027-11-05 | hedon-zwolle.nl ✅ |  |
+| Mezz | NL | 136 | 133 | 2027-11-17 | mezz.nl ✅ |  |
 | Patronaat | NL | 139 | 137 | 2027-11-07 | patronaat.nl ✅ |  |
 | De Kattendans | NL | 107 | 26 | 2027-11-26 | kattendans.nl ✅ |  |
 | Munttheater | NL | 130 | 37 | 2027-11-14 | munttheater.nl ✅ |  |
@@ -45,8 +45,8 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T12:14:11.
 | Theater aan het Vrijthof | NL | 19 | 3 | 2027-01-10 | visitmaastricht.com ✅ |  |
 | Carré | NL | 218 | 41 | 2027-11-25 | carre.nl ✅ |  |
 | DeLaMar | NL | 317 | 11 | 2027-10-23 | delamar.nl ✅ |  |
-| Stadsschouwburg Utrecht | NL | 422 | 14 | 2027-07-11 | stadsschouwburg-utrecht.nl ✅ |  |
-| Schouwburg & Concertzaal Tilburg | NL | 364 | 72 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
+| Stadsschouwburg Utrecht | NL | 423 | 14 | 2027-07-11 | stadsschouwburg-utrecht.nl ✅ |  |
+| Schouwburg & Concertzaal Tilburg | NL | 364 | 90 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
 | Musis & Stadstheater | NL | 272 | 129 | 2027-11-25 | musisenstadstheater.nl ✅ |  |
 | Theater Rotterdam | NL | 147 | 3 | 2027-10-31 | uitagendarotterdam.nl ✅ |  |
 | Chassé Theater | NL | 13 | 4 | 2027-03-06 | explorebreda.com (Chassé) ✅ |  |
@@ -73,7 +73,7 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T12:14:11.
 | Trixxo Arena | BE | 9 | 0 | 2027-02-14 | trixxo-arena.be ✅ |  |
 | LANXESS arena | DE | 170 | 63 | 2027-11-25 | lanxess-arena.de ✅ |  |
 | RheinEnergieStadion | DE | 16 | 4 | 2027-06-12 | rheinenergiestadion.de ✅ |  |
-| Palladium | DE | 79 | 71 | 2027-11-26 | koeln.de (Palladium) ✅ |  |
+| Palladium | DE | 79 | 71 | 2027-11-26 | koeln.de (Palladium) ⚠️ storing |  |
 | PSD Bank Dome | DE | 91 | 23 | 2027-10-26 | psd-bank-dome.de ✅ |  |
 | Merkur Spiel-Arena | DE | 19 | 5 | 2027-07-17 | merkur-spiel-arena.de ✅ |  |
 | Mitsubishi Electric Halle | DE | 89 | 48 | 2027-11-26 | mitsubishi-electric-halle.de ✅ |  |

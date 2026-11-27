@@ -8,10 +8,29 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "16 horsepower": {
+  "mbid": "9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "1984 night at the arcade": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "2hollis": {
+  "mbid": "8bd5a8fb-4c25-401d-a597-2c24affdd5c5",
+  "genres": [
+   "Hiphop & R&B",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "2hot2play": {
   "mbid": "193398c0-9db2-48d8-b7a0-0e71096389a1",
@@ -28,9 +47,28 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "30th tattoocon dortmund": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "3js": {
+  "mbid": "cf37774a-d048-45b1-8799-c08968c784fb",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "3voor12 song van het jaar": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "40 jaar": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "40up": {
@@ -116,6 +154,18 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "abba": {
+  "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+  "genres": [
+   "Pop",
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Disco"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "abba gold": {
   "mbid": "47cb8987-6f64-498b-88cb-0f3ae987cc2b",
   "genres": [],
@@ -133,6 +183,16 @@
   "dance": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "absynthe minded": {
+  "mbid": "01614f48-a5cc-4c44-868e-6eac343e1d89",
+  "genres": [
+   "Rock",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "accept": {
   "mbid": "41f4d85a-0bd7-4602-a3e3-8c47f36efb0a",
@@ -206,6 +266,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "agriculture": {
+  "mbid": "f703c668-fb24-42ab-8cc9-7debfd6ba783",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "agrio club": {
   "genres": [],
   "checked": "2026-11-27",
@@ -255,6 +322,15 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "ak ausserkontrolle": {
+  "mbid": "77b568f2-d4ab-464e-9d6c-568dd53b05f4",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "ak chamel": {
   "genres": [
    "Rock"
@@ -271,6 +347,16 @@
    "Jazz, soul & blues"
   ],
   "checked": "2026-11-26"
+ },
+ "alcest": {
+  "mbid": "dd77b8da-cdc7-46b8-8a7f-10894ca0490e",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "aldenborghlezing en boekpresentatie": {
   "genres": [],
@@ -324,6 +410,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "alexandra kay": {
+  "mbid": "5e8644da-39d5-4f3d-ab43-02515dbc63c1",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "alice olsthoorn": {
   "mbid": "47fcfec2-5f92-4d77-b22d-af36dc97a6a2",
   "genres": [
@@ -332,6 +428,24 @@
   "dance": [],
   "checked": "2026-11-26",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "alizade": {
+  "mbid": "d1aaf918-8e30-429e-b4fe-b5623412b741",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "alkinoos ioannidis": {
+  "genres": [
+   "Pop"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
   "itunes": "2026-11-27"
  },
  "allt": {
@@ -397,6 +511,34 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "american heroes": {
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
+ "amimea": {
+  "mbid": "c6df46df-1251-411a-a8b7-68a9169a53a9",
+  "genres": [
+   "Klassiek"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "amina": {
+  "mbid": "7be92950-2441-4477-9ea3-442fff62415b",
+  "genres": [
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "amme": {
   "genres": [
    "Pop"
@@ -424,6 +566,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "amsterdam calling": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "amsterdam sinfonietta": {
   "mbid": "73be5c4b-0f04-40d2-bc70-b9cdaf8b303e",
   "genres": [
@@ -447,6 +594,15 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "amy winehouse": {
+  "mbid": "dfe9a7c4-8cf2-47f4-9dcb-d233c2b86ec3",
+  "genres": [
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "amz invites with nomtah and omagoqa": {
   "genres": [],
   "checked": "2026-11-26",
@@ -467,6 +623,13 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "andre manuel": {
+  "mbid": "3514a95a-d901-4e11-a98f-0e0531044e87",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "andries tunru and stefan hendrikx": {
   "genres": [],
   "checked": "2026-11-27",
@@ -475,6 +638,20 @@
  "anfisa letyago all night long": {
   "genres": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "anna s story of amy": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "anna tsuchiya": {
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
   "itunes": "2026-11-27"
  },
  "anne clark": {
@@ -521,6 +698,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "anouque": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "antal and hunee all night long": {
   "genres": [],
   "checked": "2026-11-27",
@@ -534,6 +716,15 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "anthrax": {
+  "mbid": "b616d6f0-ec1f-4c69-8a79-12a97ece7372",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "antoon": {
   "mbid": "639d5a39-2427-4fb7-a9d6-1c71ac215e18",
@@ -608,6 +799,13 @@
   ],
   "checked": "2026-11-26"
  },
+ "arie and silvester": {
+  "mbid": "5c1ff96b-87ef-4e5a-8292-ded4827b4d9a",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "arkayla": {
   "mbid": "b2c2c0b6-a033-45ee-98c4-37032296f84b",
   "genres": [
@@ -626,10 +824,47 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "artin muziek": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "artin muziek and friends": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "artsy and craftsy market by abunai": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "aryana sayeed ladies only concert": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "ashe": {
+  "mbid": "c576a7b0-c768-4760-9306-466429d0884a",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House",
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "ateez": {
+  "mbid": "cf0dbc16-4e24-4957-b5b4-955c8978f690",
+  "genres": [
+   "Pop",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "atmoz classics enter space": {
   "genres": [],
@@ -677,6 +912,25 @@
    "Metal & punk"
   ],
   "checked": "2026-11-26"
+ },
+ "avi": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "avondje outsiders": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "aynur": {
+  "mbid": "c0445a1a-33bc-4f87-97af-3b8e8afb911a",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "ayra starr": {
   "mbid": "c4ac4b97-2eac-46f6-85ae-f916c93847e4",
@@ -741,6 +995,16 @@
   "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "bad nerves": {
+  "mbid": "e3855311-3405-44e7-b942-2e50f64bfbca",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "band": {
   "genres": [],
@@ -910,6 +1174,16 @@
   ],
   "checked": "2026-11-26"
  },
+ "beach boys best": {
+  "mbid": "0e170069-7d66-4957-9c5c-dd076f17fe87",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "beat it": {
   "genres": [
    "Rock"
@@ -917,6 +1191,13 @@
   "checked": "2026-11-27",
   "from": "itunes",
   "dance": [],
+  "itunes": "2026-11-27"
+ },
+ "beatles complete": {
+  "mbid": "05dc7aee-c05f-4e02-8301-e04f5bc74e7d",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "beatrice de graaf": {
@@ -953,6 +1234,16 @@
  "belle and sebastian tigermilk followed by a second set of favourites": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "ben caplan": {
+  "mbid": "5caafbc8-2a57-4751-9e63-2f72469c56b6",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "benjamin berg": {
@@ -1008,6 +1299,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "bert heerink and martijn van der zande": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "bert visscher and martin van waardenberg": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1023,6 +1319,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "best of musicals": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "beth hart": {
   "mbid": "3fe817fc-966e-4ece-b00a-76be43e7e73c",
   "genres": [
@@ -1035,6 +1336,45 @@
   "mbid": "89e4aade-fc77-4a18-8d0c-3554cc9b8c54",
   "genres": [
    "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "bettina holwerda": {
+  "genres": [
+   "Pop"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
+ "bexblu and paul stephan": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "beyond the music": {
+  "mbid": "802d8c14-4b66-4b66-bea8-188570cbca66",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "bez obmezhen": {
+  "genres": [
+   "Pop"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
+ "bhz": {
+  "mbid": "3b762e5b-4486-41a5-acf6-5eb388072254",
+  "genres": [
+   "Hiphop & R&B"
   ],
   "dance": [],
   "checked": "2026-11-27",
@@ -1072,6 +1412,13 @@
   "dance": [],
   "checked": "2026-11-27"
  },
+ "bill laurance and michael league": {
+  "mbid": "5b6203fb-5a4f-41db-ab14-469bcb71404a",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "bill laurance uk and michael league vs": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1102,6 +1449,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "bl f": {
+  "mbid": "d7ac3cc7-0d65-476b-9b81-d3e872672a2f",
+  "genres": [
+   "Rock",
+   "Nederlandstalig"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "bl f and vrienden": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1120,6 +1477,15 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "black doldrums": {
+  "mbid": "e7749c58-3a4c-46d3-926d-70c8fd21dacc",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "black veil brides": {
   "mbid": "33319aed-9bd7-4cd1-903c-716845c1b7cd",
   "genres": [
@@ -1137,6 +1503,16 @@
   ],
   "checked": "2026-11-26"
  },
+ "blanco white": {
+  "mbid": "58e31d0c-75b1-4632-92b8-d14c13dfe32b",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "bleech 9 3": {
   "mbid": "77127115-2daf-4ca8-81c2-c3acb4ce0c31",
   "genres": [
@@ -1151,6 +1527,16 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "blind channel": {
+  "mbid": "84cae50d-bdab-4597-89a3-0ebb06ca2247",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "blok3": {
   "mbid": "064814c9-1560-4d45-aaab-1b1f2c3b2b65",
@@ -1175,6 +1561,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "bodega": {
+  "mbid": "8a08d77c-d796-4546-8143-abca7ff9b62e",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "boekestijn and de wijk live": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1194,6 +1590,17 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "bonobo": {
+  "mbid": "9a709693-b4f8-4da9-8cc1-038c911a61be",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "bonson": {
   "mbid": "f08e5839-6da8-4db7-8835-be2aaf39ccb4",
@@ -1243,6 +1650,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "bouke and elvismatters band": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "boy harsher": {
   "mbid": "6dc9bc09-a0c7-40f9-b491-f90845927533",
   "genres": [
@@ -1277,6 +1689,16 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "brandi carlile": {
+  "mbid": "baf05baf-69fb-47dd-93c2-033536b8c385",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "breakfast club": {
   "mbid": "df19b09e-a53f-4d7f-b364-5ae4b05e6c4a",
   "genres": [
@@ -1300,6 +1722,15 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "breathe": {
+  "mbid": "c6ddb55a-c82c-46a8-ac07-cd77d63c5136",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "brecc": {
   "mbid": "303f408d-78b2-44a5-911f-6c06b3fe9a00",
@@ -1381,6 +1812,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "buysse and joosten": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "by day rotterdam rave kick off 2027 modular presents": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1412,6 +1848,11 @@
  "cafe europa eindejaarsshow": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "cafe van pollux": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "cage the elephant": {
@@ -1504,6 +1945,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "ccr by the fortunate sons": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "cello octet amsterdam and claron mcfadden": {
   "genres": [],
   "checked": "2026-11-26"
@@ -1590,6 +2036,26 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "chase atlantic": {
+  "mbid": "ecab255c-3af3-4154-87ec-2685041ce297",
+  "genres": [
+   "Pop",
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "chase matthew": {
+  "mbid": "b9bdc8af-9641-4958-8eb3-1bead9ff632d",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "cheeky monday": {
   "genres": [],
   "checked": "2026-11-26",
@@ -1607,6 +2073,16 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "chef special": {
+  "mbid": "dc894255-3dd4-46d1-9547-fabe79738722",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "chevremonts mannenkoor": {
   "genres": [],
   "checked": "2026-11-27",
@@ -1617,14 +2093,34 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "chili fest": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "chris luno nina malay b2b ben horton bumpr thijs koning": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "chris norman": {
+  "mbid": "197889a0-15b6-40bc-89b1-8859137bf823",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "chris stassy presents uss": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "christel de laat kende da": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "christmas in perfect harmony": {
@@ -1660,6 +2156,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "cis": {
+  "mbid": "baa4b025-8525-4dd5-bf6c-2e0f348c7a98",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "city of the sun": {
   "mbid": "055012f8-421f-448e-9741-23e8d82638f2",
   "genres": [
@@ -1669,6 +2172,15 @@
   "checked": "2026-11-26",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "clair obscur": {
+  "mbid": "de9ed665-c1a0-4c86-a9cf-0bef2b366fdc",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "clan of xymox": {
   "mbid": "1fc54353-dcd0-47b1-bb59-7bd2974df829",
@@ -1717,6 +2229,16 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "clean pete": {
+  "mbid": "da460afd-dc14-43a3-9d57-d9078340dc23",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "clean pete s kerstmatinee": {
   "genres": [],
   "checked": "2026-11-26",
@@ -1731,6 +2253,30 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "cleopatrick": {
+  "mbid": "69c8cacb-12a6-4cee-9221-02eb3c396c04",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "cliff and the shadows": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "clouseau": {
+  "mbid": "e24a10ec-55b4-408e-858a-3d348e5fa47c",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "clouseau in amare": {
   "genres": [],
@@ -1872,16 +2418,9 @@
   ],
   "checked": "2026-11-26"
  },
- "couteux": {
-  "mbid": "66896048-f9b1-44a8-99bd-f122a61ad347",
-  "genres": [
-   "Dance & DJ"
-  ],
-  "dance": [
-   "House"
-  ],
+ "creedence clearwater": {
+  "genres": [],
   "checked": "2026-11-27",
-  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "creedence clearwater revival": {
@@ -1995,6 +2534,25 @@
   ],
   "checked": "2026-11-26"
  },
+ "damien rice": {
+  "mbid": "2119beb8-6ac5-4f21-82a4-b831c90c0024",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "dan croll": {
+  "mbid": "480801c6-bd47-4d0d-b9fc-c20289529760",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "dan dusty": {
   "mbid": "a958d26c-bd02-48f5-84e5-092508d5f267",
   "genres": [
@@ -2011,6 +2569,15 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "dana winner": {
+  "mbid": "c136759e-c98e-4dc0-b5d2-1922943da8a2",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "danger dan": {
   "mbid": "aaf0cc6b-8855-4a78-9b89-1574eb459f58",
@@ -2052,6 +2619,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "danssalon": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "dansschool fresh": {
   "genres": [],
   "checked": "2026-11-27",
@@ -2068,6 +2640,15 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "daredevils": {
+  "mbid": "64b20ec0-db9e-4a06-924e-1f5d87e26669",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "dark oath": {
   "mbid": "786b58de-d4db-4572-88c6-bdfffb0b4b8c",
@@ -2086,6 +2667,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "das freie energieband": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "das gro e familien event weihnachtssingen in essen": {
   "genres": [],
   "checked": "2026-11-26",
@@ -2100,6 +2686,17 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "david van rosmalen": {
+  "genres": [
+   "Dance & DJ"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [
+   "Techno"
+  ],
+  "itunes": "2026-11-27"
+ },
  "davina michelle": {
   "mbid": "aa0104a7-ce6f-403f-bd8a-19779a0a7f77",
   "genres": [
@@ -2113,6 +2710,15 @@
  "davina michelle extra show": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "dawn brothers": {
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
   "itunes": "2026-11-27"
  },
  "dawn brothers and friends": {
@@ -2158,6 +2764,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "de bevers de bevers zijn er bijna": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "de bevers zijn er bijna": {
   "genres": [],
   "checked": "2026-11-27",
@@ -2173,6 +2784,21 @@
   "itunes": "2026-11-27"
  },
  "de gouden herinnering": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "de grootste hits uit ierland": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "de grote dino show": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "de grote jaren 80 show": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -2251,6 +2877,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "de regahs": {
+  "mbid": "1760a9af-4d93-4e83-89fc-d8ad5b15b495",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "de reunie": {
   "genres": [],
   "checked": "2026-11-26",
@@ -2288,10 +2921,30 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "de volkskrant live de liefde van nu": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "de vrienden van amstel live": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "de warme winkel": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "dea matrona": {
+  "mbid": "0e927262-c6c0-4401-893d-f79f2709a292",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "deaftones": {
   "mbid": "7017db3f-f871-4107-a467-845d5324950b",
@@ -2346,6 +2999,16 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "delta goodrem": {
+  "mbid": "8c5755b4-2de6-4158-bca9-e354cbf07437",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "demo club": {
   "mbid": "ade4ee29-96ed-4704-b13c-fe02bfc7c129",
@@ -2429,6 +3092,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "die arzte": {
+  "mbid": "f2fb0ff0-5679-42ec-a55c-15109ce6e320",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "die fantastischen vier": {
   "mbid": "7928481f-848e-4551-b658-472c0aaf0c85",
   "genres": [
@@ -2447,6 +3120,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "die schlagernacht des jahres": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "diederik nomden": {
   "mbid": "ba39914a-fa2b-4bf7-8f29-49088abec951",
   "genres": [],
@@ -2462,6 +3140,16 @@
  "diep in de kroeg": {
   "genres": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "diggy dex": {
+  "mbid": "2e6f29ce-38b4-4cd7-98df-a41743ec9fef",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "dikke": {
@@ -2529,6 +3217,11 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "dj francois presents": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "dj habibeats": {
   "mbid": "d54acdb8-9e8b-48e5-b2c8-5bbdb0a75b76",
   "genres": [
@@ -2541,6 +3234,16 @@
  },
  "dj ip": {
   "mbid": "6fa0e4d9-64d7-482e-bdd9-22c467a7d365",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "dj potato": {
+  "mbid": "f3f94915-ad34-4124-84be-923ac511697b",
   "genres": [
    "Dance & DJ"
   ],
@@ -2577,6 +3280,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "doetertoe fist 12 t m 17": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "dolf jansen": {
   "mbid": "601c1884-2d4a-4667-ac2b-83ee91bad941",
   "genres": [],
@@ -2593,6 +3301,11 @@
   "checked": "2026-11-26"
  },
  "dominique schreinemachers": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "don t let daddy know": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -2672,6 +3385,15 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "dragonforce": {
+  "mbid": "ef58d4c9-0d40-42ba-bfab-9186c1483edd",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "drama": {
   "mbid": "c3505299-5cb9-4a30-a7c8-e74d0aa3e1b0",
   "genres": [
@@ -2687,6 +3409,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "dressed like boys": {
+  "mbid": "b3c25193-15a9-49a5-b538-dd29b8146412",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "drift theory presents cici daze hidde van wee": {
   "genres": [],
   "checked": "2026-11-27"
@@ -2699,6 +3431,20 @@
   "dance": [
    "Techno"
   ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "dulfer total response": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "duman": {
+  "mbid": "f8a9a911-47de-49fe-ba96-7e5b5f08b7d0",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
@@ -2727,10 +3473,25 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "dutch david bowie": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "dvs1 all night long": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "dylan": {
+  "mbid": "72c536dc-7137-4477-a521-567eeb840fa8",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "east end dubs extended": {
   "genres": [],
@@ -2747,6 +3508,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "echoes from the dungeon fest iii": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "eddie jobson": {
   "mbid": "824dcca4-d658-41b3-95c5-07d0d183b5c6",
   "genres": [
@@ -2754,6 +3520,11 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "editie blauw": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "editie wit": {
   "genres": [],
@@ -2774,6 +3545,16 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "edwin evers band": {
+  "mbid": "da761dba-7f49-40a6-aa55-c4628fcfa8f1",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "een groet aan boudewijn de groot en lennaert nijgh": {
   "genres": [],
   "checked": "2026-11-27",
@@ -2787,6 +3568,11 @@
  "effenaar oud and nieuw 2026": {
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "efteling vertelt baron 1898": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "egbert derix and eric vloeimans": {
   "genres": [],
@@ -2906,6 +3692,16 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "emei": {
+  "mbid": "33ca1c01-0f4f-454c-8715-4e36908c594b",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "emeli sande": {
   "mbid": "7cfaac66-62e5-4fcd-af1b-9d3aa8f68e8b",
   "genres": [
@@ -2982,6 +3778,22 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "eosine": {
+  "mbid": "0debb7d2-a090-478c-a099-24381640613b",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "epis": {
+  "genres": [
+   "Rock"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
  "erasmus valentines party": {
   "genres": [],
   "checked": "2026-11-27",
@@ -2998,6 +3810,11 @@
   "itunes": "2026-11-27"
  },
  "erkan ogur and ismail hakk demircioglu tr": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "eros ramazotti": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -3052,6 +3869,13 @@
   "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
+ "eternal eclipse": {
+  "mbid": "07307e78-70e9-4f7d-a658-f70bdccca299",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "ethan regan": {
   "mbid": "04b685be-a7a7-4d54-8ea5-2b30a95fc0e1",
   "genres": [
@@ -3076,6 +3900,21 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "eve": {
+  "mbid": "66bdd1c9-d1c5-40b7-a487-5061fffbd87d",
+  "genres": [
+   "Pop",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "evergreen top 1000 live": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "evergrey": {
@@ -3136,6 +3975,11 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "eye of melian forest of forgetting": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "ezra collective": {
   "mbid": "d51acca9-a88b-4f5c-a2fe-f069de70ca1d",
   "genres": [
@@ -3165,6 +4009,15 @@
   "checked": "2026-11-26",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "fange": {
+  "mbid": "ba5c16a5-903e-4523-93ed-f781a15b2cef",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "fat dog": {
   "mbid": "8b16f1e6-d960-432b-92d1-70fc3e61176d",
@@ -3196,12 +4049,27 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "faulty towers": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "fay and koosje": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "fcknye festival": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
  "fee suzanne de ruiter": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "feelgood market": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -3220,6 +4088,11 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "fem event": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "femme bass mafia w silver pearl yushh soa420": {
   "genres": [],
@@ -3263,6 +4136,16 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "fiep": {
+  "mbid": "dd9046a6-1e09-4192-9aa1-06d2a461e94a",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "fiesta macumba": {
   "genres": [],
   "checked": "2026-11-26",
@@ -3285,6 +4168,16 @@
   ],
   "dance": [],
   "checked": "2026-11-26",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "fimiguerrero": {
+  "mbid": "c733243e-8a91-4a2c-8fd6-4c7a164efc0c",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
  },
@@ -3324,6 +4217,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "flo": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "floor jansen": {
   "mbid": "1dc9f1ab-3748-46c5-ac64-4a1311680da5",
   "genres": [
@@ -3333,6 +4231,11 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "forever nu": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "fortunate sons": {
   "mbid": "fd9571d2-82b1-4f5e-a15b-102780be17e5",
@@ -3380,6 +4283,18 @@
    "House"
   ],
   "checked": "2026-11-26"
+ },
+ "frans bauer live in ahoy": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "frans kalf": {
+  "mbid": "564e75af-a85d-4f94-af17-efb0550a2f3c",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "fred van leer": {
   "genres": [],
@@ -3461,6 +4376,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "fuse and kinan azmeh": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "futuro": {
   "mbid": "3ca32786-8849-454d-bc64-aa74761cee84",
   "genres": [
@@ -3469,6 +4389,11 @@
   "dance": [],
   "checked": "2026-11-26",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "gabriel rios and augusto bracho": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "galafeest montessori lyceum": {
@@ -3532,6 +4457,16 @@
   "dance": [
    "House"
   ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "gerard van maasakkers": {
+  "mbid": "18aeea92-717d-441f-bd66-dc235b31a3a2",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
   "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
@@ -3701,6 +4636,13 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "greenbeats": {
+  "mbid": "20a9e46c-bcfe-4619-8a18-e8b1d6f2adcf",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "grimner waylander and vansind": {
   "genres": [],
   "checked": "2026-11-27",
@@ -3720,12 +4662,22 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "growth dance competition finale": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "growth dance competition voorronde 1": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
  "growth dance competition voorronde 2": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "growth dance competition voorronde 3": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -3762,6 +4714,16 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "guus meeuwis live in ahoy": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "guy j all day long": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "gweldbatun": {
   "genres": [],
   "checked": "2026-11-27",
@@ -3792,9 +4754,28 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "hallo venray": {
+  "mbid": "6d345513-25fc-42bc-98a6-5ce3606103fb",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "hamid motebassem and ensemble": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "hang massive": {
+  "mbid": "2fe1afcb-1325-41ff-8f94-55696ca6955d",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
  "hang youth hardkoor nachtmis": {
@@ -3805,6 +4786,13 @@
  "hania derej trio": {
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "hannah mae": {
+  "mbid": "b462535b-dc22-4ed8-8f45-4f1eeb1dc982",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "hans klok the illusionists": {
   "genres": [],
@@ -3870,6 +4858,15 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "hazes": {
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
  "heartbeat christmas": {
   "genres": [],
   "checked": "2026-11-27",
@@ -3928,6 +4925,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "help": {
+  "mbid": "700cab52-4a39-4ab5-baae-a96bb654777d",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "henge": {
   "mbid": "47b63ff9-7c33-4747-921b-7410f92adbb2",
   "genres": [
@@ -3946,6 +4950,11 @@
   "mbid": "22bb063e-58c2-4ef6-8dad-7c7601ce8fba",
   "genres": [],
   "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "herinneringen top 50 concert": {
+  "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -3975,6 +4984,11 @@
  "hermes ahmadi": {
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "hernan cattaneo 6hrs": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "herrensauna": {
   "genres": [],
@@ -4040,6 +5054,13 @@
  },
  "het zuid land": {
   "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "het zuidelijk toneel": {
+  "mbid": "ca24598d-5c9a-49dd-829b-12f8f8caa532",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -4186,6 +5207,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "huib modderkolk": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "hujus": {
   "mbid": "8322ebe7-68f3-4fbd-b9af-d31373a12962",
   "genres": [
@@ -4217,6 +5243,15 @@
   "genres": [
    "Folk & singer-songwriter",
    "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "ice nine kills": {
+  "mbid": "d8f0f6ac-a0a7-47bd-9786-f9106d7bdd11",
+  "genres": [
+   "Metal & punk"
   ],
   "dance": [],
   "checked": "2026-11-27",
@@ -4260,6 +5295,18 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "igorrr": {
+  "mbid": "aec46991-e896-4c1f-80cc-aed97b0cdc73",
+  "genres": [
+   "Metal & punk",
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Hardstyle & hardcore"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "ikkimel": {
   "mbid": "b0061f91-ca53-45b9-ad13-d217f4f6caa2",
   "genres": [
@@ -4267,6 +5314,16 @@
    "Pop"
   ],
   "checked": "2026-11-26"
+ },
+ "ilse delange": {
+  "mbid": "3864b9cc-05f3-4478-a02e-18504b3dfa33",
+  "genres": [
+   "Rock",
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "imha tarikat": {
   "mbid": "08d4493a-4c58-4467-97cf-6e6b36223b6f",
@@ -4282,6 +5339,25 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "in flames": {
+  "mbid": "31745282-b1ea-4d62-939f-226b14d68e7c",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "ina muller": {
+  "mbid": "55e5618a-6985-4654-9bf1-d183317daf78",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
  },
  "ina muller and band": {
   "genres": [],
@@ -4370,6 +5446,16 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "internationale vrouwendag": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "internationale vrouwendag limburg": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "introdans": {
   "genres": [],
   "checked": "2026-11-27",
@@ -4409,6 +5495,31 @@
   "mbid": "37547347-ea75-45fa-9766-ff36b44d8147",
   "genres": [
    "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "ish dance collective": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "islandman": {
+  "mbid": "dfa9708f-d04e-4570-bd88-efff20b0da29",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "isolde lasoen": {
+  "mbid": "8ea1213f-3374-4b19-8854-6b8e0627ba68",
+  "genres": [
+   "Jazz, soul & blues"
   ],
   "dance": [],
   "checked": "2026-11-27",
@@ -4481,6 +5592,11 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "jack kays and his band": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "jack shore": {
   "mbid": "2d95a8dd-eca4-4dee-be6d-760fad636850",
   "genres": [
@@ -4495,6 +5611,21 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "jaco benckhuijsen and adam quartet": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "jacob banks": {
+  "mbid": "ca4d7350-e835-4af6-9cbd-1e012e597de4",
+  "genres": [
+   "Hiphop & R&B",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "jade mintjens": {
   "mbid": "9a7c7417-2378-4ff5-99b9-db847e41b38e",
@@ -4523,6 +5654,16 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "jake bugg": {
+  "mbid": "0d9905e6-add6-4713-94ca-9f686f9b5e9b",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "jake xerxes fussell": {
   "mbid": "fbc3a7a5-e602-4e7e-b730-af63a232f87d",
   "genres": [
@@ -4544,6 +5685,16 @@
   "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "james blunt": {
+  "mbid": "ebee61b4-bbdd-4087-9bcb-d5aa099088ec",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "james brown": {
   "mbid": "20ff3303-4fe2-4a47-a1b6-291e26aa3438",
@@ -4623,6 +5774,21 @@
   ],
   "itunes": "2026-11-27"
  },
+ "jeanine de bique and maarten engeltjes": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "jennifer rostock": {
+  "mbid": "8f4b34c0-0d2f-427e-8c45-91a078dbab7c",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "jenny arean zingt": {
   "genres": [],
   "checked": "2026-11-27",
@@ -4630,6 +5796,13 @@
  },
  "jeritza toney": {
   "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "jeroen leenders": {
+  "mbid": "e524060e-dd7c-41b9-9b8d-7f4b6c68b70e",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -4663,6 +5836,16 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "jet van der steen": {
+  "mbid": "a14525c8-0400-49c7-b13d-c60a0738fc41",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "jett rebel": {
   "mbid": "8205840f-c70a-4f94-99bd-bed1783db308",
   "genres": [
@@ -4676,6 +5859,16 @@
  "jeugdorkest nederland": {
   "genres": [],
   "checked": "2026-11-27"
+ },
+ "jim gardner": {
+  "mbid": "701fda53-554e-4ac6-be25-9971818e9a07",
+  "genres": [
+   "Pop",
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "jimmy nelson": {
   "mbid": "f8e1ae73-95d4-41d9-8e11-56b8243979ad",
@@ -4775,6 +5968,15 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "john corabi": {
+  "mbid": "0a383cd4-d26a-4ce1-8d9c-8bbb8a6df1e3",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "john corabi and friends": {
   "genres": [],
   "checked": "2026-11-26",
@@ -4810,13 +6012,55 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "johnny de mol": {
+  "mbid": "fc5ef08d-fc3a-4b5a-9d47-18c130352ff6",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "johnny de mol goed dat jij bestaat": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "joker out": {
+  "mbid": "ef78a7d7-2ca4-4a64-a41f-08cb1f6cf22b",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "jonah kagen": {
+  "mbid": "357f5a24-1396-4b38-926d-c4bfeea1391b",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "jools holland": {
+  "mbid": "29a6f210-8c16-404a-9c0f-c26e26ecb29c",
+  "genres": [
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "jooon": {
   "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "joosen en de jager": {
+  "mbid": "4644300a-53e6-453d-b01a-70f76dcf6b30",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -4830,7 +6074,27 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "jordan rakei": {
+  "mbid": "812c46e5-3d65-4e80-ada8-269450c5621b",
+  "genres": [
+   "Hiphop & R&B",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "jordino": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "jordino all night": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "joris luyendijk in calefaxland": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -4975,6 +6239,16 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "kaleo": {
+  "mbid": "260072fb-48e5-4653-9d17-b22e39e84d9c",
+  "genres": [
+   "Rock",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "kalou": {
   "mbid": "6f1128d4-cb69-4248-a494-dd7fe97ad3f0",
   "genres": [
@@ -5004,6 +6278,13 @@
  },
  "kandy crush": {
   "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "kans": {
+  "mbid": "4bbc9350-7ee8-48f7-bb0b-0b61ef36c9bd",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -5065,6 +6346,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "kasper van der laan": {
+  "mbid": "7d2ff12d-3c9b-4512-bfe7-4c2b530ea00e",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "katie gregson macleod": {
   "mbid": "3b5c0127-27de-449a-9d08-c308361fde82",
   "genres": [
@@ -5103,10 +6391,26 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "kellar": {
+  "mbid": "8b79a931-9699-4a51-9946-39b61af46380",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "kellar all night": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "keo": {
+  "mbid": "6984f569-8f76-4e1f-9e7c-ceeaf367c6fc",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "kerst in de royal": {
   "genres": [],
@@ -5235,11 +6539,45 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "klangkuenstler": {
+  "mbid": "dc60d275-d4d1-4bf2-b32c-4aa2332d7459",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "klangphonics": {
+  "mbid": "db63a19a-7f46-4d42-b38c-7ac99f33870a",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House",
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "klezmagic": {
   "mbid": "ec9e5360-dd1d-465b-80ac-742210c208e2",
   "genres": [],
   "dance": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "kmfdm": {
+  "mbid": "45074d7c-5307-44a8-854f-ae072e1622ae",
+  "genres": [
+   "Rock",
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
  "knipa meets ploum": {
@@ -5285,6 +6623,21 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "komm schon alter": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "kommil foo": {
+  "mbid": "89d1d11f-2856-4c17-b22a-0db3ab1d2699",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "kookworkshop kerst peel en maas": {
   "genres": [],
   "checked": "2026-11-27",
@@ -5294,6 +6647,18 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "kool and the gang": {
+  "mbid": "2469950a-f0ca-425a-bfbc-baf55ea3afde",
+  "genres": [
+   "Jazz, soul & blues",
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Disco"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "koosje": {
   "mbid": "dd6fb50e-9aff-44c3-9b32-79efd1af1bfb",
@@ -5325,6 +6690,16 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "kraak and smaak": {
+  "mbid": "472fcf2f-eaa2-44a2-8e8f-2ecd23cd0fc7",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
+  "itunes": "2026-11-27"
  },
  "kraak and smaak live": {
   "genres": [],
@@ -5365,6 +6740,11 @@
   "itunes": "2026-11-27"
  },
  "kruispunt kerst": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "kunstbende limburg voorronde": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -5433,6 +6813,17 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "la roux": {
+  "mbid": "88d1360a-bc2d-47df-90d1-d2de285560aa",
+  "genres": [
+   "Dance & DJ",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
+  "itunes": "2026-11-27"
+ },
  "laat me": {
   "genres": [],
   "checked": "2026-11-27",
@@ -5453,6 +6844,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "lageste stereo48": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "lagos in nl": {
   "genres": [],
   "checked": "2026-11-27",
@@ -5463,6 +6859,16 @@
   "genres": [],
   "dance": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "lars kroon": {
+  "mbid": "0c5c7d03-f0a5-4c72-9af3-e53df579ebdf",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "lasse top": {
@@ -5521,6 +6927,11 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "legends remastered feat rock4": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "lelo": {
   "mbid": "2f18a4c9-1d22-48f7-aba2-fc755c38a514",
   "genres": [
@@ -5528,6 +6939,31 @@
   ],
   "dance": [],
   "checked": "2026-11-27"
+ },
+ "lente": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "leo en marius blokhuis": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "leoniden": {
+  "mbid": "58e80cb1-6b99-43de-b3f8-0d24ab25688e",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "lets radiokoor": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "letz zep aerochicks": {
   "genres": [],
@@ -5563,9 +6999,26 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "lieven scheire": {
+  "mbid": "a8c96b2b-972f-49d0-b09d-2f88d80f682b",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "lijf and brein": {
   "genres": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "lionstorm": {
+  "mbid": "6cac34a9-14da-44ad-9963-53f5c958f993",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "liquicity winterfestival": {
@@ -5608,6 +7061,23 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "lizzy mcalpine": {
+  "mbid": "ee0b11de-0c8a-4267-9886-198f4579e1db",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "loe": {
+  "mbid": "0b26e40b-310b-4dc5-9e68-5e236b0c11ee",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "lois lane": {
   "mbid": "a769afa0-a3ad-4107-ac26-f3d6ef61806b",
   "genres": [
@@ -5645,6 +7115,11 @@
    "Folk & singer-songwriter"
   ],
   "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "loreena mckennitt the mask and mirror 30th anniversary tour": {
+  "genres": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
@@ -5779,6 +7254,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "maaike ouboter": {
+  "mbid": "05bf5877-7911-41ae-8ae7-f2223a60f011",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "maaike ouboter and band": {
   "genres": [],
   "checked": "2026-11-26",
@@ -5794,6 +7279,11 @@
   "checked": "2026-11-26"
  },
  "maas indoor festival afterparty": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "maffay": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -5815,6 +7305,20 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "maite hontele y la novia": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "maite kelly": {
+  "mbid": "c3fa8aad-6157-43ff-8974-5f828be520f2",
+  "genres": [
+   "Schlager"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "makershuis tilburg": {
   "genres": [],
@@ -5871,10 +7375,29 @@
   "dance": [],
   "checked": "2026-11-27"
  },
+ "man woman chainsaw": {
+  "mbid": "e72f0b0e-fe8e-405a-942e-633edd84c998",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "manifest girls": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "mannarino": {
+  "mbid": "367e5991-99bc-446c-8f79-c56b9f2028c6",
+  "genres": [
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "manowar": {
   "mbid": "00eeed6b-5897-4359-8347-b8cd28375331",
@@ -5902,19 +7425,49 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "marco schuitmaker": {
+  "mbid": "26355845-93e7-4b79-b885-cd45512f6dab",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "maria iskariot kaat van stralen en anderen": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
- "mark eitzel": {
-  "mbid": "80b694db-8f5e-485f-b589-17d7853140b0",
+ "mariachi el bronx": {
+  "mbid": "ccecffbf-6631-46a3-8e32-ece2669ace37",
   "genres": [
    "Rock"
   ],
   "dance": [],
   "checked": "2026-11-27",
-  "from": "musicbrainz"
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "marinierskapel der koninklijke marine en carel kraayenhof": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "mariska bauer": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "marsyas baroque": {
+  "genres": [
+   "Klassiek"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
  },
  "mart hillen": {
   "mbid": "d88e9dbc-32fa-41a9-9edf-78ad23936c22",
@@ -5932,6 +7485,13 @@
  "martin fondse ft femi dawkins and woodcraft wild card": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "martin string quartet": {
+  "mbid": "1fd1a0a0-3459-4505-886d-e6d321037d7c",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "martiniplaza connect": {
@@ -5981,6 +7541,11 @@
   ],
   "checked": "2026-11-26"
  },
+ "matthijn buwalda de rest mag je hebben": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "maxime vandommele and wisselende makers": {
   "genres": [],
   "checked": "2026-11-27",
@@ -6001,6 +7566,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "meester mark": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "mega indoor springkussen festival": {
   "genres": [],
   "checked": "2026-11-27",
@@ -6010,6 +7580,15 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "megadeth": {
+  "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "melancholia": {
   "mbid": "524c6252-a2a7-4d2f-9a3c-7180d5513227",
@@ -6099,6 +7678,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "merijn scholten": {
+  "mbid": "3c0c8504-e46f-48d7-ad25-0ecae6a9e009",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "merijn scholten lemming": {
   "genres": [],
   "checked": "2026-11-27",
@@ -6174,6 +7763,16 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "michael schenker group": {
+  "mbid": "db005731-6c46-4e7d-83e3-21f80189884a",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "michelle van tongerloo": {
   "genres": [],
   "checked": "2026-11-26",
@@ -6199,6 +7798,11 @@
   ],
   "checked": "2026-11-27",
   "from": "musicbrainz",
+  "itunes": "2026-11-27"
+ },
+ "middagje outsiders": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "midge ure": {
@@ -6243,6 +7847,15 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "miles o brien": {
+  "genres": [
+   "Pop"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
+  "itunes": "2026-11-27"
+ },
  "milolaathetlukken": {
   "mbid": "8e3203af-745b-441c-a2bb-469eec5c083e",
   "genres": [
@@ -6251,6 +7864,16 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "mimetheatergroep bambie": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "minder telefoon meer leven": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "mirage": {
@@ -6289,6 +7912,15 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "miss montreal": {
+  "mbid": "26c49de8-2da7-4045-974a-01603680c574",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "mnozil brass": {
   "mbid": "7a1551c1-a5c5-4d9e-880c-c4e28e059115",
   "genres": [
@@ -6325,6 +7957,15 @@
   "checked": "2026-11-27",
   "from": "musicbrainz",
   "itunes": "2026-11-27"
+ },
+ "moonspell": {
+  "mbid": "386b19c6-a3d2-414a-bef2-c178572b1cbe",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "moose bar xxl": {
   "genres": [],
@@ -6374,6 +8015,11 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "motel westcoast 20 years": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "mother s cake": {
   "mbid": "31ea4b40-f773-402c-aa97-a35b5aa825e4",
@@ -6520,6 +8166,11 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "nachtwacht rave of the year": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "naft": {
   "mbid": "53fe1d1e-6a4f-44ce-af15-ef2352019b8e",
   "genres": [
@@ -6594,10 +8245,15 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
- "neveldieren": {
-  "genres": [],
+ "nessa barrett": {
+  "mbid": "da0c8f4f-f4f4-4e91-86ca-e31108bb5706",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
   "checked": "2026-11-27",
-  "itunes": "2026-11-27"
+  "from": "musicbrainz"
  },
  "new cool collective": {
   "mbid": "5b7385dc-88da-4f01-958f-f7b9baa8217d",
@@ -6645,6 +8301,18 @@
   ],
   "checked": "2026-11-26"
  },
+ "nick schilder": {
+  "mbid": "46ccb5c9-d685-4d05-9416-08060a6935a8",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House",
+   "EDM"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "nickless": {
   "mbid": "32bff980-8d72-44e9-a881-a5cf32f6fa68",
   "genres": [
@@ -6665,6 +8333,16 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "niels geusebroek": {
+  "mbid": "74f3b0f9-bc63-408b-b863-f8a2ffe45c14",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "nieuwe helden": {
   "genres": [
    "Wereld & latin"
@@ -6683,6 +8361,16 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "nieve ella": {
+  "mbid": "0d351b4b-7986-4fd2-ac7f-40fdf2a34c71",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "night lovell": {
   "mbid": "c25963ac-b289-4d99-a8dc-06c0ce757f0c",
@@ -6717,6 +8405,23 @@
   "genres": [],
   "dance": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "ninajirachi": {
+  "mbid": "6897b46a-9236-4480-9ed7-300f6b85d62f",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "EDM",
+   "House"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "nirvana s mtv unplugged door blanko": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "nits": {
@@ -6762,6 +8467,13 @@
    "Folk & singer-songwriter"
   ],
   "checked": "2026-11-26"
+ },
+ "noimage": {
+  "mbid": "c6398f94-b780-417f-a3cd-de7c1ece84eb",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "nooduitgang day rave": {
   "genres": [],
@@ -6828,6 +8540,11 @@
    "Pop"
   ],
   "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "novastar be": {
+  "genres": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
@@ -6934,10 +8651,42 @@
   "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
+ "oerding": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "oet de waeg mit de jocus hofkepel": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "og keemo": {
+  "mbid": "66711d0a-cfcb-406c-9fb4-694384f417a3",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "ogham": {
+  "mbid": "a0f84c61-bdbb-441c-a92e-63297327ebf1",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "oguz": {
+  "mbid": "fe3e1314-d8b7-4dc7-98d5-870eea1fd416",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "oh voyage": {
   "mbid": "774d183f-3bad-4257-ae87-2937e1a8ec22",
@@ -6969,12 +8718,27 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "om en om en om 1 5": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "omar souleyman": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "one direction fanparty": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
  "one vision of queen": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "one vision of queen ft marc martel": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -7060,6 +8824,16 @@
   "genres": [],
   "checked": "2026-11-26"
  },
+ "other lives": {
+  "mbid": "69ce32a2-dbb1-42c2-98fc-2fbf896ef861",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "otis": {
   "genres": [
    "Hiphop & R&B"
@@ -7087,6 +8861,18 @@
   "mbid": "1986efa2-d3f8-4521-a77a-b7a39dbcf37c",
   "genres": [],
   "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "ozzyfied": {
+  "mbid": "49c7702c-7adc-4c1e-b965-717a86e16103",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "pa69 good vibes only": {
+  "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -7178,7 +8964,36 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "palace": {
+  "mbid": "82765bc6-c8b5-4530-8fd7-cc29a7b3346d",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "palaye royale": {
+  "mbid": "669b08a0-2144-4800-a446-1522cfef228c",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "palet lofi new year s eve": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "palmenrausch": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "panama pictures": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -7213,6 +9028,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "passenger": {
+  "mbid": "186e216a-2f8a-41a1-935f-8e30c018a8fe",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "pat b birthday bash xxl": {
   "genres": [],
   "checked": "2026-11-27",
@@ -7245,6 +9070,11 @@
  "patronaatje tot t gaatje": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "paul and meer vrienden": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "paula cole": {
@@ -7325,6 +9155,13 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "personal trainer": {
+  "mbid": "2e84443c-dc23-4b65-922a-f96b8a73d602",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "pet": {
   "genres": [
    "Pop"
@@ -7338,6 +9175,15 @@
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "peter wackel": {
+  "mbid": "a695bf53-24c5-4814-b33f-387492ee3e7b",
+  "genres": [
+   "Schlager"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "peterblue": {
   "mbid": "2ab0c51f-8ab5-4682-a418-25b081200ec3",
@@ -7422,6 +9268,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "pieternel": {
+  "mbid": "287ea70d-59eb-48db-97c9-805de6a46727",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "pillowcase vol 5": {
   "genres": [],
   "checked": "2026-11-27",
@@ -7442,6 +9298,15 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "pink floyd": {
+  "mbid": "83d91898-7763-47d7-b03b-b92132375c47",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "pink floyd project": {
   "mbid": "a7e5d0ad-5244-4144-9764-b7040423debe",
   "genres": [
@@ -7450,6 +9315,21 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "pink floyd project 50 years of animals and in the flesh": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "pip utton": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "pixl by day": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "plan de champagne": {
@@ -7473,10 +9353,30 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "politie warnsveld": {
+  "mbid": "33ac2e31-f809-4e35-8ff4-4ebe9b301e6f",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "politieke jongeren verzet protest": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "pomme": {
+  "mbid": "c75b226d-d643-41dc-a2b7-00c0ff8c8e7b",
+  "genres": [
+   "Folk & singer-songwriter",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "poptalk louis cole": {
   "genres": [],
@@ -7561,9 +9461,24 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "pussy riot riot days": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "puur twie nul": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "pynarello": {
+  "mbid": "f1d98ae7-e029-4c2e-ab89-d09bd2c3aea1",
+  "genres": [
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "q living room": {
@@ -7590,6 +9505,15 @@
   "genres": [
    "Hiphop & R&B",
    "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "queen": {
+  "mbid": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+  "genres": [
+   "Rock"
   ],
   "dance": [],
   "checked": "2026-11-27",
@@ -7630,6 +9554,15 @@
  "rabo open stage jen": {
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "racoon": {
+  "mbid": "1386778e-e0ca-460f-8a6a-e09c21b2b079",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "radio grenswerk": {
   "genres": [],
@@ -7674,6 +9607,11 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "ralph van raat rosanne philippens and laura bohn": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "ranger trucco": {
   "mbid": "39de9c60-14bb-4148-a29e-08df6303476a",
   "genres": [
@@ -7687,6 +9625,11 @@
   "itunes": "2026-11-27"
  },
  "ranger trucco 3hr set": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "ranja met een rietje": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -7711,7 +9654,17 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "ratatatata": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "ratherlost new year s day": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "ravelin i s m bel arte": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -7863,6 +9816,11 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "rhobijn": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "rhythm and brunch annabel": {
   "genres": [],
   "checked": "2026-11-27",
@@ -7924,6 +9882,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "roadburn": {
+  "mbid": "da4d9e03-e2b6-4b27-b101-3cab6bb433d7",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "rob kemps": {
   "genres": [],
   "checked": "2026-11-27",
@@ -7939,11 +9904,28 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "robert finley": {
+  "mbid": "30c56507-1f30-4d60-b056-66d432e472de",
+  "genres": [
+   "Jazz, soul & blues",
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "robin scherpen": {
   "mbid": "5bf65d6c-b423-4187-9cd8-fb952bfb66c4",
   "genres": [],
   "dance": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "rock4": {
+  "mbid": "f4477d3c-5572-4c60-ae16-f91f2694808e",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "rogstaekers boonte aovendj": {
@@ -7955,6 +9937,15 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "roland kaiser": {
+  "mbid": "efa2f016-ec5f-4a12-9857-c2801ea4704b",
+  "genres": [
+   "Schlager"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "role model": {
   "mbid": "4c76d2ab-cc32-47b9-8bfe-d382bed617f6",
@@ -7997,6 +9988,16 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "roosbeef": {
+  "mbid": "5c0892b4-4e1a-4d52-9eb3-2a48766ad144",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "rosa spruit": {
   "mbid": "99f5b162-463e-4bc6-8937-631ec7e033be",
   "genres": [
@@ -8010,6 +10011,16 @@
  "rouwen en vieren tilburg": {
   "genres": [],
   "checked": "2026-11-27"
+ },
+ "rowwen heze": {
+  "mbid": "8fbb1643-4c31-42ce-b900-5b697ea76540",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
  },
  "roxeanne hazes": {
   "mbid": "fdf7f6f7-2bf9-4be6-9572-00bec9580270",
@@ -8052,6 +10063,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "rue oberkampf": {
+  "mbid": "7e70a718-0944-4137-b68f-c6a9c7697604",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
+  "itunes": "2026-11-27"
+ },
  "running hot": {
   "mbid": "da0868d3-972e-45f7-b8fe-956d7765356b",
   "genres": [
@@ -8073,6 +10094,16 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "russo 14 30": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "russo 20 30": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "ruth jacott": {
   "mbid": "e6ce9cf8-f982-4470-afcb-8731feab729f",
   "genres": [
@@ -8087,6 +10118,18 @@
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "ry x": {
+  "mbid": "3b4cd16e-3a25-4c7b-ada6-33f5ea91e1b1",
+  "genres": [
+   "Dance & DJ",
+   "Rock"
+  ],
+  "dance": [
+   "House"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "ryan elliot b2b special guest": {
   "genres": [],
@@ -8147,7 +10190,22 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "sam quealy": {
+  "mbid": "f6c94a77-1c13-4ef0-880a-ff9264e5070c",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "samezitting": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "samra and capital bra": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -8155,6 +10213,16 @@
  "samya presents": {
   "genres": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "sandy good": {
+  "mbid": "9916f2fe-ce18-44da-b19d-9017d15070a1",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
   "itunes": "2026-11-27"
  },
  "sanne van assouw": {
@@ -8203,6 +10271,16 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "sasha keable": {
+  "mbid": "c2b7f5ad-0db8-4e6d-b228-5598d6b17717",
+  "genres": [
+   "Hiphop & R&B",
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "satin jackets": {
   "mbid": "e0432382-b245-4a30-b230-5558b36ac158",
   "genres": [
@@ -8212,6 +10290,16 @@
    "House",
    "Disco"
   ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "saxon": {
+  "mbid": "bbd80354-597e-4d53-94e4-92b3a7cb8f2c",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
@@ -8225,14 +10313,35 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "schwanenesee": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "scorpion gang": {
+  "mbid": "286cb279-b93b-44ab-8613-c99cd556b578",
+  "genres": [
+   "Hiphop & R&B"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "sdm eindshows": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
- "sedaction": {
-  "genres": [],
+ "secret chiefs 3": {
+  "mbid": "45ec9b41-eeea-42da-8337-28c67a8d2934",
+  "genres": [
+   "Rock",
+   "Dance & DJ"
+  ],
+  "dance": [],
   "checked": "2026-11-27",
+  "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
  "sedaction e p i q": {
@@ -8331,9 +10440,20 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "show pony": {
+  "mbid": "5a02e6c5-c3e9-433d-9d31-7041e2732bf5",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27"
+ },
  "showcase bandcoaching": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "showcase bs wereldster": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "showcase mhz": {
@@ -8375,7 +10495,17 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "simon oslender steve gadd will lee bruno muller": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "simone de kunovich b2b isabella": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "simone de kunovich b2b isabella all night": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -8396,6 +10526,13 @@
   "dance": [],
   "itunes": "2026-11-27"
  },
+ "simply tina": {
+  "mbid": "fb498000-e5ac-491e-ac0c-3fa950532f86",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "singer songwritersnight": {
   "genres": [],
   "checked": "2026-11-27",
@@ -8404,6 +10541,20 @@
  "singout": {
   "genres": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "siouxsie and the budgies": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "sixx paxx": {
+  "genres": [
+   "Pop"
+  ],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "dance": [],
   "itunes": "2026-11-27"
  },
  "skepta": {
@@ -8450,6 +10601,15 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "slomosa": {
+  "mbid": "262c9855-aa44-40f4-a275-cb425c074513",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "smells like nirvana": {
   "mbid": "a87d0eb9-10e7-4193-abf2-8deed16e709b",
   "genres": [],
@@ -8461,6 +10621,15 @@
   "mbid": "0304cb1d-699d-4b87-85c2-49e1244f7b4d",
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "snarky puppy": {
+  "mbid": "fe85367e-4036-43c1-874b-b91af81cb4f3",
+  "genres": [
+   "Jazz, soul & blues"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "social dance club night": {
   "genres": [],
@@ -8474,8 +10643,35 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "sofy": {
+  "mbid": "fbc6b5ec-92fa-469c-8cb3-f1ccce231735",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "solo": {
+  "mbid": "5ebe7dec-3b0d-4c60-abb2-3980e62bd353",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "soluna duo": {
   "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "someone like her": {
+  "mbid": "de4c71dd-7366-41ce-b3cb-717aced9061c",
+  "genres": [],
+  "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
@@ -8559,6 +10755,15 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "sor": {
+  "mbid": "8ff25779-eb1d-4d24-bf91-3118bdfb4225",
+  "genres": [
+   "Klassiek"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "south arcade": {
   "mbid": "de701d16-34d0-4ffb-a64e-2f07dea8e7a3",
   "genres": [
@@ -8621,6 +10826,15 @@
   "checked": "2026-11-26",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "spirit possession": {
+  "mbid": "933016e3-5aff-41ae-9e44-6dd1b7214e91",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "spite": {
   "mbid": "f5561204-f49d-4e30-a6ff-7ed37877c4b5",
@@ -8687,6 +10901,21 @@
   "checked": "2026-11-27",
   "from": "musicbrainz"
  },
+ "stanley burleson en anderen": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "star wars in concert": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "starman the dutch david bowie": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "state power": {
   "mbid": "17463aa3-e192-4f02-8cac-b5f3d4f238b1",
   "genres": [
@@ -8694,6 +10923,26 @@
   ],
   "dance": [],
   "checked": "2026-11-26",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "stella lefty": {
+  "mbid": "e881b225-42b1-41d9-9d5e-eff55568585b",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "stephanie struijk": {
+  "mbid": "670a8d84-9c5b-4cba-b4b5-2ae4c6f6db56",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
  },
@@ -8711,6 +10960,11 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "stichting rogstad": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "sticks and stones lgbtiq jobmesse": {
   "genres": [],
@@ -8743,6 +10997,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "storm seeker": {
+  "mbid": "8c58feff-24f4-4d32-8559-228b013bc980",
+  "genres": [
+   "Metal & punk",
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "stout": {
   "mbid": "430f0408-458a-4754-9f56-bd044191c6e2",
   "genres": [
@@ -8752,6 +11016,11 @@
    "Hardstyle & hardcore"
   ],
   "checked": "2026-11-26"
+ },
+ "striptopia": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "studentenfeest media college": {
   "genres": [],
@@ -8812,6 +11081,19 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "superstrings": {
+  "mbid": "90a0f076-ad82-4323-a61f-e5193af57e29",
+  "genres": [
+   "Dance & DJ",
+   "Pop"
+  ],
+  "dance": [
+   "Trance",
+   "House"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "superstrings and friends": {
   "genres": [],
   "checked": "2026-11-26",
@@ -8820,6 +11102,13 @@
  "sven and matthijs": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "sven figee": {
+  "mbid": "ef28c087-2d7e-41e9-8489-a61020b9b029",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "sven ratzke": {
@@ -8889,6 +11178,13 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "takeshi s cashew": {
+  "mbid": "4944b1bf-d022-4632-a690-f263efeb6eaa",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "talen and streken 2": {
   "genres": [],
   "checked": "2026-11-27",
@@ -8908,10 +11204,40 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "tash sultana": {
+  "mbid": "b3adc16a-abdb-4668-9b05-baabbf942db6",
+  "genres": [
+   "Rock",
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "tatsachlich liebe": {
   "genres": [],
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
+ },
+ "taxitaxi": {
+  "mbid": "826499df-791b-4f75-9d31-db24870be6dc",
+  "genres": [
+   "Rock",
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "tayc": {
+  "mbid": "0c980a2b-ca09-4d04-ad80-e7c2ce9621fb",
+  "genres": [
+   "Hiphop & R&B",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "taylor swift fanparty": {
   "genres": [],
@@ -8935,6 +11261,28 @@
   "dance": [],
   "checked": "2026-11-26",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "team rush hour xl": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "teddy swims": {
+  "mbid": "35feae82-8b2c-4f8f-ae7a-af5662848947",
+  "genres": [
+   "Jazz, soul & blues",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "teddybear": {
+  "mbid": "3a358686-7a68-4980-bc02-7fcc6c357aaf",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "tekno hardcore": {
@@ -8962,6 +11310,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "terug naar de toekomst": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "tessa june": {
   "mbid": "cd2b3627-4e50-444b-b1ed-d6290e52d3e6",
   "genres": [
@@ -8979,6 +11332,23 @@
   ],
   "dance": [],
   "checked": "2026-11-26"
+ },
+ "the 113": {
+  "mbid": "4c553b8c-884c-4ca6-8eb4-d9a328b2c0c7",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "the 12 tenors": {
+  "mbid": "41d577c3-0d3e-42bf-bd18-74b3155d9ec1",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
  },
  "the australian pink floyd show": {
   "mbid": "1814cbfc-131d-473f-a6e7-7208a25a69c1",
@@ -9057,6 +11427,26 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "the bronx": {
+  "mbid": "66ca7462-753c-48d0-9fe7-80d4b0897d18",
+  "genres": [
+   "Metal & punk",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "the bruceband": {
+  "mbid": "c652bdf4-9c42-4470-ad6f-867d40497b48",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "the bug club": {
   "mbid": "31f07dfd-df64-48dc-856e-9968059b8e35",
   "genres": [
@@ -9075,6 +11465,13 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "the cureheads": {
+  "mbid": "c4af4e26-03bd-4672-bc51-224aae94605a",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "the current": {
   "mbid": "372ac810-4eb2-43e8-98ac-7f495d1cd6aa",
   "genres": [
@@ -9082,6 +11479,11 @@
   ],
   "dance": [],
   "checked": "2026-11-27"
+ },
+ "the dead daisies featuring kelly hansen": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "the diamond baritones wonderland": {
   "genres": [],
@@ -9106,6 +11508,11 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "the dutch dubliners": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "the dutch queen": {
   "genres": [
    "Rock"
@@ -9128,6 +11535,13 @@
  "the electronic producers sessions": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "the elvis concert": {
+  "mbid": "f4eb45d0-ec9e-453b-b943-6c1b9f2ec6ec",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "the final first dance": {
@@ -9167,6 +11581,41 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "the haunted youth": {
+  "mbid": "12db27e3-c430-4ff9-ac22-c1ef8f2ad799",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "the hindley street country club": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "the hindley street country club hscc": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "the horse company": {
+  "mbid": "28ca3aae-f2d0-44cf-b943-aadcd1417d5c",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "the james brown": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "the james brown experience": {
   "genres": [],
@@ -9279,6 +11728,18 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "the orb": {
+  "mbid": "42c14c80-bd17-47e4-9bb2-a35897638c4d",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [
+   "House",
+   "Techno"
+  ],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "the prodigy": {
   "mbid": "4a4ee089-93b1-4470-af9a-6ff575d32704",
   "genres": [
@@ -9330,6 +11791,23 @@
   "dance": [],
   "checked": "2026-11-26"
  },
+ "the simon and garfunkel story": {
+  "mbid": "af4767bc-9cd9-4117-9de4-a12acfec1c82",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "the skatalites": {
+  "mbid": "87ac7e25-f278-47a0-b109-5eb131dc96b6",
+  "genres": [
+   "Jazz, soul & blues",
+   "Wereld & latin"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "the skints": {
   "mbid": "7a279145-e778-4099-8f73-ea917a1956c9",
   "genres": [
@@ -9346,6 +11824,18 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "the sound of springsteen": {
+  "mbid": "eef04f14-2dad-4da2-93a6-e858ba16616c",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "the story of bzn": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "the t s eliot appreciation society": {
   "mbid": "3d7f7a87-5585-480c-97c6-76c3c25c2269",
   "genres": [
@@ -9355,6 +11845,15 @@
   "checked": "2026-11-27",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "the toy dolls": {
+  "mbid": "c1c10a2a-241a-403a-a020-61545f31d374",
+  "genres": [
+   "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "the veils": {
   "mbid": "c3bf5aee-646e-4030-9ab4-d1fbd4947a97",
@@ -9380,6 +11879,15 @@
   "dance": [],
   "checked": "2026-11-27"
  },
+ "the warning": {
+  "mbid": "7f625f35-7e53-4f08-9201-16643979484b",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "the witcher": {
   "mbid": "23b58eff-d210-4a3a-bbb4-1363c7965653",
   "genres": [
@@ -9389,6 +11897,21 @@
    "Trance"
   ],
   "checked": "2026-11-27"
+ },
+ "the wombats": {
+  "mbid": "e105c272-b5d7-4135-82ef-d60bded54345",
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "the wombats proudly presents 20 years of a guide to love loss and desperation": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "thee marloes": {
   "mbid": "84543b66-bb03-4a68-8378-e3d62fabb120",
@@ -9420,6 +11943,13 @@
  },
  "third space": {
   "mbid": "f132e4ab-2e3d-41fc-9aee-985b40b0fd5e",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "thomas bergersen": {
+  "mbid": "152f56df-321c-45d9-8fe0-6076c9b45b08",
   "genres": [],
   "dance": [],
   "checked": "2026-11-27",
@@ -9500,6 +12030,22 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "till death do us part or not": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "tim knol": {
+  "mbid": "d62d90a3-7344-45c5-96ca-c5f91197ad75",
+  "genres": [
+   "Pop",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "timebox": {
   "mbid": "343692b5-2fec-42e4-9719-06d5c67b305a",
   "genres": [
@@ -9528,6 +12074,18 @@
   "dance": [],
   "checked": "2026-11-26",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "tommy wieringa and jaap scholten": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "tomode": {
+  "mbid": "b1daafaf-b38b-452b-9420-429bf753083f",
+  "genres": [],
+  "dance": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "tomorrow s problem": {
@@ -9653,6 +12211,27 @@
   "from": "itunes",
   "itunes": "2026-11-27"
  },
+ "travel through time": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "trentem ller": {
+  "mbid": "95e9aba6-f85c-48a0-9ec9-395d4f0e3875",
+  "genres": [
+   "Dance & DJ",
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
+  "itunes": "2026-11-27"
+ },
+ "trettmann stadt aus gold": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "trias kinetica": {
   "genres": [
    "Dance & DJ"
@@ -9673,6 +12252,11 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "trouwambtenaar jeroen smits van straat naar toga": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "true mountain laurel": {
   "mbid": "6b2643cf-5202-4c2d-b659-d316edfd8bce",
   "genres": [
@@ -9681,6 +12265,11 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "itunes",
+  "itunes": "2026-11-27"
+ },
+ "true spirit fest": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "truuk nao t zuuje": {
@@ -9707,6 +12296,16 @@
   "mbid": "10b7cfe3-a99b-49b3-91ed-b0efb7b32371",
   "genres": [
    "Metal & punk"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
+ "turnover": {
+  "mbid": "3a4c8052-7c20-473f-8b41-c3a081cbeb13",
+  "genres": [
+   "Pop",
+   "Rock"
   ],
   "dance": [],
   "checked": "2026-11-27",
@@ -9743,6 +12342,16 @@
   "dance": [],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "u uk uk1mat u": {
+  "mbid": "317ddb49-97db-4382-86e9-5c51519f23ac",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
  },
  "ub40 ft ali campbell": {
   "genres": [],
@@ -9815,6 +12424,16 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "uuhai": {
+  "mbid": "b7b1e69d-a802-4369-8eb5-2ab9253cf508",
+  "genres": [
+   "Metal & punk",
+   "Folk & singer-songwriter"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "valery meladze": {
   "genres": [
    "Folk & singer-songwriter"
@@ -9875,6 +12494,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "verknipt": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "verknipt nye eindhoven": {
   "genres": [],
   "checked": "2026-11-26",
@@ -9885,9 +12509,19 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "vessbroz presents": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "vette knepper": {
   "genres": [],
   "checked": "2026-11-26",
+  "itunes": "2026-11-27"
+ },
+ "veulpoepers": {
+  "genres": [],
+  "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
  "vhs": {
@@ -9903,6 +12537,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "vier jahreszeiten": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "vieze asbak": {
   "mbid": "99a996a9-57d3-49bb-a763-816ea4002127",
   "genres": [
@@ -9914,6 +12553,25 @@
   "checked": "2026-11-26",
   "from": "itunes",
   "itunes": "2026-11-27"
+ },
+ "vikkstar": {
+  "mbid": "05a3425c-ec37-472f-8231-64bc57f9b3cb",
+  "genres": [
+   "Dance & DJ"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
+  "itunes": "2026-11-27"
+ },
+ "villagers of ioannina city": {
+  "mbid": "ef145f02-d8e9-4a28-bed1-ab3c71cb66da",
+  "genres": [
+   "Rock"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "vinylfeestje": {
   "genres": [],
@@ -9989,6 +12647,11 @@
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
  },
+ "vrije keuze abonnement": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "vroeg pieken": {
   "genres": [],
   "checked": "2026-11-26",
@@ -10017,6 +12680,11 @@
   "from": "musicbrainz"
  },
  "wallace": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "wanda": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -10081,6 +12749,22 @@
   "genres": [],
   "dance": [],
   "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "wensmuziek": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "white noise": {
+  "mbid": "eebe62ef-b943-4c63-adc0-c638973a5ae4",
+  "genres": [
+   "Dance & DJ",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz",
   "itunes": "2026-11-27"
  },
  "wibi soerjadi": {
@@ -10163,7 +12847,22 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "wolvenroedel 3 familiar music": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
  "wonderland collectief makiko ito": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "world of dance": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
+ },
+ "wouter laumans and christian flokstra": {
   "genres": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
@@ -10174,6 +12873,16 @@
   "dance": [],
   "checked": "2026-11-27",
   "itunes": "2026-11-27"
+ },
+ "xavier naidoo": {
+  "mbid": "83a45847-0c18-4794-964a-500e49df7aac",
+  "genres": [
+   "Jazz, soul & blues",
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
  },
  "y2kerst": {
   "genres": [],
@@ -10194,6 +12903,16 @@
   "genres": [],
   "checked": "2026-11-27"
  },
+ "yentl en de boer": {
+  "mbid": "c98c5e6d-95a5-4b2b-be14-ecad9a39c7ef",
+  "genres": [
+   "Pop"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "itunes",
+  "itunes": "2026-11-27"
+ },
  "yin yin": {
   "mbid": "0b336c55-c3e9-4dab-9c96-bc10d7a54ef3",
   "genres": [
@@ -10205,6 +12924,11 @@
   ],
   "checked": "2026-11-27",
   "from": "musicbrainz"
+ },
+ "young classics": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "young marco": {
   "mbid": "bfad5e87-b092-45ac-bf10-3fc1b7474725",
@@ -10226,6 +12950,15 @@
   "checked": "2026-11-26",
   "itunes": "2026-11-27"
  },
+ "yves berendse": {
+  "mbid": "bbff9071-6c63-4865-9e88-80b4d973d165",
+  "genres": [
+   "Nederlandstalig"
+  ],
+  "dance": [],
+  "checked": "2026-11-27",
+  "from": "musicbrainz"
+ },
  "zeitgeist": {
   "mbid": "84fd9d3f-6a2d-4006-ad46-766333ffe1fc",
   "genres": [
@@ -10241,6 +12974,11 @@
  "zeitgeist 2026": {
   "genres": [],
   "checked": "2026-11-26"
+ },
+ "zij and aron elstak": {
+  "genres": [],
+  "checked": "2026-11-27",
+  "itunes": "2026-11-27"
  },
  "zinloos geluid": {
   "genres": [],
