@@ -120,35 +120,63 @@ async function main() {
   let errors = 0;
   let done = 0;
   const deadline = Date.now() + MAX_MINUTES * 60_000;
-  for (const [key, name] of todo) {
-    if (Date.now() > deadline) {
-      console.log(`MusicBrainz: tijdslimiet van ${MAX_MINUTES} minuten bereikt; de rest volgt morgen`);
-      break;
-    }
-    const prev = cache[key];
-    // A MusicBrainz miss from an earlier run that iTunes has not seen yet: straight to iTunes.
-    let res: ArtistGenreEntry | "error" = prev && !prev.genres.length && !prev.itunes && daysSince(prev.checked, today) <= RECHECK_MISS_DAYS ? prev : "error";
-    if (res === "error") {
-      await sleep(EXTRA_PAUSE_MS);
-      res = await lookup(name, today);
-      if (res !== "error") res = { ...res, from: res.genres.length ? "musicbrainz" : undefined };
-    }
-    if (res === "error") {
-      if (++errors >= 15) {
-        console.warn("MusicBrainz geeft herhaaldelijk fouten; stop voor vandaag");
-        break;
-      }
-      continue;
-    }
-    const needsDance = res.genres.includes("Dance & DJ") && !res.dance?.length;
-    if ((!res.genres.length || needsDance) && !res.itunes) {
-      const viaItunes = await itunes(name, res, today);
-      if (viaItunes !== "error") res = needsDance && viaItunes.from === "itunes" ? { ...res, dance: viaItunes.dance, itunes: today } : viaItunes;
-    }
+  // Two queues side by side, each at its own service's pace: MusicBrainz (1/s) and iTunes (~18/min). An artist goes
+  // to iTunes when MusicBrainz has no genre for it (or no dance style), so a run gets through twice as many.
+  const toItunes: [string, string][] = [];
+  let mbDone = false;
+  const store = (key: string, res: ArtistGenreEntry) => {
     cache[key] = res;
-    if (res.genres.length) found++;
     if (++done % 50 === 0) saveArtistGenres(cache); // a cut-off run keeps what it found
-  }
+  };
+  const needsItunes = (res: ArtistGenreEntry) => (!res.genres.length || (res.genres.includes("Dance & DJ") && !res.dance?.length)) && !res.itunes;
+
+  const mbWorker = async () => {
+    for (const [key, name] of todo) {
+      if (Date.now() > deadline) break;
+      const prev = cache[key];
+      // A MusicBrainz miss from an earlier run that iTunes has not seen yet: straight to iTunes.
+      if (prev && !prev.genres.length && !prev.itunes && daysSince(prev.checked, today) <= RECHECK_MISS_DAYS) {
+        toItunes.push([key, name]);
+        continue;
+      }
+      await sleep(EXTRA_PAUSE_MS);
+      const res = await lookup(name, today);
+      if (res === "error") {
+        if (++errors >= 15) {
+          console.warn("MusicBrainz geeft herhaaldelijk fouten; stop voor vandaag");
+          break;
+        }
+        continue;
+      }
+      const entry: ArtistGenreEntry = { ...res, from: res.genres.length ? "musicbrainz" : undefined };
+      store(key, entry);
+      if (entry.genres.length) found++;
+      if (needsItunes(entry)) toItunes.push([key, name]);
+    }
+    mbDone = true;
+  };
+
+  const itunesWorker = async () => {
+    while (Date.now() <= deadline) {
+      const next = toItunes.shift();
+      if (!next) {
+        if (mbDone) break;
+        await sleep(500);
+        continue;
+      }
+      const [key, name] = next;
+      const before = cache[key] ?? { genres: [], checked: today };
+      const res = await itunes(name, before, today);
+      if (res === "error") continue;
+      const danceOnly = before.genres.includes("Dance & DJ") && !before.dance?.length;
+      const entry = danceOnly && res.from === "itunes" ? { ...before, dance: res.dance, itunes: today } : res;
+      if (!before.genres.length && entry.genres.length) found++;
+      store(key, entry);
+    }
+  };
+
+  await Promise.all([mbWorker(), itunesWorker()]);
+  if (Date.now() > deadline) console.log(`Genres: tijdslimiet van ${MAX_MINUTES} minuten bereikt; de rest volgt bij de volgende run`);
   saveArtistGenres(cache);
 
   const events = applyArtistGenres(file.events, cache);
