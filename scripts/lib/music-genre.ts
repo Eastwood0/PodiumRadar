@@ -24,7 +24,7 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(jazz|smooth jazz|swing|big band|bebop|fusion|soul|neo-?soul|motown|blues|funk|gospel|rhythm and blues)\b/i, "Jazz, soul & blues"],
   [/\b(classical|klassiek|klassik|klassisch|opera|oper|orchestra|orkest|orchester|symphon\w*|baroque|barok|chamber music|kamermuziek|kammermusik|choir|koor|chor|contemporary classical|requiem|philharmoni\w*)\b/i, "Klassiek"],
   [/\b(latin|latino|reggaeton|salsa|bachata|cumbia|samba|bossa nova|flamenco|fado|tango|reggae|dancehall|dub|afrobeats?|afro|amapiano|world music|wereldmuziek|weltmusik|arabic|turkish|türkçe|bollywood|balkan|klezmer|celtic|cuban|brazilian|k-?pop|j-?pop|c-?pop|mandopop|cantopop)\b/i, "Wereld & latin"],
-  [/\b(top ?40|top ?2000|top ?100|classic hits|greatest hits|hitparade|fanparty|foute? (party|feestje|avond)|80'?s|90'?s|00'?s|pop|synth-?pop|electropop|dance-?pop|indie pop|teen pop|art pop|dream pop|power pop|europop|chamber pop|soft rock|adult contemporary|boy ?band|girl ?group|ballad|deutschpop)\b/i, "Pop"],
+  [/\b(night of the proms|karaoke|meezing\w*|sing-?along|top ?40|top ?2000|top ?100|classic hits|greatest hits|hitparade|fanparty|foute? (party|feestje|avond)|80'?s|90'?s|00'?s|pop|synth-?pop|electropop|dance-?pop|indie pop|teen pop|art pop|dream pop|power pop|europop|chamber pop|soft rock|adult contemporary|boy ?band|girl ?group|ballad|deutschpop)\b/i, "Pop"],
 ];
 // K-pop is pop in most people's ears; the Wereld rule above catches the word first, so add Pop too.
 const ALSO: [RegExp, MusicGenre][] = [[/\b(k-?pop|j-?pop|europop|dance-?pop|electropop|synth-?pop)\b/i, "Pop"]];
@@ -166,7 +166,7 @@ export function tributeTarget(name: string): string | undefined {
     const target = m?.[1]?.replace(/^(\d+ (years|jaar) of|the best of|the story of|the music of)\s+/i, "").trim();
     if (target && target.length >= 2) return target;
   }
-  const story = name.match(/^(?:the story of|the music of|the best of|een avond met de muziek van)\s+(.+)$/i);
+  const story = name.match(/^(?:the story of|the music of|the best of|een avond met de muziek van|we all sing|sing along with|.{2,40}? (?:sings|plays|speelt|zingt))\s+(.+)$/i);
   return story?.[1]?.trim() || undefined;
 }
 

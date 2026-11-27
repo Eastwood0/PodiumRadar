@@ -50,7 +50,9 @@ export function cleanActName(name: string): string {
     .replace(/\s*:\s*(19|20)\d\d\s*$/, "")
     .replace(/\s+(19|20)\d\d\s*$/, "")
     .replace(/\s*\+\s*(support|special guests?|guests?|supports?|voorprogramma)\s*$/i, "")
-    .replace(/\s+(all night long|all nighter|extended set|open to close)\s*$/i, "")
+    .replace(/\s*[-–—]?\s+(all night( long)?|all nighter|extended set|open to close)\s*$/i, "")
+    .replace(/\s*(&|en|and|und|met|with|\+)\s+(band|de band|vrienden|friends|freunde|gasten|guests|orkest|orchestra|strijkers)\s*$/i, "")
+    .replace(/^\d+\s+(jahre|jaar|years|ans)\s+(of\s+|van\s+)?/i, "")
     .replace(/\s*\([^()]{2,30}\)\s*$/, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -82,7 +84,7 @@ export function artistsFromTitle(title: string, opts: { lineup?: boolean } = {})
   }
   const colon = clean.match(/^([^:]{2,50}):\s+\S/);
   const head = colon && colon[1].split(/\s+/).length <= 6 ? cleanActName(colon[1]) : clean;
-  const parts = head.split(/\s+(?:\+|x|b2b)\s+/i).map((x) => x.trim()).filter(Boolean);
+  const parts = head.split(/\s*\+\s*|\s+(?:x|b2b)\s+/i).map((x) => x.trim()).filter(Boolean);
   return parts.length > 1 && parts.length <= 4 && parts.every((x) => x.length >= 2) ? parts : [head || title];
 }
 

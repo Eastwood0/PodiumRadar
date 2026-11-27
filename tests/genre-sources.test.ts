@@ -15,6 +15,14 @@ describe("line-ups and act names (B55)", () => {
     expect(artistsFromTitle("Simon & Garfunkel Story", { lineup: true })).toEqual(["Simon & Garfunkel Story"]);
     expect(artistsFromTitle("Kool & The Gang")).toEqual(["Kool & The Gang"]);
   });
+  it("drops '& band', '& Vrienden', '30 Jahre' and 'All Night' so the act can be looked up", () => {
+    expect(artistsFromTitle("Maaike Ouboter & band")).toEqual(["Maaike Ouboter"]);
+    expect(artistsFromTitle("BLØF & Vrienden")).toEqual(["BLØF"]);
+    expect(artistsFromTitle("30 Jahre Peter Wackel")).toEqual(["Peter Wackel"]);
+    expect(artistsFromTitle("Lucky Done Gone - All Night")).toEqual(["Lucky Done Gone"]);
+    expect(artistsFromTitle("Elmiene+ Jahson Paynter")).toEqual(["Elmiene", "Jahson Paynter"]);
+    expect(tributeTarget("We All Sing ABBA")).toBe("ABBA");
+  });
   it("drops tour names, years and notes from the act's name", () => {
     expect(artistsFromTitle("Oasis Live '27")).toEqual(["Oasis"]);
     expect(artistsFromTitle("Froukje - Extra show")).toEqual(["Froukje"]);
