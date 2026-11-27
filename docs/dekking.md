@@ -1,15 +1,15 @@
 # Dekking per venue
 
-Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:04:00.304Z).
+Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:56:28.892Z).
 
-**68 van 77 venues** hebben data, samen 6804 events (3633 muziek).
+**68 van 77 venues** hebben data, samen 6808 events (3610 muziek).
 
 | Venue | Land | Events | Muziek | Tot | Bron | Nog te doen |
 |---|---|---|---|---|---|---|
 | Ziggo Dome | NL | 129 | 110 | 2027-11-24 | ziggodome.nl ✅ |  |
 | Johan Cruijff ArenA | NL | 18 | 11 | 2027-07-17 | johancruijffarena.nl ✅ |  |
 | AFAS Live | NL | 105 | 78 | 2027-11-27 | afaslive.nl ✅ |  |
-| Rotterdam Ahoy | NL | 145 | 71 | 2027-11-27 | uitagendarotterdam.nl ✅ |  |
+| Rotterdam Ahoy | NL | 146 | 71 | 2027-11-27 | uitagendarotterdam.nl ✅ |  |
 | De Kuip | NL | 0 | 0 | — | uitagendarotterdam.nl ✅ |  |
 | GelreDome | NL | 25 | 9 | 2027-07-28 | gelredome.nl ✅ |  |
 | Goffertpark | NL | 0 | 0 | — | — | Openluchtterrein zonder eigen agenda; komt via Ticketmaster. |
@@ -19,14 +19,14 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:04:00.
 | Megaland | NL | 3 | 3 | 2027-06-20 | pinkpop.nl (Megaland) ✅ |  |
 | TivoliVredenburg | NL | 193 | 167 | 2027-04-19 | uitagendautrecht.nl ✅ |  |
 | 013 | NL | 143 | 135 | 2027-11-26 | 013.nl ✅ |  |
-| Effenaar | NL | 106 | 105 | 2027-11-26 | effenaar.nl ✅ |  |
+| Effenaar | NL | 107 | 106 | 2027-11-26 | effenaar.nl ✅ |  |
 | De Bosuil | NL | 62 | 61 | 2027-10-09 | debosuil.nl ✅ |  |
-| Grenswerk | NL | 78 | 73 | 2027-09-25 | grenswerk.nl ✅ |  |
+| Grenswerk | NL | 80 | 74 | 2027-09-25 | grenswerk.nl ✅ |  |
 | Muziekgieterij | NL | 108 | 108 | 2027-10-09 | muziekgieterij.nl ✅ |  |
 | Nieuwe Nor | NL | 0 | 0 | — | — | De site weigert automatische bezoekers (403); niet omzeilen (B23). |
 | Paradiso | NL | 56 | 55 | 2027-05-25 | iamsterdam.com ✅ |  |
 | Melkweg | NL | 226 | 224 | 2027-11-18 | melkweg.nl ❌, iamsterdam.com ✅ |  |
-| MartiniPlaza | NL | 180 | 133 | 2027-11-13 | visitgroningen.nl ❌ |  |
+| MartiniPlaza | NL | 180 | 98 | 2027-11-13 | visitgroningen.nl ❌ |  |
 | De Oosterpoort | NL | 257 | 213 | 2027-11-27 | spotgroningen.nl ✅ |  |
 | Stadsschouwburg Groningen | NL | 159 | 15 | 2027-10-14 | spotgroningen.nl ✅ |  |
 | Doornroosje | NL | 174 | 163 | 2027-11-13 | doornroosje.nl ✅ |  |
@@ -40,13 +40,13 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:04:00.
 | Theater Heerlen | NL | 346 | 99 | 2027-10-23 | plt.nl ✅ |  |
 | Theater Kerkrade | NL | 95 | 33 | 2027-11-13 | plt.nl ✅ |  |
 | Toon Hermans Theater | NL | 130 | 19 | 2027-10-21 | plt.nl ✅ |  |
-| De Oranjerie | NL | 103 | 38 | 2027-10-02 | theaterroermond.nl ✅ |  |
+| De Oranjerie | NL | 103 | 38 | 2027-10-02 | theaterroermond.nl ❌ |  |
 | Parktheater | NL | 0 | 0 | — | — | De site stuurt automatische bezoekers naar een controlescherm (BunnyCDN); niet omzeilen (B23). Andere bron wordt gezocht. |
-| Theater aan het Vrijthof | NL | 19 | 3 | 2027-01-10 | visitmaastricht.com ✅ |  |
+| Theater aan het Vrijthof | NL | 19 | 3 | 2027-01-10 | visitmaastricht.com ❌ |  |
 | Carré | NL | 218 | 41 | 2027-11-25 | carre.nl ✅ |  |
-| DeLaMar | NL | 317 | 11 | 2027-10-23 | delamar.nl ✅ |  |
+| DeLaMar | NL | 319 | 11 | 2027-10-23 | delamar.nl ✅ |  |
 | Stadsschouwburg Utrecht | NL | 423 | 14 | 2027-07-11 | stadsschouwburg-utrecht.nl ✅ |  |
-| Schouwburg & Concertzaal Tilburg | NL | 364 | 90 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
+| Schouwburg & Concertzaal Tilburg | NL | 364 | 101 | 2027-09-24 | schouwburgconcertzaaltilburg.nl ✅ |  |
 | Musis & Stadstheater | NL | 272 | 129 | 2027-11-25 | musisenstadstheater.nl ✅ |  |
 | Theater Rotterdam | NL | 147 | 3 | 2027-10-31 | uitagendarotterdam.nl ✅ |  |
 | Chassé Theater | NL | 13 | 4 | 2027-03-06 | explorebreda.com (Chassé) ✅ |  |
@@ -73,7 +73,7 @@ Gegenereerd door `npm run coverage` uit `data/events.json` (2026-11-27T13:04:00.
 | Trixxo Arena | BE | 9 | 0 | 2027-02-14 | trixxo-arena.be ✅ |  |
 | LANXESS arena | DE | 170 | 63 | 2027-11-25 | lanxess-arena.de ✅ |  |
 | RheinEnergieStadion | DE | 16 | 4 | 2027-06-12 | rheinenergiestadion.de ✅ |  |
-| Palladium | DE | 79 | 71 | 2027-11-26 | koeln.de (Palladium) ⚠️ storing |  |
+| Palladium | DE | 77 | 70 | 2027-10-31 | koeln.de (Palladium) ✅ |  |
 | PSD Bank Dome | DE | 91 | 23 | 2027-10-26 | psd-bank-dome.de ✅ |  |
 | Merkur Spiel-Arena | DE | 19 | 5 | 2027-07-17 | merkur-spiel-arena.de ✅ |  |
 | Mitsubishi Electric Halle | DE | 89 | 48 | 2027-11-26 | mitsubishi-electric-halle.de ✅ |  |

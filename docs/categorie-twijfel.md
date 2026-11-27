@@ -583,8 +583,8 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - POLITIEKE JONGEREN – VERZET! PROTEST!
 - Paardcafé: Bandsessies
 - Paardcafé: Club3voor12 Den Haag
+- Paardcafé: Een Fabelachtige kerst
 - Paardcafé: Electroclash
-- Paardcafé: Fabel indie kerst
 - Paardcafé: Gettin’ 80s 90s Wit It!
 - Paardcafé: HPW special met Popradar
 - Paardcafé: Haags Hiphop Centrum
@@ -811,17 +811,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Studio Suus: Up in the Air
 - Vasteloavendskonzeët: Kerkraads Symfonie i.s.m. PLT & Kirchöatsjer Vasteloavends Verain
 - ‘n Uurtje Kerst met PMK2019
-
-## theaterroermond.nl (8)
-
-- Johnny de Mol
-- Kerst in "de Royal"
-- Lachenderwies
-- Mariska Bauer
-- Nieuwe Helden
-- Rob Kemps
-- Simsala Saartje & het cijferstrand
-- The Best of Sven & Matthijs!
 
 ## delamar.nl (11)
 
@@ -1052,15 +1041,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - ZINLOOS GELUID
 - the noise of holland
 
-## visitmaastricht.com (6)
-
-- De Bevers Zijn Er Bijna!
-- Introdans - Swan Lake
-- Merijn Scholten - LEMMING
-- NDT 2 - Blast a universe
-- Sherlock Holmes
-- The Diamond Baritones - Wonderland
-
 ## explorebreda.com (Chassé) (3)
 
 - LAKSHMI
@@ -1145,12 +1125,25 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Take That
 - Tokio Hotel
 
-## koeln.de (Palladium) (7)
+## koeln.de (Palladium) (20)
 
 - Bury Tomorrow
 - Die neue Heinz Erhardt Revue
 - Eiskönigin 1 & 2 – Musik Show auf Eis
+- Game of Thrones & House of the Dragon + A Knight of the Seven Kingdoms
+- HU4L VIP Meet and Greet Package – Hollywood Undead – EU/UK 2027
 - Hollywood Undead – EU/UK 2027
+- Meshuggah
+- Monet192 – Can You See Me
+- Only The Poets – One More Fright
+- PA69 – GOOD VIBES ONLY 2027
+- Pierce The Veil – Europe 2027
+- RY X
+- STAIND – Break The Cycle 25th Anniversary
+- TRETTMANN – Stadt aus Gold
+- The Teskey Brothers
+- The Wombats proudly presents…. 20 Years of a Guide to Love, Loss & Desperation
 - Thrown
 - Undead Army VIP Merch Package – Hollywood Undead – EU/UK 2027
+- Vocatium Köln
 - WEIBER 2.0 – Der Mädelsabend geht weiter!
