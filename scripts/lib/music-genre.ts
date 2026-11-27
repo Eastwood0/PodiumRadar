@@ -24,7 +24,7 @@ const RULES: [RegExp, MusicGenre][] = [
   [/\b(jazz|smooth jazz|swing|big band|bebop|fusion|soul|neo-?soul|motown|blues|funk|gospel|rhythm and blues)\b/i, "Jazz, soul & blues"],
   [/\b(classical|klassiek|klassik|klassisch|opera|oper|orchestra|orkest|orchester|symphon\w*|baroque|barok|chamber music|kamermuziek|kammermusik|choir|koor|chor|contemporary classical|requiem|philharmoni\w*)\b/i, "Klassiek"],
   [/\b(latin|latino|reggaeton|salsa|bachata|cumbia|samba|bossa nova|flamenco|fado|tango|reggae|dancehall|dub|afrobeats?|afro|amapiano|world|wereld|weltmusik|arabic|turkish|türkçe|bollywood|balkan|klezmer|celtic|cuban|brazilian|k-?pop|j-?pop|c-?pop|mandopop|cantopop)\b/i, "Wereld & latin"],
-  [/\b(pop|synth-?pop|electropop|dance-?pop|indie pop|teen pop|art pop|dream pop|power pop|europop|chamber pop|soft rock|adult contemporary|boy ?band|girl ?group|ballad|deutschpop)\b/i, "Pop"],
+  [/\b(top ?40|top ?2000|top ?100|classic hits|greatest hits|hitparade|fanparty|foute? (party|feestje|avond)|80'?s|90'?s|00'?s|pop|synth-?pop|electropop|dance-?pop|indie pop|teen pop|art pop|dream pop|power pop|europop|chamber pop|soft rock|adult contemporary|boy ?band|girl ?group|ballad|deutschpop)\b/i, "Pop"],
 ];
 // K-pop is pop in most people's ears; the Wereld rule above catches the word first, so add Pop too.
 const ALSO: [RegExp, MusicGenre][] = [[/\b(k-?pop|j-?pop|europop|dance-?pop|electropop|synth-?pop)\b/i, "Pop"]];

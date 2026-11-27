@@ -59,7 +59,7 @@ const TITLE_RULES: [RegExp, Genre][] = [
   // Sport: fixtures and competitions
   [/\b(fc|sv|vfl|tsv|bvb|ajax|feyenoord|vitesse|psv|fortuna|haie|uefa|bundesliga|eredivisie|keuken kampioen|champions league|europa league|conference league|nations league|world cup|wk|ek|handball|basketball|volleyball|eishockey|darts|boxing|boksen|glory|wwe|ufc|monster jam|supercross|turnkunst|interland|league|cup|meisterschaft|championship|grand prix|zesdaagse)\b/i, "Sport"],
   [/\bvs\.?\s/i, "Sport"],
-  [/\b(wrestling|wxw|worldcup|marathon)\b/i, "Sport"],
+  [/\b(wrestling|wxw|worldcup|marathon|basket\w*|korfbal|ijshockey|turnen)\b/i, "Sport"],
   // Comedy
   [/\b(comedy|comedian|comedians|cabaret|kabarett|stand-?up|lacht?|lachende|humou?r)\b/i, "Comedy"],
   // Fairs and markets
@@ -67,6 +67,7 @@ const TITLE_RULES: [RegExp, Genre][] = [
   [/\b(esports?|e-sports|iem|gaming|lan ?party|tattoo\w*|banen\w*|open dag|opendag|congres\w*)\b/i, "Beurs"],
   [/\b(beurs|messe|börse|boerse|snuffelmarkt|vlooienmarkt|rommelmarkt|markt|expo|convention|congres|kongress|fair|cards & games|woonbeurs|studiekeuze|jobmedi|karrieremesse|banenmarkt|kerstmarkt|wintermarkt|kerstfair)\b/i, "Beurs"],
   [/\b(workshop|yoga|linedance|creatief|gebaren|popquiz|cursus|rondleiding|filosofisch\w*|gesprekk?en|talkshow|wetenschap\w*|rouwen)\b/i, "Overig"],
+  [/\b(\w*musical|illusionists?|illusie\w*|goochel\w*)\b/i, "Show"],
   [/\b(company(?=\s*:)|compagnie|cabaretcollege|toneelgroep|theatergroep|volkstoneel|tejater|monoloog|voorstelling)\b/i, "Toneel"],
   // Family
   [/\b(sinterklaas|sint|kerstcircus|paw patrol|peppa|bluey|disney|nijntje|k3|studio 100|kinderen voor kinderen|kids|kinder)\b|\(\s*\d+\+\s*\)|\b\d+\+\s*$/i, "Familie"],

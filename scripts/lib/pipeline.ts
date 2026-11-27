@@ -3,7 +3,7 @@ import type { SourceEvent } from "../adapters/types";
 import { localDate, TZ_BY_COUNTRY } from "./dates";
 import { classify } from "./categorize";
 import { eventDanceStyles, eventGenres } from "./music-genre";
-import { artistsFromTitle, decodeEntities, eventId, tokenSetSimilarity } from "./normalize";
+import { artistsFromTitle, cleanActName, decodeEntities, eventId, tokenSetSimilarity } from "./normalize";
 
 export const HORIZON_DAYS = 365;
 export const SAME_EVENT_SIMILARITY = 0.85; // bouwplan §7
@@ -41,7 +41,7 @@ export function toEvents(raw: SourceEvent[], sourceName: string, venues: Map<str
     const candidate = {
       id: eventId(venue.id, day, s.title),
       title: s.title,
-      artists: (s.artists?.length ? s.artists : artistsFromTitle(s.title, { lineup: kind.genre === "Dance" })).map((name) => ({ name })),
+      artists: (s.artists?.length ? s.artists.map((a) => cleanActName(a) || a) : artistsFromTitle(s.title, { lineup: kind.genre === "Dance" })).map((name) => ({ name })),
       venueId: venue.id,
       venueName: venue.name,
       city: venue.city,

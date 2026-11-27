@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { classify } from "../scripts/lib/categorize";
-import { applyArtistGenres, artistKey, type DanceStyle, fromItunesGenre, type MusicGenre, tributeTarget } from "../scripts/lib/music-genre";
+import { applyArtistGenres, artistKey, type DanceStyle, fromItunesGenre, genresInText, type MusicGenre, tributeTarget } from "../scripts/lib/music-genre";
 import { artistsFromTitle } from "../scripts/lib/normalize";
 import { pickItunes } from "../scripts/genres";
 
@@ -27,6 +27,11 @@ describe("line-ups and act names (B55)", () => {
 describe("category words inside compound words, venue type as fallback", () => {
   it("reads PubQuiz, Banenbeurs, TattooCon and IEM as not music", () => {
     for (const t of ["PubQuiz: Bij Benee", "De Noordelijke Banenbeurs 2027", "30th TattooCon Dortmund", "IEM Cologne 2027"]) expect(classify(t, undefined, none).category, t).toBe("overig");
+  });
+  it("reads basketball, illusionists and children's musicals as not music, hit shows as pop", () => {
+    for (const t of ["Donar Groningen – Kangoeroes Basket Mechelen 2026", "Hans Klok - The Illusionists", "De Nog Grotere Slijmmusical"]) expect(classify(t, undefined, none).category, t).toBe("overig");
+    expect(genresInText("Qmusic Top 40 Live")).toEqual(["Pop"]);
+    expect(genresInText("Classic Hits In Concert")).toEqual(["Pop"]);
   });
   it("reads Lunchconcert and Herfstconcert as music", () => {
     expect(classify("Kyella: Lunchconcert", undefined, none, "theater").category).toBe("muziek");
