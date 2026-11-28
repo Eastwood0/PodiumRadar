@@ -1,6 +1,6 @@
 # Categorie: twijfelgevallen
 
-Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-27).
+Events die als muziek getoond worden zonder dat de zaal of de titel dat bevestigt (2026-11-28).
 Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-correcties.yml`.
 
 ## ziggodome.nl (3)
@@ -70,7 +70,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 
 - Oranje Fonds 25 jaar
 
-## 013.nl (114)
+## 013.nl (111)
 
 - 16 Horsepower
 - 40UP - Big Bang
@@ -79,7 +79,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Accept
 - Adrian Vandenberg, 50 years of Rock!
 - Alcest + Agriculture
-- Allt
 - Amorphis
 - An Evening With The Pineapple Thief
 - Archive
@@ -94,7 +93,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Clean Pete's Kerstshow
 - Clouseau
 - Coilguns
-- Crush XL
 - Cul's Cult
 - DRAGONFORCE
 - Dark Oath
@@ -158,7 +156,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Spite + Emmure
 - Stratovarius + Fabio Lione's Dawn of Victory
 - Subquake
-- Sugar Spine
 - TAXITAXI
 - The Australian Pink Floyd Show
 - The Black Dahlia Murder
@@ -194,12 +191,11 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - TRAITRS + Cold Union
 - Yves Berendse
 
-## uitagendautrecht.nl (23)
+## uitagendautrecht.nl (21)
 
 - 40UP Big Bang
 - 4AM.
 - Back To The Disco met Gerard Ekdom
-- Blackout
 - De Microclub
 - Discozwemmen
 - Fiesta Macumba XL
@@ -210,7 +206,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - MOTIV
 - Mama Africa: 9 Year Anniversary
 - Midnight Melodies
-- NEMS
 - One Direction Fanparty
 - Pop-O-Matic: Kerstspecial
 - Rookies Gambit
@@ -220,13 +215,11 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Wasserette
 - Y2Kerst
 
-## iamsterdam.com (247)
+## iamsterdam.com (242)
 
 - 1984 Night at the Arcade
 - 80's Verantwoord
 - 90's NOW
-- ANNIE PRESENTS: Millenial Optimism
-- ANNIE PRESENTS: Millennial Optimism
 - Afterhours
 - Alex Sampson
 - Alexandra Kay
@@ -289,7 +282,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Encore New Years Eve 2026
 - Ethan Regan
 - Eve
-- Exproz All Night Long
 - Extince
 - Fat Dog
 - Fiesta Macumba
@@ -312,6 +304,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Hermanos Gutiérrez
 - Het Amsterdams Ballongezelschap
 - Highguest
+- Homohop
 - Ida
 - Infloyd
 - Isaiah Rashad
@@ -352,7 +345,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - London Calling
 - Loreen
 - Loïs Lane
-- Lucky Done Gone - All Night
 - Luminosity 19 Year Anniversary
 - MC4D
 - MICO
@@ -367,7 +359,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Milolaathetlukken
 - Miss Bashful
 - Miss Bashful Official After
-- Modestep
 - Mortimer
 - Mothica
 - Mulaa Joans
@@ -381,7 +372,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Nieve Ella
 - Night Lovell
 - Ninajirachi
-- Nothhingspecial
 - Nusantara Beat
 - OP JE MANNIE
 - Odetari
@@ -390,8 +380,8 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Opus Kink
 - Other Lives
 - PERCEVAL
+- Paul Smith (Maximo Park)
 - Pennywise / Descendents / End It / DFL
-- Phantom Wizard
 - Politie Warnsveld
 - Pomme
 - Punch Brothers
@@ -499,7 +489,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Ziggy Alberts
 - sor
 
-## paard.nl (120)
+## paard.nl (118)
 
 - 40UP
 - 80S VERANTWOORD
@@ -541,7 +531,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - HET GOEDE DOEL®
 - HIGH FADE
 - HIGHGUEST
-- HIIGO
 - INDOROCK & MORE 2026 met MARLON PICHEL
 - JACK AND THE WEATHERMAN
 - JAKE XERXES FUSSELL
@@ -585,7 +574,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Paardcafé: Club3voor12 Den Haag
 - Paardcafé: Een Fabelachtige kerst
 - Paardcafé: Electroclash
-- Paardcafé: Gettin’ 80s 90s Wit It!
 - Paardcafé: HPW special met Popradar
 - Paardcafé: Haags Hiphop Centrum
 - Paardcafé: Haagse Popweek Metal Night
@@ -639,7 +627,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - VROEGZAT
 - WORLD OF DANCE NETHERLANDS - REGIONAL QUALIFIER 2
 
-## patronaat.nl (32)
+## patronaat.nl (31)
 
 - Any Given Day
 - Artin Muziek & friends
@@ -649,7 +637,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Complexity Presents: Trhä
 - Disco Del Mundo
 - Dream State
-- FUCK THE CISTEM
 - Geannuleerd: KMFDM
 - Genesis Project – Philled with Collins
 - Hagane
@@ -690,7 +677,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - WAT! for Dinner
 - Wim Naus en Lottie Boermans
 
-## doornroosje.nl (47)
+## doornroosje.nl (46)
 
 - 40UP
 - Ak’chamel
@@ -713,7 +700,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Fiber
 - Fiesta Macumba
 - Frans Kalf
-- Friction
 - Gallowstreet
 - Groeten uit Zingelong
 - Heideroosjes
@@ -749,14 +735,12 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Steve 'n' Seagulls
 - Temple Of Wave
 
-## mezz.nl (6)
+## mezz.nl (4)
 
 - Bonte familiedag
 - Grôtste Mââuwert
 - Stuiterbal
-- TRIBE x Pier15
 - The Dutch Queen
-- The Electronic Producers’ Sessions
 
 ## spotgroningen.nl (2)
 
@@ -799,18 +783,16 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Travel Through Time: Moord in Maaspoort
 - Venlo.fit sportgala 2026: Gemeente Venlo
 
-## plt.nl (10)
+## theaterroermond.nl (8)
 
-- Bachs Weihnachtsoratorium: Heerlense Oratoriumvereniging
-- De Sjatkis: Leedjes en leidjes oet os sjtad
-- Het Parkstad Limburg Sterreheim Buuttegala
-- Het Sittards KampsVanBaar Buuttegala
-- Het StreekTheater: Pension Siestermans
-- Internationale Vrouwendag Limburg 2027
-- Knipa meets Ploum
-- Studio Suus: Up in the Air
-- Vasteloavendskonzeët: Kerkraads Symfonie i.s.m. PLT & Kirchöatsjer Vasteloavends Verain
-- ‘n Uurtje Kerst met PMK2019
+- Johnny de Mol
+- Kerst in "de Royal"
+- Lachenderwies
+- Mariska Bauer
+- Nieuwe Helden
+- Rob Kemps
+- Simsala Saartje & het cijferstrand
+- The Best of Sven & Matthijs!
 
 ## delamar.nl (11)
 
@@ -847,7 +829,7 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Utrechts Sprookjestheater: De Gelaarsde Kat
 - Verkennen Mars: Voorproevers #3
 
-## schouwburgconcertzaaltilburg.nl (166)
+## schouwburgconcertzaaltilburg.nl (164)
 
 - 20 jaar 3JS
 - 40 jaar Rowwen Hèze: Rhobijn
@@ -913,7 +895,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Introdans: KYLIAN
 - Introdans: Swan Lake
 - Jaco Benckhuijsen & ADAM Quartet: IJS
-- Jade Mintjens: Bedankt om te komen
 - Jan-Willem Rozenboom, JW Roy & Guus Meeuwis: Rozenboom Invites
 - Jeanine de Bique & Maarten Engeltjes: Royals In Love
 - Jeroen Leenders: Heiden
@@ -975,7 +956,6 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - RATATATATA!: Theo Maassen, Ilse Warringa, Plien & Bianca e.a.
 - Ralph van Raat, Rosanne Philippens & Laura Bohn: Adams, Reich & Glass
 - Raymi Sambo Maakt: Wachten op Marsha
-- Recirquel: Paradisum
 - Remy van Kesteren: THREADS
 - Richard Groenendijk: Gelukkig heb je mij nog
 - Ricky Risolles 3: Niet zo Indiscreet…
@@ -1031,15 +1011,94 @@ Staat hier comedy, sport of een show tussen: zet de naam in `config/categorie-co
 - Amber Arcades, I am Oak & The T.S. Eliot Appreciation Society
 - Class of 2027
 
-## dynamo-eindhoven.nl (7)
+## dynamo-eindhoven.nl (6)
 
 - BIOTOOP
 - FREE YOUTH COLLECTIVE
 - HOME GROWN SESSIONS #32
 - Own The Spot: Indoor Edition
-- Queerhoven Boardgame Night
 - ZINLOOS GELUID
 - the noise of holland
+
+## visitgroningen.nl (68)
+
+- 3JS – 20 jaar 3JS
+- ABBA The Music – From Waterloo to Dancing Queen
+- ArtOranje 2027
+- Autosalon van het Noorden 2027
+- Carmina Burana
+- Charly Luske - The Story of George Michael
+- Christel de Laat - Kende da!? (UITVERKOCHT)
+- Cliff & The Shadows Tributeband
+- Country Time!
+- Daddy Cool turns 50
+- Darkride - 75-jarig jubileum van de Efteling
+- De Bevers – De Bevers zijn er bijna!
+- De Circusbroers
+- De Grote Dino Show
+- De Kleine Prins
+- Dirk Scheele - Winterpret
+- Donar Groningen –  Okapi Aalst 2027
+- Donar Groningen – CB Liege 2027
+- Donar Groningen – Coretec Oostende 2027
+- Donar Groningen – HKK Zrinjski 1992 2027
+- Donar Groningen – Heroes Den Bosch 2026
+- Donar Groningen – House of Talents Spurs Kortrijk 2027
+- Donar Groningen – Landstede Hammers 2026
+- Donar Groningen – Spartak Pleven 2027
+- Donar Groningen – Windrose Giants Antwerp 2027
+- Donna's Hot Stuff
+- EVITA
+- Efteling vertelt... Baron 1898
+- Esther van der Voort - Mama is Boos
+- Eye of Melian - Forest of Forgetting
+- FEM.Event 2027
+- Girls on Fire 3
+- Hollandse Toppers
+- Huub Stapel - Mannen komen van Mars, vrouwen van Venus
+- Ilse DeLange
+- Jay Francis - Tunnelvisie
+- Johnny de Mol - Goed dat jij bestaat!
+- Judas Priest
+- Juf Roos gaat op vakantie
+- Laat me
+- Marco Schuitmaker - Recht uit het hart
+- Martiniplaza Connect
+- Master of film music - Ennio Morricone
+- Matthijn Buwalda - De rest mag je hebben
+- Mees Kees - De Husselrace
+- Motel Westcoast 20 Years!
+- Nienke Plas – Appeltje Eitje
+- Oliver en het avontuur van de straatkinderen
+- Paraview 2027
+- Pink Floyd Project - 50 years of Animals & In The Flesh 1977
+- Rock Sympho Show – Time Machine 2027
+- Route du Soleil
+- SDM EINDSHOWS 2026
+- Sportgala Groningen 2026
+- Symposium Sportgala 2026
+- TAFKAL - MOST WANTED (2027)
+- TROUWAMBTENAAR JEROEN SMITS - VAN STRAAT NAAR TOGA
+- Take It To The Limit - A celebration of the Eagles
+- The Best of Simon & Garfunkel
+- The NextStreetboys
+- The Wanderer
+- The Witcher
+- Tineke Schouten – Femme Vitaal
+- Titanique
+- Titus & Fien De Revue - Vooruit, nog één keertje dan
+- Van der Laan & Woe – Dinsdagmiddag
+- Vlieg Met Me Mee
+- ‘Maris, Wat Eten We Vandaag’  - Mariska Bauer
+
+## visitmaastricht.com (6)
+
+- De Bevers Zijn Er Bijna!
+- Introdans - Swan Lake
+- Merijn Scholten - LEMMING
+- NDT 2 - Blast a universe
+- Sherlock Holmes
+- The Diamond Baritones - Wonderland
 
 ## explorebreda.com (Chassé) (3)
 
